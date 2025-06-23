@@ -1,0 +1,134 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 3.2rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.navigationList {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+}
+
+.navigationItem {
+  font-size: 0.9rem;
+  color: var(--dark-blue);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+  position: relative;
+}
+.navigationItem a,
+.arrowIcon {
+  cursor: pointer;
+}
+
+.navigationItem:hover .arrowIcon {
+  color: var(--color-primary);
+}
+
+.navigationItem > i {
+  font-size: 0.8rem;
+  background-color: var(--color-primary);
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  padding: 1.8rem 2.4rem;
+  border-radius: 0.6rem;
+  min-width: 280px;
+  z-index: 100;
+  top: calc(100% + 2.6rem);
+  left: -2.4rem;
+  list-style: none;
+  transform: translateY(1.2rem);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.submenu::before {
+  content: "";
+  position: absolute;
+  top: -2.4rem; /* Adjust to match the gap */
+  left: 0;
+  width: 100%;
+  height: 2.4rem;
+  z-index: 101;
+}
+
+.navigationItem:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.submenu li {
+  white-space: nowrap;
+  transition: transform 0.3s ease;
+}
+
+.submenu li:hover {
+  transform: translateX(0.4rem);
+}
+
+.submenu li a {
+  cursor: pointer;
+  color: var(--dark-blue);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.submenu li a:hover {
+  color: var(--color-primary);
+}
+
+.contactUsButton {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.contactUsButton:hover {
+  background-color: #3b00e6;
+  transform: scale(1.05);
+}
+
+.applyButton {
+  background-color: var(--color-primary);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: transform 0.2s;
+}
+
+.applyButton:hover {
+  transform: scale(1.05);
+}
