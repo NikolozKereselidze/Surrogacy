@@ -1,0 +1,58 @@
+{
+  "navigation": {
+    "aboutUs": "关于我们",
+    "surrogates": "代孕妈妈",
+    "intendedParents": "意向父母",
+    "eggDonors": "卵子捐赠者",
+    "programs": "项目",
+    "blog": "博客",
+    "contactUs": "联系我们"
+  },
+  "submenu": {
+    "aboutUs": {
+      "ourMission": "我们的使命",
+      "whoWeAre": "我们是谁",
+      "ourTeam": "我们的团队",
+      "whyChooseUs": "为什么选择我们？"
+    },
+    "surrogates": {
+      "surrogacyProcess": "代孕流程",
+      "whoCanBecome": "谁可以成为代孕妈妈？",
+      "screeningProcess": "筛选流程",
+      "compensationSupport": "补偿与支持",
+      "applyNow": "立即申请"
+    },
+    "intendedParents": {
+      "whoCanBecome": "谁可以成为父母？",
+      "screeningProcess": "筛选流程",
+      "compensationSupport": "补偿与支持",
+      "applyNow": "立即申请"
+    },
+    "eggDonors": {
+      "whyBecome": "为什么成为捐赠者？",
+      "whoCanApply": "谁可以申请？",
+      "compensation": "补偿",
+      "applyNow": "立即申请"
+    },
+    "programs": {
+      "ownGametes": "使用自身配子的代孕",
+      "eggDonor": "使用卵子捐赠者的代孕",
+      "eggFreezing": "卵子冷冻/保存",
+      "vipServices": "VIP礼宾服务（住宿、翻译、交通）"
+    }
+  },
+  "homepage": {
+    "heroTitle": {
+      "together": "一起",
+      "weMake": "我们创造",
+      "miracles": "奇迹"
+    },
+    "heroSubtitle": {
+      "compassionate": "贴心的代孕和卵子捐赠服务",
+      "tailored": "量身定制",
+      "journey": "您的旅程。"
+    },
+    "heroDescription": "奇迹创造者是一个优质代孕和卵子捐赠中心，致力于帮助您建立梦想中的家庭——提供专业指导、法律支持和24/7护理。",
+    "startJourneyButton": "今天开始您的旅程"
+  }
+}

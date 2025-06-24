@@ -1,0 +1,58 @@
+{
+  "navigation": {
+    "aboutUs": "אודותינו",
+    "surrogates": "פונדקאיות",
+    "intendedParents": "הורים מיועדים",
+    "eggDonors": "תורמי ביציות",
+    "programs": "תוכניות",
+    "blog": "בלוג",
+    "contactUs": "צור קשר"
+  },
+  "submenu": {
+    "aboutUs": {
+      "ourMission": "המשימה שלנו",
+      "whoWeAre": "מי אנחנו",
+      "ourTeam": "הצוות שלנו",
+      "whyChooseUs": "למה לבחור בנו?"
+    },
+    "surrogates": {
+      "surrogacyProcess": "תהליך הפונדקאות",
+      "whoCanBecome": "מי יכולה להיות פונדקאית?",
+      "screeningProcess": "תהליך הסינון",
+      "compensationSupport": "פיצוי ותמיכה",
+      "applyNow": "הגש בקשה עכשיו"
+    },
+    "intendedParents": {
+      "whoCanBecome": "מי יכול להיות הורה?",
+      "screeningProcess": "תהליך הסינון",
+      "compensationSupport": "פיצוי ותמיכה",
+      "applyNow": "הגש בקשה עכשיו"
+    },
+    "eggDonors": {
+      "whyBecome": "למה להיות תורמת?",
+      "whoCanApply": "מי יכולה להגיש בקשה?",
+      "compensation": "פיצוי",
+      "applyNow": "הגש בקשה עכשיו"
+    },
+    "programs": {
+      "ownGametes": "פונדקאות עם גמטות עצמיות",
+      "eggDonor": "פונדקאות עם תורמת ביציות",
+      "eggFreezing": "הקפאת ביציות / שימור",
+      "vipServices": "שירותי VIP (דיור, תרגום, תחבורה)"
+    }
+  },
+  "homepage": {
+    "heroTitle": {
+      "together": "יחד",
+      "weMake": "אנחנו יוצרים",
+      "miracles": "ניסים"
+    },
+    "heroSubtitle": {
+      "compassionate": "שירותי פונדקאות ותרומת ביציות חמים",
+      "tailored": "מותאמים",
+      "journey": "למסע שלך."
+    },
+    "heroDescription": "יוצרי הניסים הוא מרכז פונדקאות ותרומת ביציות פרימיום המוקדש לעזור לכם לבנות את המשפחה של חלומותיכם — עם הדרכה מקצועית, תמיכה משפטית וטיפול 24/7.",
+    "startJourneyButton": "התחל את המסע שלך היום"
+  }
+}

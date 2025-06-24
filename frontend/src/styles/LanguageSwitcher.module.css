@@ -1,0 +1,88 @@
+.languageSwitcher {
+  position: relative;
+  display: inline-block;
+}
+
+.currentLangButton {
+  padding: 0.6rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.4rem;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.8rem;
+}
+
+.currentLangButton:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.arrow {
+  transition: transform 0.2s ease;
+  margin-left: auto;
+}
+
+.arrowUp {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  margin-top: 0.2rem;
+  overflow: hidden;
+}
+
+.langOption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  width: 100%;
+  border: none;
+  background: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.langOption:hover {
+  background-color: #f5f5f5;
+}
+
+.langOption.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.flag {
+  font-size: 1rem;
+}
+
+.name {
+  font-weight: 500;
+}
+
+/* RTL support for Hebrew */
+[dir="rtl"] .currentLangButton {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .langOption {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+[dir="rtl"] .arrow {
+  margin-left: 0;
+  margin-right: auto;
+}

@@ -1,0 +1,58 @@
+{
+  "navigation": {
+    "aboutUs": "About Us",
+    "surrogates": "Surrogates",
+    "intendedParents": "Intended Parents",
+    "eggDonors": "Egg Donors",
+    "programs": "Programs",
+    "blog": "Blog",
+    "contactUs": "Contact Us"
+  },
+  "submenu": {
+    "aboutUs": {
+      "ourMission": "Our Mission",
+      "whoWeAre": "Who We Are",
+      "ourTeam": "Our Team",
+      "whyChooseUs": "Why Choose Us?"
+    },
+    "surrogates": {
+      "surrogacyProcess": "Surrogacy Process",
+      "whoCanBecome": "Who Can Become a Surrogate?",
+      "screeningProcess": "Screening Process",
+      "compensationSupport": "Compensation & Support",
+      "applyNow": "Apply Now"
+    },
+    "intendedParents": {
+      "whoCanBecome": "Who Can Become a Parent?",
+      "screeningProcess": "Screening Process",
+      "compensationSupport": "Compensation & Support",
+      "applyNow": "Apply Now"
+    },
+    "eggDonors": {
+      "whyBecome": "Why Become a Donor?",
+      "whoCanApply": "Who Can Apply?",
+      "compensation": "Compensation",
+      "applyNow": "Apply Now"
+    },
+    "programs": {
+      "ownGametes": "Surrogacy with Own Gametes",
+      "eggDonor": "Surrogacy with Egg Donor",
+      "eggFreezing": "Egg Freezing / Preservation",
+      "vipServices": "VIP Concierge Services (housing, translation, transport)"
+    }
+  },
+  "homepage": {
+    "heroTitle": {
+      "together": "Together",
+      "weMake": "We Make",
+      "miracles": "Miracles"
+    },
+    "heroSubtitle": {
+      "compassionate": "Compassionate surrogacy and egg donation services",
+      "tailored": "tailored to your",
+      "journey": "journey."
+    },
+    "heroDescription": "Miracle Makers is a premium surrogacy and egg donation center dedicated to helping you build the family of your dreams — with expert guidance, legal support, and 24/7 care.",
+    "startJourneyButton": "Start Your Journey Today"
+  }
+}

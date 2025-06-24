@@ -1,115 +1,145 @@
 import styles from "../styles/Navigation.module.css";
 import { IoIosArrowDown } from "react-icons/io";
+import Button from "./Button";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 const Navigation = () => {
+  const { t, i18n } = useTranslation();
+
+  // Set RTL for Hebrew
+  const isRTL = i18n.language === "he";
+
   return (
-    <nav className={styles.navigation}>
+    <nav className={styles.navigation} dir={isRTL ? "rtl" : "ltr"}>
       <div className={styles.logoContainer}>
-        <h1 className={styles.logo}>Surrogacy</h1>
+        <h1 className={styles.logo}>Miracle Makers</h1>
       </div>
       <ul className={styles.navigationList}>
         <li className={styles.navigationItem}>
-          <a>About Us</a>
+          <a>{t("navigation.aboutUs")}</a>
           <IoIosArrowDown size={18} className={styles.arrowIcon} />
           <ul className={styles.submenu}>
             <li>
-              <a href="/our-mission">Our Mission</a>
+              <a href="/our-mission">{t("submenu.aboutUs.ourMission")}</a>
             </li>
             <li>
-              <a href="/who-we-are">Who We Are</a>
+              <a href="/who-we-are">{t("submenu.aboutUs.whoWeAre")}</a>
             </li>
             <li>
-              <a href="/our-team">Our Team</a>
+              <a href="/our-team">{t("submenu.aboutUs.ourTeam")}</a>
             </li>
             <li>
-              <a href="/why-choose-us">Why Choose Us?</a>
+              <a href="/why-choose-us">{t("submenu.aboutUs.whyChooseUs")}</a>
             </li>
           </ul>
         </li>
         <li className={styles.navigationItem}>
-          <a>Surrogates</a>
+          <a>{t("navigation.surrogates")}</a>
           <IoIosArrowDown size={18} className={styles.arrowIcon} />
           <ul className={styles.submenu}>
             <li>
-              <a href="/surrogacy-process">Surrogacy Process</a>
-            </li>
-            <li>
-              <a href="/who-can-become-a-surrogate">
-                Who Can Become a Surrogate?
+              <a href="/surrogacy-process">
+                {t("submenu.surrogates.surrogacyProcess")}
               </a>
             </li>
             <li>
-              <a href="/screening-process">Screening Process</a>
+              <a href="/who-can-become-a-surrogate">
+                {t("submenu.surrogates.whoCanBecome")}
+              </a>
             </li>
-            <li>Compensation & Support</li>
             <li>
-              <a href="/compensation-and-support">Compensation & Support</a>
+              <a href="/screening-process">
+                {t("submenu.surrogates.screeningProcess")}
+              </a>
             </li>
-            <button className={styles.applyButton}>Apply Now</button>
+            <li>
+              <a href="/compensation-and-support">
+                {t("submenu.surrogates.compensationSupport")}
+              </a>
+            </li>
+            <button className={styles.applyButton}>
+              {t("submenu.surrogates.applyNow")}
+            </button>
           </ul>
         </li>
         <li className={styles.navigationItem}>
-          <a>Intended Parents</a>
+          <a>{t("navigation.intendedParents")}</a>
           <IoIosArrowDown size={18} className={styles.arrowIcon} />
           <ul className={styles.submenu}>
             <li>
-              <a href="/who-can-become-a-parent">Who Can Become a Parent?</a>
+              <a href="/who-can-become-a-parent">
+                {t("submenu.intendedParents.whoCanBecome")}
+              </a>
             </li>
             <li>
-              <a href="/screening-process">Screening Process</a>
+              <a href="/screening-process">
+                {t("submenu.intendedParents.screeningProcess")}
+              </a>
             </li>
             <li>
-              <a href="/compensation-and-support">Compensation & Support</a>
+              <a href="/compensation-and-support">
+                {t("submenu.intendedParents.compensationSupport")}
+              </a>
             </li>
-            <button className={styles.applyButton}>Apply Now</button>
+            <button className={styles.applyButton}>
+              {t("submenu.intendedParents.applyNow")}
+            </button>
           </ul>
         </li>
         <li className={styles.navigationItem}>
-          <a>Egg Donors</a>
+          <a>{t("navigation.eggDonors")}</a>
           <IoIosArrowDown size={18} className={styles.arrowIcon} />
           <ul className={styles.submenu}>
             <li>
-              <a href="/why-become-a-donor">Why Become a Donor?</a>
+              <a href="/why-become-a-donor">
+                {t("submenu.eggDonors.whyBecome")}
+              </a>
             </li>
             <li>
-              <a href="/who-can-apply">Who Can Apply?</a>
+              <a href="/who-can-apply">{t("submenu.eggDonors.whoCanApply")}</a>
             </li>
             <li>
-              <a href="/compensation">Compensation</a>
+              <a href="/compensation">{t("submenu.eggDonors.compensation")}</a>
             </li>
-            <button className={styles.applyButton}>Apply Now</button>
+            <button className={styles.applyButton}>
+              {t("submenu.eggDonors.applyNow")}
+            </button>
           </ul>
         </li>
         <li className={styles.navigationItem}>
-          <a>Programs</a>
+          <a>{t("navigation.programs")}</a>
           <IoIosArrowDown size={18} className={styles.arrowIcon} />
           <ul className={styles.submenu}>
             <li>
               <a href="/surrogacy-with-own-gametes">
-                Surrogacy with Own Gametes
+                {t("submenu.programs.ownGametes")}
               </a>
             </li>
             <li>
-              <a href="/surrogacy-with-egg-donor">Surrogacy with Egg Donor</a>
+              <a href="/surrogacy-with-egg-donor">
+                {t("submenu.programs.eggDonor")}
+              </a>
             </li>
             <li>
               <a href="/egg-freezing-preservation">
-                Egg Freezing / Preservation
+                {t("submenu.programs.eggFreezing")}
               </a>
             </li>
             <li>
               <a href="/vip-concierge-services">
-                VIP Concierge Services (housing, translation, transport)
+                {t("submenu.programs.vipServices")}
               </a>
             </li>
           </ul>
         </li>
         <li className={styles.navigationItem}>
-          <a>Blog</a>
+          <a>{t("navigation.blog")}</a>
         </li>
       </ul>
       <div className={styles.contactUsContainer}>
-        <button className={styles.contactUsButton}>Contact Us</button>
+        <Button>{t("navigation.contactUs")}</Button>
+        <LanguageSwitcher />
       </div>
     </nav>
   );

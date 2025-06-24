@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.2rem 3.2rem;
+  padding: 1rem 3.2rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -100,22 +100,6 @@
   color: var(--color-primary);
 }
 
-.contactUsButton {
-  background-color: var(--color-primary);
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.2s, transform 0.2s;
-}
-
-.contactUsButton:hover {
-  background-color: #3b00e6;
-  transform: scale(1.05);
-}
-
 .applyButton {
   background-color: var(--color-primary);
   width: 100%;
@@ -131,4 +115,10 @@
 
 .applyButton:hover {
   transform: scale(1.05);
+}
+
+.contactUsContainer {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
 }

@@ -1,0 +1,58 @@
+{
+  "navigation": {
+    "aboutUs": "Sobre Nosotros",
+    "surrogates": "Gestantes",
+    "intendedParents": "Padres Intencionales",
+    "eggDonors": "Donantes de Óvulos",
+    "programs": "Programas",
+    "blog": "Blog",
+    "contactUs": "Contáctanos"
+  },
+  "submenu": {
+    "aboutUs": {
+      "ourMission": "Nuestra Misión",
+      "whoWeAre": "Quiénes Somos",
+      "ourTeam": "Nuestro Equipo",
+      "whyChooseUs": "¿Por Qué Elegirnos?"
+    },
+    "surrogates": {
+      "surrogacyProcess": "Proceso de Gestación Subrogada",
+      "whoCanBecome": "¿Quién Puede Ser Gestante?",
+      "screeningProcess": "Proceso de Evaluación",
+      "compensationSupport": "Compensación y Apoyo",
+      "applyNow": "Aplicar Ahora"
+    },
+    "intendedParents": {
+      "whoCanBecome": "¿Quién Puede Ser Padre?",
+      "screeningProcess": "Proceso de Evaluación",
+      "compensationSupport": "Compensación y Apoyo",
+      "applyNow": "Aplicar Ahora"
+    },
+    "eggDonors": {
+      "whyBecome": "¿Por Qué Ser Donante?",
+      "whoCanApply": "¿Quién Puede Aplicar?",
+      "compensation": "Compensación",
+      "applyNow": "Aplicar Ahora"
+    },
+    "programs": {
+      "ownGametes": "Gestación Subrogada con Gametos Propios",
+      "eggDonor": "Gestación Subrogada con Donante de Óvulos",
+      "eggFreezing": "Congelación de Óvulos / Preservación",
+      "vipServices": "Servicios VIP Concierge (alojamiento, traducción, transporte)"
+    }
+  },
+  "homepage": {
+    "heroTitle": {
+      "together": "Juntos",
+      "weMake": "Creamos",
+      "miracles": "Milagros"
+    },
+    "heroSubtitle": {
+      "compassionate": "Servicios compasivos de gestación subrogada y donación de óvulos",
+      "tailored": "adaptados a tu",
+      "journey": "viaje."
+    },
+    "heroDescription": "Creadores de Milagros es un centro premium de gestación subrogada y donación de óvulos dedicado a ayudarte a construir la familia de tus sueños — con orientación experta, apoyo legal y cuidado 24/7.",
+    "startJourneyButton": "Comienza tu viaje hoy"
+  }
+}
