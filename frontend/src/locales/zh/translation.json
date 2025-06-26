@@ -54,5 +54,15 @@
     },
     "heroDescription": "奇迹创造者是一个优质代孕和卵子捐赠中心，致力于帮助您建立梦想中的家庭——提供专业指导、法律支持和24/7护理。",
     "startJourneyButton": "今天开始您的旅程"
+  },
+  "beginYourMiracle": {
+    "title": "开启您的奇迹",
+    "subtitle": "选择适合您的道路，让我们全程为您护航。",
+    "intendedParentsTitle": "为意向父母提供代孕",
+    "intendedParentsDesc": "探索我们的项目和支持，助您实现为人父母的梦想。",
+    "surrogatesTitle": "成为代孕妈妈",
+    "surrogatesDesc": "作为奇迹创造者的代孕妈妈，帮助家庭实现梦想，改变人生。",
+    "eggDonorsTitle": "成为卵子捐赠者",
+    "eggDonorsDesc": "赠予生命的礼物，帮助创造新的开始。"
   }
 }

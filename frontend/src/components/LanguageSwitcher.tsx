@@ -10,10 +10,10 @@ const LanguageSwitcher = () => {
 
   const languages = [
     { code: "en", name: "English", flag: "🇺🇸" },
-    { code: "he", name: "עברית", flag: "🇮🇱" },
     { code: "zh", name: "中文", flag: "🇨🇳" },
     { code: "ru", name: "Русский", flag: "🇷🇺" },
     { code: "es", name: "Español", flag: "🇪🇸" },
+    { code: "he", name: "עברית", flag: "🇮🇱" },
   ];
 
   const currentLanguage =

@@ -54,5 +54,15 @@
     },
     "heroDescription": "Creadores de Milagros es un centro premium de gestación subrogada y donación de óvulos dedicado a ayudarte a construir la familia de tus sueños — con orientación experta, apoyo legal y cuidado 24/7.",
     "startJourneyButton": "Comienza tu viaje hoy"
+  },
+  "beginYourMiracle": {
+    "title": "Comienza tu milagro",
+    "subtitle": "Elige el camino adecuado para ti y déjanos acompañarte en cada paso.",
+    "intendedParentsTitle": "Gestación subrogada para padres intencionales",
+    "intendedParentsDesc": "Descubre nuestros programas y apoyo para quienes sueñan con la paternidad.",
+    "surrogatesTitle": "Conviértete en gestante",
+    "surrogatesDesc": "Empodera familias y cambia vidas como gestante de Miracle Makers.",
+    "eggDonorsTitle": "Conviértete en donante de óvulos",
+    "eggDonorsDesc": "Da el regalo de la vida y ayuda a crear nuevos comienzos."
   }
 }
