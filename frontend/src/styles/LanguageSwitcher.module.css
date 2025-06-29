@@ -18,15 +18,6 @@
   transform: translateY(-1px);
 }
 
-.arrow {
-  transition: transform 0.2s ease;
-  margin-left: auto;
-}
-
-.arrowUp {
-  transform: rotate(180deg);
-}
-
 .dropdown {
   position: absolute;
   top: 100%;
@@ -44,6 +35,7 @@
 .langOption {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.5rem 0.8rem;
   width: 100%;
@@ -68,10 +60,6 @@
   font-size: 1rem;
 }
 
-.name {
-  font-weight: 500;
-}
-
 /* RTL support for Hebrew */
 [dir="rtl"] .currentLangButton {
   flex-direction: row-reverse;
@@ -82,7 +70,3 @@
   text-align: right;
 }
 
-[dir="rtl"] .arrow {
-  margin-left: 0;
-  margin-right: auto;
-}

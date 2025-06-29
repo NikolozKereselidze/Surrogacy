@@ -57,12 +57,16 @@
   },
   "beginYourMiracle": {
     "title": "Comienza tu milagro",
-    "subtitle": "Elige el camino adecuado para ti y déjanos acompañarte en cada paso.",
+    "subtitle": "Elige el camino que sea adecuado para ti.",
     "intendedParentsTitle": "Gestación subrogada para padres intencionales",
-    "intendedParentsDesc": "Descubre nuestros programas y apoyo para quienes sueñan con la paternidad.",
-    "surrogatesTitle": "Conviértete en gestante",
-    "surrogatesDesc": "Empodera familias y cambia vidas como gestante de Miracle Makers.",
+    "intendedParentsDesc": "Descubre nuestros programas y apoyo para aquellos que sueñan con la paternidad.",
+    "surrogatesTitle": "Conviértete en gestante subrogada",
+    "surrogatesDesc": "Empodera familias y cambia vidas como gestante subrogada de Miracle Makers.",
     "eggDonorsTitle": "Conviértete en donante de óvulos",
     "eggDonorsDesc": "Da el regalo de la vida y ayuda a crear nuevos comienzos."
+  },
+  "ourTeam": {
+    "title": "Conoce nuestro equipo",
+    "subtitle": "Un equipo bien calificado está listo para servirte"
   }
 }

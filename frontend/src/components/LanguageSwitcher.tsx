@@ -49,10 +49,6 @@ const LanguageSwitcher = () => {
     <div className={styles.languageSwitcher} ref={dropdownRef}>
       <button onClick={toggleDropdown} className={styles.currentLangButton}>
         <span className={styles.flag}>{currentLanguage.flag}</span>
-        {/* <IoIosArrowDown
-          size={14}
-          className={`${styles.arrow} ${isOpen ? styles.arrowUp : ""}`}
-        /> */}
       </button>
 
       {isOpen && (

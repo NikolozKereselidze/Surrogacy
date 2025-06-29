@@ -2,13 +2,42 @@ import Button from "../components/Button";
 import styles from "../styles/Home.module.css";
 import { useTranslation } from "react-i18next";
 import { FaBaby, FaUserPlus, FaGift } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import MiracleCard from "../components/MiracleCard";
+import TeamCard from "../components/TeamCard";
 
 const Home = () => {
   const { t, i18n } = useTranslation();
 
   // Set RTL for Hebrew
   const isRTL = i18n.language === "he";
+
+  // Team members data
+  const teamMembers = [
+    {
+      image: "src/assets/img/team/test-doctor.png",
+      honorific: "Dr.",
+      name: "Kelvin Smith",
+      role: "Fertility Specialist",
+      description:
+        "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      image: "src/assets/img/team/natia-devdariani.jpg",
+      honorific: "Mrs.",
+      name: "Natia Devdariani",
+      role: "Founder & CEO",
+      description:
+        "Over 15 years of experience in healthcare and professional service consulting, helping families grow.  Ms. Devdariani graduated from Tbilisi State Medical University and Tbilisi State University.",
+    },
+    {
+      image: "src/assets/img/team/test-doctor2.jpg",
+      honorific: "Dr.",
+      name: "Anna Smith",
+      role: "Coordinator & IVF Specialist",
+      description:
+        "Over 15 years of experience helping families grow. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+  ];
 
   return (
     <div className={styles.home} dir={isRTL ? "rtl" : "ltr"}>
@@ -41,42 +70,40 @@ const Home = () => {
 
       <section className={`${styles.beginYourMiracleSection} section`}>
         <div className={styles.beginYourMiracleContent}>
-          <h2 className={styles.beginYourMiracleTitle}>
-            {t("beginYourMiracle.title")}
-          </h2>
-          <p className={styles.beginYourMiracleSubtitle}>
-            {t("beginYourMiracle.subtitle")}
-          </p>
+          <h2 className="title">{t("beginYourMiracle.title")}</h2>
+          <p className="subtitle">{t("beginYourMiracle.subtitle")}</p>
         </div>
 
         <div className={styles.beginYourMiracleGrid}>
-          <Link to="/intended-parents" className={styles.beginYourMiracleCard}>
-            <FaBaby className={styles.beginYourMiracleIcon} />
-            <div className={styles.beginYourMiracleCardTitle}>
-              {t("beginYourMiracle.intendedParentsTitle")}
-            </div>
-            <div className={styles.beginYourMiracleCardDesc}>
-              {t("beginYourMiracle.intendedParentsDesc")}
-            </div>
-          </Link>
-          <Link to="/surrogates" className={styles.beginYourMiracleCard}>
-            <FaUserPlus className={styles.beginYourMiracleIcon} />
-            <div className={styles.beginYourMiracleCardTitle}>
-              {t("beginYourMiracle.surrogatesTitle")}
-            </div>
-            <div className={styles.beginYourMiracleCardDesc}>
-              {t("beginYourMiracle.surrogatesDesc")}
-            </div>
-          </Link>
-          <Link to="/egg-donors" className={styles.beginYourMiracleCard}>
-            <FaGift className={styles.beginYourMiracleIcon} />
-            <div className={styles.beginYourMiracleCardTitle}>
-              {t("beginYourMiracle.eggDonorsTitle")}
-            </div>
-            <div className={styles.beginYourMiracleCardDesc}>
-              {t("beginYourMiracle.eggDonorsDesc")}
-            </div>
-          </Link>
+          <MiracleCard
+            to="/intended-parents"
+            icon={<FaBaby className={styles.beginYourMiracleIcon} />}
+            title={t("beginYourMiracle.intendedParentsTitle")}
+            description={t("beginYourMiracle.intendedParentsDesc")}
+          />
+          <MiracleCard
+            to="/surrogates"
+            icon={<FaUserPlus className={styles.beginYourMiracleIcon} />}
+            title={t("beginYourMiracle.surrogatesTitle")}
+            description={t("beginYourMiracle.surrogatesDesc")}
+          />
+          <MiracleCard
+            to="/egg-donors"
+            icon={<FaGift className={styles.beginYourMiracleIcon} />}
+            title={t("beginYourMiracle.eggDonorsTitle")}
+            description={t("beginYourMiracle.eggDonorsDesc")}
+          />
+        </div>
+      </section>
+
+      <section className={`${styles.ourTeamSection} section`}>
+        <div className="content">
+          <h2 className="title">{t("ourTeam.title")}</h2>
+          <p className="subtitle">{t("ourTeam.subtitle")}</p>
+        </div>
+
+        <div className={styles.ourTeamGrid}>
+          <TeamCard teamMembers={teamMembers} />
         </div>
       </section>
     </div>

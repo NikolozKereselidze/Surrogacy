@@ -57,12 +57,16 @@
   },
   "beginYourMiracle": {
     "title": "Begin Your Miracle",
-    "subtitle": "Choose the path that's right for you and let us guide you every step of the way.",
+    "subtitle": "Choose the path that's right for you.",
     "intendedParentsTitle": "Surrogacy for Intended Parents",
     "intendedParentsDesc": "Discover our programs and support for those dreaming of parenthood.",
     "surrogatesTitle": "Become a Surrogate",
     "surrogatesDesc": "Empower families and change lives as a Miracle Makers surrogate.",
     "eggDonorsTitle": "Become an Egg Donor",
     "eggDonorsDesc": "Give the gift of life and help create new beginnings."
+  },
+  "ourTeam": {
+    "title": "Meet Our Team",
+    "subtitle": "Well qualified team is ready to serve you"
   }
 }

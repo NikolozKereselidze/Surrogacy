@@ -93,5 +93,30 @@ body {
 }
 
 .section {
-  padding: 3.6rem 4.2rem 0 4.2rem;
+  padding: 3.6rem 4.2rem 2.2rem 4.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.6rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary, #3b82f6);
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dark-blue, #2a376d);
+  text-align: center;
 }

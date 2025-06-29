@@ -56,13 +56,17 @@
     "startJourneyButton": "התחל את המסע שלך היום"
   },
   "beginYourMiracle": {
-    "title": "התחילו את הנס שלכם",
-    "subtitle": "בחרו את הדרך המתאימה לכם ותנו לנו ללוות אתכם בכל שלב.",
+    "title": "התחל את הנס שלך",
+    "subtitle": "בחר את הדרך המתאימה לך.",
     "intendedParentsTitle": "פונדקאות להורים מיועדים",
-    "intendedParentsDesc": "גלו את התוכניות והתמיכה שלנו להגשמת חלום ההורות.",
-    "surrogatesTitle": "הפכו לפונדקאית",
-    "surrogatesDesc": "העצימו משפחות ושנו חיים כפונדקאית ביוצרי הניסים.",
-    "eggDonorsTitle": "הפכו לתורמת ביציות",
-    "eggDonorsDesc": "העניקו את מתנת החיים ועזרו ליצור התחלות חדשות."
+    "intendedParentsDesc": "גלה את התוכניות והתמיכה שלנו עבור אלה שחולמים על הורות.",
+    "surrogatesTitle": "הפוך לפונדקאית",
+    "surrogatesDesc": "חזק משפחות ושנה חיים כפונדקאית של Miracle Makers.",
+    "eggDonorsTitle": "הפוך לתורמת ביציות",
+    "eggDonorsDesc": "תן את מתנת החיים ועזור ליצור התחלות חדשות."
+  },
+  "ourTeam": {
+    "title": "פגוש את הצוות שלנו",
+    "subtitle": "צוות מוסמך היטב מוכן לשרת אותך"
   }
 }
