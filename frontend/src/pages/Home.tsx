@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { FaBaby, FaUserPlus, FaGift } from "react-icons/fa";
 import MiracleCard from "../components/MiracleCard";
 import TeamCard from "../components/TeamCard";
+import ContactForm from "../components/ContactForm";
+import ContactInfo from "../components/ContactInfo";
 
 const Home = () => {
   const { t, i18n } = useTranslation();
@@ -104,6 +106,18 @@ const Home = () => {
 
         <div className={styles.ourTeamGrid}>
           <TeamCard teamMembers={teamMembers} />
+        </div>
+      </section>
+
+      <section className={`${styles.contactUsSection} section`}>
+        <div className="content">
+          <h2 className="title">{t("contactUs.title")}</h2>
+          <p className="subtitle">{t("contactUs.subtitle")}</p>
+        </div>
+
+        <div className={styles.contactUsGrid}>
+          <ContactInfo />
+          <ContactForm />
         </div>
       </section>
     </div>

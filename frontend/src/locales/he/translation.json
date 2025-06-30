@@ -68,5 +68,23 @@
   "ourTeam": {
     "title": "פגוש את הצוות שלנו",
     "subtitle": "צוות מוסמך היטב מוכן לשרת אותך"
+  },
+  "contactUs": {
+    "title": "צור קשר",
+    "subtitle": "אנחנו כאן כדי לעזור לך במסע שלך",
+    "firstName": "שם פרטי",
+    "lastName": "שם משפחה",
+    "selectGender": "בחר מגדר",
+    "male": "זכר",
+    "female": "נקבה",
+    "other": "אחר",
+    "dateOfBirth": "תאריך לידה",
+    "email": "האימייל שלך",
+    "phone": "הטלפון שלך",
+    "message": "ההודעה שלך",
+    "submit": "שלח הודעה",
+    "addressLabel": "כתובת",
+    "phoneLabel": "טלפון",
+    "emailLabel": "אימייל"
   }
 }

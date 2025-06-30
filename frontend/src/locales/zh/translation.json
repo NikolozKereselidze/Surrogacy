@@ -68,5 +68,23 @@
   "ourTeam": {
     "title": "认识我们的团队",
     "subtitle": "高素质的团队随时准备为您服务"
+  },
+  "contactUs": {
+    "title": "联系我们",
+    "subtitle": "我们在这里帮助您完成旅程",
+    "firstName": "名字",
+    "lastName": "姓氏",
+    "selectGender": "选择性别",
+    "male": "男性",
+    "female": "女性",
+    "other": "其他",
+    "dateOfBirth": "出生日期",
+    "email": "您的邮箱",
+    "phone": "您的电话",
+    "message": "您的留言",
+    "submit": "发送留言",
+    "addressLabel": "地址",
+    "phoneLabel": "电话",
+    "emailLabel": "电子邮件"
   }
 }

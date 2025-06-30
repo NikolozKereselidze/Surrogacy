@@ -68,5 +68,23 @@
   "ourTeam": {
     "title": "Conoce nuestro equipo",
     "subtitle": "Un equipo bien calificado está listo para servirte"
+  },
+  "contactUs": {
+    "title": "Ponte en contacto",
+    "subtitle": "Estamos aquí para ayudarte en tu viaje",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "selectGender": "Seleccionar género",
+    "male": "Masculino",
+    "female": "Femenino",
+    "other": "Otro",
+    "dateOfBirth": "Fecha de nacimiento",
+    "email": "Tu email",
+    "phone": "Tu teléfono",
+    "message": "Tu mensaje",
+    "submit": "Enviar mensaje",
+    "addressLabel": "Dirección",
+    "phoneLabel": "Teléfono",
+    "emailLabel": "Correo electrónico"
   }
 }
