@@ -1,0 +1,101 @@
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footerLinksGrid {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  padding: 4.2rem;
+  padding-bottom: 1.8rem;
+  gap: 2rem;
+}
+
+.footerLinksGrid h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.7rem;
+}
+
+.footerLinksGrid ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footerLinksGrid a {
+  color: #2a376d;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.footerLinksGrid a:hover {
+  color: var(--color-primary);
+}
+
+.logo > h3 {
+  color: var(--color-primary);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.socialsIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialsIcons a {
+  font-size: 1.2rem;
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyrightLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.copyrightLinks a,
+.copyrightText p {
+  color: var(--dark-blue);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.facebookIcon {
+  color: #1877f2;
+}
+
+.instagramIcon {
+  color: #c32aa3;
+}
+
+.whatsappIcon {
+  color: #25d366;
+}
+
+.linkedinIcon {
+  color: #0077b5;
+}

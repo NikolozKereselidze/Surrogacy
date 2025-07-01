@@ -256,6 +256,10 @@
 }
 
 /* Contact Us Section */
+.contactUsSection {
+  padding-bottom: 4.8rem;
+}
+
 .contactUsGrid {
   display: flex;
   width: 100%;
@@ -317,8 +321,7 @@
   cursor: pointer;
 }
 
-.contactUsFormRow select ,
-
+.contactUsFormRow select,
 .contactUsFormRow input {
   flex: 1 1 0;
 }

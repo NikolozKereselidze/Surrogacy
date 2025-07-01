@@ -86,5 +86,10 @@
     "addressLabel": "כתובת",
     "phoneLabel": "טלפון",
     "emailLabel": "אימייל"
+  },
+  "footer": {
+    "privacyPolicy": "מדיניות פרטיות",
+    "termsOfService": "תנאי שירות",
+    "copyright": "כל הזכויות שמורות."
   }
 }

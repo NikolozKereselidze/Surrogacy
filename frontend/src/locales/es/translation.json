@@ -86,5 +86,10 @@
     "addressLabel": "Dirección",
     "phoneLabel": "Teléfono",
     "emailLabel": "Correo electrónico"
+  },
+  "footer": {
+    "privacyPolicy": "Política de privacidad",
+    "termsOfService": "Términos de servicio",
+    "copyright": "Todos los derechos reservados."
   }
 }

@@ -6,6 +6,7 @@ import MiracleCard from "../components/MiracleCard";
 import TeamCard from "../components/TeamCard";
 import ContactForm from "../components/ContactForm";
 import ContactInfo from "../components/ContactInfo";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const { t, i18n } = useTranslation();
@@ -120,6 +121,10 @@ const Home = () => {
           <ContactForm />
         </div>
       </section>
+
+      <footer className={styles.footer}>
+        <Footer />
+      </footer>
     </div>
   );
 };
