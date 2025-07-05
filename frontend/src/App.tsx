@@ -1,14 +1,22 @@
 import "./App.css";
+import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
+import ContactUs from "./components/ContactUs";
 import Home from "./pages/Home";
-import { BrowserRouter } from "react-router-dom";
+import OurMission from "./pages/OurMission";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Navigation />
-      <Home />
-    </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/our-mission" element={<OurMission />} />
+      </Routes>
+      <ContactUs />
+      <Footer />
+    </Router>
   );
 }
 

@@ -7,7 +7,7 @@ import {
   FaLinkedin,
   FaInstagram,
 } from "react-icons/fa";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/ContactUs.module.css";
 import { useTranslation } from "react-i18next";
 
 const ContactInfo = () => {

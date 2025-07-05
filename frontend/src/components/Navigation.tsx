@@ -53,11 +53,6 @@ const Navigation = () => {
                 {t("submenu.surrogates.screeningProcess")}
               </a>
             </li>
-            <li>
-              <a href="/compensation-and-support">
-                {t("submenu.surrogates.compensationSupport")}
-              </a>
-            </li>
             <button className={styles.applyButton}>
               {t("submenu.surrogates.applyNow")}
             </button>
@@ -98,9 +93,6 @@ const Navigation = () => {
             </li>
             <li>
               <a href="/who-can-apply">{t("submenu.eggDonors.whoCanApply")}</a>
-            </li>
-            <li>
-              <a href="/compensation">{t("submenu.eggDonors.compensation")}</a>
             </li>
             <button className={styles.applyButton}>
               {t("submenu.eggDonors.applyNow")}

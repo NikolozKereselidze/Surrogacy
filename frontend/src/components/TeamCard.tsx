@@ -10,12 +10,11 @@ interface TeamMember {
   description?: string;
 }
 
-interface TeamCardProps {
-  teamMembers: TeamMember[];
-}
-
-const TeamCard = ({ teamMembers }: TeamCardProps) =>
-  teamMembers.map((member) => (
+const TeamCard = ({ member }: { member: TeamMember }) => (
+  <Link
+    to={`/team/${member.name.toLowerCase().replace(/\s+/g, "-")}`}
+    className={styles.ourTeamCardLink}
+  >
     <div className={styles.ourTeamCard} key={member.name}>
       <img
         src={member.image}
@@ -35,6 +34,6 @@ const TeamCard = ({ teamMembers }: TeamCardProps) =>
         <Button className={styles.ourTeamButton}>Read More</Button>
       </Link>
     </div>
-  ));
-
+  </Link>
+);
 export default TeamCard;

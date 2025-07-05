@@ -19,7 +19,6 @@
       "surrogacyProcess": "Процесс суррогатного материнства",
       "whoCanBecome": "Кто может стать суррогатной матерью?",
       "screeningProcess": "Процесс отбора",
-      "compensationSupport": "Компенсация и поддержка",
       "applyNow": "Подать заявку сейчас"
     },
     "intendedParents": {
@@ -31,7 +30,6 @@
     "eggDonors": {
       "whyBecome": "Почему стать донором?",
       "whoCanApply": "Кто может подать заявку?",
-      "compensation": "Компенсация",
       "applyNow": "Подать заявку сейчас"
     },
     "programs": {

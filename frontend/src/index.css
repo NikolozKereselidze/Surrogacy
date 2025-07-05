@@ -120,3 +120,38 @@ body {
   color: var(--dark-blue, #2a376d);
   text-align: center;
 }
+
+.miracleIcon {
+  font-size: 2.5rem;
+  color: var(--color-primary, #3b82f6);
+  margin-bottom: 1.1rem;
+}
+
+/* SWIPER */
+.swiper {
+  padding-bottom: 3.4rem !important;
+  width: 100% !important;
+  position: static !important;
+}
+
+.swiper-slide {
+  height: auto !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--color-primary, #3b82f6) !important;
+}
+
+.swiper-button-prev {
+  left: -3rem !important;
+}
+
+.swiper-button-next {
+  right: -3rem !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 1.8rem !important;
+}

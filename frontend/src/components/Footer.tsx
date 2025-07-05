@@ -18,16 +18,16 @@ const Footer = () => {
             <h4>{t("navigation.aboutUs")}</h4>
             <ul>
               <li>
-                <a href="#">{t("submenu.aboutUs.ourMission")}</a>
+                <a href="/our-mission">{t("submenu.aboutUs.ourMission")}</a>
               </li>
               <li>
-                <a href="#">{t("submenu.aboutUs.whoWeAre")}</a>
+                <a href="/who-we-are">{t("submenu.aboutUs.whoWeAre")}</a>
               </li>
               <li>
-                <a href="#">{t("submenu.aboutUs.ourTeam")}</a>
+                <a href="/our-team  ">{t("submenu.aboutUs.ourTeam")}</a>
               </li>
               <li>
-                <a href="#">{t("submenu.aboutUs.whyChooseUs")}</a>
+                <a href="/why-choose-us">{t("submenu.aboutUs.whyChooseUs")}</a>
               </li>
             </ul>
           </div>
@@ -35,16 +35,19 @@ const Footer = () => {
             <h4>{t("navigation.surrogates")}</h4>
             <ul>
               <li>
-                <a href="#">{t("submenu.surrogates.surrogacyProcess")}</a>
+                <a href="/surrogacy-process">
+                  {t("submenu.surrogates.surrogacyProcess")}
+                </a>
               </li>
               <li>
-                <a href="#">{t("submenu.surrogates.whoCanBecome")}</a>
+                <a href="/who-can-become-a-surrogate">
+                  {t("submenu.surrogates.whoCanBecome")}
+                </a>
               </li>
               <li>
-                <a href="#">{t("submenu.surrogates.screeningProcess")}</a>
-              </li>
-              <li>
-                <a href="#">{t("submenu.surrogates.compensationSupport")}</a>
+                <a href="/screening-process">
+                  {t("submenu.surrogates.screeningProcess")}
+                </a>
               </li>
             </ul>
           </div>
@@ -52,13 +55,17 @@ const Footer = () => {
             <h4>{t("navigation.intendedParents")}</h4>
             <ul>
               <li>
-                <a href="#">{t("submenu.intendedParents.whoCanBecome")}</a>
+                <a href="/who-can-become-an-intended-parent">
+                  {t("submenu.intendedParents.whoCanBecome")}
+                </a>
               </li>
               <li>
-                <a href="#">{t("submenu.intendedParents.screeningProcess")}</a>
+                <a href="/screening-process">
+                  {t("submenu.intendedParents.screeningProcess")}
+                </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/compensation-support">
                   {t("submenu.intendedParents.compensationSupport")}
                 </a>
               </li>
@@ -68,13 +75,14 @@ const Footer = () => {
             <h4>{t("navigation.eggDonors")}</h4>
             <ul>
               <li>
-                <a href="#">{t("submenu.eggDonors.whyBecome")}</a>
+                <a href="/why-become-an-egg-donor">
+                  {t("submenu.eggDonors.whyBecome")}
+                </a>
               </li>
               <li>
-                <a href="#">{t("submenu.eggDonors.whoCanApply")}</a>
-              </li>
-              <li>
-                <a href="#">{t("submenu.eggDonors.compensation")}</a>
+                <a href="/who-can-apply-to-be-an-egg-donor">
+                  {t("submenu.eggDonors.whoCanApply")}
+                </a>
               </li>
             </ul>
           </div>
@@ -82,13 +90,13 @@ const Footer = () => {
             <h4>{t("navigation.programs")}</h4>
             <ul>
               <li>
-                <a href="#">{t("submenu.programs.ownGametes")}</a>
+                <a href="/own-gametes">{t("submenu.programs.ownGametes")}</a>
               </li>
               <li>
-                <a href="#">{t("submenu.programs.eggDonor")}</a>
+                <a href="/egg-donor">{t("submenu.programs.eggDonor")}</a>
               </li>
               <li>
-                <a href="#">{t("submenu.programs.eggFreezing")}</a>
+                <a href="/egg-freezing">{t("submenu.programs.eggFreezing")}</a>
               </li>
             </ul>
           </div>

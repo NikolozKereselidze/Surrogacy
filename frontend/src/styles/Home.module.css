@@ -157,12 +157,6 @@
   border-color: var(--color-primary, #3b82f6);
 }
 
-.beginYourMiracleIcon {
-  font-size: 2.5rem;
-  color: var(--color-primary, #3b82f6);
-  margin-bottom: 1.1rem;
-}
-
 .beginYourMiracleCardTitle {
   font-size: 1.05rem;
   font-weight: 600;
@@ -182,8 +176,7 @@
 /* Our Team Section */
 
 .ourTeamSection {
-  display: flex;
-  flex-direction: column;
+  display: block;
   align-items: center;
   padding-bottom: 3rem;
 }
@@ -191,11 +184,16 @@
 .ourTeamGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.2rem;
+  padding-top: 3.6rem;
   justify-content: center;
 }
 
+.ourTeamCardLink {
+  text-decoration: none;
+}
+
 .ourTeamCard {
+  height: 100%;
   flex: 1 1 23rem;
   background: #fff;
   border-radius: 1.2rem;
@@ -205,7 +203,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  transition: transform 0.18s, box-shadow 0.18s;
+  transition:  box-shadow 0.2s;
   text-align: center;
   border: 2px solid transparent;
   cursor: pointer;
@@ -213,7 +211,6 @@
 
 .ourTeamCard:hover,
 .ourTeamCard:focus {
-  transform: translateY(-6px) scale(1.03);
   box-shadow: 0 8px 32px rgba(59, 130, 246, 0.13);
   border-color: var(--color-primary, #3b82f6);
 }
@@ -255,177 +252,11 @@
   margin-top: 1rem;
 }
 
-/* Contact Us Section */
-.contactUsSection {
-  padding-bottom: 4.8rem;
-}
 
-.contactUsGrid {
-  display: flex;
+.swiperNavWrapper {
+  position: relative;
   width: 100%;
-  gap: 2.4rem;
 }
 
-.contactUsFormContainer,
-.contactInfo {
-  background: #fff;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(59, 130, 246, 0.1);
-  border-radius: 1.2rem;
-  padding: 2.5rem;
-}
 
-.contactUsFormContainer {
-  flex: 1 1 0;
-}
 
-.contactUsForm {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1.2rem;
-  flex: 1 1 0;
-}
-
-.contactUsForm input,
-.contactUsForm textarea,
-.contactUsForm select {
-  padding: 0.8rem 1rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.8rem;
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: #374151;
-  background: #fafafa;
-  transition: all 0.2s ease;
-}
-
-.contactUsForm input:focus,
-.contactUsForm textarea:focus,
-.contactUsForm select:focus {
-  outline: none;
-  border-color: var(--color-primary);
-  background: #fff;
-  box-shadow: 0 0 0 3px rgba(66, 0, 255, 0.1);
-}
-
-.contactUsFormRow {
-  width: 100%;
-  display: flex;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-}
-
-.contactUsFormRow select {
-  flex: 1 1 0;
-  cursor: pointer;
-}
-
-.contactUsFormRow select,
-.contactUsFormRow input {
-  flex: 1 1 0;
-}
-
-.contactUsForm textarea {
-  min-height: 7.2rem;
-}
-
-.contactUsFormDate {
-  cursor: pointer;
-}
-
-.contactUsSocials {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 1.5rem;
-}
-
-.contactUsSocials a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.8rem;
-  height: 2.8rem;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #f8faff 0%, #f0f4ff 100%);
-  color: var(--color-primary);
-  font-size: 1.3rem;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  border: 2px solid transparent;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contactUsSocials a:hover {
-  transform: translateY(-3px) scale(1.1);
-  box-shadow: 0 6px 20px rgba(66, 0, 255, 0.3);
-  color: #fff;
-}
-
-.facebookIcon:hover {
-  background: linear-gradient(135deg, #1877f2 0%, #0d6efd 100%);
-  border-color: #1877f2;
-}
-
-.instagramIcon:hover {
-  background: linear-gradient(135deg, #d62976 0%, #fa7e1e 100%);
-  border-color: #fa7e1e;
-}
-
-.whatsappIcon:hover {
-  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-  border-color: #25d366;
-}
-
-.linkedinIcon:hover {
-  background: linear-gradient(135deg, var(--color-primary) 0%, #3b82f6 100%);
-  border-color: var(--color-primary);
-}
-
-.contactInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-  background: #fff;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(59, 130, 246, 0.1);
-  border-radius: 1.2rem;
-  padding: 2.5rem 2rem;
-
-  align-items: flex-start;
-}
-
-.contactInfoItem {
-  display: flex;
-  align-items: center;
-  gap: 1.1rem;
-  background: linear-gradient(135deg, #f8faff 0%, #f0f4ff 100%);
-  padding: 1rem 1.2rem;
-  width: 100%;
-  border-radius: 0.8rem;
-}
-
-.contactInfoItem svg {
-  font-size: 1.4rem;
-  color: var(--color-primary);
-  flex-shrink: 0;
-}
-
-.contactInfoItemText h3 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--dark-blue, #2a376d);
-}
-
-.contactInfoItemText a {
-  font-size: 0.9rem;
-  color: var(--dark-blue);
-  text-decoration: none;
-}
-
-.contactInfoItemText a:hover {
-  text-decoration: underline;
-  color: var(--color-primary);
-}

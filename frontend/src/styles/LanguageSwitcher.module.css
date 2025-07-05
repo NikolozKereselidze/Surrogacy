@@ -51,11 +51,6 @@
   background-color: #f5f5f5;
 }
 
-.langOption.active {
-  background-color: var(--color-primary);
-  color: white;
-}
-
 .flag {
   font-size: 1rem;
 }
@@ -69,4 +64,3 @@
   flex-direction: row-reverse;
   text-align: right;
 }
-

@@ -7,6 +7,7 @@ import heTranslation from "./locales/he/translation.json";
 import zhTranslation from "./locales/zh/translation.json";
 import ruTranslation from "./locales/ru/translation.json";
 import esTranslation from "./locales/es/translation.json";
+import geTranslation from "./locales/ge/translation.json";
 
 i18n
   .use(LanguageDetector)
@@ -18,6 +19,7 @@ i18n
       zh: { translation: zhTranslation },
       ru: { translation: ruTranslation },
       es: { translation: esTranslation },
+      ge: { translation: geTranslation },
     },
     fallbackLng: "en",
     debug: false,

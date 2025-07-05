@@ -19,7 +19,6 @@
       "surrogacyProcess": "Proceso de Gestación Subrogada",
       "whoCanBecome": "¿Quién Puede Ser Gestante?",
       "screeningProcess": "Proceso de Evaluación",
-      "compensationSupport": "Compensación y Apoyo",
       "applyNow": "Aplicar Ahora"
     },
     "intendedParents": {
@@ -31,7 +30,6 @@
     "eggDonors": {
       "whyBecome": "¿Por Qué Ser Donante?",
       "whoCanApply": "¿Quién Puede Aplicar?",
-      "compensation": "Compensación",
       "applyNow": "Aplicar Ahora"
     },
     "programs": {

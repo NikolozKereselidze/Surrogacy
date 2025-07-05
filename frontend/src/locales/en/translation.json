@@ -19,7 +19,6 @@
       "surrogacyProcess": "Surrogacy Process",
       "whoCanBecome": "Who Can Become a Surrogate?",
       "screeningProcess": "Screening Process",
-      "compensationSupport": "Compensation & Support",
       "applyNow": "Apply Now"
     },
     "intendedParents": {
@@ -31,7 +30,6 @@
     "eggDonors": {
       "whyBecome": "Why Become a Donor?",
       "whoCanApply": "Who Can Apply?",
-      "compensation": "Compensation",
       "applyNow": "Apply Now"
     },
     "programs": {
@@ -91,5 +89,15 @@
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
     "copyright": "All rights reserved."
+  },
+  "ourMission": {
+    "title": "Our Mission",
+    "subtitle": "Ethical, supportive, and personalized fertility journeys for every family.",
+    "valueCompassion": "Compassion",
+    "valueCompassionDesc": "We care deeply about every family and every journey.",
+    "valueExpertise": "Expertise",
+    "valueExpertiseDesc": "Our team brings years of experience and knowledge.",
+    "valueSupport": "Support",
+    "valueSupportDesc": "We are with you every step of the way."
   }
 }

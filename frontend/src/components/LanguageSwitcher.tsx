@@ -10,8 +10,9 @@ const LanguageSwitcher = () => {
 
   const languages = [
     { code: "en", name: "English", flag: "🇺🇸" },
-    { code: "zh", name: "中文", flag: "🇨🇳" },
+    { code: "ge", name: "ქართული", flag: "🇬🇪" },
     { code: "ru", name: "Русский", flag: "🇷🇺" },
+    { code: "zh", name: "中文", flag: "🇨🇳" },
     { code: "es", name: "Español", flag: "🇪🇸" },
     { code: "he", name: "עברית", flag: "🇮🇱" },
   ];
@@ -53,17 +54,19 @@ const LanguageSwitcher = () => {
 
       {isOpen && (
         <div className={styles.dropdown}>
-          {languages.map((lang) => (
-            <button
-              key={lang.code}
-              onClick={() => changeLanguage(lang.code)}
-              className={`${styles.langOption} ${
-                i18n.language === lang.code ? styles.active : ""
-              }`}
-            >
-              <span className={styles.flag}>{lang.flag}</span>
-            </button>
-          ))}
+          {languages.map((lang) =>
+            lang.code !== currentLanguage.code ? (
+              <button
+                key={lang.code}
+                onClick={() => changeLanguage(lang.code)}
+                className={`${styles.langOption} `}
+              >
+                <span className={styles.flag}>{lang.flag}</span>
+              </button>
+            ) : (
+              ""
+            )
+          )}
         </div>
       )}
     </div>

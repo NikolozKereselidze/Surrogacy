@@ -1,4 +1,4 @@
-import styles from "../styles/Home.module.css";
+import styles from "../styles/ContactUs.module.css";
 import Button from "./Button";
 import { useTranslation } from "react-i18next";
 
