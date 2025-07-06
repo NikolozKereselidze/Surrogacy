@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { FaBaby, FaUserPlus, FaGift } from "react-icons/fa";
 import MiracleCard from "../components/MiracleCard";
 import TeamCard from "../components/TeamCard";
+import BlogCard from "../components/BlogCard";
 
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
@@ -14,8 +15,22 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { useEffect, useState } from "react";
+
+interface BlogPost {
+  id: string;
+  link: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  category: string;
+  readTime: string;
+  content: string;
+  imagePath: string;
+}
 
 const Home = () => {
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const { t, i18n } = useTranslation();
 
   // Set RTL for Hebrew
@@ -47,70 +62,20 @@ const Home = () => {
       description:
         "Over 15 years of experience helping families grow. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
-    {
-      image:
-        "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      honorific: "Dr.",
-      name: "John Doe",
-      role: "Fertility Specialist",
-      description:
-        "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1651008376811-b90baee60c1f?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      honorific: "Mrs.",
-      name: "Jane Doe",
-      role: "Founder & CEO",
-      description:
-        "Over 15 years of experience in healthcare and professional service consulting, helping families grow.  Ms. Devdariani graduated from Tbilisi State Medical University and Tbilisi State University.",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      honorific: "Dr.",
-      name: "Robert Doe",
-      role: "Coordinator & IVF Specialist",
-      description:
-        "Over 15 years of experience helping families grow. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      honorific: "Dr.",
-      name: "George Doe",
-      role: "Fertility Specialist",
-      description:
-        "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      honorific: "Mrs.",
-      name: "Sarah Doe",
-      role: "Founder & CEO",
-      description:
-        "Over 15 years of experience in healthcare and professional service consulting, helping families grow.  Ms. Devdariani graduated from Tbilisi State Medical University and Tbilisi State University.",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1612276529731-4b21494e6d71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      honorific: "Dr.",
-      name: "Anna Smith",
-      role: "Coordinator & IVF Specialist",
-      description:
-        "Over 15 years of experience helping families grow. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1673865641073-4479f93a7776?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      honorific: "Dr.",
-      name: "Anna Smith",
-      role: "Coordinator & IVF Specialist",
-      description:
-        "Over 15 years of experience helping families grow. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
   ];
+
+  useEffect(() => {
+    const fetchBlogPosts = async () => {
+      const response = await fetch("http://localhost:3000/api/blog");
+      console.log(response);
+      const data = await response.json();
+      console.log(data);
+      setBlogPosts(data);
+    };
+    fetchBlogPosts();
+  }, []);
+
+  console.log(blogPosts);
 
   return (
     <div className={styles.home} dir={isRTL ? "rtl" : "ltr"}>
@@ -175,22 +140,32 @@ const Home = () => {
           <p className="subtitle">{t("ourTeam.subtitle")}</p>
         </div>
         <div className={styles.ourTeamGrid}>
-          <div className={styles.swiperNavWrapper}>
-            <Swiper
-              modules={[Pagination, Navigation, Scrollbar, A11y]}
-              spaceBetween={20}
-              slidesPerView={3}
-              navigation
-              loop
-              pagination={{ clickable: true }}
-            >
-              {teamMembers.map((member, index) => (
-                <SwiperSlide key={`${member.name}-${index}`}>
-                  <TeamCard member={member} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+          {teamMembers.map((member, index) => (
+            <TeamCard key={`${member.name}-${index}`} member={member} />
+          ))}
+        </div>
+      </section>
+
+      <section className={`${styles.blogSection} section`}>
+        <div className="content">
+          <h2 className="title">{t("blog.title")}</h2>
+          <p className="subtitle">{t("blog.subtitle")}</p>
+        </div>
+        <div className={styles.blogGrid}>
+          <Swiper
+            modules={[Pagination, Navigation, Scrollbar, A11y]}
+            spaceBetween={20}
+            slidesPerView={2}
+            navigation
+            loop
+            pagination={{ clickable: true }}
+          >
+            {blogPosts.map((post) => (
+              <SwiperSlide key={post.id}>
+                <BlogCard post={post} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </section>
     </div>

@@ -1,0 +1,72 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model DatabaseUser {
+  id        String      @id @default(uuid())
+  firstName String
+  lastName String
+  height   Int
+  weight   Int
+  age      Int
+  available Boolean @default(true)
+  documentPath String?
+  imagePath String?
+  eggDonors EggDonor[]
+  surrogates Surrogate[]
+  spermDonors SpermDonor[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+} 
+
+model EggDonor {
+  id        String      @id @default(uuid())
+  databaseUserId String
+  databaseUser DatabaseUser @relation(fields: [databaseUserId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Surrogate {
+  id        String      @id @default(uuid())
+  databaseUserId String
+  databaseUser DatabaseUser @relation(fields: [databaseUserId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SpermDonor {
+  id        String      @id @default(uuid())
+  databaseUserId String
+  databaseUser DatabaseUser @relation(fields: [databaseUserId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model BlogPost {
+  id        String      @id @default(uuid())
+  link String
+  title String
+  excerpt String
+  date String
+  category String
+  readTime String
+  content String
+  imagePath String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+

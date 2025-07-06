@@ -99,5 +99,10 @@
     "valueExpertiseDesc": "Our team brings years of experience and knowledge.",
     "valueSupport": "Support",
     "valueSupportDesc": "We are with you every step of the way."
+  },
+  "blog": {
+    "title": "Latest from Our Blog",
+    "subtitle": "Insights, guides, and stories from our surrogacy community",
+    "readMore": "Read More"
   }
 }
