@@ -4,11 +4,6 @@ import { useTranslation } from "react-i18next";
 import { FaBaby, FaUserPlus, FaGift } from "react-icons/fa";
 import MiracleCard from "../components/MiracleCard";
 import TeamCard from "../components/TeamCard";
-import BlogCard from "../components/BlogCard";
-
-// import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -143,29 +138,6 @@ const Home = () => {
           {teamMembers.map((member, index) => (
             <TeamCard key={`${member.name}-${index}`} member={member} />
           ))}
-        </div>
-      </section>
-
-      <section className={`${styles.blogSection} section`}>
-        <div className="content">
-          <h2 className="title">{t("blog.title")}</h2>
-          <p className="subtitle">{t("blog.subtitle")}</p>
-        </div>
-        <div className={styles.blogGrid}>
-          <Swiper
-            modules={[Pagination, Navigation, Scrollbar, A11y]}
-            spaceBetween={20}
-            slidesPerView={2}
-            navigation
-            loop
-            pagination={{ clickable: true }}
-          >
-            {blogPosts.map((post) => (
-              <SwiperSlide key={post.id}>
-                <BlogCard post={post} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
         </div>
       </section>
     </div>

@@ -1,9 +1,16 @@
+.blogGrid {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
 .blogCard {
   background: #fff;
   border-radius: 1.2rem;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  transition: transform 0.18s, box-shadow 0.18s;
+  transition: box-shadow 0.2s;
   cursor: pointer;
   border: 2px solid transparent;
   height: 100%;
@@ -12,7 +19,6 @@
 }
 
 .blogCard:hover {
-  transform: translateY(-6px) scale(1.02);
   box-shadow: 0 8px 32px rgba(59, 130, 246, 0.13);
   border-color: var(--color-primary, #3b82f6);
 }
@@ -54,12 +60,13 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  gap: 0.8rem;
 }
 
 .blogMeta {
   display: flex;
   gap: 1rem;
-  margin-bottom: 0.8rem;
+
   font-size: 0.8rem;
   color: #666;
 }
@@ -75,7 +82,6 @@
   font-size: 1.1rem;
   font-weight: 600;
   color: #222;
-  margin-bottom: 0.8rem;
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -87,7 +93,6 @@
   font-size: 0.9rem;
   color: #555;
   line-height: 1.6;
-  margin-bottom: 1.2rem;
   flex: 1;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -100,6 +105,7 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
+  margin-top: 0.6rem;
   transition: color 0.2s ease;
   align-self: flex-start;
 }
@@ -107,22 +113,4 @@
 .readMoreLink:hover {
   color: #3b00e6;
   text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .blogCard {
-    margin-bottom: 1.5rem;
-  }
-
-  .blogImageContainer {
-    height: 180px;
-  }
-
-  .blogContent {
-    padding: 1.2rem;
-  }
-
-  .blogTitle {
-    font-size: 1rem;
-  }
 }
