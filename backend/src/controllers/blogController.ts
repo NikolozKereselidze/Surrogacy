@@ -8,6 +8,15 @@ const getBlogPosts = async (req: Request, res: Response) => {
   res.json(blogPosts);
 };
 
+const getBlogPostsCount = async (req: Request, res: Response) => {
+  try {
+    const count = await prisma.blogPost.count();
+    res.json({ count });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to get blog posts count" });
+  }
+};
+
 const createBlogPost = async (req: Request, res: Response) => {
   const { link, title, excerpt, date, category, readTime, content, imagePath } =
     req.body;
@@ -26,4 +35,4 @@ const createBlogPost = async (req: Request, res: Response) => {
   res.json(blogPost);
 };
 
-export default { getBlogPosts, createBlogPost };
+export default { getBlogPosts, getBlogPostsCount, createBlogPost };
