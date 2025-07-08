@@ -35,4 +35,48 @@ const createBlogPost = async (req: Request, res: Response) => {
   res.json(blogPost);
 };
 
-export default { getBlogPosts, getBlogPostsCount, createBlogPost };
+const updateBlogPost = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const { link, title, excerpt, date, category, readTime, content, imagePath } =
+    req.body;
+
+  try {
+    const blogPost = await prisma.blogPost.update({
+      where: { id },
+      data: {
+        link,
+        title,
+        excerpt,
+        date,
+        category,
+        readTime,
+        content,
+        imagePath,
+      },
+    });
+    res.json(blogPost);
+  } catch (error) {
+    res.status(404).json({ error: "Blog post not found" });
+  }
+};
+
+const deleteBlogPost = async (req: Request, res: Response) => {
+  const { id } = req.params;
+
+  try {
+    await prisma.blogPost.delete({
+      where: { id },
+    });
+    res.json({ message: "Blog post deleted successfully" });
+  } catch (error) {
+    res.status(404).json({ error: "Blog post not found" });
+  }
+};
+
+export default {
+  getBlogPosts,
+  getBlogPostsCount,
+  createBlogPost,
+  updateBlogPost,
+  deleteBlogPost,
+};

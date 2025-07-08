@@ -215,9 +215,222 @@
 }
 
 .recentActivity li {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  opacity: 0.92;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Blog Management Styles */
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.pageHeader h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin: 0;
+}
+
+.addButton {
+  background: linear-gradient(135deg, #6c3cff, #7f5fff);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgba(108, 60, 255, 0.08);
+}
+
+.addButton:hover {
+  background: linear-gradient(135deg, #7f5fff, #6c3cff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(108, 60, 255, 0.13);
+}
+
+.formOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.formContainer {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.formContainer h2 {
+  margin-bottom: 1.5rem;
+  color: var(--blue);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.blogForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: var(--blue);
+  font-size: 0.9rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 0.8rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.saveButton {
+  background: linear-gradient(135deg, #6c3cff, #7f5fff);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.saveButton:hover {
+  background: linear-gradient(135deg, #7f5fff, #6c3cff);
+  transform: translateY(-2px);
+}
+
+.cancelButton {
+  background: #f0f0f0;
+  color: #666;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.cancelButton:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.blogTable {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(108, 60, 255, 0.07);
+  overflow: hidden;
+}
+
+.blogTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.blogTable th {
+  background: #f8f9fb;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--blue);
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.blogTable td {
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  color: #666;
+}
+
+.blogTable tr:hover {
+  background: #f8f9fb;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionBtn {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #666;
+}
+
+.actionBtn:hover {
+  background: #f0f0f0;
+  color: var(--color-primary);
+}
+
+.deleteBtn:hover {
+  background: #fee;
+  color: #dc3545;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.1rem;
+  color: var(--blue);
 }
 
 @media (max-width: 900px) {

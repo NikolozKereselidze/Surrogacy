@@ -4,6 +4,7 @@ import OurMission from "./pages/OurMission";
 import { Routes, Route } from "react-router-dom";
 
 import Dashboard from "./pages/Admin/Dashboard";
+import BlogManagement from "./pages/Admin/BlogManagement";
 import MainLayout from "./components/MainLayout";
 import AdminNav from "./components/Admin/AdminNav";
 
@@ -17,6 +18,7 @@ function App() {
 
       <Route path="/admin" element={<AdminNav />}>
         <Route index element={<Dashboard />} />
+        <Route path="blog" element={<BlogManagement />} />
       </Route>
     </Routes>
   );
