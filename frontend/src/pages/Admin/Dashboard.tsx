@@ -5,20 +5,40 @@ import { useEffect, useState } from "react";
 
 const AdminDashboard = () => {
   const [blogPostsCount, setBlogPostsCount] = useState(0);
+  const [eggDonorsCount, setEggDonorsCount] = useState(0);
+  const [spermDonorsCount, setSpermDonorsCount] = useState(0);
+  const [surrogatesCount, setSurrogatesCount] = useState(0);
 
   useEffect(() => {
-    const fetchBlogPostsCount = async () => {
+    const fetchCounts = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/blog/count");
-        const data = await response.json();
-        setBlogPostsCount(data.count);
+        const [blogResponse, eggResponse, spermResponse, surrogateResponse] =
+          await Promise.all([
+            fetch("http://localhost:3000/api/blog/count"),
+            fetch("http://localhost:3000/api/egg-donors/count"),
+            fetch("http://localhost:3000/api/sperm-donors/count"),
+            fetch("http://localhost:3000/api/surrogates/count"),
+          ]);
+
+        const [blogData, eggData, spermData, surrogateData] = await Promise.all(
+          [
+            blogResponse.json(),
+            eggResponse.json(),
+            spermResponse.json(),
+            surrogateResponse.json(),
+          ]
+        );
+
+        setBlogPostsCount(blogData.count);
+        setEggDonorsCount(eggData.count);
+        setSpermDonorsCount(spermData.count);
+        setSurrogatesCount(surrogateData.count);
       } catch (error) {
-        console.error("Error fetching blog posts count:", error);
-        setBlogPostsCount(0);
+        console.error("Error fetching counts:", error);
       }
     };
 
-    fetchBlogPostsCount();
+    fetchCounts();
   }, []);
 
   return (
@@ -42,7 +62,7 @@ const AdminDashboard = () => {
           </div>
           <div className={styles.statCardContent}>
             <h2 className={styles.statCardTitle}>Egg Donors</h2>
-            <p className={styles.statCardValue}>28</p>
+            <p className={styles.statCardValue}>{eggDonorsCount}</p>
           </div>
         </div>
         <div className={styles.statCard}>
@@ -51,7 +71,7 @@ const AdminDashboard = () => {
           </div>
           <div className={styles.statCardContent}>
             <h2 className={styles.statCardTitle}>Sperm Donors</h2>
-            <p className={styles.statCardValue}>15</p>
+            <p className={styles.statCardValue}>{spermDonorsCount}</p>
           </div>
         </div>
         <div className={styles.statCard}>
@@ -60,7 +80,7 @@ const AdminDashboard = () => {
           </div>
           <div className={styles.statCardContent}>
             <h2 className={styles.statCardTitle}>Surrogates</h2>
-            <p className={styles.statCardValue}>34</p>
+            <p className={styles.statCardValue}>{surrogatesCount}</p>
           </div>
         </div>
       </div>

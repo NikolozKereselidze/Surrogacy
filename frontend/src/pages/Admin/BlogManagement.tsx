@@ -223,7 +223,8 @@ const BlogManagement = () => {
                 <div className={styles.formGroup}>
                   <label>Image Path</label>
                   <input
-                    type="text"
+                    type="file"
+                    accept="image/*"
                     value={formData.imagePath}
                     onChange={(e) =>
                       setFormData({ ...formData, imagePath: e.target.value })
