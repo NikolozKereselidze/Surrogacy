@@ -10,22 +10,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { useEffect, useState } from "react";
-
-interface BlogPost {
-  id: string;
-  link: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  category: string;
-  readTime: string;
-  content: string;
-  imagePath: string;
-}
 
 const Home = () => {
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const { t, i18n } = useTranslation();
 
   // Set RTL for Hebrew
@@ -58,19 +44,6 @@ const Home = () => {
         "Over 15 years of experience helping families grow. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
   ];
-
-  useEffect(() => {
-    const fetchBlogPosts = async () => {
-      const response = await fetch("http://localhost:3000/api/blog");
-      console.log(response);
-      const data = await response.json();
-      console.log(data);
-      setBlogPosts(data);
-    };
-    fetchBlogPosts();
-  }, []);
-
-  console.log(blogPosts);
 
   return (
     <div className={styles.home} dir={isRTL ? "rtl" : "ltr"}>

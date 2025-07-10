@@ -29,6 +29,7 @@ const BlogManagement = () => {
     content: "",
     imagePath: "",
   });
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
   useEffect(() => {
     fetchBlogPosts();
@@ -46,29 +47,58 @@ const BlogManagement = () => {
     }
   };
 
+  const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] ?? null;
+    setSelectedFile(file);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    try {
-      const url = editingPost
-        ? `http://localhost:3000/api/blog/${editingPost.id}`
-        : "http://localhost:3000/api/blog";
 
-      const method = editingPost ? "PUT" : "POST";
+    let imagePath = formData.imagePath;
 
-      const response = await fetch(url, {
-        method,
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+    // If user selected a new image, upload it first
+    if (selectedFile) {
+      // Request signed URL
+      const res = await fetch("http://localhost:3000/api/blog/image", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fileType: selectedFile.type }),
+      });
+      const { uploadUrl, fileUrl } = await res.json();
+
+      // Upload image to S3
+      await fetch(uploadUrl, {
+        method: "PUT",
+        headers: { "Content-Type": selectedFile.type },
+        body: selectedFile,
       });
 
-      if (response.ok) {
-        fetchBlogPosts();
-        resetForm();
-      }
-    } catch (error) {
-      console.error("Error saving blog post:", error);
+      imagePath = fileUrl; // update imagePath with the uploaded file URL
+    }
+
+    // Submit blog post with updated imagePath
+    const url = editingPost
+      ? `http://localhost:3000/api/blog/${editingPost.id}`
+      : "http://localhost:3000/api/blog";
+
+    const method = editingPost ? "PUT" : "POST";
+
+    const body = {
+      ...formData,
+      imagePath,
+    };
+
+    const response = await fetch(url, {
+      method,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+
+    if (response.ok) {
+      fetchBlogPosts();
+      resetForm();
+      setSelectedFile(null);
     }
   };
 
@@ -225,11 +255,7 @@ const BlogManagement = () => {
                   <input
                     type="file"
                     accept="image/*"
-                    value={formData.imagePath}
-                    onChange={(e) =>
-                      setFormData({ ...formData, imagePath: e.target.value })
-                    }
-                    placeholder="e.g., /images/blog/surrogacy-guide.jpg"
+                    onChange={handleImageChange}
                     required
                   />
                 </div>
