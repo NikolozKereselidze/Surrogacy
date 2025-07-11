@@ -3,6 +3,7 @@ import { PrismaClient } from "@prisma/client";
 import {
   GetObjectCommand,
   PutObjectCommand,
+  DeleteObjectCommand,
   S3Client,
 } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
@@ -23,6 +24,24 @@ const s3 = new S3Client({
 });
 
 const BUCKET_NAME = process.env.S3_BUCKET_NAME;
+
+// Helper function to delete image from S3
+const deleteImageFromS3 = async (imagePath: string): Promise<void> => {
+  if (!imagePath) return;
+
+  try {
+    const deleteCommand = new DeleteObjectCommand({
+      Bucket: BUCKET_NAME,
+      Key: imagePath,
+    });
+
+    await s3.send(deleteCommand);
+    console.log(`Deleted image from S3: ${imagePath}`);
+  } catch (error) {
+    console.error("Error deleting image from S3:", error);
+    // Don't throw error, just log it
+  }
+};
 
 const getBlogImage = async (req: Request, res: Response): Promise<any> => {
   const key = req.query.key as string;
@@ -111,12 +130,27 @@ const createBlogPost = async (req: Request, res: Response) => {
   res.json(blogPost);
 };
 
-const updateBlogPost = async (req: Request, res: Response) => {
+const updateBlogPost = async (req: Request, res: Response): Promise<any> => {
   const { id } = req.params;
   const { link, title, excerpt, date, category, readTime, content, imagePath } =
     req.body;
 
   try {
+    // Get the current blog post to check if image is being changed
+    const currentBlogPost = await prisma.blogPost.findUnique({
+      where: { id },
+      select: { imagePath: true },
+    });
+
+    if (!currentBlogPost) {
+      return res.status(404).json({ error: "Blog post not found" });
+    }
+
+    // If image is being changed, delete the old image from S3
+    if (currentBlogPost.imagePath && currentBlogPost.imagePath !== imagePath) {
+      await deleteImageFromS3(currentBlogPost.imagePath);
+    }
+
     const blogPost = await prisma.blogPost.update({
       where: { id },
       data: {
@@ -132,20 +166,39 @@ const updateBlogPost = async (req: Request, res: Response) => {
     });
     res.json(blogPost);
   } catch (error) {
-    res.status(404).json({ error: "Blog post not found" });
+    console.error("Error updating blog post:", error);
+    res.status(500).json({ error: "Failed to update blog post" });
   }
 };
 
-const deleteBlogPost = async (req: Request, res: Response) => {
+const deleteBlogPost = async (req: Request, res: Response): Promise<any> => {
   const { id } = req.params;
 
   try {
+    // First, get the blog post to retrieve the imagePath
+    const blogPost = await prisma.blogPost.findUnique({
+      where: { id },
+      select: { imagePath: true },
+    });
+
+    if (!blogPost) {
+      return res.status(404).json({ error: "Blog post not found" });
+    }
+
+    // Delete the image from S3 if it exists
+    await deleteImageFromS3(blogPost.imagePath);
+
+    // Delete the blog post from database
     await prisma.blogPost.delete({
       where: { id },
     });
-    res.json({ message: "Blog post deleted successfully" });
+
+    res.json({
+      message: "Blog post and associated image deleted successfully",
+    });
   } catch (error) {
-    res.status(404).json({ error: "Blog post not found" });
+    console.error("Error deleting blog post:", error);
+    res.status(500).json({ error: "Failed to delete blog post" });
   }
 };
 
