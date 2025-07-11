@@ -14,18 +14,37 @@ interface BlogPost {
   category: string;
   readTime: string;
   content: string;
-  imagePath: string;
+  imagePath: string; // This is your S3 **key** (e.g. 'public/blogs/uuid.png')
+}
+
+interface BlogPostWithSignedUrl extends BlogPost {
+  signedImageUrl?: string;
 }
 
 const BlogCard = () => {
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [blogPosts, setBlogPosts] = useState<BlogPostWithSignedUrl[]>([]);
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
-      const response = await fetch("http://localhost:3000/api/blog");
-      const data = await response.json();
-      setBlogPosts(data);
+      const res = await fetch("http://localhost:3000/api/blog");
+      const data: BlogPost[] = await res.json();
+
+      // For each post, fetch signed URL for the image
+      const postsWithSignedUrls = await Promise.all(
+        data.map(async (post) => {
+          const signedRes = await fetch(
+            `http://localhost:3000/api/blog/image?key=${encodeURIComponent(
+              post.imagePath
+            )}`
+          );
+          const { url } = await signedRes.json();
+          return { ...post, signedImageUrl: url };
+        })
+      );
+
+      setBlogPosts(postsWithSignedUrls);
     };
+
     fetchBlogPosts();
   }, []);
 
@@ -52,7 +71,7 @@ const BlogCard = () => {
                 <article className={styles.blogCard}>
                   <div className={styles.blogImageContainer}>
                     <img
-                      src={post.imagePath}
+                      src={post.signedImageUrl} // use signed URL here
                       alt={post.title}
                       className={styles.blogImage}
                     />
@@ -61,7 +80,9 @@ const BlogCard = () => {
 
                   <div className={styles.blogContent}>
                     <div className={styles.blogMeta}>
-                      <span className={styles.blogDate}>{post.date}</span>
+                      <span className={styles.blogDate}>
+                        {new Date(post.date).toLocaleDateString()}
+                      </span>
                       <span className={styles.blogReadTime}>
                         {post.readTime}
                       </span>

@@ -1,6 +1,10 @@
 import { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client";
-import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import {
+  GetObjectCommand,
+  PutObjectCommand,
+  S3Client,
+} from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { v4 as uuidv4 } from "uuid";
 
@@ -19,6 +23,29 @@ const s3 = new S3Client({
 });
 
 const BUCKET_NAME = process.env.S3_BUCKET_NAME;
+
+const getBlogImage = async (req: Request, res: Response): Promise<any> => {
+  const key = req.query.key as string;
+
+  if (!key) {
+    return res.status(400).json({ error: "Missing 'key' query parameter" });
+  }
+
+  try {
+    const command = new GetObjectCommand({
+      Bucket: BUCKET_NAME,
+      Key: key,
+    });
+    const signedUrl = await getSignedUrl(s3, command, {
+      expiresIn: 300, // URL expires in 5 minutes
+    });
+
+    res.json({ url: signedUrl });
+  } catch (error) {
+    console.error("Error generating signed URL:", error);
+    res.status(500).json({ error: "Failed to generate signed URL" });
+  }
+};
 
 const generateBlogImageUploadUrl = async (
   req: Request,
@@ -129,4 +156,5 @@ export default {
   updateBlogPost,
   deleteBlogPost,
   generateBlogImageUploadUrl,
+  getBlogImage,
 };
