@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "../../styles/AdminDashboard.module.css";
 import { FaPlus, FaEdit, FaTrash } from "react-icons/fa";
+import ImageCompressor from "../../components/ImageCompressor";
 
 interface BlogPost {
   id: string;
@@ -47,8 +48,7 @@ const BlogManagement = () => {
     }
   };
 
-  const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0] ?? null;
+  const handleImageChange = (file: File) => {
     setSelectedFile(file);
   };
 
@@ -251,12 +251,12 @@ const BlogManagement = () => {
 
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
-                  <label>Image Path</label>
-                  <input
-                    type="file"
-                    accept="image/*"
-                    onChange={handleImageChange}
-                    required
+                  <ImageCompressor
+                    label="Choose Blog Image"
+                    maxWidth={1200}
+                    maxHeight={800}
+                    quality={0.75}
+                    onCompressed={handleImageChange} // this will setSelectedFile for you
                   />
                 </div>
                 <div className={styles.formGroup}>
