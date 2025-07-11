@@ -15,11 +15,16 @@ interface BlogPost {
   imagePath: string;
 }
 
+interface BlogPostWithImage extends BlogPost {
+  signedImageUrl?: string;
+}
+
 const BlogManagement = () => {
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [blogPosts, setBlogPosts] = useState<BlogPostWithImage[]>([]);
   const [loading, setLoading] = useState(true);
   const [showAddForm, setShowAddForm] = useState(false);
   const [editingPost, setEditingPost] = useState<BlogPost | null>(null);
+  const [currentImageUrl, setCurrentImageUrl] = useState<string>("");
   const [formData, setFormData] = useState({
     link: "",
     title: "",
@@ -36,11 +41,38 @@ const BlogManagement = () => {
     fetchBlogPosts();
   }, []);
 
+  const getSignedImageUrl = async (imagePath: string): Promise<string> => {
+    try {
+      const response = await fetch(
+        `http://localhost:3000/api/blog/image?key=${encodeURIComponent(
+          imagePath
+        )}`
+      );
+      const data = await response.json();
+      return data.url;
+    } catch (error) {
+      console.error("Error getting signed URL:", error);
+      return "";
+    }
+  };
+
   const fetchBlogPosts = async () => {
     try {
       const response = await fetch("http://localhost:3000/api/blog");
-      const data = await response.json();
-      setBlogPosts(data);
+      const data: BlogPost[] = await response.json();
+
+      // Get signed URLs for all images
+      const postsWithImages = await Promise.all(
+        data.map(async (post) => {
+          if (post.imagePath) {
+            const signedUrl = await getSignedImageUrl(post.imagePath);
+            return { ...post, signedImageUrl: signedUrl };
+          }
+          return { ...post, signedImageUrl: undefined };
+        })
+      );
+
+      setBlogPosts(postsWithImages);
     } catch (error) {
       console.error("Error fetching blog posts:", error);
     } finally {
@@ -118,7 +150,7 @@ const BlogManagement = () => {
     }
   };
 
-  const handleEdit = (post: BlogPost) => {
+  const handleEdit = async (post: BlogPost) => {
     setEditingPost(post);
     setFormData({
       link: post.link,
@@ -130,6 +162,15 @@ const BlogManagement = () => {
       content: post.content,
       imagePath: post.imagePath,
     });
+
+    // Get signed URL for current image
+    if (post.imagePath) {
+      const signedUrl = await getSignedImageUrl(post.imagePath);
+      setCurrentImageUrl(signedUrl);
+    } else {
+      setCurrentImageUrl("");
+    }
+
     setShowAddForm(true);
   };
 
@@ -145,6 +186,7 @@ const BlogManagement = () => {
       imagePath: "",
     });
     setEditingPost(null);
+    setCurrentImageUrl("");
     setShowAddForm(false);
   };
 
@@ -258,6 +300,24 @@ const BlogManagement = () => {
                     quality={0.75}
                     onCompressed={handleImageChange} // this will setSelectedFile for you
                   />
+                  {/* Show current image if editing */}
+                  {editingPost && currentImageUrl && (
+                    <div style={{ marginTop: "10px" }}>
+                      <strong>Current Image:</strong>
+                      <br />
+                      <img
+                        src={currentImageUrl}
+                        alt="Current"
+                        style={{
+                          maxWidth: "200px",
+                          maxHeight: "150px",
+                          objectFit: "cover",
+                          borderRadius: "4px",
+                          marginTop: "5px",
+                        }}
+                      />
+                    </div>
+                  )}
                 </div>
                 <div className={styles.formGroup}>
                   <label>Date</label>
@@ -297,6 +357,7 @@ const BlogManagement = () => {
               <th>Category</th>
               <th>Date</th>
               <th>Read Time</th>
+              <th>Image</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -307,6 +368,40 @@ const BlogManagement = () => {
                 <td>{post.category}</td>
                 <td>{new Date(post.date).toLocaleDateString()}</td>
                 <td>{post.readTime}</td>
+                <td>
+                  {post.signedImageUrl ? (
+                    <img
+                      src={post.signedImageUrl}
+                      alt={post.title}
+                      style={{
+                        width: "80px",
+                        height: "60px",
+                        objectFit: "cover",
+                        borderRadius: "4px",
+                        border: "1px solid #e0e0e0",
+                      }}
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                      }}
+                    />
+                  ) : (
+                    <div
+                      style={{
+                        width: "80px",
+                        height: "60px",
+                        backgroundColor: "#f0f0f0",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        borderRadius: "4px",
+                        fontSize: "12px",
+                        color: "#666",
+                      }}
+                    >
+                      No Image
+                    </div>
+                  )}
+                </td>
                 <td>
                   <div className={styles.actionButtons}>
                     <button
