@@ -58,6 +58,8 @@ interface DonorManagementProps {
 const DonorManagement = ({ donorType }: DonorManagementProps) => {
   const [donors, setDonors] = useState<Donor[]>([]);
   const [loading, setLoading] = useState(true);
+  const [documentFile, setDocumentFile] = useState<File | null>(null);
+  const [imageFile, setImageFile] = useState<File | null>(null);
   const [showAddForm, setShowAddForm] = useState(false);
   const [editingDonor, setEditingDonor] = useState<Donor | null>(null);
   const [formData, setFormData] = useState({
@@ -93,9 +95,56 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
     }
   };
 
+  const handleDocumentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setDocumentFile(file);
+    }
+  };
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setImageFile(file);
+    }
+  };
+
+  const uploadFileToS3 = async (file: File, type: "image" | "document") => {
+    try {
+      // Get pre-signed URL from backend with donor type
+      const response = await fetch(
+        `http://localhost:3000/api/file?fileType=${file.type}&fileName=${file.name}&donorType=${donorType}`
+      );
+      const { signedUrl, key } = await response.json();
+
+      await fetch(signedUrl, {
+        method: "PUT",
+        body: file,
+        headers: {
+          "Content-Type": file.type,
+        },
+      });
+      return key;
+    } catch (error) {
+      console.error(`Error uploading ${type}:`, error);
+      throw error;
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
+      let imageKey = "";
+      let documentKey = "";
+
+      // Upload files to S3 if they exist
+      if (imageFile) {
+        imageKey = await uploadFileToS3(imageFile, "image");
+      }
+      if (documentFile) {
+        documentKey = await uploadFileToS3(documentFile, "document");
+      }
+
       const url = editingDonor
         ? `http://localhost:3000${config.apiEndpoint}/${editingDonor.id}`
         : `http://localhost:3000${config.apiEndpoint}`;
@@ -112,6 +161,8 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
           height: parseInt(formData.height),
           weight: parseInt(formData.weight),
           age: parseInt(formData.age),
+          imagePath: imageKey,
+          documentPath: documentKey,
         }),
       });
 
@@ -303,23 +354,14 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
                   <label>Document</label>
-                  <input
-                    type="file"
-                    value={formData.documentPath}
-                    onChange={(e) =>
-                      setFormData({ ...formData, documentPath: e.target.value })
-                    }
-                  />
+                  <input type="file" onChange={handleDocumentChange} />
                 </div>
                 <div className={styles.formGroup}>
                   <label>Image</label>
                   <input
                     type="file"
                     accept="image/*"
-                    value={formData.imagePath}
-                    onChange={(e) =>
-                      setFormData({ ...formData, imagePath: e.target.value })
-                    }
+                    onChange={handleImageChange}
                   />
                 </div>
               </div>
