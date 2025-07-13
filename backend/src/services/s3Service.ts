@@ -53,3 +53,14 @@ export async function generatePresignedPutUrl(
     key,
   };
 }
+
+export async function generatePresignedGetUrl(key: string) {
+  const command = new GetObjectCommand({
+    Bucket: process.env.S3_BUCKET_NAME!,
+    Key: key,
+  });
+
+  const signedUrl = await getSignedUrl(s3, command, { expiresIn: 300 }); 
+
+  return signedUrl;
+}

@@ -62,6 +62,9 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [showAddForm, setShowAddForm] = useState(false);
   const [editingDonor, setEditingDonor] = useState<Donor | null>(null);
+  const [donorUrls, setDonorUrls] = useState<
+    Record<string, { imageUrl?: string; documentUrl?: string }>
+  >({});
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -83,12 +86,38 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
 
   const fetchDonors = async () => {
     try {
-      const response = await fetch(
+      const dataResponse = await fetch(
         `http://localhost:3000${config.apiEndpoint}`
       );
-      const data = await response.json();
+      const data = await dataResponse.json();
       setDonors(data);
+
+      // Get URLs for all donors with files
+      const urlsMap: Record<
+        string,
+        { imageUrl?: string; documentUrl?: string }
+      > = {};
+
+      for (const donor of data) {
+        const donorId = donor.id;
+        urlsMap[donorId] = {};
+
+        if (donor.databaseUser?.imagePath) {
+          const imageUrl = await getImageUrl(donor.databaseUser.imagePath);
+          urlsMap[donorId].imageUrl = imageUrl || undefined;
+        }
+
+        if (donor.databaseUser?.documentPath) {
+          const documentUrl = await getDocumentUrl(
+            donor.databaseUser.documentPath
+          );
+          urlsMap[donorId].documentUrl = documentUrl || undefined;
+        }
+      }
+
+      setDonorUrls(urlsMap);
     } catch (error) {
+      console.log(error);
       console.error(`Error fetching ${config.title}:`, error);
     } finally {
       setLoading(false);
@@ -111,9 +140,11 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
 
   const uploadFileToS3 = async (file: File, type: "image" | "document") => {
     try {
-      // Get pre-signed URL from backend with donor type
       const response = await fetch(
-        `http://localhost:3000/api/file?fileType=${file.type}&fileName=${file.name}&donorType=${donorType}`
+        `http://localhost:3000/api/file?fileType=${file.type}&fileName=${file.name}&donorType=${donorType}`,
+        {
+          method: "POST",
+        }
       );
       const { signedUrl, key } = await response.json();
 
@@ -128,6 +159,34 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
     } catch (error) {
       console.error(`Error uploading ${type}:`, error);
       throw error;
+    }
+  };
+
+  const getImageUrl = async (imagePath: string) => {
+    if (!imagePath) return null;
+    try {
+      const response = await fetch(
+        `http://localhost:3000/api/file/get?key=${imagePath}`
+      );
+      const { signedUrl } = await response.json();
+      return signedUrl;
+    } catch (error) {
+      console.error("Error getting image URL:", error);
+      return null;
+    }
+  };
+
+  const getDocumentUrl = async (documentPath: string) => {
+    if (!documentPath) return null;
+    try {
+      const response = await fetch(
+        `http://localhost:3000/api/file/get?key=${documentPath}`
+      );
+      const { signedUrl } = await response.json();
+      return signedUrl;
+    } catch (error) {
+      console.error("Error getting document URL:", error);
+      return null;
     }
   };
 
@@ -403,7 +462,30 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
             {donors.map((donor) => (
               <tr key={donor.id}>
                 <td>
-                  {donor.databaseUser.firstName} {donor.databaseUser.lastName}
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                    }}
+                  >
+                    {donorUrls[donor.id]?.imageUrl && (
+                      <img
+                        src={donorUrls[donor.id].imageUrl}
+                        alt="Profile"
+                        style={{
+                          width: "40px",
+                          height: "40px",
+                          borderRadius: "50%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    )}
+                    <span>
+                      {donor.databaseUser.firstName}{" "}
+                      {donor.databaseUser.lastName}
+                    </span>
+                  </div>
                 </td>
                 <td>{donor.databaseUser.age}</td>
                 <td>{donor.databaseUser.height} cm</td>
@@ -420,6 +502,18 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
                 </td>
                 <td>
                   <div className={styles.actionButtons}>
+                    {donorUrls[donor.id]?.documentUrl && (
+                      <a
+                        href={donorUrls[donor.id].documentUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.actionBtn}
+                        title="View Document"
+                        style={{ textDecoration: "none" }}
+                      >
+                        📄
+                      </a>
+                    )}
                     <button
                       className={styles.actionBtn}
                       onClick={() => handleEdit(donor)}

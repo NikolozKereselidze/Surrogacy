@@ -1,7 +1,13 @@
 import { Request, Response } from "express";
-import { generatePresignedPutUrl } from "../services/s3Service";
+import {
+  generatePresignedGetUrl,
+  generatePresignedPutUrl,
+} from "../services/s3Service";
 
-const getPresignedUrl = async (req: Request, res: Response): Promise<any> => {
+const getPresignedPutUrl = async (
+  req: Request,
+  res: Response
+): Promise<any> => {
   try {
     const { fileType, fileName, donorType } = req.query as {
       fileType: string;
@@ -25,6 +31,21 @@ const getPresignedUrl = async (req: Request, res: Response): Promise<any> => {
   }
 };
 
+const getPresignedGetUrl = async (
+  req: Request,
+  res: Response
+): Promise<any> => {
+  try {
+    const { key } = req.query as { key: string };
+    const signedUrl = await generatePresignedGetUrl(key);
+
+    res.json({ signedUrl });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to generate signed URL" });
+  }
+};
+
 export default {
-  getPresignedUrl,
+  getPresignedPutUrl,
+  getPresignedGetUrl,
 };

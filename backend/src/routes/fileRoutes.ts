@@ -3,6 +3,7 @@ import fileController from "../controllers/fileController";
 
 const router = express.Router();
 
-router.get("/", fileController.getPresignedUrl);
+router.post("/", fileController.getPresignedPutUrl);
+router.get("/get", fileController.getPresignedGetUrl);
 
 export default router;
