@@ -60,7 +60,16 @@ export async function generatePresignedGetUrl(key: string) {
     Key: key,
   });
 
-  const signedUrl = await getSignedUrl(s3, command, { expiresIn: 300 }); 
+  const signedUrl = await getSignedUrl(s3, command, { expiresIn: 300 });
 
   return signedUrl;
+}
+
+export async function deleteFileFromS3(key: string) {
+  const command = new DeleteObjectCommand({
+    Bucket: process.env.S3_BUCKET_NAME!,
+    Key: key,
+  });
+
+  await s3.send(command);
 }

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "../../styles/AdminDashboard.module.css";
 import { FaPlus, FaEdit, FaTrash, FaUser, FaUserPlus } from "react-icons/fa";
 import { MdFamilyRestroom as MdFamilyRestroomIcon } from "react-icons/md";
+import ImageCompressor from "../../components/ImageCompressor";
 
 interface DatabaseUser {
   id: string;
@@ -131,11 +132,8 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
     }
   };
 
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      setImageFile(file);
-    }
+  const handleImageChange = (file: File) => {
+    setImageFile(file);
   };
 
   const uploadFileToS3 = async (file: File, type: "image" | "document") => {
@@ -166,7 +164,7 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
     if (!imagePath) return null;
     try {
       const response = await fetch(
-        `http://localhost:3000/api/file/get?key=${imagePath}`
+        `http://localhost:3000/api/file?key=${imagePath}`
       );
       const { signedUrl } = await response.json();
       return signedUrl;
@@ -180,13 +178,31 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
     if (!documentPath) return null;
     try {
       const response = await fetch(
-        `http://localhost:3000/api/file/get?key=${documentPath}`
+        `http://localhost:3000/api/file?key=${documentPath}`
       );
       const { signedUrl } = await response.json();
       return signedUrl;
     } catch (error) {
       console.error("Error getting document URL:", error);
       return null;
+    }
+  };
+
+  const deleteFileFromS3 = async (filePath: string) => {
+    if (!filePath) return;
+    try {
+      const response = await fetch(
+        `http://localhost:3000/api/file/?key=${filePath}`,
+        {
+          method: "DELETE",
+        }
+      );
+
+      if (!response.ok) {
+        console.error("Failed to delete file from S3");
+      }
+    } catch (error) {
+      console.error("Error deleting file from S3:", error);
     }
   };
 
@@ -241,6 +257,20 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
       )
     ) {
       try {
+        // Find the donor to get their file paths
+        const donor = donors.find((d) => d.id === id);
+
+        if (donor) {
+          // Delete associated files from S3
+          if (donor.databaseUser.imagePath) {
+            await deleteFileFromS3(donor.databaseUser.imagePath);
+          }
+          if (donor.databaseUser.documentPath) {
+            await deleteFileFromS3(donor.databaseUser.documentPath);
+          }
+        }
+
+        // Delete the donor record from database
         const response = await fetch(
           `http://localhost:3000${config.apiEndpoint}/${id}`,
           {
@@ -416,11 +446,12 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
                   <input type="file" onChange={handleDocumentChange} />
                 </div>
                 <div className={styles.formGroup}>
-                  <label>Image</label>
-                  <input
-                    type="file"
-                    accept="image/*"
-                    onChange={handleImageChange}
+                  <ImageCompressor
+                    onCompressed={handleImageChange}
+                    label="Choose Profile Image"
+                    maxWidth={1200}
+                    maxHeight={800}
+                    quality={0.90}
                   />
                 </div>
               </div>

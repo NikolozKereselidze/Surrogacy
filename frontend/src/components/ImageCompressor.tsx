@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 
 interface ImageCompressorProps {
-  onCompressed: (file: File) => void;
+  onCompressed?: (file: File) => void;
   maxWidth?: number;
   maxHeight?: number;
   quality?: number;
@@ -56,7 +56,7 @@ const ImageCompressor: React.FC<ImageCompressorProps> = ({
               type: blob.type,
             });
             setPreview(URL.createObjectURL(blob));
-            onCompressed(compressedFile);
+            onCompressed?.(compressedFile);
           },
           "image/webp",
           quality
@@ -72,15 +72,13 @@ const ImageCompressor: React.FC<ImageCompressorProps> = ({
 
   return (
     <>
-      <label>
-        {label}:{" "}
-        <input
-          ref={inputRef}
-          type="file"
-          accept="image/*"
-          onChange={handleChange}
-        />
-      </label>
+      <label>{label}: </label>
+      <input
+        ref={inputRef}
+        type="file"
+        accept="image/*"
+        onChange={handleChange}
+      />
       {preview && (
         <div style={{ marginTop: "10px" }}>
           <strong>Compressed Preview:</strong>
