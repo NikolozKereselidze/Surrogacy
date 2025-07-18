@@ -94,6 +94,11 @@ const Navigation = () => {
             <li>
               <a href="/who-can-apply">{t("submenu.eggDonors.whoCanApply")}</a>
             </li>
+            <li>
+              <a href="/find-egg-donor">
+                {t("submenu.eggDonors.findDonor")}
+              </a>
+            </li>
             <button className={styles.applyButton}>
               {t("submenu.eggDonors.applyNow")}
             </button>

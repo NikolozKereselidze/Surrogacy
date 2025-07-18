@@ -7,7 +7,16 @@ const getEggDonors = async (req: Request, res: Response) => {
   try {
     const eggDonors = await prisma.eggDonor.findMany({
       include: {
-        databaseUser: true,
+        databaseUser: {
+          select: {
+            height: true,
+            weight: true,
+            age: true,
+            available: true,
+            documentPath: true,
+            imagePath: true,
+          },
+        },
       },
     });
     res.json(eggDonors);

@@ -8,6 +8,7 @@ import BlogManagement from "./pages/Admin/BlogManagement";
 import DonorManagement from "./pages/Admin/DonorManagement";
 import MainLayout from "./components/MainLayout";
 import AdminNav from "./components/Admin/AdminNav";
+import Donors from "./pages/Donors";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/our-mission" element={<OurMission />} />
+        <Route path="/find-egg-donor" element={<Donors />} />
+        <Route path="/surrogates" element={<Donors />} />
+        <Route path="/sperm-donors" element={<Donors />} />
       </Route>
 
       <Route path="/admin" element={<AdminNav />}>
