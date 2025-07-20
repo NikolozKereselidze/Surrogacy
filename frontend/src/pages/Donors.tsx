@@ -15,11 +15,35 @@ interface Donor {
   };
 }
 
+interface Filters {
+  ageRange: [number, number];
+  heightRange: [number, number];
+  weightRange: [number, number];
+  available: boolean | null;
+}
+
+interface SortOption {
+  field: "age" | "height" | "weight";
+  direction: "asc" | "desc";
+}
+
 const Donors = () => {
   const [donors, setDonors] = useState<Donor[]>([]);
+  const [filteredDonors, setFilteredDonors] = useState<Donor[]>([]);
   const [imageUrls, setImageUrls] = useState<{ [donorId: string]: string }>({});
   const [loading, setLoading] = useState(true);
   const [selectedDonorType, setSelectedDonorType] = useState("egg-donors");
+  const [filters, setFilters] = useState<Filters>({
+    ageRange: [18, 60],
+    heightRange: [140, 220],
+    weightRange: [30, 120],
+    available: null,
+  });
+  const [sortOption, setSortOption] = useState<SortOption>({
+    field: "age",
+    direction: "asc",
+  });
+  const [showFilters, setShowFilters] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -58,6 +82,7 @@ const Donors = () => {
       const response = await fetch(endpoint);
       const data = await response.json();
       setDonors(data);
+      setFilteredDonors(data); // Initially show all donors
 
       // Fetch images for all donors
       data.forEach(async (donor: Donor) => {
@@ -87,10 +112,55 @@ const Donors = () => {
     }
   };
 
+  // Filter and sort donors
+  const applyFiltersAndSort = (donorsToFilter: Donor[]) => {
+    const filtered = donorsToFilter.filter((donor) => {
+      const { age, height, weight, available } = donor.databaseUser;
+
+      // Age filter
+      if (age < filters.ageRange[0] || age > filters.ageRange[1]) return false;
+
+      // Height filter
+      if (height < filters.heightRange[0] || height > filters.heightRange[1])
+        return false;
+
+      // Weight filter
+      if (weight < filters.weightRange[0] || weight > filters.weightRange[1])
+        return false;
+
+      // Availability filter
+      if (filters.available !== null && available !== filters.available)
+        return false;
+
+      return true;
+    });
+
+    // Sort donors
+    filtered.sort((a, b) => {
+      const aValue = a.databaseUser[sortOption.field];
+      const bValue = b.databaseUser[sortOption.field];
+
+      if (sortOption.direction === "asc") {
+        return aValue - bValue;
+      } else {
+        return bValue - aValue;
+      }
+    });
+
+    return filtered;
+  };
+
+  // Apply filters and sort when filters or sort options change
+  useEffect(() => {
+    const filtered = applyFiltersAndSort(donors);
+    setFilteredDonors(filtered);
+  }, [filters, sortOption, donors]);
+
   const handleDonorTypeChange = (donorType: string) => {
     setSelectedDonorType(donorType);
     setImageUrls({}); // Clear previous images
     setDonors([]); // Clear previous donors
+    setFilteredDonors([]); // Clear filtered donors
 
     // Update URL
     switch (donorType) {
@@ -159,17 +229,211 @@ const Donors = () => {
         ))}
       </div>
 
+      {/* Filters and Sort Section */}
+      <div className={styles.filtersSection}>
+        <div className={styles.filtersHeader}>
+          <button
+            className={styles.filterToggleButton}
+            onClick={() => setShowFilters(!showFilters)}
+          >
+            {showFilters ? "Hide" : "Show"} Filters & Sort
+          </button>
+          <div className={styles.sortContainer}>
+            <select
+              value={`${sortOption.field}-${sortOption.direction}`}
+              onChange={(e) => {
+                const [field, direction] = e.target.value.split("-") as [
+                  SortOption["field"],
+                  SortOption["direction"]
+                ];
+                setSortOption({ field, direction });
+              }}
+              className={styles.sortSelect}
+            >
+              <option value="age-asc">Age (Low to High)</option>
+              <option value="age-desc">Age (High to Low)</option>
+              <option value="height-asc">Height (Low to High)</option>
+              <option value="height-desc">Height (High to Low)</option>
+              <option value="weight-asc">Weight (Low to High)</option>
+              <option value="weight-desc">Weight (High to Low)</option>
+            </select>
+          </div>
+        </div>
+
+        {showFilters && (
+          <div className={styles.filtersContainer}>
+            <div className={styles.filterGroup}>
+              <label>
+                Age Range: {filters.ageRange[0]} - {filters.ageRange[1]} years
+              </label>
+              <div className={styles.rangeInputs}>
+                <input
+                  type="range"
+                  min="18"
+                  max="50"
+                  value={filters.ageRange[0]}
+                  onChange={(e) =>
+                    setFilters((prev) => ({
+                      ...prev,
+                      ageRange: [parseInt(e.target.value), prev.ageRange[1]],
+                    }))
+                  }
+                />
+                <input
+                  type="range"
+                  min="18"
+                  max="50"
+                  value={filters.ageRange[1]}
+                  onChange={(e) =>
+                    setFilters((prev) => ({
+                      ...prev,
+                      ageRange: [prev.ageRange[0], parseInt(e.target.value)],
+                    }))
+                  }
+                />
+              </div>
+            </div>
+
+            <div className={styles.filterGroup}>
+              <label>
+                Height Range: {filters.heightRange[0]} -{" "}
+                {filters.heightRange[1]} cm
+              </label>
+              <div className={styles.rangeInputs}>
+                <input
+                  type="range"
+                  min="140"
+                  max="200"
+                  value={filters.heightRange[0]}
+                  onChange={(e) =>
+                    setFilters((prev) => ({
+                      ...prev,
+                      heightRange: [
+                        parseInt(e.target.value),
+                        prev.heightRange[1],
+                      ],
+                    }))
+                  }
+                />
+                <input
+                  type="range"
+                  min="140"
+                  max="200"
+                  value={filters.heightRange[1]}
+                  onChange={(e) =>
+                    setFilters((prev) => ({
+                      ...prev,
+                      heightRange: [
+                        prev.heightRange[0],
+                        parseInt(e.target.value),
+                      ],
+                    }))
+                  }
+                />
+              </div>
+            </div>
+
+            <div className={styles.filterGroup}>
+              <label>
+                Weight Range: {filters.weightRange[0]} -{" "}
+                {filters.weightRange[1]} kg
+              </label>
+              <div className={styles.rangeInputs}>
+                <input
+                  type="range"
+                  min="40"
+                  max="120"
+                  value={filters.weightRange[0]}
+                  onChange={(e) =>
+                    setFilters((prev) => ({
+                      ...prev,
+                      weightRange: [
+                        parseInt(e.target.value),
+                        prev.weightRange[1],
+                      ],
+                    }))
+                  }
+                />
+                <input
+                  type="range"
+                  min="40"
+                  max="120"
+                  value={filters.weightRange[1]}
+                  onChange={(e) =>
+                    setFilters((prev) => ({
+                      ...prev,
+                      weightRange: [
+                        prev.weightRange[0],
+                        parseInt(e.target.value),
+                      ],
+                    }))
+                  }
+                />
+              </div>
+            </div>
+
+            <div className={styles.filterGroup}>
+              <label>Availability:</label>
+              <select
+                value={
+                  filters.available === null
+                    ? "all"
+                    : filters.available.toString()
+                }
+                onChange={(e) =>
+                  setFilters((prev) => ({
+                    ...prev,
+                    available:
+                      e.target.value === "all"
+                        ? null
+                        : e.target.value === "true",
+                  }))
+                }
+                className={styles.availabilitySelect}
+              >
+                <option value="all">All</option>
+                <option value="true">Available Only</option>
+                <option value="false">Not Available</option>
+              </select>
+            </div>
+
+            <button
+              className={styles.resetFiltersButton}
+              onClick={() =>
+                setFilters({
+                  ageRange: [18, 50],
+                  heightRange: [140, 200],
+                  weightRange: [40, 120],
+                  available: null,
+                })
+              }
+            >
+              Reset Filters
+            </button>
+          </div>
+        )}
+      </div>
+
       <div className={styles.donorsGrid}>
-        {donors.length === 0 ? (
+        {filteredDonors.length === 0 ? (
           <div className={styles.noDonorsMessage}>
             <p>
-              No {getDonorTypeLabel(selectedDonorType).toLowerCase()} available
-              at the moment.
+              {donors.length === 0
+                ? `No ${getDonorTypeLabel(
+                    selectedDonorType
+                  ).toLowerCase()} available at the moment.`
+                : `No ${getDonorTypeLabel(
+                    selectedDonorType
+                  ).toLowerCase()} match your current filters.`}
             </p>
-            <p>Please check back later or contact us for more information.</p>
+            <p>
+              {donors.length === 0
+                ? "Please check back later or contact us for more information."
+                : "Try adjusting your filters or reset them to see all available donors."}
+            </p>
           </div>
         ) : (
-          donors.map((donor) => (
+          filteredDonors.map((donor) => (
             <div className={styles.donorCard} key={donor.id}>
               <div className={styles.donorImageContainer}>
                 <img
