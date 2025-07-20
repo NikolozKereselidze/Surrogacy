@@ -10,5 +10,4 @@ router.put("/:id", blogController.updateBlogPost);
 router.delete("/:id", blogController.deleteBlogPost);
 
 router.post("/image", blogController.generateBlogImageUploadUrl);
-router.get("/image", blogController.getBlogImage);      
 export default router;

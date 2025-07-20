@@ -3,6 +3,12 @@ import { useNavigate, useLocation } from "react-router-dom";
 import styles from "../styles/Donors.module.css";
 import Button from "../components/Button";
 
+const CLOUDFRONT_DOMAIN = import.meta.env.VITE_CLOUDFRONT_DOMAIN;
+
+function getImageUrl(imagePath: string) {
+  return `${CLOUDFRONT_DOMAIN}/${imagePath}`;
+}
+
 interface Donor {
   id: string;
   databaseUser: {
@@ -30,7 +36,6 @@ interface SortOption {
 const Donors = () => {
   const [donors, setDonors] = useState<Donor[]>([]);
   const [filteredDonors, setFilteredDonors] = useState<Donor[]>([]);
-  const [imageUrls, setImageUrls] = useState<{ [donorId: string]: string }>({});
   const [loading, setLoading] = useState(true);
   const [selectedDonorType, setSelectedDonorType] = useState("egg-donors");
   const [filters, setFilters] = useState<Filters>({
@@ -83,13 +88,6 @@ const Donors = () => {
       const data = await response.json();
       setDonors(data);
       setFilteredDonors(data); // Initially show all donors
-
-      // Fetch images for all donors
-      data.forEach(async (donor: Donor) => {
-        if (donor.databaseUser.imagePath) {
-          await getImageUrl(donor.id, donor.databaseUser.imagePath);
-        }
-      });
     } catch (error) {
       console.error("Error fetching donors:", error);
     } finally {
@@ -97,56 +95,33 @@ const Donors = () => {
     }
   };
 
-  const getImageUrl = async (donorId: string, imagePath: string) => {
-    try {
-      const response = await fetch(
-        `http://localhost:3000/api/file?key=${imagePath}`
-      );
-      const data = await response.json();
-      setImageUrls((prev) => ({
-        ...prev,
-        [donorId]: data.signedUrl,
-      }));
-    } catch (error) {
-      console.error("Error fetching image URL:", error);
-    }
-  };
-
   // Filter and sort donors
   const applyFiltersAndSort = (donorsToFilter: Donor[]) => {
     const filtered = donorsToFilter.filter((donor) => {
       const { age, height, weight, available } = donor.databaseUser;
-
       // Age filter
       if (age < filters.ageRange[0] || age > filters.ageRange[1]) return false;
-
       // Height filter
       if (height < filters.heightRange[0] || height > filters.heightRange[1])
         return false;
-
       // Weight filter
       if (weight < filters.weightRange[0] || weight > filters.weightRange[1])
         return false;
-
       // Availability filter
       if (filters.available !== null && available !== filters.available)
         return false;
-
       return true;
     });
-
     // Sort donors
     filtered.sort((a, b) => {
       const aValue = a.databaseUser[sortOption.field];
       const bValue = b.databaseUser[sortOption.field];
-
       if (sortOption.direction === "asc") {
         return aValue - bValue;
       } else {
         return bValue - aValue;
       }
     });
-
     return filtered;
   };
 
@@ -158,10 +133,8 @@ const Donors = () => {
 
   const handleDonorTypeChange = (donorType: string) => {
     setSelectedDonorType(donorType);
-    setImageUrls({}); // Clear previous images
     setDonors([]); // Clear previous donors
     setFilteredDonors([]); // Clear filtered donors
-
     // Update URL
     switch (donorType) {
       case "surrogates":
@@ -270,7 +243,7 @@ const Donors = () => {
                 <input
                   type="range"
                   min="18"
-                  max="50"
+                  max="60"
                   value={filters.ageRange[0]}
                   onChange={(e) =>
                     setFilters((prev) => ({
@@ -282,7 +255,7 @@ const Donors = () => {
                 <input
                   type="range"
                   min="18"
-                  max="50"
+                  max="60"
                   value={filters.ageRange[1]}
                   onChange={(e) =>
                     setFilters((prev) => ({
@@ -303,7 +276,7 @@ const Donors = () => {
                 <input
                   type="range"
                   min="140"
-                  max="200"
+                  max="220"
                   value={filters.heightRange[0]}
                   onChange={(e) =>
                     setFilters((prev) => ({
@@ -318,7 +291,7 @@ const Donors = () => {
                 <input
                   type="range"
                   min="140"
-                  max="200"
+                  max="220"
                   value={filters.heightRange[1]}
                   onChange={(e) =>
                     setFilters((prev) => ({
@@ -341,7 +314,7 @@ const Donors = () => {
               <div className={styles.rangeInputs}>
                 <input
                   type="range"
-                  min="40"
+                  min="30"
                   max="120"
                   value={filters.weightRange[0]}
                   onChange={(e) =>
@@ -356,7 +329,7 @@ const Donors = () => {
                 />
                 <input
                   type="range"
-                  min="40"
+                  min="30"
                   max="120"
                   value={filters.weightRange[1]}
                   onChange={(e) =>
@@ -401,9 +374,9 @@ const Donors = () => {
               className={styles.resetFiltersButton}
               onClick={() =>
                 setFilters({
-                  ageRange: [18, 50],
-                  heightRange: [140, 200],
-                  weightRange: [40, 120],
+                  ageRange: [18, 60],
+                  heightRange: [140, 220],
+                  weightRange: [30, 120],
                   available: null,
                 })
               }
@@ -438,7 +411,7 @@ const Donors = () => {
               <div className={styles.donorImageContainer}>
                 <img
                   className={styles.donorImage}
-                  src={imageUrls[donor.id]}
+                  src={getImageUrl(donor.databaseUser.imagePath)}
                   alt={`${getDonorTypeLabel(selectedDonorType).slice(0, -1)}`}
                   loading="lazy"
                 />

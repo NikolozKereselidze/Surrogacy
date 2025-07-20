@@ -3,6 +3,12 @@ import styles from "../../styles/AdminDashboard.module.css";
 import { FaPlus, FaEdit, FaTrash } from "react-icons/fa";
 import ImageCompressor from "../../components/ImageCompressor";
 
+const CLOUDFRONT_DOMAIN = import.meta.env.VITE_CLOUDFRONT_DOMAIN;
+
+function getImageUrl(imagePath: string) {
+  return `${CLOUDFRONT_DOMAIN}/${imagePath}`;
+}
+
 interface BlogPost {
   id: string;
   link: string;
@@ -16,7 +22,7 @@ interface BlogPost {
 }
 
 interface BlogPostWithImage extends BlogPost {
-  signedImageUrl?: string;
+  imageUrl?: string;
 }
 
 const BlogManagement = () => {
@@ -41,19 +47,8 @@ const BlogManagement = () => {
     fetchBlogPosts();
   }, []);
 
-  const getSignedImageUrl = async (imagePath: string): Promise<string> => {
-    try {
-      const response = await fetch(
-        `http://localhost:3000/api/blog/image?key=${encodeURIComponent(
-          imagePath
-        )}`
-      );
-      const data = await response.json();
-      return data.url;
-    } catch (error) {
-      console.error("Error getting signed URL:", error);
-      return "";
-    }
+  const getLocalImageUrl = (imagePath: string): string => {
+    return getImageUrl(imagePath);
   };
 
   const fetchBlogPosts = async () => {
@@ -61,16 +56,11 @@ const BlogManagement = () => {
       const response = await fetch("http://localhost:3000/api/blog");
       const data: BlogPost[] = await response.json();
 
-      // Get signed URLs for all images
-      const postsWithImages = await Promise.all(
-        data.map(async (post) => {
-          if (post.imagePath) {
-            const signedUrl = await getSignedImageUrl(post.imagePath);
-            return { ...post, signedImageUrl: signedUrl };
-          }
-          return { ...post, signedImageUrl: undefined };
-        })
-      );
+      // Generate CloudFront URLs for all images
+      const postsWithImages = data.map((post) => ({
+        ...post,
+        imageUrl: post.imagePath ? getImageUrl(post.imagePath) : undefined,
+      }));
 
       setBlogPosts(postsWithImages);
     } catch (error) {
@@ -163,10 +153,10 @@ const BlogManagement = () => {
       imagePath: post.imagePath,
     });
 
-    // Get signed URL for current image
+    // Get CloudFront URL for current image
     if (post.imagePath) {
-      const signedUrl = await getSignedImageUrl(post.imagePath);
-      setCurrentImageUrl(signedUrl);
+      const imageUrl = getImageUrl(post.imagePath);
+      setCurrentImageUrl(imageUrl);
     } else {
       setCurrentImageUrl("");
     }
@@ -369,9 +359,9 @@ const BlogManagement = () => {
                 <td>{new Date(post.date).toLocaleDateString()}</td>
                 <td>{post.readTime}</td>
                 <td>
-                  {post.signedImageUrl ? (
+                  {post.imageUrl ? (
                     <img
-                      src={post.signedImageUrl}
+                      src={post.imageUrl}
                       alt={post.title}
                       style={{
                         width: "80px",

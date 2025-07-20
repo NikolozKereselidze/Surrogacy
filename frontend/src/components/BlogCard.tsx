@@ -5,6 +5,12 @@ import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 
+const CLOUDFRONT_DOMAIN = import.meta.env.VITE_CLOUDFRONT_DOMAIN;
+
+function getImageUrl(imagePath: string) {
+  return `${CLOUDFRONT_DOMAIN}/${imagePath}`;
+}
+
 interface BlogPost {
   id: string;
   link: string;
@@ -17,32 +23,25 @@ interface BlogPost {
   imagePath: string; // This is your S3 **key** (e.g. 'public/blogs/uuid.png')
 }
 
-interface BlogPostWithSignedUrl extends BlogPost {
-  signedImageUrl?: string;
+interface BlogPostWithImage extends BlogPost {
+  imageUrl?: string;
 }
 
 const BlogCard = () => {
-  const [blogPosts, setBlogPosts] = useState<BlogPostWithSignedUrl[]>([]);
+  const [blogPosts, setBlogPosts] = useState<BlogPostWithImage[]>([]);
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
       const res = await fetch("http://localhost:3000/api/blog");
       const data: BlogPost[] = await res.json();
 
-      // For each post, fetch signed URL for the image
-      const postsWithSignedUrls = await Promise.all(
-        data.map(async (post) => {
-          const signedRes = await fetch(
-            `http://localhost:3000/api/blog/image?key=${encodeURIComponent(
-              post.imagePath
-            )}`
-          );
-          const { url } = await signedRes.json();
-          return { ...post, signedImageUrl: url };
-        })
-      );
+      // Generate CloudFront URLs for images
+      const postsWithImages = data.map((post) => ({
+        ...post,
+        imageUrl: post.imagePath ? getImageUrl(post.imagePath) : undefined,
+      }));
 
-      setBlogPosts(postsWithSignedUrls);
+      setBlogPosts(postsWithImages);
     };
 
     fetchBlogPosts();
@@ -71,7 +70,7 @@ const BlogCard = () => {
                 <article className={styles.blogCard}>
                   <div className={styles.blogImageContainer}>
                     <img
-                      src={post.signedImageUrl} // use signed URL here
+                      src={post.imageUrl}
                       alt={post.title}
                       className={styles.blogImage}
                     />

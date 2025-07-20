@@ -4,6 +4,16 @@ import { FaPlus, FaEdit, FaTrash, FaUser, FaUserPlus } from "react-icons/fa";
 import { MdFamilyRestroom as MdFamilyRestroomIcon } from "react-icons/md";
 import ImageCompressor from "../../components/ImageCompressor";
 
+const CLOUDFRONT_DOMAIN = import.meta.env.VITE_CLOUDFRONT_DOMAIN;
+
+function getImageUrl(imagePath: string) {
+  return `${CLOUDFRONT_DOMAIN}/${imagePath}`;
+}
+
+function getDocumentUrl(documentPath: string) {
+  return `${CLOUDFRONT_DOMAIN}/${documentPath}`;
+}
+
 interface DatabaseUser {
   id: string;
   firstName: string;
@@ -93,7 +103,7 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
       const data = await dataResponse.json();
       setDonors(data);
 
-      // Get URLs for all donors with files
+      // Generate CloudFront URLs for all donors with files
       const urlsMap: Record<
         string,
         { imageUrl?: string; documentUrl?: string }
@@ -104,15 +114,13 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
         urlsMap[donorId] = {};
 
         if (donor.databaseUser?.imagePath) {
-          const imageUrl = await getImageUrl(donor.databaseUser.imagePath);
-          urlsMap[donorId].imageUrl = imageUrl || undefined;
+          urlsMap[donorId].imageUrl = getImageUrl(donor.databaseUser.imagePath);
         }
 
         if (donor.databaseUser?.documentPath) {
-          const documentUrl = await getDocumentUrl(
+          urlsMap[donorId].documentUrl = getDocumentUrl(
             donor.databaseUser.documentPath
           );
-          urlsMap[donorId].documentUrl = documentUrl || undefined;
         }
       }
 
@@ -160,32 +168,14 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
     }
   };
 
-  const getImageUrl = async (imagePath: string) => {
+  const getLocalImageUrl = (imagePath: string) => {
     if (!imagePath) return null;
-    try {
-      const response = await fetch(
-        `http://localhost:3000/api/file?key=${imagePath}`
-      );
-      const { signedUrl } = await response.json();
-      return signedUrl;
-    } catch (error) {
-      console.error("Error getting image URL:", error);
-      return null;
-    }
+    return getImageUrl(imagePath);
   };
 
-  const getDocumentUrl = async (documentPath: string) => {
+  const getLocalDocumentUrl = (documentPath: string) => {
     if (!documentPath) return null;
-    try {
-      const response = await fetch(
-        `http://localhost:3000/api/file?key=${documentPath}`
-      );
-      const { signedUrl } = await response.json();
-      return signedUrl;
-    } catch (error) {
-      console.error("Error getting document URL:", error);
-      return null;
-    }
+    return getDocumentUrl(documentPath);
   };
 
   const deleteFileFromS3 = async (filePath: string) => {
@@ -451,7 +441,7 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
                     label="Choose Profile Image"
                     maxWidth={1200}
                     maxHeight={800}
-                    quality={0.90}
+                    quality={0.9}
                   />
                 </div>
               </div>

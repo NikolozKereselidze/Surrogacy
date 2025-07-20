@@ -54,16 +54,8 @@ export async function generatePresignedPutUrl(
   };
 }
 
-export async function generatePresignedGetUrl(key: string) {
-  const command = new GetObjectCommand({
-    Bucket: process.env.S3_BUCKET_NAME!,
-    Key: key,
-  });
-
-  const signedUrl = await getSignedUrl(s3, command, { expiresIn: 300 });
-
-  return signedUrl;
-}
+// Note: generatePresignedGetUrl removed - use CloudFront for file viewing
+// generatePresignedPutUrl kept for file uploads
 
 export async function deleteFileFromS3(key: string) {
   const command = new DeleteObjectCommand({

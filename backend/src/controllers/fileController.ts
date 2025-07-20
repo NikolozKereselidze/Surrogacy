@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import {
   deleteFileFromS3,
-  generatePresignedGetUrl,
   generatePresignedPutUrl,
 } from "../services/s3Service";
 
@@ -32,19 +31,7 @@ const getPresignedPutUrl = async (
   }
 };
 
-const getPresignedGetUrl = async (
-  req: Request,
-  res: Response
-): Promise<any> => {
-  try {
-    const { key } = req.query as { key: string };
-    const signedUrl = await generatePresignedGetUrl(key);
-
-    res.json({ signedUrl });
-  } catch (error) {
-    res.status(500).json({ error: "Failed to generate signed URL" });
-  }
-};
+// Note: getPresignedGetUrl removed - use CloudFront for file viewing
 
 const deleteFile = async (req: Request, res: Response): Promise<any> => {
   try {
@@ -63,6 +50,5 @@ const deleteFile = async (req: Request, res: Response): Promise<any> => {
 
 export default {
   getPresignedPutUrl,
-  getPresignedGetUrl,
   deleteFile,
 };

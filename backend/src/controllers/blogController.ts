@@ -43,28 +43,7 @@ const deleteImageFromS3 = async (imagePath: string): Promise<void> => {
   }
 };
 
-const getBlogImage = async (req: Request, res: Response): Promise<any> => {
-  const key = req.query.key as string;
-
-  if (!key) {
-    return res.status(400).json({ error: "Missing 'key' query parameter" });
-  }
-
-  try {
-    const command = new GetObjectCommand({
-      Bucket: BUCKET_NAME,
-      Key: key,
-    });
-    const signedUrl = await getSignedUrl(s3, command, {
-      expiresIn: 300, // URL expires in 5 minutes
-    });
-
-    res.json({ url: signedUrl });
-  } catch (error) {
-    console.error("Error generating signed URL:", error);
-    res.status(500).json({ error: "Failed to generate signed URL" });
-  }
-};
+// Note: getBlogImage removed - use CloudFront for blog image viewing
 
 const generateBlogImageUploadUrl = async (
   req: Request,
@@ -209,5 +188,4 @@ export default {
   updateBlogPost,
   deleteBlogPost,
   generateBlogImageUploadUrl,
-  getBlogImage,
 };
