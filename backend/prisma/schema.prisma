@@ -15,8 +15,6 @@ datasource db {
 
 model DatabaseUser {
   id        String      @id @default(uuid())
-  firstName String
-  lastName String
   height   Int
   weight   Int
   age      Int

@@ -16,8 +16,6 @@ function getDocumentUrl(documentPath: string) {
 
 interface DatabaseUser {
   id: string;
-  firstName: string;
-  lastName: string;
   height: number;
   weight: number;
   age: number;
@@ -77,8 +75,6 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
     Record<string, { imageUrl?: string; documentUrl?: string }>
   >({});
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
     height: "",
     weight: "",
     age: "",
@@ -166,16 +162,6 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
       console.error(`Error uploading ${type}:`, error);
       throw error;
     }
-  };
-
-  const getLocalImageUrl = (imagePath: string) => {
-    if (!imagePath) return null;
-    return getImageUrl(imagePath);
-  };
-
-  const getLocalDocumentUrl = (documentPath: string) => {
-    if (!documentPath) return null;
-    return getDocumentUrl(documentPath);
   };
 
   const deleteFileFromS3 = async (filePath: string) => {
@@ -280,8 +266,6 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
   const handleEdit = (donor: Donor) => {
     setEditingDonor(donor);
     setFormData({
-      firstName: donor.databaseUser.firstName,
-      lastName: donor.databaseUser.lastName,
       height: donor.databaseUser.height.toString(),
       weight: donor.databaseUser.weight.toString(),
       age: donor.databaseUser.age.toString(),
@@ -294,8 +278,6 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
 
   const resetForm = () => {
     setFormData({
-      firstName: "",
-      lastName: "",
       height: "",
       weight: "",
       age: "",
@@ -341,35 +323,9 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
             <form onSubmit={handleSubmit} className={styles.blogForm}>
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
-                  <label>First Name</label>
+                  <label htmlFor="age">Age</label>
                   <input
-                    type="text"
-                    value={formData.firstName}
-                    onChange={(e) =>
-                      setFormData({ ...formData, firstName: e.target.value })
-                    }
-                    placeholder="e.g., Jane"
-                    required
-                  />
-                </div>
-                <div className={styles.formGroup}>
-                  <label>Last Name</label>
-                  <input
-                    type="text"
-                    value={formData.lastName}
-                    onChange={(e) =>
-                      setFormData({ ...formData, lastName: e.target.value })
-                    }
-                    placeholder="e.g., Doe"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className={styles.formRow}>
-                <div className={styles.formGroup}>
-                  <label>Age</label>
-                  <input
+                    id="age"
                     type="number"
                     value={formData.age}
                     onChange={(e) =>
@@ -382,8 +338,9 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
                   />
                 </div>
                 <div className={styles.formGroup}>
-                  <label>Height (cm)</label>
+                  <label htmlFor="height">Height (cm)</label>
                   <input
+                    id="height"
                     type="number"
                     value={formData.height}
                     onChange={(e) =>
@@ -399,8 +356,9 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
 
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
-                  <label>Weight (kg)</label>
+                  <label htmlFor="weight">Weight (kg)</label>
                   <input
+                    id="weight"
                     type="number"
                     value={formData.weight}
                     onChange={(e) =>
@@ -413,8 +371,9 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
                   />
                 </div>
                 <div className={styles.formGroup}>
-                  <label>Available</label>
+                  <label htmlFor="available">Available</label>
                   <select
+                    id="available"
                     value={formData.available.toString()}
                     onChange={(e) =>
                       setFormData({
@@ -432,8 +391,12 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
 
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
-                  <label>Document</label>
-                  <input type="file" onChange={handleDocumentChange} />
+                    <label htmlFor="document">Document</label>
+                  <input
+                    id="document"
+                    type="file"
+                    onChange={handleDocumentChange}
+                  />
                 </div>
                 <div className={styles.formGroup}>
                   <ImageCompressor
@@ -471,7 +434,7 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
         <table>
           <thead>
             <tr>
-              <th>Name</th>
+              <th>Image</th>
               <th>Age</th>
               <th>Height</th>
               <th>Weight</th>
@@ -502,10 +465,6 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
                         }}
                       />
                     )}
-                    <span>
-                      {donor.databaseUser.firstName}{" "}
-                      {donor.databaseUser.lastName}
-                    </span>
                   </div>
                 </td>
                 <td>{donor.databaseUser.age}</td>

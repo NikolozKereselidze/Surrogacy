@@ -72,8 +72,9 @@ const ImageCompressor: React.FC<ImageCompressorProps> = ({
 
   return (
     <>
-      <label>{label}: </label>
+      <label htmlFor={label}>{label}: </label>
       <input
+        id={label}
         ref={inputRef}
         type="file"
         accept="image/*"

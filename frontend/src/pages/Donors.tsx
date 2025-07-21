@@ -213,6 +213,7 @@ const Donors = () => {
           </button>
           <div className={styles.sortContainer}>
             <select
+              id="sortSelect"
               value={`${sortOption.field}-${sortOption.direction}`}
               onChange={(e) => {
                 const [field, direction] = e.target.value.split("-") as [
@@ -236,11 +237,12 @@ const Donors = () => {
         {showFilters && (
           <div className={styles.filtersContainer}>
             <div className={styles.filterGroup}>
-              <label>
+              <label htmlFor="ageRange">
                 Age Range: {filters.ageRange[0]} - {filters.ageRange[1]} years
               </label>
               <div className={styles.rangeInputs}>
                 <input
+                  id="ageRange"
                   type="range"
                   min="18"
                   max="60"
@@ -253,6 +255,7 @@ const Donors = () => {
                   }
                 />
                 <input
+                  id="ageRange"
                   type="range"
                   min="18"
                   max="60"
@@ -268,12 +271,13 @@ const Donors = () => {
             </div>
 
             <div className={styles.filterGroup}>
-              <label>
+              <label htmlFor="heightRange">
                 Height Range: {filters.heightRange[0]} -{" "}
                 {filters.heightRange[1]} cm
               </label>
               <div className={styles.rangeInputs}>
                 <input
+                  id="heightRange"
                   type="range"
                   min="140"
                   max="220"
@@ -289,6 +293,7 @@ const Donors = () => {
                   }
                 />
                 <input
+                  id="heightRange"
                   type="range"
                   min="140"
                   max="220"
@@ -307,12 +312,13 @@ const Donors = () => {
             </div>
 
             <div className={styles.filterGroup}>
-              <label>
+              <label htmlFor="weightRange">
                 Weight Range: {filters.weightRange[0]} -{" "}
                 {filters.weightRange[1]} kg
               </label>
               <div className={styles.rangeInputs}>
                 <input
+                  id="weightRange"
                   type="range"
                   min="30"
                   max="120"
@@ -328,6 +334,7 @@ const Donors = () => {
                   }
                 />
                 <input
+                  id="weightRange"
                   type="range"
                   min="30"
                   max="120"
@@ -346,8 +353,9 @@ const Donors = () => {
             </div>
 
             <div className={styles.filterGroup}>
-              <label>Availability:</label>
+                  <label htmlFor="availability">Availability:</label>
               <select
+                id="availability"
                 value={
                   filters.available === null
                     ? "all"

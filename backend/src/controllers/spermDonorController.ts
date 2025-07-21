@@ -27,8 +27,6 @@ const getSpermDonorsCount = async (req: Request, res: Response) => {
 
 const createSpermDonor = async (req: Request, res: Response) => {
   const {
-    firstName,
-    lastName,
     height,
     weight,
     age,
@@ -41,8 +39,6 @@ const createSpermDonor = async (req: Request, res: Response) => {
     // First create the database user
     const databaseUser = await prisma.databaseUser.create({
       data: {
-        firstName,
-        lastName,
         height,
         weight,
         age,
@@ -71,8 +67,6 @@ const createSpermDonor = async (req: Request, res: Response) => {
 const updateSpermDonor = async (req: Request, res: Response): Promise<any> => {
   const { id } = req.params;
   const {
-    firstName,
-    lastName,
     height,
     weight,
     age,
@@ -96,8 +90,6 @@ const updateSpermDonor = async (req: Request, res: Response): Promise<any> => {
     const updatedUser = await prisma.databaseUser.update({
       where: { id: spermDonor.databaseUserId },
       data: {
-        firstName,
-        lastName,
         height,
         weight,
         age,

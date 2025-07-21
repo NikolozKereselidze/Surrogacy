@@ -27,8 +27,6 @@ const getSurrogatesCount = async (req: Request, res: Response) => {
 
 const createSurrogate = async (req: Request, res: Response) => {
   const {
-    firstName,
-    lastName,
     height,
     weight,
     age,
@@ -41,8 +39,6 @@ const createSurrogate = async (req: Request, res: Response) => {
     // First create the database user
     const databaseUser = await prisma.databaseUser.create({
       data: {
-        firstName,
-        lastName,
         height,
         weight,
         age,
@@ -71,8 +67,6 @@ const createSurrogate = async (req: Request, res: Response) => {
 const updateSurrogate = async (req: Request, res: Response): Promise<any> => {
   const { id } = req.params;
   const {
-    firstName,
-    lastName,
     height,
     weight,
     age,
@@ -96,8 +90,6 @@ const updateSurrogate = async (req: Request, res: Response): Promise<any> => {
     const updatedUser = await prisma.databaseUser.update({
       where: { id: surrogate.databaseUserId },
       data: {
-        firstName,
-        lastName,
         height,
         weight,
         age,

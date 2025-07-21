@@ -203,8 +203,9 @@ const BlogManagement = () => {
             <form onSubmit={handleSubmit} className={styles.blogForm}>
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
-                  <label>Link</label>
+                  <label htmlFor="link">Link</label>
                   <input
+                    id="link"
                     type="text"
                     value={formData.link}
                     onChange={(e) =>
@@ -215,8 +216,9 @@ const BlogManagement = () => {
                   />
                 </div>
                 <div className={styles.formGroup}>
-                  <label>Title</label>
+                  <label htmlFor="title">Title</label>
                   <input
+                    id="title"
                     type="text"
                     value={formData.title}
                     onChange={(e) =>
@@ -230,8 +232,9 @@ const BlogManagement = () => {
 
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
-                  <label>Category</label>
+                  <label htmlFor="category">Category</label>
                   <input
+                    id="category"
                     type="text"
                     value={formData.category}
                     onChange={(e) =>
@@ -242,8 +245,9 @@ const BlogManagement = () => {
                   />
                 </div>
                 <div className={styles.formGroup}>
-                  <label>Read Time</label>
+                  <label htmlFor="readTime">Read Time</label>
                   <input
+                    id="readTime"
                     type="text"
                     value={formData.readTime}
                     onChange={(e) =>
@@ -256,8 +260,9 @@ const BlogManagement = () => {
               </div>
 
               <div className={styles.formGroup}>
-                <label>Excerpt</label>
+                <label htmlFor="excerpt">Excerpt</label>
                 <textarea
+                  id="excerpt"
                   value={formData.excerpt}
                   onChange={(e) =>
                     setFormData({ ...formData, excerpt: e.target.value })
@@ -269,8 +274,9 @@ const BlogManagement = () => {
               </div>
 
               <div className={styles.formGroup}>
-                <label>Content</label>
+                <label htmlFor="content">Content</label>
                 <textarea
+                  id="content"
                   value={formData.content}
                   onChange={(e) =>
                     setFormData({ ...formData, content: e.target.value })
@@ -310,8 +316,9 @@ const BlogManagement = () => {
                   )}
                 </div>
                 <div className={styles.formGroup}>
-                  <label>Date</label>
+                    <label htmlFor="date">Date</label>
                   <input
+                    id="date"
                     type="date"
                     value={formData.date}
                     onChange={(e) =>

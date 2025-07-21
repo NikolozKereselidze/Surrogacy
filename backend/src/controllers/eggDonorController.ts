@@ -36,8 +36,6 @@ const getEggDonorsCount = async (req: Request, res: Response) => {
 
 const createEggDonor = async (req: Request, res: Response) => {
   const {
-    firstName,
-    lastName,
     height,
     weight,
     age,
@@ -50,8 +48,6 @@ const createEggDonor = async (req: Request, res: Response) => {
     // First create the database user
     const databaseUser = await prisma.databaseUser.create({
       data: {
-        firstName,
-        lastName,
         height,
         weight,
         age,
@@ -80,8 +76,6 @@ const createEggDonor = async (req: Request, res: Response) => {
 const updateEggDonor = async (req: Request, res: Response): Promise<any> => {
   const { id } = req.params;
   const {
-    firstName,
-    lastName,
     height,
     weight,
     age,
@@ -105,8 +99,6 @@ const updateEggDonor = async (req: Request, res: Response): Promise<any> => {
     await prisma.databaseUser.update({
       where: { id: eggDonor.databaseUserId },
       data: {
-        firstName,
-        lastName,
         height,
         weight,
         age,
