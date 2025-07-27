@@ -8,13 +8,8 @@ const getEggDonors = async (req: Request, res: Response) => {
     const eggDonors = await prisma.eggDonor.findMany({
       include: {
         databaseUser: {
-          select: {
-            height: true,
-            weight: true,
-            age: true,
-            available: true,
-            documentPath: true,
-            imagePath: true,
+          include: {
+            donorImages: true,
           },
         },
       },
@@ -41,7 +36,8 @@ const createEggDonor = async (req: Request, res: Response) => {
     age,
     available,
     documentPath,
-    imagePath,
+    mainImagePath,
+    secondaryImages,
   } = req.body;
 
   try {
@@ -53,9 +49,20 @@ const createEggDonor = async (req: Request, res: Response) => {
         age,
         available: available || true,
         documentPath,
-        imagePath,
+        mainImagePath,
       },
     });
+
+    // Create secondary images if provided
+    if (secondaryImages && secondaryImages.length > 0) {
+      await prisma.donorImage.createMany({
+        data: secondaryImages.map((imagePath: string) => ({
+          databaseUserId: databaseUser.id,
+          imagePath,
+          isMain: false,
+        })),
+      });
+    }
 
     // Then create the egg donor linked to the user
     const eggDonor = await prisma.eggDonor.create({
@@ -63,7 +70,11 @@ const createEggDonor = async (req: Request, res: Response) => {
         databaseUserId: databaseUser.id,
       },
       include: {
-        databaseUser: true,
+        databaseUser: {
+          include: {
+            donorImages: true,
+          },
+        },
       },
     });
 
@@ -81,14 +92,21 @@ const updateEggDonor = async (req: Request, res: Response): Promise<any> => {
     age,
     available,
     documentPath,
-    imagePath,
+    mainImagePath,
+    secondaryImages,
   } = req.body;
 
   try {
     // Get the egg donor to find the associated user
     const eggDonor = await prisma.eggDonor.findUnique({
       where: { id },
-      include: { databaseUser: true },
+      include: {
+        databaseUser: {
+          include: {
+            donorImages: true,
+          },
+        },
+      },
     });
 
     if (!eggDonor) {
@@ -104,14 +122,42 @@ const updateEggDonor = async (req: Request, res: Response): Promise<any> => {
         age,
         available,
         documentPath,
-        imagePath,
+        mainImagePath,
       },
     });
+
+    // Handle secondary images
+    if (secondaryImages !== undefined) {
+      // Delete existing secondary images
+      await prisma.donorImage.deleteMany({
+        where: {
+          databaseUserId: eggDonor.databaseUserId,
+          isMain: false,
+        },
+      });
+
+      // Create new secondary images if provided
+      if (secondaryImages && secondaryImages.length > 0) {
+        await prisma.donorImage.createMany({
+          data: secondaryImages.map((imagePath: string) => ({
+            databaseUserId: eggDonor.databaseUserId,
+            imagePath,
+            isMain: false,
+          })),
+        });
+      }
+    }
 
     // Return the updated egg donor with user data
     const updatedEggDonor = await prisma.eggDonor.findUnique({
       where: { id },
-      include: { databaseUser: true },
+      include: {
+        databaseUser: {
+          include: {
+            donorImages: true,
+          },
+        },
+      },
     });
 
     res.json(updatedEggDonor);

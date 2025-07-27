@@ -405,6 +405,13 @@
   background: #f8f9fb;
 }
 
+.profileImage {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .actionButtons {
   display: flex;
   gap: 0.5rem;

@@ -7,7 +7,11 @@ const getSurrogates = async (req: Request, res: Response) => {
   try {
     const surrogates = await prisma.surrogate.findMany({
       include: {
-        databaseUser: true,
+        databaseUser: {
+          include: {
+            donorImages: true,
+          },
+        },
       },
     });
     res.json(surrogates);
@@ -32,7 +36,8 @@ const createSurrogate = async (req: Request, res: Response) => {
     age,
     available,
     documentPath,
-    imagePath,
+    mainImagePath,
+    secondaryImages,
   } = req.body;
 
   try {
@@ -44,9 +49,20 @@ const createSurrogate = async (req: Request, res: Response) => {
         age,
         available: available || true,
         documentPath,
-        imagePath,
+        mainImagePath,
       },
     });
+
+    // Create secondary images if provided
+    if (secondaryImages && secondaryImages.length > 0) {
+      await prisma.donorImage.createMany({
+        data: secondaryImages.map((imagePath: string) => ({
+          databaseUserId: databaseUser.id,
+          imagePath,
+          isMain: false,
+        })),
+      });
+    }
 
     // Then create the surrogate linked to the user
     const surrogate = await prisma.surrogate.create({
@@ -54,7 +70,11 @@ const createSurrogate = async (req: Request, res: Response) => {
         databaseUserId: databaseUser.id,
       },
       include: {
-        databaseUser: true,
+        databaseUser: {
+          include: {
+            donorImages: true,
+          },
+        },
       },
     });
 
@@ -72,14 +92,21 @@ const updateSurrogate = async (req: Request, res: Response): Promise<any> => {
     age,
     available,
     documentPath,
-    imagePath,
+    mainImagePath,
+    secondaryImages,
   } = req.body;
 
   try {
     // Get the surrogate to find the associated user
     const surrogate = await prisma.surrogate.findUnique({
       where: { id },
-      include: { databaseUser: true },
+      include: {
+        databaseUser: {
+          include: {
+            donorImages: true,
+          },
+        },
+      },
     });
 
     if (!surrogate) {
@@ -87,7 +114,7 @@ const updateSurrogate = async (req: Request, res: Response): Promise<any> => {
     }
 
     // Update the database user
-    const updatedUser = await prisma.databaseUser.update({
+    await prisma.databaseUser.update({
       where: { id: surrogate.databaseUserId },
       data: {
         height,
@@ -95,14 +122,42 @@ const updateSurrogate = async (req: Request, res: Response): Promise<any> => {
         age,
         available,
         documentPath,
-        imagePath,
+        mainImagePath,
       },
     });
+
+    // Handle secondary images
+    if (secondaryImages !== undefined) {
+      // Delete existing secondary images
+      await prisma.donorImage.deleteMany({
+        where: {
+          databaseUserId: surrogate.databaseUserId,
+          isMain: false,
+        },
+      });
+
+      // Create new secondary images if provided
+      if (secondaryImages && secondaryImages.length > 0) {
+        await prisma.donorImage.createMany({
+          data: secondaryImages.map((imagePath: string) => ({
+            databaseUserId: surrogate.databaseUserId,
+            imagePath,
+            isMain: false,
+          })),
+        });
+      }
+    }
 
     // Return the updated surrogate with user data
     const updatedSurrogate = await prisma.surrogate.findUnique({
       where: { id },
-      include: { databaseUser: true },
+      include: {
+        databaseUser: {
+          include: {
+            donorImages: true,
+          },
+        },
+      },
     });
 
     res.json(updatedSurrogate);

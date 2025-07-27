@@ -14,6 +14,15 @@ function getDocumentUrl(documentPath: string) {
   return `${CLOUDFRONT_DOMAIN}/${documentPath}`;
 }
 
+interface DonorImage {
+  id: string;
+  databaseUserId: string;
+  imagePath: string;
+  isMain: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
 interface DatabaseUser {
   id: string;
   height: number;
@@ -21,7 +30,8 @@ interface DatabaseUser {
   age: number;
   available: boolean;
   documentPath?: string;
-  imagePath?: string;
+  mainImagePath?: string;
+  donorImages: DonorImage[];
 }
 
 interface Donor {
@@ -68,11 +78,19 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
   const [donors, setDonors] = useState<Donor[]>([]);
   const [loading, setLoading] = useState(true);
   const [documentFile, setDocumentFile] = useState<File | null>(null);
-  const [imageFile, setImageFile] = useState<File | null>(null);
+  const [mainImageFile, setMainImageFile] = useState<File | null>(null);
+  const [secondaryImageFiles, setSecondaryImageFiles] = useState<File[]>([]);
   const [showAddForm, setShowAddForm] = useState(false);
   const [editingDonor, setEditingDonor] = useState<Donor | null>(null);
   const [donorUrls, setDonorUrls] = useState<
-    Record<string, { imageUrl?: string; documentUrl?: string }>
+    Record<
+      string,
+      {
+        mainImageUrl?: string;
+        documentUrl?: string;
+        secondaryImageUrls?: string[];
+      }
+    >
   >({});
   const [formData, setFormData] = useState({
     height: "",
@@ -80,7 +98,8 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
     age: "",
     available: true,
     documentPath: "",
-    imagePath: "",
+    mainImagePath: "",
+    secondaryImages: [] as string[],
   });
 
   const config = donorConfigs[donorType || ""];
@@ -102,15 +121,31 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
       // Generate CloudFront URLs for all donors with files
       const urlsMap: Record<
         string,
-        { imageUrl?: string; documentUrl?: string }
+        {
+          mainImageUrl?: string;
+          documentUrl?: string;
+          secondaryImageUrls?: string[];
+        }
       > = {};
 
       for (const donor of data) {
         const donorId = donor.id;
         urlsMap[donorId] = {};
 
-        if (donor.databaseUser?.imagePath) {
-          urlsMap[donorId].imageUrl = getImageUrl(donor.databaseUser.imagePath);
+        if (donor.databaseUser?.mainImagePath) {
+          urlsMap[donorId].mainImageUrl = getImageUrl(
+            donor.databaseUser.mainImagePath
+          );
+        }
+
+        // Generate URLs for secondary images
+        if (
+          donor.databaseUser?.donorImages &&
+          donor.databaseUser.donorImages.length > 0
+        ) {
+          urlsMap[donorId].secondaryImageUrls = donor.databaseUser.donorImages
+            .filter((img: DonorImage) => !img.isMain)
+            .map((img: DonorImage) => getImageUrl(img.imagePath));
         }
 
         if (donor.databaseUser?.documentPath) {
@@ -122,7 +157,6 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
 
       setDonorUrls(urlsMap);
     } catch (error) {
-      console.log(error);
       console.error(`Error fetching ${config.title}:`, error);
     } finally {
       setLoading(false);
@@ -136,8 +170,12 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
     }
   };
 
-  const handleImageChange = (file: File) => {
-    setImageFile(file);
+  const handleMainImageChange = (file: File) => {
+    setMainImageFile(file);
+  };
+
+  const handleSecondaryImagesChange = (files: File[]) => {
+    setSecondaryImageFiles(files);
   };
 
   const uploadFileToS3 = async (file: File, type: "image" | "document") => {
@@ -187,13 +225,30 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
     try {
       let imageKey = "";
       let documentKey = "";
+      const secondaryImageKeys: string[] = [];
 
       // Upload files to S3 if they exist
-      if (imageFile) {
-        imageKey = await uploadFileToS3(imageFile, "image");
+      if (mainImageFile) {
+        imageKey = await uploadFileToS3(mainImageFile, "image");
       }
       if (documentFile) {
         documentKey = await uploadFileToS3(documentFile, "document");
+      }
+
+      // Upload secondary images
+      for (const file of secondaryImageFiles) {
+        const key = await uploadFileToS3(file, "image");
+        secondaryImageKeys.push(key);
+      }
+
+      // If editing and no new files uploaded, preserve existing files
+      if (editingDonor) {
+        if (!imageKey && editingDonor.databaseUser.mainImagePath) {
+          imageKey = editingDonor.databaseUser.mainImagePath;
+        }
+        if (!documentKey && editingDonor.databaseUser.documentPath) {
+          documentKey = editingDonor.databaseUser.documentPath;
+        }
       }
 
       const url = editingDonor
@@ -212,8 +267,9 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
           height: parseInt(formData.height),
           weight: parseInt(formData.weight),
           age: parseInt(formData.age),
-          imagePath: imageKey,
+          mainImagePath: imageKey,
           documentPath: documentKey,
+          secondaryImages: secondaryImageKeys,
         }),
       });
 
@@ -238,11 +294,15 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
 
         if (donor) {
           // Delete associated files from S3
-          if (donor.databaseUser.imagePath) {
-            await deleteFileFromS3(donor.databaseUser.imagePath);
+          if (donor.databaseUser.mainImagePath) {
+            await deleteFileFromS3(donor.databaseUser.mainImagePath);
           }
           if (donor.databaseUser.documentPath) {
             await deleteFileFromS3(donor.databaseUser.documentPath);
+          }
+          // Delete secondary images
+          for (const image of donor.databaseUser.donorImages) {
+            await deleteFileFromS3(image.imagePath);
           }
         }
 
@@ -271,7 +331,10 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
       age: donor.databaseUser.age.toString(),
       available: donor.databaseUser.available,
       documentPath: donor.databaseUser.documentPath || "",
-      imagePath: donor.databaseUser.imagePath || "",
+      mainImagePath: donor.databaseUser.mainImagePath || "",
+      secondaryImages: donor.databaseUser.donorImages.map(
+        (img) => img.imagePath
+      ),
     });
     setShowAddForm(true);
   };
@@ -283,10 +346,14 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
       age: "",
       available: true,
       documentPath: "",
-      imagePath: "",
+      mainImagePath: "",
+      secondaryImages: [],
     });
     setEditingDonor(null);
     setShowAddForm(false);
+    setDocumentFile(null);
+    setMainImageFile(null);
+    setSecondaryImageFiles([]);
   };
 
   if (!config) {
@@ -391,21 +458,138 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
 
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
-                    <label htmlFor="document">Document</label>
+                  <label htmlFor="document">Document</label>
+                  {editingDonor && (
+                    <p
+                      style={{
+                        fontSize: "0.8rem",
+                        color: "#666",
+                        marginBottom: "5px",
+                      }}
+                    >
+                      Leave empty to keep current document
+                    </p>
+                  )}
                   <input
                     id="document"
                     type="file"
                     onChange={handleDocumentChange}
                   />
+                  {/* Show current document if editing */}
+                  {editingDonor && donorUrls[editingDonor.id]?.documentUrl && (
+                    <div style={{ marginTop: "10px" }}>
+                      <strong>Current Document:</strong>
+                      <br />
+                      <a
+                        href={donorUrls[editingDonor.id].documentUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          color: "var(--color-primary)",
+                          textDecoration: "underline",
+                          fontSize: "0.9rem",
+                        }}
+                      >
+                        View Current Document
+                      </a>
+                    </div>
+                  )}
                 </div>
                 <div className={styles.formGroup}>
                   <ImageCompressor
-                    onCompressed={handleImageChange}
-                    label="Choose Profile Image"
+                    onCompressed={handleMainImageChange}
+                    label="Choose Main Profile Image"
                     maxWidth={1200}
                     maxHeight={800}
                     quality={0.9}
                   />
+                  {editingDonor && (
+                    <p
+                      style={{
+                        fontSize: "0.8rem",
+                        color: "#666",
+                        marginTop: "5px",
+                      }}
+                    >
+                      Leave empty to keep current image
+                    </p>
+                  )}
+                  {/* Show current image if editing */}
+                  {editingDonor && donorUrls[editingDonor.id]?.mainImageUrl && (
+                    <div style={{ marginTop: "10px" }}>
+                      <strong>Current Main Image:</strong>
+                      <br />
+                      <img
+                        src={donorUrls[editingDonor.id].mainImageUrl}
+                        alt="Current"
+                        style={{
+                          maxWidth: "200px",
+                          maxHeight: "150px",
+                          objectFit: "cover",
+                          borderRadius: "4px",
+                          marginTop: "5px",
+                        }}
+                      />
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              <div className={styles.formRow}>
+                <div className={styles.formGroup}>
+                  <ImageCompressor
+                    multiple
+                    onMultipleCompressed={handleSecondaryImagesChange}
+                    label="Choose Secondary Images"
+                    maxWidth={1200}
+                    maxHeight={800}
+                    quality={0.9}
+                  />
+                  {editingDonor && (
+                    <p
+                      style={{
+                        fontSize: "0.8rem",
+                        color: "#666",
+                        marginTop: "5px",
+                      }}
+                    >
+                      Leave empty to keep current secondary images
+                    </p>
+                  )}
+                  {/* Show current secondary images if editing */}
+                  {editingDonor &&
+                    donorUrls[editingDonor.id]?.secondaryImageUrls &&
+                    donorUrls[editingDonor.id].secondaryImageUrls!.length >
+                      0 && (
+                      <div style={{ marginTop: "10px" }}>
+                        <strong>Current Secondary Images:</strong>
+                        <br />
+                        <div
+                          style={{
+                            display: "flex",
+                            gap: "10px",
+                            flexWrap: "wrap",
+                            marginTop: "5px",
+                          }}
+                        >
+                          {donorUrls[editingDonor.id].secondaryImageUrls!.map(
+                            (url, index) => (
+                              <img
+                                key={index}
+                                src={url}
+                                alt={`Secondary ${index + 1}`}
+                                style={{
+                                  maxWidth: "100px",
+                                  maxHeight: "75px",
+                                  objectFit: "cover",
+                                  borderRadius: "4px",
+                                }}
+                              />
+                            )
+                          )}
+                        </div>
+                      </div>
+                    )}
                 </div>
               </div>
 
@@ -453,16 +637,11 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
                       gap: "10px",
                     }}
                   >
-                    {donorUrls[donor.id]?.imageUrl && (
+                    {donorUrls[donor.id]?.mainImageUrl && (
                       <img
-                        src={donorUrls[donor.id].imageUrl}
+                        className={styles.profileImage}
+                        src={donorUrls[donor.id].mainImageUrl}
                         alt="Profile"
-                        style={{
-                          width: "40px",
-                          height: "40px",
-                          borderRadius: "50%",
-                          objectFit: "cover",
-                        }}
                       />
                     )}
                   </div>

@@ -7,7 +7,11 @@ const getSpermDonors = async (req: Request, res: Response) => {
   try {
     const spermDonors = await prisma.spermDonor.findMany({
       include: {
-        databaseUser: true,
+        databaseUser: {
+          include: {
+            donorImages: true,
+          },
+        },
       },
     });
     res.json(spermDonors);
@@ -32,7 +36,8 @@ const createSpermDonor = async (req: Request, res: Response) => {
     age,
     available,
     documentPath,
-    imagePath,
+    mainImagePath,
+    secondaryImages,
   } = req.body;
 
   try {
@@ -44,9 +49,20 @@ const createSpermDonor = async (req: Request, res: Response) => {
         age,
         available: available || true,
         documentPath,
-        imagePath,
+        mainImagePath,
       },
     });
+
+    // Create secondary images if provided
+    if (secondaryImages && secondaryImages.length > 0) {
+      await prisma.donorImage.createMany({
+        data: secondaryImages.map((imagePath: string) => ({
+          databaseUserId: databaseUser.id,
+          imagePath,
+          isMain: false,
+        })),
+      });
+    }
 
     // Then create the sperm donor linked to the user
     const spermDonor = await prisma.spermDonor.create({
@@ -54,7 +70,11 @@ const createSpermDonor = async (req: Request, res: Response) => {
         databaseUserId: databaseUser.id,
       },
       include: {
-        databaseUser: true,
+        databaseUser: {
+          include: {
+            donorImages: true,
+          },
+        },
       },
     });
 
@@ -72,14 +92,21 @@ const updateSpermDonor = async (req: Request, res: Response): Promise<any> => {
     age,
     available,
     documentPath,
-    imagePath,
+    mainImagePath,
+    secondaryImages,
   } = req.body;
 
   try {
     // Get the sperm donor to find the associated user
     const spermDonor = await prisma.spermDonor.findUnique({
       where: { id },
-      include: { databaseUser: true },
+      include: {
+        databaseUser: {
+          include: {
+            donorImages: true,
+          },
+        },
+      },
     });
 
     if (!spermDonor) {
@@ -87,7 +114,7 @@ const updateSpermDonor = async (req: Request, res: Response): Promise<any> => {
     }
 
     // Update the database user
-    const updatedUser = await prisma.databaseUser.update({
+    await prisma.databaseUser.update({
       where: { id: spermDonor.databaseUserId },
       data: {
         height,
@@ -95,14 +122,42 @@ const updateSpermDonor = async (req: Request, res: Response): Promise<any> => {
         age,
         available,
         documentPath,
-        imagePath,
+        mainImagePath,
       },
     });
+
+    // Handle secondary images
+    if (secondaryImages !== undefined) {
+      // Delete existing secondary images
+      await prisma.donorImage.deleteMany({
+        where: {
+          databaseUserId: spermDonor.databaseUserId,
+          isMain: false,
+        },
+      });
+
+      // Create new secondary images if provided
+      if (secondaryImages && secondaryImages.length > 0) {
+        await prisma.donorImage.createMany({
+          data: secondaryImages.map((imagePath: string) => ({
+            databaseUserId: spermDonor.databaseUserId,
+            imagePath,
+            isMain: false,
+          })),
+        });
+      }
+    }
 
     // Return the updated sperm donor with user data
     const updatedSpermDonor = await prisma.spermDonor.findUnique({
       where: { id },
-      include: { databaseUser: true },
+      include: {
+        databaseUser: {
+          include: {
+            donorImages: true,
+          },
+        },
+      },
     });
 
     res.json(updatedSpermDonor);

@@ -9,6 +9,15 @@ function getImageUrl(imagePath: string) {
   return `${CLOUDFRONT_DOMAIN}/${imagePath}`;
 }
 
+interface DonorImage {
+  id: string;
+  databaseUserId: string;
+  imagePath: string;
+  isMain: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
 interface Donor {
   id: string;
   databaseUser: {
@@ -17,7 +26,8 @@ interface Donor {
     age: number;
     available: boolean;
     documentPath: string;
-    imagePath: string;
+    mainImagePath: string;
+    donorImages: DonorImage[];
   };
 }
 
@@ -353,7 +363,7 @@ const Donors = () => {
             </div>
 
             <div className={styles.filterGroup}>
-                  <label htmlFor="availability">Availability:</label>
+              <label htmlFor="availability">Availability:</label>
               <select
                 id="availability"
                 value={
@@ -419,7 +429,7 @@ const Donors = () => {
               <div className={styles.donorImageContainer}>
                 <img
                   className={styles.donorImage}
-                  src={getImageUrl(donor.databaseUser.imagePath)}
+                  src={getImageUrl(donor.databaseUser.mainImagePath)}
                   alt={`${getDonorTypeLabel(selectedDonorType).slice(0, -1)}`}
                   loading="lazy"
                 />
