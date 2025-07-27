@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import styles from "../styles/Login.module.css";
 
-const Login = () => {
+const Login = ({ isAdmin = false }: { isAdmin?: boolean }) => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -14,13 +14,17 @@ const Login = () => {
     // Check if user is already authenticated
     const checkAuth = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/auth/check", {
-          credentials: "include",
-        });
+        const res = await fetch(
+          `http://localhost:3000/api/${isAdmin ? "admin-auth" : "auth"}/check`,
+          {
+            credentials: "include",
+          }
+        );
 
         if (res.ok) {
           // User is already authenticated, redirect to intended page or dashboard
-          const from = location.state?.from || "/find-egg-donor";
+          const from =
+            location.state?.from || (isAdmin ? "/admin" : "/find-egg-donor");
           navigate(from, { replace: true });
         }
       } catch {
@@ -39,15 +43,19 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:3000/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password }),
-        credentials: "include",
-      });
+      const res = await fetch(
+        `http://localhost:3000/api/${isAdmin ? "admin-auth" : "auth"}/login`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ password }),
+          credentials: "include",
+        }
+      );
 
       if (res.ok) {
-        const from = location.state?.from || "/find-egg-donor";
+        const from =
+          location.state?.from || (isAdmin ? "/admin" : "/find-egg-donor");
         navigate(from, { replace: true });
       } else {
         setError("Incorrect password. Please try again.");

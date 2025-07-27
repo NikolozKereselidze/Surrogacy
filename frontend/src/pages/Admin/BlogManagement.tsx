@@ -316,7 +316,7 @@ const BlogManagement = () => {
                   )}
                 </div>
                 <div className={styles.formGroup}>
-                    <label htmlFor="date">Date</label>
+                  <label htmlFor="date">Date</label>
                   <input
                     id="date"
                     type="date"

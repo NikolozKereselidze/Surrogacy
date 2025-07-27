@@ -29,7 +29,7 @@ function App() {
               <Donors />
             </ProtectedRoute>
           }
-          />
+        />
         <Route
           path="/surrogates"
           element={
@@ -37,7 +37,7 @@ function App() {
               <Donors />
             </ProtectedRoute>
           }
-          />
+        />
         <Route
           path="/sperm-donors"
           element={
@@ -45,25 +45,52 @@ function App() {
               <Donors />
             </ProtectedRoute>
           }
-          />
-          </Route>
+        />
+      </Route>
 
       <Route path="/login" element={<Login />} />
+      <Route path="/admin-login" element={<Login isAdmin={true} />} />
 
       <Route path="/admin" element={<AdminNav />}>
-        <Route index element={<Dashboard />} />
-        <Route path="blog" element={<BlogManagement />} />
+        <Route
+          index
+          element={
+            <ProtectedRoute isAdmin={true}>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="blog"
+          element={
+            <ProtectedRoute isAdmin={true}>
+              <BlogManagement />
+            </ProtectedRoute>
+          }
+        />
         <Route
           path="egg-donors"
-          element={<DonorManagement donorType="egg-donors" />}
+          element={
+            <ProtectedRoute isAdmin={true}>
+              <DonorManagement donorType="egg-donors" />
+            </ProtectedRoute>
+          }
         />
         <Route
           path="surrogates"
-          element={<DonorManagement donorType="surrogates" />}
+          element={
+            <ProtectedRoute isAdmin={true}>
+              <DonorManagement donorType="surrogates" />
+            </ProtectedRoute>
+          }
         />
         <Route
           path="sperm-donors"
-          element={<DonorManagement donorType="sperm-donors" />}
+          element={
+            <ProtectedRoute isAdmin={true}>
+              <DonorManagement donorType="sperm-donors" />
+            </ProtectedRoute>
+          }
         />
       </Route>
     </Routes>

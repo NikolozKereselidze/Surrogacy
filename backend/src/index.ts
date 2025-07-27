@@ -9,10 +9,11 @@ import spermDonorRoutes from "./routes/spermDonorRoutes";
 import cors from "cors";
 import fileRoutes from "./routes/fileRoutes";
 import authRoutes from "./routes/auth";
+import adminAuthRoutes from "./routes/adminAuth";
 
 dotenv.config();
 const app = express();
- 
+
 app.use(express.json());
 
 app.use(
@@ -22,28 +23,45 @@ app.use(
   })
 );
 
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET!,
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-      httpOnly: true,
-      maxAge: 60 * 60 * 1000, // 1 hour
-    },
-  })
-);
+// Create separate session stores for admin and donor
+const donorSession = session({
+  name: "donor.sid",
+  secret: process.env.SESSION_SECRET!,
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    httpOnly: true,
+    maxAge: 60 * 60 * 1000, // 1 hour
+  },
+});
+
+const adminSession = session({
+  name: "admin.sid",
+  secret: process.env.SESSION_SECRET!,
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    httpOnly: true,
+    maxAge: 60 * 60 * 1000, // 1 hour
+  },
+});
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Hello World");
 });
 
-app.use("/api/blog", blogRoutes);
-app.use("/api/egg-donors", eggDonorRoutes);
-app.use("/api/surrogates", surrogateRoutes);
-app.use("/api/sperm-donors", spermDonorRoutes);
-app.use("/api/file", fileRoutes);
-app.use("/api/auth", authRoutes);
+// Apply donor session to donor routes
+app.use("/api/egg-donors", donorSession, eggDonorRoutes);
+app.use("/api/surrogates", donorSession, surrogateRoutes);
+app.use("/api/sperm-donors", donorSession, spermDonorRoutes);
+app.use("/api/file", donorSession, fileRoutes);
+app.use("/api/auth", donorSession, authRoutes);
+
+// Apply admin session to admin routes
+app.use("/api/admin-auth", adminSession, adminAuthRoutes);
+
+// Apply admin session to admin-only routes (blog management, etc.)
+app.use("/api/blog", adminSession, blogRoutes);
 
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
