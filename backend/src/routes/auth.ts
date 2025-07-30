@@ -32,4 +32,14 @@ router.post("/login", (req: Request, res: Response) => {
   }
 });
 
+router.post("/logout", (req: Request, res: Response) => {
+  req.session.destroy((err) => {
+    if (err) {
+      return res.status(500).json({ error: "Failed to logout" });
+    }
+    res.clearCookie("donor.sid");
+    res.sendStatus(200);
+  });
+});
+
 export default router;

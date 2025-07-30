@@ -2,7 +2,6 @@ import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import styles from "../../styles/AdminDashboard.module.css";
 import { FaBlog, FaUserPlus, FaUser, FaSignOutAlt } from "react-icons/fa";
 import { IoMdHome } from "react-icons/io";
-
 import { MdFamilyRestroom } from "react-icons/md";
 
 const sections = [
@@ -26,17 +25,33 @@ const sections = [
     path: "/admin/sperm-donors",
     icon: <FaUserPlus />,
   },
-  {
-    key: "logout",
-    label: "Logout",
-    path: "/admin/logout",
-    icon: <FaSignOutAlt />,
-  },
 ];
 
 const AdminNav = () => {
   const location = useLocation();
   const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      const response = await fetch(
+        "http://localhost:3000/api/admin-auth/logout",
+        {
+          method: "POST",
+          credentials: "include",
+        }
+      );
+
+      if (response.ok) {
+        navigate("/admin-login");
+      } else {
+        console.error("Logout failed");
+      }
+    } catch (error) {
+      console.error("Logout error:", error);
+      // Even if logout fails, redirect to login page
+      navigate("/admin-login");
+    }
+  };
 
   return (
     <div className={styles.dashboardContainer}>
@@ -60,6 +75,12 @@ const AdminNav = () => {
                 <span className={styles.navItemLabel}>{section.label}</span>
               </li>
             ))}
+            <li className={styles.navItem} onClick={handleLogout}>
+              <span className={styles.navItemIcon}>
+                <FaSignOutAlt />
+              </span>
+              <span className={styles.navItemLabel}>Logout</span>
+            </li>
           </ul>
         </div>
       </aside>
