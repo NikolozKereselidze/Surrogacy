@@ -127,7 +127,7 @@ const updateEggDonor = async (req: Request, res: Response): Promise<any> => {
     });
 
     // Handle secondary images
-    if (secondaryImages !== undefined) {
+    if (secondaryImages && secondaryImages.length > 0) {
       // Delete existing secondary images
       await prisma.donorImage.deleteMany({
         where: {
@@ -137,15 +137,14 @@ const updateEggDonor = async (req: Request, res: Response): Promise<any> => {
       });
 
       // Create new secondary images if provided
-      if (secondaryImages && secondaryImages.length > 0) {
-        await prisma.donorImage.createMany({
-          data: secondaryImages.map((imagePath: string) => ({
-            databaseUserId: eggDonor.databaseUserId,
-            imagePath,
-            isMain: false,
-          })),
-        });
-      }
+
+      await prisma.donorImage.createMany({
+        data: secondaryImages.map((imagePath: string) => ({
+          databaseUserId: eggDonor.databaseUserId,
+          imagePath,
+          isMain: false,
+        })),
+      });
     }
 
     // Return the updated egg donor with user data
