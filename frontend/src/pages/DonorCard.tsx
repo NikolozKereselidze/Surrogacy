@@ -1,72 +1,36 @@
-// import { useLocation } from "react-router-dom";
-// import styles from "../styles/DonorCard.module.css";
-// const CLOUDFRONT_DOMAIN = import.meta.env.VITE_CLOUDFRONT_DOMAIN;
-
-// interface Donor {
-//   available: boolean;
-//   documentPath: string;
-//   donorImages: {
-//     id: string;
-//     imagePath: string;
-//   }[];
-//   height: number;
-//   id: string;
-//   mainImagePath: string;
-//   updatedAt: string;
-//   weight: number;
-//   age: number;
-// }
-
-// const DonorCard = () => {
-//   const { donor }: { donor: Donor } = useLocation().state;
-//   console.log(donor);
-//   return (
-//     <div className={styles.donorCard}>
-//       <div className={styles.donorCardImage}>
-//         <img
-//           className={styles.donorCardImageMain}
-//           src={`${CLOUDFRONT_DOMAIN}/${donor.mainImagePath}?w=800&q=80&f=webp`}
-//           alt={donor.id}
-//         />
-//         <div className={styles.donorCardImageSecondaryContainer}>
-//           <img
-//             className={styles.donorCardImageSecondary}
-//             src={`${CLOUDFRONT_DOMAIN}/${donor.mainImagePath}?w=800&q=80&f=webp`}
-//             alt={donor.id}
-//           />
-//           {donor.donorImages.map((image) => (
-//             <img
-//               className={styles.donorCardImageSecondary}
-//               src={`${CLOUDFRONT_DOMAIN}/${image.imagePath}?w=800&q=80&f=webp`}
-//               alt={image.id}
-//             />
-//           ))}
-//         </div>
-//       </div>
-
-//       <div className={styles.donorCardInfo}>
-//         <h3>{donor.id}</h3>
-//         <h3>{donor.available ? "Available" : "Not Available"}</h3>
-//         <h4>Height: {donor.height} cm</h4>
-//         <h4>Weight: {donor.weight} kg</h4>
-//         <h4>Age: {donor.age} years</h4>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default DonorCard;
-
 import { useLocation } from "react-router-dom";
 import styles from "../styles/DonorCard.module.css";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { useState } from "react";
+import { CiFileOn } from "react-icons/ci";
 
 const CLOUDFRONT_DOMAIN = import.meta.env.VITE_CLOUDFRONT_DOMAIN;
 
+interface Donor {
+  id: string;
+  available: boolean;
+  documentPath: string;
+  donorImages: {
+    id: string;
+    imagePath: string;
+  }[];
+  height: number;
+  mainImagePath: string;
+  updatedAt: string;
+  weight: number;
+  age: number;
+  hairColor?: string;
+  eyeColor?: string;
+  sociability?: string;
+  relationshipStatus?: string;
+  livingSituation?: string;
+  character?: string;
+  children?: string;
+}
+
 const Donor = () => {
-  const { donor } = useLocation().state;
+  const { donor }: { donor: Donor } = useLocation().state;
   const [mainImage, setMainImage] = useState<string | null>(
     donor.mainImagePath
   );
@@ -164,6 +128,19 @@ const Donor = () => {
                 <p>{donor.children || "None"}</p>
               </div>
             </div>
+            {donor.documentPath && (
+              <div className={styles.donorDocument}>
+                <a
+                  className={styles.donorDocumentLink}
+                  href={`${CLOUDFRONT_DOMAIN}/${donor.documentPath}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <CiFileOn className={styles.donorDocumentIcon} />
+                  <p>View Document</p>
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </div>

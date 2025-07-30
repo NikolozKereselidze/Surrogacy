@@ -216,7 +216,8 @@
 }
 
 .donorCard {
-  background: #fff;
+  background: #eeeeee;
+  border: 1px solid #e0e0e0;
   border-radius: 16px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
   padding: 1.5rem;
