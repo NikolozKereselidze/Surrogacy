@@ -454,7 +454,14 @@ const Donors = () => {
                   </div>
                 </div>
 
-                <Button className={styles.viewProfileButton}>
+                <Button
+                  className={styles.viewProfileButton}
+                  onClick={() => {
+                    navigate(`/donor/${donor.id}`, {
+                      state: { donor: donor.databaseUser },
+                    });
+                  }}
+                >
                   View Profile
                 </Button>
               </div>

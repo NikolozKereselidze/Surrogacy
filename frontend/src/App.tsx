@@ -12,6 +12,7 @@ import Donors from "./pages/Donors";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Login from "./pages/Login";
 import DonorLayout from "./components/DonorLayout";
+import DonorCard from "./pages/DonorCard";
 
 function App() {
   return (
@@ -93,6 +94,14 @@ function App() {
           }
         />
       </Route>
+      <Route
+        path="/donor/:id"
+        element={
+          <ProtectedRoute>
+            <DonorCard />
+          </ProtectedRoute>
+        }
+      />
     </Routes>
   );
 }
