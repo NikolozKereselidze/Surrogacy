@@ -86,18 +86,33 @@ const Home = () => {
             icon={<FaBaby className="miracleIcon" />}
             title={t("beginYourMiracle.intendedParentsTitle")}
             description={t("beginYourMiracle.intendedParentsDesc")}
+            list={
+              t("beginYourMiracle.intendedParentsList", {
+                returnObjects: true,
+              }) as string[]
+            }
           />
           <MiracleCard
             to="/surrogates"
             icon={<FaUserPlus className="miracleIcon" />}
             title={t("beginYourMiracle.surrogatesTitle")}
             description={t("beginYourMiracle.surrogatesDesc")}
+            list={
+              t("beginYourMiracle.surrogatesList", {
+                returnObjects: true,
+              }) as string[]
+            }
           />
           <MiracleCard
             to="/egg-donors"
             icon={<FaGift className="miracleIcon" />}
             title={t("beginYourMiracle.eggDonorsTitle")}
             description={t("beginYourMiracle.eggDonorsDesc")}
+            list={
+              t("beginYourMiracle.eggDonorsList", {
+                returnObjects: true,
+              }) as string[]
+            }
           />
         </div>
       </section>

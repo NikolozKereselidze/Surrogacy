@@ -95,6 +95,33 @@
   text-align: center;
 }
 
+.available,
+.notAvailable {
+  position: relative;
+  padding-left: 1.5rem;
+  display: inline-block;
+}
+
+.available::before,
+.notAvailable::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.available::before {
+  background-color: #10b981; /* Green for available */
+}
+
+.notAvailable::before {
+  background-color: #ef4444; /* Red for not available */
+}
+
 @keyframes pulse {
   0%,
   100% {

@@ -58,10 +58,25 @@
     "subtitle": "Choose the path that's right for you.",
     "intendedParentsTitle": "Surrogacy for Intended Parents",
     "intendedParentsDesc": "Discover our programs and support for those dreaming of parenthood.",
+    "intendedParentsList": [
+      "Legal Guidance",
+      "Medical Support",
+      "Financial Assistance"
+    ],
     "surrogatesTitle": "Become a Surrogate",
     "surrogatesDesc": "Empower families and change lives as a Miracle Makers surrogate.",
+    "surrogatesList": [
+      "Comprehensive Care",
+      "Medical Monitoring",
+      "Support Services"
+    ],
     "eggDonorsTitle": "Become an Egg Donor",
-    "eggDonorsDesc": "Give the gift of life and help create new beginnings."
+    "eggDonorsDesc": "Give the gift of life and help create new beginnings.",
+    "eggDonorsList": [
+      "Screening Process",
+      "Medical Evaluation",
+      "Genetic Testing"
+    ]
   },
   "ourTeam": {
     "title": "Meet Our Team",

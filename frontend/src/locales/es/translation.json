@@ -58,10 +58,25 @@
     "subtitle": "Elige el camino que sea adecuado para ti.",
     "intendedParentsTitle": "Gestación subrogada para padres intencionales",
     "intendedParentsDesc": "Descubre nuestros programas y apoyo para aquellos que sueñan con la paternidad.",
+    "intendedParentsList": [
+      "Orientación Legal",
+      "Apoyo Médico",
+      "Asistencia Financiera"
+    ],
     "surrogatesTitle": "Conviértete en gestante subrogada",
     "surrogatesDesc": "Empodera familias y cambia vidas como gestante subrogada de Miracle Makers.",
+    "surrogatesList": [
+      "Cuidado Integral",
+      "Monitoreo Médico",
+      "Servicios de Apoyo"
+    ],
     "eggDonorsTitle": "Conviértete en donante de óvulos",
-    "eggDonorsDesc": "Da el regalo de la vida y ayuda a crear nuevos comienzos."
+    "eggDonorsDesc": "Da el regalo de la vida y ayuda a crear nuevos comienzos.",
+    "eggDonorsList": [
+      "Proceso de Evaluación",
+      "Evaluación Médica",
+      "Pruebas Genéticas"
+    ]
   },
   "ourTeam": {
     "title": "Conoce nuestro equipo",

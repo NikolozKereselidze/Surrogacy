@@ -58,10 +58,13 @@
     "subtitle": "选择适合您的道路。",
     "intendedParentsTitle": "准父母代孕服务",
     "intendedParentsDesc": "探索我们为梦想成为父母的人提供的项目和支持。",
+    "intendedParentsList": ["法律指导", "医疗支持", "财务援助"],
     "surrogatesTitle": "成为代孕妈妈",
     "surrogatesDesc": "作为奇迹创造者的代孕妈妈，为家庭赋能并改变生活。",
+    "surrogatesList": ["全面护理", "医疗监测", "支持服务"],
     "eggDonorsTitle": "成为卵子捐赠者",
-    "eggDonorsDesc": "给予生命的礼物，帮助创造新的开始。"
+    "eggDonorsDesc": "给予生命的礼物，帮助创造新的开始。",
+    "eggDonorsList": ["筛选流程", "医疗评估", "基因检测"]
   },
   "ourTeam": {
     "title": "认识我们的团队",
