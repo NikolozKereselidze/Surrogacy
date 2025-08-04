@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { FaBaby, FaUserPlus, FaGift } from "react-icons/fa";
 import MiracleCard from "../components/MiracleCard";
 import TeamCard from "../components/TeamCard";
+import { getFeaturedTeamMembers } from "../data/teamMembers";
 
 // Import Swiper styles
 import "swiper/css";
@@ -17,33 +18,8 @@ const Home = () => {
   // Set RTL for Hebrew
   const isRTL = i18n.language === "he";
 
-  // Team members data
-  const teamMembers = [
-    {
-      image: "src/assets/img/team/test-doctor.png",
-      honorific: "Dr.",
-      name: "Kelvin Smith",
-      role: "Fertility Specialist",
-      description:
-        "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      image: "src/assets/img/team/natia-devdariani.jpg",
-      honorific: "Mrs.",
-      name: "Natia Devdariani",
-      role: "Founder & CEO",
-      description:
-        "Over 15 years of experience in healthcare and professional service consulting, helping families grow.  Ms. Devdariani graduated from Tbilisi State Medical University and Tbilisi State University.",
-    },
-    {
-      image: "src/assets/img/team/test-doctor2.jpg",
-      honorific: "Dr.",
-      name: "Anna Smith",
-      role: "Coordinator & IVF Specialist",
-      description:
-        "Over 15 years of experience helping families grow. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-  ];
+  // Get featured team members for homepage
+  const teamMembers = getFeaturedTeamMembers();
 
   return (
     <div className={styles.home} dir={isRTL ? "rtl" : "ltr"}>
@@ -75,7 +51,7 @@ const Home = () => {
       </section>
 
       <section className={`${styles.beginYourMiracleSection} section`}>
-        <div className={styles.beginYourMiracleContent}>
+        <div className="content">
           <h2 className="title">{t("beginYourMiracle.title")}</h2>
           <p className="subtitle">{t("beginYourMiracle.subtitle")}</p>
         </div>

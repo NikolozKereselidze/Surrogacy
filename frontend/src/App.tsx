@@ -1,6 +1,8 @@
 import "./App.css";
 import Home from "./pages/Home";
 import OurMission from "./pages/OurMission";
+import WhyChooseUs from "./pages/WhyChooseUs";
+import OurTeam from "./pages/OurTeam";
 import { Routes, Route } from "react-router-dom";
 
 import Dashboard from "./pages/Admin/Dashboard";
@@ -20,6 +22,8 @@ function App() {
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/our-mission" element={<OurMission />} />
+        <Route path="/why-choose-us" element={<WhyChooseUs />} />
+        <Route path="/our-team" element={<OurTeam />} />
       </Route>
 
       <Route element={<DonorLayout />}>

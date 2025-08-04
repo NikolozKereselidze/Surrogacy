@@ -242,7 +242,6 @@
 }
 
 .ourTeamCard {
-  height: 100%;
   flex: 1 1 23rem;
   background: #fff;
   border-radius: 1.2rem;
@@ -256,6 +255,7 @@
   text-align: center;
   border: 2px solid transparent;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .ourTeamCard:hover,
@@ -295,10 +295,6 @@
   font-size: 0.9rem;
   color: #555;
   line-height: 1.5;
-}
-
-.ourTeamButton {
-  margin-top: 1rem;
 }
 
 .swiperNavWrapper {
