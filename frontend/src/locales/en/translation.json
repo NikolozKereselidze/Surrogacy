@@ -132,6 +132,32 @@
     "valueSupport": "Support",
     "valueSupportDesc": "We're with you every step of the way."
   },
+  "whoWeAre": {
+    "title": "Who We Are",
+    "subtitle": "A dedicated team committed to making dreams come true",
+    "storyTitle": "Our Story",
+    "storyText": "Founded with a vision to help families achieve their dreams of parenthood, Miracle Makers has grown from a small local practice to a globally recognized surrogacy and egg donation center. Our journey began with a simple belief: every family deserves the opportunity to experience the joy of parenthood, regardless of their circumstances. Today, we continue to uphold this belief through our comprehensive services, expert team, and unwavering commitment to ethical practices.",
+    "value1Title": "Dedicated Team",
+    "value1Desc": "Our experienced professionals are passionate about helping families grow.",
+    "value2Title": "Global Reach",
+    "value2Desc": "We serve families from around the world with local expertise.",
+    "value3Title": "Compassionate Care",
+    "value3Desc": "Every family receives personalized attention and support.",
+    "value4Title": "Proven Excellence",
+    "value4Desc": "Years of successful outcomes and satisfied families.",
+    "value5Title": "Trust & Security",
+    "value5Desc": "Your privacy and security are our top priorities throughout the journey.",
+    "value6Title": "Partnership Approach",
+    "value6Desc": "We work as partners with you, ensuring transparency and open communication.",
+    "stat1Number": "1000+",
+    "stat1Label": "Successful Pregnancies",
+    "stat2Number": "50+",
+    "stat2Label": "Countries Served",
+    "stat3Number": "15+",
+    "stat3Label": "Years of Experience",
+    "stat4Number": "99%",
+    "stat4Label": "Success Rate"
+  },
 
   "whyChooseUs": {
     "reasonsTitle": "What Sets Us Apart",

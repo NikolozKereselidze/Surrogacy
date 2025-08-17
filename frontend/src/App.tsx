@@ -15,6 +15,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Login from "./pages/Login";
 import DonorLayout from "./components/DonorLayout";
 import DonorCard from "./pages/DonorCard";
+import WhoWeAre from "./pages/WhoWeAre";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/our-mission" element={<OurMission />} />
+        <Route path="/who-we-are" element={<WhoWeAre />} />
         <Route path="/why-choose-us" element={<WhyChooseUs />} />
         <Route path="/our-team" element={<OurTeam />} />
       </Route>

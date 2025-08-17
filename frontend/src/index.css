@@ -111,14 +111,14 @@ body {
 }
 
 .title {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--color-primary, #3b82f6);
   text-align: center;
 }
 
 .subtitle {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--dark-blue, #2a376d);
   text-align: center;
