@@ -91,7 +91,7 @@ const BlogCard = () => {
                     <p className={styles.blogExcerpt}>{post.excerpt}</p>
 
                     <Link
-                      to={`/blog/${post.link}`}
+                      to={`/blog/${post.id}`}
                       className={styles.readMoreLink}
                     >
                       {t("blog.readMore")} →

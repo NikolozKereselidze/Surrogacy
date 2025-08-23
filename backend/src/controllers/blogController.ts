@@ -181,6 +181,12 @@ const deleteBlogPost = async (req: Request, res: Response): Promise<any> => {
   }
 };
 
+const getBlogPostById = async (req: Request, res: Response): Promise<any> => {
+  const { id } = req.params;
+  const blogPost = await prisma.blogPost.findUnique({ where: { id } });
+  res.json(blogPost);
+};
+
 export default {
   getBlogPosts,
   getBlogPostsCount,
@@ -188,4 +194,5 @@ export default {
   updateBlogPost,
   deleteBlogPost,
   generateBlogImageUploadUrl,
+  getBlogPostById,
 };

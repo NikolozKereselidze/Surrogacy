@@ -17,6 +17,7 @@ import DonorLayout from "./components/DonorLayout";
 import DonorCard from "./pages/DonorCard";
 import WhoWeAre from "./pages/WhoWeAre";
 import SurrogacyProcess from "./pages/SurrogacyProcess";
+import BlogPost from "./pages/BlogPost";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/why-choose-us" element={<WhyChooseUs />} />
         <Route path="/our-team" element={<OurTeam />} />
         <Route path="/surrogacy-process" element={<SurrogacyProcess />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
       </Route>
 
       <Route element={<DonorLayout />}>

@@ -1,0 +1,109 @@
+import { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import styles from "../styles/Blog.module.css";
+import { FaClock } from "react-icons/fa";
+
+const CLOUDFRONT_DOMAIN = import.meta.env.VITE_CLOUDFRONT_DOMAIN;
+
+function getImageUrl(imagePath?: string) {
+  if (!imagePath) return undefined;
+  return `${CLOUDFRONT_DOMAIN}/${imagePath}`;
+}
+
+interface BlogPost {
+  id: string;
+  link: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  category: string;
+  readTime: string;
+  content: string;
+  imagePath?: string;
+}
+
+const BlogPost = () => {
+  const { id } = useParams();
+  const [post, setPost] = useState<BlogPost | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!id) return;
+    const fetchPost = async () => {
+      try {
+        const res = await fetch(`http://localhost:3000/api/blog/${id}`);
+        if (!res.ok) throw new Error("Failed to fetch blog post");
+        const data: BlogPost = await res.json();
+        setPost(data);
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        setError(message || "Error fetching blog post");
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchPost();
+  }, [id]);
+
+  if (loading) {
+    return <div className={styles.state}>Loading...</div>;
+  }
+
+  if (error || !post) {
+    return <div className={styles.state}>{error || "Not found"}</div>;
+  }
+
+  return (
+    <>
+      <div className={styles.postHeaderWrapper}>
+        <div className={`${styles.postHeader} section`}>
+          <div className="">
+            <h2 className={styles.postTitle}>{post.title}</h2>
+            <div className={styles.meta}>
+              <div className={styles.metaItem}>
+                <span className={styles.category}>{post.category}</span>
+                <span className={styles.readTime}>{post.readTime}</span>
+              </div>
+              <div className={styles.date}>
+                <FaClock />
+
+                <span>
+                  {new Date(post.date).toLocaleDateString("en-US", {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                  })}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <article className={`${styles.blogPostPage} section`}>
+        <div className={styles.postContainer}>
+          {post.imagePath && (
+            <img
+              src={getImageUrl(post.imagePath)}
+              alt={post.title}
+              className={styles.postImage}
+            />
+          )}
+
+          <div
+            className={styles.postContent}
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
+
+          <div className={styles.postFooter}>
+            <Link to="/blog" className={styles.backLink}>
+              ← Back to Blog
+            </Link>
+          </div>
+        </div>
+      </article>
+    </>
+  );
+};
+
+export default BlogPost;
