@@ -29,7 +29,7 @@
     },
     "eggDonors": {
       "whyBecome": "为什么成为捐赠者？",
-      "whoCanApply": "谁可以申请？",
+      "whoCanApply": "谁可以成为捐赠者？",
       "applyNow": "立即申请"
     },
     "programs": {
@@ -210,5 +210,190 @@
     "support2Text": "全面的电子邮件支持，用于详细问题和文档。",
     "support3Title": "个人协调员",
     "support3Text": "您的专属协调员在整个过程中提供个性化支持。"
+  },
+  "whoCanBecome": {
+    "surrogate": {
+      "heroTitle": "谁可以成为代孕妈妈？",
+      "heroSubtitle": "加入我们富有同情心的女性社区，帮助家庭实现梦想",
+      "heroHighlight": "年龄21-40岁的健康女性，至少有一个亲生子女，不吸烟，情绪稳定，愿意帮助他人。",
+      "requirementsTitle": "成为代孕妈妈的要求",
+      "requirementsSubtitle": "我们仔细筛选所有潜在的代孕妈妈，确保为所有人提供最佳结果",
+      "processTitle": "代孕妈妈之旅",
+      "processSubtitle": "您成为代孕妈妈的途径",
+      "supportTitle": "24/7全程支持",
+      "supportSubtitle": "我们在这里陪伴您的每一步",
+      "support": {
+        "phone": {
+          "title": "电话支持",
+          "text": "通过电话直接联系我们的团队，获得即时援助和指导"
+        },
+        "email": {
+          "title": "电子邮件支持",
+          "text": "全面的电子邮件支持，用于详细问题和文档"
+        },
+        "coordinator": {
+          "title": "个人协调员",
+          "text": "您的专属协调员在整个过程中提供个性化支持"
+        }
+      }
+    },
+    "donor": {
+      "heroTitle": "谁可以成为卵子捐赠者？",
+      "heroSubtitle": "加入我们慷慨的女性社区，帮助家庭创造新的开始",
+      "heroHighlight": "年龄21-35岁的健康女性，具有优秀的基因健康，不吸烟，致力于帮助他人建立家庭。",
+      "requirementsTitle": "成为卵子捐赠者的要求",
+      "requirementsSubtitle": "我们仔细筛选所有潜在的捐赠者，确保为所有人提供最佳结果",
+      "processTitle": "捐赠者之旅",
+      "processSubtitle": "您成为卵子捐赠者的途径",
+      "supportTitle": "24/7全程支持",
+      "supportSubtitle": "我们在这里陪伴您的每一步",
+      "support": {
+        "phone": {
+          "title": "电话支持",
+          "text": "通过电话直接联系我们的团队，获得即时援助和指导"
+        },
+        "email": {
+          "title": "电子邮件支持",
+          "text": "全面的电子邮件支持，用于详细问题和文档"
+        },
+        "coordinator": {
+          "title": "个人协调员",
+          "text": "您的专属协调员在整个过程中提供个性化支持"
+        }
+      }
+    },
+    "parent": {
+      "heroTitle": "谁可以成为父母？",
+      "heroSubtitle": "加入我们充满希望的家庭社区，准备开始他们的育儿之旅",
+      "heroHighlight": "致力于为未来孩子提供充满爱的家庭和稳定环境的个人和夫妇。",
+      "requirementsTitle": "成为父母的要求",
+      "requirementsSubtitle": "我们仔细评估所有潜在父母，确保为所有人提供最佳结果",
+      "processTitle": "父母之旅",
+      "processSubtitle": "您通过代孕成为父母的途径",
+      "supportTitle": "24/7全程支持",
+      "supportSubtitle": "我们在这里陪伴您的每一步",
+      "support": {
+        "phone": {
+          "title": "电话支持",
+          "text": "通过电话直接联系我们的团队，获得即时援助和指导"
+        },
+        "email": {
+          "title": "电子邮件支持",
+          "text": "全面的电子邮件支持，用于详细问题和文档"
+        },
+        "coordinator": {
+          "title": "个人协调员",
+          "text": "您的专属协调员在整个过程中提供个性化支持"
+        }
+      }
+    },
+    "requirements": {
+      "previousPregnancy": {
+        "title": "既往妊娠",
+        "description": "必须至少有过一次成功的妊娠和分娩，无并发症"
+      },
+      "ageHealth": {
+        "title": "年龄和健康",
+        "description": "年龄必须在21-40岁之间，身体健康和心理健康状况良好"
+      },
+      "lifestyle": {
+        "title": "生活方式",
+        "description": "不吸烟，不使用药物，在整个过程中保持健康的生活方式"
+      },
+      "availability": {
+        "title": "可用性",
+        "description": "能够参加定期医疗预约并保持一致的沟通"
+      },
+      "education": {
+        "title": "教育",
+        "description": "高中教育或同等学历，生活状况稳定，有支持系统"
+      },
+      "location": {
+        "title": "位置",
+        "description": "必须能够为医疗预约旅行并保持定期联系"
+      },
+      "geneticHealth": {
+        "title": "基因健康",
+        "description": "优秀的基因健康，无严重基因疾病的家族史"
+      },
+      "emotionalReadiness": {
+        "title": "情绪准备",
+        "description": "情绪上准备好并致力于即将到来的育儿之旅"
+      },
+      "financialStability": {
+        "title": "财务稳定",
+        "description": "财务稳定，能够提供孩子的需求"
+      },
+      "stableHome": {
+        "title": "稳定的家庭环境",
+        "description": "生活状况稳定，有支持性的家庭环境"
+      },
+      "legalStatus": {
+        "title": "法律地位",
+        "description": "良好的法律地位，能够满足所有法律要求"
+      },
+      "international": {
+        "title": "国际考虑",
+        "description": "能够国际旅行并满足跨境要求"
+      },
+      "healthCommitment": {
+        "title": "健康承诺",
+        "description": "致力于保持良好的健康并遵循医疗指导"
+      }
+    },
+    "processSteps": {
+      "step1": {
+        "title": "初步申请",
+        "content": "完成我们全面的在线申请，包括个人和医疗历史"
+      },
+      "step2": {
+        "title": "医疗筛查",
+        "content": "接受彻底的医疗评估，包括生育和基因检测"
+      },
+      "step3": {
+        "title": "心理评估",
+        "content": "完成心理筛查，确保情绪准备和稳定性"
+      },
+      "step4": {
+        "title": "法律和匹配",
+        "content": "法律合同准备和与意向父母匹配"
+      },
+      "donor": {
+        "step1": {
+          "title": "初步申请",
+          "content": "完成我们全面的在线申请，包括个人和医疗历史"
+        },
+        "step2": {
+          "title": "医疗筛查",
+          "content": "接受彻底的医疗评估，包括生育和基因检测"
+        },
+        "step3": {
+          "title": "基因检测",
+          "content": "完成全面的基因筛查和家族史评估"
+        },
+        "step4": {
+          "title": "法律和匹配",
+          "content": "法律合同准备和与意向父母匹配"
+        }
+      },
+      "parent": {
+        "step1": {
+          "title": "初步咨询",
+          "content": "从全面咨询开始，了解您的选择并制定个性化计划"
+        },
+        "step2": {
+          "title": "法律和医疗筛查",
+          "content": "完成法律文件和医疗评估以确保资格"
+        },
+        "step3": {
+          "title": "匹配过程",
+          "content": "仔细匹配完美的代孕妈妈并协调所有安排"
+        },
+        "step4": {
+          "title": "怀孕和分娩",
+          "content": "在整个怀孕和分娩过程中提供支持，确保顺利过渡到父母身份"
+        }
+      }
+    }
   }
 }

@@ -29,7 +29,7 @@
     },
     "eggDonors": {
       "whyBecome": "Why Become a Donor?",
-      "whoCanApply": "Who Can Apply?",
+      "whoCanApply": "Who Can Become a Donor?",
       "applyNow": "Apply Now"
     },
     "programs": {
@@ -213,7 +213,7 @@
   "surrogacyProcess": {
     "title": "Surrogacy Process",
     "subtitle": "A comprehensive guide to your surrogacy journey",
-  
+
     "step1Title": "Initial Consultation",
     "step1Description": "Begin your journey with a comprehensive consultation to understand your options and create a personalized plan.",
     "step1Item1": "Free initial consultation",
@@ -248,5 +248,190 @@
     "support2Text": "Comprehensive email support for detailed questions and documentation.",
     "support3Title": "Personal Coordinator",
     "support3Text": "Your dedicated coordinator provides personalized support throughout the entire process."
+  },
+  "whoCanBecome": {
+    "surrogate": {
+      "heroTitle": "Who Can Become a Surrogate?",
+      "heroSubtitle": "Join our community of compassionate women helping families achieve their dreams",
+      "heroHighlight": "Healthy women aged 21-40 with at least one biological child, non-smokers, emotionally stable and ready to help others.",
+      "requirementsTitle": "Requirements to Become a Surrogate",
+      "requirementsSubtitle": "We carefully screen all potential surrogates to ensure the best outcomes for everyone",
+      "processTitle": "The Surrogate Journey",
+      "processSubtitle": "Your path to becoming a surrogate mother",
+      "supportTitle": "24/7 Support Throughout Your Journey",
+      "supportSubtitle": "We're here for you every step of the way",
+      "support": {
+        "phone": {
+          "title": "Phone Support",
+          "text": "Direct access to our team via phone for immediate assistance and guidance"
+        },
+        "email": {
+          "title": "Email Support",
+          "text": "Comprehensive email support for detailed questions and documentation"
+        },
+        "coordinator": {
+          "title": "Personal Coordinator",
+          "text": "Your dedicated coordinator provides personalized support throughout the entire process"
+        }
+      }
+    },
+    "donor": {
+      "heroTitle": "Who Can Become an Egg Donor?",
+      "heroSubtitle": "Join our community of generous women helping families create new beginnings",
+      "heroHighlight": "Healthy women aged 21-35 with excellent genetic health, non-smokers, and committed to helping others build families.",
+      "requirementsTitle": "Requirements to Become an Egg Donor",
+      "requirementsSubtitle": "We carefully screen all potential donors to ensure the best outcomes for everyone",
+      "processTitle": "The Donor Journey",
+      "processSubtitle": "Your path to becoming an egg donor",
+      "supportTitle": "24/7 Support Throughout Your Journey",
+      "supportSubtitle": "We're here for you every step of the way",
+      "support": {
+        "phone": {
+          "title": "Phone Support",
+          "text": "Direct access to our team via phone for immediate assistance and guidance"
+        },
+        "email": {
+          "title": "Email Support",
+          "text": "Comprehensive email support for detailed questions and documentation"
+        },
+        "coordinator": {
+          "title": "Personal Coordinator",
+          "text": "Your dedicated coordinator provides personalized support throughout the entire process"
+        }
+      }
+    },
+    "parent": {
+      "heroTitle": "Who Can Become a Parent?",
+      "heroSubtitle": "Join our community of hopeful families ready to begin their parenting journey",
+      "heroHighlight": "Committed individuals and couples ready to provide a loving home and stable environment for their future child.",
+      "requirementsTitle": "Requirements to Become a Parent",
+      "requirementsSubtitle": "We carefully evaluate all potential parents to ensure the best outcomes for everyone",
+      "processTitle": "The Parent Journey",
+      "processSubtitle": "Your path to becoming a parent through surrogacy",
+      "supportTitle": "24/7 Support Throughout Your Journey",
+      "supportSubtitle": "We're here for you every step of the way",
+      "support": {
+        "phone": {
+          "title": "Phone Support",
+          "text": "Direct access to our team via phone for immediate assistance and guidance"
+        },
+        "email": {
+          "title": "Email Support",
+          "text": "Comprehensive email support for detailed questions and documentation"
+        },
+        "coordinator": {
+          "title": "Personal Coordinator",
+          "text": "Your dedicated coordinator provides personalized support throughout the entire process"
+        }
+      }
+    },
+    "requirements": {
+      "previousPregnancy": {
+        "title": "Previous Pregnancy",
+        "description": "Must have had at least one successful pregnancy and delivery without complications"
+      },
+      "ageHealth": {
+        "title": "Age & Health",
+        "description": "Must be between 21-40 years old with excellent physical and mental health"
+      },
+      "lifestyle": {
+        "title": "Lifestyle",
+        "description": "Non-smoker, no drug use, and maintain a healthy lifestyle throughout the process"
+      },
+      "availability": {
+        "title": "Availability",
+        "description": "Able to attend regular medical appointments and maintain consistent communication"
+      },
+      "education": {
+        "title": "Education",
+        "description": "High school education or equivalent with stable living situation and support system"
+      },
+      "location": {
+        "title": "Location",
+        "description": "Must be able to travel for medical appointments and maintain regular contact"
+      },
+      "geneticHealth": {
+        "title": "Genetic Health",
+        "description": "Excellent genetic health with no family history of serious genetic conditions"
+      },
+      "emotionalReadiness": {
+        "title": "Emotional Readiness",
+        "description": "Emotionally prepared and committed to the parenting journey ahead"
+      },
+      "financialStability": {
+        "title": "Financial Stability",
+        "description": "Financially stable and able to provide for a child's needs"
+      },
+      "stableHome": {
+        "title": "Stable Home Environment",
+        "description": "Stable living situation with a supportive home environment"
+      },
+      "legalStatus": {
+        "title": "Legal Status",
+        "description": "Good legal standing and able to meet all legal requirements"
+      },
+      "international": {
+        "title": "International Considerations",
+        "description": "Able to travel internationally and meet cross-border requirements"
+      },
+      "healthCommitment": {
+        "title": "Health Commitment",
+        "description": "Committed to maintaining good health and following medical guidelines"
+      }
+    },
+    "processSteps": {
+      "step1": {
+        "title": "Initial Application",
+        "content": "Complete our comprehensive online application with personal and medical history"
+      },
+      "step2": {
+        "title": "Medical Screening",
+        "content": "Undergo thorough medical evaluations including fertility and genetic testing"
+      },
+      "step3": {
+        "title": "Psychological Evaluation",
+        "content": "Complete psychological screening to ensure emotional readiness and stability"
+      },
+      "step4": {
+        "title": "Legal & Matching",
+        "content": "Legal contract preparation and matching with intended parents"
+      },
+      "donor": {
+        "step1": {
+          "title": "Initial Application",
+          "content": "Complete our comprehensive online application with personal and medical history"
+        },
+        "step2": {
+          "title": "Medical Screening",
+          "content": "Undergo thorough medical evaluations including fertility and genetic testing"
+        },
+        "step3": {
+          "title": "Genetic Testing",
+          "content": "Complete comprehensive genetic screening and family history evaluation"
+        },
+        "step4": {
+          "title": "Legal & Matching",
+          "content": "Legal contract preparation and matching with intended parents"
+        }
+      },
+      "parent": {
+        "step1": {
+          "title": "Initial Consultation",
+          "content": "Begin with a comprehensive consultation to understand your options and create a personalized plan"
+        },
+        "step2": {
+          "title": "Legal & Medical Screening",
+          "content": "Complete legal documentation and medical evaluations to ensure eligibility"
+        },
+        "step3": {
+          "title": "Matching Process",
+          "content": "Carefully match with the perfect surrogate and coordinate all arrangements"
+        },
+        "step4": {
+          "title": "Pregnancy & Birth",
+          "content": "Support throughout pregnancy and birth, ensuring a smooth transition to parenthood"
+        }
+      }
+    }
   }
 }

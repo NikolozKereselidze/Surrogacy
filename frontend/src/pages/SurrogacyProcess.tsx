@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import styles from "../styles/SurrogacyProcess.module.css";
 import { useTranslation } from "react-i18next";
+import SupportCard from "../components/SupportCard";
 
 const SurrogacyProcess = () => {
   const { t } = useTranslation();
@@ -157,33 +158,21 @@ const SurrogacyProcess = () => {
             {t("surrogacyProcess.supportTitle")}
           </h2>
           <div className={styles.supportGrid}>
-            <div className={styles.supportCard}>
-              <FaPhone className={styles.supportIcon} />
-              <h3 className={styles.supportCardTitle}>
-                {t("surrogacyProcess.support1Title")}
-              </h3>
-              <p className={styles.supportCardText}>
-                {t("surrogacyProcess.support1Text")}
-              </p>
-            </div>
-            <div className={styles.supportCard}>
-              <FaEnvelope className={styles.supportIcon} />
-              <h3 className={styles.supportCardTitle}>
-                {t("surrogacyProcess.support2Title")}
-              </h3>
-              <p className={styles.supportCardText}>
-                {t("surrogacyProcess.support2Text")}
-              </p>
-            </div>
-            <div className={styles.supportCard}>
-              <FaUsers className={styles.supportIcon} />
-              <h3 className={styles.supportCardTitle}>
-                {t("surrogacyProcess.support3Title")}
-              </h3>
-              <p className={styles.supportCardText}>
-                {t("surrogacyProcess.support3Text")}
-              </p>
-            </div>
+            <SupportCard
+              title={t("surrogacyProcess.support1Title")}
+              text={t("surrogacyProcess.support1Text")}
+              icon={<FaPhone />}
+            />
+            <SupportCard
+              title={t("surrogacyProcess.support2Title")}
+              text={t("surrogacyProcess.support2Text")}
+              icon={<FaEnvelope />}
+            />
+            <SupportCard
+              title={t("surrogacyProcess.support3Title")}
+              text={t("surrogacyProcess.support3Text")}
+              icon={<FaUsers />}
+            />
           </div>
         </section>
       </div>
@@ -192,4 +181,3 @@ const SurrogacyProcess = () => {
 };
 
 export default SurrogacyProcess;
-

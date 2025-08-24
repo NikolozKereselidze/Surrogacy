@@ -18,6 +18,9 @@ import DonorCard from "./pages/DonorCard";
 import WhoWeAre from "./pages/WhoWeAre";
 import SurrogacyProcess from "./pages/SurrogacyProcess";
 import BlogPost from "./pages/BlogPost";
+import WhoCanBecomeSurrogate from "./pages/WhoCanBecomeSurrogate";
+import WhoCanBecomeDonor from "./pages/WhoCanBecomeDonor";
+import WhoCanBecomeParent from "./pages/WhoCanBecomeParent";
 
 function App() {
   return (
@@ -30,6 +33,15 @@ function App() {
         <Route path="/our-team" element={<OurTeam />} />
         <Route path="/surrogacy-process" element={<SurrogacyProcess />} />
         <Route path="/blog/:id" element={<BlogPost />} />
+        <Route
+          path="/who-can-become-a-surrogate"
+          element={<WhoCanBecomeSurrogate />}
+        />
+        <Route path="/who-can-become-a-donor" element={<WhoCanBecomeDonor />} />
+        <Route
+          path="/who-can-become-a-parent"
+          element={<WhoCanBecomeParent />}
+        />
       </Route>
 
       <Route element={<DonorLayout />}>

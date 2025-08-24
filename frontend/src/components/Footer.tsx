@@ -75,12 +75,12 @@ const Footer = () => {
             <h4>{t("navigation.eggDonors")}</h4>
             <ul>
               <li>
-                <a href="/why-become-an-egg-donor">
+                <a href="/why-become-a-donor">
                   {t("submenu.eggDonors.whyBecome")}
                 </a>
               </li>
               <li>
-                <a href="/who-can-apply-to-be-an-egg-donor">
+                <a href="/who-can-become-a-donor">
                   {t("submenu.eggDonors.whoCanApply")}
                 </a>
               </li>

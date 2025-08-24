@@ -92,7 +92,9 @@ const Navigation = () => {
               </a>
             </li>
             <li>
-              <a href="/who-can-apply">{t("submenu.eggDonors.whoCanApply")}</a>
+              <a href="/who-can-become-a-donor">
+                {t("submenu.eggDonors.whoCanApply")}
+              </a>
             </li>
             <li>
               <a href="/find-egg-donor">

@@ -29,7 +29,7 @@
     },
     "eggDonors": {
       "whyBecome": "¿Por Qué Ser Donante?",
-      "whoCanApply": "¿Quién Puede Aplicar?",
+      "whoCanApply": "¿Quién Puede Ser Donante?",
       "applyNow": "Aplicar Ahora"
     },
     "programs": {
@@ -222,5 +222,190 @@
     "support2Text": "Apoyo integral por email para preguntas detalladas y documentación.",
     "support3Title": "Coordinador Personal",
     "support3Text": "Tu coordinador dedicado proporciona apoyo personalizado durante todo el proceso."
+  },
+  "whoCanBecome": {
+    "surrogate": {
+      "heroTitle": "¿Quién puede ser gestante subrogada?",
+      "heroSubtitle": "Únete a nuestra comunidad de mujeres compasivas que ayudan a las familias a lograr sus sueños",
+      "heroHighlight": "Mujeres saludables de 21-40 años con al menos un hijo biológico, no fumadoras, emocionalmente estables y listas para ayudar a otros.",
+      "requirementsTitle": "Requisitos para ser gestante subrogada",
+      "requirementsSubtitle": "Evaluamos cuidadosamente a todas las gestantes subrogadas potenciales para asegurar los mejores resultados para todos",
+      "processTitle": "El viaje de la gestante subrogada",
+      "processSubtitle": "Tu camino para convertirte en gestante subrogada",
+      "supportTitle": "Apoyo 24/7 durante todo tu viaje",
+      "supportSubtitle": "Estamos aquí para ti en cada paso",
+      "support": {
+        "phone": {
+          "title": "Apoyo telefónico",
+          "text": "Acceso directo a nuestro equipo por teléfono para asistencia inmediata y orientación"
+        },
+        "email": {
+          "title": "Apoyo por email",
+          "text": "Apoyo integral por email para preguntas detalladas y documentación"
+        },
+        "coordinator": {
+          "title": "Coordinador personal",
+          "text": "Tu coordinador dedicado proporciona apoyo personalizado durante todo el proceso"
+        }
+      }
+    },
+    "donor": {
+      "heroTitle": "¿Quién puede ser donante de óvulos?",
+      "heroSubtitle": "Únete a nuestra comunidad de mujeres generosas que ayudan a las familias a crear nuevos comienzos",
+      "heroHighlight": "Mujeres saludables de 21-35 años con excelente salud genética, no fumadoras y comprometidas a ayudar a otros a construir familias.",
+      "requirementsTitle": "Requisitos para ser donante de óvulos",
+      "requirementsSubtitle": "Evaluamos cuidadosamente a todas las donantes potenciales para asegurar los mejores resultados para todos",
+      "processTitle": "El viaje de la donante",
+      "processSubtitle": "Tu camino para convertirte en donante de óvulos",
+      "supportTitle": "Apoyo 24/7 durante todo tu viaje",
+      "supportSubtitle": "Estamos aquí para ti en cada paso",
+      "support": {
+        "phone": {
+          "title": "Apoyo telefónico",
+          "text": "Acceso directo a nuestro equipo por teléfono para asistencia inmediata y orientación"
+        },
+        "email": {
+          "title": "Apoyo por email",
+          "text": "Apoyo integral por email para preguntas detalladas y documentación"
+        },
+        "coordinator": {
+          "title": "Coordinador personal",
+          "text": "Tu coordinador dedicado proporciona apoyo personalizado durante todo el proceso"
+        }
+      }
+    },
+    "parent": {
+      "heroTitle": "¿Quién puede ser padre?",
+      "heroSubtitle": "Únete a nuestra comunidad de familias esperanzadas listas para comenzar su viaje de paternidad",
+      "heroHighlight": "Individuos y parejas comprometidos listos para proporcionar un hogar amoroso y un ambiente estable para su futuro hijo.",
+      "requirementsTitle": "Requisitos para ser padre",
+      "requirementsSubtitle": "Evaluamos cuidadosamente a todos los padres potenciales para asegurar los mejores resultados para todos",
+      "processTitle": "El viaje del padre",
+      "processSubtitle": "Tu camino para convertirte en padre a través de la gestación subrogada",
+      "supportTitle": "Apoyo 24/7 durante todo tu viaje",
+      "supportSubtitle": "Estamos aquí para ti en cada paso",
+      "support": {
+        "phone": {
+          "title": "Apoyo telefónico",
+          "text": "Acceso directo a nuestro equipo por teléfono para asistencia inmediata y orientación"
+        },
+        "email": {
+          "title": "Apoyo por email",
+          "text": "Apoyo integral por email para preguntas detalladas y documentación"
+        },
+        "coordinator": {
+          "title": "Coordinador personal",
+          "text": "Tu coordinador dedicado proporciona apoyo personalizado durante todo el proceso"
+        }
+      }
+    },
+    "requirements": {
+      "previousPregnancy": {
+        "title": "Embarazo previo",
+        "description": "Debe haber tenido al menos un embarazo exitoso y parto sin complicaciones"
+      },
+      "ageHealth": {
+        "title": "Edad y salud",
+        "description": "Debe tener entre 21-40 años con excelente salud física y mental"
+      },
+      "lifestyle": {
+        "title": "Estilo de vida",
+        "description": "No fumadora, sin uso de drogas y mantener un estilo de vida saludable durante todo el proceso"
+      },
+      "availability": {
+        "title": "Disponibilidad",
+        "description": "Capaz de asistir a citas médicas regulares y mantener comunicación consistente"
+      },
+      "education": {
+        "title": "Educación",
+        "description": "Educación secundaria o equivalente con situación de vida estable y sistema de apoyo"
+      },
+      "location": {
+        "title": "Ubicación",
+        "description": "Debe poder viajar para citas médicas y mantener contacto regular"
+      },
+      "geneticHealth": {
+        "title": "Salud genética",
+        "description": "Excelente salud genética sin historial familiar de condiciones genéticas serias"
+      },
+      "emotionalReadiness": {
+        "title": "Preparación emocional",
+        "description": "Emocionalmente preparados y comprometidos con el viaje de paternidad por delante"
+      },
+      "financialStability": {
+        "title": "Estabilidad financiera",
+        "description": "Financieramente estables y capaces de proporcionar las necesidades de un niño"
+      },
+      "stableHome": {
+        "title": "Ambiente hogareño estable",
+        "description": "Situación de vida estable con un ambiente hogareño de apoyo"
+      },
+      "legalStatus": {
+        "title": "Estado legal",
+        "description": "Buen estado legal y capaces de cumplir todos los requisitos legales"
+      },
+      "international": {
+        "title": "Consideraciones internacionales",
+        "description": "Capaces de viajar internacionalmente y cumplir requisitos transfronterizos"
+      },
+      "healthCommitment": {
+        "title": "Compromiso con la salud",
+        "description": "Comprometidos a mantener buena salud y seguir pautas médicas"
+      }
+    },
+    "processSteps": {
+      "step1": {
+        "title": "Aplicación inicial",
+        "content": "Completa nuestra aplicación en línea integral con historial personal y médico"
+      },
+      "step2": {
+        "title": "Evaluación médica",
+        "content": "Someterse a evaluaciones médicas exhaustivas incluyendo pruebas de fertilidad y genéticas"
+      },
+      "step3": {
+        "title": "Evaluación psicológica",
+        "content": "Completar evaluación psicológica para asegurar preparación emocional y estabilidad"
+      },
+      "step4": {
+        "title": "Legal y emparejamiento",
+        "content": "Preparación del contrato legal y emparejamiento con padres intencionales"
+      },
+      "donor": {
+        "step1": {
+          "title": "Aplicación inicial",
+          "content": "Completa nuestra aplicación en línea integral con historial personal y médico"
+        },
+        "step2": {
+          "title": "Evaluación médica",
+          "content": "Someterse a evaluaciones médicas exhaustivas incluyendo pruebas de fertilidad y genéticas"
+        },
+        "step3": {
+          "title": "Pruebas genéticas",
+          "content": "Completar evaluación genética integral y evaluación de historial familiar"
+        },
+        "step4": {
+          "title": "Legal y emparejamiento",
+          "content": "Preparación del contrato legal y emparejamiento con padres intencionales"
+        }
+      },
+      "parent": {
+        "step1": {
+          "title": "Consulta inicial",
+          "content": "Comienza con una consulta integral para entender tus opciones y crear un plan personalizado"
+        },
+        "step2": {
+          "title": "Evaluación legal y médica",
+          "content": "Completa documentación legal y evaluaciones médicas para asegurar elegibilidad"
+        },
+        "step3": {
+          "title": "Proceso de emparejamiento",
+          "content": "Empareja cuidadosamente con la gestante subrogada perfecta y coordina todos los arreglos"
+        },
+        "step4": {
+          "title": "Embarazo y nacimiento",
+          "content": "Apoyo durante todo el embarazo y nacimiento, asegurando una transición suave a la paternidad"
+        }
+      }
+    }
   }
 }
