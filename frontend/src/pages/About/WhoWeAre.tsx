@@ -6,8 +6,8 @@ import {
   FaShieldAlt,
   FaHandshake,
 } from "react-icons/fa";
-import MiracleCard from "../components/MiracleCard";
-import styles from "../styles/WhoWeAre.module.css";
+import MiracleCard from "../../components/MiracleCard";
+import styles from "../../styles/WhoWeAre.module.css";
 import { useTranslation } from "react-i18next";
 
 const WhoWeAre = () => {

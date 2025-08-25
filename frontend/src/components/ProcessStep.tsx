@@ -1,7 +1,7 @@
 import styles from "../styles/WhoCanBecomeSurrogate.module.css";
 
 interface ProcessStepProps {
-  stepNumber: string;
+  stepNumber: number;
   stepTitle: string;
   stepContent: string;
   stepIcon: React.ReactNode;

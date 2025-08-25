@@ -5,7 +5,7 @@ import {
   FaShieldAlt,
   FaHandshake,
 } from "react-icons/fa";
-import styles from "../styles/OurMission.module.css";
+import styles from "../../styles/OurMission.module.css";
 import { useTranslation } from "react-i18next";
 
 const OurMission = () => {

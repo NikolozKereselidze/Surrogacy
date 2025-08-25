@@ -49,7 +49,7 @@ const Navigation = () => {
               </a>
             </li>
             <li>
-              <a href="/screening-process">
+              <a href="/surrogate-screening">
                 {t("submenu.surrogates.screeningProcess")}
               </a>
             </li>
@@ -68,7 +68,7 @@ const Navigation = () => {
               </a>
             </li>
             <li>
-              <a href="/screening-process">
+              <a href="/parent-screening">
                 {t("submenu.intendedParents.screeningProcess")}
               </a>
             </li>
@@ -97,9 +97,7 @@ const Navigation = () => {
               </a>
             </li>
             <li>
-              <a href="/find-egg-donor">
-                {t("submenu.eggDonors.findDonor")}
-              </a>
+              <a href="/find-egg-donor">{t("submenu.eggDonors.findDonor")}</a>
             </li>
             <button className={styles.applyButton}>
               {t("submenu.eggDonors.applyNow")}

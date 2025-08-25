@@ -407,5 +407,37 @@
         }
       }
     }
+  },
+  "screening": {
+    "title": "Proceso de Evaluación",
+    "subtitle": "Resumen paso a paso de nuestra evaluación",
+    "surrogate": {
+      "medical": {
+        "title": "Evaluación Médica",
+        "content": "Chequeo de salud, análisis y evaluación reproductiva para confirmar preparación."
+      },
+      "psych": {
+        "title": "Entrevista Psicológica",
+        "content": "Breve evaluación de salud mental y consejería para asegurar consentimiento informado."
+      },
+      "background": {
+        "title": "Verificación de Antecedentes Sociales",
+        "content": "Revisión de antecedentes y verificación de estabilidad del hogar, incluido el sistema de apoyo."
+      }
+    },
+    "parent": {
+      "consultation": {
+        "title": "Consulta Inicial",
+        "content": "Aclarar metas, cronograma, presupuesto y programa adecuado; confirmar elegibilidad básica."
+      },
+      "review": {
+        "title": "Revisión Médica y Psicológica",
+        "content": "Revisión de historial médico y de fertilidad, más una breve evaluación psicológica."
+      },
+      "legal": {
+        "title": "Preparación Legal y del Hogar",
+        "content": "Resumen del contrato con asesoría legal y lista práctica de preparación del hogar."
+      }
+    }
   }
 }

@@ -45,7 +45,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/screening-process">
+                <a href="/surrogate-screening">
                   {t("submenu.surrogates.screeningProcess")}
                 </a>
               </li>
@@ -60,7 +60,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/screening-process">
+                <a href="/parent-screening">
                   {t("submenu.intendedParents.screeningProcess")}
                 </a>
               </li>

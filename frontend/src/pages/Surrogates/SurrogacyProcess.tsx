@@ -9,9 +9,9 @@ import {
   FaPhone,
   FaEnvelope,
 } from "react-icons/fa";
-import styles from "../styles/SurrogacyProcess.module.css";
+import styles from "../../styles/SurrogacyProcess.module.css";
 import { useTranslation } from "react-i18next";
-import SupportCard from "../components/SupportCard";
+import SupportCard from "../../components/SupportCard";
 
 const SurrogacyProcess = () => {
   const { t } = useTranslation();

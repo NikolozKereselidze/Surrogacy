@@ -395,5 +395,37 @@
         }
       }
     }
+  },
+  "screening": {
+    "title": "筛选流程",
+    "subtitle": "我们的评估分步概览",
+    "surrogate": {
+      "medical": {
+        "title": "医疗评估",
+        "content": "健康检查、实验室检测及生殖评估，以确认准备情况。"
+      },
+      "psych": {
+        "title": "心理面谈",
+        "content": "简要心理健康筛查与咨询，确保知情同意。"
+      },
+      "background": {
+        "title": "社会背景核查",
+        "content": "背景审查和家庭稳定性核验，包括支持体系。"
+      }
+    },
+    "parent": {
+      "consultation": {
+        "title": "初步咨询",
+        "content": "明确目标、时间线、预算与项目匹配度；确认基本资格。"
+      },
+      "review": {
+        "title": "医疗与心理审核",
+        "content": "审阅病历与生育史，并进行简要心理筛查。"
+      },
+      "legal": {
+        "title": "法律与居家准备",
+        "content": "与律师进行合同概览，并完成实用的居家准备清单。"
+      }
+    }
   }
 }

@@ -249,6 +249,38 @@
     "support3Title": "Personal Coordinator",
     "support3Text": "Your dedicated coordinator provides personalized support throughout the entire process."
   },
+  "screening": {
+    "title": "Screening Process",
+    "subtitle": "A step-by-step overview of our evaluation",
+    "surrogate": {
+      "medical": {
+        "title": "Medical Evaluation",
+        "content": "Health check, labs, and reproductive assessment to confirm readiness."
+      },
+      "psych": {
+        "title": "Psychological Interview",
+        "content": "Brief mental health screening and counseling to ensure informed consent."
+      },
+      "background": {
+        "title": "Social Background Check",
+        "content": "Background review and home stability verification, including support system."
+      }
+    },
+    "parent": {
+      "consultation": {
+        "title": "Initial Consultation",
+        "content": "Clarify goals, timeline, budget, and program fit; confirm basic eligibility."
+      },
+      "review": {
+        "title": "Medical & Psych Review",
+        "content": "Review medical records and fertility history, plus a brief psychological screen."
+      },
+      "legal": {
+        "title": "Legal & Home Preparation",
+        "content": "Legal contract overview with counsel and a practical home-readiness checklist."
+      }
+    }
+  },
   "whoCanBecome": {
     "surrogate": {
       "heroTitle": "Who Can Become a Surrogate?",

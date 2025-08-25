@@ -304,11 +304,11 @@ const WhoCanBecome: React.FC<WhoCanBecomeProps> = ({ type }) => {
           </p>
         </div>
 
-        <div className={styles.processTimeline}>
+        <div className="processTimeline">
           {processSteps.map((step) => (
             <ProcessStep
               key={step.stepNumber}
-              stepNumber={step.stepNumber}
+              stepNumber={Number(step.stepNumber)}
               stepTitle={step.stepTitle}
               stepContent={step.stepContent}
               stepIcon={step.stepIcon}

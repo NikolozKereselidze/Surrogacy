@@ -130,6 +130,31 @@ body {
   margin-bottom: 1.1rem;
 }
 
+/* SCREENING PROCESS */
+.screening-process {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.processTimeline {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.processTimeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--color-primary), #3b82f6);
+  transform: translateX(-50%);
+}
+
 /* SWIPER */
 .swiper {
   padding-bottom: 3.4rem !important;

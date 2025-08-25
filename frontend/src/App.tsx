@@ -1,47 +1,75 @@
 import "./App.css";
-import Home from "./pages/Home";
-import OurMission from "./pages/OurMission";
-import WhyChooseUs from "./pages/WhyChooseUs";
-import OurTeam from "./pages/OurTeam";
 import { Routes, Route } from "react-router-dom";
 
+// Home
+import Home from "./pages/Home";
+
+// About
+import OurMission from "./pages/About/OurMission";
+import WhyChooseUs from "./pages/About/WhyChooseUs";
+import OurTeam from "./pages/About/OurTeam";
+import WhoWeAre from "./pages/About/WhoWeAre";
+
+// Surrogates
+import SurrogacyProcess from "./pages/Surrogates/SurrogacyProcess";
+import WhoCanBecomeSurrogate from "./pages/Surrogates/WhoCanBecomeSurrogate";
+
+// Admin
 import Dashboard from "./pages/Admin/Dashboard";
 import BlogManagement from "./pages/Admin/BlogManagement";
 import DonorManagement from "./pages/Admin/DonorManagement";
 import MainLayout from "./components/MainLayout";
 import AdminNav from "./components/Admin/AdminNav";
+
+// Donors
 import Donors from "./pages/Donors";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Login from "./pages/Login";
+
+// Donor
 import DonorLayout from "./components/DonorLayout";
 import DonorCard from "./pages/DonorCard";
-import WhoWeAre from "./pages/WhoWeAre";
-import SurrogacyProcess from "./pages/SurrogacyProcess";
+
+// Blog
+
 import BlogPost from "./pages/BlogPost";
-import WhoCanBecomeSurrogate from "./pages/WhoCanBecomeSurrogate";
-import WhoCanBecomeDonor from "./pages/WhoCanBecomeDonor";
-import WhoCanBecomeParent from "./pages/WhoCanBecomeParent";
+import WhoCanBecomeDonor from "./pages/Donors/WhoCanBecomeDonor";
+import WhoCanBecomeParent from "./pages/Parents/WhoCanBecomeParent";
+import SurrogateScreening from "./pages/Surrogates/SurrogateScreening";
+import ParentScreening from "./pages/Parents/ParentScreening";
 
 function App() {
   return (
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
+
+        {/* About */}
         <Route path="/our-mission" element={<OurMission />} />
         <Route path="/who-we-are" element={<WhoWeAre />} />
         <Route path="/why-choose-us" element={<WhyChooseUs />} />
         <Route path="/our-team" element={<OurTeam />} />
+
+        {/* Surrogates */}
         <Route path="/surrogacy-process" element={<SurrogacyProcess />} />
-        <Route path="/blog/:id" element={<BlogPost />} />
+        <Route path="/surrogate-screening" element={<SurrogateScreening />} />
         <Route
           path="/who-can-become-a-surrogate"
           element={<WhoCanBecomeSurrogate />}
         />
+
+        {/* Blog */}
+        <Route path="/blog/:id" element={<BlogPost />} />
+
+        {/* Donors */}
         <Route path="/who-can-become-a-donor" element={<WhoCanBecomeDonor />} />
+
+        {/* Parents */}
         <Route
           path="/who-can-become-a-parent"
           element={<WhoCanBecomeParent />}
         />
+        <Route path="/parent-screening" element={<ParentScreening />} />
       </Route>
 
       <Route element={<DonorLayout />}>
