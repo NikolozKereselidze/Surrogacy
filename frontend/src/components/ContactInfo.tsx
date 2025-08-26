@@ -19,6 +19,7 @@ const ContactInfo = () => {
         <div className={styles.contactInfoItemText}>
           <h3>{t("contactUs.addressLabel")}</h3>
           <a
+            aria-label="Address"
             href="https://maps.app.goo.gl/KypCLxrf5taojooJA"
             target="_blank"
             rel="noopener noreferrer"
@@ -31,14 +32,16 @@ const ContactInfo = () => {
         <FaPhone />
         <div className={styles.contactInfoItemText}>
           <h3>{t("contactUs.phoneLabel")}</h3>
-          <a href="tel:+995596235050">+995 596 235 050</a>
+          <a aria-label="Phone Number" href="tel:+995596235050">
+            +995 596 235 050
+          </a>
         </div>
       </div>
       <div className={styles.contactInfoItem}>
         <FaEnvelope />
         <div className={styles.contactInfoItemText}>
           <h3>{t("contactUs.emailLabel")}</h3>
-          <a href="mailto:natia@surrogationcenter.com">
+          <a aria-label="Email" href="mailto:natia@surrogationcenter.com">
             natia@surrogationcenter.com
           </a>
         </div>
@@ -50,6 +53,7 @@ const ContactInfo = () => {
           href="https://wa.me/19298775515?text=Hi%2C%20I%27d%20like%20to%20know%20more"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Whatsapp"
         >
           <FaWhatsapp />
         </a>
@@ -59,6 +63,7 @@ const ContactInfo = () => {
           href="https://www.facebook.com/share/15bgwdnhbw/?mibextid=wwXIfr"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Facebook"
         >
           <FaFacebook />
         </a>
@@ -68,6 +73,7 @@ const ContactInfo = () => {
           href="https://www.linkedin.com/in/happy-family-georgia?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Linkedin"
         >
           <FaLinkedin />
         </a>
@@ -77,6 +83,7 @@ const ContactInfo = () => {
           href="https://www.instagram.com/surrogacy_center_happy_family/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Instagram"
         >
           <FaInstagram />
         </a>

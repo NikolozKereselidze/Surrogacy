@@ -9,11 +9,12 @@ const Navigation = () => {
 
   // Set RTL for Hebrew
   const isRTL = i18n.language === "he";
+  const langPrefix = `/${i18n.language}`;
 
   return (
     <nav className={styles.navigation} dir={isRTL ? "rtl" : "ltr"}>
       <div className={styles.logoContainer}>
-        <a href="/" className={styles.logo}>
+        <a href={langPrefix + "/"} className={styles.logo}>
           Miracle Makers
         </a>
       </div>
@@ -23,16 +24,24 @@ const Navigation = () => {
           <IoIosArrowDown size={18} className={styles.arrowIcon} />
           <ul className={styles.submenu}>
             <li>
-              <a href="/our-mission">{t("submenu.aboutUs.ourMission")}</a>
+              <a href={langPrefix + "/our-mission"}>
+                {t("submenu.aboutUs.ourMission")}
+              </a>
             </li>
             <li>
-              <a href="/who-we-are">{t("submenu.aboutUs.whoWeAre")}</a>
+              <a href={langPrefix + "/who-we-are"}>
+                {t("submenu.aboutUs.whoWeAre")}
+              </a>
             </li>
             <li>
-              <a href="/our-team">{t("submenu.aboutUs.ourTeam")}</a>
+              <a href={langPrefix + "/our-team"}>
+                {t("submenu.aboutUs.ourTeam")}
+              </a>
             </li>
             <li>
-              <a href="/why-choose-us">{t("submenu.aboutUs.whyChooseUs")}</a>
+              <a href={langPrefix + "/why-choose-us"}>
+                {t("submenu.aboutUs.whyChooseUs")}
+              </a>
             </li>
           </ul>
         </li>
@@ -41,17 +50,17 @@ const Navigation = () => {
           <IoIosArrowDown size={18} className={styles.arrowIcon} />
           <ul className={styles.submenu}>
             <li>
-              <a href="/surrogacy-process">
+              <a href={langPrefix + "/surrogacy-process"}>
                 {t("submenu.surrogates.surrogacyProcess")}
               </a>
             </li>
             <li>
-              <a href="/who-can-become-a-surrogate">
+              <a href={langPrefix + "/who-can-become-a-surrogate"}>
                 {t("submenu.surrogates.whoCanBecome")}
               </a>
             </li>
             <li>
-              <a href="/surrogate-screening">
+              <a href={langPrefix + "/surrogate-screening"}>
                 {t("submenu.surrogates.screeningProcess")}
               </a>
             </li>
@@ -65,17 +74,17 @@ const Navigation = () => {
           <IoIosArrowDown size={18} className={styles.arrowIcon} />
           <ul className={styles.submenu}>
             <li>
-              <a href="/who-can-become-a-parent">
+              <a href={langPrefix + "/who-can-become-a-parent"}>
                 {t("submenu.intendedParents.whoCanBecome")}
               </a>
             </li>
             <li>
-              <a href="/parent-screening">
+              <a href={langPrefix + "/parent-screening"}>
                 {t("submenu.intendedParents.screeningProcess")}
               </a>
             </li>
             <li>
-              <a href="/support-and-counselling">
+              <a href={langPrefix + "/support-and-counselling"}>
                 {t("submenu.intendedParents.compensationSupport")}
               </a>
             </li>
@@ -89,17 +98,19 @@ const Navigation = () => {
           <IoIosArrowDown size={18} className={styles.arrowIcon} />
           <ul className={styles.submenu}>
             <li>
-              <a href="/why-become-a-donor">
+              <a href={langPrefix + "/why-become-a-donor"}>
                 {t("submenu.eggDonors.whyBecome")}
               </a>
             </li>
             <li>
-              <a href="/who-can-become-a-donor">
+              <a href={langPrefix + "/who-can-become-a-donor"}>
                 {t("submenu.eggDonors.whoCanApply")}
               </a>
             </li>
             <li>
-              <a href="/find-egg-donor">{t("submenu.eggDonors.findDonor")}</a>
+              <a href={langPrefix + "/find-egg-donor"}>
+                {t("submenu.eggDonors.findDonor")}
+              </a>
             </li>
             <button className={styles.applyButton}>
               {t("submenu.eggDonors.applyNow")}
@@ -111,22 +122,22 @@ const Navigation = () => {
           <IoIosArrowDown size={18} className={styles.arrowIcon} />
           <ul className={styles.submenu}>
             <li>
-              <a href="/surrogacy-with-own-gametes">
+              <a href={langPrefix + "/surrogacy-with-own-gametes"}>
                 {t("submenu.programs.ownGametes")}
               </a>
             </li>
             <li>
-              <a href="/surrogacy-with-egg-donor">
+              <a href={langPrefix + "/surrogacy-with-egg-donor"}>
                 {t("submenu.programs.eggDonor")}
               </a>
             </li>
             <li>
-              <a href="/egg-freezing-preservation">
+              <a href={langPrefix + "/egg-freezing-preservation"}>
                 {t("submenu.programs.eggFreezing")}
               </a>
             </li>
             <li>
-              <a href="/vip-concierge-services">
+              <a href={langPrefix + "/vip-concierge-services"}>
                 {t("submenu.programs.vipServices")}
               </a>
             </li>

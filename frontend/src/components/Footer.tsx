@@ -8,7 +8,8 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const langPrefix = `/${i18n.language}`;
 
   return (
     <footer className={styles.footer}>
@@ -18,16 +19,24 @@ const Footer = () => {
             <h4>{t("navigation.aboutUs")}</h4>
             <ul>
               <li>
-                <a href="/our-mission">{t("submenu.aboutUs.ourMission")}</a>
+                <a href={langPrefix + "/our-mission"}>
+                  {t("submenu.aboutUs.ourMission")}
+                </a>
               </li>
               <li>
-                <a href="/who-we-are">{t("submenu.aboutUs.whoWeAre")}</a>
+                <a href={langPrefix + "/who-we-are"}>
+                  {t("submenu.aboutUs.whoWeAre")}
+                </a>
               </li>
               <li>
-                <a href="/our-team  ">{t("submenu.aboutUs.ourTeam")}</a>
+                <a href={langPrefix + "/our-team  "}>
+                  {t("submenu.aboutUs.ourTeam")}
+                </a>
               </li>
               <li>
-                <a href="/why-choose-us">{t("submenu.aboutUs.whyChooseUs")}</a>
+                <a href={langPrefix + "/why-choose-us"}>
+                  {t("submenu.aboutUs.whyChooseUs")}
+                </a>
               </li>
             </ul>
           </div>
@@ -35,17 +44,17 @@ const Footer = () => {
             <h4>{t("navigation.surrogates")}</h4>
             <ul>
               <li>
-                <a href="/surrogacy-process">
+                <a href={langPrefix + "/surrogacy-process"}>
                   {t("submenu.surrogates.surrogacyProcess")}
                 </a>
               </li>
               <li>
-                <a href="/who-can-become-a-surrogate">
+                <a href={langPrefix + "/who-can-become-a-surrogate"}>
                   {t("submenu.surrogates.whoCanBecome")}
                 </a>
               </li>
               <li>
-                <a href="/surrogate-screening">
+                <a href={langPrefix + "/surrogate-screening"}>
                   {t("submenu.surrogates.screeningProcess")}
                 </a>
               </li>
@@ -55,17 +64,17 @@ const Footer = () => {
             <h4>{t("navigation.intendedParents")}</h4>
             <ul>
               <li>
-                <a href="/who-can-become-an-intended-parent">
+                <a href={langPrefix + "/who-can-become-a-parent"}>
                   {t("submenu.intendedParents.whoCanBecome")}
                 </a>
               </li>
               <li>
-                <a href="/parent-screening">
+                <a href={langPrefix + "/parent-screening"}>
                   {t("submenu.intendedParents.screeningProcess")}
                 </a>
               </li>
               <li>
-                <a href="/support-and-counselling">
+                <a href={langPrefix + "/support-and-counselling"}>
                   {t("submenu.intendedParents.compensationSupport")}
                 </a>
               </li>
@@ -75,12 +84,12 @@ const Footer = () => {
             <h4>{t("navigation.eggDonors")}</h4>
             <ul>
               <li>
-                <a href="/why-become-a-donor">
+                <a href={langPrefix + "/why-become-a-donor"}>
                   {t("submenu.eggDonors.whyBecome")}
                 </a>
               </li>
               <li>
-                <a href="/who-can-become-a-donor">
+                <a href={langPrefix + "/who-can-become-a-donor"}>
                   {t("submenu.eggDonors.whoCanApply")}
                 </a>
               </li>
@@ -90,13 +99,19 @@ const Footer = () => {
             <h4>{t("navigation.programs")}</h4>
             <ul>
               <li>
-                <a href="/own-gametes">{t("submenu.programs.ownGametes")}</a>
+                <a href={langPrefix + "/own-gametes"}>
+                  {t("submenu.programs.ownGametes")}
+                </a>
               </li>
               <li>
-                <a href="/egg-donor">{t("submenu.programs.eggDonor")}</a>
+                <a href={langPrefix + "/egg-donor"}>
+                  {t("submenu.programs.eggDonor")}
+                </a>
               </li>
               <li>
-                <a href="/egg-freezing">{t("submenu.programs.eggFreezing")}</a>
+                <a href={langPrefix + "/egg-freezing"}>
+                  {t("submenu.programs.eggFreezing")}
+                </a>
               </li>
             </ul>
           </div>
@@ -108,6 +123,7 @@ const Footer = () => {
           <div className={styles.socialsIcons}>
             <a
               className={styles.facebookIcon}
+              aria-label="Facebook"
               href="https://www.facebook.com/share/15bgwdnhbw/?mibextid=wwXIfr"
               target="_blank"
               rel="noopener noreferrer"
@@ -116,6 +132,7 @@ const Footer = () => {
             </a>
             <a
               className={styles.instagramIcon}
+              aria-label="Instagram"
               href="https://www.instagram.com/surrogacy_center_happy_family/"
               target="_blank"
               rel="noopener noreferrer"
@@ -124,6 +141,7 @@ const Footer = () => {
             </a>
             <a
               className={styles.whatsappIcon}
+              aria-label="WhatsApp"
               href="https://wa.me/19298775515?text=Hi%2C%20I%27d%20like%20to%20know%20more"
               target="_blank"
               rel="noopener noreferrer"
@@ -132,6 +150,7 @@ const Footer = () => {
             </a>
             <a
               className={styles.linkedinIcon}
+              aria-label="LinkedIn"
               href="https://www.linkedin.com/in/happy-family-georgia?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
               target="_blank"
               rel="noopener noreferrer"
