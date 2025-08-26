@@ -24,7 +24,7 @@
     "intendedParents": {
       "whoCanBecome": "¿Quién Puede Ser Padre?",
       "screeningProcess": "Proceso de Evaluación",
-      "compensationSupport": "Compensación y Apoyo",
+      "compensationSupport": "Apoyo y Asesoramiento",
       "applyNow": "Aplicar Ahora"
     },
     "eggDonors": {
@@ -437,6 +437,35 @@
       "legal": {
         "title": "Preparación Legal y del Hogar",
         "content": "Resumen del contrato con asesoría legal y lista práctica de preparación del hogar."
+      }
+    }
+  },
+  "supportAndCounselling": {
+    "subtitle": "Acompañamiento cercano, comunidad y orientación práctica para padres intencionales",
+    "cards": {
+      "emotional": {
+        "title": "Apoyo Emocional",
+        "description": "Orientación compasiva y consejería durante todo tu viaje."
+      },
+      "community": {
+        "title": "Comunidad",
+        "description": "Apoyo entre pares y conexión con otros padres intencionales."
+      },
+      "legal": {
+        "title": "Orientación Legal",
+        "description": "Claridad en los pasos legales y coordinación con asesoría jurídica."
+      },
+      "counselling": {
+        "title": "Sesiones de Consejería",
+        "description": "Sesiones individuales o en pareja con consejeros calificados."
+      },
+      "financial": {
+        "title": "Orientación Financiera",
+        "description": "Presupuestación transparente, planificación y coordinación de pagos."
+      },
+      "support24": {
+        "title": "Soporte 24/7",
+        "description": "Asistencia permanente para dudas y necesidades urgentes."
       }
     }
   }

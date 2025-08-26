@@ -24,7 +24,7 @@
     "intendedParents": {
       "whoCanBecome": "מי יכול להיות הורה?",
       "screeningProcess": "תהליך הסינון",
-      "compensationSupport": "פיצוי ותמיכה",
+      "compensationSupport": "תמיכה וייעוץ",
       "applyNow": "הגש בקשה עכשיו"
     },
     "eggDonors": {
@@ -425,6 +425,35 @@
       "legal": {
         "title": "הכנה משפטית והכנת הבית",
         "content": "סקירת חוזה עם ייעוץ משפטי ורשימת מוכנות מעשית לבית."
+      }
+    }
+  },
+  "supportAndCounselling": {
+    "subtitle": "ייעוץ תומך, חיבור לקהילה והכוונה מעשית להורים מיועדים",
+    "cards": {
+      "emotional": {
+        "title": "תמיכה רגשית",
+        "description": "הכוונה חמלה וייעוץ לאורך כל המסע."
+      },
+      "community": {
+        "title": "קהילה",
+        "description": "תמיכה הדדית וחיבור להורים מיועדים נוספים."
+      },
+      "legal": {
+        "title": "הכוונה משפטית",
+        "description": "בהירות לגבי השלבים המשפטיים ותיאום עם ייעוץ משפטי."
+      },
+      "counselling": {
+        "title": "מפגשי ייעוץ",
+        "description": "מפגשים אישיים או זוגיים עם יועצים מוסמכים."
+      },
+      "financial": {
+        "title": "הכוונה פיננסית",
+        "description": "תכנון תקציב שקוף, תכנון ותיאום תשלומים."
+      },
+      "support24": {
+        "title": "תמיכה 24/7",
+        "description": "סיוע מסביב לשעון לשאלות וצרכים דחופים."
       }
     }
   }

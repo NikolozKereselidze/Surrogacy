@@ -65,7 +65,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/compensation-support">
+                <a href="/support-and-counselling">
                   {t("submenu.intendedParents.compensationSupport")}
                 </a>
               </li>
@@ -108,7 +108,7 @@ const Footer = () => {
           <div className={styles.socialsIcons}>
             <a
               className={styles.facebookIcon}
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/share/15bgwdnhbw/?mibextid=wwXIfr"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -116,7 +116,7 @@ const Footer = () => {
             </a>
             <a
               className={styles.instagramIcon}
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/surrogacy_center_happy_family/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -124,7 +124,7 @@ const Footer = () => {
             </a>
             <a
               className={styles.whatsappIcon}
-              href="https://www.whatsapp.com"
+              href="https://wa.me/19298775515?text=Hi%2C%20I%27d%20like%20to%20know%20more"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -132,7 +132,7 @@ const Footer = () => {
             </a>
             <a
               className={styles.linkedinIcon}
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/happy-family-georgia?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
               target="_blank"
               rel="noopener noreferrer"
             >

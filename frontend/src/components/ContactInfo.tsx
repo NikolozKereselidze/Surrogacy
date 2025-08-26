@@ -31,15 +31,15 @@ const ContactInfo = () => {
         <FaPhone />
         <div className={styles.contactInfoItemText}>
           <h3>{t("contactUs.phoneLabel")}</h3>
-          <a href="tel:+995568405050">+995 568 405 050</a>
+          <a href="tel:+995596235050">+995 596 235 050</a>
         </div>
       </div>
       <div className={styles.contactInfoItem}>
         <FaEnvelope />
         <div className={styles.contactInfoItemText}>
           <h3>{t("contactUs.emailLabel")}</h3>
-          <a href="mailto:info@surrogationcenter.com">
-            info@surrogationcenter.com
+          <a href="mailto:natia@surrogationcenter.com">
+            natia@surrogationcenter.com
           </a>
         </div>
       </div>
@@ -47,7 +47,7 @@ const ContactInfo = () => {
       <div className={styles.contactUsSocials}>
         <a
           className={styles.whatsappIcon}
-          href="https://www.whatsapp.com"
+          href="https://wa.me/19298775515?text=Hi%2C%20I%27d%20like%20to%20know%20more"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -56,7 +56,7 @@ const ContactInfo = () => {
 
         <a
           className={styles.facebookIcon}
-          href="https://www.facebook.com"
+          href="https://www.facebook.com/share/15bgwdnhbw/?mibextid=wwXIfr"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -65,7 +65,7 @@ const ContactInfo = () => {
 
         <a
           className={styles.linkedinIcon}
-          href="https://www.linkedin.com"
+          href="https://www.linkedin.com/in/happy-family-georgia?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -74,7 +74,7 @@ const ContactInfo = () => {
 
         <a
           className={styles.instagramIcon}
-          href="https://www.instagram.com"
+          href="https://www.instagram.com/surrogacy_center_happy_family/"
           target="_blank"
           rel="noopener noreferrer"
         >

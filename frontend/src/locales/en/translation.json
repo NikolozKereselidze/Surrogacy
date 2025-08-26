@@ -24,7 +24,7 @@
     "intendedParents": {
       "whoCanBecome": "Who Can Become a Parent?",
       "screeningProcess": "Screening Process",
-      "compensationSupport": "Compensation & Support",
+      "compensationSupport": "Support & Counselling",
       "applyNow": "Apply Now"
     },
     "eggDonors": {
@@ -463,6 +463,35 @@
           "title": "Pregnancy & Birth",
           "content": "Support throughout pregnancy and birth, ensuring a smooth transition to parenthood"
         }
+      }
+    }
+  },
+  "supportAndCounselling": {
+    "subtitle": "Caring counselling, community connection, and practical guidance for intended parents",
+    "cards": {
+      "emotional": {
+        "title": "Emotional Support",
+        "description": "Compassionate guidance and counselling throughout your journey."
+      },
+      "community": {
+        "title": "Community",
+        "description": "Peer support and connection with other intended parents."
+      },
+      "legal": {
+        "title": "Legal Guidance",
+        "description": "Clarity on legal steps and coordination with counsel."
+      },
+      "counselling": {
+        "title": "Counselling Sessions",
+        "description": "One-on-one or couple sessions with qualified counsellors."
+      },
+      "financial": {
+        "title": "Financial Guidance",
+        "description": "Transparent budgeting, planning, and payment coordination."
+      },
+      "support24": {
+        "title": "24/7 Support",
+        "description": "Round-the-clock assistance for urgent questions and needs."
       }
     }
   }

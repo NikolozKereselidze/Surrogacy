@@ -13,7 +13,9 @@ const Navigation = () => {
   return (
     <nav className={styles.navigation} dir={isRTL ? "rtl" : "ltr"}>
       <div className={styles.logoContainer}>
-        <h1 className={styles.logo}>Miracle Makers</h1>
+        <a href="/" className={styles.logo}>
+          Miracle Makers
+        </a>
       </div>
       <ul className={styles.navigationList}>
         <li className={styles.navigationItem}>
@@ -73,7 +75,7 @@ const Navigation = () => {
               </a>
             </li>
             <li>
-              <a href="/compensation-and-support">
+              <a href="/support-and-counselling">
                 {t("submenu.intendedParents.compensationSupport")}
               </a>
             </li>

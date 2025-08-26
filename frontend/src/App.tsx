@@ -37,6 +37,7 @@ import WhoCanBecomeDonor from "./pages/Donors/WhoCanBecomeDonor";
 import WhoCanBecomeParent from "./pages/Parents/WhoCanBecomeParent";
 import SurrogateScreening from "./pages/Surrogates/SurrogateScreening";
 import ParentScreening from "./pages/Parents/ParentScreening";
+import SupportAndCounselling from "./pages/SupportAndCounselling";
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
           element={<WhoCanBecomeParent />}
         />
         <Route path="/parent-screening" element={<ParentScreening />} />
+        <Route path="/support-and-counselling" element={<SupportAndCounselling />} />
       </Route>
 
       <Route element={<DonorLayout />}>

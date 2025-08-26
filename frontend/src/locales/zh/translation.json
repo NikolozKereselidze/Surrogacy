@@ -24,7 +24,7 @@
     "intendedParents": {
       "whoCanBecome": "谁可以成为父母？",
       "screeningProcess": "筛选流程",
-      "compensationSupport": "补偿与支持",
+      "compensationSupport": "支持与咨询",
       "applyNow": "立即申请"
     },
     "eggDonors": {
@@ -425,6 +425,35 @@
       "legal": {
         "title": "法律与居家准备",
         "content": "与律师进行合同概览，并完成实用的居家准备清单。"
+      }
+    }
+  },
+  "supportAndCounselling": {
+    "subtitle": "为意向父母提供贴心咨询、社区联系与实用指导",
+    "cards": {
+      "emotional": {
+        "title": "情感支持",
+        "description": "在整个旅程中提供富有同理心的指导与咨询。"
+      },
+      "community": {
+        "title": "社区",
+        "description": "与其他意向父母建立联系并获得同伴支持。"
+      },
+      "legal": {
+        "title": "法律指导",
+        "description": "明确法律步骤并与法律顾问协调。"
+      },
+      "counselling": {
+        "title": "咨询会谈",
+        "description": "与资质顾问进行一对一或伴侣会谈。"
+      },
+      "financial": {
+        "title": "财务指导",
+        "description": "透明的预算制定、规划与付款协调。"
+      },
+      "support24": {
+        "title": "24/7 支持",
+        "description": "全天候为紧急问题和需求提供帮助。"
       }
     }
   }
