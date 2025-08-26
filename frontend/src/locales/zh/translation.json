@@ -456,5 +456,27 @@
         "description": "全天候为紧急问题和需求提供帮助。"
       }
     }
+  },
+  "ourMission": {
+    "title": "我们的使命",
+    "subtitle": "为每个家庭提供道德、支持且个性化的生育之旅。",
+    "visionSubtitle": "推动我们当下工作并塑造明天的愿景",
+    "missionTitle": "成就梦想，成就家庭",
+    "missionText": "在 Miracle Makers，我们相信每个家庭都应该有机会体验为人父母的喜悦。我们的使命是提供富有同情心、合乎道德并且个性化的代孕与卵子捐赠服务，将梦想变为现实。",
+    "visionTitle": "我们的未来愿景",
+    "vision1Title": "全球可及性",
+    "vision1Text": "让代孕和生育服务面向全球家庭，无论其地理位置或处境如何。",
+    "vision2Title": "创新与卓越",
+    "vision2Text": "以尖端技术、医学专长与关怀标准引领行业。",
+    "vision3Title": "社区与支持",
+    "vision3Text": "打造一个支持性的全球社区，包容多样性并为家庭赋能。",
+    "commitmentTitle": "我们的承诺",
+    "commitmentSubtitle": "指导我们每一个决策并服务每一个家庭的原则。",
+    "commitment1Title": "贴心关怀",
+    "commitment1Text": "每个家庭都能获得个性化关注、情感支持以及超越医疗程序的关怀。",
+    "commitment2Title": "道德至上",
+    "commitment2Text": "我们在所有实践中坚持最高道德标准，确保透明与信任。",
+    "commitment3Title": "持续支持",
+    "commitment3Text": "从初次咨询到产后关怀，我们始终陪伴在家庭身边。"
   }
 }

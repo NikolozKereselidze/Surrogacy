@@ -468,5 +468,27 @@
         "description": "Asistencia permanente para dudas y necesidades urgentes."
       }
     }
+  },
+  "ourMission": {
+    "title": "Nuestra Misión",
+    "subtitle": "Viajes de fertilidad éticos, de apoyo y personalizados para cada familia.",
+    "visionSubtitle": "Lo que impulsa nuestro trabajo hoy y define el mañana",
+    "missionTitle": "Empoderando Sueños, Construyendo Familias",
+    "missionText": "En Miracle Makers, creemos que cada familia merece la oportunidad de experimentar la alegría de la paternidad. Nuestra misión es proporcionar servicios de gestación subrogada y donación de óvulos compasivos, éticos y personalizados que transformen los sueños en realidad.",
+    "visionTitle": "Nuestra Visión para el Futuro",
+    "vision1Title": "Accesibilidad Global",
+    "vision1Text": "Hacer que los servicios de gestación subrogada y fertilidad sean accesibles a familias en todo el mundo, sin importar su ubicación o circunstancias.",
+    "vision2Title": "Innovación y Excelencia",
+    "vision2Text": "Liderar la industria con tecnología de vanguardia, experiencia médica y estándares de atención compasiva.",
+    "vision3Title": "Comunidad y Apoyo",
+    "vision3Text": "Construir una comunidad global de apoyo que celebre la diversidad y empodere a las familias en su camino.",
+    "commitmentTitle": "Nuestros Compromisos",
+    "commitmentSubtitle": "Los principios que guían cada decisión que tomamos y a cada familia a la que servimos.",
+    "commitment1Title": "Atención Compasiva",
+    "commitment1Text": "Cada familia recibe atención personalizada, apoyo emocional y cuidados que van más allá de los procedimientos médicos.",
+    "commitment2Title": "Excelencia Ética",
+    "commitment2Text": "Mantenemos los más altos estándares éticos en todas nuestras prácticas, asegurando transparencia y confianza.",
+    "commitment3Title": "Apoyo Continuo",
+    "commitment3Text": "Desde la consulta inicial hasta la atención postparto, estamos comprometidos a apoyar a las familias durante todo su viaje."
   }
 }
