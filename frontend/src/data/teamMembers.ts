@@ -25,7 +25,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "kelvin-smith",
-    image: "/src/assets/img/team/test-doctor.png",
+    image: "/src/assets/img/team/test-doctor.webp",
     honorific: "Dr.",
     name: "Kelvin Smith",
     role: "Fertility Specialist",
@@ -37,7 +37,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "anna-smith",
-    image: "/src/assets/img/team/test-doctor2.jpg",
+    image: "/src/assets/img/team/test-doctor2.webp",
     honorific: "Dr.",
     name: "Anna Smith",
     role: "Coordinator & IVF Specialist",
@@ -49,7 +49,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "michael-johnson",
-    image: "/src/assets/img/team/test-doctor.png",
+    image: "/src/assets/img/team/test-doctor.webp",
     honorific: "Dr.",
     name: "Michael Johnson",
     role: "Medical Director",
@@ -60,7 +60,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "sarah-wilson",
-    image: "/src/assets/img/team/test-doctor2.jpg",
+    image: "/src/assets/img/team/test-doctor2.webp",
     honorific: "Ms.",
     name: "Sarah Wilson",
     role: "Patient Care Coordinator",
@@ -71,7 +71,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "david-brown",
-    image: "/src/assets/img/team/test-doctor.png",
+    image: "/src/assets/img/team/test-doctor.webp",
     honorific: "Dr.",
     name: "David Brown",
     role: "Legal Advisor",
@@ -82,7 +82,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "emily-chen",
-    image: "/src/assets/img/team/test-doctor2.jpg",
+    image: "/src/assets/img/team/test-doctor2.webp",
     honorific: "Dr.",
     name: "Emily Chen",
     role: "Genetic Counselor",
@@ -93,7 +93,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "robert-garcia",
-    image: "/src/assets/img/team/test-doctor.png",
+    image: "/src/assets/img/team/test-doctor.webp",
     honorific: "Dr.",
     name: "Robert Garcia",
     role: "Psychologist",
@@ -104,7 +104,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "lisa-martinez",
-    image: "/src/assets/img/team/test-doctor2.jpg",
+    image: "/src/assets/img/team/test-doctor2.webp",
     honorific: "Ms.",
     name: "Lisa Martinez",
     role: "International Coordinator",

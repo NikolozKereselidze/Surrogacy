@@ -12,7 +12,6 @@ const TeamCard = ({ member }: { member: TeamMember }) => (
   <a
     href={`/team/${member.name.toLowerCase().replace(/\s+/g, "-")}`}
     className={styles.ourTeamCard}
-    key={member.name}
   >
     <img src={member.image} alt={member.name} className={styles.ourTeamImage} />
     <div className={styles.ourTeamInfo}>
@@ -26,4 +25,5 @@ const TeamCard = ({ member }: { member: TeamMember }) => (
     )}
   </a>
 );
+
 export default TeamCard;

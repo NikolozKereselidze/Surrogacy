@@ -58,7 +58,6 @@ const Home = () => {
 
         <div className={styles.beginYourMiracleGrid}>
           <MiracleCard
-            to="/intended-parents"
             icon={<FaBaby className="miracleIcon" />}
             title={t("beginYourMiracle.intendedParentsTitle")}
             description={t("beginYourMiracle.intendedParentsDesc")}
@@ -69,7 +68,6 @@ const Home = () => {
             }
           />
           <MiracleCard
-            to="/surrogates"
             icon={<FaUserPlus className="miracleIcon" />}
             title={t("beginYourMiracle.surrogatesTitle")}
             description={t("beginYourMiracle.surrogatesDesc")}
@@ -80,7 +78,6 @@ const Home = () => {
             }
           />
           <MiracleCard
-            to="/egg-donors"
             icon={<FaGift className="miracleIcon" />}
             title={t("beginYourMiracle.eggDonorsTitle")}
             description={t("beginYourMiracle.eggDonorsDesc")}
