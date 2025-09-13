@@ -1,7 +1,5 @@
 import "./App.css";
-import { Routes, Route, useParams } from "react-router-dom";
-import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import { Routes, Route } from "react-router-dom";
 
 // Home
 import Home from "./pages/Home";
@@ -41,61 +39,11 @@ import SurrogateScreening from "./pages/Surrogates/SurrogateScreening";
 import ParentScreening from "./pages/Parents/ParentScreening";
 import SupportAndCounselling from "./pages/SupportAndCounselling";
 import SurrogacyWithOwnGametes from "./pages/Programs/SurrogacyWithOwnGametes";
-
-const LanguageLayout = () => {
-  const { lng } = useParams();
-  const { i18n } = useTranslation();
-  useEffect(() => {
-    if (lng && i18n.language !== lng) i18n.changeLanguage(lng);
-  }, [lng, i18n]);
-  return <MainLayout />;
-};
+import EggFreezing from "./pages/Programs/EggFreezing";
 
 function App() {
   return (
     <Routes>
-      {/* Language-prefixed public routes */}
-      <Route path=":lng" element={<LanguageLayout />}>
-        <Route index element={<Home />} />
-
-        {/* About */}
-        <Route path="our-mission" element={<OurMission />} />
-        <Route path="who-we-are" element={<WhoWeAre />} />
-        <Route path="why-choose-us" element={<WhyChooseUs />} />
-        <Route path="our-team" element={<OurTeam />} />
-
-        {/* Surrogates */}
-        <Route path="surrogacy-process" element={<SurrogacyProcess />} />
-        <Route path="surrogate-screening" element={<SurrogateScreening />} />
-        <Route
-          path="who-can-become-a-surrogate"
-          element={<WhoCanBecomeSurrogate />}
-        />
-
-        {/* Blog */}
-        <Route path="blog/:id" element={<BlogPost />} />
-
-        {/* Donors */}
-        <Route path="who-can-become-a-donor" element={<WhoCanBecomeDonor />} />
-
-        {/* Parents */}
-        <Route
-          path="who-can-become-a-parent"
-          element={<WhoCanBecomeParent />}
-        />
-        <Route path="parent-screening" element={<ParentScreening />} />
-        <Route
-          path="support-and-counselling"
-          element={<SupportAndCounselling />}
-        />
-
-        {/* Programs */}
-        <Route
-          path="surrogacy-with-own-gametes"
-          element={<SurrogacyWithOwnGametes />}
-        />
-      </Route>
-
       {/* Existing non-prefixed public routes (kept for compatibility) */}
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
@@ -130,6 +78,13 @@ function App() {
           path="/support-and-counselling"
           element={<SupportAndCounselling />}
         />
+
+        {/* Programs */}
+        <Route
+          path="/surrogacy-with-own-gametes"
+          element={<SurrogacyWithOwnGametes />}
+        />
+        <Route path="/egg-freezing-preservation" element={<EggFreezing />} />
       </Route>
 
       <Route element={<DonorLayout />}>

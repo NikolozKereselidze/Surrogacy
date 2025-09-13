@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { useState, useEffect, useRef } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
 
 import styles from "../styles/LanguageSwitcher.module.css";
 
@@ -8,8 +7,6 @@ const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const navigate = useNavigate();
-  const location = useLocation();
 
   const languages = [
     { code: "en", name: "English", flag: "🇺🇸" },
@@ -42,19 +39,7 @@ const LanguageSwitcher = () => {
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
-
-    const path = location.pathname;
-    const langRegex = /^\/(en|ge|ru|zh|es|he)(\/|$)/;
-    let newPath = path;
-
-    if (langRegex.test(path)) {
-      newPath = path.replace(langRegex, `/${lng}$2`);
-    } else {
-      newPath = `/${lng}${path === "/" ? "" : path}`;
-    }
-
     setIsOpen(false);
-    navigate(newPath, { replace: true });
   };
 
   const toggleDropdown = () => {

@@ -9,7 +9,6 @@ import {
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
-  const langPrefix = `/${i18n.language}`;
 
   return (
     <footer className={styles.footer}>
@@ -19,22 +18,16 @@ const Footer = () => {
             <h4>{t("navigation.aboutUs")}</h4>
             <ul>
               <li>
-                <a href={langPrefix + "/our-mission"}>
-                  {t("submenu.aboutUs.ourMission")}
-                </a>
+                <a href={"/our-mission"}>{t("submenu.aboutUs.ourMission")}</a>
               </li>
               <li>
-                <a href={langPrefix + "/who-we-are"}>
-                  {t("submenu.aboutUs.whoWeAre")}
-                </a>
+                <a href={"/who-we-are"}>{t("submenu.aboutUs.whoWeAre")}</a>
               </li>
               <li>
-                <a href={langPrefix + "/our-team  "}>
-                  {t("submenu.aboutUs.ourTeam")}
-                </a>
+                <a href={"/our-team  "}>{t("submenu.aboutUs.ourTeam")}</a>
               </li>
               <li>
-                <a href={langPrefix + "/why-choose-us"}>
+                <a href={"/why-choose-us"}>
                   {t("submenu.aboutUs.whyChooseUs")}
                 </a>
               </li>
@@ -44,17 +37,17 @@ const Footer = () => {
             <h4>{t("navigation.surrogates")}</h4>
             <ul>
               <li>
-                <a href={langPrefix + "/surrogacy-process"}>
+                <a href={"/surrogacy-process"}>
                   {t("submenu.surrogates.surrogacyProcess")}
                 </a>
               </li>
               <li>
-                <a href={langPrefix + "/who-can-become-a-surrogate"}>
+                <a href={"/who-can-become-a-surrogate"}>
                   {t("submenu.surrogates.whoCanBecome")}
                 </a>
               </li>
               <li>
-                <a href={langPrefix + "/surrogate-screening"}>
+                <a href={"/surrogate-screening"}>
                   {t("submenu.surrogates.screeningProcess")}
                 </a>
               </li>
@@ -64,17 +57,17 @@ const Footer = () => {
             <h4>{t("navigation.intendedParents")}</h4>
             <ul>
               <li>
-                <a href={langPrefix + "/who-can-become-a-parent"}>
+                <a href={"/who-can-become-a-parent"}>
                   {t("submenu.intendedParents.whoCanBecome")}
                 </a>
               </li>
               <li>
-                <a href={langPrefix + "/parent-screening"}>
+                <a href={"/parent-screening"}>
                   {t("submenu.intendedParents.screeningProcess")}
                 </a>
               </li>
               <li>
-                <a href={langPrefix + "/support-and-counselling"}>
+                <a href={"/support-and-counselling"}>
                   {t("submenu.intendedParents.compensationSupport")}
                 </a>
               </li>
@@ -84,12 +77,12 @@ const Footer = () => {
             <h4>{t("navigation.eggDonors")}</h4>
             <ul>
               <li>
-                <a href={langPrefix + "/why-become-a-donor"}>
+                <a href={"/why-become-a-donor"}>
                   {t("submenu.eggDonors.whyBecome")}
                 </a>
               </li>
               <li>
-                <a href={langPrefix + "/who-can-become-a-donor"}>
+                <a href={"/who-can-become-a-donor"}>
                   {t("submenu.eggDonors.whoCanApply")}
                 </a>
               </li>
@@ -99,17 +92,13 @@ const Footer = () => {
             <h4>{t("navigation.programs")}</h4>
             <ul>
               <li>
-                <a href={langPrefix + "/own-gametes"}>
-                  {t("submenu.programs.ownGametes")}
-                </a>
+                <a href={"/own-gametes"}>{t("submenu.programs.ownGametes")}</a>
               </li>
               <li>
-                <a href={langPrefix + "/egg-donor"}>
-                  {t("submenu.programs.eggDonor")}
-                </a>
+                <a href={"/egg-donor"}>{t("submenu.programs.eggDonor")}</a>
               </li>
               <li>
-                <a href={langPrefix + "/egg-freezing"}>
+                <a href={"/egg-freezing"}>
                   {t("submenu.programs.eggFreezing")}
                 </a>
               </li>
