@@ -511,5 +511,53 @@
       "step2": "La gestante se monitorea de cerca antes, durante y después de la transferencia. Se proporciona apoyo hormonal y orientación sobre el estilo de vida para crear el mejor ambiente para que el embrión prospere.",
       "step3": "Cada paso se personaliza según el perfil médico de los padres intencionales, asegurando que el enfoque se adapte a sus necesidades específicas y factores de fertilidad."
     }
+  },
+  "eggFreezing": {
+    "title": "Congelación de Óvulos / Preservación",
+    "description": "La congelación de óvulos, también conocida como criopreservación de ovocitos, es un proceso que permite a las mujeres preservar su fertilidad congelando sus óvulos para uso futuro. Esta tecnología reproductiva avanzada ofrece a las mujeres la oportunidad de retrasar la maternidad manteniendo la calidad de sus óvulos.",
+    "process": {
+      "title": "El Proceso de Congelación de Óvulos",
+      "step1": "El proceso comienza con la estimulación ovárica usando medicamentos de fertilidad para fomentar el desarrollo de múltiples óvulos. Esto se monitorea cuidadosamente a través de análisis de sangre y ultrasonidos para asegurar un desarrollo óptimo de los óvulos.",
+      "step2": "Una vez que los óvulos alcanzan la madurez, se recuperan a través de un procedimiento quirúrgico menor llamado recuperación de óvulos. El procedimiento se realiza bajo sedación y típicamente toma 15-20 minutos.",
+      "step3": "Los óvulos recuperados se congelan inmediatamente usando un proceso llamado vitrificación, que los preserva a temperaturas extremadamente bajas. Esta técnica avanzada de congelación mantiene la calidad y viabilidad de los óvulos para uso futuro."
+    },
+    "benefits": {
+      "title": "Beneficios de la Congelación de Óvulos",
+      "step1": "Preservar la fertilidad para mujeres que quieren retrasar la maternidad debido a carrera, educación o razones personales. Esto es especialmente valioso para mujeres de finales de los 20 a principios de los 30.",
+      "step2": "Mantener la calidad de los óvulos congelándolos cuando están en su pico de fertilidad. Esto puede ser particularmente beneficioso para mujeres que enfrentan tratamientos médicos que pueden afectar la fertilidad.",
+      "step3": "Proporcionar tranquilidad y opciones reproductivas para el futuro. Los óvulos congelados pueden almacenarse por muchos años y usarse cuando sea el momento adecuado para comenzar una familia."
+    }
+  },
+  "surrogacyWithEggDonor": {
+    "title": "Gestación Subrogada con Donante de Óvulos",
+    "description": "Para padres intencionales que necesitan óvulos de donante, nuestro programa de gestación subrogada con donante de óvulos proporciona una solución integral. Este programa combina la experiencia de donantes de óvulos cuidadosamente seleccionadas con nuestras gestantes experimentadas para ayudarte a construir tu familia.",
+    "process": {
+      "title": "El Proceso",
+      "step1": "Te emparejamos cuidadosamente con una donante de óvulos calificada que cumple con tus criterios específicos. Nuestras donantes se someten a evaluaciones médicas, psicológicas y genéticas exhaustivas para asegurar los más altos estándares de calidad.",
+      "step2": "La donante de óvulos seleccionada se somete a estimulación ovárica y recuperación de óvulos. Los óvulos se fertilizan entonces con el esperma del padre intencional o esperma de donante a través de procedimientos de FIV.",
+      "step3": "Los embriones resultantes se transfieren a una gestante cuidadosamente emparejada que lleva el embarazo a término. Durante todo el proceso, proporcionamos apoyo integral y monitoreo para todas las partes involucradas."
+    },
+    "benefits": {
+      "title": "Beneficios de Este Programa",
+      "step1": "Acceso a un grupo diverso de donantes de óvulos cuidadosamente seleccionadas con perfiles detallados incluyendo historial médico, educación y características personales.",
+      "step2": "Apoyo integral durante todo el proceso, desde la selección de donante hasta el nacimiento, asegurando un viaje suave y exitoso hacia la paternidad.",
+      "step3": "Altas tasas de éxito con nuestro equipo médico experimentado y protocolos probados, dándote la mejor oportunidad de lograr un embarazo exitoso y un bebé saludable."
+    }
+  },
+  "vipConciergeServices": {
+    "title": "Servicios VIP Concierge",
+    "description": "Nuestros Servicios VIP Concierge proporcionan apoyo integral para padres intencionales internacionales, ofreciendo alojamiento, traducción, transporte y asistencia personalizada durante todo tu viaje de gestación subrogada. Aseguramos tu comodidad y tranquilidad durante este tiempo importante.",
+    "services": {
+      "title": "Nuestros Servicios VIP",
+      "step1": "Alojamientos premium en apartamentos cómodos y completamente amueblados o hoteles cerca de instalaciones médicas. Organizamos todo desde la reserva hasta el check-in, asegurando que tu estadía sea cómoda y conveniente.",
+      "step2": "Servicios profesionales de traducción para todas las citas médicas, reuniones legales y comunicaciones importantes. Nuestros traductores certificados aseguran comunicación clara durante todo tu viaje.",
+      "step3": "Servicios integrales de transporte incluyendo traslados del aeropuerto, transporte a citas médicas y asistencia de viaje local. Proporcionamos transporte confiable y cómodo para todas tus necesidades."
+    },
+    "benefits": {
+      "title": "Por Qué Elegir Servicios VIP",
+      "step1": "Experiencia fluida con toda la logística manejada por nuestro equipo experimentado, permitiéndote enfocarte en tu viaje hacia la paternidad sin preocuparte por detalles prácticos.",
+      "step2": "Apoyo cultural y de idioma para ayudarte a navegar el ambiente local cómodamente, con asistencia disponible 24/7 para cualquier pregunta o preocupación.",
+      "step3": "Tranquilidad sabiendo que cada aspecto de tu estadía está manejado profesionalmente, desde el alojamiento hasta el transporte, asegurando una experiencia sin estrés durante este tiempo importante."
+    }
   }
 }

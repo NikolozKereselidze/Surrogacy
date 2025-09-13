@@ -511,5 +511,53 @@
       "step2": "The surrogate is monitored closely before, during, and after the transfer. Hormonal support and lifestyle guidance are provided to create the best environment for the embryo to thrive.",
       "step3": "Each step is customized based on the medical profile of the intended parents, ensuring the approach is tailored to their specific needs and fertility factors."
     }
+  },
+  "eggFreezing": {
+    "title": "Egg Freezing / Preservation",
+    "description": "Egg freezing, also known as oocyte cryopreservation, is a process that allows women to preserve their fertility by freezing their eggs for future use. This advanced reproductive technology offers women the opportunity to delay childbearing while maintaining the quality of their eggs.",
+    "process": {
+      "title": "The Egg Freezing Process",
+      "step1": "The process begins with ovarian stimulation using fertility medications to encourage the development of multiple eggs. This is carefully monitored through blood tests and ultrasounds to ensure optimal egg development.",
+      "step2": "Once the eggs reach maturity, they are retrieved through a minor surgical procedure called egg retrieval. The procedure is performed under sedation and typically takes 15-20 minutes.",
+      "step3": "The retrieved eggs are immediately frozen using a process called vitrification, which preserves them at extremely low temperatures. This advanced freezing technique maintains egg quality and viability for future use."
+    },
+    "benefits": {
+      "title": "Benefits of Egg Freezing",
+      "step1": "Preserve fertility for women who want to delay childbearing due to career, education, or personal reasons. This is especially valuable for women in their late 20s to early 30s.",
+      "step2": "Maintain egg quality by freezing eggs when they are at their peak fertility. This can be particularly beneficial for women facing medical treatments that may affect fertility.",
+      "step3": "Provide peace of mind and reproductive options for the future. Frozen eggs can be stored for many years and used when the time is right for starting a family."
+    }
+  },
+  "surrogacyWithEggDonor": {
+    "title": "Surrogacy with Egg Donor",
+    "description": "For intended parents who need donor eggs, our surrogacy with egg donor program provides a comprehensive solution. This program combines the expertise of carefully screened egg donors with our experienced surrogates to help you build your family.",
+    "process": {
+      "title": "The Process",
+      "step1": "We carefully match you with a qualified egg donor who meets your specific criteria. Our donors undergo thorough medical, psychological, and genetic screening to ensure the highest quality standards.",
+      "step2": "The selected egg donor undergoes ovarian stimulation and egg retrieval. The eggs are then fertilized with the intended father's sperm or donor sperm through IVF procedures.",
+      "step3": "The resulting embryos are transferred to a carefully matched surrogate who carries the pregnancy to term. Throughout the process, we provide comprehensive support and monitoring for all parties involved."
+    },
+    "benefits": {
+      "title": "Benefits of This Program",
+      "step1": "Access to a diverse pool of carefully screened egg donors with detailed profiles including medical history, education, and personal characteristics.",
+      "step2": "Comprehensive support throughout the entire process, from donor selection to birth, ensuring a smooth and successful journey to parenthood.",
+      "step3": "High success rates with our experienced medical team and proven protocols, giving you the best chance of achieving a successful pregnancy and healthy baby."
+    }
+  },
+  "vipConciergeServices": {
+    "title": "VIP Concierge Services",
+    "description": "Our VIP Concierge Services provide comprehensive support for international intended parents, offering housing, translation, transportation, and personalized assistance throughout your surrogacy journey. We ensure your comfort and peace of mind during this important time.",
+    "services": {
+      "title": "Our VIP Services",
+      "step1": "Premium housing accommodations in comfortable, fully-furnished apartments or hotels near medical facilities. We arrange everything from booking to check-in, ensuring your stay is comfortable and convenient.",
+      "step2": "Professional translation services for all medical appointments, legal meetings, and important communications. Our certified translators ensure clear communication throughout your journey.",
+      "step3": "Comprehensive transportation services including airport transfers, medical appointment transportation, and local travel assistance. We provide reliable, comfortable transportation for all your needs."
+    },
+    "benefits": {
+      "title": "Why Choose VIP Services",
+      "step1": "Seamless experience with all logistics handled by our experienced team, allowing you to focus on your journey to parenthood without worrying about practical details.",
+      "step2": "Cultural and language support to help you navigate the local environment comfortably, with assistance available 24/7 for any questions or concerns.",
+      "step3": "Peace of mind knowing that every aspect of your stay is professionally managed, from accommodation to transportation, ensuring a stress-free experience during this important time."
+    }
   }
 }

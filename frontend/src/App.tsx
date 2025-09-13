@@ -39,7 +39,9 @@ import SurrogateScreening from "./pages/Surrogates/SurrogateScreening";
 import ParentScreening from "./pages/Parents/ParentScreening";
 import SupportAndCounselling from "./pages/SupportAndCounselling";
 import SurrogacyWithOwnGametes from "./pages/Programs/SurrogacyWithOwnGametes";
+import SurrogacyWithEggDonor from "./pages/Programs/SurrogacyWithEggDonor";
 import EggFreezing from "./pages/Programs/EggFreezing";
+import VIPConciergeServices from "./pages/Programs/VIPConciergeServices";
 
 function App() {
   return (
@@ -84,7 +86,15 @@ function App() {
           path="/surrogacy-with-own-gametes"
           element={<SurrogacyWithOwnGametes />}
         />
+        <Route
+          path="/surrogacy-with-egg-donor"
+          element={<SurrogacyWithEggDonor />}
+        />
         <Route path="/egg-freezing-preservation" element={<EggFreezing />} />
+        <Route
+          path="/vip-concierge-services"
+          element={<VIPConciergeServices />}
+        />
       </Route>
 
       <Route element={<DonorLayout />}>
