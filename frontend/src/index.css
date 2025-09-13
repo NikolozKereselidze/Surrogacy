@@ -81,12 +81,13 @@ h6 {
   --dark-blue: #2a376d;
   --blue: #22223b;
   --gray: #404040;
-  --light-gray: #b0b0b0;
+  --light-gray: #70798b;
   --font-family: "Poppins", sans-serif;
 }
 
 body {
   font-family: var(--font-family);
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
 * {

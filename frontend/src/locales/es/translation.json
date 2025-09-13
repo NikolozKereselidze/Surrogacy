@@ -152,6 +152,11 @@
     "testimonial2Author": "Emily y David Chen",
     "testimonial2Role": "Padres de trillizos"
   },
+  "blog": {
+    "title": "Últimas del Blog",
+    "subtitle": "Perspectivas, guías e historias de nuestra comunidad de gestación subrogada",
+    "readMore": "Leer Más"
+  },
   "whoWeAre": {
     "title": "Quiénes Somos",
     "subtitle": "Un equipo dedicado comprometido a hacer realidad los sueños",
@@ -490,5 +495,21 @@
     "commitment2Text": "Mantenemos los más altos estándares éticos en todas nuestras prácticas, asegurando transparencia y confianza.",
     "commitment3Title": "Apoyo Continuo",
     "commitment3Text": "Desde la consulta inicial hasta la atención postparto, estamos comprometidos a apoyar a las familias durante todo su viaje."
+  },
+  "surrogacyWithOwnGametes": {
+    "title": "Gestación Subrogada con Gametos Propios",
+    "description": "Para parejas que desean mantener una conexión biológica con su hijo, la gestación subrogada con gametos propios ofrece el camino más natural hacia la paternidad. En este programa, se utilizan los óvulos de la madre intencional y el esperma del padre intencional para crear embriones mediante FIV, que luego se transfieren a una gestante cuidadosamente seleccionada.",
+    "ivfProcess": {
+      "title": "Proceso de FIV",
+      "step1": "El proceso de FIV comienza con la estimulación ovárica, la recuperación de óvulos, la fertilización y el cultivo de embriones en el laboratorio. La fertilización puede realizarse mediante FIV convencional o ICSI dependiendo de la calidad del esperma.",
+      "step2": "El proceso se monitorea cuidadosamente para optimizar la calidad de los óvulos y el desarrollo de los embriones. Los especialistas del laboratorio evalúan los embriones durante varios días para seleccionar aquellos con mayor probabilidad de implantación.",
+      "step3": "Cada paso se personaliza según el perfil médico de los padres intencionales, asegurando que el enfoque se adapte a sus necesidades específicas y factores de fertilidad."
+    },
+    "embryoTransfer": {
+      "title": "Transferencia de Embriones",
+      "step1": "Después de la fertilización, se seleccionan los embriones más saludables para transferir al útero de la gestante. El tiempo y la preparación de la gestante se gestionan cuidadosamente para maximizar el éxito de la implantación.",
+      "step2": "La gestante se monitorea de cerca antes, durante y después de la transferencia. Se proporciona apoyo hormonal y orientación sobre el estilo de vida para crear el mejor ambiente para que el embrión prospere.",
+      "step3": "Cada paso se personaliza según el perfil médico de los padres intencionales, asegurando que el enfoque se adapte a sus necesidades específicas y factores de fertilidad."
+    }
   }
 }

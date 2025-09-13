@@ -40,6 +40,7 @@ import WhoCanBecomeParent from "./pages/Parents/WhoCanBecomeParent";
 import SurrogateScreening from "./pages/Surrogates/SurrogateScreening";
 import ParentScreening from "./pages/Parents/ParentScreening";
 import SupportAndCounselling from "./pages/SupportAndCounselling";
+import SurrogacyWithOwnGametes from "./pages/Programs/SurrogacyWithOwnGametes";
 
 const LanguageLayout = () => {
   const { lng } = useParams();
@@ -86,6 +87,12 @@ function App() {
         <Route
           path="support-and-counselling"
           element={<SupportAndCounselling />}
+        />
+
+        {/* Programs */}
+        <Route
+          path="surrogacy-with-own-gametes"
+          element={<SurrogacyWithOwnGametes />}
         />
       </Route>
 

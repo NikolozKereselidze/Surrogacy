@@ -495,5 +495,21 @@
         "description": "Round-the-clock assistance for urgent questions and needs."
       }
     }
+  },
+  "surrogacyWithOwnGametes": {
+    "title": "Surrogacy with Own Gametes",
+    "description": "For couples who wish to maintain a biological connection with their child, surrogacy with own gametes offers the most natural path to parenthood. In this program, the intended mother's eggs and the intended father's sperm are used to create embryos through IVF, which are then transferred to a carefully screened surrogate.",
+    "ivfProcess": {
+      "title": "IVF Process",
+      "step1": "The IVF process begins with ovarian stimulation, egg retrieval, fertilization, and embryo culture in the lab. Fertilization can be done using conventional IVF or ICSI depending on sperm quality.",
+      "step2": "The process is carefully monitored to optimize egg quality and embryo development. Lab specialists assess embryos over several days to select the ones with the highest chance of implantation.",
+      "step3": "Each step is customized based on the medical profile of the intended parents, ensuring the approach is tailored to their specific needs and fertility factors."
+    },
+    "embryoTransfer": {
+      "title": "Embryo Transfer",
+      "step1": "After fertilization, the healthiest embryos are selected for transfer to the surrogate's uterus. Timing and preparation of the surrogate are carefully managed to maximize implantation success.",
+      "step2": "The surrogate is monitored closely before, during, and after the transfer. Hormonal support and lifestyle guidance are provided to create the best environment for the embryo to thrive.",
+      "step3": "Each step is customized based on the medical profile of the intended parents, ensuring the approach is tailored to their specific needs and fertility factors."
+    }
   }
 }

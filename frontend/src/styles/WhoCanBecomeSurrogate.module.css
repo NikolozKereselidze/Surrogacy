@@ -260,29 +260,3 @@
   max-width: 1000px;
   margin: 0 auto;
 }
-
-.supportCard {
-  flex: 1 1 16rem;
-  background: white;
-  padding: 2.5rem;
-  border-radius: 1rem;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-}
-
-.supportCard:hover {
-  transform: translateY(-5px);
-}
-
-.supportCard h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--dark-blue);
-  margin-bottom: 1rem;
-}
-
-.supportCard p {
-  color: var(--gray);
-  line-height: 1.6;
-}
