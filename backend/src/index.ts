@@ -10,6 +10,7 @@ import cors from "cors";
 import fileRoutes from "./routes/fileRoutes";
 import authRoutes from "./routes/auth";
 import adminAuthRoutes from "./routes/adminAuth";
+import contactRoutes from "./routes/contactRoutes";
 
 dotenv.config();
 const app = express();
@@ -56,6 +57,7 @@ app.use("/api/surrogates", donorSession, surrogateRoutes);
 app.use("/api/sperm-donors", donorSession, spermDonorRoutes);
 app.use("/api/file", donorSession, fileRoutes);
 app.use("/api/auth", donorSession, authRoutes);
+app.use("/api/contact", contactRoutes);
 
 // Apply admin session to admin routes
 app.use("/api/admin-auth", adminSession, adminAuthRoutes);
