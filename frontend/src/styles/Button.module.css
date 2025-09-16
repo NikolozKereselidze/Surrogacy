@@ -13,6 +13,6 @@
 }
 
 .button:hover {
-  background-color: #3b00e6;
+  background-color: var(--primary-hover);
   transform: scale(1.05);
 }

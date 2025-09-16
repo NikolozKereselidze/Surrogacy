@@ -74,28 +74,6 @@
   font-weight: 600;
 }
 
-.contactUsContainer {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-}
-
-.contactUsButton {
-  background-color: var(--color-primary);
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.2s, transform 0.2s;
-}
-
-.contactUsButton:hover {
-  background-color: #3b00e6;
-  transform: scale(1.05);
-}
-
 .applyButton {
   background-color: var(--color-primary);
   width: 100%;

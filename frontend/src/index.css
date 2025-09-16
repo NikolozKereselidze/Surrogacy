@@ -78,6 +78,7 @@ h6 {
 /* 11. Custom properties */
 :root {
   --color-primary: #8910f6;
+  --primary-hover: #a03ff7;
   --dark-blue: #2a376d;
   --blue: #22223b;
   --gray: #404040;

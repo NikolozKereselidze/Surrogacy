@@ -42,6 +42,7 @@ import SurrogacyWithOwnGametes from "./pages/Programs/SurrogacyWithOwnGametes";
 import SurrogacyWithEggDonor from "./pages/Programs/SurrogacyWithEggDonor";
 import EggFreezing from "./pages/Programs/EggFreezing";
 import VIPConciergeServices from "./pages/Programs/VIPConciergeServices";
+import TeamMemberDetails from "./pages/Team/TeamMemberDetails";
 
 function App() {
   return (
@@ -95,6 +96,9 @@ function App() {
           path="/vip-concierge-services"
           element={<VIPConciergeServices />}
         />
+
+        {/* Team */}
+        <Route path="/team/:id" element={<TeamMemberDetails />} />
       </Route>
 
       <Route element={<DonorLayout />}>
