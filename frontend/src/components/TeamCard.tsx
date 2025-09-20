@@ -1,4 +1,5 @@
 import styles from "../styles/Home.module.css";
+import { memo } from "react";
 
 interface TeamMember {
   image: string;
@@ -26,4 +27,4 @@ const TeamCard = ({ member }: { member: TeamMember }) => (
   </a>
 );
 
-export default TeamCard;
+export default memo(TeamCard);

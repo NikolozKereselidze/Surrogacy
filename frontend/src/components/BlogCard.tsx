@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "../styles/BlogCard.module.css";
 import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 
@@ -49,6 +49,19 @@ const BlogCard = () => {
 
   const { t } = useTranslation();
 
+  const SWIPER_MODULES = useMemo(
+    () => [Pagination, Navigation, Scrollbar, A11y],
+    []
+  );
+  const postsWithFormattedDate = useMemo(
+    () =>
+      blogPosts.map((p) => ({
+        ...p,
+        dateLabel: p.date ? new Date(p.date).toLocaleDateString() : "",
+      })),
+    [blogPosts]
+  );
+
   return (
     <section className={`${styles.blogSection} section`}>
       <div className="content">
@@ -58,14 +71,14 @@ const BlogCard = () => {
       <div className={styles.blogGrid}>
         {blogPosts.length > 0 && (
           <Swiper
-            modules={[Pagination, Navigation, Scrollbar, A11y]}
+            modules={SWIPER_MODULES}
             spaceBetween={20}
             slidesPerView={2}
             navigation
             loop
             pagination={{ clickable: true }}
           >
-            {blogPosts.map((post) => (
+            {postsWithFormattedDate.map((post) => (
               <SwiperSlide key={post.id}>
                 <article className={styles.blogCard}>
                   <div className={styles.blogImageContainer}>
@@ -79,9 +92,7 @@ const BlogCard = () => {
 
                   <div className={styles.blogContent}>
                     <div className={styles.blogMeta}>
-                      <span className={styles.blogDate}>
-                        {new Date(post.date).toLocaleDateString()}
-                      </span>
+                      <span className={styles.blogDate}>{post.dateLabel}</span>
                       <span className={styles.blogReadTime}>
                         {post.readTime}
                       </span>

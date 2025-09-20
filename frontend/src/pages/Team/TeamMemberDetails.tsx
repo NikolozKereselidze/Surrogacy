@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
+import { useMemo } from "react";
 import { teamMembers, type TeamMember } from "../../data/teamMembers";
 import styles from "../../styles/TeamMemberDetails.module.css";
 import { FaArrowLeft, FaEnvelope, FaLinkedin, FaUser } from "react-icons/fa";
@@ -6,21 +7,28 @@ import { FaArrowLeft, FaEnvelope, FaLinkedin, FaUser } from "react-icons/fa";
 const TeamMemberDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const member = teamMembers.find((member: TeamMember) => member.id === id);
+  const member = useMemo(
+    () => teamMembers.find((m: TeamMember) => m.id === id),
+    [id]
+  );
 
-  const personSchema = member
-    ? {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        name: `${member.honorific} ${member.name}`,
-        jobTitle: member.role,
-        email: `mailto:${member.email}`,
-        url: `${window.location.origin}/team/${member.id}`,
-        image: new URL(member.image, window.location.origin).toString(),
-        sameAs: [member.linkedin],
-        description: member.detailedDescription,
-      }
-    : null;
+  const personSchema = useMemo(
+    () =>
+      member
+        ? {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: `${member.honorific} ${member.name}`,
+            jobTitle: member.role,
+            email: `mailto:${member.email}`,
+            url: `${window.location.origin}/team/${member.id}`,
+            image: new URL(member.image, window.location.origin).toString(),
+            sameAs: [member.linkedin],
+            description: member.detailedDescription,
+          }
+        : null,
+    [member]
+  );
 
   const handleBack = () => {
     const ref = document.referrer;

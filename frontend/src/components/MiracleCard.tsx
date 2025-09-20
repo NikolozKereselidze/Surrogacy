@@ -1,22 +1,15 @@
 import type { ReactNode } from "react";
 import styles from "../styles/Home.module.css";
-import Button from "./Button";
+import { memo } from "react";
 
 interface MiracleCardProps {
   icon: ReactNode;
   title: string;
   description: string;
   list?: string[];
-  btn?: boolean;
 }
 
-const MiracleCard = ({
-  icon,
-  title,
-  description,
-  list,
-  btn,
-}: MiracleCardProps) => (
+const MiracleCard = ({ icon, title, description, list }: MiracleCardProps) => (
   <div className={styles.beginYourMiracleCard}>
     <div className={styles.beginYourMiracleCardContent}>
       {icon}
@@ -34,14 +27,7 @@ const MiracleCard = ({
         ))}
       </ul>
     </div>
-    {btn && (
-      <div className={styles.beginYourMiracleCardButton}>
-        <Button>
-          <span>Learn More</span>
-        </Button>
-      </div>
-    )}
   </div>
 );
 
-export default MiracleCard;
+export default memo(MiracleCard);

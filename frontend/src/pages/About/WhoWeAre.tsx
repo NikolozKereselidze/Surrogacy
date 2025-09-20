@@ -33,37 +33,31 @@ const WhoWeAre = () => {
             icon={<FaUsers className="miracleIcon" />}
             title={t("whoWeAre.value1Title")}
             description={t("whoWeAre.value1Desc")}
-            btn={false}
           />
           <MiracleCard
             icon={<FaGlobe className="miracleIcon" />}
             title={t("whoWeAre.value2Title")}
             description={t("whoWeAre.value2Desc")}
-            btn={false}
           />
           <MiracleCard
             icon={<FaHeart className="miracleIcon" />}
             title={t("whoWeAre.value3Title")}
             description={t("whoWeAre.value3Desc")}
-            btn={false}
           />
           <MiracleCard
             icon={<FaAward className="miracleIcon" />}
             title={t("whoWeAre.value4Title")}
             description={t("whoWeAre.value4Desc")}
-            btn={false}
           />
           <MiracleCard
             icon={<FaShieldAlt className="miracleIcon" />}
             title={t("whoWeAre.value5Title")}
             description={t("whoWeAre.value5Desc")}
-            btn={false}
           />
           <MiracleCard
             icon={<FaHandshake className="miracleIcon" />}
             title={t("whoWeAre.value6Title")}
             description={t("whoWeAre.value6Desc")}
-            btn={false}
           />
         </div>
 

@@ -63,13 +63,37 @@
   cursor: pointer;
 }
 
-.contactUsFormRow select,
-.contactUsFormRow input {
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   flex: 1 1 0;
+}
+
+.row .error {
+  text-align: center;
+}
+
+.error {
+  color: #ed4337;
+  font-size: 0.7rem;
+  margin-bottom: 0.2rem;
+}
+
+.success {
+  color: var(--gray);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.errorStatus,
+.success {
+  text-align: center;
 }
 
 .contactUsForm textarea {
   min-height: 7.2rem;
+  width: 100%;
 }
 
 .contactUsFormDate {

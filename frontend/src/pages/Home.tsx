@@ -5,6 +5,7 @@ import { FaBaby, FaUserPlus, FaGift } from "react-icons/fa";
 import MiracleCard from "../components/MiracleCard";
 import TeamCard from "../components/TeamCard";
 import { getFeaturedTeamMembers } from "../data/teamMembers";
+import { useMemo } from "react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -19,7 +20,7 @@ const Home = () => {
   const isRTL = i18n.language === "he";
 
   // Get featured team members for homepage
-  const teamMembers = getFeaturedTeamMembers();
+  const teamMembers = useMemo(() => getFeaturedTeamMembers(), []);
 
   return (
     <div className={styles.home} dir={isRTL ? "rtl" : "ltr"}>
@@ -61,31 +62,37 @@ const Home = () => {
             icon={<FaBaby className="miracleIcon" />}
             title={t("beginYourMiracle.intendedParentsTitle")}
             description={t("beginYourMiracle.intendedParentsDesc")}
-            list={
-              t("beginYourMiracle.intendedParentsList", {
-                returnObjects: true,
-              }) as string[]
-            }
+            list={useMemo(
+              () =>
+                t("beginYourMiracle.intendedParentsList", {
+                  returnObjects: true,
+                }) as string[],
+              [t]
+            )}
           />
           <MiracleCard
             icon={<FaUserPlus className="miracleIcon" />}
             title={t("beginYourMiracle.surrogatesTitle")}
             description={t("beginYourMiracle.surrogatesDesc")}
-            list={
-              t("beginYourMiracle.surrogatesList", {
-                returnObjects: true,
-              }) as string[]
-            }
+            list={useMemo(
+              () =>
+                t("beginYourMiracle.surrogatesList", {
+                  returnObjects: true,
+                }) as string[],
+              [t]
+            )}
           />
           <MiracleCard
             icon={<FaGift className="miracleIcon" />}
             title={t("beginYourMiracle.eggDonorsTitle")}
             description={t("beginYourMiracle.eggDonorsDesc")}
-            list={
-              t("beginYourMiracle.eggDonorsList", {
-                returnObjects: true,
-              }) as string[]
-            }
+            list={useMemo(
+              () =>
+                t("beginYourMiracle.eggDonorsList", {
+                  returnObjects: true,
+                }) as string[],
+              [t]
+            )}
           />
         </div>
       </section>
