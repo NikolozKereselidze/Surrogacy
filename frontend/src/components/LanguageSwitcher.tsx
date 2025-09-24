@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 
 import styles from "../styles/LanguageSwitcher.module.css";
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({ isMobile }: { isMobile?: boolean }) => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -48,7 +48,12 @@ const LanguageSwitcher = () => {
 
   return (
     <div className={styles.languageSwitcher} ref={dropdownRef}>
-      <button onClick={toggleDropdown} className={styles.currentLangButton}>
+      <button
+        onClick={toggleDropdown}
+        className={`${styles.currentLangButton} ${
+          isMobile ? styles.mobileCurrentLangButton : ""
+        }`}
+      >
         <span className={styles.flag}>{currentLanguage.flag}</span>
       </button>
 

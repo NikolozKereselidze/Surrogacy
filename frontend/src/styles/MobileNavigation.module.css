@@ -1,0 +1,54 @@
+/* Sidebar overlay (behind sidebar) */
+.mobileNavButtons {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.5); /* darken */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 5; /* make sure it's behind sidebar */
+}
+
+.overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 35%;
+  height: 100vh;
+  background: #fff;
+  padding: 6.2rem 1.8rem;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 10; /* above overlay */
+}
+
+.sidebar.open {
+  transform: translateX(0);
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar > svg {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.8rem;
+  cursor: pointer;
+}
+
+.hamburgerMenu {
+  cursor: pointer;
+}
