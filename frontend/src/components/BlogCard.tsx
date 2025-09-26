@@ -73,7 +73,11 @@ const BlogCard = () => {
           <Swiper
             modules={SWIPER_MODULES}
             spaceBetween={20}
-            slidesPerView={2}
+            slidesPerView={1} // default: mobile
+            breakpoints={{
+              768: { slidesPerView: 2 }, // tablet and up
+              1278: { slidesPerView: 3 }, // large desktop
+            }}
             navigation
             loop
             pagination={{ clickable: true }}

@@ -24,7 +24,7 @@
 .metaItem > span,
 .date > span {
   color: #fff;
-  font-size: 1rem;
+  font-size: var(--font-base);
 }
 
 .date {
@@ -35,7 +35,7 @@
 
 .date > svg {
   color: #fff;
-  font-size: 1rem;
+  font-size: var(--font-base);
 }
 
 .postHeaderWrapper {
@@ -61,7 +61,7 @@
 .postTitle {
   text-align: center;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: var(--font-5xl);
 }
 
 .postImage {

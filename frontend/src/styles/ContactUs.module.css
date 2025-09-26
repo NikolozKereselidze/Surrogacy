@@ -6,6 +6,7 @@
   display: flex;
   width: 100%;
   gap: 2.4rem;
+  flex-wrap: wrap-reverse;
 }
 
 .contactUsFormContainer,
@@ -15,10 +16,11 @@
   border: 1px solid rgba(59, 130, 246, 0.1);
   border-radius: 1.2rem;
   padding: 2.5rem;
+  flex: 1 1 0;
 }
 
 .contactUsFormContainer {
-  flex: 1 1 0;
+  flex: 2 1 0;
 }
 
 .contactUsForm {
@@ -35,7 +37,7 @@
   padding: 0.8rem 1rem;
   border: 1px solid #e5e7eb;
   border-radius: 0.8rem;
-  font-size: 0.8rem;
+  font-size: var(--font-sm);
   font-weight: 400;
   color: #374151;
   background: #fafafa;
@@ -76,14 +78,14 @@
 
 .error {
   color: #ed4337;
-  font-size: 0.7rem;
+  font-size: var(--font-xs);
   margin-bottom: 0.2rem;
 }
 
 .success {
   color: var(--gray);
   font-weight: 500;
-  font-size: 1rem;
+  font-size: var(--font-base);
 }
 
 .errorStatus,
@@ -117,7 +119,7 @@
   border-radius: 50%;
   background: linear-gradient(135deg, #f8faff 0%, #f0f4ff 100%);
   color: var(--color-primary);
-  font-size: 1.3rem;
+  font-size: var(--font-2xl);
   text-decoration: none;
   transition: all 0.2s ease;
   border: 2px solid transparent;
@@ -174,19 +176,19 @@
 }
 
 .contactInfoItem svg {
-  font-size: 1.4rem;
+  font-size: var(--font-3xl);
   color: var(--color-primary);
   flex-shrink: 0;
 }
 
 .contactInfoItemText h3 {
-  font-size: 0.95rem;
+  font-size: var(--font-base);
   font-weight: 600;
   color: var(--dark-blue, #2a376d);
 }
 
 .contactInfoItemText a {
-  font-size: 0.9rem;
+  font-size: var(--font-base);
   color: var(--dark-blue);
   text-decoration: none;
 }

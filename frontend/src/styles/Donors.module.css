@@ -8,14 +8,14 @@
 }
 
 .pageTitle {
-  font-size: 2rem;
+  font-size: var(--font-7xl);
   font-weight: 700;
   color: var(--color-primary);
   margin-bottom: 1rem;
 }
 
 .pageDescription {
-  font-size: 1.1rem;
+  font-size: var(--font-lg);
   color: var(--gray);
   max-width: 600px;
   margin: 0 auto;
@@ -48,7 +48,7 @@
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: var(--font-lg);
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s ease;
@@ -68,7 +68,7 @@
   padding: 0.5rem;
   border: 1px solid #ddd;
   border-radius: 6px;
-  font-size: 0.9rem;
+  font-size: var(--font-lg);
   background: white;
 }
 
@@ -88,7 +88,7 @@
 }
 
 .filterGroup label {
-  font-size: 0.9rem;
+  font-size: var(--font-lg);
   font-weight: 500;
   color: #333;
 }
@@ -132,7 +132,7 @@
   padding: 0.5rem;
   border: 1px solid #ddd;
   border-radius: 6px;
-  font-size: 0.9rem;
+  font-size: var(--font-lg);
   background: white;
   width: 100%;
 }
@@ -143,7 +143,7 @@
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: var(--font-lg);
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s ease;
@@ -159,7 +159,7 @@
   border: 2px solid #e0e0e0;
   background: white;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: var(--font-base);
   font-weight: 500;
   color: #666;
   cursor: pointer;
@@ -191,7 +191,7 @@
 }
 
 .loadingSpinner {
-  font-size: 1.2rem;
+  font-size: var(--font-xl);
   color: #666;
 }
 
@@ -204,7 +204,7 @@
 
 .noDonorsMessage p {
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: var(--font-lg);
 }
 
 .donorsGrid {
@@ -267,14 +267,14 @@
 }
 
 .donorInfo h3 {
-  font-size: 0.9rem;
+  font-size: var(--font-lg);
   color: var(--gray);
   margin-bottom: 0.25rem;
   font-weight: 500;
 }
 
 .donorInfo p {
-  font-size: 1.1rem;
+  font-size: var(--font-lg);
   color: var(--blue);
   font-weight: 600;
   margin: 0;
@@ -288,7 +288,7 @@
 
 @media (max-width: 768px) {
   .pageTitle {
-    font-size: 2rem;
+    font-size: var(--font-7xl);
   }
 
   .donorTypeTabs {
@@ -297,7 +297,7 @@
 
   .tabButton {
     padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    font-size: var(--font-lg);
   }
 
   .filtersHeader {

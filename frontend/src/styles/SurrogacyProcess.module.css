@@ -45,25 +45,25 @@
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: var(--font-lg);
 }
 
 .stepIcon {
-  font-size: 1.6rem;
+  font-size: var(--font-5xl);
   color: var(--color-primary);
   text-align: center;
 }
 
 .stepTitle {
   white-space: nowrap;
-  font-size: 1.1rem;
+  font-size: var(--font-lg);
   font-weight: 600;
   color: var(--dark-blue);
   text-align: center;
 }
 
 .stepDescription {
-  font-size: 1rem;
+  font-size: var(--font-base);
   line-height: 1.6;
   color: var(--gray);
   text-align: center;
@@ -99,7 +99,7 @@
 }
 
 .timelineTitle {
-  font-size: 1.3rem;
+  font-size: var(--font-2xl);
   font-weight: 700;
   color: var(--dark-blue);
   text-align: center;
@@ -149,7 +149,7 @@
 }
 
 .timelineIcon {
-  font-size: 1.5rem;
+  font-size: var(--font-4xl);
   color: var(--color-primary);
 }
 
@@ -160,13 +160,13 @@
 }
 
 .timelineContent h3 {
-  font-size: 1.2rem;
+  font-size: var(--font-xl);
   font-weight: 600;
   color: var(--dark-blue);
 }
 
 .timelineContent p {
-  font-size: 1rem;
+  font-size: var(--font-base);
   line-height: 1.6;
   color: var(--gray);
 }
@@ -180,7 +180,7 @@
 }
 
 .supportTitle {
-  font-size: 1.3rem;
+  font-size: var(--font-2xl);
   font-weight: 700;
   color: var(--dark-blue);
   text-align: center;
@@ -211,18 +211,18 @@
 }
 
 .supportIcon {
-  font-size: 1.4rem;
+  font-size: var(--font-3xl);
   color: var(--color-primary);
 }
 
 .supportCardTitle {
-  font-size: 1.1rem;
+  font-size: var(--font-lg);
   font-weight: 600;
   color: var(--dark-blue);
 }
 
 .supportCardText {
-  font-size: 1rem;
+  font-size: var(--font-base);
   line-height: 1.6;
   color: var(--gray);
 }

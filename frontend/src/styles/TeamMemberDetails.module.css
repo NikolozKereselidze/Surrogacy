@@ -21,7 +21,7 @@
   color: white;
   border: none;
   border-radius: 0.5rem;
-  font-size: 1rem;
+  font-size: var(--font-base);
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -73,14 +73,14 @@
 }
 
 .memberName {
-  font-size: 2rem;
+  font-size: var(--font-7xl);
   font-weight: 700;
   color: var(--dark-blue);
   line-height: 1.2;
 }
 
 .memberRole {
-  font-size: 1.3rem;
+  font-size: var(--font-2xl);
   font-weight: 600;
   color: var(--color-primary);
   position: relative;
@@ -110,7 +110,7 @@
 /* Description */
 
 .memberDescription p {
-  font-size: 1rem;
+  font-size: var(--font-base);
   line-height: 1.7;
   color: var(--light-gray);
   font-weight: 500;
@@ -124,7 +124,7 @@
 }
 
 .contactTitle {
-  font-size: 1.3rem;
+  font-size: var(--font-2xl);
   font-weight: 600;
   color: var(--gray);
   align-items: center;
@@ -160,7 +160,7 @@
 }
 
 .contactIcon {
-  font-size: 1.25rem;
+  font-size: var(--font-xl);
   transition: transform 0.3s ease;
 }
 
@@ -188,20 +188,20 @@
 }
 
 .notFoundIcon {
-  font-size: 4rem;
+  font-size: var(--font-11xl);
   color: #94a3b8;
   margin-bottom: 1.5rem;
 }
 
 .notFound h1 {
-  font-size: 2rem;
+  font-size: var(--font-7xl);
   color: #1e293b;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .notFound p {
-  font-size: 1.125rem;
+  font-size: var(--font-lg);
   color: #64748b;
   margin-bottom: 2rem;
   line-height: 1.6;

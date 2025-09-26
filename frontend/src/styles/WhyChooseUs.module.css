@@ -10,7 +10,7 @@
 
 .sectionTitle {
   text-align: center;
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-size: clamp(var(--font-6xl), 4vw, var(--font-9xl));
   color: var(--dark-blue);
   margin-bottom: 3rem;
   font-weight: 600;
@@ -43,18 +43,18 @@
 }
 
 .reasonIcon {
-  font-size: 1.5rem;
+  font-size: var(--font-4xl);
   color: var(--color-primary);
 }
 
 .reasonTitle {
-  font-size: 1.1rem;
+  font-size: var(--font-lg);
   color: var(--dark-blue);
   font-weight: 600;
 }
 
 .reasonDesc {
-  font-size: 1rem;
+  font-size: var(--font-base);
   color: var(--gray);
   line-height: 1.6;
 }
@@ -91,12 +91,12 @@
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: var(--font-sm);
   font-weight: 600;
 }
 
 .comparisonTitle {
-  font-size: 1.2rem;
+  font-size: var(--font-xl);
   color: var(--dark-blue);
   text-align: center;
   font-weight: 600;

@@ -33,7 +33,7 @@
 }
 
 .missionIcon {
-  font-size: 1.6rem;
+  font-size: var(--font-5xl);
   margin-bottom: 1.5rem;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -70,14 +70,14 @@
 
 .visionItemTitle {
   white-space: nowrap;
-  font-size: 1.1rem;
+  font-size: var(--font-lg);
   font-weight: 600;
   color: var(--dark-blue);
   margin-bottom: 1rem;
 }
 
 .visionItemText {
-  font-size: 1rem;
+  font-size: var(--font-base);
   line-height: 1.6;
   color: var(--gray);
 }

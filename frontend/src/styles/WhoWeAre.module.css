@@ -20,13 +20,13 @@
 }
 
 .storyTitle {
-  font-size: 1.4rem;
+  font-size: var(--font-3xl);
   font-weight: 700;
   color: var(--dark-blue);
 }
 
 .storyText {
-  font-size: 1rem;
+  font-size: var(--font-base);
   line-height: 1.7;
   color: var(--gray);
   text-align: left;
@@ -66,14 +66,14 @@
 }
 
 .statNumber {
-  font-size: 2rem;
+  font-size: var(--font-7xl);
   font-weight: 700;
   color: var(--color-primary);
   margin-bottom: 0.5rem;
 }
 
 .statLabel {
-  font-size: 1rem;
+  font-size: var(--font-base);
   font-weight: 600;
   color: var(--dark-blue);
 }

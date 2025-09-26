@@ -14,15 +14,15 @@
 }
 
 h1.title {
-  font-size: 1.5rem;
+  font-size: var(--font-4xl);
 }
 
 h2.title {
-  font-size: 1.4rem;
+  font-size: var(--font-3xl);
 }
 
 h3.title {
-  font-size: 1.3rem;
+  font-size: var(--font-2xl);
 }
 
 .title > span {
@@ -35,7 +35,7 @@ h3.title {
   line-height: 1.8;
   color: var(--light-gray);
   list-style: none;
-  font-size: 1.1rem;
+  font-size: var(--font-lg);
 }
 
 .processOverview {

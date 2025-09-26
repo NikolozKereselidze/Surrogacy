@@ -15,7 +15,7 @@
 .logo {
   text-decoration: none;
   color: var(--color-primary);
-  font-size: 1.1rem;
+  font-size: var(--font-lg);
   font-weight: 700;
   cursor: pointer;
 }
@@ -27,13 +27,14 @@
 }
 
 .navigationItem {
-  font-size: 0.9rem;
+  font-size: var(--font-base);
   color: var(--dark-blue);
   font-weight: 700;
   position: relative;
 }
 .navigationItem a,
 .arrowIcon {
+  font-size: var(--font-base);
   cursor: pointer;
 }
 
@@ -50,7 +51,7 @@
 }
 
 .navigationItem > i {
-  font-size: 0.8rem;
+  font-size: var(--font-sm);
   background-color: var(--color-primary);
 }
 
@@ -118,6 +119,7 @@
 }
 
 .submenu li {
+  font-size: var(--font-base);
   white-space: nowrap;
   transition: transform 0.3s ease;
 }

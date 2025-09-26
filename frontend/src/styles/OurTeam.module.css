@@ -50,21 +50,21 @@
 }
 
 .teamName {
-  font-size: 1.3rem;
+  font-size: var(--font-2xl);
   color: var(--dark-blue);
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .teamRole {
-  font-size: 1rem;
+  font-size: var(--font-base);
   color: var(--color-primary);
   margin-bottom: 1rem;
   font-weight: 500;
 }
 
 .teamDescription {
-  font-size: 0.9rem;
+  font-size: var(--font-lg);
   color: var(--gray);
   line-height: 1.6;
   margin-bottom: 1rem;
@@ -82,7 +82,7 @@
 }
 
 .contactLink {
-  font-size: 1.2rem;
+  font-size: var(--font-xl);
   text-decoration: none;
   transition: transform 0.2s ease;
   display: inline-block;
@@ -121,19 +121,19 @@
 }
 
 .valueIcon {
-  font-size: 2rem;
+  font-size: var(--font-7xl);
   margin-bottom: 1rem;
 }
 
 .valueTitle {
-  font-size: 1rem;
+  font-size: var(--font-base);
   color: var(--dark-blue);
   margin-bottom: 1rem;
   font-weight: 600;
 }
 
 .valueDesc {
-  font-size: 0.9rem;
+  font-size: var(--font-lg);
   color: var(--gray);
   line-height: 1.6;
 }

@@ -84,6 +84,23 @@ h6 {
   --gray: #404040;
   --light-gray: #70798b;
   --font-family: "Poppins", sans-serif;
+
+  /* Font Size System */
+  --font-xs: 0.75rem; /* Error messages, small labels */
+  --font-sm: 0.9rem; /* Form inputs, buttons, navigation */
+  --font-base: 1rem; /* Body text, standard content */
+  --font-lg: 1.1rem; /* Card titles, medium headings */
+  --font-xl: 1.2rem; /* Section subtitles, medium icons */
+  --font-2xl: 1.3rem; /* Section titles, important headings */
+  --font-3xl: 1.4rem; /* Main section titles */
+  --font-4xl: 1.5rem; /* Large headings, hero subtitles */
+  --font-5xl: 1.6rem; /* Blog post titles, large content */
+  --font-6xl: 1.8rem; /* Hero titles, main headings */
+  --font-7xl: 2rem; /* Page titles, hero titles */
+  --font-8xl: 2.1rem; /* Dashboard stats */
+  --font-9xl: 2.5rem; /* Large section titles */
+  --font-10xl: 3.2rem; /* Large icons */
+  --font-11xl: 4rem; /* Very large icons */
 }
 
 body {
@@ -113,21 +130,21 @@ body {
 }
 
 .title {
-  font-size: 1.4rem;
+  font-size: var(--font-3xl);
   font-weight: 700;
   color: var(--color-primary, #3b82f6);
   text-align: center;
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: var(--font-xl);
   font-weight: 700;
   color: var(--dark-blue, #2a376d);
   text-align: center;
 }
 
 .miracleIcon {
-  font-size: 2rem;
+  font-size: var(--font-7xl);
   color: var(--color-primary, #3b82f6);
   margin-bottom: 1.1rem;
 }
@@ -183,5 +200,104 @@ body {
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  font-size: 1.8rem !important;
+  font-size: var(--font-6xl) !important;
+}
+
+@media screen and (max-width: 1023px) {
+  :root {
+    --font-xs: 0.65rem; /* Slightly smaller for tablets */
+    --font-sm: 0.85rem; /* Adjusted for touch interfaces */
+    --font-base: 0.95rem; /* Slightly reduced base */
+    --font-lg: 1.05rem; /* Better tablet proportions */
+    --font-xl: 1.15rem; /* Adjusted for tablet viewing */
+    --font-2xl: 1.25rem; /* Better tablet section titles */
+    --font-3xl: 1.35rem; /* Adjusted main titles */
+    --font-4xl: 1.45rem; /* Better hero subtitles */
+    --font-5xl: 1.55rem; /* Improved blog titles */
+    --font-6xl: 1.7rem; /* Better hero titles */
+    --font-7xl: 1.85rem; /* Adjusted page titles */
+    --font-8xl: 1.95rem; /* Better dashboard stats */
+    --font-9xl: 2.2rem; /* Improved large titles */
+    --font-10xl: 2.8rem; /* Better large icons */
+    --font-11xl: 3.5rem; /* Adjusted very large icons */
+  }
+}
+
+/* Mobile Large (481px to 767px) */
+@media screen and (max-width: 767px) {
+  :root {
+    --font-xs: 0.6rem; /* Optimized for mobile */
+    --font-sm: 0.7rem; /* Better mobile touch targets */
+    --font-base: 0.9rem; /* Mobile-optimized base */
+    --font-lg: 1rem; /* Better mobile hierarchy */
+    --font-xl: 1.1rem; /* Adjusted for mobile viewing */
+    --font-2xl: 1.2rem; /* Mobile section titles */
+    --font-3xl: 1.3rem; /* Mobile main titles */
+    --font-4xl: 1.4rem; /* Mobile hero subtitles */
+    --font-5xl: 1.5rem; /* Mobile blog titles */
+    --font-6xl: 1.6rem; /* Mobile hero titles */
+    --font-7xl: 1.7rem; /* Mobile page titles */
+    --font-8xl: 1.8rem; /* Mobile dashboard stats */
+    --font-9xl: 2rem; /* Mobile large titles */
+    --font-10xl: 2.5rem; /* Mobile large icons */
+    --font-11xl: 3rem; /* Mobile very large icons */
+  }
+}
+
+/* Responsive Font Size System - Mobile First Approach */
+/* Mobile Small (320px to 480px) - Base styles */
+@media screen and (max-width: 480px) {
+  :root {
+    --font-xs: 0.55rem; /* Smallest mobile sizes */
+    --font-sm: 0.75rem; /* Compact mobile interface */
+    --font-base: 0.85rem; /* Mobile-optimized base */
+    --font-lg: 0.95rem; /* Compact mobile hierarchy */
+    --font-xl: 1.05rem; /* Small mobile viewing */
+    --font-2xl: 1.15rem; /* Compact section titles */
+    --font-3xl: 1.25rem; /* Compact main titles */
+    --font-4xl: 1.35rem; /* Compact hero subtitles */
+    --font-5xl: 1.45rem; /* Compact blog titles */
+    --font-6xl: 1.55rem; /* Compact hero titles */
+    --font-7xl: 1.65rem; /* Compact page titles */
+    --font-8xl: 1.75rem; /* Compact dashboard stats */
+    --font-9xl: 1.9rem; /* Compact large titles */
+    --font-10xl: 2.2rem; /* Compact large icons */
+    --font-11xl: 2.8rem; /* Compact very large icons */
+  }
+}
+
+/* Large Desktop (1440px and up) */
+@media screen and (min-width: 1600px) {
+  :root {
+    --font-xs: 0.75rem; /* Slightly larger for better readability */
+    --font-sm: 0.95rem; /* Better proportion on large screens */
+    --font-base: 1.125rem; /* Increased base size */
+    --font-lg: 1.25rem; /* Better hierarchy */
+    --font-xl: 1.375rem; /* Improved readability */
+    --font-2xl: 1.5rem; /* Better section titles */
+    --font-3xl: 1.625rem; /* Enhanced main titles */
+    --font-4xl: 1.75rem; /* Better hero subtitles */
+    --font-5xl: 1.875rem; /* Improved blog titles */
+    --font-6xl: 2.125rem; /* Better hero titles */
+    --font-7xl: 2.375rem; /* Enhanced page titles */
+    --font-8xl: 2.5rem; /* Better dashboard stats */
+    --font-9xl: 2.875rem; /* Improved large titles */
+    --font-10xl: 3.5rem; /* Better large icons */
+    --font-11xl: 4.5rem; /* Enhanced very large icons */
+  }
+}
+
+/* Legacy media query for existing components */
+@media screen and (max-width: 1278px) {
+  .title {
+    font-size: var(--font-2xl);
+  }
+
+  .subtitle {
+    font-size: var(--font-lg);
+  }
+
+  .miracleIcon {
+    font-size: var(--font-3xl);
+  }
 }

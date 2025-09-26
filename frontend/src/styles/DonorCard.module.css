@@ -80,7 +80,7 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  font-size: 18px;
+  font-size: var(--font-xl);
 }
 
 .rightSection {
@@ -145,7 +145,7 @@
   padding: 0.8rem;
   background: #fff;
   border-radius: 0.8rem;
-  font-size: 0.8rem;
+  font-size: var(--font-sm);
   color: #333;
 }
 
@@ -171,6 +171,6 @@
 }
 
 .donorDocumentIcon {
-  font-size: 1.6rem;
+  font-size: var(--font-5xl);
   color: var(--gray);
 }

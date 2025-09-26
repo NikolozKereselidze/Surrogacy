@@ -18,7 +18,7 @@
 }
 
 .footerLinksGrid h4 {
-  font-size: 0.95rem;
+  font-size: var(--font-lg);
   font-weight: 700;
   color: var(--color-primary);
   margin-bottom: 0.7rem;
@@ -34,7 +34,7 @@
 .footerLinksGrid a {
   color: #2a376d;
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: var(--font-sm);
   transition: color 0.2s;
 }
 
@@ -44,7 +44,7 @@
 
 .logo > h3 {
   color: var(--color-primary);
-  font-size: 1rem;
+  font-size: var(--font-base);
   text-align: center;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .socialsIcons a {
-  font-size: 1.2rem;
+  font-size: var(--font-xl);
 }
 
 .copyright {
@@ -81,7 +81,7 @@
 .copyrightText p {
   color: var(--dark-blue);
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: var(--font-sm);
 }
 
 .facebookIcon {

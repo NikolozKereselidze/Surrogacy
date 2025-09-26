@@ -10,7 +10,7 @@
   background: white;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-size: 0.8rem;
+  font-size: var(--font-sm);
 }
 
 .currentLangButton:hover {
@@ -43,7 +43,7 @@
   background: white;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  font-size: 0.8rem;
+  font-size: var(--font-sm);
   text-align: left;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .flag {
-  font-size: 1rem;
+  font-size: var(--font-base);
 }
 
 .mobileCurrentLangButton {
@@ -62,7 +62,7 @@
 }
 
 .mobileCurrentLangButton > .flag {
-  font-size: 1.2rem;
+  font-size: var(--font-xl);
 }
 
 /* RTL support for Hebrew */
