@@ -1,14 +1,10 @@
-.ourMissionContainer {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-}
-
 /* Mission Statement Card */
 .missionCard {
   width: 100%;
   max-width: 60rem;
   background: linear-gradient(135deg, var(--color-primary) 0%, #3b82f6 100%);
   border-radius: 2rem;
-  padding: 3rem;
+  padding: var(--padding-3xl);
   text-align: center;
   color: white;
   box-shadow: 0 10px 30px rgba(66, 0, 255, 0.3);
@@ -56,7 +52,7 @@
 .visionItem {
   flex: 1;
   background: white;
-  padding: 2rem;
+  padding: var(--padding-xl);
   border-radius: 1rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -87,4 +83,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+}
+
+@media screen and (max-width: 1280px) {
+  .missionCard {
+    width: 100%;
+  }
 }

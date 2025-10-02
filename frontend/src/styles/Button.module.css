@@ -2,7 +2,7 @@
   background-color: var(--color-primary, #3b82f6);
   color: #fff;
   border: none;
-  padding: 0.8rem 1.6rem;
+  padding: var(--padding-sm) var(--padding-lg);
   border-radius: 0.6rem;
   cursor: pointer;
   font-size: var(--font-sm);

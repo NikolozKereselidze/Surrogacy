@@ -54,7 +54,8 @@
   gap: 1rem;
   cursor: pointer;
   position: relative;
-  padding: 0.7rem 1rem 0.7rem 0.5rem;
+  padding: var(--padding-sm) var(--padding-base) var(--padding-sm)
+    var(--padding-xs);
   border-radius: 8px;
   transition: background 0.2s, color 0.2, font-weight 0.2;
   color: var(--light-gray);
@@ -135,7 +136,7 @@
   background: #fff;
   border-radius: 14px;
   box-shadow: 0 2px 12px rgba(108, 60, 255, 0.07);
-  padding: 1.7rem 2.2rem;
+  padding: var(--padding-2xl) var(--padding-2xl);
   min-width: 170px;
   flex: 1 1 180px;
   text-align: center;
@@ -175,7 +176,7 @@
   background: linear-gradient(135deg, #6c3cff, #7f5fff);
   color: white;
   border: none;
-  padding: 0.9rem 1.7rem;
+  padding: var(--padding-sm) var(--padding-2xl);
   border-radius: 8px;
   font-size: var(--font-base);
   font-weight: 600;
@@ -196,7 +197,7 @@
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(108, 60, 255, 0.07);
-  padding: 1.5rem 2rem;
+  padding: var(--padding-lg) var(--padding-xl);
   margin-top: 2rem;
   border: 1.5px solid #f3f0ff;
 }
@@ -215,7 +216,7 @@
 }
 
 .recentActivity li {
-  padding: 0.5rem 0;
+  padding: var(--padding-xs) 0;
   border-bottom: 1px solid #f0f0f0;
   color: #666;
   font-size: var(--font-lg);
@@ -240,7 +241,7 @@
   background: linear-gradient(135deg, #6c3cff, #7f5fff);
   color: white;
   border: none;
-  padding: 0.8rem 1.5rem;
+  padding: var(--padding-sm) var(--padding-lg);
   border-radius: 8px;
   font-size: var(--font-lg);
   font-weight: 600;
@@ -274,7 +275,7 @@
 .formContainer {
   background: white;
   border-radius: 12px;
-  padding: 2rem;
+  padding: var(--padding-xl);
   width: 90%;
   max-width: 600px;
   max-height: 90vh;
@@ -317,7 +318,7 @@
 .formGroup input,
 .formGroup textarea,
 .formGroup select {
-  padding: 0.8rem;
+  padding: var(--padding-sm);
   border: 2px solid #e0e0e0;
   border-radius: 8px;
   font-size: var(--font-lg);
@@ -344,7 +345,7 @@
   background: linear-gradient(135deg, #6c3cff, #7f5fff);
   color: white;
   border: none;
-  padding: 0.8rem 1.5rem;
+  padding: var(--padding-sm) var(--padding-lg);
   border-radius: 8px;
   font-size: var(--font-lg);
   font-weight: 600;
@@ -361,7 +362,7 @@
   background: #f0f0f0;
   color: #666;
   border: none;
-  padding: 0.8rem 1.5rem;
+  padding: var(--padding-sm) var(--padding-lg);
   border-radius: 8px;
   font-size: var(--font-lg);
   font-weight: 600;
@@ -388,7 +389,7 @@
 
 .blogTable th {
   background: #f8f9fb;
-  padding: 1rem;
+  padding: var(--padding-base);
   text-align: left;
   font-weight: 600;
   color: var(--blue);
@@ -396,7 +397,7 @@
 }
 
 .blogTable td {
-  padding: 1rem;
+  padding: var(--padding-base);
   border-bottom: 1px solid #f0f0f0;
   color: #666;
 }
@@ -420,7 +421,7 @@
 .actionBtn {
   background: none;
   border: none;
-  padding: 0.5rem;
+  padding: var(--padding-xs);
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s;
@@ -454,7 +455,7 @@
     width: 100%;
     flex-direction: row;
     gap: 1rem;
-    padding: 1rem 0.5rem;
+    padding: var(--padding-base) var(--padding-xs);
     justify-content: center;
     align-items: center;
     height: auto;
@@ -468,7 +469,7 @@
     gap: 0.5rem;
   }
   .mainContent {
-    padding: 1rem 2vw;
+    padding: var(--padding-base) 2vw;
   }
   .statsRow {
     flex-direction: column;

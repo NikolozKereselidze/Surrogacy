@@ -4,7 +4,6 @@
 
 .storySection {
   width: 100%;
-  max-width: 75%;
   margin: 0 auto;
   text-align: center;
 }
@@ -14,7 +13,7 @@
   flex-direction: column;
   gap: 1.2rem;
   background: white;
-  padding: 3rem;
+  padding: var(--padding-3xl);
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -55,7 +54,7 @@
   flex: 1;
   text-align: center;
   background: white;
-  padding: 2rem;
+  padding: var(--padding-xl);
   border-radius: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;

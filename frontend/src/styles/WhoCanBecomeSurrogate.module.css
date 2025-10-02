@@ -1,13 +1,12 @@
 .container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
 /* Hero Section */
 .heroSection {
   background: linear-gradient(135deg, var(--color-primary) 0%, #3b82f6 100%);
   color: white;
-  padding: 4rem 2rem;
+  padding: var(--padding-5xl) var(--padding-xl);
   position: relative;
   overflow: hidden;
 }
@@ -61,7 +60,7 @@
 .heroHighlight {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: var(--padding-lg);
   display: flex;
   align-items: flex-start;
   gap: 1rem;
@@ -107,25 +106,23 @@
 
 /* Requirements Section */
 .requirementsSection {
-  padding: 5rem 2rem;
-  background: white;
+  padding: var(--padding-5xl) var(--padding-xl);
 }
 
 .requirementsGrid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
 .requirementCard {
-  flex: 1 1 20rem;
+  flex: 1 1 25rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   background: white;
-  padding: 2rem;
+  padding: var(--padding-xl);
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
@@ -173,8 +170,7 @@
 
 /* Process Section */
 .processSection {
-  padding: 5rem 2rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: var(--padding-5xl) var(--padding-xl);
 }
 
 .processStep {
@@ -208,7 +204,7 @@
   flex-direction: column;
   gap: 0.6rem;
   background: white;
-  padding: 2rem;
+  padding: var(--padding-xl);
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   margin: 0 2rem;
@@ -249,14 +245,12 @@
 
 /* Support Section */
 .supportSection {
-  padding: 5rem 2rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: var(--padding-5xl) var(--padding-xl);
 }
 
 .supportGrid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  max-width: 1000px;
   margin: 0 auto;
 }

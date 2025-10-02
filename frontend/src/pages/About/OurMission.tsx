@@ -25,7 +25,7 @@ const OurMission = () => {
   ];
 
   return (
-    <div className={`${styles.ourMissionContainer} section`}>
+    <div className={styles.ourMissionContainer}>
       {/* Vision Section */}
       <section className="section">
         <div className="content">

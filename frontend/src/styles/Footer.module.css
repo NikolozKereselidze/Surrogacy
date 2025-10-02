@@ -3,7 +3,8 @@
 }
 
 .footerLinksGrid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   gap: 2rem;
   width: 100%;
   justify-content: space-between;
@@ -12,13 +13,13 @@
 .footerContent {
   display: flex;
   flex-direction: column;
-  padding: 4.2rem;
+  padding: var(--padding-5xl);
   padding-bottom: 1.8rem;
   gap: 2rem;
 }
 
 .footerLinksGrid h4 {
-  font-size: var(--font-lg);
+  font-size: var(--font-base);
   font-weight: 700;
   color: var(--color-primary);
   margin-bottom: 0.7rem;
@@ -52,7 +53,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 0;
+  padding: var(--padding-xl) 0;
   border-top: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
 }

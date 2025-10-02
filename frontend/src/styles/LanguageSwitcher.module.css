@@ -58,7 +58,7 @@
 .mobileCurrentLangButton {
   border: none;
   border-radius: 0;
-  padding: 0;
+  padding: 0 0.6rem;
 }
 
 .mobileCurrentLangButton > .flag {

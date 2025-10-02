@@ -24,7 +24,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 35%;
+  width: 45%;
   height: 100vh;
   background: #fff;
   padding: 6.2rem 1.8rem;
@@ -51,4 +51,10 @@
 
 .hamburgerMenu {
   cursor: pointer;
+}
+
+@media screen and (max-width: 728px) {
+  .sidebar {
+    width: 65%;
+  }
 }

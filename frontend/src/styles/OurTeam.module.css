@@ -46,7 +46,7 @@
 }
 
 .teamInfo {
-  padding: 1.5rem;
+  padding: var(--padding-lg);
 }
 
 .teamName {
@@ -108,7 +108,7 @@
 
 .valueCard {
   background: white;
-  padding: 2rem;
+  padding: var(--padding-xl);
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   text-align: center;
