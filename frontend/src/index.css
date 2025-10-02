@@ -101,6 +101,18 @@ h6 {
   --font-9xl: 2.5rem; /* Large section titles */
   --font-10xl: 3.2rem; /* Large icons */
   --font-11xl: 4rem; /* Very large icons */
+
+  /* Padding System */
+  --padding-xs: 0.5rem; /* Very small padding - buttons, small elements */
+  --padding-sm: 0.8rem; /* Small padding - form inputs, buttons */
+  --padding-base: 1rem; /* Standard padding - content areas */
+  --padding-md: 1.2rem; /* Medium padding - cards, sections */
+  --padding-lg: 1.5rem; /* Large padding - containers */
+  --padding-xl: 2rem; /* Extra large padding - major sections */
+  --padding-2xl: 2.5rem; /* Very large padding - hero sections */
+  --padding-3xl: 3rem; /* Huge padding - page sections */
+  --padding-4xl: 3.6rem; /* Massive padding - full page sections */
+  --padding-5xl: 4.2rem; /* Enormous padding - full page sections */
 }
 
 body {
@@ -115,7 +127,8 @@ body {
 }
 
 .section {
-  padding: 3.6rem 4.2rem 2.2rem 4.2rem;
+  padding: var(--padding-4xl) var(--padding-5xl) var(--padding-2xl)
+    var(--padding-5xl);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,30 +145,27 @@ body {
 .title {
   font-size: var(--font-3xl);
   font-weight: 700;
-  color: var(--color-primary, #3b82f6);
+  color: var(--color-primary, #8910f6);
   text-align: center;
 }
 
 .subtitle {
   font-size: var(--font-xl);
   font-weight: 700;
-  color: var(--dark-blue, #2a376d);
+  color: var(--dark-blue, #8910f6);
   text-align: center;
 }
 
 .miracleIcon {
   font-size: var(--font-7xl);
-  color: var(--color-primary, #3b82f6);
+  color: var(--color-primary, #8910f6);
   margin-bottom: 1.1rem;
 }
 
 /* SCREENING PROCESS */
-.screening-process {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-}
 
 .processTimeline {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -170,7 +180,7 @@ body {
   top: 0;
   bottom: 0;
   width: 4px;
-  background: linear-gradient(to bottom, var(--color-primary), #3b82f6);
+  background: linear-gradient(to bottom, var(--color-primary));
   transform: translateX(-50%);
 }
 
@@ -187,7 +197,11 @@ body {
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: var(--color-primary, #3b82f6) !important;
+  color: var(--color-primary) !important;
+}
+
+.swiper-pagination-bullet {
+  background: var(--color-primary) !important;
 }
 
 .swiper-button-prev {
@@ -220,6 +234,18 @@ body {
     --font-9xl: 2.2rem; /* Improved large titles */
     --font-10xl: 2.8rem; /* Better large icons */
     --font-11xl: 3.5rem; /* Adjusted very large icons */
+
+    /* Responsive Padding - Tablet */
+    --padding-xs: 0.5rem; /* Tablet small padding */
+    --padding-sm: 0.75rem; /* Tablet touch interfaces */
+    --padding-base: 0.95rem; /* Tablet base padding */
+    --padding-md: 1.15rem; /* Tablet sections */
+    --padding-lg: 1.4rem; /* Tablet containers */
+    --padding-xl: 1.8rem; /* Tablet major sections */
+    --padding-2xl: 2.2rem; /* Tablet hero sections */
+    --padding-3xl: 2.8rem; /* Tablet page sections */
+    --padding-4xl: 3.2rem; /* Tablet full page sections */
+    --padding-5xl: 3.8rem; /* Tablet full page sections */
   }
 }
 
@@ -241,6 +267,18 @@ body {
     --font-9xl: 2rem; /* Mobile large titles */
     --font-10xl: 2.5rem; /* Mobile large icons */
     --font-11xl: 3rem; /* Mobile very large icons */
+
+    /* Responsive Padding - Mobile Large */
+    --padding-xs: 0.45rem; /* Mobile large padding */
+    --padding-sm: 0.7rem; /* Better mobile touch targets */
+    --padding-base: 0.9rem; /* Mobile-optimized base */
+    --padding-md: 1.1rem; /* Mobile large sections */
+    --padding-lg: 1.3rem; /* Mobile large containers */
+    --padding-xl: 1.7rem; /* Mobile large major sections */
+    --padding-2xl: 1.4rem; /* Mobile large hero sections */
+    --padding-3xl: 1.6rem; /* Mobile large page sections */
+    --padding-4xl: 1.8rem; /* Mobile large full page sections */
+    --padding-5xl: 2rem; /* Mobile large full page sections */
   }
 }
 
@@ -263,6 +301,18 @@ body {
     --font-9xl: 1.9rem; /* Compact large titles */
     --font-10xl: 2.2rem; /* Compact large icons */
     --font-11xl: 2.8rem; /* Compact very large icons */
+
+    /* Responsive Padding - Mobile Small */
+    --padding-xs: 0.4rem; /* Compact mobile padding */
+    --padding-sm: 0.6rem; /* Smaller mobile padding */
+    --padding-base: 0.8rem; /* Mobile-optimized base */
+    --padding-md: 1rem; /* Compact mobile sections */
+    --padding-lg: 1.2rem; /* Mobile containers */
+    --padding-xl: 1.5rem; /* Mobile major sections */
+    --padding-2xl: 1rem; /* Mobile hero sections */
+    --padding-3xl: 1.4rem; /* Mobile page sections */
+    --padding-4xl: 1.6rem; /* Mobile full page sections */
+    --padding-5xl: 1.8rem; /* Mobile full page sections */
   }
 }
 
@@ -284,6 +334,18 @@ body {
     --font-9xl: 2.875rem; /* Improved large titles */
     --font-10xl: 3.5rem; /* Better large icons */
     --font-11xl: 4.5rem; /* Enhanced very large icons */
+
+    /* Responsive Padding - Large Desktop */
+    --padding-xs: 0.6rem; /* Large desktop small padding */
+    --padding-sm: 0.9rem; /* Large desktop touch interfaces */
+    --padding-base: 1.1rem; /* Large desktop base padding */
+    --padding-md: 1.3rem; /* Large desktop sections */
+    --padding-lg: 1.6rem; /* Large desktop containers */
+    --padding-xl: 2.2rem; /* Large desktop major sections */
+    --padding-2xl: 2.7rem; /* Large desktop hero sections */
+    --padding-3xl: 3.2rem; /* Large desktop page sections */
+    --padding-4xl: 3.8rem; /* Large desktop full page sections */
+    --padding-5xl: 4.5rem; /* Large desktop full page sections */
   }
 }
 
