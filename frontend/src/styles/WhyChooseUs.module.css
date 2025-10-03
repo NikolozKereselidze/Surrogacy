@@ -82,6 +82,7 @@
 }
 
 .comparisonCard.ourCard::before {
+  white-space: nowrap;
   content: "✓ RECOMMENDED";
   position: absolute;
   top: -15px;
@@ -108,6 +109,7 @@
 }
 
 .comparisonList li {
+  font-size: var(--font-base);
   padding: var(--padding-sm) 0;
   border-bottom: 1px solid #eee;
   position: relative;
@@ -124,4 +126,26 @@
 
 .comparisonList li:last-child {
   border-bottom: none;
+}
+
+@media screen and (max-width: 1278px) {
+  .reasonsGrid,
+  .comparisonGrid {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+
+  .reasonCard,
+  .comparisonCard {
+    flex: 1;
+  }
+
+  .comparisonCard {
+    padding: var(--padding-base);
+  }
+
+  .comparisonTitle {
+    font-size: var(--font-lg);
+  }
 }

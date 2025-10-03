@@ -180,7 +180,8 @@
     font-size: var(--font-sm);
   }
 
-  .menuItem a {
+  .menuItem a,
+  .navigationItem a {
     font-size: var(--font-sm);
   }
 }
@@ -191,10 +192,6 @@
   }
 
   .navigationItem {
-    font-size: var(--font-xs);
-  }
-
-  .menuItem a {
     font-size: var(--font-xs);
   }
 }

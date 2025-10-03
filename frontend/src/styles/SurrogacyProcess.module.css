@@ -95,8 +95,8 @@
 }
 
 .timelineTitle {
-  font-size: var(--font-2xl);
-  font-weight: 700;
+  font-size: var(--font-lg);
+  font-weight: 600;
   color: var(--dark-blue);
   text-align: center;
 }
@@ -116,7 +116,11 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, var(--color-primary), #3b82f6);
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary),
+    var(--primary-hover)
+  );
 }
 
 .timelineItem {
@@ -153,12 +157,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
-
-.timelineContent h3 {
-  font-size: var(--font-xl);
-  font-weight: 600;
-  color: var(--dark-blue);
 }
 
 .timelineContent p {
@@ -221,4 +219,10 @@
   font-size: var(--font-base);
   line-height: 1.6;
   color: var(--gray);
+}
+
+@media screen and (max-width: 1024px) {
+  .timelineSection {
+    max-width: 100%;
+  }
 }

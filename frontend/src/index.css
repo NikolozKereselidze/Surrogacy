@@ -363,3 +363,17 @@ body {
     font-size: var(--font-3xl);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .swiper-pagination-bullet {
+    width: 0.6rem !important;
+    height: 0.6rem !important;
+  }
+}
