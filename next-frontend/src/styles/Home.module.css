@@ -1,0 +1,353 @@
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+
+.heroSection {
+  background-image: url("/img/home/hero/hero-1920.webp");
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 95vh;
+}
+
+.heroSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.55)
+  ); /* Gradient overlay */
+  z-index: 1;
+}
+
+.heroContent {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 45%;
+  /* padding: 25vh 3.2rem; */
+  z-index: 2;
+}
+
+.heroHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.heroTitle {
+  font-size: var(--font-6xl);
+  font-weight: 600;
+  color: #fff;
+}
+
+.heroSubtitle {
+  font-size: var(--font-lg);
+  font-weight: 400;
+  color: #fff;
+}
+
+.heroDescription {
+  font-size: var(--font-base);
+  font-weight: 300;
+  line-height: 1.8;
+  color: #fff;
+}
+
+.heroButton {
+  width: 50%;
+}
+
+.highlight {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.applyButton {
+  background-color: var(--color-primary);
+  width: 100%;
+}
+
+.applyButton:hover {
+  transform: scale(1.05);
+}
+
+/* Begin Your Miracle Section */
+
+.beginYourMiracleContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.beginYourMiracleTitle {
+  font-size: var(--font-5xl);
+  font-weight: 700;
+  color: var(--color-primary, #3b82f6);
+  text-align: center;
+}
+
+.beginYourMiracleGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+}
+
+.beginYourMiracleCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex: 1 1 16rem;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: var(--padding-2xl) var(--padding-md) var(--padding-lg)
+    var(--padding-md);
+  text-decoration: none;
+  transition: box-shadow 0.18s;
+  cursor: pointer;
+  border: 2px solid transparent;
+  height: 100%;
+}
+
+.beginYourMiracleCard:hover,
+.beginYourMiracleCard:focus {
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.13);
+  border-color: var(--color-primary, #3b82f6);
+}
+
+.beginYourMiracleCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex: 1;
+}
+
+.beginYourMiracleCardHeading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.beginYourMiracleCardTitle {
+  white-space: nowrap;
+  font-size: var(--font-lg);
+  font-weight: 600;
+  color: var(--gray);
+}
+
+.beginYourMiracleCardDesc {
+  font-size: var(--font-lg);
+  color: var(--gray);
+  line-height: 1.5;
+  flex: 1;
+  line-break: loose;
+  white-space: normal;
+}
+
+.beginYourMiracleCardList {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.beginYourMiracleCardListItems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.beginYourMiracleCardListItem {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: var(--font-lg);
+  color: var(--gray);
+}
+
+.beginYourMiracleCardListItem:last-child {
+  margin-bottom: 0;
+}
+
+.beginYourMiracleCardListItem::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-primary, #3b82f6);
+}
+
+.beginYourMiracleCardButton {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Our Team Section */
+
+.ourTeamGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.ourTeamCardLink {
+  text-decoration: none;
+}
+
+.ourTeamCard {
+  display: flex;
+  flex: 1 1 23rem;
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: var(--padding-xl) var(--padding-lg) var(--padding-lg)
+    var(--padding-lg);
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ourTeamCard:hover,
+.ourTeamCard:focus {
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.13);
+  border-color: var(--color-primary, #3b82f6);
+}
+
+.ourTeamImage {
+  width: 6.8rem;
+  height: 6.8rem;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid var(--color-primary, #3b82f6);
+  background: #f0f4ff;
+}
+
+.ourTeamName {
+  font-size: var(--font-base);
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.2rem;
+  white-space: nowrap;
+}
+
+.ourTeamRole {
+  font-size: var(--font-lg);
+  color: var(--color-primary, #3b82f6);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+}
+
+.ourTeamDescription {
+  font-size: var(--font-base);
+  color: #555;
+  line-height: 1.5;
+}
+
+.swiperNavWrapper {
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (max-width: 1278px) {
+  .heroSection {
+    background-image: url("/img/home/hero/hero-1280.webp");
+    min-height: 75vh;
+  }
+
+  .heroContent {
+    width: 50%;
+    max-width: 70%;
+    left: 3%;
+  }
+
+  .heroTitle {
+    font-size: var(--font-4xl);
+  }
+
+  .heroSubtitle {
+    font-size: var(--font-base);
+  }
+
+  .heroButton {
+    font-size: var(--font-xs);
+    padding: var(--padding-sm) var(--padding-md);
+  }
+
+  .beginYourMiracleCardTitle {
+    font-size: var(--font-lg);
+  }
+
+  .ourTeamImage {
+    width: 6.2rem;
+    height: 6.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroSection {
+    min-height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heroContent {
+    display: flex;
+    position: static;
+    width: 85%;
+    transform: none;
+    text-align: center;
+  }
+
+  .heroTitle {
+    font-size: var(--font-3xl);
+  }
+
+  .heroButton {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .beginYourMiracleCardTitle {
+    white-space: normal;
+  }
+
+  .ourTeamImage {
+    width: 5.4rem;
+    height: 5.4rem;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .heroTitle {
+    font-size: var(--font-xl);
+  }
+}

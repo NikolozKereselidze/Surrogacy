@@ -1,0 +1,379 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* 11. Custom properties */
+:root {
+  --color-primary: #8910f6;
+  --primary-hover: #a03ff7;
+  --dark-blue: #2a376d;
+  --blue: #22223b;
+  --gray: #404040;
+  --light-gray: #70798b;
+  --font-family: "Poppins", sans-serif;
+
+  /* Font Size System */
+  --font-xs: 0.75rem; /* Error messages, small labels */
+  --font-sm: 0.9rem; /* Form inputs, buttons, navigation */
+  --font-base: 1rem; /* Body text, standard content */
+  --font-lg: 1.1rem; /* Card titles, medium headings */
+  --font-xl: 1.2rem; /* Section subtitles, medium icons */
+  --font-2xl: 1.3rem; /* Section titles, important headings */
+  --font-3xl: 1.4rem; /* Main section titles */
+  --font-4xl: 1.5rem; /* Large headings, hero subtitles */
+  --font-5xl: 1.6rem; /* Blog post titles, large content */
+  --font-6xl: 1.8rem; /* Hero titles, main headings */
+  --font-7xl: 2rem; /* Page titles, hero titles */
+  --font-8xl: 2.1rem; /* Dashboard stats */
+  --font-9xl: 2.5rem; /* Large section titles */
+  --font-10xl: 3.2rem; /* Large icons */
+  --font-11xl: 4rem; /* Very large icons */
+
+  /* Padding System */
+  --padding-xs: 0.5rem; /* Very small padding - buttons, small elements */
+  --padding-sm: 0.8rem; /* Small padding - form inputs, buttons */
+  --padding-base: 1rem; /* Standard padding - content areas */
+  --padding-md: 1.2rem; /* Medium padding - cards, sections */
+  --padding-lg: 1.5rem; /* Large padding - containers */
+  --padding-xl: 2rem; /* Extra large padding - major sections */
+  --padding-2xl: 2.5rem; /* Very large padding - hero sections */
+  --padding-3xl: 3rem; /* Huge padding - page sections */
+  --padding-4xl: 3.6rem; /* Massive padding - full page sections */
+  --padding-5xl: 4.2rem; /* Enormous padding - full page sections */
+}
+
+body {
+  font-family: var(--font-family);
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  padding: var(--padding-4xl) var(--padding-5xl) var(--padding-2xl)
+    var(--padding-5xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.title {
+  font-size: var(--font-3xl);
+  font-weight: 700;
+  color: var(--color-primary, #8910f6);
+  text-align: center;
+}
+
+.subtitle {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  color: var(--dark-blue, #8910f6);
+  text-align: center;
+}
+
+.miracleIcon {
+  font-size: var(--font-7xl);
+  color: var(--color-primary, #8910f6);
+  margin-bottom: 1.1rem;
+}
+
+/* SCREENING PROCESS */
+
+.processTimeline {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.processTimeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--color-primary));
+  transform: translateX(-50%);
+}
+
+/* SWIPER */
+.swiper {
+  padding-bottom: 3.4rem !important;
+  width: 100% !important;
+  position: static !important;
+}
+
+.swiper-slide {
+  height: auto !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--color-primary) !important;
+}
+
+.swiper-pagination-bullet {
+  background: var(--color-primary) !important;
+}
+
+.swiper-button-prev {
+  left: -3rem !important;
+}
+
+.swiper-button-next {
+  right: -3rem !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: var(--font-6xl) !important;
+}
+
+@media screen and (max-width: 1023px) {
+  :root {
+    --font-xs: 0.65rem; /* Slightly smaller for tablets */
+    --font-sm: 0.85rem; /* Adjusted for touch interfaces */
+    --font-base: 0.95rem; /* Slightly reduced base */
+    --font-lg: 1.05rem; /* Better tablet proportions */
+    --font-xl: 1.15rem; /* Adjusted for tablet viewing */
+    --font-2xl: 1.25rem; /* Better tablet section titles */
+    --font-3xl: 1.35rem; /* Adjusted main titles */
+    --font-4xl: 1.45rem; /* Better hero subtitles */
+    --font-5xl: 1.55rem; /* Improved blog titles */
+    --font-6xl: 1.7rem; /* Better hero titles */
+    --font-7xl: 1.85rem; /* Adjusted page titles */
+    --font-8xl: 1.95rem; /* Better dashboard stats */
+    --font-9xl: 2.2rem; /* Improved large titles */
+    --font-10xl: 2.8rem; /* Better large icons */
+    --font-11xl: 3.5rem; /* Adjusted very large icons */
+
+    /* Responsive Padding - Tablet */
+    --padding-xs: 0.5rem; /* Tablet small padding */
+    --padding-sm: 0.75rem; /* Tablet touch interfaces */
+    --padding-base: 0.95rem; /* Tablet base padding */
+    --padding-md: 1.15rem; /* Tablet sections */
+    --padding-lg: 1.4rem; /* Tablet containers */
+    --padding-xl: 1.8rem; /* Tablet major sections */
+    --padding-2xl: 2.2rem; /* Tablet hero sections */
+    --padding-3xl: 2.8rem; /* Tablet page sections */
+    --padding-4xl: 3.2rem; /* Tablet full page sections */
+    --padding-5xl: 3.8rem; /* Tablet full page sections */
+  }
+}
+
+/* Mobile Large (481px to 767px) */
+@media screen and (max-width: 767px) {
+  :root {
+    --font-xs: 0.6rem; /* Optimized for mobile */
+    --font-sm: 0.7rem; /* Better mobile touch targets */
+    --font-base: 0.9rem; /* Mobile-optimized base */
+    --font-lg: 1rem; /* Better mobile hierarchy */
+    --font-xl: 1.1rem; /* Adjusted for mobile viewing */
+    --font-2xl: 1.2rem; /* Mobile section titles */
+    --font-3xl: 1.3rem; /* Mobile main titles */
+    --font-4xl: 1.4rem; /* Mobile hero subtitles */
+    --font-5xl: 1.5rem; /* Mobile blog titles */
+    --font-6xl: 1.6rem; /* Mobile hero titles */
+    --font-7xl: 1.7rem; /* Mobile page titles */
+    --font-8xl: 1.8rem; /* Mobile dashboard stats */
+    --font-9xl: 2rem; /* Mobile large titles */
+    --font-10xl: 2.5rem; /* Mobile large icons */
+    --font-11xl: 3rem; /* Mobile very large icons */
+
+    /* Responsive Padding - Mobile Large */
+    --padding-xs: 0.45rem; /* Mobile large padding */
+    --padding-sm: 0.7rem; /* Better mobile touch targets */
+    --padding-base: 0.9rem; /* Mobile-optimized base */
+    --padding-md: 1.1rem; /* Mobile large sections */
+    --padding-lg: 1.3rem; /* Mobile large containers */
+    --padding-xl: 1.7rem; /* Mobile large major sections */
+    --padding-2xl: 1.4rem; /* Mobile large hero sections */
+    --padding-3xl: 1.6rem; /* Mobile large page sections */
+    --padding-4xl: 1.8rem; /* Mobile large full page sections */
+    --padding-5xl: 2rem; /* Mobile large full page sections */
+  }
+}
+
+/* Responsive Font Size System - Mobile First Approach */
+/* Mobile Small (320px to 480px) - Base styles */
+@media screen and (max-width: 480px) {
+  :root {
+    --font-xs: 0.55rem; /* Smallest mobile sizes */
+    --font-sm: 0.75rem; /* Compact mobile interface */
+    --font-base: 0.85rem; /* Mobile-optimized base */
+    --font-lg: 0.95rem; /* Compact mobile hierarchy */
+    --font-xl: 1.05rem; /* Small mobile viewing */
+    --font-2xl: 1.15rem; /* Compact section titles */
+    --font-3xl: 1.25rem; /* Compact main titles */
+    --font-4xl: 1.35rem; /* Compact hero subtitles */
+    --font-5xl: 1.45rem; /* Compact blog titles */
+    --font-6xl: 1.55rem; /* Compact hero titles */
+    --font-7xl: 1.65rem; /* Compact page titles */
+    --font-8xl: 1.75rem; /* Compact dashboard stats */
+    --font-9xl: 1.9rem; /* Compact large titles */
+    --font-10xl: 2.2rem; /* Compact large icons */
+    --font-11xl: 2.8rem; /* Compact very large icons */
+
+    /* Responsive Padding - Mobile Small */
+    --padding-xs: 0.4rem; /* Compact mobile padding */
+    --padding-sm: 0.6rem; /* Smaller mobile padding */
+    --padding-base: 0.8rem; /* Mobile-optimized base */
+    --padding-md: 1rem; /* Compact mobile sections */
+    --padding-lg: 1.2rem; /* Mobile containers */
+    --padding-xl: 1.5rem; /* Mobile major sections */
+    --padding-2xl: 1rem; /* Mobile hero sections */
+    --padding-3xl: 1.4rem; /* Mobile page sections */
+    --padding-4xl: 1.6rem; /* Mobile full page sections */
+    --padding-5xl: 1.8rem; /* Mobile full page sections */
+  }
+}
+
+/* Large Desktop (1440px and up) */
+@media screen and (min-width: 1600px) {
+  :root {
+    --font-xs: 0.75rem; /* Slightly larger for better readability */
+    --font-sm: 0.95rem; /* Better proportion on large screens */
+    --font-base: 1.125rem; /* Increased base size */
+    --font-lg: 1.25rem; /* Better hierarchy */
+    --font-xl: 1.375rem; /* Improved readability */
+    --font-2xl: 1.5rem; /* Better section titles */
+    --font-3xl: 1.625rem; /* Enhanced main titles */
+    --font-4xl: 1.75rem; /* Better hero subtitles */
+    --font-5xl: 1.875rem; /* Improved blog titles */
+    --font-6xl: 2.125rem; /* Better hero titles */
+    --font-7xl: 2.375rem; /* Enhanced page titles */
+    --font-8xl: 2.5rem; /* Better dashboard stats */
+    --font-9xl: 2.875rem; /* Improved large titles */
+    --font-10xl: 3.5rem; /* Better large icons */
+    --font-11xl: 4.5rem; /* Enhanced very large icons */
+
+    /* Responsive Padding - Large Desktop */
+    --padding-xs: 0.6rem; /* Large desktop small padding */
+    --padding-sm: 0.9rem; /* Large desktop touch interfaces */
+    --padding-base: 1.1rem; /* Large desktop base padding */
+    --padding-md: 1.3rem; /* Large desktop sections */
+    --padding-lg: 1.6rem; /* Large desktop containers */
+    --padding-xl: 2.2rem; /* Large desktop major sections */
+    --padding-2xl: 2.7rem; /* Large desktop hero sections */
+    --padding-3xl: 3.2rem; /* Large desktop page sections */
+    --padding-4xl: 3.8rem; /* Large desktop full page sections */
+    --padding-5xl: 4.5rem; /* Large desktop full page sections */
+  }
+}
+
+/* Legacy media query for existing components */
+@media screen and (max-width: 1278px) {
+  .title {
+    font-size: var(--font-2xl);
+  }
+
+  .subtitle {
+    font-size: var(--font-lg);
+  }
+
+  .miracleIcon {
+    font-size: var(--font-3xl);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .swiper-pagination-bullet {
+    width: 0.6rem !important;
+    height: 0.6rem !important;
+  }
+}

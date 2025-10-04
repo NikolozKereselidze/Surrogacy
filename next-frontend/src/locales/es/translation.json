@@ -1,0 +1,563 @@
+{
+  "navigation": {
+    "aboutUs": "Sobre Nosotros",
+    "surrogates": "Gestantes",
+    "intendedParents": "Padres Intencionales",
+    "eggDonors": "Donantes de Óvulos",
+    "programs": "Programas",
+    "blog": "Blog",
+    "contactUs": "Contáctanos"
+  },
+  "submenu": {
+    "aboutUs": {
+      "ourMission": "Nuestra Misión",
+      "whoWeAre": "Quiénes Somos",
+      "ourTeam": "Nuestro Equipo",
+      "whyChooseUs": "¿Por Qué Elegirnos?"
+    },
+    "surrogates": {
+      "surrogacyProcess": "Proceso de Gestación Subrogada",
+      "whoCanBecome": "¿Quién Puede Ser Gestante?",
+      "screeningProcess": "Proceso de Evaluación",
+      "applyNow": "Aplicar Ahora"
+    },
+    "intendedParents": {
+      "whoCanBecome": "¿Quién Puede Ser Padre?",
+      "screeningProcess": "Proceso de Evaluación",
+      "compensationSupport": "Apoyo y Asesoramiento",
+      "applyNow": "Aplicar Ahora"
+    },
+    "eggDonors": {
+      "whyBecome": "¿Por Qué Ser Donante?",
+      "whoCanApply": "¿Quién Puede Ser Donante?",
+      "applyNow": "Aplicar Ahora"
+    },
+    "programs": {
+      "ownGametes": "Gestación Subrogada con Gametos Propios",
+      "eggDonor": "Gestación Subrogada con Donante de Óvulos",
+      "eggFreezing": "Congelación de Óvulos / Preservación",
+      "vipServices": "Servicios VIP Concierge (alojamiento, traducción, transporte)"
+    }
+  },
+  "homepage": {
+    "heroTitle": {
+      "together": "Juntos",
+      "weMake": "Creamos",
+      "miracles": "Milagros"
+    },
+    "heroSubtitle": {
+      "compassionate": "Servicios compasivos de gestación subrogada y donación de óvulos",
+      "tailored": "adaptados a tu",
+      "journey": "viaje."
+    },
+    "heroDescription": "Servicios expertos de gestación subrogada y donación de óvulos con apoyo personalizado, orientación legal y cuidado 24/7 para construir la familia de tus sueños.",
+    "startJourneyButton": "Comienza tu viaje hoy"
+  },
+  "beginYourMiracle": {
+    "title": "Comienza tu milagro",
+    "subtitle": "Elige el camino que sea adecuado para ti.",
+    "intendedParentsTitle": "Gestación subrogada para padres intencionales",
+    "intendedParentsDesc": "Descubre nuestros programas y apoyo para aquellos que sueñan con la paternidad.",
+    "intendedParentsList": [
+      "Orientación Legal",
+      "Apoyo Médico",
+      "Asistencia Financiera"
+    ],
+    "surrogatesTitle": "Conviértete en gestante subrogada",
+    "surrogatesDesc": "Empodera familias y cambia vidas como gestante subrogada de Miracle Makers.",
+    "surrogatesList": [
+      "Cuidado Integral",
+      "Monitoreo Médico",
+      "Servicios de Apoyo"
+    ],
+    "eggDonorsTitle": "Conviértete en donante de óvulos",
+    "eggDonorsDesc": "Da el regalo de la vida y ayuda a crear nuevos comienzos.",
+    "eggDonorsList": [
+      "Proceso de Evaluación",
+      "Evaluación Médica",
+      "Pruebas Genéticas"
+    ]
+  },
+  "ourTeam": {
+    "title": "Conoce nuestro equipo",
+    "subtitle": "Un equipo bien calificado está listo para servirte",
+    "introTitle": "Los expertos detrás de tu milagro",
+    "introText": "Conoce a los profesionales que hacen milagros.",
+    "natiaDesc": "Más de 15 años de experiencia en atención médica y consultoría de servicios profesionales, ayudando a las familias a crecer. La Sra. Devdariani se graduó de la Universidad Estatal Médica de Tbilisi y la Universidad Estatal de Tbilisi.",
+    "kelvinDesc": "Especialista en fertilidad certificado con experiencia en tecnologías reproductivas avanzadas y planes de tratamiento personalizados.",
+    "annaDesc": "Más de 15 años de experiencia ayudando a las familias a crecer. Se especializa en coordinación de FIV y gestión del cuidado de pacientes.",
+    "michaelDesc": "Director médico principal con amplia experiencia en medicina reproductiva y supervisión clínica.",
+    "sarahDesc": "Coordinadora dedicada al cuidado de pacientes que asegura comunicación fluida y apoyo durante todo tu viaje.",
+    "davidDesc": "Asesor legal experimentado especializado en leyes de gestación subrogada y asuntos legales de formación familiar.",
+    "valuesTitle": "Los valores de nuestro equipo",
+    "valuesDesc": "Nuestros principios fundamentales guían todo lo que hacemos.",
+    "value1Title": "Excelencia",
+    "value1Desc": "Mantenemos los más altos estándares en atención médica y apoyo al paciente.",
+    "value2Title": "Colaboración",
+    "value2Desc": "Nuestro equipo trabaja en conjunto para brindar atención integral.",
+    "value3Title": "Innovación",
+    "value3Desc": "Nos mantenemos a la vanguardia de los avances en medicina reproductiva.",
+    "showMore": "Mostrar más"
+  },
+  "contactUs": {
+    "title": "Ponte en contacto",
+    "subtitle": "Estamos aquí para ayudarte en tu viaje",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "selectGender": "Seleccionar género",
+    "male": "Masculino",
+    "female": "Femenino",
+    "other": "Otro",
+    "dateOfBirth": "Fecha de nacimiento",
+    "email": "Tu email",
+    "phone": "Tu teléfono",
+    "message": "Tu mensaje",
+    "submit": "Enviar mensaje",
+    "addressLabel": "Dirección",
+    "phoneLabel": "Teléfono",
+    "emailLabel": "Correo electrónico"
+  },
+  "whyChooseUs": {
+    "reasonsTitle": "Lo que nos distingue",
+    "reasonsDesc": "Descubre por qué las familias nos eligen para su viaje.",
+    "reason1Title": "Historial comprobado",
+    "reason1Desc": "Más de 1000 embarazos exitosos y familias creciendo.",
+    "reason2Title": "Equipo experto",
+    "reason2Desc": "Especialistas certificados con décadas de experiencia.",
+    "reason3Title": "Cuidado integral",
+    "reason3Desc": "Desde la consulta inicial hasta el apoyo post-parto.",
+    "reason4Title": "Enfoque personalizado",
+    "reason4Desc": "Cada viaje es único, cada plan está personalizado.",
+    "reason5Title": "Red global",
+    "reason5Desc": "Acceso a las mejores instalaciones médicas del mundo.",
+    "reason6Title": "Apoyo 24/7",
+    "reason6Desc": "Cuidado y asistencia las 24 horas cuando lo necesites.",
+    "comparisonTitle": "Creadores de Milagros vs Otros",
+    "comparisonDesc": "Ve cómo nos comparamos con otras agencias.",
+    "othersTitle": "Otras agencias",
+    "othersPoint1": "Supervisión médica limitada",
+    "othersPoint2": "Planes de tratamiento genéricos",
+    "othersPoint3": "Apoyo mínimo después del nacimiento",
+    "othersPoint4": "Tarifas y costos ocultos",
+    "ourTitle": "Creadores de Milagros",
+    "ourPoint1": "Equipo médico completo y supervisión",
+    "ourPoint2": "Planes de tratamiento personalizados",
+    "ourPoint3": "Apoyo integral post-parto",
+    "ourPoint4": "Precios transparentes, sin tarifas ocultas",
+    "testimonialsTitle": "Lo que dicen nuestras familias",
+    "testimonial1Text": "Creadores de Milagros hizo realidad nuestro sueño de ser padres. Su experiencia y compasión fueron inigualables.",
+    "testimonial1Author": "Sarah y Michael Johnson",
+    "testimonial1Role": "Padres de gemelos",
+    "testimonial2Text": "El equipo de Creadores de Milagros nos apoyó en cada paso del camino. No podríamos haber pedido mejor cuidado.",
+    "testimonial2Author": "Emily y David Chen",
+    "testimonial2Role": "Padres de trillizos"
+  },
+  "blog": {
+    "title": "Últimas del Blog",
+    "subtitle": "Perspectivas, guías e historias de nuestra comunidad de gestación subrogada",
+    "readMore": "Leer Más"
+  },
+  "whoWeAre": {
+    "title": "Quiénes Somos",
+    "subtitle": "Un equipo dedicado comprometido a hacer realidad los sueños",
+    "storyTitle": "Nuestra Historia",
+    "storyText": "Fundado con la visión de ayudar a las familias a lograr sus sueños de paternidad, Miracle Makers ha crecido desde una pequeña práctica local hasta un centro de gestación subrogada y donación de óvulos reconocido globalmente. Nuestro viaje comenzó con una simple creencia: cada familia merece la oportunidad de experimentar la alegría de la paternidad, independientemente de sus circunstancias. Hoy, continuamos manteniendo esta creencia a través de nuestros servicios integrales, equipo experto y compromiso inquebrantable con las prácticas éticas.",
+    "value1Title": "Equipo Dedicado",
+    "value1Desc": "Nuestros profesionales experimentados están apasionados por ayudar a las familias a crecer.",
+    "value2Title": "Alcance Global",
+    "value2Desc": "Servimos a familias de todo el mundo con experiencia local.",
+    "value3Title": "Cuidado Compasivo",
+    "value3Desc": "Cada familia recibe atención personalizada y apoyo.",
+    "value4Title": "Excelencia Comprobada",
+    "value4Desc": "Años de resultados exitosos y familias satisfechas.",
+    "value5Title": "Confianza y Seguridad",
+    "value5Desc": "Tu privacidad y seguridad son nuestras principales prioridades durante todo el viaje.",
+    "value6Title": "Enfoque de Asociación",
+    "value6Desc": "Trabajamos como socios contigo, asegurando transparencia y comunicación abierta.",
+    "stat1Number": "1000+",
+    "stat1Label": "Embarazos Exitosos",
+    "stat2Number": "50+",
+    "stat2Label": "Países Servidos",
+    "stat3Number": "10+",
+    "stat3Label": "Años de Experiencia",
+    "stat4Number": "99%",
+    "stat4Label": "Tasa de Éxito"
+  },
+  "footer": {
+    "privacyPolicy": "Política de privacidad",
+    "termsOfService": "Términos de servicio",
+    "copyright": "Todos los derechos reservados."
+  },
+  "surrogacyProcess": {
+    "title": "Proceso de Gestación Subrogada",
+    "subtitle": "Una guía completa para tu viaje de gestación subrogada",
+    "heroText": "Tu viaje hacia la paternidad comienza aquí. Te guiamos a través de cada paso con cuidado, experiencia y apoyo inquebrantable.",
+    "processTitle": "El Proceso de 4 Pasos",
+    "step1Title": "Consulta Inicial",
+    "step1Description": "Comienza tu viaje con una consulta integral para entender tus opciones y crear un plan personalizado.",
+    "step1Item1": "Consulta inicial gratuita",
+    "step1Item2": "Revisión del historial médico",
+    "step1Item3": "Plan de tratamiento personalizado",
+    "step2Title": "Evaluación Legal y Médica",
+    "step2Description": "Completa una evaluación legal y médica exhaustiva para asegurar el mejor resultado posible para todas las partes.",
+    "step2Item1": "Preparación del contrato legal",
+    "step2Item2": "Evaluaciones médicas",
+    "step2Item3": "Evaluación psicológica",
+    "step3Title": "Emparejamiento y Coordinación",
+    "step3Description": "Te emparejamos cuidadosamente con la gestante subrogada perfecta y coordinamos todos los procedimientos médicos.",
+    "step3Item1": "Emparejamiento de gestante subrogada",
+    "step3Item2": "Coordinación médica",
+    "step3Item3": "Apoyo continuo",
+    "step4Title": "Embarazo y Nacimiento",
+    "step4Description": "Apoyo durante todo el embarazo y nacimiento, asegurando una transición suave hacia la paternidad.",
+    "step4Item1": "Monitoreo del embarazo",
+    "step4Item2": "Coordinación del nacimiento",
+    "step4Item3": "Apoyo post-parto",
+    "timelineTitle": "Resumen de Cronograma",
+    "timeline1Title": "Mes 1-2: Consulta y Planificación",
+    "timeline1Text": "Consulta inicial, preparación legal y planificación personalizada para tu viaje de gestación subrogada.",
+    "timeline2Title": "Mes 2-3: Evaluación y Emparejamiento",
+    "timeline2Text": "Completa la evaluación médica y legal, luego empareja cuidadosamente con tu gestante subrogada ideal.",
+    "timeline3Title": "Mes 3-12: Viaje del Embarazo",
+    "timeline3Text": "Transferencia de embrión, monitoreo del embarazo y preparación para la llegada de tu bebé.",
+    "supportTitle": "Apoyo 24/7 Durante Todo Tu Viaje",
+    "support1Title": "Apoyo Telefónico",
+    "support1Text": "Acceso directo a nuestro equipo por teléfono para asistencia inmediata y orientación.",
+    "support2Title": "Apoyo por Email",
+    "support2Text": "Apoyo integral por email para preguntas detalladas y documentación.",
+    "support3Title": "Coordinador Personal",
+    "support3Text": "Tu coordinador dedicado proporciona apoyo personalizado durante todo el proceso."
+  },
+  "whoCanBecome": {
+    "surrogate": {
+      "heroTitle": "¿Quién puede ser gestante subrogada?",
+      "heroSubtitle": "Únete a nuestra comunidad de mujeres compasivas que ayudan a las familias a lograr sus sueños",
+      "heroHighlight": "Mujeres saludables de 21-40 años con al menos un hijo biológico, no fumadoras, emocionalmente estables y listas para ayudar a otros.",
+      "requirementsTitle": "Requisitos para ser gestante subrogada",
+      "requirementsSubtitle": "Evaluamos cuidadosamente a todas las gestantes subrogadas potenciales para asegurar los mejores resultados para todos",
+      "processTitle": "El viaje de la gestante subrogada",
+      "processSubtitle": "Tu camino para convertirte en gestante subrogada",
+      "supportTitle": "Apoyo 24/7 durante todo tu viaje",
+      "supportSubtitle": "Estamos aquí para ti en cada paso",
+      "support": {
+        "phone": {
+          "title": "Apoyo telefónico",
+          "text": "Acceso directo a nuestro equipo por teléfono para asistencia inmediata y orientación"
+        },
+        "email": {
+          "title": "Apoyo por email",
+          "text": "Apoyo integral por email para preguntas detalladas y documentación"
+        },
+        "coordinator": {
+          "title": "Coordinador personal",
+          "text": "Tu coordinador dedicado proporciona apoyo personalizado durante todo el proceso"
+        }
+      }
+    },
+    "donor": {
+      "heroTitle": "¿Quién puede ser donante de óvulos?",
+      "heroSubtitle": "Únete a nuestra comunidad de mujeres generosas que ayudan a las familias a crear nuevos comienzos",
+      "heroHighlight": "Mujeres saludables de 21-35 años con excelente salud genética, no fumadoras y comprometidas a ayudar a otros a construir familias.",
+      "requirementsTitle": "Requisitos para ser donante de óvulos",
+      "requirementsSubtitle": "Evaluamos cuidadosamente a todas las donantes potenciales para asegurar los mejores resultados para todos",
+      "processTitle": "El viaje de la donante",
+      "processSubtitle": "Tu camino para convertirte en donante de óvulos",
+      "supportTitle": "Apoyo 24/7 durante todo tu viaje",
+      "supportSubtitle": "Estamos aquí para ti en cada paso",
+      "support": {
+        "phone": {
+          "title": "Apoyo telefónico",
+          "text": "Acceso directo a nuestro equipo por teléfono para asistencia inmediata y orientación"
+        },
+        "email": {
+          "title": "Apoyo por email",
+          "text": "Apoyo integral por email para preguntas detalladas y documentación"
+        },
+        "coordinator": {
+          "title": "Coordinador personal",
+          "text": "Tu coordinador dedicado proporciona apoyo personalizado durante todo el proceso"
+        }
+      }
+    },
+    "parent": {
+      "heroTitle": "¿Quién puede ser padre?",
+      "heroSubtitle": "Únete a nuestra comunidad de familias esperanzadas listas para comenzar su viaje de paternidad",
+      "heroHighlight": "Individuos y parejas comprometidos listos para proporcionar un hogar amoroso y un ambiente estable para su futuro hijo.",
+      "requirementsTitle": "Requisitos para ser padre",
+      "requirementsSubtitle": "Evaluamos cuidadosamente a todos los padres potenciales para asegurar los mejores resultados para todos",
+      "processTitle": "El viaje del padre",
+      "processSubtitle": "Tu camino para convertirte en padre a través de la gestación subrogada",
+      "supportTitle": "Apoyo 24/7 durante todo tu viaje",
+      "supportSubtitle": "Estamos aquí para ti en cada paso",
+      "support": {
+        "phone": {
+          "title": "Apoyo telefónico",
+          "text": "Acceso directo a nuestro equipo por teléfono para asistencia inmediata y orientación"
+        },
+        "email": {
+          "title": "Apoyo por email",
+          "text": "Apoyo integral por email para preguntas detalladas y documentación"
+        },
+        "coordinator": {
+          "title": "Coordinador personal",
+          "text": "Tu coordinador dedicado proporciona apoyo personalizado durante todo el proceso"
+        }
+      }
+    },
+    "requirements": {
+      "previousPregnancy": {
+        "title": "Embarazo previo",
+        "description": "Debe haber tenido al menos un embarazo exitoso y parto sin complicaciones"
+      },
+      "ageHealth": {
+        "title": "Edad y salud",
+        "description": "Debe tener entre 21-40 años con excelente salud física y mental"
+      },
+      "lifestyle": {
+        "title": "Estilo de vida",
+        "description": "No fumadora, sin uso de drogas y mantener un estilo de vida saludable durante todo el proceso"
+      },
+      "availability": {
+        "title": "Disponibilidad",
+        "description": "Capaz de asistir a citas médicas regulares y mantener comunicación consistente"
+      },
+      "education": {
+        "title": "Educación",
+        "description": "Educación secundaria o equivalente con situación de vida estable y sistema de apoyo"
+      },
+      "location": {
+        "title": "Ubicación",
+        "description": "Debe poder viajar para citas médicas y mantener contacto regular"
+      },
+      "geneticHealth": {
+        "title": "Salud genética",
+        "description": "Excelente salud genética sin historial familiar de condiciones genéticas serias"
+      },
+      "emotionalReadiness": {
+        "title": "Preparación emocional",
+        "description": "Emocionalmente preparados y comprometidos con el viaje de paternidad por delante"
+      },
+      "financialStability": {
+        "title": "Estabilidad financiera",
+        "description": "Financieramente estables y capaces de proporcionar las necesidades de un niño"
+      },
+      "stableHome": {
+        "title": "Ambiente hogareño estable",
+        "description": "Situación de vida estable con un ambiente hogareño de apoyo"
+      },
+      "legalStatus": {
+        "title": "Estado legal",
+        "description": "Buen estado legal y capaces de cumplir todos los requisitos legales"
+      },
+      "international": {
+        "title": "Consideraciones internacionales",
+        "description": "Capaces de viajar internacionalmente y cumplir requisitos transfronterizos"
+      },
+      "healthCommitment": {
+        "title": "Compromiso con la salud",
+        "description": "Comprometidos a mantener buena salud y seguir pautas médicas"
+      }
+    },
+    "processSteps": {
+      "step1": {
+        "title": "Aplicación inicial",
+        "content": "Completa nuestra aplicación en línea integral con historial personal y médico"
+      },
+      "step2": {
+        "title": "Evaluación médica",
+        "content": "Someterse a evaluaciones médicas exhaustivas incluyendo pruebas de fertilidad y genéticas"
+      },
+      "step3": {
+        "title": "Evaluación psicológica",
+        "content": "Completar evaluación psicológica para asegurar preparación emocional y estabilidad"
+      },
+      "step4": {
+        "title": "Legal y emparejamiento",
+        "content": "Preparación del contrato legal y emparejamiento con padres intencionales"
+      },
+      "donor": {
+        "step1": {
+          "title": "Aplicación inicial",
+          "content": "Completa nuestra aplicación en línea integral con historial personal y médico"
+        },
+        "step2": {
+          "title": "Evaluación médica",
+          "content": "Someterse a evaluaciones médicas exhaustivas incluyendo pruebas de fertilidad y genéticas"
+        },
+        "step3": {
+          "title": "Pruebas genéticas",
+          "content": "Completar evaluación genética integral y evaluación de historial familiar"
+        },
+        "step4": {
+          "title": "Legal y emparejamiento",
+          "content": "Preparación del contrato legal y emparejamiento con padres intencionales"
+        }
+      },
+      "parent": {
+        "step1": {
+          "title": "Consulta inicial",
+          "content": "Comienza con una consulta integral para entender tus opciones y crear un plan personalizado"
+        },
+        "step2": {
+          "title": "Evaluación legal y médica",
+          "content": "Completa documentación legal y evaluaciones médicas para asegurar elegibilidad"
+        },
+        "step3": {
+          "title": "Proceso de emparejamiento",
+          "content": "Empareja cuidadosamente con la gestante subrogada perfecta y coordina todos los arreglos"
+        },
+        "step4": {
+          "title": "Embarazo y nacimiento",
+          "content": "Apoyo durante todo el embarazo y nacimiento, asegurando una transición suave a la paternidad"
+        }
+      }
+    }
+  },
+  "screening": {
+    "title": "Proceso de Evaluación",
+    "subtitle": "Resumen paso a paso de nuestra evaluación",
+    "surrogate": {
+      "medical": {
+        "title": "Evaluación Médica",
+        "content": "Chequeo de salud, análisis y evaluación reproductiva para confirmar preparación."
+      },
+      "psych": {
+        "title": "Entrevista Psicológica",
+        "content": "Breve evaluación de salud mental y consejería para asegurar consentimiento informado."
+      },
+      "background": {
+        "title": "Verificación de Antecedentes Sociales",
+        "content": "Revisión de antecedentes y verificación de estabilidad del hogar, incluido el sistema de apoyo."
+      }
+    },
+    "parent": {
+      "consultation": {
+        "title": "Consulta Inicial",
+        "content": "Aclarar metas, cronograma, presupuesto y programa adecuado; confirmar elegibilidad básica."
+      },
+      "review": {
+        "title": "Revisión Médica y Psicológica",
+        "content": "Revisión de historial médico y de fertilidad, más una breve evaluación psicológica."
+      },
+      "legal": {
+        "title": "Preparación Legal y del Hogar",
+        "content": "Resumen del contrato con asesoría legal y lista práctica de preparación del hogar."
+      }
+    }
+  },
+  "supportAndCounselling": {
+    "subtitle": "Acompañamiento cercano, comunidad y orientación práctica para padres intencionales",
+    "cards": {
+      "emotional": {
+        "title": "Apoyo Emocional",
+        "description": "Orientación compasiva y consejería durante todo tu viaje."
+      },
+      "community": {
+        "title": "Comunidad",
+        "description": "Apoyo entre pares y conexión con otros padres intencionales."
+      },
+      "legal": {
+        "title": "Orientación Legal",
+        "description": "Claridad en los pasos legales y coordinación con asesoría jurídica."
+      },
+      "counselling": {
+        "title": "Sesiones de Consejería",
+        "description": "Sesiones individuales o en pareja con consejeros calificados."
+      },
+      "financial": {
+        "title": "Orientación Financiera",
+        "description": "Presupuestación transparente, planificación y coordinación de pagos."
+      },
+      "support24": {
+        "title": "Soporte 24/7",
+        "description": "Asistencia permanente para dudas y necesidades urgentes."
+      }
+    }
+  },
+  "ourMission": {
+    "title": "Nuestra Misión",
+    "subtitle": "Viajes de fertilidad éticos, de apoyo y personalizados para cada familia.",
+    "visionSubtitle": "Lo que impulsa nuestro trabajo hoy y define el mañana",
+    "missionTitle": "Empoderando Sueños, Construyendo Familias",
+    "missionText": "En Miracle Makers, creemos que cada familia merece la oportunidad de experimentar la alegría de la paternidad. Nuestra misión es proporcionar servicios de gestación subrogada y donación de óvulos compasivos, éticos y personalizados que transformen los sueños en realidad.",
+    "visionTitle": "Nuestra Visión para el Futuro",
+    "vision1Title": "Accesibilidad Global",
+    "vision1Text": "Hacer que los servicios de gestación subrogada y fertilidad sean accesibles a familias en todo el mundo, sin importar su ubicación o circunstancias.",
+    "vision2Title": "Innovación y Excelencia",
+    "vision2Text": "Liderar la industria con tecnología de vanguardia, experiencia médica y estándares de atención compasiva.",
+    "vision3Title": "Comunidad y Apoyo",
+    "vision3Text": "Construir una comunidad global de apoyo que celebre la diversidad y empodere a las familias en su camino.",
+    "commitmentTitle": "Nuestros Compromisos",
+    "commitmentSubtitle": "Los principios que guían cada decisión que tomamos y a cada familia a la que servimos.",
+    "commitment1Title": "Atención Compasiva",
+    "commitment1Text": "Cada familia recibe atención personalizada, apoyo emocional y cuidados que van más allá de los procedimientos médicos.",
+    "commitment2Title": "Excelencia Ética",
+    "commitment2Text": "Mantenemos los más altos estándares éticos en todas nuestras prácticas, asegurando transparencia y confianza.",
+    "commitment3Title": "Apoyo Continuo",
+    "commitment3Text": "Desde la consulta inicial hasta la atención postparto, estamos comprometidos a apoyar a las familias durante todo su viaje."
+  },
+  "surrogacyWithOwnGametes": {
+    "title": "Gestación Subrogada con Gametos Propios",
+    "description": "Para parejas que desean mantener una conexión biológica con su hijo, la gestación subrogada con gametos propios ofrece el camino más natural hacia la paternidad. En este programa, se utilizan los óvulos de la madre intencional y el esperma del padre intencional para crear embriones mediante FIV, que luego se transfieren a una gestante cuidadosamente seleccionada.",
+    "ivfProcess": {
+      "title": "Proceso de FIV",
+      "step1": "El proceso de FIV comienza con la estimulación ovárica, la recuperación de óvulos, la fertilización y el cultivo de embriones en el laboratorio. La fertilización puede realizarse mediante FIV convencional o ICSI dependiendo de la calidad del esperma.",
+      "step2": "El proceso se monitorea cuidadosamente para optimizar la calidad de los óvulos y el desarrollo de los embriones. Los especialistas del laboratorio evalúan los embriones durante varios días para seleccionar aquellos con mayor probabilidad de implantación.",
+      "step3": "Cada paso se personaliza según el perfil médico de los padres intencionales, asegurando que el enfoque se adapte a sus necesidades específicas y factores de fertilidad."
+    },
+    "embryoTransfer": {
+      "title": "Transferencia de Embriones",
+      "step1": "Después de la fertilización, se seleccionan los embriones más saludables para transferir al útero de la gestante. El tiempo y la preparación de la gestante se gestionan cuidadosamente para maximizar el éxito de la implantación.",
+      "step2": "La gestante se monitorea de cerca antes, durante y después de la transferencia. Se proporciona apoyo hormonal y orientación sobre el estilo de vida para crear el mejor ambiente para que el embrión prospere.",
+      "step3": "Cada paso se personaliza según el perfil médico de los padres intencionales, asegurando que el enfoque se adapte a sus necesidades específicas y factores de fertilidad."
+    }
+  },
+  "eggFreezing": {
+    "title": "Congelación de Óvulos / Preservación",
+    "description": "La congelación de óvulos, también conocida como criopreservación de ovocitos, es un proceso que permite a las mujeres preservar su fertilidad congelando sus óvulos para uso futuro. Esta tecnología reproductiva avanzada ofrece a las mujeres la oportunidad de retrasar la maternidad manteniendo la calidad de sus óvulos.",
+    "process": {
+      "title": "El Proceso de Congelación de Óvulos",
+      "step1": "El proceso comienza con la estimulación ovárica usando medicamentos de fertilidad para fomentar el desarrollo de múltiples óvulos. Esto se monitorea cuidadosamente a través de análisis de sangre y ultrasonidos para asegurar un desarrollo óptimo de los óvulos.",
+      "step2": "Una vez que los óvulos alcanzan la madurez, se recuperan a través de un procedimiento quirúrgico menor llamado recuperación de óvulos. El procedimiento se realiza bajo sedación y típicamente toma 15-20 minutos.",
+      "step3": "Los óvulos recuperados se congelan inmediatamente usando un proceso llamado vitrificación, que los preserva a temperaturas extremadamente bajas. Esta técnica avanzada de congelación mantiene la calidad y viabilidad de los óvulos para uso futuro."
+    },
+    "benefits": {
+      "title": "Beneficios de la Congelación de Óvulos",
+      "step1": "Preservar la fertilidad para mujeres que quieren retrasar la maternidad debido a carrera, educación o razones personales. Esto es especialmente valioso para mujeres de finales de los 20 a principios de los 30.",
+      "step2": "Mantener la calidad de los óvulos congelándolos cuando están en su pico de fertilidad. Esto puede ser particularmente beneficioso para mujeres que enfrentan tratamientos médicos que pueden afectar la fertilidad.",
+      "step3": "Proporcionar tranquilidad y opciones reproductivas para el futuro. Los óvulos congelados pueden almacenarse por muchos años y usarse cuando sea el momento adecuado para comenzar una familia."
+    }
+  },
+  "surrogacyWithEggDonor": {
+    "title": "Gestación Subrogada con Donante de Óvulos",
+    "description": "Para padres intencionales que necesitan óvulos de donante, nuestro programa de gestación subrogada con donante de óvulos proporciona una solución integral. Este programa combina la experiencia de donantes de óvulos cuidadosamente seleccionadas con nuestras gestantes experimentadas para ayudarte a construir tu familia.",
+    "process": {
+      "title": "El Proceso",
+      "step1": "Te emparejamos cuidadosamente con una donante de óvulos calificada que cumple con tus criterios específicos. Nuestras donantes se someten a evaluaciones médicas, psicológicas y genéticas exhaustivas para asegurar los más altos estándares de calidad.",
+      "step2": "La donante de óvulos seleccionada se somete a estimulación ovárica y recuperación de óvulos. Los óvulos se fertilizan entonces con el esperma del padre intencional o esperma de donante a través de procedimientos de FIV.",
+      "step3": "Los embriones resultantes se transfieren a una gestante cuidadosamente emparejada que lleva el embarazo a término. Durante todo el proceso, proporcionamos apoyo integral y monitoreo para todas las partes involucradas."
+    },
+    "benefits": {
+      "title": "Beneficios de Este Programa",
+      "step1": "Acceso a un grupo diverso de donantes de óvulos cuidadosamente seleccionadas con perfiles detallados incluyendo historial médico, educación y características personales.",
+      "step2": "Apoyo integral durante todo el proceso, desde la selección de donante hasta el nacimiento, asegurando un viaje suave y exitoso hacia la paternidad.",
+      "step3": "Altas tasas de éxito con nuestro equipo médico experimentado y protocolos probados, dándote la mejor oportunidad de lograr un embarazo exitoso y un bebé saludable."
+    }
+  },
+  "vipConciergeServices": {
+    "title": "Servicios VIP Concierge",
+    "description": "Nuestros Servicios VIP Concierge proporcionan apoyo integral para padres intencionales internacionales, ofreciendo alojamiento, traducción, transporte y asistencia personalizada durante todo tu viaje de gestación subrogada. Aseguramos tu comodidad y tranquilidad durante este tiempo importante.",
+    "services": {
+      "title": "Nuestros Servicios VIP",
+      "step1": "Alojamientos premium en apartamentos cómodos y completamente amueblados o hoteles cerca de instalaciones médicas. Organizamos todo desde la reserva hasta el check-in, asegurando que tu estadía sea cómoda y conveniente.",
+      "step2": "Servicios profesionales de traducción para todas las citas médicas, reuniones legales y comunicaciones importantes. Nuestros traductores certificados aseguran comunicación clara durante todo tu viaje.",
+      "step3": "Servicios integrales de transporte incluyendo traslados del aeropuerto, transporte a citas médicas y asistencia de viaje local. Proporcionamos transporte confiable y cómodo para todas tus necesidades."
+    },
+    "benefits": {
+      "title": "Por Qué Elegir Servicios VIP",
+      "step1": "Experiencia fluida con toda la logística manejada por nuestro equipo experimentado, permitiéndote enfocarte en tu viaje hacia la paternidad sin preocuparte por detalles prácticos.",
+      "step2": "Apoyo cultural y de idioma para ayudarte a navegar el ambiente local cómodamente, con asistencia disponible 24/7 para cualquier pregunta o preocupación.",
+      "step3": "Tranquilidad sabiendo que cada aspecto de tu estadía está manejado profesionalmente, desde el alojamiento hasta el transporte, asegurando una experiencia sin estrés durante este tiempo importante."
+    }
+  }
+}

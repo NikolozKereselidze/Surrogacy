@@ -1,0 +1,551 @@
+{
+  "navigation": {
+    "aboutUs": "关于我们",
+    "surrogates": "代孕妈妈",
+    "intendedParents": "意向父母",
+    "eggDonors": "卵子捐赠者",
+    "programs": "项目",
+    "blog": "博客",
+    "contactUs": "联系我们"
+  },
+  "submenu": {
+    "aboutUs": {
+      "ourMission": "我们的使命",
+      "whoWeAre": "我们是谁",
+      "ourTeam": "我们的团队",
+      "whyChooseUs": "为什么选择我们？"
+    },
+    "surrogates": {
+      "surrogacyProcess": "代孕流程",
+      "whoCanBecome": "谁可以成为代孕妈妈？",
+      "screeningProcess": "筛选流程",
+      "applyNow": "立即申请"
+    },
+    "intendedParents": {
+      "whoCanBecome": "谁可以成为父母？",
+      "screeningProcess": "筛选流程",
+      "compensationSupport": "支持与咨询",
+      "applyNow": "立即申请"
+    },
+    "eggDonors": {
+      "whyBecome": "为什么成为捐赠者？",
+      "whoCanApply": "谁可以成为捐赠者？",
+      "applyNow": "立即申请"
+    },
+    "programs": {
+      "ownGametes": "使用自身配子的代孕",
+      "eggDonor": "使用卵子捐赠者的代孕",
+      "eggFreezing": "卵子冷冻/保存",
+      "vipServices": "VIP礼宾服务（住宿、翻译、交通）"
+    }
+  },
+  "homepage": {
+    "heroTitle": {
+      "together": "一起",
+      "weMake": "我们创造",
+      "miracles": "奇迹"
+    },
+    "heroSubtitle": {
+      "compassionate": "贴心的代孕和卵子捐赠服务",
+      "tailored": "量身定制",
+      "journey": "您的旅程。"
+    },
+    "heroDescription": "专业代孕和卵子捐赠服务，提供个性化支持、法律指导和24/7护理，帮助您建立梦想家庭。",
+    "startJourneyButton": "今天开始您的旅程"
+  },
+  "beginYourMiracle": {
+    "title": "开始您的奇迹之旅",
+    "subtitle": "选择适合您的道路。",
+    "intendedParentsTitle": "准父母代孕服务",
+    "intendedParentsDesc": "探索我们为梦想成为父母的人提供的项目和支持。",
+    "intendedParentsList": ["法律指导", "医疗支持", "财务援助"],
+    "surrogatesTitle": "成为代孕妈妈",
+    "surrogatesDesc": "作为奇迹创造者的代孕妈妈，为家庭赋能并改变生活。",
+    "surrogatesList": ["全面护理", "医疗监测", "支持服务"],
+    "eggDonorsTitle": "成为卵子捐赠者",
+    "eggDonorsDesc": "给予生命的礼物，帮助创造新的开始。",
+    "eggDonorsList": ["筛选流程", "医疗评估", "基因检测"]
+  },
+  "ourTeam": {
+    "title": "认识我们的团队",
+    "subtitle": "高素质的团队随时准备为您服务",
+    "introTitle": "您奇迹背后的专家",
+    "introText": "认识创造奇迹的专业人士。",
+    "natiaDesc": "在医疗保健和专业服务咨询方面拥有超过15年的经验，帮助家庭成长。德夫达里亚尼女士毕业于第比利斯国立医科大学和第比利斯国立大学。",
+    "kelvinDesc": "获得认证的生育专家，在先进生殖技术和个性化治疗计划方面拥有专业知识。",
+    "annaDesc": "拥有超过15年帮助家庭成长的经验。专门从事试管婴儿协调和患者护理管理。",
+    "michaelDesc": "领先的医疗总监，在生殖医学和临床监督方面拥有丰富经验。",
+    "sarahDesc": "敬业的患者护理协调员，确保在您整个旅程中提供顺畅的沟通和支持。",
+    "davidDesc": "经验丰富的法律顾问，专门从事代孕法律和家庭组建法律事务。",
+    "valuesTitle": "我们团队的价值观",
+    "valuesDesc": "我们的核心价值观指导我们所做的一切。",
+    "value1Title": "卓越",
+    "value1Desc": "我们在医疗护理和患者支持方面保持最高标准。",
+    "value2Title": "协作",
+    "value2Desc": "我们的团队无缝协作，提供全面的护理。",
+    "value3Title": "创新",
+    "value3Desc": "我们站在生殖医学进步的前沿。",
+    "showMore": "显示更多"
+  },
+  "contactUs": {
+    "title": "联系我们",
+    "subtitle": "我们在这里帮助您完成旅程",
+    "firstName": "名字",
+    "lastName": "姓氏",
+    "selectGender": "选择性别",
+    "male": "男性",
+    "female": "女性",
+    "other": "其他",
+    "dateOfBirth": "出生日期",
+    "email": "您的邮箱",
+    "phone": "您的电话",
+    "message": "您的留言",
+    "submit": "发送留言",
+    "addressLabel": "地址",
+    "phoneLabel": "电话",
+    "emailLabel": "电子邮件"
+  },
+  "whyChooseUs": {
+    "reasonsTitle": "我们的独特之处",
+    "reasonsDesc": "了解为什么家庭选择我们进行他们的旅程。",
+    "reason1Title": "经过验证的记录",
+    "reason1Desc": "超过1000例成功妊娠和不断成长的家庭。",
+    "reason2Title": "专家团队",
+    "reason2Desc": "获得认证的专家，拥有数十年的经验。",
+    "reason3Title": "全面护理",
+    "reason3Desc": "从初步咨询到产后支持。",
+    "reason4Title": "个性化方法",
+    "reason4Desc": "每个旅程都是独特的，每个计划都是定制的。",
+    "reason5Title": "全球网络",
+    "reason5Desc": "获得全球最佳医疗设施的使用权。",
+    "reason6Title": "24/7支持",
+    "reason6Desc": "全天候护理和援助，随时为您服务。",
+    "comparisonTitle": "奇迹创造者 vs 其他",
+    "comparisonDesc": "看看我们与其他机构的比较。",
+    "othersTitle": "其他机构",
+    "othersPoint1": "有限的医疗监督",
+    "othersPoint2": "通用治疗计划",
+    "othersPoint3": "产后支持最少",
+    "othersPoint4": "隐藏费用和成本",
+    "ourTitle": "奇迹创造者",
+    "ourPoint1": "完整的医疗团队和监督",
+    "ourPoint2": "个性化治疗计划",
+    "ourPoint3": "全面的产后支持",
+    "ourPoint4": "透明定价，无隐藏费用",
+    "testimonialsTitle": "我们家庭怎么说",
+    "testimonial1Text": "奇迹创造者让我们的父母梦想成真。他们的专业知识和同情心是无与伦比的。",
+    "testimonial1Author": "莎拉和迈克尔·约翰逊",
+    "testimonial1Role": "双胞胎父母",
+    "testimonial2Text": "奇迹创造者的团队在我们旅程的每一步都支持我们。我们无法要求更好的护理。",
+    "testimonial2Author": "艾米丽和大卫·陈",
+    "testimonial2Role": "三胞胎父母"
+  },
+  "blog": {
+    "title": "博客最新动态",
+    "subtitle": "来自我们代孕社区的见解、指南和故事",
+    "readMore": "阅读更多"
+  },
+  "whoWeAre": {
+    "title": "我们是谁",
+    "subtitle": "致力于实现梦想的敬业团队",
+    "storyTitle": "我们的故事",
+    "storyText": "怀着帮助家庭实现父母梦想的愿景而成立，奇迹创造者已从小型本地诊所发展成为全球认可的代孕和卵子捐赠中心。我们的旅程始于一个简单的信念：每个家庭都应该有机会体验为人父母的喜悦，无论他们的处境如何。今天，我们继续通过我们的综合服务、专家团队和对道德实践的不懈承诺来坚持这一信念。",
+    "value1Title": "敬业团队",
+    "value1Desc": "我们经验丰富的专业人士热衷于帮助家庭成长。",
+    "value2Title": "全球覆盖",
+    "value2Desc": "我们以本地专业知识为世界各地的家庭服务。",
+    "value3Title": "贴心护理",
+    "value3Desc": "每个家庭都得到个性化的关注和支持。",
+    "value4Title": "经过验证的卓越",
+    "value4Desc": "多年成功成果和满意家庭。",
+    "value5Title": "信任与安全",
+    "value5Desc": "您的隐私和安全是我们整个旅程的首要任务。",
+    "value6Title": "合作伙伴方式",
+    "value6Desc": "我们与您作为合作伙伴合作，确保透明度和开放沟通。",
+    "stat1Number": "1000+",
+    "stat1Label": "成功妊娠",
+    "stat2Number": "50+",
+    "stat2Label": "服务国家",
+    "stat3Number": "10+",
+    "stat3Label": "年经验",
+    "stat4Number": "99%",
+    "stat4Label": "成功率"
+  },
+  "footer": {
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款",
+    "copyright": "保留所有权利。"
+  },
+  "surrogacyProcess": {
+    "title": "代孕流程",
+    "subtitle": "您代孕旅程的全面指南",
+    "heroText": "您的父母之旅从这里开始。我们以关怀、专业知识和坚定不移的支持指导您完成每一步。",
+    "processTitle": "四步流程",
+    "step1Title": "初步咨询",
+    "step1Description": "通过全面咨询开始您的旅程，了解您的选择并制定个性化计划。",
+    "step1Item1": "免费初步咨询",
+    "step1Item2": "病史审查",
+    "step1Item3": "个性化治疗计划",
+    "step2Title": "法律和医疗筛查",
+    "step2Description": "完成彻底的法律和医疗筛查，确保所有各方的最佳可能结果。",
+    "step2Item1": "法律合同准备",
+    "step2Item2": "医疗评估",
+    "step2Item3": "心理筛查",
+    "step3Title": "匹配和协调",
+    "step3Description": "我们仔细为您匹配完美的代孕妈妈，并协调所有医疗程序。",
+    "step3Item1": "代孕妈妈匹配",
+    "step3Item2": "医疗协调",
+    "step3Item3": "持续支持",
+    "step4Title": "怀孕和分娩",
+    "step4Description": "在整个怀孕和分娩过程中提供支持，确保顺利过渡到父母身份。",
+    "step4Item1": "怀孕监测",
+    "step4Item2": "分娩协调",
+    "step4Item3": "产后支持",
+    "timelineTitle": "时间线概览",
+    "timeline1Title": "第1-2个月：咨询和规划",
+    "timeline1Text": "初步咨询、法律准备和为您代孕旅程的个性化规划。",
+    "timeline2Title": "第2-3个月：筛查和匹配",
+    "timeline2Text": "完成医疗和法律筛查，然后仔细匹配您理想的代孕妈妈。",
+    "timeline3Title": "第3-12个月：怀孕之旅",
+    "timeline3Text": "胚胎移植、怀孕监测和为宝宝到来做准备。",
+    "supportTitle": "24/7全程支持",
+    "support1Title": "电话支持",
+    "support1Text": "通过电话直接联系我们的团队，获得即时援助和指导。",
+    "support2Title": "电子邮件支持",
+    "support2Text": "全面的电子邮件支持，用于详细问题和文档。",
+    "support3Title": "个人协调员",
+    "support3Text": "您的专属协调员在整个过程中提供个性化支持。"
+  },
+  "whoCanBecome": {
+    "surrogate": {
+      "heroTitle": "谁可以成为代孕妈妈？",
+      "heroSubtitle": "加入我们富有同情心的女性社区，帮助家庭实现梦想",
+      "heroHighlight": "年龄21-40岁的健康女性，至少有一个亲生子女，不吸烟，情绪稳定，愿意帮助他人。",
+      "requirementsTitle": "成为代孕妈妈的要求",
+      "requirementsSubtitle": "我们仔细筛选所有潜在的代孕妈妈，确保为所有人提供最佳结果",
+      "processTitle": "代孕妈妈之旅",
+      "processSubtitle": "您成为代孕妈妈的途径",
+      "supportTitle": "24/7全程支持",
+      "supportSubtitle": "我们在这里陪伴您的每一步",
+      "support": {
+        "phone": {
+          "title": "电话支持",
+          "text": "通过电话直接联系我们的团队，获得即时援助和指导"
+        },
+        "email": {
+          "title": "电子邮件支持",
+          "text": "全面的电子邮件支持，用于详细问题和文档"
+        },
+        "coordinator": {
+          "title": "个人协调员",
+          "text": "您的专属协调员在整个过程中提供个性化支持"
+        }
+      }
+    },
+    "donor": {
+      "heroTitle": "谁可以成为卵子捐赠者？",
+      "heroSubtitle": "加入我们慷慨的女性社区，帮助家庭创造新的开始",
+      "heroHighlight": "年龄21-35岁的健康女性，具有优秀的基因健康，不吸烟，致力于帮助他人建立家庭。",
+      "requirementsTitle": "成为卵子捐赠者的要求",
+      "requirementsSubtitle": "我们仔细筛选所有潜在的捐赠者，确保为所有人提供最佳结果",
+      "processTitle": "捐赠者之旅",
+      "processSubtitle": "您成为卵子捐赠者的途径",
+      "supportTitle": "24/7全程支持",
+      "supportSubtitle": "我们在这里陪伴您的每一步",
+      "support": {
+        "phone": {
+          "title": "电话支持",
+          "text": "通过电话直接联系我们的团队，获得即时援助和指导"
+        },
+        "email": {
+          "title": "电子邮件支持",
+          "text": "全面的电子邮件支持，用于详细问题和文档"
+        },
+        "coordinator": {
+          "title": "个人协调员",
+          "text": "您的专属协调员在整个过程中提供个性化支持"
+        }
+      }
+    },
+    "parent": {
+      "heroTitle": "谁可以成为父母？",
+      "heroSubtitle": "加入我们充满希望的家庭社区，准备开始他们的育儿之旅",
+      "heroHighlight": "致力于为未来孩子提供充满爱的家庭和稳定环境的个人和夫妇。",
+      "requirementsTitle": "成为父母的要求",
+      "requirementsSubtitle": "我们仔细评估所有潜在父母，确保为所有人提供最佳结果",
+      "processTitle": "父母之旅",
+      "processSubtitle": "您通过代孕成为父母的途径",
+      "supportTitle": "24/7全程支持",
+      "supportSubtitle": "我们在这里陪伴您的每一步",
+      "support": {
+        "phone": {
+          "title": "电话支持",
+          "text": "通过电话直接联系我们的团队，获得即时援助和指导"
+        },
+        "email": {
+          "title": "电子邮件支持",
+          "text": "全面的电子邮件支持，用于详细问题和文档"
+        },
+        "coordinator": {
+          "title": "个人协调员",
+          "text": "您的专属协调员在整个过程中提供个性化支持"
+        }
+      }
+    },
+    "requirements": {
+      "previousPregnancy": {
+        "title": "既往妊娠",
+        "description": "必须至少有过一次成功的妊娠和分娩，无并发症"
+      },
+      "ageHealth": {
+        "title": "年龄和健康",
+        "description": "年龄必须在21-40岁之间，身体健康和心理健康状况良好"
+      },
+      "lifestyle": {
+        "title": "生活方式",
+        "description": "不吸烟，不使用药物，在整个过程中保持健康的生活方式"
+      },
+      "availability": {
+        "title": "可用性",
+        "description": "能够参加定期医疗预约并保持一致的沟通"
+      },
+      "education": {
+        "title": "教育",
+        "description": "高中教育或同等学历，生活状况稳定，有支持系统"
+      },
+      "location": {
+        "title": "位置",
+        "description": "必须能够为医疗预约旅行并保持定期联系"
+      },
+      "geneticHealth": {
+        "title": "基因健康",
+        "description": "优秀的基因健康，无严重基因疾病的家族史"
+      },
+      "emotionalReadiness": {
+        "title": "情绪准备",
+        "description": "情绪上准备好并致力于即将到来的育儿之旅"
+      },
+      "financialStability": {
+        "title": "财务稳定",
+        "description": "财务稳定，能够提供孩子的需求"
+      },
+      "stableHome": {
+        "title": "稳定的家庭环境",
+        "description": "生活状况稳定，有支持性的家庭环境"
+      },
+      "legalStatus": {
+        "title": "法律地位",
+        "description": "良好的法律地位，能够满足所有法律要求"
+      },
+      "international": {
+        "title": "国际考虑",
+        "description": "能够国际旅行并满足跨境要求"
+      },
+      "healthCommitment": {
+        "title": "健康承诺",
+        "description": "致力于保持良好的健康并遵循医疗指导"
+      }
+    },
+    "processSteps": {
+      "step1": {
+        "title": "初步申请",
+        "content": "完成我们全面的在线申请，包括个人和医疗历史"
+      },
+      "step2": {
+        "title": "医疗筛查",
+        "content": "接受彻底的医疗评估，包括生育和基因检测"
+      },
+      "step3": {
+        "title": "心理评估",
+        "content": "完成心理筛查，确保情绪准备和稳定性"
+      },
+      "step4": {
+        "title": "法律和匹配",
+        "content": "法律合同准备和与意向父母匹配"
+      },
+      "donor": {
+        "step1": {
+          "title": "初步申请",
+          "content": "完成我们全面的在线申请，包括个人和医疗历史"
+        },
+        "step2": {
+          "title": "医疗筛查",
+          "content": "接受彻底的医疗评估，包括生育和基因检测"
+        },
+        "step3": {
+          "title": "基因检测",
+          "content": "完成全面的基因筛查和家族史评估"
+        },
+        "step4": {
+          "title": "法律和匹配",
+          "content": "法律合同准备和与意向父母匹配"
+        }
+      },
+      "parent": {
+        "step1": {
+          "title": "初步咨询",
+          "content": "从全面咨询开始，了解您的选择并制定个性化计划"
+        },
+        "step2": {
+          "title": "法律和医疗筛查",
+          "content": "完成法律文件和医疗评估以确保资格"
+        },
+        "step3": {
+          "title": "匹配过程",
+          "content": "仔细匹配完美的代孕妈妈并协调所有安排"
+        },
+        "step4": {
+          "title": "怀孕和分娩",
+          "content": "在整个怀孕和分娩过程中提供支持，确保顺利过渡到父母身份"
+        }
+      }
+    }
+  },
+  "screening": {
+    "title": "筛选流程",
+    "subtitle": "我们的评估分步概览",
+    "surrogate": {
+      "medical": {
+        "title": "医疗评估",
+        "content": "健康检查、实验室检测及生殖评估，以确认准备情况。"
+      },
+      "psych": {
+        "title": "心理面谈",
+        "content": "简要心理健康筛查与咨询，确保知情同意。"
+      },
+      "background": {
+        "title": "社会背景核查",
+        "content": "背景审查和家庭稳定性核验，包括支持体系。"
+      }
+    },
+    "parent": {
+      "consultation": {
+        "title": "初步咨询",
+        "content": "明确目标、时间线、预算与项目匹配度；确认基本资格。"
+      },
+      "review": {
+        "title": "医疗与心理审核",
+        "content": "审阅病历与生育史，并进行简要心理筛查。"
+      },
+      "legal": {
+        "title": "法律与居家准备",
+        "content": "与律师进行合同概览，并完成实用的居家准备清单。"
+      }
+    }
+  },
+  "supportAndCounselling": {
+    "subtitle": "为意向父母提供贴心咨询、社区联系与实用指导",
+    "cards": {
+      "emotional": {
+        "title": "情感支持",
+        "description": "在整个旅程中提供富有同理心的指导与咨询。"
+      },
+      "community": {
+        "title": "社区",
+        "description": "与其他意向父母建立联系并获得同伴支持。"
+      },
+      "legal": {
+        "title": "法律指导",
+        "description": "明确法律步骤并与法律顾问协调。"
+      },
+      "counselling": {
+        "title": "咨询会谈",
+        "description": "与资质顾问进行一对一或伴侣会谈。"
+      },
+      "financial": {
+        "title": "财务指导",
+        "description": "透明的预算制定、规划与付款协调。"
+      },
+      "support24": {
+        "title": "24/7 支持",
+        "description": "全天候为紧急问题和需求提供帮助。"
+      }
+    }
+  },
+  "ourMission": {
+    "title": "我们的使命",
+    "subtitle": "为每个家庭提供道德、支持且个性化的生育之旅。",
+    "visionSubtitle": "推动我们当下工作并塑造明天的愿景",
+    "missionTitle": "成就梦想，成就家庭",
+    "missionText": "在 Miracle Makers，我们相信每个家庭都应该有机会体验为人父母的喜悦。我们的使命是提供富有同情心、合乎道德并且个性化的代孕与卵子捐赠服务，将梦想变为现实。",
+    "visionTitle": "我们的未来愿景",
+    "vision1Title": "全球可及性",
+    "vision1Text": "让代孕和生育服务面向全球家庭，无论其地理位置或处境如何。",
+    "vision2Title": "创新与卓越",
+    "vision2Text": "以尖端技术、医学专长与关怀标准引领行业。",
+    "vision3Title": "社区与支持",
+    "vision3Text": "打造一个支持性的全球社区，包容多样性并为家庭赋能。",
+    "commitmentTitle": "我们的承诺",
+    "commitmentSubtitle": "指导我们每一个决策并服务每一个家庭的原则。",
+    "commitment1Title": "贴心关怀",
+    "commitment1Text": "每个家庭都能获得个性化关注、情感支持以及超越医疗程序的关怀。",
+    "commitment2Title": "道德至上",
+    "commitment2Text": "我们在所有实践中坚持最高道德标准，确保透明与信任。",
+    "commitment3Title": "持续支持",
+    "commitment3Text": "从初次咨询到产后关怀，我们始终陪伴在家庭身边。"
+  },
+  "surrogacyWithOwnGametes": {
+    "title": "使用自身配子的代孕",
+    "description": "对于希望与孩子保持生物学联系的夫妇，使用自身配子的代孕提供了最自然的为人父母之路。在这个项目中，使用预期母亲的卵子和预期父亲的精子通过体外受精创造胚胎，然后移植到经过精心筛选的代孕母亲体内。",
+    "ivfProcess": {
+      "title": "体外受精过程",
+      "step1": "体外受精过程从卵巢刺激、取卵、受精和实验室胚胎培养开始。受精可以使用常规体外受精或ICSI，具体取决于精子质量。",
+      "step2": "整个过程经过精心监控，以优化卵子质量和胚胎发育。实验室专家在几天内评估胚胎，选择具有最高植入机会的胚胎。",
+      "step3": "每个步骤都根据预期父母的医疗档案进行个性化定制，确保方法适合他们的具体需求和生育因素。"
+    },
+    "embryoTransfer": {
+      "title": "胚胎移植",
+      "step1": "受精后，选择最健康的胚胎移植到代孕母亲的子宫。代孕母亲的时间和准备都经过精心管理，以最大化植入成功率。",
+      "step2": "代孕母亲在移植前、移植中和移植后都受到密切监控。提供激素支持和生活方式指导，为胚胎茁壮成长创造最佳环境。",
+      "step3": "每个步骤都根据预期父母的医疗档案进行个性化定制，确保方法适合他们的具体需求和生育因素。"
+    }
+  },
+  "eggFreezing": {
+    "title": "卵子冷冻/保存",
+    "description": "卵子冷冻，也称为卵母细胞冷冻保存，是一个允许女性通过冷冻卵子来保存生育能力以供未来使用的过程。这种先进的生殖技术为女性提供了延迟生育的机会，同时保持卵子的质量。",
+    "process": {
+      "title": "卵子冷冻过程",
+      "step1": "该过程从使用生育药物刺激卵巢开始，以促进多个卵子的发育。通过血液检查和超声波仔细监测，以确保卵子的最佳发育。",
+      "step2": "一旦卵子达到成熟，通过称为取卵的小手术程序进行提取。该程序在镇静下进行，通常需要15-20分钟。",
+      "step3": "提取的卵子立即使用称为玻璃化的过程冷冻，该过程在极低温度下保存它们。这种先进的冷冻技术保持卵子的质量和活力以供未来使用。"
+    },
+    "benefits": {
+      "title": "卵子冷冻的好处",
+      "step1": "为因职业、教育或个人原因想要延迟生育的女性保存生育能力。这对于20多岁后期到30多岁早期的女性特别有价值。",
+      "step2": "通过在卵子处于生育高峰时冷冻来保持卵子质量。这对于面临可能影响生育能力的医疗治疗的女性特别有益。",
+      "step3": "为未来提供安心和生殖选择。冷冻卵子可以储存多年，在适合开始家庭的时候使用。"
+    }
+  },
+  "surrogacyWithEggDonor": {
+    "title": "使用卵子捐赠者的代孕",
+    "description": "对于需要捐赠卵子的预期父母，我们的使用卵子捐赠者的代孕计划提供了全面的解决方案。该计划将经过精心筛选的卵子捐赠者的专业知识与我们经验丰富的代孕母亲相结合，帮助您建立家庭。",
+    "process": {
+      "title": "过程",
+      "step1": "我们仔细为您匹配符合您特定标准的合格卵子捐赠者。我们的捐赠者接受全面的医疗、心理和遗传筛查，以确保最高的质量标准。",
+      "step2": "选定的卵子捐赠者接受卵巢刺激和取卵。然后通过体外受精程序用预期父亲的精子或捐赠精子使卵子受精。",
+      "step3": "产生的胚胎被转移到精心匹配的代孕母亲身上，她将怀孕带到足月。在整个过程中，我们为所有相关方提供全面的支持和监测。"
+    },
+    "benefits": {
+      "title": "该计划的好处",
+      "step1": "获得经过精心筛选的卵子捐赠者的多样化群体，具有详细的档案，包括医疗历史、教育和个人特征。",
+      "step2": "从捐赠者选择到出生的整个过程中提供全面支持，确保顺利成功的为人父母之旅。",
+      "step3": "凭借我们经验丰富的医疗团队和经过验证的协议，成功率高，为您提供实现成功怀孕和健康婴儿的最佳机会。"
+    }
+  },
+  "vipConciergeServices": {
+    "title": "VIP礼宾服务",
+    "description": "我们的VIP礼宾服务为国际预期父母提供全面支持，在整个代孕旅程中提供住宿、翻译、交通和个性化协助。我们确保您在这个重要时期的舒适和安心。",
+    "services": {
+      "title": "我们的VIP服务",
+      "step1": "在医疗设施附近舒适、设备齐全的公寓或酒店提供优质住宿。我们安排从预订到入住的一切，确保您的住宿舒适方便。",
+      "step2": "为所有医疗预约、法律会议和重要沟通提供专业翻译服务。我们的认证翻译员确保您整个旅程中的清晰沟通。",
+      "step3": "全面的交通服务，包括机场接送、医疗预约交通和当地旅行协助。我们为您的所有需求提供可靠、舒适的交通。"
+    },
+    "benefits": {
+      "title": "为什么选择VIP服务",
+      "step1": "由我们经验丰富的团队处理所有后勤工作的无缝体验，让您专注于为人父母之旅，而不用担心实际细节。",
+      "step2": "文化和语言支持，帮助您舒适地适应当地环境，24/7提供任何问题或担忧的协助。",
+      "step3": "安心知道您住宿的每个方面都得到专业管理，从住宿到交通，确保在这个重要时期无压力的体验。"
+    }
+  }
+}
