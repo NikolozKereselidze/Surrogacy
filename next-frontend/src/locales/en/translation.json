@@ -36,7 +36,7 @@
       "ownGametes": "Surrogacy with Own Gametes",
       "eggDonor": "Surrogacy with Egg Donor",
       "eggFreezing": "Egg Freezing / Preservation",
-      "vipServices": "VIP Concierge Services (housing, translation, transport)"
+      "vipServices": "VIP Concierge Services"
     }
   },
   "homepage": {
@@ -118,6 +118,7 @@
     "phone": "Your Phone",
     "message": "Your Message",
     "submit": "Send Message",
+    "success": "Thank you for your message! We'll get back to you soon.",
     "addressLabel": "Address",
     "phoneLabel": "Phone",
     "emailLabel": "Email"

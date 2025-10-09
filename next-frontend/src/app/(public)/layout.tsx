@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import I18nProvider from "../components/I18nProvider";
-import MainLayout from "../components/MainLayout";
-import StructuredData from "../components/StructuredData";
+import "@/app/globals.css";
+import I18nProvider from "@/components/I18nProvider";
+import MainLayout from "@/components/MainLayout";
+import StructuredData from "@/components/StructuredData";
 
 // Import Swiper styles
 import "swiper/css";

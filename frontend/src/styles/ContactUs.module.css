@@ -83,8 +83,7 @@
 }
 
 .success {
-  color: var(--gray);
-  font-weight: 500;
+  color: var(--color-primary);
   font-size: var(--font-base);
 }
 

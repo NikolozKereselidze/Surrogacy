@@ -105,8 +105,8 @@
   height: 6px;
   border-radius: 3px;
   background: #ddd;
+  accent-color: var(--color-primary);
   outline: none;
-  -webkit-appearance: none;
 }
 
 .rangeInputs input[type="range"]::-webkit-slider-thumb {
@@ -225,7 +225,6 @@
   flex-direction: column;
   align-items: center;
   transition: box-shadow 0.2s ease;
-  min-height: 400px;
   width: 100%;
 }
 

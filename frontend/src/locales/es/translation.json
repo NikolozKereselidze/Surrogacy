@@ -36,7 +36,7 @@
       "ownGametes": "Gestación Subrogada con Gametos Propios",
       "eggDonor": "Gestación Subrogada con Donante de Óvulos",
       "eggFreezing": "Congelación de Óvulos / Preservación",
-      "vipServices": "Servicios VIP Concierge (alojamiento, traducción, transporte)"
+      "vipServices": "Servicios VIP Concierge"
     }
   },
   "homepage": {
@@ -108,11 +108,18 @@
     "male": "Masculino",
     "female": "Femenino",
     "other": "Otro",
+    "selectSubject": "Seleccionar asunto",
+    "surrogate": "Quiero ser una Madre Subrogada",
+    "eggDonor": "Quiero ser una Donante de Óvulos",
+    "intendedParent": "Soy un Padre/Madre Intencional",
+    "spermDonor": "Quiero ser un Donante de Esperma",
+    "generalInquiry": "Consulta General",
     "dateOfBirth": "Fecha de nacimiento",
     "email": "Tu email",
     "phone": "Tu teléfono",
     "message": "Tu mensaje",
     "submit": "Enviar mensaje",
+    "success": "¡Gracias por tu mensaje! Te responderemos pronto.",
     "addressLabel": "Dirección",
     "phoneLabel": "Teléfono",
     "emailLabel": "Correo electrónico"

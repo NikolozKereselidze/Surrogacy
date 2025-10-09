@@ -36,7 +36,7 @@
       "ownGametes": "פונדקאות עם גמטות עצמיות",
       "eggDonor": "פונדקאות עם תורמת ביציות",
       "eggFreezing": "הקפאת ביציות / שימור",
-      "vipServices": "שירותי VIP (דיור, תרגום, תחבורה)"
+      "vipServices": "שירותי VIP"
     }
   },
   "homepage": {
@@ -96,11 +96,18 @@
     "male": "זכר",
     "female": "נקבה",
     "other": "אחר",
+    "selectSubject": "בחר נושא",
+    "surrogate": "אני רוצה להיות פונדקאית",
+    "eggDonor": "אני רוצה להיות תורמת ביציות",
+    "intendedParent": "אני הורה מיועד",
+    "spermDonor": "אני רוצה להיות תורם זרע",
+    "generalInquiry": "שאלה כללית",
     "dateOfBirth": "תאריך לידה",
     "email": "האימייל שלך",
     "phone": "הטלפון שלך",
     "message": "ההודעה שלך",
     "submit": "שלח הודעה",
+    "success": "תודה על ההודעה שלך! נחזור אליך בקרוב.",
     "addressLabel": "כתובת",
     "phoneLabel": "טלפון",
     "emailLabel": "אימייל"

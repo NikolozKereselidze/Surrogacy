@@ -35,6 +35,39 @@
   border-radius: 1.2rem;
 }
 
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.navButton:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prevButton {
+  left: 15px;
+}
+
+.nextButton {
+  right: 15px;
+}
+
 .thumbnailGallery {
   display: flex;
   width: 100%;
@@ -58,6 +91,11 @@
 
 .thumbnail:hover {
   border-color: #ff4757;
+}
+
+.activeThumbnail {
+  border-color: #ff4757 !important;
+  box-shadow: 0 0 0 2px rgba(255, 71, 87, 0.3);
 }
 
 .thumbnail img,

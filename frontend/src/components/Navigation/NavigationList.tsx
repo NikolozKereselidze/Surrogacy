@@ -43,7 +43,7 @@ const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
           className={`${styles.navigationItem} ${
             isMobile ? styles.mobileNavItem : styles.desktopNavItem
           } ${openSubmenu === t("navigation.aboutUs") ? styles.active : ""}`}
-          onClick={clickHandler}
+          onClick={isMobile ? clickHandler : undefined}
         >
           <div className={styles.menuItem}>
             <a>{t("navigation.aboutUs")}</a>
@@ -82,7 +82,7 @@ const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
           className={`${styles.navigationItem} ${
             isMobile ? styles.mobileNavItem : styles.desktopNavItem
           } ${openSubmenu === t("navigation.surrogates") ? styles.active : ""}`}
-          onClick={clickHandler}
+          onClick={isMobile ? clickHandler : undefined}
         >
           <div className={styles.menuItem}>
             <a>{t("navigation.surrogates")}</a>
@@ -122,7 +122,7 @@ const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
           } ${
             openSubmenu === t("navigation.intendedParents") ? styles.active : ""
           }`}
-          onClick={clickHandler}
+          onClick={isMobile ? clickHandler : undefined}
         >
           <div className={styles.menuItem}>
             <a>{t("navigation.intendedParents")}</a>
@@ -162,7 +162,7 @@ const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
           className={`${styles.navigationItem} ${
             isMobile ? styles.mobileNavItem : styles.desktopNavItem
           } ${openSubmenu === t("navigation.eggDonors") ? styles.active : ""}`}
-          onClick={clickHandler}
+          onClick={isMobile ? clickHandler : undefined}
         >
           <div className={styles.menuItem}>
             <a>{t("navigation.eggDonors")}</a>
@@ -200,7 +200,7 @@ const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
           className={`${styles.navigationItem} ${
             isMobile ? styles.mobileNavItem : styles.desktopNavItem
           } ${openSubmenu === t("navigation.programs") ? styles.active : ""}`}
-          onClick={clickHandler}
+          onClick={isMobile ? clickHandler : undefined}
         >
           <div className={styles.menuItem}>
             <a>{t("navigation.programs")}</a>

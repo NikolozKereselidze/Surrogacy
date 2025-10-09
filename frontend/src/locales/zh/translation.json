@@ -36,7 +36,7 @@
       "ownGametes": "使用自身配子的代孕",
       "eggDonor": "使用卵子捐赠者的代孕",
       "eggFreezing": "卵子冷冻/保存",
-      "vipServices": "VIP礼宾服务（住宿、翻译、交通）"
+      "vipServices": "VIP礼宾服务"
     }
   },
   "homepage": {
@@ -96,11 +96,18 @@
     "male": "男性",
     "female": "女性",
     "other": "其他",
+    "selectSubject": "选择主题",
+    "surrogate": "我想成为代孕妈妈",
+    "eggDonor": "我想成为卵子捐赠者",
+    "intendedParent": "我是准父母",
+    "spermDonor": "我想成为精子捐赠者",
+    "generalInquiry": "一般咨询",
     "dateOfBirth": "出生日期",
     "email": "您的邮箱",
     "phone": "您的电话",
     "message": "您的留言",
     "submit": "发送留言",
+    "success": "感谢您的留言！我们会尽快回复您。",
     "addressLabel": "地址",
     "phoneLabel": "电话",
     "emailLabel": "电子邮件"
