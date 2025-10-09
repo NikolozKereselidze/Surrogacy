@@ -31,9 +31,23 @@ interface Donor {
 
 const Donor = () => {
   const { donor }: { donor: Donor } = useLocation().state;
-  const [mainImage, setMainImage] = useState<string | null>(
-    donor.mainImagePath
-  );
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Create array of all images (main image + donor images)
+  const allImages = [
+    donor.mainImagePath,
+    ...donor.donorImages.map((img) => img.imagePath),
+  ];
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % allImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex(
+      (prev) => (prev - 1 + allImages.length) % allImages.length
+    );
+  };
 
   return (
     <>
@@ -44,38 +58,46 @@ const Donor = () => {
           <div className={styles.leftSection}>
             <div className={styles.mainImageContainer}>
               <img
-                src={`${CLOUDFRONT_DOMAIN}/${mainImage}?w=800&q=80&f=webp`}
+                src={`${CLOUDFRONT_DOMAIN}/${allImages[currentImageIndex]}?w=800&q=80&f=webp`}
                 alt={donor.id}
                 className={styles.mainImage}
+                onError={(e) => {
+                  console.error("Image failed to load:", e.currentTarget.src);
+                }}
               />
+              {allImages.length > 1 && (
+                <>
+                  <button
+                    className={`${styles.navButton} ${styles.prevButton}`}
+                    onClick={prevImage}
+                    aria-label="Previous image"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    className={`${styles.navButton} ${styles.nextButton}`}
+                    onClick={nextImage}
+                    aria-label="Next image"
+                  >
+                    ›
+                  </button>
+                </>
+              )}
             </div>
 
             {/* Thumbnail Gallery */}
             <div className={styles.thumbnailGallery}>
-              <img
-                src={`${CLOUDFRONT_DOMAIN}/${donor.mainImagePath}?w=800&q=80&f=webp`}
-                alt={donor.id}
-                className={styles.thumbnail}
-                onClick={() => setMainImage(donor.mainImagePath)}
-              />
-              {donor.donorImages
-                .slice(0, 3)
-                .map(
-                  (image: { id: string; imagePath: string }, index: number) => (
-                    <div key={image.id} className={styles.thumbnail}>
-                      <img
-                        src={`${CLOUDFRONT_DOMAIN}/${image.imagePath}?w=150&q=80&f=webp`}
-                        alt={`${donor.id} ${index + 1}`}
-                        onClick={() => setMainImage(image.imagePath)}
-                      />
-                      {index === 2 && donor.donorImages.length > 3 && (
-                        <div className={styles.moreImages}>
-                          +{donor.donorImages.length - 3}
-                        </div>
-                      )}
-                    </div>
-                  )
-                )}
+              {allImages.map((imagePath, index) => (
+                <img
+                  key={index}
+                  src={`${CLOUDFRONT_DOMAIN}/${imagePath}?w=150&q=80&f=webp`}
+                  alt={`${donor.id} ${index + 1}`}
+                  className={`${styles.thumbnail} ${
+                    currentImageIndex === index ? styles.activeThumbnail : ""
+                  }`}
+                  onClick={() => setCurrentImageIndex(index)}
+                />
+              ))}
             </div>
           </div>
 

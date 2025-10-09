@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "../styles/Donors.module.css";
 import Button from "../components/Button";
 
@@ -60,83 +60,71 @@ const Donors = () => {
   });
   const [showFilters, setShowFilters] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
 
   // Get donor type from URL or default to egg-donors
   useEffect(() => {
-    const path = location.pathname;
-    if (path.includes("surrogates")) {
-      setSelectedDonorType("surrogates");
-    } else if (path.includes("sperm-donors")) {
-      setSelectedDonorType("sperm-donors");
-    } else {
-      setSelectedDonorType("egg-donors");
-    }
-  }, [location.pathname]);
+    const fetchDonors = async () => {
+      setLoading(true);
+      try {
+        let endpoint = "";
+        switch (selectedDonorType) {
+          case "surrogates":
+            endpoint = "http://localhost:3000/api/surrogate-donors";
+            break;
+          case "sperm-donors":
+            endpoint = "http://localhost:3000/api/sperm-donors";
+            break;
+          default:
+            endpoint = "http://localhost:3000/api/egg-donors";
+        }
 
-  useEffect(() => {
+        const response = await fetch(endpoint);
+        const data = await response.json();
+        setDonors(data);
+      } catch (error) {
+        console.error("Error fetching donors:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchDonors();
   }, [selectedDonorType]);
 
-  const fetchDonors = async () => {
-    setLoading(true);
-    try {
-      let endpoint = "";
-      switch (selectedDonorType) {
-        case "surrogates":
-          endpoint = "http://localhost:3000/api/surrogates";
-          break;
-        case "sperm-donors":
-          endpoint = "http://localhost:3000/api/sperm-donors";
-          break;
-        default:
-          endpoint = "http://localhost:3000/api/egg-donors";
-          break;
-      }
-
-      const response = await fetch(endpoint);
-      const data = await response.json();
-      setDonors(data);
-      setFilteredDonors(data); // Initially show all donors
-    } catch (error) {
-      console.error("Error fetching donors:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   // Filter and sort donors
-  const applyFiltersAndSort = (donorsToFilter: Donor[]) => {
-    const filtered = donorsToFilter.filter((donor) => {
-      const { age, height, weight, available } = donor.databaseUser;
-      // Age filter
-      if (age < filters.ageRange[0] || age > filters.ageRange[1]) return false;
-      // Height filter
-      if (height < filters.heightRange[0] || height > filters.heightRange[1])
-        return false;
-      // Weight filter
-      if (weight < filters.weightRange[0] || weight > filters.weightRange[1])
-        return false;
-      // Availability filter
-      if (filters.available !== null && available !== filters.available)
-        return false;
-      return true;
-    });
-    // Sort donors
-    filtered.sort((a, b) => {
-      const aValue = a.databaseUser[sortOption.field];
-      const bValue = b.databaseUser[sortOption.field];
-      if (sortOption.direction === "asc") {
-        return aValue - bValue;
-      } else {
-        return bValue - aValue;
-      }
-    });
-    return filtered;
-  };
 
   // Apply filters and sort when filters or sort options change
   useEffect(() => {
+    const applyFiltersAndSort = (donorsToFilter: Donor[]) => {
+      const filtered = donorsToFilter.filter((donor) => {
+        const { age, height, weight, available } = donor.databaseUser;
+        // Age filter
+        if (age < filters.ageRange[0] || age > filters.ageRange[1])
+          return false;
+        // Height filter
+        if (height < filters.heightRange[0] || height > filters.heightRange[1])
+          return false;
+        // Weight filter
+        if (weight < filters.weightRange[0] || weight > filters.weightRange[1])
+          return false;
+        // Availability filter
+        if (filters.available !== null && available !== filters.available)
+          return false;
+        return true;
+      });
+      // Sort donors
+      filtered.sort((a, b) => {
+        const aValue = a.databaseUser[sortOption.field];
+        const bValue = b.databaseUser[sortOption.field];
+        if (sortOption.direction === "asc") {
+          return aValue - bValue;
+        } else {
+          return bValue - aValue;
+        }
+      });
+      return filtered;
+    };
+
     const filtered = applyFiltersAndSort(donors);
     setFilteredDonors(filtered);
   }, [filters, sortOption, donors]);

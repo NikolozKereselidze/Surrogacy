@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import styles from "../../styles/AdminDashboard.module.css";
 import { FaPlus, FaEdit, FaTrash, FaUser, FaUserPlus } from "react-icons/fa";
 import { MdFamilyRestroom as MdFamilyRestroomIcon } from "react-icons/md";
@@ -58,7 +58,7 @@ const donorConfigs: Record<string, DonorConfig> = {
   },
   surrogates: {
     title: "Surrogates",
-    apiEndpoint: "/api/surrogates",
+    apiEndpoint: "/api/surrogate-donors",
     icon: <MdFamilyRestroomIcon />,
     color: "#ff6b6b",
   },
@@ -104,13 +104,7 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
 
   const config = donorConfigs[donorType || ""];
 
-  useEffect(() => {
-    if (config) {
-      fetchDonors();
-    }
-  }, [config]);
-
-  const fetchDonors = async () => {
+  const fetchDonors = useCallback(async () => {
     try {
       const dataResponse = await fetch(
         `http://localhost:3000${config.apiEndpoint}`
@@ -161,7 +155,13 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [config]);
+
+  useEffect(() => {
+    if (config) {
+      fetchDonors();
+    }
+  }, [config, fetchDonors]);
 
   const handleDocumentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];

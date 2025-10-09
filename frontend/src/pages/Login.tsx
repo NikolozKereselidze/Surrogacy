@@ -35,7 +35,7 @@ const Login = ({ isAdmin = false }: { isAdmin?: boolean }) => {
     };
 
     checkAuth();
-  }, [navigate, location]);
+  }, [navigate, location, isAdmin]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,18 +49,21 @@ const Login = ({ isAdmin = false }: { isAdmin?: boolean }) => {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ password }),
-          credentials: "include",
+          credentials: "include", // This will receive the JWT cookie
         }
       );
 
       if (res.ok) {
+        // JWT token is now set as HTTP-only cookie automatically
         const from =
           location.state?.from || (isAdmin ? "/admin" : "/find-egg-donor");
         navigate(from, { replace: true });
       } else {
-        setError("Incorrect password. Please try again.");
+        const errorData = await res.json().catch(() => ({}));
+        setError(errorData.error || "Incorrect password. Please try again.");
       }
-    } catch {
+    } catch (err) {
+      console.error("Login failed:", err);
       setError("Network error. Please try again.");
     } finally {
       setLoading(false);

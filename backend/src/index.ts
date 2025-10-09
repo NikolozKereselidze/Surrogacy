@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 import express, { Request, Response } from "express";
-import session from "express-session";
+import cookieParser from "cookie-parser";
 import blogRoutes from "./routes/blogRoutes";
 import eggDonorRoutes from "./routes/eggDonorRoutes";
 import surrogateRoutes from "./routes/surrogateRoutes";
@@ -16,54 +16,36 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
+app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "http://localhost:3001",
+    origin: [
+      "http://localhost:3001",
+      "http://localhost:3000",
+      "http://localhost:5173",
+    ],
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization", "Cookie"],
   })
 );
 
-// Create separate session stores for admin and donor
-const donorSession = session({
-  name: "donor.sid",
-  secret: process.env.SESSION_SECRET!,
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-    httpOnly: true,
-    maxAge: 60 * 60 * 1000, // 1 hour
-  },
-});
-
-const adminSession = session({
-  name: "admin.sid",
-  secret: process.env.SESSION_SECRET!,
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-    httpOnly: true,
-    maxAge: 60 * 60 * 1000, // 1 hour
-  },
-});
+// Note: Session stores removed - now using JWT-based authentication
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Hello World");
 });
 
-// Apply donor session to donor routes
-app.use("/api/egg-donors", donorSession, eggDonorRoutes);
-app.use("/api/surrogates", donorSession, surrogateRoutes);
-app.use("/api/sperm-donors", donorSession, spermDonorRoutes);
-app.use("/api/file", donorSession, fileRoutes);
-app.use("/api/auth", donorSession, authRoutes);
+// Routes - JWT authentication is handled within each route
+app.use("/api/egg-donors", eggDonorRoutes);
+app.use("/api/surrogate-donors", surrogateRoutes);
+app.use("/api/sperm-donors", spermDonorRoutes);
+app.use("/api/file", fileRoutes);
+app.use("/api/auth", authRoutes);
 app.use("/api/contact", contactRoutes);
-
-// Apply admin session to admin routes
-app.use("/api/admin-auth", adminSession, adminAuthRoutes);
-
-// Apply admin session to admin-only routes (blog management, etc.)
-app.use("/api/blog", adminSession, blogRoutes);
+app.use("/api/admin-auth", adminAuthRoutes);
+app.use("/api/blog", blogRoutes);
 
 app.listen(3000, () => {
   console.log("Server is running on port 3000");

@@ -12,31 +12,42 @@ const ProtectedRoute = ({ children, isAdmin = false }: ProtectedRouteProps) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const checkSession = async () => {
+    const checkAuth = async () => {
       try {
         const res = await fetch(
           `http://localhost:3000/api/${isAdmin ? "admin-auth" : "auth"}/check`,
           {
-            credentials: "include",
+            credentials: "include", // This will include the JWT cookie
+            headers: {
+              "Content-Type": "application/json",
+            },
           }
         );
 
         if (res.ok) {
           setLoading(false);
         } else {
+          // Clear any invalid tokens
+          document.cookie = `${
+            isAdmin ? "adminToken" : "donorToken"
+          }=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
           navigate(isAdmin ? "/admin-login" : "/login", {
             state: { from: location.pathname },
           });
         }
       } catch (err) {
         console.error("Auth check failed:", err);
+        // Clear any invalid tokens on error
+        document.cookie = `${
+          isAdmin ? "adminToken" : "donorToken"
+        }=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
         navigate(isAdmin ? "/admin-login" : "/login", {
           state: { from: location.pathname },
         });
       }
     };
 
-    checkSession();
+    checkAuth();
   }, [navigate, location, isAdmin]);
 
   if (loading) return <p>Loading...</p>;

@@ -57,7 +57,7 @@ const AdminNav = () => {
     <div className={styles.dashboardContainer}>
       <aside className={styles.sidebar}>
         <div className={styles.sidebarTitle}>
-          <span className={styles.sidebarTitleSpan}>Miracle</span> Makers
+          <span className={styles.sidebarTitleSpan} >Miracle</span> Makers
         </div>
         <div className={styles.sidebarLinks}>
           <ul className={styles.navList}>

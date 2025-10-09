@@ -17,7 +17,7 @@ const AdminDashboard = () => {
             fetch("http://localhost:3000/api/blog/count"),
             fetch("http://localhost:3000/api/egg-donors/count"),
             fetch("http://localhost:3000/api/sperm-donors/count"),
-            fetch("http://localhost:3000/api/surrogates/count"),
+            fetch("http://localhost:3000/api/surrogate-donors/count"),
           ]);
 
         const [blogData, eggData, spermData, surrogateData] = await Promise.all(
