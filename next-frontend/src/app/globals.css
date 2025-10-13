@@ -83,7 +83,8 @@ h6 {
   --blue: #22223b;
   --gray: #404040;
   --light-gray: #70798b;
-  --font-family: "Poppins", sans-serif;
+  --font-family: var(--font-noto-sans, system-ui), system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   /* Font Size System */
   --font-xs: 0.75rem; /* Error messages, small labels */
@@ -118,6 +119,30 @@ h6 {
 body {
   font-family: var(--font-family);
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+/* Language-specific fallbacks to improve glyph coverage */
+:lang(zh) {
+  font-family: "Noto Sans SC", var(--font-family);
+}
+
+:lang(he) {
+  font-family: "Noto Sans Hebrew", var(--font-family);
+}
+
+:lang(ka) {
+  font-family: "Noto Sans Georgian", var(--font-family);
+}
+
+/* Optional serif pairing for long-form content and headings */
+body {
+  font-family: var(--font-nunito-sans);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-lora);
 }
 
 * {
@@ -198,6 +223,8 @@ body {
 .swiper-button-prev,
 .swiper-button-next {
   color: var(--color-primary) !important;
+  height: var(--font-6xl) !important;
+  width: var(--font-6xl) !important;
 }
 
 .swiper-pagination-bullet {
@@ -210,11 +237,6 @@ body {
 
 .swiper-button-next {
   right: -3rem !important;
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-size: var(--font-6xl) !important;
 }
 
 @media screen and (max-width: 1023px) {

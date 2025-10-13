@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Nunito_Sans, Lora } from "next/font/google";
+
 import "@/app/globals.css";
 import I18nProvider from "@/components/I18nProvider";
 import MainLayout from "@/components/MainLayout";
@@ -11,20 +12,19 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const nunitoSans = Nunito_Sans({
+  variable: "--font-nunito-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
-  preload: true,
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
   display: "swap",
-  preload: true,
 });
-
 export const metadata: Metadata = {
   title: {
     default: "Miracle Makers - Surrogacy & Egg Donation Services",
@@ -117,7 +117,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <StructuredData />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${nunitoSans.variable} ${lora.variable}`}>
         <I18nProvider>
           <MainLayout>{children}</MainLayout>
         </I18nProvider>
