@@ -1,5 +1,6 @@
 .button {
-  background-color: var(--color-primary, #3b82f6);
+  text-decoration: none;
+  background-color: var(--color-primary, #8910f6);
   color: #fff;
   border: none;
   padding: var(--padding-sm) var(--padding-lg);
@@ -16,4 +17,3 @@
   background-color: var(--primary-hover);
   transform: scale(1.05);
 }
-

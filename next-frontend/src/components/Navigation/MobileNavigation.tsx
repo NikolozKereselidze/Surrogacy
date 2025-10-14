@@ -2,8 +2,6 @@ import NavigationList from "./NavigationList";
 import styles from "@/styles/Navigation/MobileNavigation.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
-import { IoClose } from "react-icons/io5";
-import LanguageSwitcher from "./LanguageSwitcher";
 
 const MobileNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +11,7 @@ const MobileNavigation = () => {
   return (
     <>
       <div className={styles.mobileNavButtons}>
-        <LanguageSwitcher isMobile={true} />
+        {/* <LanguageSwitcher isMobile={true} /> */}
         <GiHamburgerMenu
           onClick={toggleMenu}
           className={styles.hamburgerMenu}
@@ -22,11 +20,6 @@ const MobileNavigation = () => {
       </div>
       <div className={`${styles.overlay} ${isOpen ? styles.open : ""}`} />
       <aside className={`${styles.sidebar} ${isOpen ? styles.open : ""}`}>
-        <IoClose
-          className={styles.closeButton}
-          onClick={toggleMenu}
-          size={22}
-        />
         <NavigationList isMobile={true} />
       </aside>
     </>

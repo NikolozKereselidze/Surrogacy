@@ -27,7 +27,7 @@
 }
 
 .navigationItem {
-  font-size: var(--font-base);
+  font-size: 2px;
   color: var(--dark-blue);
   font-weight: 700;
   position: relative;

@@ -9,7 +9,10 @@ export default function I18nProvider({
   children: React.ReactNode;
 }) {
   useEffect(() => {
-    // Ensure i18n is initialized on the client side
+    // Initialize i18n on client side only
+    if (typeof window !== "undefined") {
+      // Language detection will happen automatically via i18n configuration
+    }
   }, []);
 
   return <>{children}</>;

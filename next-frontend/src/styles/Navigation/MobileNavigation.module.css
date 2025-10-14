@@ -24,14 +24,15 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 45%;
+  min-width: 30%;
   height: 100vh;
   background: #fff;
-  padding: 6.2rem 1.8rem;
+  padding: 0;
   transform: translateX(100%);
   opacity: 0;
   transition: all 0.3s;
   z-index: 10; /* above overlay */
+  overflow-y: auto;
 }
 
 .sidebar.open {
@@ -39,7 +40,6 @@
   opacity: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .sidebar > svg {
@@ -51,10 +51,4 @@
 
 .hamburgerMenu {
   cursor: pointer;
-}
-
-@media screen and (max-width: 728px) {
-  .sidebar {
-    width: 65%;
-  }
 }

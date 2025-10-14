@@ -1,6 +1,6 @@
 import styles from "../../styles/Navigation.module.css";
 import { useTranslation } from "react-i18next";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import Button from "../Button";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useState, useEffect } from "react";
@@ -48,9 +48,9 @@ const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
           <div className={styles.menuItem}>
             <a>{t("navigation.aboutUs")}</a>
             {isMobile && openSubmenu === t("navigation.aboutUs") ? (
-              <IoIosArrowUp size={18} className={styles.arrowIcon} />
-            ) : (
               <IoIosArrowDown size={18} className={styles.arrowIcon} />
+            ) : (
+              <IoIosArrowForward size={18} className={styles.arrowIcon} />
             )}
           </div>
           <ul
@@ -87,9 +87,9 @@ const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
           <div className={styles.menuItem}>
             <a>{t("navigation.surrogates")}</a>
             {isMobile && openSubmenu === t("navigation.surrogates") ? (
-              <IoIosArrowUp size={18} className={styles.arrowIcon} />
-            ) : (
               <IoIosArrowDown size={18} className={styles.arrowIcon} />
+            ) : (
+              <IoIosArrowForward size={18} className={styles.arrowIcon} />
             )}
           </div>
           <ul
@@ -127,9 +127,9 @@ const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
           <div className={styles.menuItem}>
             <a>{t("navigation.intendedParents")}</a>
             {isMobile && openSubmenu === t("navigation.intendedParents") ? (
-              <IoIosArrowUp size={18} className={styles.arrowIcon} />
-            ) : (
               <IoIosArrowDown size={18} className={styles.arrowIcon} />
+            ) : (
+              <IoIosArrowForward size={18} className={styles.arrowIcon} />
             )}
           </div>
           <ul
@@ -167,9 +167,9 @@ const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
           <div className={styles.menuItem}>
             <a>{t("navigation.eggDonors")}</a>
             {isMobile && openSubmenu === t("navigation.eggDonors") ? (
-              <IoIosArrowUp size={18} className={styles.arrowIcon} />
-            ) : (
               <IoIosArrowDown size={18} className={styles.arrowIcon} />
+            ) : (
+              <IoIosArrowForward size={18} className={styles.arrowIcon} />
             )}
           </div>
           <ul
@@ -205,9 +205,9 @@ const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
           <div className={styles.menuItem}>
             <a>{t("navigation.programs")}</a>
             {isMobile && openSubmenu === t("navigation.programs") ? (
-              <IoIosArrowUp size={18} className={styles.arrowIcon} />
-            ) : (
               <IoIosArrowDown size={18} className={styles.arrowIcon} />
+            ) : (
+              <IoIosArrowForward size={18} className={styles.arrowIcon} />
             )}
           </div>
           <ul
