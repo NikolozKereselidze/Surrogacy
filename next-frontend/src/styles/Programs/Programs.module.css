@@ -1,0 +1,61 @@
+.gametesSection {
+  align-items: flex-start;
+  gap: 4.2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.title {
+  color: var(--gray);
+}
+
+h1.title {
+  font-size: var(--font-4xl);
+}
+
+h2.title {
+  font-size: var(--font-3xl);
+}
+
+h3.title {
+  font-size: var(--font-2xl);
+}
+
+.title > span {
+  color: var(--color-primary);
+}
+
+.description,
+.list > li,
+.programList > li {
+  line-height: 1.8;
+  color: var(--light-gray);
+  list-style: none;
+  font-size: var(--font-lg);
+}
+
+.processOverview {
+  margin: 0 auto;
+}
+
+.processOverview > .title {
+  text-align: center;
+}
+
+.programList,
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.programList {
+  gap: 0.6rem;
+}
+
+.list {
+  gap: 2.2rem;
+}
