@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { FaBaby, FaUserPlus, FaGift } from "react-icons/fa";
 import MiracleCard from "../components/MiracleCard";
 import TeamCard from "../components/TeamCard";
+import StatisticsSection from "../components/StatisticsSection";
 import { getFeaturedTeamMembers } from "../data/teamMembers";
 import { useMemo } from "react";
 
@@ -96,6 +97,8 @@ const Home = () => {
           />
         </div>
       </section>
+
+      <StatisticsSection />
 
       <section className={`${styles.ourTeamSection} section`}>
         <div className="content">

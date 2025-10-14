@@ -11,6 +11,7 @@ import {
 import MiracleCard from "@/components/MiracleCard";
 import styles from "@/styles/About/WhoWeAre.module.css";
 import { useTranslation } from "react-i18next";
+import StatisticsSection from "../StatisticsSection";
 
 const WhoWeAre = () => {
   const { t } = useTranslation();
@@ -62,27 +63,13 @@ const WhoWeAre = () => {
             description={t("whoWeAre.value6Desc")}
           />
         </div>
-
-        <div className={styles.statsSection}>
-          <div className={styles.statsGrid}>
-            <div className={styles.statItem}>
-              <h3 className={styles.statNumber}>{t("whoWeAre.stat1Number")}</h3>
-              <p className={styles.statLabel}>{t("whoWeAre.stat1Label")}</p>
-            </div>
-            <div className={styles.statItem}>
-              <h3 className={styles.statNumber}>{t("whoWeAre.stat2Number")}</h3>
-              <p className={styles.statLabel}>{t("whoWeAre.stat2Label")}</p>
-            </div>
-            <div className={styles.statItem}>
-              <h3 className={styles.statNumber}>{t("whoWeAre.stat3Number")}</h3>
-              <p className={styles.statLabel}>{t("whoWeAre.stat3Label")}</p>
-            </div>
-            <div className={styles.statItem}>
-              <h3 className={styles.statNumber}>{t("whoWeAre.stat4Number")}</h3>
-              <p className={styles.statLabel}>{t("whoWeAre.stat4Label")}</p>
-            </div>
-          </div>
+      </section>
+      <section className={`${styles.statisticsSection} section`}>
+        <div className="content">
+          <h2 className="title">{t("statistics.title")}</h2>
+          <p className="subtitle">{t("statistics.subtitle")}</p>
         </div>
+        <StatisticsSection />
       </section>
     </>
   );

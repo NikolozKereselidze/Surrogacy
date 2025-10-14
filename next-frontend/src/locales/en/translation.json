@@ -566,5 +566,17 @@
       "step2": "Cultural and language support to help you navigate the local environment comfortably, with assistance available 24/7 for any questions or concerns.",
       "step3": "Peace of mind knowing that every aspect of your stay is professionally managed, from accommodation to transportation, ensuring a stress-free experience during this important time."
     }
+  },
+  "statistics": {
+    "title": "Trusted Worldwide",
+    "subtitle": "Proven results helping families achieve their dreams.",
+    "stat1Number": "1000+",
+    "stat1Label": "Successful Pregnancies",
+    "stat2Number": "50+",
+    "stat2Label": "Countries Served",
+    "stat3Number": "10+",
+    "stat3Label": "Years of Experience",
+    "stat4Number": "99%",
+    "stat4Label": "Success Rate"
   }
 }

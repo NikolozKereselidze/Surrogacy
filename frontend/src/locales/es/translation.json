@@ -566,5 +566,17 @@
       "step2": "Apoyo cultural y de idioma para ayudarte a navegar el ambiente local cómodamente, con asistencia disponible 24/7 para cualquier pregunta o preocupación.",
       "step3": "Tranquilidad sabiendo que cada aspecto de tu estadía está manejado profesionalmente, desde el alojamiento hasta el transporte, asegurando una experiencia sin estrés durante este tiempo importante."
     }
+  },
+  "statistics": {
+    "title": "Confianza Mundial",
+    "subtitle": "Resultados comprobados ayudando a las familias a lograr sus sueños.",
+    "stat1Number": "1000+",
+    "stat1Label": "Embarazos Exitosos",
+    "stat2Number": "50+",
+    "stat2Label": "Países Atendidos",
+    "stat3Number": "10+",
+    "stat3Label": "Años de Experiencia",
+    "stat4Number": "99%",
+    "stat4Label": "Tasa de Éxito"
   }
 }

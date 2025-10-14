@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { FaBaby, FaUserPlus, FaGift } from "react-icons/fa";
 import MiracleCard from "@/components/MiracleCard";
 import TeamCard from "@/components/TeamCard";
+import StatisticsSection from "@/components/StatisticsSection";
 import { getFeaturedTeamMembers } from "@/data/teamMembers";
 import { useMemo } from "react";
 
@@ -103,6 +104,14 @@ export default function Home() {
             <TeamCard key={`${member.name}-${index}`} member={member} />
           ))}
         </div>
+      </section>
+
+      <section className={`${styles.statisticsSection} section`}>
+        <div className="content">
+          <h2 className="title">{t("statistics.title")}</h2>
+          <p className="subtitle">{t("statistics.subtitle")}</p>
+        </div>
+        <StatisticsSection />
       </section>
     </div>
   );

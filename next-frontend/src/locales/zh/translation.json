@@ -555,5 +555,17 @@
       "step2": "文化和语言支持，帮助您舒适地适应当地环境，24/7提供任何问题或担忧的协助。",
       "step3": "安心知道您住宿的每个方面都得到专业管理，从住宿到交通，确保在这个重要时期无压力的体验。"
     }
+  },
+  "statistics": {
+    "title": "全球信赖",
+    "subtitle": "验证结果帮助家庭实现梦想。",
+    "stat1Number": "1000+",
+    "stat1Label": "成功妊娠",
+    "stat2Number": "50+",
+    "stat2Label": "服务国家",
+    "stat3Number": "10+",
+    "stat3Label": "年经验",
+    "stat4Number": "99%",
+    "stat4Label": "成功率"
   }
 }
