@@ -7,6 +7,8 @@ import { FaBaby, FaUserPlus, FaGift } from "react-icons/fa";
 import MiracleCard from "@/components/MiracleCard";
 import TeamCard from "@/components/TeamCard";
 import StatisticsSection from "@/components/StatisticsSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import ProgramsOverviewSection from "@/components/ProgramsOverviewSection";
 import { getFeaturedTeamMembers } from "@/data/teamMembers";
 import { useMemo } from "react";
 
@@ -47,6 +49,8 @@ export default function Home() {
           </Button>
         </div>
       </section>
+
+      <ProgramsOverviewSection />
 
       <section className={`${styles.beginYourMiracleSection} section`}>
         <div className="content">
@@ -105,6 +109,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <TestimonialsSection />
 
       <section className={`${styles.statisticsSection} section`}>
         <div className="content">

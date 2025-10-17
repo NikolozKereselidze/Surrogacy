@@ -578,5 +578,88 @@
     "stat3Label": "Years of Experience",
     "stat4Number": "99%",
     "stat4Label": "Success Rate"
+  },
+  "testimonials": {
+    "title": "What Families Say",
+    "subtitle": "Real experiences from families who achieved their dreams with us.",
+    "verified": "Verified",
+    "googleRating": "Based on 30+ Google Reviews",
+    "readMoreReviews": "Read More Reviews on Google",
+    "review1": {
+      "name": "Salome G.",
+      "text": "This is the best company in Georgia! With a highly qualified team. The founders and employees of the company are very attentive. Professionals of their case and most importantly create all kinds of comfort for patients."
+    },
+    "review2": {
+      "name": "Sara M.",
+      "text": "We're thrilled with the arrival of our little ones thanks to this great agency that helps and supports us every step of the way. We're a great family and can't wait to return to Tbilisi."
+    },
+    "review3": {
+      "name": "Miguel Angel G.",
+      "text": "A fantastic experience with Natia, Nini, and their entire team. Throughout such a complex process, they always showed us impeccable security and assurance. Our first stay there was a luxury, with every possible detail."
+    },
+    "review4": {
+      "name": "Eka A.",
+      "text": "This is a company that gives happiness to families, colors the lives of couples with the brightest colors! A team of the best specialists! Thank you for making people happy all over the world!"
+    },
+    "review5": {
+      "name": "Teo P.",
+      "text": "Professionals from head to toe! After searching and looking extensively, we decided to put ourselves in their hands, and we weren't wrong. We're already enjoying our angel, for which I will be grateful for life."
+    },
+    "review6": {
+      "name": "Keti B.",
+      "text": "The best one! Super and professional team! Highly recommended!"
+    }
+  },
+  "programsOverview": {
+    "title": "Our Programs",
+    "subtitle": "Comprehensive fertility solutions tailored to your unique journey to parenthood.",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us Today",
+    "ctaTitle": "Not Sure Which Program Is Right For You?",
+    "ctaText": "Our experienced team is here to guide you through your options and help you choose the best path forward.",
+    "program1": {
+      "title": "Surrogacy with Own Gametes",
+      "description": "Use your own eggs and sperm with a carefully selected surrogate to build your family.",
+      "features": [
+        "Use your own genetic material",
+        "Carefully matched surrogate",
+        "Full legal protection",
+        "Medical monitoring throughout"
+      ],
+      "buttonText": "Explore Own Gametes Surrogacy"
+    },
+    "program2": {
+      "title": "Surrogacy with Egg Donor",
+      "description": "Combine donor eggs with your sperm or partner's sperm for a successful pregnancy.",
+      "features": [
+        "Extensive donor database",
+        "Comprehensive genetic testing",
+        "Legal egg donation process",
+        "Full medical screening"
+      ],
+      "buttonText": "Browse Egg Donor Options"
+    },
+    "program3": {
+      "title": "Egg Freezing & Preservation",
+      "description": "Preserve your fertility for the future with our advanced egg freezing technology.",
+      "features": [
+        "Latest vitrification technology",
+        "High success rates",
+        "Long-term storage options",
+        "Flexible timing"
+      ],
+      "buttonText": "Learn About Egg Freezing"
+    },
+    "program4": {
+      "title": "VIP Concierge Services",
+      "description": "Premium support with personalized care throughout your entire fertility journey.",
+      "features": [
+        "24/7 dedicated support",
+        "Luxury accommodations",
+        "Personal coordinator",
+        "Priority scheduling"
+      ],
+      "buttonText": "Discover VIP Services"
+    }
   }
 }

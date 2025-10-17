@@ -5,6 +5,8 @@ import { FaBaby, FaUserPlus, FaGift } from "react-icons/fa";
 import MiracleCard from "../components/MiracleCard";
 import TeamCard from "../components/TeamCard";
 import StatisticsSection from "../components/StatisticsSection";
+import TestimonialsSection from "../components/TestimonialsSection";
+import ProgramsOverviewSection from "../components/ProgramsOverviewSection";
 import { getFeaturedTeamMembers } from "../data/teamMembers";
 import { useMemo } from "react";
 
@@ -98,8 +100,6 @@ const Home = () => {
         </div>
       </section>
 
-      <StatisticsSection />
-
       <section className={`${styles.ourTeamSection} section`}>
         <div className="content">
           <h2 className="title">{t("ourTeam.title")}</h2>
@@ -111,6 +111,12 @@ const Home = () => {
           ))}
         </div>
       </section>
+
+      <TestimonialsSection />
+
+      <ProgramsOverviewSection />
+
+      <StatisticsSection />
     </div>
   );
 };

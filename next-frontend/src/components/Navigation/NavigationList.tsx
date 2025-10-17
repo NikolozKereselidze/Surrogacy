@@ -18,7 +18,6 @@ const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
   const menuItems = navigationConfig(t);
 
   const toggleSubmenu = (key: string) => {
-    console.log("toggleSubmenu", key);
     setOpenSubmenu((prev) => (prev === key ? null : key));
   };
 

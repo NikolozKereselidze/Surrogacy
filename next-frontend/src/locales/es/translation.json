@@ -579,5 +579,88 @@
     "stat3Label": "Años de Experiencia",
     "stat4Number": "99%",
     "stat4Label": "Tasa de Éxito"
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen Las Familias",
+    "subtitle": "Experiencias reales de familias que lograron sus sueños con nosotros.",
+    "verified": "Verificado",
+    "googleRating": "Basado en 30+ Reseñas de Google",
+    "readMoreReviews": "Leer Más Reseñas en Google",
+    "review1": {
+      "name": "Salome G.",
+      "text": "¡Esta es la mejor empresa en Georgia! Con un equipo altamente calificado. Los fundadores y empleados de la empresa son muy atentos. Profesionales de su caso y lo más importante, crean todo tipo de comodidad para los pacientes."
+    },
+    "review2": {
+      "name": "Sara M.",
+      "text": "¡Estamos emocionados con la llegada de nuestros pequeños gracias a esta gran agencia que nos ayuda y apoya en cada paso del camino. Somos una gran familia y no podemos esperar a regresar a Tbilisi."
+    },
+    "review3": {
+      "name": "Miguel Angel G.",
+      "text": "¡Una experiencia fantástica con Natia, Nini y todo su equipo. A lo largo de un proceso tan complejo, siempre nos mostraron una seguridad y garantía impecables. Nuestra primera estancia allí fue un lujo, con cada detalle posible."
+    },
+    "review4": {
+      "name": "Eka A.",
+      "text": "¡Esta es una empresa que da felicidad a las familias, colorea las vidas de las parejas con los colores más brillantes! ¡Un equipo de los mejores especialistas! ¡Gracias por hacer feliz a la gente en todo el mundo!"
+    },
+    "review5": {
+      "name": "Teo P.",
+      "text": "¡Profesionales de pies a cabeza! Después de buscar y mirar extensivamente, decidimos ponernos en sus manos, y no nos equivocamos. Ya estamos disfrutando de nuestro ángel, por lo cual estaré agradecido de por vida."
+    },
+    "review6": {
+      "name": "Keti B.",
+      "text": "¡La mejor! ¡Equipo súper y profesional! ¡Altamente recomendado!"
+    }
+  },
+  "programsOverview": {
+    "title": "Nuestros Programas",
+    "subtitle": "Soluciones de fertilidad integrales adaptadas a tu viaje único hacia la paternidad.",
+    "learnMore": "Aprender Más",
+    "contactUs": "Contáctanos Hoy",
+    "ctaTitle": "¿No Estás Seguro de Qué Programa Es Adecuado Para Ti?",
+    "ctaText": "Nuestro equipo experimentado está aquí para guiarte a través de tus opciones y ayudarte a elegir el mejor camino a seguir.",
+    "program1": {
+      "title": "Gestación Subrogada con Propios Gametos",
+      "description": "Usa tus propios óvulos y esperma con una gestante cuidadosamente seleccionada para construir tu familia.",
+      "features": [
+        "Usa tu propio material genético",
+        "Gestante cuidadosamente seleccionada",
+        "Protección legal completa",
+        "Monitoreo médico durante todo el proceso"
+      ],
+      "buttonText": "Explorar Gestación con Propios Gametos"
+    },
+    "program2": {
+      "title": "Gestación Subrogada con Donante de Óvulos",
+      "description": "Combina óvulos de donante con tu esperma o el esperma de tu pareja para un embarazo exitoso.",
+      "features": [
+        "Base de datos extensa de donantes",
+        "Pruebas genéticas completas",
+        "Proceso legal de donación de óvulos",
+        "Evaluación médica completa"
+      ],
+      "buttonText": "Explorar Opciones de Donantes"
+    },
+    "program3": {
+      "title": "Congelación y Preservación de Óvulos",
+      "description": "Preserva tu fertilidad para el futuro con nuestra tecnología avanzada de congelación de óvulos.",
+      "features": [
+        "Tecnología de vitrificación más reciente",
+        "Altas tasas de éxito",
+        "Opciones de almacenamiento a largo plazo",
+        "Tiempo flexible"
+      ],
+      "buttonText": "Aprender Sobre Congelación"
+    },
+    "program4": {
+      "title": "Servicios VIP de Conserjería",
+      "description": "Soporte premium con atención personalizada durante todo tu viaje de fertilidad.",
+      "features": [
+        "Soporte dedicado 24/7",
+        "Alojamiento de lujo",
+        "Coordinador personal",
+        "Programación prioritaria"
+      ],
+      "buttonText": "Descubrir Servicios VIP"
+    }
   }
 }

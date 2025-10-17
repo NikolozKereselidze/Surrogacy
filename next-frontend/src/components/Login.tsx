@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import styles from "@/styles/Login.module.css";
 
-const Login = () => {
+const LoginContent = () => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -78,6 +78,25 @@ const Login = () => {
         </form>
       </div>
     </div>
+  );
+};
+
+const Login = () => {
+  return (
+    <Suspense
+      fallback={
+        <div className={styles.container}>
+          <div className={styles.formContainer}>
+            <h2 className={styles.title}>Loading...</h2>
+            <p className={styles.description}>
+              Please wait while we prepare the login form.
+            </p>
+          </div>
+        </div>
+      }
+    >
+      <LoginContent />
+    </Suspense>
   );
 };
 

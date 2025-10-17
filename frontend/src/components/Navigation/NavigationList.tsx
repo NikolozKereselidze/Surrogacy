@@ -189,11 +189,6 @@ const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
                 {t("submenu.eggDonors.whoCanApply")}
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/find-egg-donor">
-                {t("submenu.eggDonors.findDonor")}
-              </NavLink>
-            </li>
           </ul>
         </li>
         <li
@@ -248,7 +243,12 @@ const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
       </ul>
 
       <div className={styles.contactUsContainer}>
-        <Button>{t("navigation.contactUs")}</Button>
+        <Button
+          href="/find-egg-donor"
+          className={isMobile ? styles.mobileButton : ""}
+        >
+          {t("navigation.findDonors")}
+        </Button>
         {!isMobile && <LanguageSwitcher />}
       </div>
     </>

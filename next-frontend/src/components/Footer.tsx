@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <footer className={styles.footer}>
