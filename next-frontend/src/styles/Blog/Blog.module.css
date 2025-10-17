@@ -1,0 +1,83 @@
+.postContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  width: 100%;
+  max-width: 55%;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metaItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.metaItem > span,
+.date > span {
+  color: #fff;
+  font-size: var(--font-base);
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.date > svg {
+  color: #fff;
+  font-size: var(--font-base);
+}
+
+.postHeaderWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  background-color: var(--color-primary);
+}
+
+.postHeader {
+  width: 100%;
+  align-self: start;
+}
+
+.postHeader > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 100%;
+  max-width: 55%;
+}
+
+.postTitle {
+  text-align: center;
+  color: #fff;
+  font-size: var(--font-5xl);
+}
+
+.postImage {
+  width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  display: block;
+}
+
+.postContent {
+  color: var(--dark-blue);
+  line-height: 1.8;
+}
+
+.postFooter {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.backLink {
+  color: var(--color-primary);
+  font-weight: 600;
+}
