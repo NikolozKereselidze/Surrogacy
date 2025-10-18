@@ -1,5 +1,6 @@
 .donorsPageContainer {
   padding: var(--padding-3xl) var(--padding-5xl);
+  min-height: 100vh;
 }
 
 .pageHeader {

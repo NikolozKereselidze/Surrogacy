@@ -44,7 +44,7 @@ export default function Home() {
           <p className={styles.heroDescription}>
             {t("homepage.heroDescription")}
           </p>
-          <Button className={styles.heroButton}>
+          <Button className={styles.heroButton} href="#programs">
             {t("homepage.startJourneyButton")}
           </Button>
         </div>

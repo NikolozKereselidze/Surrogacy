@@ -120,6 +120,10 @@ export default function RootLayout({
       <body className={`${nunitoSans.variable} ${lora.variable}`}>
         <I18nProvider>
           <MainLayout>{children}</MainLayout>
+          <script
+            src={`//code.tidio.co/${process.env.TIDIO_CODE}.js`}
+            async
+          ></script>
         </I18nProvider>
       </body>
     </html>

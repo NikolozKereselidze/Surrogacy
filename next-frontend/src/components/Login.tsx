@@ -3,8 +3,9 @@
 import { useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import styles from "@/styles/Login.module.css";
+import { cookies } from "next/headers";
 
-const LoginContent = () => {
+const LoginContent = ({ isAdmin }: { isAdmin: boolean }) => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -19,18 +20,24 @@ const LoginContent = () => {
     setError("");
 
     try {
-      const res = await fetch("http://localhost:3000/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-        body: JSON.stringify({ password }),
-      });
+      const res = await fetch(
+        `http://localhost:3000/api/${isAdmin ? "admin-auth" : "auth"}/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+          body: JSON.stringify({ password }),
+        }
+      );
 
       if (res.ok) {
-        // Redirect to the original page or default
-        router.push(from);
+        if (isAdmin) {
+          router.push("/admin/dashboard");
+        } else {
+          router.push(from);
+        }
       } else {
         setError("Invalid password");
       }
@@ -45,9 +52,12 @@ const LoginContent = () => {
   return (
     <div className={styles.container}>
       <div className={styles.formContainer}>
-        <h2 className={styles.title}>Enter Access Password</h2>
+        <h2 className={styles.title}>
+          Enter {isAdmin ? "Admin" : "Donor"} Access Password
+        </h2>
         <p className={styles.description}>
-          Please enter the password to access donor information.
+          Please enter the password to access {isAdmin ? "admin" : "donor"}{" "}
+          information.
         </p>
 
         <form className={styles.form} onSubmit={handleSubmit}>
@@ -81,7 +91,7 @@ const LoginContent = () => {
   );
 };
 
-const Login = () => {
+const Login = ({ isAdmin }: { isAdmin: boolean }) => {
   return (
     <Suspense
       fallback={
@@ -95,7 +105,7 @@ const Login = () => {
         </div>
       }
     >
-      <LoginContent />
+      <LoginContent isAdmin={isAdmin} />
     </Suspense>
   );
 };

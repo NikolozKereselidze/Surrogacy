@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "@/styles/Contact/ContactUs.module.css";
 import Button from "@/components/Button";
 import { useTranslation } from "react-i18next";
@@ -15,6 +15,18 @@ const ContactForm = () => {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<null | "success" | "error">(null);
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
+
+  // Auto-dismiss messages after 5 seconds
+  useEffect(() => {
+    if (status) {
+      const timer = setTimeout(() => {
+        setStatus(null);
+        setFieldErrors({});
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -234,9 +246,7 @@ const ContactForm = () => {
         )}
         {status === "error" && (
           <p role="status" className={`${styles.error} ${styles.errorStatus}`}>
-            {fieldErrors.general ||
-              t("contactUs.error") ||
-              "Something went wrong."}
+            {fieldErrors.general || "Something went wrong. Please try again."}
           </p>
         )}
       </form>

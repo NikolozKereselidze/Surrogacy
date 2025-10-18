@@ -52,7 +52,7 @@ const ProgramsOverviewSection = () => {
   ];
 
   return (
-    <section className={`${styles.programsSection} section`}>
+    <section id="programs" className={`${styles.programsSection} section`}>
       <div className="content">
         <h2 className="title">{t("programsOverview.title")}</h2>
         <p className="subtitle">{t("programsOverview.subtitle")}</p>
@@ -90,7 +90,7 @@ const ProgramsOverviewSection = () => {
         <div className={styles.ctaContent}>
           <h3 className={styles.ctaTitle}>{t("programsOverview.ctaTitle")}</h3>
           <p className={styles.ctaText}>{t("programsOverview.ctaText")}</p>
-          <Button href="/contact" className={styles.ctaButton}>
+          <Button href="#contact" className={styles.ctaButton}>
             {t("programsOverview.contactUs")}
           </Button>
         </div>

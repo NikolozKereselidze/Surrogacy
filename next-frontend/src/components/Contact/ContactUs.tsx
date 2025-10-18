@@ -7,7 +7,7 @@ const ContactUs = () => {
   const { t } = useTranslation();
 
   return (
-    <section className={`${styles.contactUsSection} section`}>
+    <section id="contact" className={`${styles.contactUsSection} section`}>
       <div className="content">
         <h2 className="title">{t("contactUs.title")}</h2>
         <p className="subtitle">{t("contactUs.subtitle")}</p>
