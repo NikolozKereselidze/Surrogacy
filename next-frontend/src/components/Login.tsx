@@ -3,7 +3,6 @@
 import { useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import styles from "@/styles/Login.module.css";
-import { cookies } from "next/headers";
 
 const LoginContent = ({ isAdmin }: { isAdmin: boolean }) => {
   const [password, setPassword] = useState("");
@@ -35,8 +34,8 @@ const LoginContent = ({ isAdmin }: { isAdmin: boolean }) => {
       if (res.ok) {
         if (isAdmin) {
           router.push("/admin/dashboard");
-        } else {
-          router.push(from);
+        } else if (!isAdmin) {
+          router.push("/find-egg-donor");
         }
       } else {
         setError("Invalid password");

@@ -132,7 +132,7 @@ export default function DonorsList({
     setFilteredDonors(filtered);
   }, [applyFiltersAndSort, donors]);
 
-  if (loading) return <LoadingSpinner message="Loading donors..." />;
+  if (loading) return <LoadingSpinner size="large" />;
 
   return (
     <div className={styles.donorsPageContainer}>

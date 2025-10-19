@@ -81,10 +81,10 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
           }
           // Delete secondary images
           if (donor.databaseUser.donorImages) {
-            for (const image of donor.databaseUser.donorImages) {
-              await deleteFileFromS3(image.imagePath);
-            }
+          for (const image of donor.databaseUser.donorImages) {
+            await deleteFileFromS3(image.imagePath);
           }
+        }
         }
 
         await deleteDonor(id);

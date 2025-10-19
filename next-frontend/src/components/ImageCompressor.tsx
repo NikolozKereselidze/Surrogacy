@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useRef, useState } from "react";
 
 interface ImageCompressorProps {
@@ -32,7 +33,7 @@ const ImageCompressor: React.FC<ImageCompressorProps> = ({
       reader.readAsDataURL(file);
 
       reader.onload = (event) => {
-        const img = new Image();
+        const img = new window.Image();
         img.src = event.target?.result as string;
 
         img.onload = () => {
@@ -132,7 +133,7 @@ const ImageCompressor: React.FC<ImageCompressorProps> = ({
         <div style={{ marginTop: "10px" }}>
           <strong>Compressed Preview:</strong>
           <br />
-          <img
+          <Image
             src={preview}
             alt="Compressed"
             style={{ maxWidth: "100%", maxHeight: "200px" }}
@@ -155,7 +156,7 @@ const ImageCompressor: React.FC<ImageCompressorProps> = ({
           >
             {previews.map((preview, index) => (
               <div key={index} style={{ position: "relative" }}>
-                <img
+                <Image
                   src={preview}
                   alt={`Compressed ${index + 1}`}
                   style={{

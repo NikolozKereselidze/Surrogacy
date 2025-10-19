@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
-import "@/app/globals.css";
+import "@/app/[locale]/globals.css";
 
 export default async function ProtectedLayout({
   children,

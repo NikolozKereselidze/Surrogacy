@@ -3,6 +3,7 @@
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { Donor, DonorUrls } from "@/types/donor";
 import styles from "@/styles/Admin/AdminDashboard.module.css";
+import Image from "next/image";
 
 interface DonorTableProps {
   donors: Donor[];
@@ -42,9 +43,9 @@ const DonorTable = ({
                   }}
                 >
                   {donorUrls[donor.id]?.mainImageUrl && (
-                    <img
+                    <Image
                       className={styles.profileImage}
-                      src={donorUrls[donor.id].mainImageUrl}
+                      src={donorUrls[donor.id].mainImageUrl || ""}
                       alt="Profile"
                     />
                   )}

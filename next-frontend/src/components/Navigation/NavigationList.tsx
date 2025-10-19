@@ -7,10 +7,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navigationConfig } from "@/config/navigationConfig";
+import { useLocale } from "@/hooks/useLocale";
 
 const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
   const { t } = useTranslation();
   const location = usePathname();
+  const locale = useLocale();
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
   useEffect(() => setOpenSubmenu(null), [location]);
@@ -43,7 +45,7 @@ const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
             <div className={styles.menuItem}>
               {item.href ? (
                 <Link
-                  href={item.href}
+                  href={`/${locale}${item.href}`}
                   className={`${styles.menuButton} ${
                     isMobile ? styles.mobileMenuButton : ""
                   }`}
@@ -78,7 +80,7 @@ const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
               >
                 {item.submenu.map((sub) => (
                   <li key={sub.href}>
-                    <Link href={sub.href}>{sub.label}</Link>
+                    <Link href={`/${locale}${sub.href}`}>{sub.label}</Link>
                   </li>
                 ))}
               </ul>

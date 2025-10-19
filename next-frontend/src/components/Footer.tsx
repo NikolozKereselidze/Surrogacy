@@ -6,9 +6,12 @@ import {
   FaWhatsapp,
   FaLinkedin,
 } from "react-icons/fa";
+import Link from "next/link";
+import { useLocale } from "@/hooks/useLocale";
 
 const Footer = () => {
   const { t } = useTranslation();
+  const locale = useLocale();
 
   return (
     <footer className={styles.footer}>
@@ -18,18 +21,24 @@ const Footer = () => {
             <h4>{t("navigation.aboutUs")}</h4>
             <ul>
               <li>
-                <a href={"/our-mission"}>{t("submenu.aboutUs.ourMission")}</a>
+                <Link href={`/${locale}/our-mission`}>
+                  {t("submenu.aboutUs.ourMission")}
+                </Link>
               </li>
               <li>
-                <a href={"/who-we-are"}>{t("submenu.aboutUs.whoWeAre")}</a>
+                <Link href={`/${locale}/who-we-are`}>
+                  {t("submenu.aboutUs.whoWeAre")}
+                </Link>
               </li>
               <li>
-                <a href={"/our-team  "}>{t("submenu.aboutUs.ourTeam")}</a>
+                <Link href={`/${locale}/our-team`}>
+                  {t("submenu.aboutUs.ourTeam")}
+                </Link>
               </li>
               <li>
-                <a href={"/why-choose-us"}>
+                <Link href={`/${locale}/why-choose-us`}>
                   {t("submenu.aboutUs.whyChooseUs")}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -37,19 +46,19 @@ const Footer = () => {
             <h4>{t("navigation.surrogates")}</h4>
             <ul>
               <li>
-                <a href={"/surrogacy-process"}>
+                <Link href={`/${locale}/surrogacy-process`}>
                   {t("submenu.surrogates.surrogacyProcess")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={"/who-can-become-a-surrogate"}>
+                <Link href={`/${locale}/who-can-become-a-surrogate`}>
                   {t("submenu.surrogates.whoCanBecome")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={"/surrogate-screening"}>
+                <Link href={`/${locale}/surrogate-screening`}>
                   {t("submenu.surrogates.screeningProcess")}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -57,19 +66,19 @@ const Footer = () => {
             <h4>{t("navigation.intendedParents")}</h4>
             <ul>
               <li>
-                <a href={"/who-can-become-a-parent"}>
+                <Link href={`/${locale}/who-can-become-a-parent`}>
                   {t("submenu.intendedParents.whoCanBecome")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={"/parent-screening"}>
+                <Link href={`/${locale}/parent-screening`}>
                   {t("submenu.intendedParents.screeningProcess")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={"/support-and-counselling"}>
+                <Link href={`/${locale}/support-and-counselling`}>
                   {t("submenu.intendedParents.compensationSupport")}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -77,14 +86,14 @@ const Footer = () => {
             <h4>{t("navigation.eggDonors")}</h4>
             <ul>
               <li>
-                <a href={"/why-become-a-donor"}>
+                <Link href={`/${locale}/why-become-a-donor`}>
                   {t("submenu.eggDonors.whyBecome")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={"/who-can-become-a-donor"}>
+                <Link href={`/${locale}/who-can-become-a-donor`}>
                   {t("submenu.eggDonors.whoCanApply")}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -92,15 +101,19 @@ const Footer = () => {
             <h4>{t("navigation.programs")}</h4>
             <ul>
               <li>
-                <a href={"/own-gametes"}>{t("submenu.programs.ownGametes")}</a>
+                <Link href={`/${locale}/own-gametes`}>
+                  {t("submenu.programs.ownGametes")}
+                </Link>
               </li>
               <li>
-                <a href={"/egg-donor"}>{t("submenu.programs.eggDonor")}</a>
+                <Link href={`/${locale}/egg-donor`}>
+                  {t("submenu.programs.eggDonor")}
+                </Link>
               </li>
               <li>
-                <a href={"/egg-freezing"}>
+                <Link href={`/${locale}/egg-freezing`}>
                   {t("submenu.programs.eggFreezing")}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

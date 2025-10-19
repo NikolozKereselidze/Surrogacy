@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Nunito_Sans, Lora } from "next/font/google";
-import "@/app/globals.css";
+import "@/app/[locale]/globals.css";
 
 const nunitoSans = Nunito_Sans({
   variable: "--font-nunito-sans",

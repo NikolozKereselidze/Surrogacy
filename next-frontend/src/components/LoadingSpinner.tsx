@@ -1,30 +1,22 @@
-import "@/styles/LoadingSpinner.css";
+import styles from "@/styles/LoadingSpinner/LoadingSpinner.module.css";
 
 interface LoadingSpinnerProps {
-  message?: string;
   size?: "small" | "medium" | "large";
+  color?: string;
+  message?: string;
 }
 
 const LoadingSpinner = ({
-  message = "Loading...",
   size = "medium",
+  color = "var(--color-primary, #8910f6)",
+  message,
 }: LoadingSpinnerProps) => {
-  const sizeClasses = {
-    small: "spinner-small",
-    medium: "spinner-medium",
-    large: "spinner-large",
-  };
-
-  const textSizes = {
-    small: "text-small",
-    medium: "text-medium",
-    large: "text-large",
-  };
-
   return (
-    <div className="spinner-container">
-      <div className={`spinner ${sizeClasses[size]}`}></div>
-      <p className={textSizes[size]}>{message}</p>
+    <div className={styles.loadingContainer}>
+      <div className={`${styles.spinner} ${styles[size]}`} style={{ color }}>
+        <div className={styles.spinnerInner}></div>
+      </div>
+      {message && <div className={styles.loadingText}>{message}</div>}
     </div>
   );
 };
