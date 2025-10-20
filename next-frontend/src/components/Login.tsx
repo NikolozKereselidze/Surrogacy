@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, Suspense } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import styles from "@/styles/Login.module.css";
 
 const LoginContent = ({ isAdmin }: { isAdmin: boolean }) => {
@@ -9,9 +9,6 @@ const LoginContent = ({ isAdmin }: { isAdmin: boolean }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const router = useRouter();
-  const searchParams = useSearchParams();
-
-  const from = searchParams.get("from") || "/find-egg-donor";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,11 +31,11 @@ const LoginContent = ({ isAdmin }: { isAdmin: boolean }) => {
       if (res.ok) {
         if (isAdmin) {
           router.push("/admin/dashboard");
-        } else if (!isAdmin) {
+        } else {
           router.push("/find-egg-donor");
         }
       } else {
-        setError("Invalid password");
+        setError(res.statusText);
       }
     } catch (err) {
       console.error("Login failed:", err);
@@ -77,7 +74,6 @@ const LoginContent = ({ isAdmin }: { isAdmin: boolean }) => {
 
           <button
             id="login-button"
-            name="login-button"
             type="submit"
             className={styles.button}
             disabled={loading}

@@ -10,37 +10,33 @@ export default async function ProtectedLayout({
   const cookieStore = await cookies();
   const donorTokenCookie = cookieStore.get("donorToken");
 
-  // Check if we have the donor token cookie
-  if (!donorTokenCookie) {
-    redirect("/login");
-  }
+  let redirectPath: string | null = null;
 
   try {
-    const res = await fetch(`${process.env.API_BASE_URL}/api/auth/check`, {
-      headers: {
-        Cookie: `donorToken=${donorTokenCookie.value}`,
-      },
-      cache: "no-store",
-    });
+    // Check if we have the donor token cookie
+    if (!donorTokenCookie) {
+      redirectPath = "/login";
+    } else {
+      const res = await fetch(`${process.env.API_BASE_URL}/api/auth/check`, {
+        headers: {
+          Cookie: `donorToken=${donorTokenCookie.value}`,
+        },
+        cache: "no-store",
+      });
 
-    if (!res.ok) {
-      redirect("/login");
+      if (!res.ok) {
+        redirectPath = "/login";
+      }
     }
   } catch (error) {
     console.error("Auth check failed:", error);
-    redirect("/login");
+    redirectPath = "/login";
+  } finally {
+    // Clear resources
+    if (redirectPath) {
+      redirect(redirectPath);
+    }
   }
 
-  return (
-    <html lang="en">
-      <head>
-        <meta
-          name="description"
-          content="Compassionate surrogacy and egg donation services tailored to your journey. Expert guidance for intended parents, surrogates, and egg donors worldwide."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
-      <body>{children}</body>
-    </html>
-  );
+  return <>{children}</>;
 }
