@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "../styles/Footer.module.css";
 import { useTranslation } from "react-i18next";
 import {

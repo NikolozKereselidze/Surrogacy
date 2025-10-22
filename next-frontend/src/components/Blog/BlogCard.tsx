@@ -21,7 +21,7 @@ interface BlogPost {
   category: string;
   readTime: string;
   content: string;
-  imagePath: string; // This is your S3 **key** (e.g. 'public/blogs/uuid.png')
+  imagePath: string; 
 }
 
 interface BlogPostWithImage extends BlogPost {

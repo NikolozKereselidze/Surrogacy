@@ -47,6 +47,8 @@ const DonorTable = ({
                       className={styles.profileImage}
                       src={donorUrls[donor.id].mainImageUrl || ""}
                       alt="Profile"
+                      width={120}
+                      height={120}
                     />
                   )}
                 </div>

@@ -136,6 +136,8 @@ const ImageCompressor: React.FC<ImageCompressorProps> = ({
           <Image
             src={preview}
             alt="Compressed"
+            width={120}
+            height={120}
             style={{ maxWidth: "100%", maxHeight: "200px" }}
           />
         </div>
@@ -165,6 +167,8 @@ const ImageCompressor: React.FC<ImageCompressorProps> = ({
                     objectFit: "cover",
                     borderRadius: "4px",
                   }}
+                  width={120}
+                  height={120}
                 />
                 <button
                   type="button"

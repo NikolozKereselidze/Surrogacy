@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "@/styles/Blog/Blog.module.css";
 import { FaClock } from "react-icons/fa";
+import { MdArrowBackIosNew } from "react-icons/md";
 
 const CLOUDFRONT_DOMAIN = process.env.NEXT_PUBLIC_CLOUDFRONT_DOMAIN;
 
@@ -61,6 +62,11 @@ const BlogPost = () => {
   return (
     <>
       <div className={styles.postHeaderWrapper}>
+        <div className={styles.backLink}>
+          <MdArrowBackIosNew />
+          <Link href="/">Home</Link>
+        </div>
+
         <div className={`${styles.postHeader} section`}>
           <div className="">
             <h2 className={styles.postTitle}>{post.title}</h2>
@@ -100,12 +106,6 @@ const BlogPost = () => {
             className={styles.postContent}
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
-
-          <div className={styles.postFooter}>
-            <Link href="/blog" className={styles.backLink}>
-              ← Back to Blog
-            </Link>
-          </div>
         </div>
       </article>
     </>
