@@ -20,6 +20,28 @@ const getEggDonors = async (req: Request, res: Response) => {
   }
 };
 
+const getEggDonorById = async (req: Request, res: Response): Promise<any> => {
+  try {
+    const { id } = req.params;
+    const eggDonor = await prisma.eggDonor.findUnique({
+      where: { id },
+      include: {
+        databaseUser: {
+          include: {
+            donorImages: true,
+          },
+        },
+      },
+    });
+    if (!eggDonor) {
+      return res.status(404).json({ error: "Egg donor not found" });
+    }
+    res.json(eggDonor);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch egg donor" });
+  }
+};
+
 const getEggDonorsCount = async (req: Request, res: Response) => {
   try {
     const count = await prisma.eggDonor.count();
@@ -197,6 +219,7 @@ const deleteEggDonor = async (req: Request, res: Response): Promise<any> => {
 
 export default {
   getEggDonors,
+  getEggDonorById,
   getEggDonorsCount,
   createEggDonor,
   updateEggDonor,

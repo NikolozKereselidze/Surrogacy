@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { useState } from "react";
 import { CiFileOn } from "react-icons/ci";
+import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 
 const CLOUDFRONT_DOMAIN = import.meta.env.VITE_CLOUDFRONT_DOMAIN;
 
@@ -72,14 +73,14 @@ const Donor = () => {
                     onClick={prevImage}
                     aria-label="Previous image"
                   >
-                    ‹
+                    <MdArrowBackIos/>
                   </button>
                   <button
                     className={`${styles.navButton} ${styles.nextButton}`}
                     onClick={nextImage}
                     aria-label="Next image"
                   >
-                    ›
+                    <MdArrowForwardIos />
                   </button>
                 </>
               )}

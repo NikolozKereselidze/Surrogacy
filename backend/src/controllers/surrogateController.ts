@@ -20,6 +20,28 @@ const getSurrogates = async (req: Request, res: Response) => {
   }
 };
 
+const getSurrogateById = async (req: Request, res: Response): Promise<any> => {
+  try {
+    const { id } = req.params;
+    const surrogate = await prisma.surrogate.findUnique({
+      where: { id },
+      include: {
+        databaseUser: {
+          include: {
+            donorImages: true,
+          },
+        },
+      },
+    });
+    if (!surrogate) {
+      return res.status(404).json({ error: "Surrogate not found" });
+    }
+    res.json(surrogate);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch surrogate" });
+  }
+};
+
 const getSurrogatesCount = async (req: Request, res: Response) => {
   try {
     const count = await prisma.surrogate.count();
@@ -197,6 +219,7 @@ const deleteSurrogate = async (req: Request, res: Response): Promise<any> => {
 
 export default {
   getSurrogates,
+  getSurrogateById,
   getSurrogatesCount,
   createSurrogate,
   updateSurrogate,

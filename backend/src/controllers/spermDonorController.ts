@@ -20,6 +20,28 @@ const getSpermDonors = async (req: Request, res: Response) => {
   }
 };
 
+const getSpermDonorById = async (req: Request, res: Response): Promise<any> => {
+  try {
+    const { id } = req.params;
+    const spermDonor = await prisma.spermDonor.findUnique({
+      where: { id },
+      include: {
+        databaseUser: {
+          include: {
+            donorImages: true,
+          },
+        },
+      },
+    });
+    if (!spermDonor) {
+      return res.status(404).json({ error: "Sperm donor not found" });
+    }
+    res.json(spermDonor);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch sperm donor" });
+  }
+};
+
 const getSpermDonorsCount = async (req: Request, res: Response) => {
   try {
     const count = await prisma.spermDonor.count();
@@ -197,6 +219,7 @@ const deleteSpermDonor = async (req: Request, res: Response): Promise<any> => {
 
 export default {
   getSpermDonors,
+  getSpermDonorById,
   getSpermDonorsCount,
   createSpermDonor,
   updateSpermDonor,

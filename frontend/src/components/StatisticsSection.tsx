@@ -24,13 +24,13 @@ const StatisticsSection = () => {
   ];
 
   return (
-    <section className={`${styles.statisticsSection} section`}>
+    <section className={styles.statisticsSection}>
       <div className="content">
         <h2 className="title">{t("statistics.title")}</h2>
         <p className="subtitle">{t("statistics.subtitle")}</p>
       </div>
 
-      <div className={styles.statsGrid}>
+      <div className={`${styles.statsGrid} section`}>
         {stats.map((stat, index) => (
           <div key={index} className={styles.statItem}>
             <h3 className={styles.statNumber}>{stat.number}</h3>
