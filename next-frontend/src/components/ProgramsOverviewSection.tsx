@@ -4,9 +4,11 @@ import { useTranslation } from "react-i18next";
 import { FaDna, FaEgg, FaSnowflake, FaCrown } from "react-icons/fa";
 import Button from "@/components/Button";
 import styles from "@/styles/ProgramsOverviewSection.module.css";
+import { useLocale } from "@/hooks/useLocale";
 
 const ProgramsOverviewSection = () => {
   const { t } = useTranslation();
+  const locale = useLocale();
 
   const programs = [
     {
@@ -78,7 +80,10 @@ const ProgramsOverviewSection = () => {
             </ul>
 
             <div className={styles.programFooter}>
-              <Button href={program.href} className={styles.programButton}>
+              <Button
+                href={`/${locale}/${program.href}`}
+                className={styles.programButton}
+              >
                 {program.buttonText}
               </Button>
             </div>

@@ -275,6 +275,7 @@ const DonorForm = ({
                 id="document"
                 type="file"
                 onChange={handleDocumentChange}
+                accept=".pdf,.doc,.docx"
               />
               {/* Show current document if editing */}
               {editingDonor && donorUrls[editingDonor.id]?.documentUrl && (

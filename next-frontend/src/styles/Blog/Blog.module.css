@@ -72,23 +72,3 @@
   color: var(--dark-blue);
   line-height: 1.8;
 }
-
-.backLink {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  position: fixed;
-  top: 1.2rem;
-  left: 1.2rem;
-  background-color: var(--light-gray);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-}
-
-.backLink > svg,
-.backLink > a {
-  text-decoration: none;
-  color: #fff;
-  font-size: var(--font-base);
-  font-weight: 700;
-}

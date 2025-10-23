@@ -411,7 +411,7 @@ export default function DonorsList({
                 <Button
                   className={styles.viewProfileButton}
                   onClick={() => {
-                    router.push(`/donor/${donor.id}`);
+                    router.push(`/${donorType}/${donor.id}`);
                   }}
                 >
                   View Profile

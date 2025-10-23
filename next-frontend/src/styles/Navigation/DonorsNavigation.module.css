@@ -1,0 +1,61 @@
+.donorsNavigation {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 10px 0px;
+  position: relative;
+}
+
+.donorsNavigationContainer {
+  display: flex;
+  align-items: center;
+  padding: var(--padding-base);
+}
+
+.donorsNavigationLinks {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.backButton,
+.donorsNavigationLink > a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  text-decoration: none;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--font-sm);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.backButton:hover,
+.donorsNavigationLink > a:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.backButton:focus,
+.donorsNavigationLink > a:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.donorsNavigationLogo {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+}
+
+.donorsNavigationLogo > a {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-primary);
+}

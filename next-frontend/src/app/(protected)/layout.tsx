@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import "@/app/[locale]/globals.css";
+import DonorsNavigation from "@/components/Navigation/DonorsNavigation";
 
 export default async function ProtectedLayout({
   children,
@@ -38,5 +39,10 @@ export default async function ProtectedLayout({
     }
   }
 
-  return <>{children}</>;
+  return (
+    <>
+      <DonorsNavigation />
+      {children}
+    </>
+  );
 }

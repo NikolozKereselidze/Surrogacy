@@ -118,7 +118,9 @@ const Home = () => {
 
       <ProgramsOverviewSection />
 
-      <StatisticsSection />
+      <section className="section">
+        <StatisticsSection />
+      </section>
     </div>
   );
 };

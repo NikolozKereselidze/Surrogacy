@@ -135,6 +135,23 @@
   pointer-events: all;
 }
 
+/* Add invisible bridge to prevent hover gap */
+.desktopNavItem::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 2.6rem; /* Same as the gap */
+  background: transparent;
+  z-index: 99;
+}
+
+/* Keep submenu open when hovering over the bridge */
+.desktopNavItem:hover::after {
+  pointer-events: all;
+}
+
 .submenu li {
   font-size: var(--font-base);
   white-space: nowrap;
