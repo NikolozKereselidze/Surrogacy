@@ -16,10 +16,10 @@ const AdminDashboard = () => {
       try {
         const [blogResponse, eggResponse, spermResponse, surrogateResponse] =
           await Promise.all([
-            fetch("http://localhost:3000/api/blog/count"),
-            fetch("http://localhost:3000/api/egg-donors/count"),
-            fetch("http://localhost:3000/api/sperm-donors/count"),
-            fetch("http://localhost:3000/api/surrogate-donors/count"),
+            fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog/count`),
+            fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/egg-donors/count`),
+            fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/sperm-donors/count`),
+            fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/surrogate-donors/count`),
           ]);
 
         const [blogData, eggData, spermData, surrogateData] = await Promise.all(

@@ -1,42 +1,57 @@
-import { redirect } from "next/navigation";
-import { cookies } from "next/headers";
-import AdminNav from "./AdminNav";
+"use client";
 
-export default async function AdminLayout({
+import { useEffect, useState } from "react";
+import AdminNav from "./AdminNav";
+import { useRouter } from "next/navigation";
+import LoadingSpinner from "@/components/LoadingSpinner";
+
+export default function AdminLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const cookieStore = await cookies();
-  const adminTokenCookie = cookieStore.get("adminToken");
+  const router = useRouter();
+  const [success, setSuccess] = useState(false);
 
-  let redirectPath: string | null = null;
-
-  try {
-    // Check if we have the admin token cookie
-    if (!adminTokenCookie) {
-      redirectPath = "/login/admin";
-    } else {
-      const res = await fetch(`${process.env.API_BASE_URL}/api/admin-auth/check`, {
-        headers: {
-          Cookie: `adminToken=${adminTokenCookie.value}`,
-        },
-        cache: "no-store",
-      });
-
-      if (!res.ok) {
-        redirectPath = "/login/admin";
+  useEffect(() => {
+    checkAuth().then(({ error }) => {
+      if (error) {
+        router.push("/login/admin");
+      } else {
+        setSuccess(true);
       }
-    }
-  } catch (error) {
-    console.error("Admin auth check failed:", error);
-    redirectPath = "/login/admin";
-  } finally {
-    // Clear resources
-    if (redirectPath) {
-      redirect(redirectPath);
-    }
+    });
+  }, [router]);
+
+  if (!success) {
+    return <LoadingSpinner message="Checking authentication..." />;
   }
 
   return <AdminNav>{children}</AdminNav>;
+}
+
+async function checkAuth() {
+  try {
+    const res = await fetch(`/api/admin-auth/check`, {
+      credentials: "include",
+    });
+    const data = await res.json();
+
+    if (!res.ok) {
+      return {
+        data: null,
+        error: data.error,
+      };
+    }
+
+    return {
+      data,
+      error: null,
+    };
+  } catch (err) {
+    return {
+      data: null,
+      error: err,
+    };
+  }
 }

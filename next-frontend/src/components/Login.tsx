@@ -5,10 +5,11 @@ import { useRouter } from "next/navigation";
 import styles from "@/styles/Login.module.css";
 
 const LoginContent = ({ isAdmin }: { isAdmin: boolean }) => {
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const router = useRouter();
+  const { push } = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -16,30 +17,22 @@ const LoginContent = ({ isAdmin }: { isAdmin: boolean }) => {
     setError("");
 
     try {
-      const res = await fetch(
-        `http://localhost:3000/api/${isAdmin ? "admin-auth" : "auth"}/login`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-          body: JSON.stringify({ password }),
-        }
-      );
+      const res = await fetch(`/api/${isAdmin ? "admin-auth" : "auth"}/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ username, password }),
+      });
 
-      if (res.ok) {
-        if (isAdmin) {
-          router.push("/admin/dashboard");
-        } else {
-          router.push("/find-egg-donor");
-        }
-      } else {
-        setError(res.statusText);
+      if (!res.ok) {
+        const data = await res.json();
+        setError(data.message || "Login failed. Please try again.");
+        return;
       }
+
+      push(isAdmin ? "/admin/dashboard" : "/find-egg-donor");
     } catch (err) {
-      console.error("Login failed:", err);
-      setError("Login failed. Please try again.");
+      setError(`${error}`);
     } finally {
       setLoading(false);
     }
@@ -49,14 +42,25 @@ const LoginContent = ({ isAdmin }: { isAdmin: boolean }) => {
     <div className={styles.container}>
       <div className={styles.formContainer}>
         <h2 className={styles.title}>
-          Enter {isAdmin ? "Admin" : "Donor"} Access Password
+          Enter {isAdmin ? "Admin" : "Donor"} Access Details
         </h2>
         <p className={styles.description}>
-          Please enter the password to access {isAdmin ? "admin" : "donor"}{" "}
-          information.
+          Please enter the username and password to access{" "}
+          {isAdmin ? "admin" : "donor"} information.
         </p>
 
         <form className={styles.form} onSubmit={handleSubmit}>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Enter username"
+            required
+            className={styles.input}
+          />
+
           <input
             id="password"
             name="password"

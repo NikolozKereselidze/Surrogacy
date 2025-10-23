@@ -1,42 +1,33 @@
-import { redirect } from "next/navigation";
-import { cookies } from "next/headers";
+"use client";
 import "@/app/[locale]/globals.css";
 import DonorsNavigation from "@/components/Navigation/DonorsNavigation";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import LoadingSpinner from "@/components/LoadingSpinner";
 
-export default async function ProtectedLayout({
+export default function ProtectedLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const cookieStore = await cookies();
-  const donorTokenCookie = cookieStore.get("donorToken");
+  const router = useRouter();
+  const [success, setSuccess] = useState<boolean>(false);
 
-  let redirectPath: string | null = null;
+  useEffect(() => {
+    (async () => {
+      const { data, error } = await checkAuth();
 
-  try {
-    // Check if we have the donor token cookie
-    if (!donorTokenCookie) {
-      redirectPath = "/login";
-    } else {
-      const res = await fetch(`${process.env.API_BASE_URL}/api/auth/check`, {
-        headers: {
-          Cookie: `donorToken=${donorTokenCookie.value}`,
-        },
-        cache: "no-store",
-      });
-
-      if (!res.ok) {
-        redirectPath = "/login";
+      if (error) {
+        router.push("/login");
+        return;
       }
-    }
-  } catch (error) {
-    console.error("Auth check failed:", error);
-    redirectPath = "/login";
-  } finally {
-    // Clear resources
-    if (redirectPath) {
-      redirect(redirectPath);
-    }
+
+      setSuccess(true);
+    })();
+  }, [router]);
+
+  if (!success) {
+    return <LoadingSpinner message="Checking authentication..." />;
   }
 
   return (
@@ -45,4 +36,30 @@ export default async function ProtectedLayout({
       {children}
     </>
   );
+}
+
+async function checkAuth() {
+  try {
+    const res = await fetch(`/api/auth/check`, {
+      credentials: "include",
+    });
+    const data = await res.json();
+
+    if (!res.ok) {
+      return {
+        data: null,
+        error: data.error,
+      };
+    }
+
+    return {
+      data,
+      error: null,
+    };
+  } catch (err) {
+    return {
+      data: null,
+      error: err,
+    };
+  }
 }

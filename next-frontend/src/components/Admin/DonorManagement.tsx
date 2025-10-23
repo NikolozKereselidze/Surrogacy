@@ -39,8 +39,8 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
   const handleSubmit = async (data: Record<string, unknown>) => {
     try {
       const url = editingDonor
-        ? `http://localhost:3000${config.apiEndpoint}/${editingDonor.id}`
-        : `http://localhost:3000${config.apiEndpoint}`;
+        ? `${process.env.NEXT_PUBLIC_API_BASE_URL}${config.apiEndpoint}/${editingDonor.id}`
+        : `${process.env.NEXT_PUBLIC_API_BASE_URL}${config.apiEndpoint}`;
 
       const method = editingDonor ? "PUT" : "POST";
 

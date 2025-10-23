@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "npx prisma generate && tsc",
+    "start": "npx prisma migrate deploy && node dist/index.js",
     "dev": "nodemon src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npx prisma generate",
+    "migrate": "npx prisma migrate deploy"
   },
   "keywords": [],
   "author": "",
@@ -32,7 +36,7 @@
   "devDependencies": {
     "@types/dotenv": "^6.1.1",
     "@types/express": "^5.0.3",
-    "@types/node": "^24.0.10",
+    "@types/node": "^24.9.1",
     "@types/nodemailer": "^7.0.1",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",

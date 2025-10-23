@@ -36,7 +36,7 @@ const BlogPost = () => {
     if (!id) return;
     const fetchPost = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/api/blog/${id}`);
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog/${id}`);
         if (!res.ok) throw new Error("Failed to fetch blog post");
         const data: BlogPost = await res.json();
         setPost(data);

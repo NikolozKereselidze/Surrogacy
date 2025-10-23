@@ -33,7 +33,7 @@ const BlogCard = () => {
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
-      const res = await fetch("http://localhost:3000/api/blog");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog`);
       const data: BlogPost[] = await res.json();
 
       // Generate CloudFront URLs for images

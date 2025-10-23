@@ -9,9 +9,13 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@types/cookie": "^0.6.0",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/swiper": "^5.4.3",
+    "cookie": "^1.0.2",
     "i18next": "^25.5.3",
     "i18next-browser-languagedetector": "^8.2.0",
+    "jsonwebtoken": "^9.0.2",
     "next": "15.5.4",
     "next-i18next": "^15.4.2",
     "react": "19.1.0",

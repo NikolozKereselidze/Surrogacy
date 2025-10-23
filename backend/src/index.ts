@@ -8,12 +8,14 @@ import surrogateRoutes from "./routes/surrogateRoutes";
 import spermDonorRoutes from "./routes/spermDonorRoutes";
 import cors from "cors";
 import fileRoutes from "./routes/fileRoutes";
-import authRoutes from "./routes/auth";
-import adminAuthRoutes from "./routes/adminAuth";
 import contactRoutes from "./routes/contactRoutes";
 
 dotenv.config();
 const app = express();
+
+const PORT = process.env.PORT || 3000;
+
+app.set("trust proxy", 1);
 
 app.use(express.json());
 app.use(cookieParser());
@@ -21,8 +23,8 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: [
+      "https://surrogacy-theta.vercel.app",
       "http://localhost:3001",
-      "http://localhost:3000",
       "http://localhost:5173",
     ],
     credentials: true,
@@ -42,11 +44,9 @@ app.use("/api/egg-donors", eggDonorRoutes);
 app.use("/api/surrogate-donors", surrogateRoutes);
 app.use("/api/sperm-donors", spermDonorRoutes);
 app.use("/api/file", fileRoutes);
-app.use("/api/auth", authRoutes);
 app.use("/api/contact", contactRoutes);
-app.use("/api/admin-auth", adminAuthRoutes);
 app.use("/api/blog", blogRoutes);
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("Server is running on port 3000");
 });
