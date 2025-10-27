@@ -1,20 +1,21 @@
 .donorsNavigation {
-  background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 10px 0px;
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   position: relative;
+  border-bottom: 2px solid var(--color-primary);
 }
 
 .donorsNavigationContainer {
   display: flex;
   align-items: center;
-  padding: var(--padding-base);
+  justify-content: space-between;
+  padding: var(--padding-md) var(--padding-xl);
 }
 
 .donorsNavigationLinks {
   display: flex;
   align-items: center;
-  gap: var(--gap-2xl);
-  margin: 0 auto;
+  gap: var(--gap-lg);
 }
 
 .backButton,
@@ -22,40 +23,92 @@
   display: flex;
   align-items: center;
   gap: var(--gap-base);
-  background: none;
+  background: var(--color-primary);
   text-decoration: none;
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  border: none;
+  color: white;
+  padding: var(--padding-sm) var(--padding-md);
+  border-radius: var(--gap-base);
   cursor: pointer;
   font-size: var(--font-sm);
-  font-weight: 500;
-  transition: all 0.2s ease;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(137, 16, 246, 0.2);
 }
 
 .backButton:hover,
 .donorsNavigationLink > a:hover {
-  background-color: var(--color-primary);
-  color: white;
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(137, 16, 246, 0.3);
+}
+
+.backButton:active,
+.donorsNavigationLink > a:active {
+  transform: translateY(0);
 }
 
 .backButton:focus,
 .donorsNavigationLink > a:focus {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
+  outline: var(--gap-xs) solid var(--color-primary);
+  outline-offset: var(--gap-xs);
 }
 
 .donorsNavigationLogo {
-  position: absolute;
-  top: 50%;
-  left: 2rem;
-  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
 }
 
 .donorsNavigationLogo > a {
-  font-size: var(--font-lg);
+  font-size: var(--font-xl);
   font-weight: 700;
   text-decoration: none;
   color: var(--color-primary);
+  transition: color 0.2s ease;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--primary-hover) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.donorsNavigationLogo > a:hover {
+  background: linear-gradient(
+    135deg,
+    var(--primary-hover) 0%,
+    var(--color-primary) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .donorsNavigationContainer {
+    padding: var(--padding-sm) var(--padding-base);
+  }
+
+  .donorsNavigationLogo > a {
+    font-size: var(--font-base);
+  }
+
+  .donorsNavigationLinks {
+    gap: var(--gap-base);
+  }
+
+  .backButton,
+  .donorsNavigationLink > a {
+    padding: var(--padding-xs) var(--padding-sm);
+    font-size: var(--font-xs);
+    gap: var(--gap-xs);
+  }
+
+  .backButton > svg,
+  .donorsNavigationLink > a > svg {
+    font-size: var(--font-base);
+  }
 }
