@@ -108,9 +108,9 @@ const SurrogacyProcess = () => {
 
         {/* Timeline Section */}
         <section className={styles.timelineSection}>
-          <h2 className={styles.timelineTitle}>
-            {t("surrogacyProcess.timelineTitle")}
-          </h2>
+          <div className="content">
+            <h2 className="title">{t("surrogacyProcess.timelineTitle")}</h2>
+          </div>
           <div className={styles.timeline}>
             <div className={styles.timelineItem}>
               <div className={styles.timelineIcon}>
@@ -156,9 +156,9 @@ const SurrogacyProcess = () => {
 
         {/* Support Section */}
         <section className={styles.supportSection}>
-          <h2 className={styles.supportTitle}>
-            {t("surrogacyProcess.supportTitle")}
-          </h2>
+          <div className="content">
+            <h2 className="title">{t("surrogacyProcess.supportTitle")}</h2>
+          </div>
           <div className={styles.supportGrid}>
             <SupportCard
               title={t("surrogacyProcess.support1Title")}

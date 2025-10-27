@@ -16,7 +16,7 @@
 .teamGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: var(--gap-8xl);
 }
 
 .teamCard {
@@ -72,7 +72,7 @@
 
 .teamContact {
   display: flex;
-  gap: 1rem;
+  gap: var(--gap-2xl);
   margin-top: 1rem;
 }
 
@@ -103,7 +103,7 @@
 .valuesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: var(--gap-8xl);
 }
 
 .valueCard {

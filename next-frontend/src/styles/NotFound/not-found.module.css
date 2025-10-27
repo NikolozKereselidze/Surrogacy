@@ -41,7 +41,7 @@
 
 .actions {
   display: flex;
-  gap: 20px;
+  gap: var(--gap-2xl);
   justify-content: center;
   flex-wrap: wrap;
 }

@@ -39,14 +39,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.2rem;
+  gap: var(--gap-3xl);
 }
 
 /* Vision Section */
 .visionGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: var(--gap-8xl);
 }
 
 .visionItem {
@@ -82,7 +82,7 @@
 .commitmentGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: var(--gap-8xl);
 }
 
 @media screen and (max-width: 1280px) {

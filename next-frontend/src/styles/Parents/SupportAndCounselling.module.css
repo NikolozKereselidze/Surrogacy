@@ -1,5 +1,5 @@
 .cards {
   display: flex;
-  gap: 1.8rem;
+  gap: var(--gap-7xl);
   flex-wrap: wrap;
 }

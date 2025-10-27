@@ -6,7 +6,7 @@
   padding: 0 var(--padding-2xl);
   display: flex;
   flex-wrap: wrap;
-  gap: 1.4rem;
+  gap: var(--gap-4xl);
   background: #eeeeee;
   background-clip: border-box;
   border-radius: 20px;
@@ -71,7 +71,7 @@
 .thumbnailGallery {
   display: flex;
   width: 100%;
-  gap: 10px;
+  gap: var(--gap-base);
   padding: var(--padding-md) 0;
   overflow-x: auto;
   align-items: center;
@@ -126,7 +126,7 @@
   padding: var(--padding-md) 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--gap-2xl);
 }
 
 .donorAvailability {
@@ -173,13 +173,13 @@
 .attributes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-  gap: 15px;
+  gap: var(--gap-xl);
 }
 
 .attribute {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: var(--gap-xl);
   padding: var(--padding-sm);
   background: #fff;
   border-radius: 0.8rem;
@@ -202,7 +202,7 @@
   width: fit-content;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: var(--gap-sm);
   text-decoration: none;
   color: var(--color-primary);
   font-weight: 600;

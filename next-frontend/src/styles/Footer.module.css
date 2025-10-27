@@ -5,7 +5,7 @@
 .footerLinksGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  gap: 2rem;
+  gap: var(--gap-8xl);
   width: 100%;
   justify-content: space-between;
 }
@@ -15,7 +15,7 @@
   flex-direction: column;
   padding: var(--padding-5xl);
   padding-bottom: 1.8rem;
-  gap: 2rem;
+  gap: var(--gap-8xl);
 }
 
 .footerLinksGrid h4 {
@@ -29,7 +29,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: var(--gap-sm);
 }
 
 .footerLinksGrid a {
@@ -60,7 +60,7 @@
 
 .socialsIcons {
   display: flex;
-  gap: 1rem;
+  gap: var(--gap-2xl);
 }
 
 .socialsIcons a {
@@ -75,7 +75,7 @@
 
 .copyrightLinks {
   display: flex;
-  gap: 1rem;
+  gap: var(--gap-2xl);
 }
 
 .copyrightLinks a,

@@ -23,11 +23,8 @@
 }
 
 .heroContent {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  display: flex;
+  gap: var(--padding-lg);
   align-items: center;
   position: relative;
   z-index: 1;
@@ -48,13 +45,13 @@
 .heroText {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--gap-8xl);
 }
 
 .heroTitleContent {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--gap-2xl);
 }
 
 .heroHighlight {
@@ -63,7 +60,7 @@
   padding: var(--padding-lg);
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: var(--gap-2xl);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -110,7 +107,7 @@
 .requirementsGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: var(--gap-8xl);
   margin: 0 auto;
 }
 
@@ -148,7 +145,7 @@
 .stepContent {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: var(--gap-md);
   background: white;
   padding: var(--padding-xl);
   border-radius: 1rem;
@@ -197,6 +194,60 @@
 .supportGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: var(--gap-8xl);
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .heroTitle {
+    font-size: var(--font-3xl);
+  }
+
+  .imagePlaceholder {
+    width: 200px;
+    height: 200px;
+  }
+
+  .stepNumber {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroContent {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .heroTitle {
+    font-size: var(--font-xl);
+  }
+
+  .heroSubtitle {
+    font-size: var(--font-base);
+  }
+
+  .heroHighlight {
+    padding: var(--padding-base);
+  }
+
+  .heroIcon {
+    font-size: var(--font-2xl);
+  }
+
+  .imagePlaceholder {
+    width: 100px;
+    height: 100px;
+  }
+
+  .stepNumber {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .stepContent {
+    margin: 0;
+  }
 }

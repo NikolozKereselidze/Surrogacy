@@ -7,7 +7,7 @@
 .storyContent {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: var(--gap-3xl);
   background: white;
   padding: var(--padding-3xl);
   border-radius: 1rem;
@@ -30,7 +30,7 @@
 .valuesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 2rem;
+  gap: var(--gap-8xl);
   width: 100%;
 }
 
@@ -42,7 +42,7 @@
 .statsGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: var(--gap-8xl);
   margin-top: 2rem;
 }
 
@@ -61,7 +61,7 @@
 }
 
 .statNumber {
-  font-size: var(--font-7xl);
+  font-size: var(--font-2xl);
   font-weight: 700;
   color: var(--color-primary);
   margin-bottom: 0.5rem;

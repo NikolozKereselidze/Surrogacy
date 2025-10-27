@@ -7,14 +7,14 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 1.2rem;
+  gap: var(--gap-3xl);
   z-index: 1;
 }
 
 .testimonialCard {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: var(--gap-xl);
   height: 100%;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 1.2rem;
@@ -30,7 +30,7 @@
 
 .stars {
   display: flex;
-  gap: 4px;
+  gap: var(--gap-xs);
 }
 
 .star {

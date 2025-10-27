@@ -115,6 +115,26 @@ h6 {
   --padding-3xl: 3rem; /* Huge padding - page sections */
   --padding-4xl: 3.6rem; /* Massive padding - full page sections */
   --padding-5xl: 4.2rem; /* Enormous padding - full page sections */
+
+  /* Gap System */
+  --gap-none: 0; /* No gap */
+  --gap-xs: 0.25rem; /* Extra small gap - tight spacing (4px) */
+  --gap-sm: 0.4rem; /* Small gap - compact spacing */
+  --gap-base: 0.5rem; /* Base gap - standard spacing */
+  --gap-md: 0.6rem; /* Medium gap - regular spacing */
+  --gap-lg: 0.75rem; /* Large gap - generous spacing */
+  --gap-xl: 0.8rem; /* Extra large gap - spacious layout */
+  --gap-2xl: 1rem; /* Double large gap - section spacing */
+  --gap-3xl: 1.2rem; /* Triple large gap - major sections */
+  --gap-4xl: 1.4rem; /* Quadruple large gap - hero sections */
+  --gap-5xl: 1.5rem; /* Large section gaps */
+  --gap-6xl: 1.6rem; /* Extra large section gaps */
+  --gap-7xl: 1.8rem; /* Spacious section gaps */
+  --gap-8xl: 2rem; /* Double spacious section gaps */
+  --gap-9xl: 2.2rem; /* Very spacious section gaps */
+  --gap-10xl: 2.4rem; /* Extra spacious section gaps */
+  --gap-11xl: 3rem; /* Maximum section gaps */
+  --gap-12xl: 4.2rem; /* Hero section gaps */
 }
 
 body {
@@ -158,14 +178,14 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: var(--gap-11xl);
 }
 
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
+  gap: var(--gap-md);
 }
 
 .title {
@@ -196,7 +216,7 @@ h3 {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: var(--gap-5xl);
 }
 
 .processTimeline::before {
@@ -269,6 +289,25 @@ h3 {
     --padding-3xl: 2.8rem; /* Tablet page sections */
     --padding-4xl: 3.2rem; /* Tablet full page sections */
     --padding-5xl: 3.8rem; /* Tablet full page sections */
+
+    /* Responsive Gap - Tablet */
+    --gap-xs: 0.2rem; /* Tablet extra small gap */
+    --gap-sm: 0.35rem; /* Tablet small gap */
+    --gap-base: 0.45rem; /* Tablet base gap */
+    --gap-md: 0.5rem; /* Tablet medium gap */
+    --gap-lg: 0.65rem; /* Tablet large gap */
+    --gap-xl: 0.7rem; /* Tablet extra large gap */
+    --gap-2xl: 0.85rem; /* Tablet double large gap */
+    --gap-3xl: 1rem; /* Tablet triple large gap */
+    --gap-4xl: 1.2rem; /* Tablet quadruple large gap */
+    --gap-5xl: 1.3rem; /* Tablet large section gaps */
+    --gap-6xl: 1.4rem; /* Tablet extra large section gaps */
+    --gap-7xl: 1.5rem; /* Tablet spacious section gaps */
+    --gap-8xl: 1.6rem; /* Tablet double spacious section gaps */
+    --gap-9xl: 1.7rem; /* Tablet very spacious section gaps */
+    --gap-10xl: 1.8rem; /* Tablet extra spacious section gaps */
+    --gap-11xl: 2rem; /* Tablet maximum section gaps */
+    --gap-12xl: 2.5rem; /* Tablet hero section gaps */
   }
 }
 
@@ -302,6 +341,25 @@ h3 {
     --padding-3xl: 1.6rem; /* Mobile large page sections */
     --padding-4xl: 1.8rem; /* Mobile large full page sections */
     --padding-5xl: 2rem; /* Mobile large full page sections */
+
+    /* Responsive Gap - Mobile Large */
+    --gap-xs: 0.15rem; /* Mobile large extra small gap */
+    --gap-sm: 0.3rem; /* Mobile large small gap */
+    --gap-base: 0.4rem; /* Mobile large base gap */
+    --gap-md: 0.45rem; /* Mobile large medium gap */
+    --gap-lg: 0.6rem; /* Mobile large large gap */
+    --gap-xl: 0.65rem; /* Mobile large extra large gap */
+    --gap-2xl: 0.75rem; /* Mobile large double large gap */
+    --gap-3xl: 0.9rem; /* Mobile large triple large gap */
+    --gap-4xl: 1rem; /* Mobile large quadruple large gap */
+    --gap-5xl: 1.1rem; /* Mobile large large section gaps */
+    --gap-6xl: 1.2rem; /* Mobile large extra large section gaps */
+    --gap-7xl: 1.3rem; /* Mobile large spacious section gaps */
+    --gap-8xl: 1.4rem; /* Mobile large double spacious section gaps */
+    --gap-9xl: 1.5rem; /* Mobile large very spacious section gaps */
+    --gap-10xl: 1.6rem; /* Mobile large extra spacious section gaps */
+    --gap-11xl: 1.8rem; /* Mobile large maximum section gaps */
+    --gap-12xl: 2rem; /* Mobile large hero section gaps */
   }
 }
 
@@ -336,6 +394,25 @@ h3 {
     --padding-3xl: 1.4rem; /* Mobile page sections */
     --padding-4xl: 1.6rem; /* Mobile full page sections */
     --padding-5xl: 1.8rem; /* Mobile full page sections */
+
+    /* Responsive Gap - Mobile Small */
+    --gap-xs: 0.15rem; /* Mobile small extra small gap */
+    --gap-sm: 0.25rem; /* Mobile small small gap */
+    --gap-base: 0.35rem; /* Mobile small base gap */
+    --gap-md: 0.4rem; /* Mobile small medium gap */
+    --gap-lg: 0.5rem; /* Mobile small large gap */
+    --gap-xl: 0.55rem; /* Mobile small extra large gap */
+    --gap-2xl: 0.65rem; /* Mobile small double large gap */
+    --gap-3xl: 0.75rem; /* Mobile small triple large gap */
+    --gap-4xl: 0.85rem; /* Mobile small quadruple large gap */
+    --gap-5xl: 0.95rem; /* Mobile small large section gaps */
+    --gap-6xl: 1rem; /* Mobile small extra large section gaps */
+    --gap-7xl: 1.1rem; /* Mobile small spacious section gaps */
+    --gap-8xl: 1.2rem; /* Mobile small double spacious section gaps */
+    --gap-9xl: 1.3rem; /* Mobile small very spacious section gaps */
+    --gap-10xl: 1.4rem; /* Mobile small extra spacious section gaps */
+    --gap-11xl: 1.5rem; /* Mobile small maximum section gaps */
+    --gap-12xl: 1.6rem; /* Mobile small hero section gaps */
   }
 }
 
@@ -369,6 +446,25 @@ h3 {
     --padding-3xl: 3.2rem; /* Large desktop page sections */
     --padding-4xl: 3.8rem; /* Large desktop full page sections */
     --padding-5xl: 4.5rem; /* Large desktop full page sections */
+
+    /* Responsive Gap - Large Desktop */
+    --gap-xs: 0.3rem; /* Large desktop extra small gap */
+    --gap-sm: 0.45rem; /* Large desktop small gap */
+    --gap-base: 0.55rem; /* Large desktop base gap */
+    --gap-md: 0.65rem; /* Large desktop medium gap */
+    --gap-lg: 0.8rem; /* Large desktop large gap */
+    --gap-xl: 0.85rem; /* Large desktop extra large gap */
+    --gap-2xl: 1.1rem; /* Large desktop double large gap */
+    --gap-3xl: 1.375rem; /* Large desktop triple large gap */
+    --gap-4xl: 1.5rem; /* Large desktop quadruple large gap */
+    --gap-5xl: 1.625rem; /* Large desktop large section gaps */
+    --gap-6xl: 1.75rem; /* Large desktop extra large section gaps */
+    --gap-7xl: 1.875rem; /* Large desktop spacious section gaps */
+    --gap-8xl: 2.125rem; /* Large desktop double spacious section gaps */
+    --gap-9xl: 2.375rem; /* Large desktop very spacious section gaps */
+    --gap-10xl: 2.5rem; /* Large desktop extra spacious section gaps */
+    --gap-11xl: 3.125rem; /* Large desktop maximum section gaps */
+    --gap-12xl: 4.625rem; /* Large desktop hero section gaps */
   }
 }
 

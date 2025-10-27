@@ -1,4 +1,4 @@
-import styles from "@/styles/Navigation/Navigation.module.css";
+import styles from "@/styles/Navigation/NavigationList.module.css";
 import { useTranslation } from "react-i18next";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import Button from "@/components/Button";
@@ -9,7 +9,13 @@ import { usePathname } from "next/navigation";
 import { navigationConfig } from "@/config/navigationConfig";
 import { useLocale } from "@/hooks/useLocale";
 
-const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
+const NavigationList = ({
+  isMobile,
+  onLinkClick,
+}: {
+  isMobile?: boolean;
+  onLinkClick?: () => void;
+}) => {
   const { t } = useTranslation();
   const location = usePathname();
   const locale = useLocale();
@@ -49,6 +55,7 @@ const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
                   className={`${styles.menuButton} ${
                     isMobile ? styles.mobileMenuButton : ""
                   }`}
+                  onClick={isMobile ? onLinkClick : undefined}
                 >
                   {item.label}
                 </Link>
@@ -80,7 +87,12 @@ const NavigationList = ({ isMobile }: { isMobile?: boolean }) => {
               >
                 {item.submenu.map((sub) => (
                   <li key={sub.href}>
-                    <Link href={`/${locale}${sub.href}`}>{sub.label}</Link>
+                    <Link
+                      href={`/${locale}${sub.href}`}
+                      onClick={isMobile ? onLinkClick : undefined}
+                    >
+                      {sub.label}
+                    </Link>
                   </li>
                 ))}
               </ul>

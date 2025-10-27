@@ -1,7 +1,7 @@
 .postContainer {
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: var(--gap-7xl);
   width: 100%;
   max-width: 55%;
   position: relative;
@@ -10,7 +10,7 @@
 .meta {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--gap-base);
 }
 
 .metaItem {
@@ -27,7 +27,7 @@
 .date {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--gap-base);
 }
 
 .date > svg {
@@ -38,7 +38,7 @@
 .postHeaderWrapper {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: var(--gap-6xl);
   background-color: var(--color-primary);
 }
 
@@ -50,7 +50,7 @@
 .postHeader > div {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: var(--gap-6xl);
   width: 100%;
   max-width: 55%;
 }

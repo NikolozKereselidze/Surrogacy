@@ -6,13 +6,13 @@
 .processGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: var(--gap-8xl);
 }
 
 .processStep {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: var(--gap-3xl);
   flex: 1 1 16rem;
   background: white;
   border-radius: 1rem;
@@ -74,7 +74,7 @@
   padding: var(--padding-xs) 0;
   color: var(--gray);
   position: relative;
-  padding-left: 1.5rem;
+  padding-left: var(--padding-xl);
 }
 
 .stepList li::before {
@@ -88,10 +88,9 @@
 /* Timeline Section */
 .timelineSection {
   width: 100%;
-  max-width: 70%;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: var(--gap-5xl);
 }
 
 .timelineTitle {
@@ -103,10 +102,10 @@
 
 .timeline {
   position: relative;
-  padding-left: 2rem;
+  padding-left: var(--padding-lg);
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: var(--padding-base);
 }
 
 .timeline::before {
@@ -126,13 +125,13 @@
 .timelineItem {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--gap-base);
   position: relative;
   background: white;
   border-radius: 1rem;
   padding: var(--padding-lg);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  margin-left: 2rem;
+  margin-left: var(--padding-lg);
 }
 
 .timelineItem::before {
@@ -140,8 +139,8 @@
   position: absolute;
   left: -2rem;
   top: 1.5rem;
-  width: 1rem;
-  height: 1rem;
+  width: var(--font-base);
+  height: var(--font-base);
   background: var(--color-primary);
   border-radius: 50%;
   border: 3px solid white;
@@ -149,14 +148,14 @@
 }
 
 .timelineIcon {
-  font-size: var(--font-4xl);
+  font-size: var(--font-xl);
   color: var(--color-primary);
 }
 
 .timelineContent {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--gap-base);
 }
 
 .timelineContent p {
@@ -170,7 +169,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: var(--gap-5xl);
 }
 
 .supportTitle {
@@ -183,14 +182,14 @@
 .supportGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: var(--gap-8xl);
 }
 
 .supportCard {
   flex: 1 1 16rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--gap-2xl);
   background: white;
   border-radius: 1rem;
   padding: var(--padding-xl);
@@ -219,10 +218,4 @@
   font-size: var(--font-base);
   line-height: 1.6;
   color: var(--gray);
-}
-
-@media screen and (max-width: 1024px) {
-  .timelineSection {
-    max-width: 100%;
-  }
 }

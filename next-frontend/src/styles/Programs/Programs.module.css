@@ -1,12 +1,12 @@
 .gametesSection {
   align-items: flex-start;
-  gap: 4.2rem;
+  gap: var(--gap-6xl);
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: var(--gap-3xl);
 }
 
 .title {
@@ -53,9 +53,5 @@ h3.title {
 }
 
 .programList {
-  gap: 0.6rem;
-}
-
-.list {
-  gap: 2.2rem;
+  gap: var(--gap-md);
 }

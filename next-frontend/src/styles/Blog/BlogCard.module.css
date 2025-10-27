@@ -1,7 +1,7 @@
 .blogGrid {
   position: relative;
   display: flex;
-  gap: 2rem;
+  gap: var(--gap-8xl);
   width: 100%;
 }
 
@@ -61,12 +61,12 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 0.8rem;
+  gap: var(--gap-xl);
 }
 
 .blogMeta {
   display: flex;
-  gap: 1rem;
+  gap: var(--gap-2xl);
 
   font-size: 0.8rem;
   color: #666;
@@ -76,7 +76,7 @@
 .blogReadTime {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: var(--gap-sm);
 }
 
 .blogTitle {

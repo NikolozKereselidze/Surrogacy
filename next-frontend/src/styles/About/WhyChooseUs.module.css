@@ -20,7 +20,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 2rem;
+  gap: var(--gap-8xl);
 }
 
 .reasonCard {
@@ -33,7 +33,7 @@
   border: 2px solid transparent;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--gap-2xl);
 }
 
 .reasonCard:hover {
@@ -63,13 +63,13 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 2rem;
+  gap: var(--gap-8xl);
 }
 
 .comparisonCard {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--gap-2xl);
   background: white;
   padding: var(--padding-xl);
   border-radius: 1rem;

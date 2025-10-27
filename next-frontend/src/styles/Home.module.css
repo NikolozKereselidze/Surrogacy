@@ -19,10 +19,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.45),
-    rgba(0, 0, 0, 0.55)
-  ); /* Gradient overlay */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+
   z-index: 1;
 }
 
@@ -33,7 +31,7 @@
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: var(--gap-3xl);
   width: 45%;
   /* padding: 25vh 3.2rem; */
   z-index: 2;
@@ -42,7 +40,7 @@
 .heroHeader {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: var(--gap-xl);
 }
 
 .heroTitle {
@@ -89,7 +87,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
+  gap: var(--gap-md);
 }
 
 .beginYourMiracleTitle {
@@ -102,14 +100,14 @@
 .beginYourMiracleGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: var(--gap-8xl);
   width: 100%;
 }
 
 .beginYourMiracleCard {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: var(--gap-3xl);
   flex: 1 1 16rem;
   background: #fff;
   border-radius: 1.2rem;
@@ -132,14 +130,14 @@
 .beginYourMiracleCardContent {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: var(--gap-3xl);
   flex: 1;
 }
 
 .beginYourMiracleCardHeading {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: var(--gap-sm);
 }
 
 .beginYourMiracleCardTitle {
@@ -206,7 +204,7 @@
 .ourTeamGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.2rem;
+  gap: var(--gap-3xl);
   justify-content: center;
 }
 
@@ -290,10 +288,6 @@
 
   .heroTitle {
     font-size: var(--font-4xl);
-  }
-
-  .heroSubtitle {
-    font-size: var(--font-base);
   }
 
   .heroButton {
