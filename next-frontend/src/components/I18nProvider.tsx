@@ -31,8 +31,7 @@ export default function I18nProvider({
     return (
       <I18nextProvider i18n={i18n}>
         <div className={styles.loadingContainer}>
-          <LoadingSpinner size="large" />
-          <div className={styles.loadingText}>Loading...</div>
+          <LoadingSpinner size="large" message="Loading..." />
         </div>
       </I18nextProvider>
     );

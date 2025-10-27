@@ -5,6 +5,7 @@ import styles from "@/styles/Admin/AdminDashboard.module.css";
 import { FaPlus, FaEdit, FaTrash } from "react-icons/fa";
 import ImageCompressor from "@/components/ImageCompressor";
 import Image from "next/image";
+import TipTapEditor from "./TipTapEditor";
 
 const CLOUDFRONT_DOMAIN = process.env.NEXT_PUBLIC_CLOUDFRONT_DOMAIN;
 
@@ -14,9 +15,7 @@ function getImageUrl(imagePath: string) {
 
 interface BlogPost {
   id: string;
-  link: string;
   title: string;
-  excerpt: string;
   date: string;
   category: string;
   readTime: string;
@@ -31,13 +30,13 @@ interface BlogPostWithImage extends BlogPost {
 const BlogManagement = () => {
   const [blogPosts, setBlogPosts] = useState<BlogPostWithImage[]>([]);
   const [loading, setLoading] = useState(true);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string>("");
   const [showAddForm, setShowAddForm] = useState(false);
   const [editingPost, setEditingPost] = useState<BlogPost | null>(null);
   const [currentImageUrl, setCurrentImageUrl] = useState<string>("");
   const [formData, setFormData] = useState({
-    link: "",
     title: "",
-    excerpt: "",
     date: "",
     category: "",
     readTime: "",
@@ -78,53 +77,86 @@ const BlogManagement = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    let imagePath = formData.imagePath;
+    if (submitting) return; // Prevent multiple submissions
 
-    // If user selected a new image, upload it first
-    if (selectedFile) {
-      // Request signed URL
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog/image`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ fileType: selectedFile.type }),
+    setSubmitting(true);
+    setError("");
+
+    try {
+      let imagePath = formData.imagePath;
+
+      // If user selected a new image, upload it first
+      if (selectedFile) {
+        try {
+          // Request signed URL
+          const res = await fetch(
+            `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog/image`,
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ fileType: selectedFile.type }),
+            }
+          );
+
+          if (!res.ok) {
+            throw new Error("Failed to get upload URL");
+          }
+
+          const { uploadUrl, fileUrl } = await res.json();
+
+          // Upload image to S3
+          const uploadResponse = await fetch(uploadUrl, {
+            method: "PUT",
+            headers: { "Content-Type": selectedFile.type },
+            body: selectedFile,
+          });
+
+          if (!uploadResponse.ok) {
+            throw new Error("Failed to upload image");
+          }
+
+          imagePath = fileUrl; // update imagePath with the uploaded file URL
+        } catch {
+          setError("Failed to upload image. Please try again.");
+          setSubmitting(false);
+          return;
         }
-      );
-      const { uploadUrl, fileUrl } = await res.json();
+      }
 
-      // Upload image to S3
-      await fetch(uploadUrl, {
-        method: "PUT",
-        headers: { "Content-Type": selectedFile.type },
-        body: selectedFile,
+      // Submit blog post with updated imagePath
+      const url = editingPost
+        ? `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog/${editingPost.id}`
+        : `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog`;
+
+      const method = editingPost ? "PUT" : "POST";
+
+      const body = {
+        ...formData,
+        imagePath,
+      };
+
+      const response = await fetch(url, {
+        method,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
       });
 
-      imagePath = fileUrl; // update imagePath with the uploaded file URL
-    }
-
-    // Submit blog post with updated imagePath
-    const url = editingPost
-      ? `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog/${editingPost.id}`
-      : `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog`;
-
-    const method = editingPost ? "PUT" : "POST";
-
-    const body = {
-      ...formData,
-      imagePath,
-    };
-
-    const response = await fetch(url, {
-      method,
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
-    });
-
-    if (response.ok) {
-      fetchBlogPosts();
-      resetForm();
-      setSelectedFile(null);
+      if (response.ok) {
+        fetchBlogPosts();
+        resetForm();
+        setSelectedFile(null);
+        setError("");
+      } else {
+        const errorData = await response.json().catch(() => ({}));
+        setError(
+          errorData.error || "Failed to save blog post. Please try again."
+        );
+      }
+    } catch (error) {
+      console.error("Error submitting blog post:", error);
+      setError("An unexpected error occurred. Please try again.");
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -150,9 +182,7 @@ const BlogManagement = () => {
   const handleEdit = async (post: BlogPost) => {
     setEditingPost(post);
     setFormData({
-      link: post.link,
       title: post.title,
-      excerpt: post.excerpt,
       date: post.date,
       category: post.category,
       readTime: post.readTime,
@@ -173,9 +203,7 @@ const BlogManagement = () => {
 
   const resetForm = () => {
     setFormData({
-      link: "",
       title: "",
-      excerpt: "",
       date: "",
       category: "",
       readTime: "",
@@ -185,6 +213,7 @@ const BlogManagement = () => {
     setEditingPost(null);
     setCurrentImageUrl("");
     setShowAddForm(false);
+    setError("");
   };
 
   if (loading) {
@@ -209,19 +238,6 @@ const BlogManagement = () => {
             <h2>{editingPost ? "Edit Blog Post" : "Add New Blog Post"}</h2>
             <form onSubmit={handleSubmit} className={styles.blogForm}>
               <div className={styles.formRow}>
-                <div className={styles.formGroup}>
-                  <label htmlFor="link">Link</label>
-                  <input
-                    id="link"
-                    type="text"
-                    value={formData.link}
-                    onChange={(e) =>
-                      setFormData({ ...formData, link: e.target.value })
-                    }
-                    placeholder="e.g., surrogacy-guide"
-                    required
-                  />
-                </div>
                 <div className={styles.formGroup}>
                   <label htmlFor="title">Title</label>
                   <input
@@ -255,42 +271,25 @@ const BlogManagement = () => {
                   <label htmlFor="readTime">Read Time</label>
                   <input
                     id="readTime"
-                    type="text"
+                    type="number"
                     value={formData.readTime}
                     onChange={(e) =>
                       setFormData({ ...formData, readTime: e.target.value })
                     }
                     placeholder="e.g., 5 min read"
+                    min="1"
+                    max="100"
                     required
                   />
                 </div>
               </div>
 
               <div className={styles.formGroup}>
-                <label htmlFor="excerpt">Excerpt</label>
-                <textarea
-                  id="excerpt"
-                  value={formData.excerpt}
-                  onChange={(e) =>
-                    setFormData({ ...formData, excerpt: e.target.value })
-                  }
-                  placeholder="e.g., Learn everything you need to know about the surrogacy process, from legal requirements to emotional preparation..."
-                  required
-                  rows={3}
-                />
-              </div>
-
-              <div className={styles.formGroup}>
                 <label htmlFor="content">Content</label>
-                <textarea
-                  id="content"
-                  value={formData.content}
-                  onChange={(e) =>
-                    setFormData({ ...formData, content: e.target.value })
-                  }
+                <TipTapEditor
+                  content={formData.content}
+                  onChange={(content) => setFormData({ ...formData, content })}
                   placeholder="e.g., Surrogacy is a beautiful journey that brings hope to families who cannot conceive naturally. This comprehensive guide covers all aspects of the process..."
-                  required
-                  rows={6}
                 />
               </div>
 
@@ -336,9 +335,33 @@ const BlogManagement = () => {
                 </div>
               </div>
 
+              {error && (
+                <div
+                  className={styles.errorMessage}
+                  style={{
+                    color: "#ed4337",
+                    marginBottom: "1rem",
+                    padding: "0.75rem",
+                    background: "#fdf2f2",
+                    border: "1px solid #fecaca",
+                    borderRadius: "6px",
+                  }}
+                >
+                  {error}
+                </div>
+              )}
+
               <div className={styles.formActions}>
-                <button type="submit" className={styles.saveButton}>
-                  {editingPost ? "Update Post" : "Create Post"}
+                <button
+                  type="submit"
+                  className={styles.saveButton}
+                  disabled={submitting}
+                >
+                  {submitting
+                    ? "Saving..."
+                    : editingPost
+                    ? "Update Post"
+                    : "Create Post"}
                 </button>
                 <button
                   type="button"

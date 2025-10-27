@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildPageMetadata({
   title: "Support & Counselling - Miracle Makers",
   description:
-    "Comprehensive emotional support, counselling, and guidance for intended parents, surrogates, and donors—before, during, and after the journey.",
+    "Comprehensive emotional support, counselling, and guidance for intended parents, surrogates, and donors - before, during, and after the journey.",
   keywords: [
     "surrogacy counselling",
     "emotional support",

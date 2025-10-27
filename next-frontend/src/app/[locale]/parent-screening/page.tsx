@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildPageMetadata({
   title: "Parent Screening - Miracle Makers",
   description:
-    "Understand our thorough parent screening process: eligibility, documentation, medical and legal steps—ensuring safety, ethics, and the best outcomes for all.",
+    "Understand our thorough parent screening process: eligibility, documentation, medical and legal steps - ensuring safety, ethics, and the best outcomes for all.",
   keywords: [
     "parent screening",
     "intended parent requirements",

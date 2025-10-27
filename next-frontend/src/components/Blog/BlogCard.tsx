@@ -14,14 +14,12 @@ function getImageUrl(imagePath: string) {
 
 interface BlogPost {
   id: string;
-  link: string;
   title: string;
-  excerpt: string;
   date: string;
   category: string;
   readTime: string;
   content: string;
-  imagePath: string; 
+  imagePath: string;
 }
 
 interface BlogPostWithImage extends BlogPost {
@@ -30,19 +28,28 @@ interface BlogPostWithImage extends BlogPost {
 
 const BlogCard = () => {
   const [blogPosts, setBlogPosts] = useState<BlogPostWithImage[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog`);
-      const data: BlogPost[] = await res.json();
+      try {
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog`
+        );
+        const data: BlogPost[] = await res.json();
 
-      // Generate CloudFront URLs for images
-      const postsWithImages = data.map((post) => ({
-        ...post,
-        imageUrl: post.imagePath ? getImageUrl(post.imagePath) : undefined,
-      }));
+        // Generate CloudFront URLs for images
+        const postsWithImages = data.map((post) => ({
+          ...post,
+          imageUrl: post.imagePath ? getImageUrl(post.imagePath) : undefined,
+        }));
 
-      setBlogPosts(postsWithImages);
+        setBlogPosts(postsWithImages);
+      } catch (error) {
+        console.error("Error fetching blog posts:", error);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchBlogPosts();
@@ -63,6 +70,36 @@ const BlogCard = () => {
     [blogPosts]
   );
 
+  // Skeleton loader component
+  const BlogSkeleton = () => (
+    <article className={styles.blogCard}>
+      <div className={styles.blogImageContainer}>
+        <div className={`${styles.skeleton} ${styles.skeletonImage}`} />
+        <div
+          className={`${styles.skeleton} ${styles.skeletonCategory}`}
+          style={{ position: "absolute", top: "1rem", left: "1rem" }}
+        />
+      </div>
+
+      <div className={styles.blogContent}>
+        <div className={styles.blogMeta}>
+          <div className={`${styles.skeleton} ${styles.skeletonMeta}`} />
+          <div className={`${styles.skeleton} ${styles.skeletonMeta}`} />
+        </div>
+
+        <div>
+          <div className={`${styles.skeleton} ${styles.skeletonTitle}`} />
+          <div className={`${styles.skeleton} ${styles.skeletonTitle}`} />
+        </div>
+
+        <div
+          className={`${styles.skeleton} ${styles.skeletonLink}`}
+          style={{ marginTop: "0.6rem" }}
+        />
+      </div>
+    </article>
+  );
+
   return (
     <section className={`${styles.blogSection} section`}>
       <div className="content">
@@ -70,7 +107,26 @@ const BlogCard = () => {
         <p className="subtitle">{t("blog.subtitle")}</p>
       </div>
       <div className={styles.blogGrid}>
-        {blogPosts.length > 0 && (
+        {loading && blogPosts.length > 0 ? (
+          <Swiper
+            modules={SWIPER_MODULES}
+            spaceBetween={20}
+            slidesPerView={1}
+            breakpoints={{
+              768: { slidesPerView: 2 },
+              1278: { slidesPerView: 3 },
+            }}
+            navigation={false}
+            loop={false}
+            pagination={false}
+          >
+            {[1, 2, 3].map((i) => (
+              <SwiperSlide key={i}>
+                <BlogSkeleton />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        ) : blogPosts.length > 0 ? (
           <Swiper
             modules={SWIPER_MODULES}
             spaceBetween={20}
@@ -101,12 +157,11 @@ const BlogCard = () => {
                     <div className={styles.blogMeta}>
                       <span className={styles.blogDate}>{post.dateLabel}</span>
                       <span className={styles.blogReadTime}>
-                        {post.readTime}
+                        {post.readTime} mins read
                       </span>
                     </div>
 
                     <h3 className={styles.blogTitle}>{post.title}</h3>
-                    <p className={styles.blogExcerpt}>{post.excerpt}</p>
 
                     <Link
                       href={`/blog/${post.id}`}
@@ -119,7 +174,7 @@ const BlogCard = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        )}
+        ) : null}
       </div>
     </section>
   );

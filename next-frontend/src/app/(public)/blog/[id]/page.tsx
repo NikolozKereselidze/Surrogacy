@@ -6,6 +6,7 @@ import Image from "next/image";
 import styles from "@/styles/Blog/Blog.module.css";
 import { FaClock } from "react-icons/fa";
 import DonorsNavigation from "@/components/Navigation/DonorsNavigation";
+import LoadingSpinner from "@/components/LoadingSpinner";
 
 const CLOUDFRONT_DOMAIN = process.env.NEXT_PUBLIC_CLOUDFRONT_DOMAIN;
 
@@ -16,9 +17,7 @@ function getImageUrl(imagePath?: string) {
 
 interface BlogPost {
   id: string;
-  link: string;
   title: string;
-  excerpt: string;
   date: string;
   category: string;
   readTime: string;
@@ -36,7 +35,9 @@ const BlogPost = () => {
     if (!id) return;
     const fetchPost = async () => {
       try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog/${id}`);
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog/${id}`
+        );
         if (!res.ok) throw new Error("Failed to fetch blog post");
         const data: BlogPost = await res.json();
         setPost(data);
@@ -51,7 +52,7 @@ const BlogPost = () => {
   }, [id]);
 
   if (loading) {
-    return <div className={styles.state}>Loading...</div>;
+    return <LoadingSpinner />;
   }
 
   if (error || !post) {
@@ -68,7 +69,7 @@ const BlogPost = () => {
             <div className={styles.meta}>
               <div className={styles.metaItem}>
                 <span className={styles.category}>{post.category}</span>
-                <span className={styles.readTime}>{post.readTime}</span>
+                <span className={styles.readTime}>{post.readTime} mins read</span>
               </div>
               <div className={styles.date}>
                 <FaClock />

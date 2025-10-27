@@ -92,13 +92,10 @@ const getBlogPostsCount = async (req: Request, res: Response) => {
 };
 
 const createBlogPost = async (req: Request, res: Response) => {
-  const { link, title, excerpt, date, category, readTime, content, imagePath } =
-    req.body;
+  const { title, date, category, readTime, content, imagePath } = req.body;
   const blogPost = await prisma.blogPost.create({
     data: {
-      link,
       title,
-      excerpt,
       date,
       category,
       readTime,
@@ -111,8 +108,7 @@ const createBlogPost = async (req: Request, res: Response) => {
 
 const updateBlogPost = async (req: Request, res: Response): Promise<any> => {
   const { id } = req.params;
-  const { link, title, excerpt, date, category, readTime, content, imagePath } =
-    req.body;
+  const { title, date, category, readTime, content, imagePath } = req.body;
 
   try {
     // Get the current blog post to check if image is being changed
@@ -133,9 +129,7 @@ const updateBlogPost = async (req: Request, res: Response): Promise<any> => {
     const blogPost = await prisma.blogPost.update({
       where: { id },
       data: {
-        link,
         title,
-        excerpt,
         date,
         category,
         readTime,

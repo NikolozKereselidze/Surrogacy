@@ -27,6 +27,8 @@ const DonorForm = ({
   onSubmit,
   onCancel,
 }: DonorFormProps) => {
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string>("");
   const [documentFile, setDocumentFile] = useState<File | null>(null);
   const [mainImageFile, setMainImageFile] = useState<File | null>(null);
   const [secondaryImageFiles, setSecondaryImageFiles] = useState<File[]>([]);
@@ -93,6 +95,12 @@ const DonorForm = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (submitting) return; // Prevent multiple submissions
+
+    setSubmitting(true);
+    setError("");
+
     try {
       let imageKey = "";
       let documentKey = "";
@@ -101,34 +109,56 @@ const DonorForm = ({
 
       // Upload files to S3 if they exist
       if (mainImageFile) {
-        // If editing and there's an existing main image, mark it for deletion
-        if (editingDonor && editingDonor.databaseUser.mainImagePath) {
-          filesToDelete.push(editingDonor.databaseUser.mainImagePath);
+        try {
+          // If editing and there's an existing main image, mark it for deletion
+          if (editingDonor && editingDonor.databaseUser.mainImagePath) {
+            filesToDelete.push(editingDonor.databaseUser.mainImagePath);
+          }
+          imageKey = await uploadFileToS3(mainImageFile, "image", donorType);
+        } catch {
+          setError("Failed to upload main image. Please try again.");
+          setSubmitting(false);
+          return;
         }
-        imageKey = await uploadFileToS3(mainImageFile, "image", donorType);
       }
 
       if (documentFile) {
-        // If editing and there's an existing document, mark it for deletion
-        if (editingDonor && editingDonor.databaseUser.documentPath) {
-          filesToDelete.push(editingDonor.databaseUser.documentPath);
+        try {
+          // If editing and there's an existing document, mark it for deletion
+          if (editingDonor && editingDonor.databaseUser.documentPath) {
+            filesToDelete.push(editingDonor.databaseUser.documentPath);
+          }
+          documentKey = await uploadFileToS3(
+            documentFile,
+            "document",
+            donorType
+          );
+        } catch {
+          setError("Failed to upload document. Please try again.");
+          setSubmitting(false);
+          return;
         }
-        documentKey = await uploadFileToS3(documentFile, "document", donorType);
       }
 
       // Handle secondary images
       if (secondaryImageFiles.length > 0) {
-        // If editing and there are existing secondary images, mark them for deletion
-        if (editingDonor && editingDonor.databaseUser.donorImages) {
-          editingDonor.databaseUser.donorImages
-            .filter((img) => !img.isMain)
-            .forEach((img) => filesToDelete.push(img.imagePath));
-        }
+        try {
+          // If editing and there are existing secondary images, mark them for deletion
+          if (editingDonor && editingDonor.databaseUser.donorImages) {
+            editingDonor.databaseUser.donorImages
+              .filter((img) => !img.isMain)
+              .forEach((img) => filesToDelete.push(img.imagePath));
+          }
 
-        // Upload new secondary images
-        for (const file of secondaryImageFiles) {
-          const key = await uploadFileToS3(file, "image", donorType);
-          secondaryImageKeys.push(key);
+          // Upload new secondary images
+          for (const file of secondaryImageFiles) {
+            const key = await uploadFileToS3(file, "image", donorType);
+            secondaryImageKeys.push(key);
+          }
+        } catch {
+          setError("Failed to upload secondary images. Please try again.");
+          setSubmitting(false);
+          return;
         }
       }
 
@@ -161,22 +191,30 @@ const DonorForm = ({
         secondaryImages: secondaryImageKeys,
       };
 
-      await onSubmit(submitData);
+      try {
+        await onSubmit(submitData);
 
-      // Reset file states after successful submission
-      resetFileStates();
+        // Reset file states after successful submission
+        resetFileStates();
 
-      // Delete old files after successful submission
-      for (const filePath of filesToDelete) {
-        try {
-          await deleteFileFromS3(filePath);
-        } catch (error) {
-          console.error(`Error deleting old file ${filePath}:`, error);
-          // Don't throw here as the main operation succeeded
+        // Delete old files after successful submission
+        for (const filePath of filesToDelete) {
+          try {
+            await deleteFileFromS3(filePath);
+          } catch (error) {
+            console.error(`Error deleting old file ${filePath}:`, error);
+            // Don't throw here as the main operation succeeded
+          }
         }
+      } catch (onSubmitError) {
+        setError("Failed to save donor. Please try again.");
+        console.error("Error saving donor:", onSubmitError);
       }
     } catch (error) {
       console.error("Error saving donor:", error);
+      setError("An unexpected error occurred. Please try again.");
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -396,13 +434,30 @@ const DonorForm = ({
             </div>
           </div>
 
+          {error && (
+            <div
+              className={styles.errorMessage}
+              style={{
+                color: "#ed4337",
+                marginBottom: "1rem",
+                padding: "0.75rem",
+                background: "#fdf2f2",
+                border: "1px solid #fecaca",
+                borderRadius: "6px",
+              }}
+            >
+              {error}
+            </div>
+          )}
+
           <div className={styles.formActions}>
             <button
               type="submit"
               className={styles.saveButton}
               style={{ background: config.color }}
+              disabled={submitting}
             >
-              {editingDonor ? "Update" : "Create"}
+              {submitting ? "Saving..." : editingDonor ? "Update" : "Create"}
             </button>
             <button
               type="button"

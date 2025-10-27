@@ -368,9 +368,15 @@
   transition: all 0.18s;
 }
 
-.saveButton:hover {
+.saveButton:hover:not(:disabled) {
   background: linear-gradient(135deg, #7f5fff, #6c3cff);
   transform: translateY(-2px);
+}
+
+.saveButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .cancelButton {

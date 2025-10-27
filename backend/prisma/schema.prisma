@@ -65,9 +65,7 @@ model SpermDonor {
 
 model BlogPost {
   id        String      @id @default(uuid())
-  link String
   title String
-  excerpt String
   date String
   category String
   readTime String
