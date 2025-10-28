@@ -12,11 +12,7 @@ import ProgramsOverviewSection from "@/components/ProgramsOverviewSection";
 import { getFeaturedTeamMembers } from "@/data/teamMembers";
 import { useMemo } from "react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+
 
 const Home = () => {
   const { t, i18n } = useTranslation();

@@ -51,10 +51,6 @@ const BlogPost = () => {
     fetchPost();
   }, [id]);
 
-  if (loading) {
-    return <LoadingSpinner />;
-  }
-
   if (error || !post) {
     return <div className={styles.state}>{error || "Not found"}</div>;
   }
@@ -69,7 +65,9 @@ const BlogPost = () => {
             <div className={styles.meta}>
               <div className={styles.metaItem}>
                 <span className={styles.category}>{post.category}</span>
-                <span className={styles.readTime}>{post.readTime} mins read</span>
+                <span className={styles.readTime}>
+                  {post.readTime} mins read
+                </span>
               </div>
               <div className={styles.date}>
                 <FaClock />

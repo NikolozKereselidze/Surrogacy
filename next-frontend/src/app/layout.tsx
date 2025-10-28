@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html>
+    <html data-scroll-behavior="smooth">
       <head>
         <meta
           name="description"

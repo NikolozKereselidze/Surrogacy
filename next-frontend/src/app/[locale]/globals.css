@@ -137,6 +137,8 @@ h6 {
   --gap-12xl: 4.2rem; /* Hero section gaps */
 }
 
+/* FAQ design tokens were removed to use existing global tokens */
+
 body {
   font-family: var(--font-family);
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);

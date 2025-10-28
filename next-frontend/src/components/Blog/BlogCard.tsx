@@ -1,3 +1,9 @@
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
 import Link from "next/link";
 import styles from "@/styles/Blog/BlogCard.module.css";
 import { useTranslation } from "react-i18next";

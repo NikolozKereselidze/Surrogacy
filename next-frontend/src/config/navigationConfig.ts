@@ -82,8 +82,8 @@ export const navigationConfig = (t: TFunction) => [
     ],
   },
   {
-    key: "blog",
-    label: t("navigation.blog"),
-    href: "/blog", // no submenu
+    key: "faq",
+    label: t("navigation.faq"),
+    href: "/faq", // no submenu
   },
 ];

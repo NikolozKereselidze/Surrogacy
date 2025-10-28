@@ -1,0 +1,115 @@
+.faqContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-4xl);
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
+}
+
+.categoryBtn {
+  padding: var(--padding-xs) var(--padding-sm);
+  border-radius: 9999px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: var(--dark-blue);
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.categoryBtn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.categoryBtn.active {
+  background: rgba(124, 58, 237, 0.08);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.accordion {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--gap-base);
+}
+
+.item {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-sm);
+  padding: 16px 18px;
+  background: linear-gradient(0deg, #ffffff, #ffffff);
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.25s ease;
+}
+
+.trigger:hover {
+  background: linear-gradient(0deg, #fafafa, #ffffff);
+}
+
+.q {
+  font-weight: 600;
+  color: var(--dark-blue);
+}
+
+.chevron {
+  font-size: 20px;
+  color: var(--gray);
+}
+
+.panel {
+  height: 0;
+  opacity: 0;
+  transform: translateY(-4px);
+  padding: 0 18px 0 18px;
+  overflow: hidden;
+  transition: height 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
+.panelOpen {
+  height: auto;
+  opacity: 1;
+  transform: translateY(0);
+  padding: 0 18px 16px 18px;
+}
+
+.a {
+  color: var(--dark-blue);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.empty {
+  padding: var(--padding-lg);
+  text-align: center;
+  color: var(--gray);
+  border: 1px dashed #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .controls {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+}

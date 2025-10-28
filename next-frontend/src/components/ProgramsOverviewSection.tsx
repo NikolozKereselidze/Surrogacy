@@ -95,7 +95,13 @@ const ProgramsOverviewSection = () => {
         <div className={styles.ctaContent}>
           <h3 className={styles.ctaTitle}>{t("programsOverview.ctaTitle")}</h3>
           <p className={styles.ctaText}>{t("programsOverview.ctaText")}</p>
-          <Button href="#contact" className={styles.ctaButton}>
+          <Button
+            className={styles.ctaButton}
+            onClick={() => {
+              const el = document.getElementById("contact");
+              el?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+          >
             {t("programsOverview.contactUs")}
           </Button>
         </div>

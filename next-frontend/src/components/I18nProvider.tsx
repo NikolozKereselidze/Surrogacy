@@ -17,13 +17,13 @@ export default function I18nProvider({
 
   useEffect(() => {
     // Set the language immediately when locale changes
-    if (i18n.language !== locale) {
-      i18n.changeLanguage(locale).then(() => {
-        setIsReady(true);
-      });
-    } else {
+    if (i18n.language === locale) {
       setIsReady(true);
+      return;
     }
+    setIsReady(false);
+
+    i18n.changeLanguage(locale).finally(() => setIsReady(true));
   }, [locale]);
 
   // Don't render children until language is set
