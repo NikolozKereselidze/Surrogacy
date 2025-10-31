@@ -16,12 +16,6 @@ export const metadata: Metadata = buildPageMetadata({
     "reproductive medicine expertise",
   ],
   path: "/why-choose-us",
-  ogImage: {
-    url: "/img/og-image.jpg",
-    width: 1200,
-    height: 630,
-    alt: "Miracle Makers - Why Choose Us",
-  },
 });
 
 export default function WhyChooseUsPage() {

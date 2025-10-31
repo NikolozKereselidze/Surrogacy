@@ -16,12 +16,6 @@ export const metadata: Metadata = buildPageMetadata({
     "surrogacy process",
   ],
   path: "/who-can-become-a-surrogate",
-  ogImage: {
-    url: "/img/og-image.jpg",
-    width: 1200,
-    height: 630,
-    alt: "Miracle Makers - Who Can Become a Surrogate",
-  },
 });
 
 function WhoCanBecomeASurrogatePage() {

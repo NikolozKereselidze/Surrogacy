@@ -37,7 +37,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${teamMember.name} - ${teamMember.role} | Miracle Makers Team`,
       description: `Meet ${teamMember.name}, ${teamMember.role} at Miracle Makers. ${teamMember.description}`,
-      url: `https://www.surrogationcenter.com/team/${teamMember.id}`,
+      url: `https://www.ivftourgeorgia.com/team/${teamMember.id}`,
       type: "profile",
       images: [
         {
@@ -48,19 +48,13 @@ export async function generateMetadata({
         },
       ],
     },
-    twitter: {
-      card: "summary",
-      title: `${teamMember.name} - ${teamMember.role} | Miracle Makers Team`,
-      description: `Meet ${teamMember.name}, ${teamMember.role} at Miracle Makers. ${teamMember.description}`,
-      images: [teamMember.image],
-    },
     alternates: {
       canonical: `/team/${teamMember.id}`,
     },
   };
 }
 
-export default async function TeamMemberPage({ params }: TeamMemberPageProps) {
-  const { id } = await params;
+export default function TeamMemberPage({ params }: TeamMemberPageProps) {
+  const { id } = params;
   return <TeamMemberDetails id={id} />;
 }

@@ -16,12 +16,6 @@ export const metadata: Metadata = buildPageMetadata({
     "egg donation process",
   ],
   path: "/who-can-become-a-donor",
-  ogImage: {
-    url: "/img/og-image.jpg",
-    width: 1200,
-    height: 630,
-    alt: "Miracle Makers - Who Can Become a Donor",
-  },
 });
 
 function WhoCanBecomeADonorPage() {

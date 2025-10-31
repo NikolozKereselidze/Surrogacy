@@ -16,12 +16,6 @@ export const metadata: Metadata = buildPageMetadata({
     "fertility journey",
   ],
   path: "/who-can-become-a-parent",
-  ogImage: {
-    url: "/img/og-image.jpg",
-    width: 1200,
-    height: 630,
-    alt: "Miracle Makers - Who Can Become a Parent",
-  },
 });
 
 function WhoCanBecomeAParentPage() {

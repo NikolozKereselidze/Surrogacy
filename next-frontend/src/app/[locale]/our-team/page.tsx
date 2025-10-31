@@ -16,12 +16,6 @@ export const metadata: Metadata = buildPageMetadata({
     "family building experts",
   ],
   path: "/our-team",
-  ogImage: {
-    url: "/img/og-image.jpg",
-    width: 1200,
-    height: 630,
-    alt: "Miracle Makers - Our Team",
-  },
 });
 
 export default function OurTeamPage() {

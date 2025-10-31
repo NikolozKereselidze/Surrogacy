@@ -8,13 +8,13 @@ export default function StructuredData() {
     alternateName: "Surrogation Center",
     description:
       "Leading surrogacy and egg donation agency providing compassionate, personalized fertility services to help families worldwide achieve their dreams of parenthood. Over 15 years of experience with 3,200+ successful births.",
-    url: "https://www.surrogationcenter.com",
-    logo: "https://www.surrogationcenter.com/img/logo.png",
-    image: "https://www.surrogationcenter.com/img/og-image.jpg",
+    url: "https://www.ivftourgeorgia.com",
+    logo: "https://www.ivftourgeorgia.com/img/logo.png",
+    image: "https://www.ivftourgeorgia.com/img/og-image.jpg",
     telephone: "+995-596-235-050",
-    email: "natia@surrogationcenter.com",
+    email: "info@surrogationcenter.com",
     foundingDate: "2009",
-    numberOfEmployees: "50-100",
+    numberOfEmployees: "10-20",
     address: {
       "@type": "PostalAddress",
       streetAddress: "6 Marijani St",
@@ -31,23 +31,31 @@ export default function StructuredData() {
     serviceArea: [
       {
         "@type": "Country",
+        name: "Georgia",
+      },
+      {
+        "@type": "Country",
         name: "United States",
       },
       {
         "@type": "Country",
-        name: "United Kingdom",
+        name: "China",
       },
       {
         "@type": "Country",
-        name: "Canada",
+        name: "Spain",
       },
       {
         "@type": "Country",
-        name: "Australia",
+        name: "Israel",
       },
       {
         "@type": "Country",
-        name: "European Union",
+        name: "Russia",
+      },
+      {
+        "@type": "Country",
+        name: "Thailand",
       },
     ],
     medicalSpecialty: [
@@ -222,45 +230,11 @@ export default function StructuredData() {
           name: "Miracle Makers",
         },
       },
-      {
-        "@type": "Person",
-        name: "Kelvin Smith",
-        jobTitle: "Fertility Specialist",
-        description:
-          "Board-certified fertility specialist with expertise in advanced reproductive technologies and personalized treatment plans",
-        worksFor: {
-          "@type": "MedicalBusiness",
-          name: "Miracle Makers",
-        },
-      },
-      {
-        "@type": "Person",
-        name: "Anna Smith",
-        jobTitle: "Coordinator & IVF Specialist",
-        description:
-          "Over 15 years of experience helping families grow through IVF coordination and patient care management",
-        worksFor: {
-          "@type": "MedicalBusiness",
-          name: "Miracle Makers",
-        },
-      },
-      {
-        "@type": "Person",
-        name: "Michael Johnson",
-        jobTitle: "Medical Director",
-        description:
-          "Leading medical director with extensive experience in reproductive medicine and clinical oversight",
-        worksFor: {
-          "@type": "MedicalBusiness",
-          name: "Miracle Makers",
-        },
-      },
     ],
     sameAs: [
-      "https://www.facebook.com/miraclemakers",
-      "https://www.instagram.com/miraclemakers",
-      "https://www.linkedin.com/company/miraclemakers",
-      "https://twitter.com/miraclemakers",
+      "https://www.facebook.com/profile.php?id=61556348591661",
+      "https://www.instagram.com/surrogacy_center_happy_family/",
+      "https://www.linkedin.com/company/surrogacy/",
     ],
     knowsAbout: [
       "Surrogacy",
@@ -278,19 +252,31 @@ export default function StructuredData() {
     areaServed: [
       {
         "@type": "Country",
+        name: "Georgia",
+      },
+      {
+        "@type": "Country",
         name: "United States",
       },
       {
         "@type": "Country",
-        name: "United Kingdom",
+        name: "China",
       },
       {
         "@type": "Country",
-        name: "Canada",
+        name: "Spain",
       },
       {
         "@type": "Country",
-        name: "Australia",
+        name: "Israel",
+      },
+      {
+        "@type": "Country",
+        name: "Russia",
+      },
+      {
+        "@type": "Country",
+        name: "Thailand",
       },
       {
         "@type": "Country",
@@ -300,15 +286,11 @@ export default function StructuredData() {
         "@type": "Country",
         name: "France",
       },
-      {
-        "@type": "Country",
-        name: "Israel",
-      },
     ],
     priceRange: "$$$",
-    currenciesAccepted: ["USD", "EUR", "GBP", "CAD", "AUD"],
+    currenciesAccepted: ["GEL","USD", "EUR", "CNY", "EUR", "ILS"],
     paymentAccepted: ["Cash", "Credit Card", "Bank Transfer", "Insurance"],
-    openingHours: "Mo-Fr 09:00-18:00, Sa 09:00-15:00",
+    openingHours: "Mo-Fr 09:00-19:00,",
   };
 
   return (

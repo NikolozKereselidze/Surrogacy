@@ -23,10 +23,10 @@ const TeamMemberDetails = ({ id }: { id: string }) => {
             name: `${member.honorific} ${member.name}`,
             jobTitle: member.role,
             email: `mailto:${member.email}`,
-            url: `https://www.surrogationcenter.com/team/${member.id}`,
+            url: `https://www.ivftourgeorgia.com/team/${member.id}`,
             image: member.image.startsWith("http")
               ? member.image
-              : `https://www.surrogationcenter.com${member.image}`,
+              : `https://www.ivftourgeorgia.com${member.image}`,
             sameAs: [member.linkedin],
             description: member.detailedDescription,
           }

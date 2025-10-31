@@ -16,12 +16,6 @@ export const metadata: Metadata = buildPageMetadata({
     "personalized care",
   ],
   path: "/vip-concierge-services",
-  ogImage: {
-    url: "/img/og-image.jpg",
-    width: 1200,
-    height: 630,
-    alt: "Miracle Makers - VIP Concierge Services",
-  },
 });
 
 const VIPConciergeServices = () => {

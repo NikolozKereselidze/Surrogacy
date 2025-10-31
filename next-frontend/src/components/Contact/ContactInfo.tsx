@@ -41,8 +41,8 @@ const ContactInfo = () => {
         <FaEnvelope />
         <div className={styles.contactInfoItemText}>
           <h3>{t("contactUs.emailLabel")}</h3>
-          <a aria-label="Email" href="mailto:natia@surrogationcenter.com">
-            natia@surrogationcenter.com
+          <a aria-label="Email" href="mailto:info@surrogationcenter.com">
+            info@surrogationcenter.com
           </a>
         </div>
       </div>

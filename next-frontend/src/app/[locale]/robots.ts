@@ -14,6 +14,6 @@ export default function robots(): MetadataRoute.Robots {
         "/donor/",
       ],
     },
-    sitemap: "https://www.surrogationcenter.com/sitemap.xml",
+    sitemap: "https://www.ivftourgeorgia.com/sitemap.xml",
   };
 }

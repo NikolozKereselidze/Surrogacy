@@ -19,12 +19,6 @@ export const metadata: Metadata = buildPageMetadata({
     "Miracle Makers",
   ],
   path: "/egg-freezing-preservation",
-  ogImage: {
-    url: "/img/og-image.jpg",
-    width: 1200,
-    height: 630,
-    alt: "Miracle Makers - Egg Freezing & Preservation",
-  },
 });
 
 const EggFreezingPreservation = () => {

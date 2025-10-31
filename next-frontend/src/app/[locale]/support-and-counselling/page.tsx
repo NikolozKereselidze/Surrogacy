@@ -17,12 +17,6 @@ export const metadata: Metadata = buildPageMetadata({
     "guidance",
   ],
   path: "/support-and-counselling",
-  ogImage: {
-    url: "/img/og-image.jpg",
-    width: 1200,
-    height: 630,
-    alt: "Miracle Makers - Support & Counselling",
-  },
 });
 
 function SupportAndCounsellingPage() {

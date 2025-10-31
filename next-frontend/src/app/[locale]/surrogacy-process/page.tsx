@@ -16,12 +16,6 @@ export const metadata: Metadata = buildPageMetadata({
     "surrogacy support",
   ],
   path: "/surrogacy-process",
-  ogImage: {
-    url: "/img/og-image.jpg",
-    width: 1200,
-    height: 630,
-    alt: "Miracle Makers - Surrogacy Process",
-  },
 });
 
 export default function SurrogacyProcessPage() {

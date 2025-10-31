@@ -17,12 +17,6 @@ export const metadata: Metadata = buildPageMetadata({
     "family building",
   ],
   path: "/surrogacy-with-egg-donor",
-  ogImage: {
-    url: "/img/og-image.jpg",
-    width: 1200,
-    height: 630,
-    alt: "Miracle Makers - Surrogacy with Egg Donor",
-  },
 });
 
 const SurrogacyWithEggDonor = () => {

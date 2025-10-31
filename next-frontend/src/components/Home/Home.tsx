@@ -12,8 +12,6 @@ import ProgramsOverviewSection from "@/components/ProgramsOverviewSection";
 import { getFeaturedTeamMembers } from "@/data/teamMembers";
 import { useMemo } from "react";
 
-
-
 const Home = () => {
   const { t, i18n } = useTranslation();
 
