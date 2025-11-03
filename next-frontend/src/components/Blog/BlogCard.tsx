@@ -1,3 +1,5 @@
+"use client";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -113,7 +115,7 @@ const BlogCard = () => {
         <p className="subtitle">{t("blog.subtitle")}</p>
       </div>
       <div className={styles.blogGrid}>
-        {loading && blogPosts.length > 0 ? (
+        {loading ? (
           <Swiper
             modules={SWIPER_MODULES}
             spaceBetween={20}
@@ -149,13 +151,25 @@ const BlogCard = () => {
               <SwiperSlide key={post.id}>
                 <article className={styles.blogCard}>
                   <div className={styles.blogImageContainer}>
-                    <Image
-                      src={post.imageUrl || ""}
-                      alt={post.title}
-                      className={styles.blogImage}
-                      width={500}
-                      height={500}
-                    />
+                    {post.imageUrl ? (
+                      <Image
+                        src={post.imageUrl}
+                        alt={post.title}
+                        className={styles.blogImage}
+                        width={500}
+                        height={500}
+                      />
+                    ) : (
+                      <div
+                        aria-hidden="true"
+                        style={{
+                          width: 500,
+                          height: 500,
+                          background: "#f0f0f0",
+                          borderRadius: 8,
+                        }}
+                      />
+                    )}
                     <div className={styles.blogCategory}>{post.category}</div>
                   </div>
 
@@ -180,7 +194,14 @@ const BlogCard = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        ) : null}
+        ) : (
+          <div
+            className="content"
+            style={{ textAlign: "center", width: "100%" }}
+          >
+            {t("blog.noPosts", { defaultValue: "No blog posts available." })}
+          </div>
+        )}
       </div>
     </section>
   );

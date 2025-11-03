@@ -1,4 +1,4 @@
-.navigationList {
+.desktopNav {
   flex: 1 1 0;
   justify-content: center;
   display: flex;
@@ -42,6 +42,14 @@
   min-width: max-content;
 }
 
+.arrowIcon {
+  transition: transform 0.25s ease, color 0.2s ease;
+}
+
+.mobileNavItem > .menuItem:hover {
+  background-color: #f2f2f2;
+}
+
 .arrowIconContainer {
   display: flex;
   align-items: center;
@@ -57,7 +65,7 @@
   background-color: var(--color-primary);
 }
 
-.submenu {
+.desktopSubmenu {
   display: flex;
   flex-direction: column;
   gap: var(--gap-3xl);
@@ -70,13 +78,6 @@
   list-style: none;
   transform: translateY(1.2rem);
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-}
-
-.mobileSubmenu {
-  gap: var(--gap-none);
-  padding: 0;
-  height: 0;
-  opacity: 0;
 }
 
 .mobileSubmenu > li {
@@ -92,8 +93,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
-.desktopNavItem:hover .submenu,
-.navigationItem.active .submenu {
+.desktopNavItem:hover .submenu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -144,19 +144,53 @@
 }
 
 .mobileSubmenu {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-in-out;
+}
+
+.mobileSubmenu > div {
   overflow: hidden;
-  max-height: 0;
-  padding-top: 0;
-  transition: max-height 0.3s ease-in, opacity 0.5s ease, padding-top 0.5s ease;
+  background: #fafafa;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 .mobileSubmenu.active {
-  max-height: 500px;
-  /* should be taller than tallest submenu */
+  grid-template-rows: 1fr;
 }
 
 .mobileSubmenu li {
   font-size: var(--font-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+}
+
+/* Apply item separators inside the container wrapper too */
+.mobileSubmenu > div > li {
+  padding: 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.mobileSubmenu > div > li:last-child {
+  border-bottom: none;
+}
+
+.mobileSubmenu li a {
+  display: block;
+  width: 100%;
+  padding: var(--padding-sm) var(--padding-lg);
+  color: var(--dark-blue);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.mobileSubmenu li a:hover {
+  background-color: #f2f4f7;
+}
+
+.active .mobileSubmenu li a {
+  background-color: #f7f7f7;
 }
 
 .contactUsContainer {
@@ -190,13 +224,12 @@
   width: 100%;
 }
 
-.active {
-  height: auto;
-  opacity: 1;
+.active > .menuItem {
+  background-color: #f2f2f2;
 }
 
-.active > div {
-  background-color: #f7f7f7;
+.active .arrowIcon {
+  transform: rotate(1deg);
 }
 
 .languageSwitcherContainer {

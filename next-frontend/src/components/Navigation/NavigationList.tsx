@@ -33,7 +33,7 @@ const NavigationList = ({
     <>
       <ul
         className={`${styles.navigationList} ${
-          isMobile ? styles.mobileNav : ""
+          isMobile ? styles.mobileNav : styles.desktopNav
         }`}
       >
         {menuItems.map((item) => (
@@ -48,7 +48,7 @@ const NavigationList = ({
                 : undefined
             }
           >
-            <div className={styles.menuItem}>
+            <div className={styles.menuItem} >
               {item.href ? (
                 <Link
                   href={`/${locale}${item.href}`}
@@ -82,19 +82,29 @@ const NavigationList = ({
             {item.submenu && (
               <ul
                 className={`${styles.submenu} ${
-                  isMobile ? styles.mobileSubmenu : ""
+                  isMobile ? styles.mobileSubmenu : styles.desktopSubmenu
                 } ${openSubmenu === item.key ? styles.active : ""}`}
               >
-                {item.submenu.map((sub) => (
-                  <li key={sub.href}>
-                    <Link
-                      href={`/${locale}${sub.href}`}
-                      onClick={isMobile ? onLinkClick : undefined}
-                    >
-                      {sub.label}
-                    </Link>
-                  </li>
-                ))}
+                {isMobile ? (
+                  <div>
+                    {item.submenu.map((sub) => (
+                      <li key={sub.href}>
+                        <Link
+                          href={`/${locale}${sub.href}`}
+                          onClick={onLinkClick}
+                        >
+                          {sub.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </div>
+                ) : (
+                  item.submenu.map((sub) => (
+                    <li key={sub.href}>
+                      <Link href={`/${locale}${sub.href}`}>{sub.label}</Link>
+                    </li>
+                  ))
+                )}
               </ul>
             )}
           </li>

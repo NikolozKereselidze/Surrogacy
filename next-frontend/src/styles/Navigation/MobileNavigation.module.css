@@ -7,49 +7,88 @@
 }
 
 .overlay {
+  display: grid;
+  grid-template-columns: 0fr;
   position: fixed;
   inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0 */
-  background: rgba(0, 0, 0, 0.5); /* darken */
-  opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: grid-template-columns 0.3s, background 0.5s ease;
   z-index: 5; /* make sure it's behind sidebar */
 }
 
 .overlay.open {
-  opacity: 1;
+  grid-template-columns: 1fr;
   pointer-events: auto;
+  background: rgba(0, 0, 0, 0.5); /* darken */
+  cursor: zoom-out; /* indicate closing when clicking overlay */
 }
 
 .sidebar {
   position: fixed;
   top: 0;
   right: 0;
-  min-width: 30%;
-  height: 100vh;
+  min-width: max(18rem, 25vw);
   background: #fff;
   padding: 0;
   transform: translateX(100%);
-  opacity: 0;
   transition: all 0.3s;
   z-index: 10; /* above overlay */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18), 0 0 1px rgba(0, 0, 0, 0.08);
+  min-height: 100vh;
   overflow-y: auto;
+  display: grid;
+  grid-template-rows: 0fr 0fr 0fr;
 }
 
 .sidebar.open {
   transform: translateX(0);
-  opacity: 1;
-  display: flex;
-  flex-direction: column;
+  grid-auto-rows: auto 1fr auto;
 }
 
-.sidebar > svg {
-  position: absolute;
-  top: 1.2rem;
-  right: 1.8rem;
+/* Sidebar header with close button */
+.sidebarHeader {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-sm) var(--padding-base);
+  border-bottom: 1px solid #eee;
+  z-index: 1;
+}
+
+.sidebarTitle {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: var(--font-base);
+}
+
+.closeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--font-3xl);
+  height: var(--font-3xl);
+  border: none;
+  background: #fff;
   cursor: pointer;
+  transition: background 0.2s ease, transform 0.12s ease;
+}
+
+.closeButton:active {
+  transform: scale(0.98);
+}
+
+.closeIcon {
+  color: var(--dark-blue);
 }
 
 .hamburgerMenu {
   cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.hamburgerMenu:active {
+  transform: scale(0.98);
 }

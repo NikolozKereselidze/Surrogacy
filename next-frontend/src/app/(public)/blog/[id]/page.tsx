@@ -1,12 +1,9 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
 import Image from "next/image";
+import type { Metadata } from "next";
 import styles from "@/styles/Blog/Blog.module.css";
 import { FaClock } from "react-icons/fa";
 import DonorsNavigation from "@/components/Navigation/DonorsNavigation";
-import LoadingSpinner from "@/components/LoadingSpinner";
+import { BASE_URL } from "@/lib/seo";
 
 const CLOUDFRONT_DOMAIN = process.env.NEXT_PUBLIC_CLOUDFRONT_DOMAIN;
 
@@ -25,34 +22,76 @@ interface BlogPost {
   imagePath?: string;
 }
 
-const BlogPost = () => {
-  const { id } = useParams();
-  const [post, setPost] = useState<BlogPost | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+async function fetchPostById(id: string): Promise<BlogPost | null> {
+  if (!id) return null;
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog/${id}`,
+    { cache: "no-store" }
+  );
+  if (!res.ok) return null;
+  return (await res.json()) as BlogPost;
+}
 
-  useEffect(() => {
-    if (!id) return;
-    const fetchPost = async () => {
-      try {
-        const res = await fetch(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog/${id}`
-        );
-        if (!res.ok) throw new Error("Failed to fetch blog post");
-        const data: BlogPost = await res.json();
-        setPost(data);
-      } catch (err) {
-        const message = err instanceof Error ? err.message : String(err);
-        setError(message || "Error fetching blog post");
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchPost();
-  }, [id]);
+function extractText(html: string): string {
+  if (!html) return "";
+  return html
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
-  if (error || !post) {
-    return <div className={styles.state}>{error || "Not found"}</div>;
+function truncate(str: string, max = 160): string {
+  if (str.length <= max) return str;
+  return `${str.slice(0, max - 1)}…`;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { id: string };
+}): Promise<Metadata> {
+  const post = await fetchPostById(params.id);
+  const title = post?.title ?? "Blog post";
+  const description =
+    truncate(extractText(post?.content || ""), 160) ||
+    "Insights from Miracle Makers about surrogacy, egg donation and family building.";
+  const ogImage = post?.imagePath ? getImageUrl(post.imagePath) : undefined;
+  const url = `${BASE_URL}/blog/${params.id}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `/blog/${params.id}`,
+      // If blog becomes localized with language routes, add languages here
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "article",
+      images: ogImage
+        ? [{ url: ogImage, width: 1200, height: 630, alt: title }]
+        : undefined,
+    },
+    twitter: {
+      card: ogImage ? "summary_large_image" : "summary",
+      title,
+      description,
+      images: ogImage ? [ogImage] : undefined,
+    },
+  };
+}
+
+export default async function BlogPostPage({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const post = await fetchPostById(params.id);
+
+  if (!post) {
+    return <div className={styles.state}>Not found</div>;
   }
 
   return (
@@ -71,7 +110,6 @@ const BlogPost = () => {
               </div>
               <div className={styles.date}>
                 <FaClock />
-
                 <span>
                   {new Date(post.date).toLocaleDateString("en-US", {
                     month: "long",
@@ -95,7 +133,6 @@ const BlogPost = () => {
               height={1000}
             />
           )}
-
           <div
             className={styles.postContent}
             dangerouslySetInnerHTML={{ __html: post.content }}
@@ -104,6 +141,4 @@ const BlogPost = () => {
       </article>
     </>
   );
-};
-
-export default BlogPost;
+}

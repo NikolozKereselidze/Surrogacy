@@ -39,10 +39,6 @@ export default function RootLayout({
           name="google-site-verification"
           content="TowaFgD30cj57_17EGxFj4spSTkz6MFK93fAxuZ_xAQ"
         />
-        <meta
-          name="description"
-          content="Compassionate surrogacy and egg donation services tailored to your journey. Expert guidance for intended parents, surrogates, and egg donors worldwide."
-        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <StructuredData />
       </head>
