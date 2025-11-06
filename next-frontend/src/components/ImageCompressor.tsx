@@ -91,8 +91,11 @@ const ImageCompressor: React.FC<ImageCompressorProps> = ({
       previewUrls.push(URL.createObjectURL(compressedFile));
     }
 
-    setCompressedFiles(compressedFilesArray);
-    setPreviews(previewUrls);
+    // Append instead of replace
+    setCompressedFiles((prev) => [...prev, ...compressedFilesArray]);
+    setPreviews((prev) => [...prev, ...previewUrls]);
+
+    // Append for parent too
     onMultipleCompressed?.(compressedFilesArray);
   };
 

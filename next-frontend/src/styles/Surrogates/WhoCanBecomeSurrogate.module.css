@@ -6,7 +6,6 @@
 .heroSection {
   background: linear-gradient(135deg, var(--color-primary) 0%, #3b82f6 100%);
   color: white;
-  padding: var(--padding-5xl) var(--padding-xl);
   position: relative;
   overflow: hidden;
 }
@@ -100,9 +99,6 @@
 }
 
 /* Requirements Section */
-.requirementsSection {
-  padding: var(--padding-5xl) var(--padding-xl);
-}
 
 .requirementsGrid {
   display: flex;
@@ -112,9 +108,6 @@
 }
 
 /* Process Section */
-.processSection {
-  padding: var(--padding-5xl) var(--padding-xl);
-}
 
 .processStep {
   display: flex;
@@ -187,10 +180,6 @@
 }
 
 /* Support Section */
-.supportSection {
-  padding: var(--padding-5xl) var(--padding-xl);
-}
-
 .supportGrid {
   display: flex;
   flex-wrap: wrap;

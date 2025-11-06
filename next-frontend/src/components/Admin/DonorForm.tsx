@@ -84,7 +84,7 @@ const DonorForm = ({
   };
 
   const handleSecondaryImagesChange = (files: File[]) => {
-    setSecondaryImageFiles(files);
+    setSecondaryImageFiles((prev) => [...prev, ...files]);
   };
 
   const resetFileStates = () => {
