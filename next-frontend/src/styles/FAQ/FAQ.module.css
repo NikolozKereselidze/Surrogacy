@@ -54,7 +54,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--gap-sm);
-  padding: 16px 18px;
+  padding: 20px 18px;
   background: linear-gradient(0deg, #ffffff, #ffffff);
   border: 0;
   cursor: pointer;
@@ -77,25 +77,22 @@
 }
 
 .panel {
-  height: 0;
-  opacity: 0;
-  transform: translateY(-4px);
-  padding: 0 18px 0 18px;
+  max-height: 0;
+  transform: scale(0);
+  padding: 0 18px;
   overflow: hidden;
-  transition: height 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .panelOpen {
-  height: auto;
-  opacity: 1;
-  transform: translateY(0);
-  padding: 0 18px 16px 18px;
+  max-height: 600px;
+  transform: scale(1);
 }
 
 .a {
   color: var(--dark-blue);
   line-height: 1.6;
-  margin: 0;
+  margin: 18px 0 18px 0; /* gives top and bottom breathing space */
 }
 
 .empty {
