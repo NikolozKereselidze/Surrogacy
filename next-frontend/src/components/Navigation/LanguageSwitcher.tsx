@@ -3,15 +3,16 @@
 import { useTranslation } from "react-i18next";
 import { useState, useEffect, useRef } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import ReactCountryFlag from "react-country-flag";
 import styles from "@/styles/Navigation/LanguageSwitcher.module.css";
 
 const LANGUAGES = [
-  { code: "en", name: "English", flag: "🇺🇸", dir: "ltr" },
-  { code: "ge", name: "ქართული", flag: "🇬🇪", dir: "ltr" },
-  { code: "ru", name: "Русский", flag: "🇷🇺", dir: "ltr" },
-  { code: "zh", name: "中文", flag: "🇨🇳", dir: "ltr" },
-  { code: "es", name: "Español", flag: "🇪🇸", dir: "ltr" },
-  { code: "he", name: "עברית", flag: "🇮🇱", dir: "rtl" },
+  { code: "en", name: "English", countryCode: "US", dir: "ltr" },
+  { code: "ge", name: "ქართული", countryCode: "GE", dir: "ltr" },
+  { code: "ru", name: "Русский", countryCode: "RU", dir: "ltr" },
+  { code: "zh", name: "中文", countryCode: "CN", dir: "ltr" },
+  { code: "es", name: "Español", countryCode: "ES", dir: "ltr" },
+  { code: "he", name: "עברית", countryCode: "IL", dir: "rtl" },
 ];
 
 const LanguageSwitcher = ({ isMobile }: { isMobile?: boolean }) => {
@@ -81,7 +82,17 @@ const LanguageSwitcher = ({ isMobile }: { isMobile?: boolean }) => {
         aria-expanded={isOpen}
         aria-label={`Select language, current: ${currentLanguage.name}`}
       >
-        <span className={styles.flag}>{currentLanguage.flag}</span>
+        <span className={styles.flag}>
+          <ReactCountryFlag
+            countryCode={currentLanguage.countryCode}
+            svg
+            style={{
+              width: "1.2em",
+              height: "1.2em",
+            }}
+            title={currentLanguage.name}
+          />
+        </span>
       </button>
 
       {isOpen && (
@@ -96,7 +107,17 @@ const LanguageSwitcher = ({ isMobile }: { isMobile?: boolean }) => {
                 aria-selected={lang.code === currentLanguage.code}
                 aria-label={lang.name}
               >
-                <span className={styles.flag}>{lang.flag}</span>
+                <span className={styles.flag}>
+                  <ReactCountryFlag
+                    countryCode={lang.countryCode}
+                    svg
+                    style={{
+                      width: "1.2em",
+                      height: "1.2em",
+                    }}
+                    title={lang.name}
+                  />
+                </span>
               </button>
             )
           )}
