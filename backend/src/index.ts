@@ -1,5 +1,7 @@
-import dotenv from "dotenv";
-dotenv.config();
+// Load environment variables FIRST before any other imports
+// Using require() ensures this runs before ES6 imports (which are hoisted)
+require("dotenv").config();
+
 import express, { Request, Response } from "express";
 import cookieParser from "cookie-parser";
 import blogRoutes from "./routes/blogRoutes";
@@ -9,11 +11,9 @@ import spermDonorRoutes from "./routes/spermDonorRoutes";
 import cors from "cors";
 import fileRoutes from "./routes/fileRoutes";
 import contactRoutes from "./routes/contactRoutes";
-
-dotenv.config();
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const port = Number(process.env.PORT);
 
 app.set("trust proxy", 1);
 
@@ -43,6 +43,6 @@ app.use("/api/file", fileRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/blog", blogRoutes);
 
-app.listen(PORT, () => {
-  console.log("Server is running on port 3000");
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Server is running on port ${port}`);
 });
