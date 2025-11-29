@@ -23,7 +23,7 @@ const staticRoutes = [
   { path: "/faq", priority: 0.7 },
 ];
 
-const locales = ["en", "he", "zh", "ru", "es", "ge"];
+const locales = ["en", "he", "zh", "ru", "es", "ka"];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Build sitemap entries

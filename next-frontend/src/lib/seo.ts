@@ -22,12 +22,13 @@ export function buildPageMetadata({
     alternates: {
       canonical: path,
       languages: {
-        "en-US": `/en${path}`,
-        he: `/he${path}`,
-        es: `/es${path}`,
-        ru: `/ru${path}`,
-        zh: `/zh${path}`,
-        ka: `/ka${path}`,
+        en: `${BASE_URL}/en${path}`,
+        he: `${BASE_URL}/he${path}`,
+        es: `${BASE_URL}/es${path}`,
+        ru: `${BASE_URL}/ru${path}`,
+        zh: `${BASE_URL}/zh${path}`,
+        ka: `${BASE_URL}/ka${path}`,
+        "x-default": `${BASE_URL}/en${path}`, 
       },
     },
   };

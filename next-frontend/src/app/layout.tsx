@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito_Sans, Lora } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import StructuredData from "@/components/StructuredData";
 
 import "./[locale]/globals.css";
@@ -7,14 +7,7 @@ import "./[locale]/globals.css";
 const nunitoSans = Nunito_Sans({
   variable: "--font-nunito-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
-
-const lora = Lora({
-  variable: "--font-lora",
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
@@ -33,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html data-scroll-behavior="smooth">
+    <html data-scroll-behavior="smooth" className={`${nunitoSans.variable}`}>
       <head>
         <meta
           name="google-site-verification"
@@ -42,7 +35,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <StructuredData />
       </head>
-      <body className={`${nunitoSans.variable} ${lora.variable}`}>
+      <body className={nunitoSans.variable}>
         {children}
         <script
           src={`//code.tidio.co/${process.env.TIDIO_CODE}.js`}

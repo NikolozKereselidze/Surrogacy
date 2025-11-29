@@ -4,7 +4,10 @@
 }
 
 .currentLangButton {
-  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  padding: 0.6rem 0.8rem;
   border: 1px solid #e0e0e0;
   border-radius: 0.4rem;
   background: white;
@@ -21,24 +24,26 @@
 .dropdown {
   position: absolute;
   top: 100%;
-  left: 0;
   right: 0;
+
+  min-width: max-content;
+  width: max-content;
   background: white;
   border: 1px solid #e0e0e0;
   border-radius: 0.4rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  margin-top: 0.2rem;
-  overflow: hidden;
+  margin-top: 0.6rem;
+  overflow: visible;
 }
 
 .langOption {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: var(--gap-base);
+  gap: var(--gap-sm);
   padding: 0.5rem 0.8rem;
   width: 100%;
+  min-width: max-content;
   border: none;
   background: white;
   cursor: pointer;
@@ -53,6 +58,14 @@
 
 .flag {
   font-size: var(--font-base);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.langName {
+  white-space: nowrap;
+  color: inherit;
 }
 
 .mobileCurrentLangButton {

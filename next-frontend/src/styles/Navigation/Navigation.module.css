@@ -31,3 +31,13 @@
   visibility: visible;
   pointer-events: auto;
 }
+
+@media (max-width: 768px) {
+  .navigation {
+    padding: var(--padding-xs) var(--padding-lg);
+  }
+
+  .logo {
+    font-size: var(--font-base);
+  }
+}

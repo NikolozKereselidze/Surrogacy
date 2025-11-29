@@ -184,9 +184,11 @@ const BlogCard = () => {
                     <h3 className={styles.blogTitle}>{post.title}</h3>
 
                     <Link
-                      href={`/blog/${post.title
+                      href={`/blog/${post.id}/${post.title
                         .toLowerCase()
-                        .replace(/ /g, "-")}`}
+                        .trim()
+                        .replace(/[^a-z0-9]+/g, "-")
+                        .replace(/^-+|-+$/g, "")}`}
                       className={styles.readMoreLink}
                     >
                       {t("blog.readMore")} →

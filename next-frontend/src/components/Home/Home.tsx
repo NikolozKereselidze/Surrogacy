@@ -52,7 +52,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* <TextContent
+      <TextContent
         reverse={true}
         title="Around the Clock Support"
         description="From the moment your application is accepted, you'll have access to our dedicated team offering round-the-clock support. Whether you have questions at midnight or need guidance on weekends, we're here to ensure your journey is smooth, comfortable, and well-supported every step of the way."
@@ -94,7 +94,7 @@ const Home = () => {
           },
         ]}
         image={"/img/testing.jpg"}
-      /> */}
+      />
 
       <section className={`${styles.ourTeamSection} section`}>
         <div className="content">

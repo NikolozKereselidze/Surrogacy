@@ -84,8 +84,7 @@ h6 {
   --blue: #22223b;
   --gray: #404040;
   --light-gray: #70798b;
-  --font-family: var(--font-noto-sans, system-ui), system-ui, -apple-system,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family: "Nunito Sans";
 
   /* Font Size System */
   --font-xs: 0.75rem; /* Error messages, small labels */
@@ -135,37 +134,25 @@ h6 {
   --gap-10xl: 2.4rem; /* Extra spacious section gaps */
   --gap-11xl: 3rem; /* Maximum section gaps */
   --gap-12xl: 4.2rem; /* Hero section gaps */
+
+  /* Section Background Colors - Subtle tints that won't conflict with white components */
+  --section-bg-primary: #f5f5f7; /* Light gray - default section background */
+  --section-bg-alt: #f8f9ff; /* Very light purple tint - alternating background */
+  --section-bg-warm: #faf9f7; /* Warm off-white - subtle warm variation */
 }
 
 /* FAQ design tokens were removed to use existing global tokens */
 
 body {
   font-family: var(--font-family);
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background: #fff;
 }
 
 /* Language-specific fallbacks to improve glyph coverage */
-:lang(zh) {
-  font-family: "Noto Sans SC", var(--font-family);
-}
-
-:lang(he) {
-  font-family: "Noto Sans Hebrew", var(--font-family);
-}
-
+:lang(zh),
+:lang(he),
 :lang(ka) {
-  font-family: "Noto Sans Georgian", var(--font-family);
-}
-
-/* Optional serif pairing for long-form content and headings */
-body {
-  font-family: var(--font-nunito-sans);
-}
-
-h1,
-h2,
-h3 {
-  font-family: var(--font-lora);
+  font-family: var(--font-family);
 }
 
 * {
@@ -175,34 +162,78 @@ h3 {
 }
 
 .section {
-  padding: var(--padding-4xl) var(--padding-5xl) var(--padding-2xl)
-    var(--padding-5xl);
+  background: var(--section-bg-primary);
+  padding: var(--padding-4xl) var(--padding-base) var(--padding-2xl)
+    var(--padding-base);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--gap-11xl);
+  position: relative;
+}
+
+/* Section Background Variations - Manual utility classes for precise control */
+/* Use these classes on sections to create visual distinction without conflicting with white components */
+.section:nth-child(odd) {
+  background: var(--section-bg-alt);
+}
+
+.section:nth-child(even) {
+  background: var(--section-bg-primary) !important;
+}
+
+/* Section Dividers - Automatic visual separation */
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(137, 16, 246, 0.15) 15%,
+    rgba(137, 16, 246, 0.3) 50%,
+    rgba(137, 16, 246, 0.15) 85%,
+    transparent
+  );
+  z-index: 1;
+}
+
+.section:first-child::before {
+  display: none;
+}
+
+.section:last-child {
+  margin-bottom: 0;
 }
 
 .content {
+  margin-top: 0.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--gap-md);
+  gap: var(--gap-base);
 }
 
 .title {
   font-size: var(--font-3xl);
-  font-weight: 600;
-  color: var(--color-primary, #8910f6);
+  font-weight: 700;
+  color: #1e293b;
   text-align: center;
-  line-height: 1.3;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 .subtitle {
   font-size: var(--font-xl);
   font-weight: 500;
-  color: rgba(42, 55, 109, 0.75);
+  color: #64748b;
   text-align: center;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .miracleIcon {
@@ -234,7 +265,6 @@ h3 {
 
 /* SWIPER */
 .swiper {
-  padding-bottom: 3.4rem !important;
   width: 100% !important;
   position: static !important;
 }
@@ -473,17 +503,17 @@ h3 {
 /* Legacy media query for existing components */
 @media screen and (max-width: 1278px) {
   .section {
-    padding: var(--padding-2xl) var(--padding-3xl) var(--padding-xl)
-      var(--padding-3xl);
+    padding: var(--padding-2xl) var(--padding-sm) var(--padding-xl)
+      var(--padding-sm);
   }
 
   .title {
-    font-size: var(--font-3xl);
-    margin-bottom: 0.5rem;
+    font-size: var(--font-2xl);
+    margin-bottom: var(--gap-sm);
   }
 
   .subtitle {
-    font-size: var(--font-lg);
+    font-size: var(--font-base);
   }
 
   .miracleIcon {

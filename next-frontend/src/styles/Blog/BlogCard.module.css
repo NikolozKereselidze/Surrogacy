@@ -158,3 +158,48 @@
   height: 18px;
   background-color: #e2e8f0;
 }
+
+@media screen and (max-width: 768px) {
+  .blogGrid {
+    gap: var(--gap-4xl);
+  }
+
+  .blogContent {
+    padding: 1.1rem;
+    gap: var(--gap-lg);
+  }
+
+  .blogMeta {
+    flex-direction: column;
+    gap: var(--gap-sm);
+  }
+
+  .blogTitle {
+    font-size: 1rem;
+  }
+
+  .blogImageContainer {
+    max-height: 13rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .blogContent {
+    padding: 1rem 0.9rem 1.1rem;
+  }
+
+  .blogCategory {
+    top: 0.7rem;
+    left: 0.7rem;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  .blogMeta {
+    font-size: 0.75rem;
+  }
+
+  .readMoreLink {
+    font-size: 0.85rem;
+  }
+}

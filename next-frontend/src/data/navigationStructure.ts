@@ -23,6 +23,10 @@ export const navigationStructure = [
         href: "/surrogate-screening",
         labelKey: "submenu.surrogates.screeningProcess",
       },
+      {
+        href: "/surrogacy-in-georgia",
+        labelKey: "submenu.surrogates.surrogacyInGeorgia",
+      },
     ],
   },
   {

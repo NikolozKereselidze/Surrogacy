@@ -118,6 +118,7 @@ const LanguageSwitcher = ({ isMobile }: { isMobile?: boolean }) => {
                     title={lang.name}
                   />
                 </span>
+                <span className={styles.langName}>{lang.name}</span>
               </button>
             )
           )}

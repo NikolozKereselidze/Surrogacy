@@ -307,7 +307,7 @@
 
 @media screen and (max-width: 768px) {
   .heroSection {
-    min-height: 65vh;
+    min-height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,9 +316,10 @@
   .heroContent {
     display: flex;
     position: static;
-    width: 85%;
+    width: 90%;
     transform: none;
     text-align: center;
+    gap: var(--gap-lg);
   }
 
   .heroTitle {
@@ -326,9 +327,9 @@
   }
 
   .heroButton {
-    display: none;
-    visibility: hidden;
-    pointer-events: none;
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 auto;
   }
 
   .beginYourMiracleCardTitle {
@@ -344,5 +345,10 @@
 @media screen and (max-width: 428px) {
   .heroTitle {
     font-size: var(--font-xl);
+  }
+
+  .heroDescription {
+    font-size: var(--font-sm);
+    line-height: 1.6;
   }
 }

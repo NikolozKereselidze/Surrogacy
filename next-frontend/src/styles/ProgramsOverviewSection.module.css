@@ -147,7 +147,12 @@
 
 @media (max-width: 768px) {
   .programsGrid {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  }
+
+  .programCard {
+    padding: var(--padding-lg) var(--padding-md);
+    border-radius: 16px;
   }
 }
 

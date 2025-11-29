@@ -100,3 +100,30 @@
 .linkedinIcon {
   color: #0077b5;
 }
+
+@media (max-width: 768px) {
+  .footerContent {
+    padding: var(--padding-3xl) var(--padding-xl);
+    gap: var(--gap-4xl);
+  }
+
+  .socials {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--gap-md);
+  }
+
+  .socialsIcons {
+    gap: var(--gap-xl);
+  }
+
+  .copyright {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--gap-sm);
+  }
+
+  .footerLinksGrid {
+    gap: var(--gap-4xl);
+  }
+}
