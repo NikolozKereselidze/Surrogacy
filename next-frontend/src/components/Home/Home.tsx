@@ -4,6 +4,7 @@ import Button from "@/components/Button";
 import styles from "@/styles/Home.module.css";
 import { useTranslation } from "react-i18next";
 import { FaBaby, FaUserPlus, FaGift } from "react-icons/fa";
+
 import MiracleCard from "@/components/MiracleCard";
 import TeamCard from "@/components/TeamCard";
 import StatisticsSection from "@/components/StatisticsSection";
@@ -11,6 +12,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ProgramsOverviewSection from "@/components/ProgramsOverviewSection";
 import { getFeaturedTeamMembers } from "@/data/teamMembers";
 import { useMemo } from "react";
+import TextContent from "@/components/TextContent";
 
 const Home = () => {
   const { t, i18n } = useTranslation();
@@ -49,6 +51,64 @@ const Home = () => {
           </Button>
         </div>
       </section>
+
+      {/* <TextContent
+        reverse={true}
+        title="Around the Clock Support"
+        description="From the moment your application is accepted, you'll have access to our dedicated team offering round-the-clock support. Whether you have questions at midnight or need guidance on weekends, we're here to ensure your journey is smooth, comfortable, and well-supported every step of the way."
+        highlightBadge="24/7 Case Management"
+        eyebrow="Support"
+        stats={[
+          {
+            label: "test test tests",
+            value: "100%",
+          },
+        ]}
+        contents={[
+          {
+            subtitle: "Legal & Medical Excellence",
+            content:
+              "Our comprehensive approach includes expert legal guidance to ensure all contracts and agreements are transparent and secure. We work with top-rated fertility clinics and medical professionals in Georgia, ensuring you receive the highest standard of medical care throughout your journey.",
+          },
+        ]}
+        image={"/img/testing.jpg"}
+      />
+
+      <ProgramsOverviewSection />
+
+      <TextContent
+        reverse={false}
+        highlightBadge="First-Hand Experience"
+        title="Experienced & Compassionate Team"
+        eyebrow="Experience"
+        contents={[
+          {
+            subtitle: "Legal & Medical Excellence",
+            content:
+              "Our comprehensive approach includes expert legal guidance to ensure all contracts and agreements are transparent and secure. We work with top-rated fertility clinics and medical professionals in Georgia, ensuring you receive the highest standard of medical care throughout your journey.",
+          },
+          {
+            subtitle: "Legal & Medical Excellence",
+            content:
+              "Our comprehensive approach includes expert legal guidance to ensure all contracts and agreements are transparent and secure. We work with top-rated fertility clinics and medical professionals in Georgia, ensuring you receive the highest standard of medical care throughout your journey.",
+          },
+        ]}
+        image={"/img/testing.jpg"}
+      /> */}
+
+      <section className={`${styles.ourTeamSection} section`}>
+        <div className="content">
+          <h2 className="title">{t("ourTeam.title")}</h2>
+          <p className="subtitle">{t("ourTeam.subtitle")}</p>
+        </div>
+        <div className={styles.ourTeamGrid}>
+          {teamMembers.map((member, index) => (
+            <TeamCard key={`${member.name}-${index}`} member={member} />
+          ))}
+        </div>
+      </section>
+
+      <TestimonialsSection />
 
       <section className={`${styles.beginYourMiracleSection} section`}>
         <div className="content">
@@ -95,23 +155,6 @@ const Home = () => {
           />
         </div>
       </section>
-
-      <section className={`${styles.ourTeamSection} section`}>
-        <div className="content">
-          <h2 className="title">{t("ourTeam.title")}</h2>
-          <p className="subtitle">{t("ourTeam.subtitle")}</p>
-        </div>
-        <div className={styles.ourTeamGrid}>
-          {teamMembers.map((member, index) => (
-            <TeamCard key={`${member.name}-${index}`} member={member} />
-          ))}
-        </div>
-      </section>
-
-      <TestimonialsSection />
-
-      <ProgramsOverviewSection />
-
       <section className="section">
         <StatisticsSection />
       </section>

@@ -16,7 +16,7 @@ if (!i18n.isInitialized) {
       zh: { translation: zhTranslation },
       ru: { translation: ruTranslation },
       es: { translation: esTranslation },
-      ge: { translation: geTranslation },
+      ka: { translation: geTranslation },
     },
     fallbackLng: "en",
     lng: "en", // Default language, will be changed by I18nProvider

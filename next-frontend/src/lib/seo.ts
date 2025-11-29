@@ -27,7 +27,7 @@ export function buildPageMetadata({
         es: `/es${path}`,
         ru: `/ru${path}`,
         zh: `/zh${path}`,
-        ka: `/ge${path}`,
+        ka: `/ka${path}`,
       },
     },
   };

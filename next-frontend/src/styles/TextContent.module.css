@@ -1,0 +1,245 @@
+.contentContainer {
+  display: flex;
+  gap: var(--gap-10xl);
+  background: linear-gradient(120deg, rgba(250, 252, 255, 0.9), #fff);
+  border: 1px solid rgba(19, 39, 69, 0.06);
+  border-radius: 32px;
+  padding: var(--padding-2xl);
+  box-shadow: 0 30px 80px rgba(10, 52, 99, 0.08);
+  width: 100%;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.textPanel,
+.contentList {
+  display: flex;
+  flex-direction: column;
+}
+
+.textPanel {
+  flex: 1;
+  gap: 1.25rem;
+}
+
+.badgeGroup {
+  display: inline-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.highlightBadge {
+  font-size: var(--font-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(16, 91, 190, 0.1);
+  color: var(--dark-blue);
+  font-weight: 600;
+}
+
+.eyebrow {
+  font-size: var(--font-sm);
+  color: var(--color-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.title {
+  font-size: var(--font-3xl);
+  color: var(--dark-blue);
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: rgba(42, 55, 109, 0.75);
+  line-height: 1.75;
+  margin-top: 0.5rem;
+}
+
+.contentList {
+  gap: 1rem;
+}
+
+.contentItem {
+  padding: 1.25rem 1.5rem;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid rgba(16, 91, 190, 0.08);
+  box-shadow: 0 20px 40px rgba(10, 52, 99, 0.06);
+}
+
+.subtitleRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.subtitle {
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  font-weight: 600;
+  color: var(--dark-blue);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+
+.contentHighlight {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #105bbe;
+  background: rgba(16, 91, 190, 0.1);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+}
+
+.contentText {
+  margin-top: 0.75rem;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  color: rgba(42, 55, 109, 0.75);
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+}
+
+.statsGrid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.85rem;
+}
+
+.statCard {
+  background: rgba(16, 91, 190, 0.08);
+  border-radius: 18px;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(16, 91, 190, 0.15);
+  text-align: center;
+}
+
+.statValue {
+  display: block;
+  font-size: var(--font-2xl);
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.statLabel {
+  font-size: 0.95rem;
+  color: rgba(19, 39, 69, 0.75);
+}
+
+.ctaButton {
+  margin-top: 1rem;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  background: var(--dark-blue);
+  color: #fff;
+  border: none;
+  box-shadow: 0 20px 30px rgba(16, 91, 190, 0.25);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 25px 40px rgba(16, 91, 190, 0.35);
+}
+
+.ctaIcon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.mediaPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 35px 70px rgba(10, 52, 99, 0.2);
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.imageCaption {
+  text-align: center;
+  font-size: 0.95rem;
+  color: rgba(19, 39, 69, 0.7);
+}
+
+@media (max-width: 1024px) {
+  .contentContainer {
+    flex-direction: column;
+  }
+
+  .mediaPanel,
+  .textPanel {
+    width: 100%;
+  }
+
+  .imageWrapper {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contentContainer {
+    padding: 1.25rem;
+    border-radius: 24px;
+  }
+
+  .title {
+    font-size: var(--font-xl);
+    line-height: 1.3;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .subtitle {
+    font-size: 1.15rem;
+  }
+
+  .contentText {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .subtitleRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ctaButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

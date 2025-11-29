@@ -14,7 +14,6 @@ export async function generateMetadata({
   params: { locale?: string };
 }): Promise<Metadata> {
   const { locale } = await params;
-  console.log(locale);
 
   const localized = {
     en: {
@@ -29,7 +28,7 @@ export async function generateMetadata({
         "gestational surrogacy Georgia",
       ],
     },
-    ge: {
+    ka: {
       title: "სუროგაცია საქართველოში - Miracle Makers",
       description:
         "ზრუნვით სუროგაციისა და კვერცხუჯრედის დონაციის სერვისები საქართველოში. ექსპერტული მხარდაჭერა მშობლობის გზაზე თბილისში.",

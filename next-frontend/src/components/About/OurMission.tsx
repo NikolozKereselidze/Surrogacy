@@ -4,6 +4,7 @@ import { FaLightbulb, FaHeart, FaShieldAlt, FaHandshake } from "react-icons/fa";
 import styles from "@/styles/About/OurMission.module.css";
 import { useTranslation } from "react-i18next";
 import RequirementsCard from "@/components/RequirementsCard";
+import TextContent from "@/components/TextContent";
 
 const OurMission = () => {
   const { t } = useTranslation();
@@ -61,6 +62,32 @@ const OurMission = () => {
           </div>
         </div>
       </section>
+
+      {/* <TextContent
+        eyebrow="ჩვენი მისია"
+        title="რატომ ვარსებობთ"
+        description="ჩვენი მისიაა შევქმნათ უსაფრთხო, გამჭვირვალე და ემპატიური გარემო სუროგაციისთვის, IVF-თვის და კვერცხუჯრედის დონაციისთვის საქართველოში."
+        highlightBadge="სუროგაციის ცენტრი თბილისი"
+        image={{
+          src: "/img/testing.jpg",
+          alt: "სუროგაციის ცენტრი თბილისში - Miracle Makers",
+          caption:
+            "სუროგაციისა და IVF პროგრამები საქართველოში უცხოელებისა და ქართველებისთვის.",
+        }}
+        contents={[
+          {
+            subtitle: "მხარდაჭერა",
+            highlight: "სუროგაცია, IVF, დონაცია",
+            content:
+              "ვეხმარებით წყვილებს და მარტოხელა მშობლებს, რომ გაიარონ სუროგაციისა და ინ ვიტრო განაყოფიერების სრული გზა, პირველ კონსულტაციიდან ბავშვის დაბადებამდე.",
+          },
+          {
+            subtitle: "მედიცინა + ემოციური მხარდაჭერა",
+            content:
+              "მჭიდროდ ვთანამშრომლობთ საქართველოში წამყვან რეპროდუქტოლოგებთან, კლინიკებთან და იურიდიულ პარტნიორებთან, რომ პროცესი იყოს უსაფრთხო და პროგნოზირებადი.",
+          },
+        ]}
+      /> */}
 
       {/* Mission Statement Card */}
       <section className="section">

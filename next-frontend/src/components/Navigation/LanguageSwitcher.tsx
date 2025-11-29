@@ -8,7 +8,7 @@ import styles from "@/styles/Navigation/LanguageSwitcher.module.css";
 
 const LANGUAGES = [
   { code: "en", name: "English", countryCode: "US", dir: "ltr" },
-  { code: "ge", name: "ქართული", countryCode: "GE", dir: "ltr" },
+  { code: "ka", name: "ქართული", countryCode: "GE", dir: "ltr" },
   { code: "ru", name: "Русский", countryCode: "RU", dir: "ltr" },
   { code: "zh", name: "中文", countryCode: "CN", dir: "ltr" },
   { code: "es", name: "Español", countryCode: "ES", dir: "ltr" },

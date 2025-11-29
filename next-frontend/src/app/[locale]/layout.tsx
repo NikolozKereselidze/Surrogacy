@@ -12,7 +12,7 @@ export default async function RootLayout({
   const { locale } = await params;
 
   // Validate locale - if invalid, show 404
-  const supportedLocales = ["en", "he", "zh", "ru", "es", "ge"];
+  const supportedLocales = ["en", "he", "zh", "ru", "es", "ka"];
   if (!supportedLocales.includes(locale)) {
     notFound();
   }

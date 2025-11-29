@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import Button from "@/components/Button";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navigationConfig } from "@/config/navigationConfig";
@@ -23,7 +23,7 @@ const NavigationList = ({
 
   useEffect(() => setOpenSubmenu(null), [location]);
 
-  const menuItems = navigationConfig(t);
+  const menuItems = useMemo(() => navigationConfig(t), [t]);
 
   const toggleSubmenu = (key: string) => {
     setOpenSubmenu((prev) => (prev === key ? null : key));
@@ -48,7 +48,7 @@ const NavigationList = ({
                 : undefined
             }
           >
-            <div className={styles.menuItem} >
+            <div className={styles.menuItem}>
               {item.href ? (
                 <Link
                   href={`/${locale}${item.href}`}
