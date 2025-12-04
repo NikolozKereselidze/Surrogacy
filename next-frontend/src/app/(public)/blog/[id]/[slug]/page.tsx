@@ -23,11 +23,13 @@ interface BlogPost {
 }
 
 async function fetchPostById(id: string): Promise<BlogPost | null> {
+  console.log(id);
   if (!id) return null;
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog/${id}`,
     { cache: "no-store" }
   );
+  console.log(res);
   if (!res.ok) return null;
   return (await res.json()) as BlogPost;
 }
@@ -48,21 +50,22 @@ function truncate(str: string, max = 160): string {
 export async function generateMetadata({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }): Promise<Metadata> {
-  const post = await fetchPostById(params.id);
+  const { id } = await params;
+  const post = await fetchPostById(id);
   const title = post?.title ?? "Blog post";
   const description =
     truncate(extractText(post?.content || ""), 160) ||
     "Insights from Miracle Makers about surrogacy, egg donation and family building.";
   const ogImage = post?.imagePath ? getImageUrl(post.imagePath) : undefined;
-  const url = `${BASE_URL}/blog/${params.id}`;
+  const url = `${BASE_URL}/blog/${id}`;
 
   return {
     title,
     description,
     alternates: {
-      canonical: `/blog/${params.id}`,
+      canonical: `/blog/${id}`,
       // If blog becomes localized with language routes, add languages here
     },
     openGraph: {
@@ -86,9 +89,10 @@ export async function generateMetadata({
 export default async function BlogPostPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const post = await fetchPostById(params.id);
+  const { id } = await params;
+  const post = await fetchPostById(id);
 
   if (!post) {
     return <div className={styles.state}>Not found</div>;
