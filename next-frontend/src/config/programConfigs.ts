@@ -20,6 +20,20 @@ export const PROGRAM_CONFIGS = {
         ],
       },
     ],
+    questions: [
+      {
+        questionKey: "surrogacyWithOwnGametes.question1.q",
+        answerKey: "surrogacyWithOwnGametes.question1.a",
+      },
+      {
+        questionKey: "surrogacyWithOwnGametes.question2.q",
+        answerKey: "surrogacyWithOwnGametes.question2.a",
+      },
+      {
+        questionKey: "surrogacyWithOwnGametes.question3.q",
+        answerKey: "surrogacyWithOwnGametes.question3.a",
+      },
+    ],
   },
   surrogacyWithEggDonor: {
     titleKey: "surrogacyWithEggDonor.title",
@@ -40,6 +54,20 @@ export const PROGRAM_CONFIGS = {
           "surrogacyWithEggDonor.benefits.step2",
           "surrogacyWithEggDonor.benefits.step3",
         ],
+      },
+    ],
+    questions: [
+      {
+        questionKey: "surrogacyWithEggDonor.question1.q",
+        answerKey: "surrogacyWithEggDonor.question1.a",
+      },
+      {
+        questionKey: "surrogacyWithEggDonor.question2.q",
+        answerKey: "surrogacyWithEggDonor.question2.a",
+      },
+      {
+        questionKey: "surrogacyWithEggDonor.question3.q",
+        answerKey: "surrogacyWithEggDonor.question3.a",
       },
     ],
   },
@@ -64,6 +92,20 @@ export const PROGRAM_CONFIGS = {
         ],
       },
     ],
+    questions: [
+      {
+        questionKey: "eggFreezing.question1.q",
+        answerKey: "eggFreezing.question1.a",
+      },
+      {
+        questionKey: "eggFreezing.question2.q",
+        answerKey: "eggFreezing.question2.a",
+      },
+      {
+        questionKey: "eggFreezing.question3.q",
+        answerKey: "eggFreezing.question3.a",
+      },
+    ],
   },
   vipConciergeServices: {
     titleKey: "vipConciergeServices.title",
@@ -86,8 +128,21 @@ export const PROGRAM_CONFIGS = {
         ],
       },
     ],
+    questions: [
+      {
+        questionKey: "vipConciergeServices.question1.q",
+        answerKey: "vipConciergeServices.question1.a",
+      },
+      {
+        questionKey: "vipConciergeServices.question2.q",
+        answerKey: "vipConciergeServices.question2.a",
+      },
+      {
+        questionKey: "vipConciergeServices.question3.q",
+        answerKey: "vipConciergeServices.question3.a",
+      },
+    ],
   },
 } as const;
 
 export type ProgramType = keyof typeof PROGRAM_CONFIGS;
-

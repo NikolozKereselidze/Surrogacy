@@ -15,6 +15,7 @@ function getImageUrl(imagePath: string) {
 
 interface BlogPost {
   id: string;
+  language: string;
   title: string;
   date: string;
   category: string;
@@ -36,6 +37,7 @@ const BlogManagement = () => {
   const [editingPost, setEditingPost] = useState<BlogPost | null>(null);
   const [currentImageUrl, setCurrentImageUrl] = useState<string>("");
   const [formData, setFormData] = useState({
+    language: "en",
     title: "",
     date: "",
     category: "",
@@ -182,6 +184,7 @@ const BlogManagement = () => {
   const handleEdit = async (post: BlogPost) => {
     setEditingPost(post);
     setFormData({
+      language: post.language,
       title: post.title,
       date: post.date,
       category: post.category,
@@ -203,6 +206,7 @@ const BlogManagement = () => {
 
   const resetForm = () => {
     setFormData({
+      language: "en",
       title: "",
       date: "",
       category: "",
@@ -237,6 +241,26 @@ const BlogManagement = () => {
           <div className={styles.formContainer}>
             <h2>{editingPost ? "Edit Blog Post" : "Add New Blog Post"}</h2>
             <form onSubmit={handleSubmit} className={styles.blogForm}>
+              <div className={styles.formRow}>
+                <div className={styles.formGroup}>
+                  <label htmlFor="language">Language</label>
+                  <select
+                    id="language"
+                    value={formData.language}
+                    onChange={(e) =>
+                      setFormData({ ...formData, language: e.target.value })
+                    }
+                  >
+                    <option value="en">English</option>
+                    <option value="ka">Georgian</option>
+                    <option value="ru">Russian</option>
+                    <option value="zh">Chinese</option>
+                    <option value="es">Spanish</option>
+                    <option value="he">Hebrew</option>
+                  </select>
+                </div>
+              </div>
+
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
                   <label htmlFor="title">Title</label>

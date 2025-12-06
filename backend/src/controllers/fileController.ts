@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import {
   deleteFileFromS3,
   generatePresignedPutUrl,
-} from "../services/s3Service";
+} from "../services/s3Service.js";
 
 const getPresignedPutUrl = async (
   req: Request,

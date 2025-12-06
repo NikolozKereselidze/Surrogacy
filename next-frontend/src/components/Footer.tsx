@@ -18,8 +18,23 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
-        <div className={styles.footerLinksGrid}>
-          <div>
+        {/* Top Section: Brand & Newsletter */}
+        <div className={styles.topSection}>
+          <div className={styles.brandColumn}>
+            <div className={styles.logo}>
+              <h3>Miracle Makers</h3>
+            </div>
+            <p className={styles.brandDescription}>
+              Helping intended parents and surrogates create miracles together.
+              We are dedicated to providing ethical, transparent, and supportive
+              surrogacy journeys.
+            </p>
+          </div>
+        </div>
+
+        {/* Middle Section: Navigation Links */}
+        <div className={styles.linksGrid}>
+          <div className={styles.linksColumn}>
             <h4>{t("navigation.aboutUs")}</h4>
             <ul>
               <li>
@@ -44,7 +59,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
+
+          <div className={styles.linksColumn}>
             <h4>{t("navigation.surrogates")}</h4>
             <ul>
               <li>
@@ -64,7 +80,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
+
+          <div className={styles.linksColumn}>
             <h4>{t("navigation.intendedParents")}</h4>
             <ul>
               <li>
@@ -84,7 +101,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
+
+          <div className={styles.linksColumn}>
             <h4>{t("navigation.eggDonors")}</h4>
             <ul>
               <li>
@@ -99,7 +117,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
+
+          <div className={styles.linksColumn}>
             <h4>{t("navigation.programs")}</h4>
             <ul>
               <li>
@@ -120,13 +139,22 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className={styles.socials}>
-          <div className={styles.logo}>
-            <h3>Miracle Makers</h3>
+
+        {/* Bottom Section: Copyright & Socials */}
+        <div className={styles.bottomSection}>
+          <div className={styles.copyright}>
+            &copy; {new Date().getFullYear()} Miracle Makers.{" "}
+            {t("footer.copyright")}
           </div>
-          <div className={styles.socialsIcons}>
+
+          <div className={styles.legalLinks}>
+            <Link href="#">{t("footer.privacyPolicy")}</Link>
+            <Link href="#">{t("footer.termsOfService")}</Link>
+          </div>
+
+          <div className={styles.socials}>
             <a
-              className={styles.facebookIcon}
+              className={styles.socialIcon}
               aria-label="Facebook"
               href="https://www.facebook.com/share/15bgwdnhbw/?mibextid=wwXIfr"
               target="_blank"
@@ -135,7 +163,7 @@ const Footer = () => {
               <FaFacebook />
             </a>
             <a
-              className={styles.instagramIcon}
+              className={styles.socialIcon}
               aria-label="Instagram"
               href="https://www.instagram.com/surrogacy_center_happy_family/"
               target="_blank"
@@ -144,7 +172,7 @@ const Footer = () => {
               <FaInstagram />
             </a>
             <a
-              className={styles.whatsappIcon}
+              className={styles.socialIcon}
               aria-label="WhatsApp"
               href="https://wa.me/19298775515?text=Hi%2C%20I%27d%20like%20to%20know%20more"
               target="_blank"
@@ -153,7 +181,7 @@ const Footer = () => {
               <FaWhatsapp />
             </a>
             <a
-              className={styles.linkedinIcon}
+              className={styles.socialIcon}
               aria-label="LinkedIn"
               href="https://www.linkedin.com/in/happy-family-georgia?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
               target="_blank"
@@ -161,19 +189,6 @@ const Footer = () => {
             >
               <FaLinkedin />
             </a>
-          </div>
-        </div>
-
-        <div className={styles.copyright}>
-          <div className={styles.copyrightLinks}>
-            <a href="#">{t("footer.privacyPolicy")}</a>
-            <a href="#">{t("footer.termsOfService")}</a>
-          </div>
-          <div className={styles.copyrightText}>
-            <p>
-              &copy; {new Date().getFullYear()} Miracle Makers.{" "}
-              {t("footer.copyright")}
-            </p>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { sendContactEmail, sendAutoReply } from "../services/mailService";
+import { sendContactEmail, sendAutoReply } from "../services/mailService.js";
 import { Request, Response } from "express";
 import { z } from "zod";
 

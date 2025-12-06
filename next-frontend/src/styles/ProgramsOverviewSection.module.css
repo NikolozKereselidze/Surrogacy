@@ -10,15 +10,15 @@
   flex-direction: column;
   gap: var(--gap-2xl);
   position: relative;
-  background: #fff;
+  background: linear-gradient(135deg, #fff 0%, #fafbff 100%);
   border-radius: 20px;
   padding: var(--padding-xl) var(--padding-lg);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-layered);
   border: 1px solid #e2e8f0;
   overflow: hidden;
-  transition: transform 0.3s;
-  will-change: transform; /* GPU optimization */
-  backface-visibility: hidden; /* Avoid flicker during transform */
+  transition: transform 0.3s, box-shadow 0.3s;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .programCard::before {
@@ -39,6 +39,7 @@
 
 .programCard:hover {
   transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
 }
 
 .programHeader {
@@ -119,7 +120,7 @@
   border-radius: 1.2rem;
   padding: var(--padding-2xl) var(--padding-xl);
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-layered);
 }
 
 .ctaContent {

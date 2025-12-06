@@ -75,7 +75,12 @@
   border-radius: 20px;
   background: #fff;
   border: 1px solid rgba(16, 91, 190, 0.08);
-  box-shadow: 0 20px 40px rgba(10, 52, 99, 0.06);
+  box-shadow: var(--shadow-layered);
+  transition: box-shadow 0.3s ease;
+}
+
+.contentItem:hover {
+  box-shadow: var(--shadow-soft);
 }
 
 .subtitleRow {

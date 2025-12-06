@@ -5,8 +5,8 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client-js"
-  engineType = "client"
+  provider = "prisma-client"
+  output   = "./generated"
 }
 
 datasource db {
@@ -65,6 +65,7 @@ model SpermDonor {
 
 model BlogPost {
   id        String      @id @default(uuid())
+  language String @default("en")
   title String
   date String
   category String

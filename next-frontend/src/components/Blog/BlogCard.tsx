@@ -22,6 +22,7 @@ function getImageUrl(imagePath: string) {
 
 interface BlogPost {
   id: string;
+  language: string;
   title: string;
   date: string;
   category: string;
@@ -184,7 +185,7 @@ const BlogCard = () => {
                     <h3 className={styles.blogTitle}>{post.title}</h3>
 
                     <Link
-                      href={`/blog/${post.id}/${post.title
+                      href={`/${post.language.toLowerCase()}/blog/${post.id}/${post.title
                         .toLowerCase()
                         .trim()
                         .replace(/[^a-z0-9]+/g, "-")

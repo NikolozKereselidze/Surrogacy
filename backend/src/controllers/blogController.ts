@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "../../prisma/generated/client.js";
 import {
   PutObjectCommand,
   DeleteObjectCommand,
@@ -94,10 +94,12 @@ const getBlogPostsCount = async (req: Request, res: Response) => {
 };
 
 const createBlogPost = async (req: Request, res: Response) => {
-  const { title, date, category, readTime, content, imagePath } = req.body;
+  const { title, language, date, category, readTime, content, imagePath } =
+    req.body;
   const blogPost = await prisma.blogPost.create({
     data: {
       title,
+      language,
       date,
       category,
       readTime,
@@ -110,7 +112,8 @@ const createBlogPost = async (req: Request, res: Response) => {
 
 const updateBlogPost = async (req: Request, res: Response): Promise<any> => {
   const { id } = req.params;
-  const { title, date, category, readTime, content, imagePath } = req.body;
+  const { title, language, date, category, readTime, content, imagePath } =
+    req.body;
 
   try {
     // Get the current blog post to check if image is being changed
@@ -132,6 +135,7 @@ const updateBlogPost = async (req: Request, res: Response): Promise<any> => {
       where: { id },
       data: {
         title,
+        language,
         date,
         category,
         readTime,

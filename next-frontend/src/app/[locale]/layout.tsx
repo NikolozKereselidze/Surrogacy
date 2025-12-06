@@ -1,8 +1,22 @@
 import { notFound } from "next/navigation";
 import I18nProvider from "@/components/I18nProvider";
-import MainLayout from "@/components/MainLayout";
+import type { Metadata } from "next";
 
-export default async function RootLayout({
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
+    other: {
+      "content-language": locale,
+    },
+  };
+}
+
+export default async function LocaleLayout({
   children,
   params,
 }: Readonly<{
@@ -17,9 +31,5 @@ export default async function RootLayout({
     notFound();
   }
 
-  return (
-    <I18nProvider locale={locale}>
-      <MainLayout>{children}</MainLayout>
-    </I18nProvider>
-  );
+  return <I18nProvider locale={locale}>{children}</I18nProvider>;
 }

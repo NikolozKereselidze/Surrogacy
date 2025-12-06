@@ -1,0 +1,11 @@
+import express from "express";
+import blogController from "../controllers/blogController.js";
+const router = express.Router();
+router.get("/", blogController.getBlogPosts);
+router.post("/", blogController.createBlogPost);
+router.get("/count", blogController.getBlogPostsCount);
+router.get("/:id", blogController.getBlogPostById);
+router.put("/:id", blogController.updateBlogPost);
+router.delete("/:id", blogController.deleteBlogPost);
+router.post("/image", blogController.generateBlogImageUploadUrl);
+export default router;

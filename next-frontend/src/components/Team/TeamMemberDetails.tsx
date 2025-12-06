@@ -9,6 +9,7 @@ import Image from "next/image";
 
 const TeamMemberDetails = ({ id }: { id: string }) => {
   const router = useRouter();
+  console.log(id);
   const member = useMemo(
     () => teamMembers.find((m: TeamMember) => m.id === id),
     [id]

@@ -135,10 +135,18 @@ h6 {
   --gap-11xl: 3rem; /* Maximum section gaps */
   --gap-12xl: 4.2rem; /* Hero section gaps */
 
-  /* Section Background Colors - Subtle tints that won't conflict with white components */
-  --section-bg-primary: #f5f5f7; /* Light gray - default section background */
-  --section-bg-alt: #f8f9ff; /* Very light purple tint - alternating background */
-  --section-bg-warm: #faf9f7; /* Warm off-white - subtle warm variation */
+  /* Section Background Colors - Enhanced with better contrast and depth */
+  --section-bg-primary: #f4f6f8; /* Cooler light gray - default section background */
+  --section-bg-alt: #f6f7ff; /* Richer light purple - alternating background */
+  --section-bg-warm: #f9f7f4; /* Warmer beige - subtle warm variation */
+
+  /* Glassmorphism & Premium Shadows */
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.08); /* Enhanced soft shadow */
+  --shadow-layered: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.08); /* Layered depth */
+  --shadow-hover: 0 20px 50px -12px rgba(137, 16, 246, 0.25); /* Primary color shadow glow */
 }
 
 /* FAQ design tokens were removed to use existing global tokens */
@@ -170,6 +178,8 @@ body {
   align-items: center;
   gap: var(--gap-11xl);
   position: relative;
+  /* Subtle gradient overlay for depth */
+  background-image: radial-gradient(circle at top center, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
 }
 
 /* Section Background Variations - Manual utility classes for precise control */
@@ -182,20 +192,20 @@ body {
   background: var(--section-bg-primary) !important;
 }
 
-/* Section Dividers - Automatic visual separation */
+/* Section Dividers - Enhanced visual separation */
 .section::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   background: linear-gradient(
     to right,
     transparent,
-    rgba(137, 16, 246, 0.15) 15%,
-    rgba(137, 16, 246, 0.3) 50%,
-    rgba(137, 16, 246, 0.15) 85%,
+    rgba(137, 16, 246, 0.2) 10%,
+    rgba(137, 16, 246, 0.5) 50%,
+    rgba(137, 16, 246, 0.2) 90%,
     transparent
   );
   z-index: 1;

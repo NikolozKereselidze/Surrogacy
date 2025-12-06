@@ -67,13 +67,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   });
 
-  // Add base homepage redirects for better SEO
-  sitemapEntries.push({
-    url: BASE_URL,
-    lastModified: new Date(),
-    changeFrequency: "daily" as const,
-    priority: 1.0,
-  });
-
   return sitemapEntries;
 }

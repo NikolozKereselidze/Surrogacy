@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import spermDonorController from "../controllers/spermDonorController";
+import spermDonorController from "../controllers/spermDonorController.js";
 
 const router = express.Router();
 

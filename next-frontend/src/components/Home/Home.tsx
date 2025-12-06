@@ -52,64 +52,6 @@ const Home = () => {
         </div>
       </section>
 
-      <TextContent
-        reverse={true}
-        title="Around the Clock Support"
-        description="From the moment your application is accepted, you'll have access to our dedicated team offering round-the-clock support. Whether you have questions at midnight or need guidance on weekends, we're here to ensure your journey is smooth, comfortable, and well-supported every step of the way."
-        highlightBadge="24/7 Case Management"
-        eyebrow="Support"
-        stats={[
-          {
-            label: "test test tests",
-            value: "100%",
-          },
-        ]}
-        contents={[
-          {
-            subtitle: "Legal & Medical Excellence",
-            content:
-              "Our comprehensive approach includes expert legal guidance to ensure all contracts and agreements are transparent and secure. We work with top-rated fertility clinics and medical professionals in Georgia, ensuring you receive the highest standard of medical care throughout your journey.",
-          },
-        ]}
-        image={"/img/testing.jpg"}
-      />
-
-      <ProgramsOverviewSection />
-
-      <TextContent
-        reverse={false}
-        highlightBadge="First-Hand Experience"
-        title="Experienced & Compassionate Team"
-        eyebrow="Experience"
-        contents={[
-          {
-            subtitle: "Legal & Medical Excellence",
-            content:
-              "Our comprehensive approach includes expert legal guidance to ensure all contracts and agreements are transparent and secure. We work with top-rated fertility clinics and medical professionals in Georgia, ensuring you receive the highest standard of medical care throughout your journey.",
-          },
-          {
-            subtitle: "Legal & Medical Excellence",
-            content:
-              "Our comprehensive approach includes expert legal guidance to ensure all contracts and agreements are transparent and secure. We work with top-rated fertility clinics and medical professionals in Georgia, ensuring you receive the highest standard of medical care throughout your journey.",
-          },
-        ]}
-        image={"/img/testing.jpg"}
-      />
-
-      <section className={`${styles.ourTeamSection} section`}>
-        <div className="content">
-          <h2 className="title">{t("ourTeam.title")}</h2>
-          <p className="subtitle">{t("ourTeam.subtitle")}</p>
-        </div>
-        <div className={styles.ourTeamGrid}>
-          {teamMembers.map((member, index) => (
-            <TeamCard key={`${member.name}-${index}`} member={member} />
-          ))}
-        </div>
-      </section>
-
-      <TestimonialsSection />
-
       <section className={`${styles.beginYourMiracleSection} section`}>
         <div className="content">
           <h2 className="title">{t("beginYourMiracle.title")}</h2>
@@ -155,6 +97,63 @@ const Home = () => {
           />
         </div>
       </section>
+
+      <TextContent
+        reverse={true}
+        title="Around the Clock Support"
+        description="From the moment your application is accepted, you'll have access to our dedicated team offering round-the-clock support. Whether you have questions at midnight or need guidance on weekends, we're here to ensure your journey is smooth, comfortable, and well-supported every step of the way."
+        highlightBadge="24/7 Case Management"
+        eyebrow="Support"
+        stats={[
+          {
+            label: "test test tests",
+            value: "100%",
+          },
+        ]}
+        contents={[
+          {
+            subtitle: "Legal & Medical Excellence",
+            content:
+              "Our comprehensive approach includes expert legal guidance to ensure all contracts and agreements are transparent and secure. We work with top-rated fertility clinics and medical professionals in Georgia, ensuring you receive the highest standard of medical care throughout your journey.",
+          },
+        ]}
+        image={"/img/testing.jpg"}
+      />
+
+      <ProgramsOverviewSection />
+
+      <TextContent
+        reverse={false}
+        highlightBadge="First-Hand Experience"
+        title="Experienced & Compassionate Team"
+        eyebrow="Experience"
+        contents={[
+          {
+            subtitle: t("ourTeam.value1Title"),
+            content: t("ourTeam.value1Desc"),
+          },
+          {
+            subtitle: t("ourTeam.value2Title"),
+            content: t("ourTeam.value2Desc"),
+          },
+        ]}
+        image={"/img/testing.jpg"}
+      />
+
+      <section className={`${styles.ourTeamSection} section`}>
+        <div className="content">
+          <h2 className="title">{t("ourTeam.title")}</h2>
+          <p className="subtitle">{t("ourTeam.subtitle")}</p>
+        </div>
+        <div className={styles.ourTeamGrid}>
+          {teamMembers.map((member, index) => (
+            <TeamCard key={`${member.name}-${index}`} member={member} />
+          ))}
+        </div>
+      </section>
+
+      <TestimonialsSection />
+
       <section className="section">
         <StatisticsSection />
       </section>

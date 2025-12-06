@@ -1,5 +1,5 @@
 import express from "express";
-import eggDonorController from "../controllers/eggDonorController";
+import eggDonorController from "../controllers/eggDonorController.js";
 
 const router = express.Router();
 

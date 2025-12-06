@@ -21,6 +21,11 @@ const Programs = ({ programType }: ProgramsProps) => {
         title: t(section.titleKey),
         steps: section.steps.map((stepKey) => t(stepKey)),
       })),
+      questions:
+        config.questions?.map((qa) => ({
+          question: t(qa.questionKey),
+          answer: t(qa.answerKey),
+        })) || [],
     };
   };
 
@@ -43,6 +48,21 @@ const Programs = ({ programType }: ProgramsProps) => {
           </ul>
         </div>
       ))}
+
+      {/* Program-Specific FAQ Section */}
+      {programData.questions.length > 0 && (
+        <div className={styles.faqSection}>
+          <h2 className={styles.faqTitle}>{t("programs.commonQuestions")}</h2>
+          <div className={styles.faqGrid}>
+            {programData.questions.map((qa, idx) => (
+              <div key={idx} className={styles.faqItem}>
+                <h3 className={styles.faqQuestion}>{qa.question}</h3>
+                <p className={styles.faqAnswer}>{qa.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 };

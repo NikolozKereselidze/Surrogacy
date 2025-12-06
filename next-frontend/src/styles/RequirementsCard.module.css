@@ -6,7 +6,7 @@
   background: white;
   padding: var(--padding-xl);
   border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-layered);
   transition: all 0.3s ease;
   border: 2px solid transparent;
   text-align: center;
@@ -14,7 +14,7 @@
 
 .requirementCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-soft);
   border-color: var(--color-primary);
 }
 

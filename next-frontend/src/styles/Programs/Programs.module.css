@@ -7,14 +7,28 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap-3xl);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 1.5rem;
+  padding: var(--padding-3xl);
+  box-shadow: var(--shadow-soft);
+  width: 100%;
 }
 
 .title {
-  color: var(--gray);
+  color: var(--dark-blue);
+  font-weight: 700;
 }
 
 h1.title {
   font-size: var(--font-4xl);
+  background: linear-gradient(
+    135deg,
+    var(--dark-blue) 0%,
+    var(--color-primary) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h2.title {
@@ -25,33 +39,75 @@ h3.title {
   font-size: var(--font-2xl);
 }
 
-.title > span {
-  color: var(--color-primary);
-}
-
 .description,
 .list > li,
 .programList > li {
   line-height: 1.8;
-  color: var(--light-gray);
+  color: var(--gray);
   list-style: none;
   font-size: var(--font-lg);
 }
 
-.processOverview {
+.programList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+.programList li {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.programList li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.faqSection {
+  width: 100%;
+  margin-top: var(--gap-6xl);
+}
+
+.faqTitle {
+  font-size: var(--font-3xl);
+  font-weight: 700;
+  color: var(--dark-blue);
+  text-align: center;
+  margin-bottom: var(--gap-3xl);
+}
+
+.faqGrid {
+  display: grid;
+  gap: var(--gap-xl);
+  max-width: 800px;
   margin: 0 auto;
 }
 
-.processOverview > .title {
-  text-align: center;
+.faqItem {
+  background: white;
+  padding: var(--padding-xl);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
-.programList,
-.list {
-  display: flex;
-  flex-direction: column;
+.faqItem:hover {
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-2px);
 }
 
-.programList {
-  gap: var(--gap-md);
+.faqQuestion {
+  font-size: var(--font-lg);
+  font-weight: 600;
+  color: var(--dark-blue);
+  margin-bottom: var(--gap-sm);
+}
+
+.faqAnswer {
+  color: var(--gray);
+  line-height: 1.6;
 }

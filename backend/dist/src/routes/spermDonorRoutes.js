@@ -1,0 +1,10 @@
+import express from "express";
+import spermDonorController from "../controllers/spermDonorController.js";
+const router = express.Router();
+router.get("/", spermDonorController.getSpermDonors);
+router.get("/count", spermDonorController.getSpermDonorsCount);
+router.post("/", spermDonorController.createSpermDonor);
+router.get("/:id", spermDonorController.getSpermDonorById);
+router.put("/:id", spermDonorController.updateSpermDonor);
+router.delete("/:id", spermDonorController.deleteSpermDonor);
+export default router;

@@ -1,16 +1,15 @@
 // Load environment variables FIRST before any other imports
-// Using require() ensures this runs before ES6 imports (which are hoisted)
-require("dotenv").config();
+import "dotenv/config";
 
 import express, { Request, Response } from "express";
 import cookieParser from "cookie-parser";
-import blogRoutes from "./routes/blogRoutes";
-import eggDonorRoutes from "./routes/eggDonorRoutes";
-import surrogateRoutes from "./routes/surrogateRoutes";
-import spermDonorRoutes from "./routes/spermDonorRoutes";
+import blogRoutes from "./routes/blogRoutes.js";
+import eggDonorRoutes from "./routes/eggDonorRoutes.js";
+import surrogateRoutes from "./routes/surrogateRoutes.js";
+import spermDonorRoutes from "./routes/spermDonorRoutes.js";
 import cors from "cors";
-import fileRoutes from "./routes/fileRoutes";
-import contactRoutes from "./routes/contactRoutes";
+import fileRoutes from "./routes/fileRoutes.js";
+import contactRoutes from "./routes/contactRoutes.js";
 const app = express();
 
 const port = Number(process.env.PORT);

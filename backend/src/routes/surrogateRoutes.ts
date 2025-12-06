@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import surrogateController from "../controllers/surrogateController";
+import surrogateController from "../controllers/surrogateController.js";
 
 const router = express.Router();
 

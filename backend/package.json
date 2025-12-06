@@ -1,13 +1,15 @@
 {
   "name": "backend",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "build": "npx prisma generate && tsc",
     "start": "npx prisma migrate deploy && node dist/index.js",
-    "dev": "nodemon src/index.ts",
+    "dev": "tsx src/index.ts",
+    "generate": "prisma generate",
+    "migrate": "prisma migrate dev",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "migrate": "npx prisma migrate deploy",
     "postinstall": "npx prisma generate"
   },
   "keywords": [],
@@ -42,6 +44,7 @@
     "@types/nodemailer": "^7.0.1",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
     "typescript": "^5.8.3"
   }
 }
