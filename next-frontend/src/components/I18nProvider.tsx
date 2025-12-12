@@ -1,10 +1,8 @@
 "use client";
 
 import { I18nextProvider } from "react-i18next";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import i18n from "../i18n";
-import LoadingSpinner from "./LoadingSpinner";
-import styles from "@/styles/LoadingSpinner/LoadingSpinner.module.css";
 
 export default function I18nProvider({
   locale,
@@ -13,29 +11,18 @@ export default function I18nProvider({
   locale: string;
   children: React.ReactNode;
 }) {
-  const [isReady, setIsReady] = useState(false);
-
-  useEffect(() => {
-    // Set the language immediately when locale changes
-    if (i18n.language === locale) {
-      setIsReady(true);
-      return;
-    }
-    setIsReady(false);
-
-    i18n.changeLanguage(locale).finally(() => setIsReady(true));
-  }, [locale]);
-
-  // Don't render children until language is set
-  if (!isReady) {
-    return (
-      <I18nextProvider i18n={i18n}>
-        <div className={styles.loadingContainer}>
-          <LoadingSpinner size="large" message="Loading..." />
-        </div>
-      </I18nextProvider>
-    );
+  // Initialize language immediately (synchronous)
+  // This ensures content renders immediately for SEO and JS-disabled browsers
+  if (i18n.language !== locale && i18n.isInitialized) {
+    i18n.changeLanguage(locale);
   }
+
+  // Keep language in sync if locale changes
+  useEffect(() => {
+    if (i18n.language !== locale) {
+      i18n.changeLanguage(locale);
+    }
+  }, [locale]);
 
   return <I18nextProvider i18n={i18n}>{children}</I18nextProvider>;
 }
