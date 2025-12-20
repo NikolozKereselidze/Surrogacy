@@ -17,7 +17,7 @@ export async function generateMetadata({
 
   const localized = {
     en: {
-      title: "Surrogacy in Georgia - Miracle Makers",
+      title: "Surrogacy in Georgia",
       description:
         "Compassionate surrogacy and egg donation services in Georgia. Expert guidance for intended parents, surrogates, and donors. Start your family journey in Tbilisi.",
       keywords: [
@@ -85,6 +85,5 @@ export async function generateMetadata({
     description: content.description,
     keywords: [...content.keywords],
     path: "/",
-    locale: locale || "en",
   });
 }

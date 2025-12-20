@@ -37,6 +37,7 @@
 
 /* Main section */
 .teamMemberSection {
+  background: none !important;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;

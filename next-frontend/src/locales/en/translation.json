@@ -21,6 +21,7 @@
       "surrogacyProcess": "Surrogacy Process",
       "whoCanBecome": "Who Can Become a Surrogate?",
       "screeningProcess": "Screening Process",
+      "surrogacyInGeorgia": "Surrogacy in Georgia",
       "applyNow": "Apply Now"
     },
     "intendedParents": {
@@ -563,6 +564,18 @@
       "step1": "After fertilization, the healthiest embryos are selected for transfer to the surrogate's uterus. Timing and preparation of the surrogate are carefully managed to maximize implantation success.",
       "step2": "The surrogate is monitored closely before, during, and after the transfer. Hormonal support and lifestyle guidance are provided to create the best environment for the embryo to thrive.",
       "step3": "Each step is customized based on the medical profile of the intended parents, ensuring the approach is tailored to their specific needs and fertility factors."
+    },
+    "question1": {
+      "q": "What is the cost of surrogacy with own gametes?",
+      "a": "The surrogacy cost varies depending on several factors including medical procedures, surrogate compensation, legal fees, and program location. We provide a transparent surrogacy cost breakdown during your initial consultation. The surrogacy price includes all medical procedures, gestational surrogacy services, and comprehensive support throughout the journey."
+    },
+    "question2": {
+      "q": "How much does surrogacy cost for couples?",
+      "a": "The cost of surrogacy for couples typically ranges based on program selection, medical needs, and location. Our surrogacy costs are transparent and include all necessary services. We offer detailed cost breakdowns and payment plans to help make surrogacy accessible. Contact us for a personalized estimate based on your specific situation."
+    },
+    "question3": {
+      "q": "How much does it cost to do surrogacy with IVF?",
+      "a": "The total cost for surrogacy with IVF includes IVF procedures, embryo transfer, surrogate mother compensation, legal services, and ongoing medical support. Surrogacy costs are comprehensive and cover all aspects from initial consultation through birth. We provide itemized pricing and can discuss financing options to help manage surrogacy expenses."
     }
   },
   "eggFreezing": {
@@ -579,6 +592,18 @@
       "step1": "Preserve fertility for women who want to delay childbearing due to career, education, or personal reasons. This is especially valuable for women in their late 20s to early 30s.",
       "step2": "Maintain egg quality by freezing eggs when they are at their peak fertility. This can be particularly beneficial for women facing medical treatments that may affect fertility.",
       "step3": "Provide peace of mind and reproductive options for the future. Frozen eggs can be stored for many years and used when the time is right for starting a family."
+    },
+    "question1": {
+      "q": "What is the cost of egg freezing and preservation?",
+      "a": "The cost of egg freezing includes ovarian stimulation medications, egg retrieval procedure, vitrification process, and annual storage fees. Egg freezing costs vary based on the number of cycles needed and storage duration. We provide transparent pricing and can discuss payment plans to make egg preservation accessible."
+    },
+    "question2": {
+      "q": "How much does it cost to freeze eggs for future IVF?",
+      "a": "Egg freezing costs for future IVF use include the stimulation cycle, retrieval procedure, freezing process, and storage. The total cost depends on your specific needs and how many eggs are retrieved. We offer comprehensive packages and can provide detailed cost breakdowns during your consultation."
+    },
+    "question3": {
+      "q": "What are the costs associated with egg preservation?",
+      "a": "Egg preservation costs include medical procedures, medications, laboratory fees, and ongoing storage. The initial cost covers the complete freezing process, while annual storage fees apply for long-term preservation. We provide transparent pricing and can discuss all costs associated with egg freezing during your initial consultation."
     }
   },
   "surrogacyWithEggDonor": {
@@ -595,6 +620,18 @@
       "step1": "Access to a diverse pool of carefully screened egg donors with detailed profiles including medical history, education, and personal characteristics.",
       "step2": "Comprehensive support throughout the entire process, from donor selection to birth, ensuring a smooth and successful journey to parenthood.",
       "step3": "High success rates with our experienced medical team and proven protocols, giving you the best chance of achieving a successful pregnancy and healthy baby."
+    },
+    "question1": {
+      "q": "What is the surrogacy price with egg donor?",
+      "a": "The gestational surrogacy price with egg donor includes donor compensation, IVF procedures, surrogate mother pay, legal services, and comprehensive medical support. Our surrogacy cost breakdown is transparent and covers all expenses from donor selection through birth. The price for surrogate mother services varies based on program specifics and location."
+    },
+    "question2": {
+      "q": "How much does surrogacy cost when using an egg donor?",
+      "a": "Surrogacy costs with egg donor typically include donor fees, medical procedures, surrogate compensation, and legal expenses. The cost for surrogacy varies based on your specific needs and program selection. We provide detailed cost breakdowns and transparent pricing to help you understand all surrogacy expenses involved in the process."
+    },
+    "question3": {
+      "q": "How much does it cost for surrogacy with donor eggs?",
+      "a": "The total cost of surrogacy with donor eggs includes egg donor compensation, IVF and embryo transfer procedures, surrogate mother price, legal documentation, and ongoing support. Surrogacy costs are comprehensive and we offer transparent pricing with detailed breakdowns. Contact us for a personalized estimate based on your specific requirements."
     }
   },
   "vipConciergeServices": {
@@ -611,6 +648,18 @@
       "step1": "Seamless experience with all logistics handled by our experienced team, allowing you to focus on your journey to parenthood without worrying about practical details.",
       "step2": "Cultural and language support to help you navigate the local environment comfortably, with assistance available 24/7 for any questions or concerns.",
       "step3": "Peace of mind knowing that every aspect of your stay is professionally managed, from accommodation to transportation, ensuring a stress-free experience during this important time."
+    },
+    "question1": {
+      "q": "What is included in VIP concierge services for surrogacy?",
+      "a": "Our VIP concierge services include premium accommodations, professional translation for all medical and legal appointments, comprehensive transportation including airport transfers, personal coordination, and 24/7 support. These services complement our surrogacy programs and ensure a seamless experience throughout your journey, regardless of surrogacy costs."
+    },
+    "question2": {
+      "q": "How much does VIP concierge service cost for surrogacy?",
+      "a": "VIP concierge service costs vary based on the duration of stay, accommodation preferences, and level of support needed. The price includes all concierge services and is separate from surrogacy costs. We provide transparent pricing and can customize packages based on your specific needs and surrogacy program requirements."
+    },
+    "question3": {
+      "q": "Do VIP services affect the overall surrogacy cost?",
+      "a": "VIP concierge services are optional and priced separately from core surrogacy costs. While surrogacy costs cover medical and legal services, VIP services provide additional comfort and convenience. We offer flexible packages and can discuss how VIP services can enhance your surrogacy experience without significantly impacting total surrogacy expenses."
     }
   },
   "statistics": {
@@ -707,5 +756,8 @@
       ],
       "buttonText": "Discover VIP Services"
     }
+  },
+  "programs": {
+    "commonQuestions": "Common Questions"
   }
 }

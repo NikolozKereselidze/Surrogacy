@@ -6,10 +6,11 @@ import { teamMembers, type TeamMember } from "@/data/teamMembers";
 import styles from "@/styles/Team/TeamMemberDetails.module.css";
 import { FaArrowLeft, FaEnvelope, FaLinkedin, FaUser } from "react-icons/fa";
 import Image from "next/image";
+import { useLocale } from "@/hooks/useLocale";
 
 const TeamMemberDetails = ({ id }: { id: string }) => {
   const router = useRouter();
-  console.log(id);
+  const locale = useLocale();
   const member = useMemo(
     () => teamMembers.find((m: TeamMember) => m.id === id),
     [id]
@@ -24,7 +25,7 @@ const TeamMemberDetails = ({ id }: { id: string }) => {
             name: `${member.honorific} ${member.name}`,
             jobTitle: member.role,
             email: `mailto:${member.email}`,
-            url: `https://www.ivftourgeorgia.com/team/${member.id}`,
+            url: `https://www.ivftourgeorgia.com/${locale}/team/${member.id}`,
             image: member.image.startsWith("http")
               ? member.image
               : `https://www.ivftourgeorgia.com${member.image}`,
@@ -32,7 +33,7 @@ const TeamMemberDetails = ({ id }: { id: string }) => {
             description: member.detailedDescription,
           }
         : null,
-    [member]
+    [member, locale]
   );
 
   const handleBack = () => {
@@ -42,7 +43,7 @@ const TeamMemberDetails = ({ id }: { id: string }) => {
       router.back();
       return;
     }
-    router.push("/our-team");
+    router.push(`/${locale}/our-team`);
   };
 
   if (!member) {

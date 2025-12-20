@@ -21,6 +21,7 @@
       "surrogacyProcess": "Proceso de Gestación Subrogada",
       "whoCanBecome": "¿Quién Puede Ser Gestante?",
       "screeningProcess": "Proceso de Evaluación",
+      "surrogacyInGeorgia": "Gestación Subrogada en Georgia",
       "applyNow": "Aplicar Ahora"
     },
     "intendedParents": {
@@ -708,5 +709,8 @@
       ],
       "buttonText": "Descubrir Servicios VIP"
     }
+  },
+  "programs": {
+    "commonQuestions": "Preguntas Comunes"
   }
 }

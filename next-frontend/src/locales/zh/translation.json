@@ -21,6 +21,7 @@
       "surrogacyProcess": "代孕流程",
       "whoCanBecome": "谁可以成为代孕妈妈？",
       "screeningProcess": "筛选流程",
+      "surrogacyInGeorgia": "格鲁吉亚代孕",
       "applyNow": "立即申请"
     },
     "intendedParents": {
@@ -688,5 +689,8 @@
       "features": ["24/7专属支持", "豪华住宿", "个人协调员", "优先安排"],
       "buttonText": "发现VIP服务"
     }
+  },
+  "programs": {
+    "commonQuestions": "常见问题"
   }
 }

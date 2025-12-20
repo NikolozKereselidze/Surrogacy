@@ -21,6 +21,7 @@
       "surrogacyProcess": "תהליך הפונדקאות",
       "whoCanBecome": "מי יכולה להיות פונדקאית?",
       "screeningProcess": "תהליך הסינון",
+      "surrogacyInGeorgia": "פונדקאות בגאורגיה",
       "applyNow": "הגש בקשה עכשיו"
     },
     "intendedParents": {
@@ -700,5 +701,8 @@
       ],
       "buttonText": "גלה שירותי VIP"
     }
+  },
+  "programs": {
+    "commonQuestions": "שאלות נפוצות"
   }
 }

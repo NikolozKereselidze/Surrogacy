@@ -21,6 +21,7 @@
       "surrogacyProcess": "Процесс суррогатного материнства",
       "whoCanBecome": "Кто может стать суррогатной матерью?",
       "screeningProcess": "Процесс отбора",
+      "surrogacyInGeorgia": "Суррогатное материнство в Грузии",
       "applyNow": "Подать заявку сейчас"
     },
     "intendedParents": {
@@ -708,5 +709,8 @@
       ],
       "buttonText": "Открыть VIP Сервисы"
     }
+  },
+  "programs": {
+    "commonQuestions": "Часто задаваемые вопросы"
   }
 }

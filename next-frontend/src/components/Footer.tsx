@@ -122,17 +122,17 @@ const Footer = () => {
             <h4>{t("navigation.programs")}</h4>
             <ul>
               <li>
-                <Link href={`/${locale}/own-gametes`}>
+                <Link href={`/${locale}/surrogacy-with-own-gametes`}>
                   {t("submenu.programs.ownGametes")}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/egg-donor`}>
+                <Link href={`/${locale}/surrogacy-with-egg-donor`}>
                   {t("submenu.programs.eggDonor")}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/egg-freezing`}>
+                <Link href={`/${locale}/egg-freezing-preservation`}>
                   {t("submenu.programs.eggFreezing")}
                 </Link>
               </li>
