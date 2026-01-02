@@ -25,7 +25,7 @@ const SurrogateScreening = () => {
     },
   ];
 
-  return <ScreeningProcess screeningProcessSteps={screeningProcessSteps} />;
+  return <ScreeningProcess screeningProcessSteps={screeningProcessSteps} pageTitle="Surrogate Screening" />;
 };
 
 export default SurrogateScreening;

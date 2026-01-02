@@ -51,9 +51,9 @@ const SupportAndCounselling = () => {
   return (
     <section className="section">
       <div className="content">
-        <h2 className="title">
+        <h1 className="title">
           {t("submenu.intendedParents.compensationSupport")}
-        </h2>
+        </h1>
         <p className="subtitle">{t("supportAndCounselling.subtitle")}</p>
       </div>
       <div className={styles.cards}>

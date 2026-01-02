@@ -92,7 +92,7 @@ const OurMission = () => {
       {/* Mission Statement Card */}
       <section className="section">
         <div className="content">
-          <h2 className="title">{t("ourMission.title")}</h2>
+          <h1 className="title">{t("ourMission.title")}</h1>
           <p className="subtitle">{t("ourMission.subtitle")}</p>
         </div>
         <div className={styles.missionCard}>

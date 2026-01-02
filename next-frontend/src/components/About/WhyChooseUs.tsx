@@ -52,7 +52,7 @@ const WhyChooseUs = () => {
     <div className={styles.whyChooseUsContainer}>
       <section className={`${styles.reasonsSection} section`}>
         <div className="content">
-          <h2 className="title">{t("whyChooseUs.reasonsTitle")}</h2>
+          <h1 className="title">{t("whyChooseUs.reasonsTitle")}</h1>
           <p className="subtitle">{t("whyChooseUs.reasonsDesc")}</p>
         </div>
 

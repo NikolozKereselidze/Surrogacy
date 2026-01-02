@@ -7,15 +7,20 @@ interface ScreeningProcessProps {
     stepContent: string;
     stepIcon: React.ReactNode;
   }[];
+  pageTitle?: string;
 }
 
-const ScreeningProcess = ({ screeningProcessSteps }: ScreeningProcessProps) => {
+const ScreeningProcess = ({ screeningProcessSteps, pageTitle }: ScreeningProcessProps) => {
   const { t } = useTranslation();
 
   return (
     <section className="section screening-process">
       <div className="content">
-        <h2 className="title">{t("screening.title")}</h2>
+        {pageTitle ? (
+          <h1 className="title">{pageTitle}</h1>
+        ) : (
+          <h2 className="title">{t("screening.title")}</h2>
+        )}
         <p className="subtitle">{t("screening.subtitle")}</p>
       </div>
 

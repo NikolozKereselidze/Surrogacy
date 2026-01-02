@@ -20,7 +20,7 @@ const WhoWeAre = () => {
     <>
       <section className={`${styles.whoWeAreSection} section`}>
         <div className="content">
-          <h2 className="title">{t("whoWeAre.title")}</h2>
+          <h1 className="title">{t("whoWeAre.title")}</h1>
           <p className="subtitle">{t("whoWeAre.subtitle")}</p>
         </div>
 

@@ -24,7 +24,7 @@ const OurTeam = () => {
         <section className={styles.teamSection}>
           <div className="section">
             <div className="content">
-              <h2 className="title">{t("ourTeam.introTitle")}</h2>
+              <h1 className="title">{t("ourTeam.introTitle")}</h1>
               <p className="subtitle">{t("ourTeam.introText")}</p>
             </div>
 

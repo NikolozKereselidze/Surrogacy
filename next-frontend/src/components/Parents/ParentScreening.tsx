@@ -25,7 +25,7 @@ const ParentScreening = () => {
     },
   ];
 
-  return <ScreeningProcess screeningProcessSteps={screeningProcessSteps} />;
+  return <ScreeningProcess screeningProcessSteps={screeningProcessSteps} pageTitle="Parent Screening" />;
 };
 
 export default ParentScreening;
