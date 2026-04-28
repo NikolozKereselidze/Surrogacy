@@ -53,7 +53,7 @@ export function buildPageMetadata({
       title,
       description,
       url: fullCanonicalUrl,
-      siteName: "Miracle Makers - Surrogacy & Egg Donation Services",
+      siteName: "Happy Family - Surrogacy & Egg Donation Services",
       images: [
         {
           url: image,

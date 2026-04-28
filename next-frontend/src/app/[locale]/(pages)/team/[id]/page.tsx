@@ -26,7 +26,7 @@ export async function generateMetadata({
 
   return generatePageMetadata(Promise.resolve({ locale }), {
     title: `${teamMember.name} - ${teamMember.role}`,
-    description: `Meet ${teamMember.name}, ${teamMember.role} at Miracle Makers. ${teamMember.description} Contact our expert team for personalized surrogacy and egg donation services.`,
+    description: `Meet ${teamMember.name}, ${teamMember.role} at Happy Family. ${teamMember.description} Contact our expert team for personalized surrogacy and egg donation services.`,
     keywords: [
       `${teamMember.name} surrogacy`,
       `${teamMember.role} fertility`,
@@ -35,7 +35,7 @@ export async function generateMetadata({
       "egg donation professional",
       "reproductive medicine",
       "fertility team member",
-      "Miracle Makers team",
+      "Happy Family team",
     ],
     path: `/team/${teamMember.id}`,
   });

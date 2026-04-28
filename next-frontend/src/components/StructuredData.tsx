@@ -4,7 +4,7 @@ export default function StructuredData() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
-    name: "Miracle Makers",
+    name: "Happy Family",
     alternateName: "Surrogation Center",
     description:
       "Leading surrogacy and egg donation agency providing compassionate, personalized fertility services to help families worldwide achieve their dreams of parenthood. Over 15 years of experience with 3,200+ successful births.",
@@ -79,7 +79,7 @@ export default function StructuredData() {
               "Complete surrogacy program using intended parents' own eggs and sperm with comprehensive medical and legal support",
             provider: {
               "@type": "MedicalBusiness",
-              name: "Miracle Makers",
+              name: "Happy Family",
             },
           },
           category: "Surrogacy Services",
@@ -94,7 +94,7 @@ export default function StructuredData() {
               "Surrogacy program using carefully screened egg donors with detailed profiles and genetic testing",
             provider: {
               "@type": "MedicalBusiness",
-              name: "Miracle Makers",
+              name: "Happy Family",
             },
           },
           category: "Surrogacy Services",
@@ -109,7 +109,7 @@ export default function StructuredData() {
               "Advanced egg freezing services for future fertility preservation using latest vitrification technology",
             provider: {
               "@type": "MedicalBusiness",
-              name: "Miracle Makers",
+              name: "Happy Family",
             },
           },
           category: "Fertility Preservation",
@@ -124,7 +124,7 @@ export default function StructuredData() {
               "Premium housing, translation, and transportation services for international clients with 24/7 support",
             provider: {
               "@type": "MedicalBusiness",
-              name: "Miracle Makers",
+              name: "Happy Family",
             },
           },
           category: "Support Services",
@@ -139,7 +139,7 @@ export default function StructuredData() {
               "Comprehensive medical, psychological, and background screening with personalized matching for surrogates",
             provider: {
               "@type": "MedicalBusiness",
-              name: "Miracle Makers",
+              name: "Happy Family",
             },
           },
           category: "Surrogate Services",
@@ -154,7 +154,7 @@ export default function StructuredData() {
               "Extensive database of qualified egg donors with detailed profiles, medical history, and genetic testing",
             provider: {
               "@type": "MedicalBusiness",
-              name: "Miracle Makers",
+              name: "Happy Family",
             },
           },
           category: "Egg Donation Services",
@@ -169,7 +169,7 @@ export default function StructuredData() {
               "Comprehensive screening process for intended parents including medical, psychological, and legal evaluations",
             provider: {
               "@type": "MedicalBusiness",
-              name: "Miracle Makers",
+              name: "Happy Family",
             },
           },
           category: "Parent Services",
@@ -184,7 +184,7 @@ export default function StructuredData() {
               "Complete legal support for surrogacy agreements, parental rights, and international documentation",
             provider: {
               "@type": "MedicalBusiness",
-              name: "Miracle Makers",
+              name: "Happy Family",
             },
           },
           category: "Legal Services",
@@ -227,7 +227,7 @@ export default function StructuredData() {
         email: "natia@surrogationcenter.com",
         worksFor: {
           "@type": "MedicalBusiness",
-          name: "Miracle Makers",
+          name: "Happy Family",
         },
       },
     ],
@@ -288,7 +288,7 @@ export default function StructuredData() {
       },
     ],
     priceRange: "$$$",
-    currenciesAccepted: ["GEL","USD", "EUR", "CNY", "EUR", "ILS"],
+    currenciesAccepted: ["GEL", "USD", "EUR", "CNY", "EUR", "ILS"],
     paymentAccepted: ["Cash", "Credit Card", "Bank Transfer", "Insurance"],
     openingHours: "Mo-Fr 09:00-19:00,",
   };

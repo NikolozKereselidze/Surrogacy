@@ -30,7 +30,7 @@ export default function Navigation() {
     >
       <div>
         <Link href={`/${locale}`} className={styles.logo}>
-          Miracle Makers
+          Happy Family
         </Link>
       </div>
       {isMobile ? <MobileNavigation /> : <DesktopNavigation />}

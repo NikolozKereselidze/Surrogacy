@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildPageMetadata({
   title: "Why Choose Us",
   description:
-    "Discover what sets Miracle Makers apart. Learn about our proven track record, expert team, comprehensive care, and personalized approach to surrogacy and egg donation services.",
+    "Discover what sets Happy Family apart. Learn about our proven track record, expert team, comprehensive care, and personalized approach to surrogacy and egg donation services.",
   keywords: [
     "why choose us",
     "surrogacy benefits",

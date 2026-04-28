@@ -46,7 +46,7 @@ export async function sendContactEmail(params: {
     <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
       <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px 10px 0 0; text-align: center;">
         <h1 style="color: white; margin: 0; font-size: 24px;">New Contact Form Submission</h1>
-        <p style="color: #e0e0e0; margin: 10px 0 0 0;">Miracle Makers</p>
+        <p style="color: #e0e0e0; margin: 10px 0 0 0;">Happy Family</p>
       </div>
       
       <div style="background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; border: 1px solid #e0e0e0;">
@@ -100,7 +100,7 @@ export async function sendContactEmail(params: {
         
         <div style="text-align: center; margin-top: 25px; padding-top: 20px; border-top: 1px solid #e0e0e0;">
           <p style="color: #666; font-size: 14px; margin: 0;">
-            This email was sent from the Miracle Makers contact form.<br>
+            This email was sent from the Happy Family contact form.<br>
             Reply directly to this email to respond to ${firstName}.
           </p>
         </div>
@@ -132,7 +132,7 @@ export async function sendAutoReply(params: {
 
   const text = `Hi${
     toName ? " " + toName : ""
-  },\n\nThanks for contacting Miracle Makers. We'll get back to you shortly.\n\nWarm regards,\nMiracle Makers`;
+  },\n\nThanks for contacting Happy Family. We'll get back to you shortly.\n\nWarm regards,\nHappy Family`;
 
   const html = `
     <!DOCTYPE html>
@@ -145,7 +145,7 @@ export async function sendAutoReply(params: {
     <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
       <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px 10px 0 0; text-align: center;">
         <h1 style="color: white; margin: 0; font-size: 24px;">Thank You!</h1>
-        <p style="color: #e0e0e0; margin: 10px 0 0 0;">Miracle Makers</p>
+        <p style="color: #e0e0e0; margin: 10px 0 0 0;">Happy Family</p>
       </div>
       
       <div style="background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; border: 1px solid #e0e0e0;">
@@ -155,7 +155,7 @@ export async function sendAutoReply(params: {
           },</h2>
           
           <p style="font-size: 16px; margin-bottom: 20px;">
-            Thank you for reaching out to Miracle Makers. We have received your message and will get back to you within 24 hours.
+            Thank you for reaching out to Happy Family. We have received your message and will get back to you within 24 hours.
           </p>
           
           <div style="background: #f0f8ff; padding: 20px; border-radius: 6px; border-left: 4px solid #667eea; margin: 20px 0;">
@@ -173,7 +173,7 @@ export async function sendAutoReply(params: {
           
           <div style="text-align: center; margin: 30px 0;">
             <p style="margin: 0; font-size: 18px; color: #667eea; font-weight: bold;">Warm regards,</p>
-            <p style="margin: 5px 0 0 0; font-size: 16px; color: #555;">The Miracle Makers Team</p>
+            <p style="margin: 5px 0 0 0; font-size: 16px; color: #555;">The Happy Family Team</p>
           </div>
         </div>
         
@@ -190,7 +190,7 @@ export async function sendAutoReply(params: {
   await transporter.sendMail({
     from: process.env.MAIL_FROM,
     to: toEmail,
-    subject: "Thank you for contacting Miracle Makers",
+    subject: "Thank you for contacting Happy Family",
     text,
     html,
   });

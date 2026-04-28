@@ -22,7 +22,7 @@ const Footer = () => {
         <div className={styles.topSection}>
           <div className={styles.brandColumn}>
             <div className={styles.logo}>
-              <h3>Miracle Makers</h3>
+              <h3>Happy Family</h3>
             </div>
             <p className={styles.brandDescription}>
               Helping intended parents and surrogates create miracles together.
@@ -143,7 +143,7 @@ const Footer = () => {
         {/* Bottom Section: Copyright & Socials */}
         <div className={styles.bottomSection}>
           <div className={styles.copyright}>
-            &copy; {new Date().getFullYear()} Miracle Makers.{" "}
+            &copy; {new Date().getFullYear()} Happy Family.{" "}
             {t("footer.copyright")}
           </div>
 

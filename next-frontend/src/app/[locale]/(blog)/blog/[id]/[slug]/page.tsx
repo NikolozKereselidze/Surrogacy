@@ -57,7 +57,7 @@ export async function generateMetadata({
   const title = post?.title ?? "Blog post";
   const description =
     truncate(extractText(post?.content || ""), 160) ||
-    "Insights from Miracle Makers about surrogacy, egg donation and family building.";
+    "Insights from Happy Family about surrogacy, egg donation and family building.";
   const ogImage = post?.imagePath ? getImageUrl(post.imagePath) : undefined;
   const canonicalUrl = `${BASE_URL}/${locale}/blog/${id}`;
 
@@ -89,7 +89,7 @@ export async function generateMetadata({
       description,
       url: canonicalUrl,
       type: "article",
-      siteName: "Miracle Makers - Surrogacy & Egg Donation Services",
+      siteName: "Happy Family - Surrogacy & Egg Donation Services",
       locale:
         locale === "en"
           ? "en_US"

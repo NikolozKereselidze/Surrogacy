@@ -70,7 +70,7 @@ const OurMission = () => {
         highlightBadge="სუროგაციის ცენტრი თბილისი"
         image={{
           src: "/img/testing.jpg",
-          alt: "სუროგაციის ცენტრი თბილისში - Miracle Makers",
+          alt: "სუროგაციის ცენტრი თბილისში - Happy Family",
           caption:
             "სუროგაციისა და IVF პროგრამები საქართველოში უცხოელებისა და ქართველებისთვის.",
         }}

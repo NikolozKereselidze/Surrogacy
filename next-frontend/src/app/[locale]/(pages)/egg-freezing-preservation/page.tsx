@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildPageMetadata({
   title: "Egg Freezing & Preservation",
   description:
-    "Preserve your fertility with egg freezing. Learn about benefits, ideal candidates, success rates, and how Miracle Makers supports you through the process.",
+    "Preserve your fertility with egg freezing. Learn about benefits, ideal candidates, success rates, and how Happy Family supports you through the process.",
   keywords: [
     "egg freezing",
     "oocyte cryopreservation",
@@ -16,7 +16,7 @@ export const metadata: Metadata = buildPageMetadata({
     "IVF",
     "fertility options",
     "family planning",
-    "Miracle Makers",
+    "Happy Family",
   ],
   path: "/egg-freezing-preservation",
 });

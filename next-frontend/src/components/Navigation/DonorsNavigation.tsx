@@ -23,7 +23,7 @@ const DonorsNavigation = () => {
     <nav className={styles.donorsNavigation}>
       <div className={styles.donorsNavigationContainer}>
         <div className={styles.donorsNavigationLogo}>
-          <Link href="/">Miracle Makers</Link>
+          <Link href="/">Happy Family</Link>
         </div>
         <div className={styles.donorsNavigationLinks}>
           <button

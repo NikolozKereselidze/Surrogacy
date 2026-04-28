@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import StructuredData from "@/components/StructuredData";
-import {GoogleAnalytics} from "@next/third-parties/google"
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import "./[locale]/globals.css";
 
@@ -15,8 +15,8 @@ const nunitoSans = Nunito_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.ivftourgeorgia.com"),
   title: {
-    default: "Miracle Makers - Surrogacy & Egg Donation Services",
-    template: "%s | Miracle Makers",
+    default: "Happy Family - Surrogacy & Egg Donation Services",
+    template: "%s | Happy Family",
   },
   description:
     "Compassionate surrogacy and egg donation services tailored to your journey. Expert guidance for intended parents, surrogates, and egg donors worldwide.",
@@ -52,7 +52,9 @@ export default function RootLayout({
       </head>
       <body className={nunitoSans.variable}>
         {children}
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ''} />
+        <GoogleAnalytics
+          gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ""}
+        />
         <script
           src={`//code.tidio.co/${process.env.TIDIO_CODE}.js`}
           async

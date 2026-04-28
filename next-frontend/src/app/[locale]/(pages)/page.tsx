@@ -29,7 +29,7 @@ export async function generateMetadata({
       ],
     },
     ka: {
-      title: "სუროგაცია საქართველოში - Miracle Makers",
+      title: "სუროგაცია საქართველოში - Happy Family",
       description:
         "ზრუნვით სუროგაციისა და კვერცხუჯრედის დონაციის სერვისები საქართველოში. ექსპერტული მხარდაჭერა მშობლობის გზაზე თბილისში.",
       keywords: [
@@ -40,7 +40,7 @@ export async function generateMetadata({
       ],
     },
     es: {
-      title: "Subrogación en Georgia - Miracle Makers",
+      title: "Subrogación en Georgia - Happy Family",
       description:
         "Servicios de subrogación y donación de óvulos en Georgia. Acompañamiento experto en Tbilisi para tu camino hacia la paternidad.",
       keywords: [
@@ -50,7 +50,7 @@ export async function generateMetadata({
       ],
     },
     ru: {
-      title: "Суррогатное материнство в Грузии - Miracle Makers",
+      title: "Суррогатное материнство в Грузии - Happy Family",
       description:
         "Сервисы суррогатного материнства и донорства яйцеклеток в Грузии. Экспертное сопровождение в Тбилиси.",
       keywords: [
@@ -60,7 +60,7 @@ export async function generateMetadata({
       ],
     },
     he: {
-      title: "פונדקאות בגאורגיה - Miracle Makers",
+      title: "פונדקאות בגאורגיה - Happy Family",
       description:
         "שירותי פונדקאות ותרומת ביצית בגאורגיה. ליווי מקצועי בדרך להורות בטביליסי.",
       keywords: [
@@ -70,7 +70,7 @@ export async function generateMetadata({
       ],
     },
     zh: {
-      title: "格鲁吉亚代孕 - Miracle Makers",
+      title: "格鲁吉亚代孕 - Happy Family",
       description:
         "在格鲁吉亚提供贴心的代孕与供卵服务。第比利斯专业团队，助您开启成家之旅。",
       keywords: ["格鲁吉亚代孕", "格鲁吉亚供卵", "第比利斯 代孕"],

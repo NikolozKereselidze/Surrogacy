@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildPageMetadata({
   title: "Who We Are",
   description:
-    "Meet the dedicated team behind Miracle Makers. Learn about our story, values, and commitment to making dreams come true through compassionate surrogacy and egg donation services.",
+    "Meet the dedicated team behind Happy Family. Learn about our story, values, and commitment to making dreams come true through compassionate surrogacy and egg donation services.",
   keywords: [
     "who we are",
     "surrogacy team",
