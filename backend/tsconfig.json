@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "target": "ES2023",
-    "module": "ESNext",
+    "module": "NodeNext",
     "types": ["node"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "outDir": "./dist",
-    "moduleResolution": "Node",
+    "moduleResolution": "NodeNext",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true
