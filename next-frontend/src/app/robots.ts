@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { BASE_URL } from "@/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -9,11 +10,13 @@ export default function robots(): MetadataRoute.Robots {
         "/admin/",
         "/admin-login/",
         "/find-egg-donor/",
-        "/surrogates/",
+        "/find-sperm-donor/",
+        "/find-surrogate-donor/",
+        "/egg-donors/",
         "/sperm-donors/",
-        "/donor/",
+        "/surrogate-donors/",
       ],
     },
-    sitemap: "https://www.ivftourgeorgia.com/sitemap.xml",
+    sitemap: `${BASE_URL}/sitemap.xml`,
   };
 }

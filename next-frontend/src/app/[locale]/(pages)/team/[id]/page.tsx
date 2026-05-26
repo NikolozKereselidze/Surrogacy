@@ -1,11 +1,19 @@
 import { Metadata } from "next";
 import TeamMemberDetails from "@/components/Team/TeamMemberDetails";
-import { getTeamMember } from "@/data/teamMembers";
+import { getAllTeamMembers, getTeamMember } from "@/data/teamMembers";
 import { generatePageMetadata } from "@/lib/seo";
 
 interface TeamMemberPageProps {
   params: Promise<{ id: string; locale?: string }>;
 }
+
+export function generateStaticParams() {
+  return getAllTeamMembers().map((member) => ({
+    id: member.id,
+  }));
+}
+
+export const dynamicParams = false;
 
 export async function generateMetadata({
   params,

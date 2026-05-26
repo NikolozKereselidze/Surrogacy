@@ -6,6 +6,8 @@ import DonorsNavigation from "@/components/Navigation/DonorsNavigation";
 import { BASE_URL } from "@/lib/seo";
 
 const CLOUDFRONT_DOMAIN = process.env.NEXT_PUBLIC_CLOUDFRONT_DOMAIN;
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+const SUPPORTED_LOCALES = ["en", "he", "zh", "ru", "es", "ka"] as const;
 
 function getImageUrl(imagePath?: string) {
   if (!imagePath) return undefined;
@@ -14,6 +16,7 @@ function getImageUrl(imagePath?: string) {
 
 interface BlogPost {
   id: string;
+  language?: string;
   title: string;
   date: string;
   category: string;
@@ -23,15 +26,62 @@ interface BlogPost {
 }
 
 async function fetchPostById(id: string): Promise<BlogPost | null> {
-  console.log(id);
-  if (!id) return null;
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog/${id}`,
-    { cache: "no-store" }
-  );
-  console.log(res);
-  if (!res.ok) return null;
-  return (await res.json()) as BlogPost;
+  if (!id || !API_BASE_URL) return null;
+
+  try {
+    const res = await fetch(`${API_BASE_URL}/api/blog/${id}`, {
+      next: { revalidate: 300 },
+    });
+
+    if (!res.ok) return null;
+    return (await res.json()) as BlogPost;
+  } catch {
+    return null;
+  }
+}
+
+function buildSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+async function fetchAllPosts(): Promise<BlogPost[]> {
+  if (!API_BASE_URL) return [];
+
+  try {
+    const res = await fetch(`${API_BASE_URL}/api/blog`, {
+      next: { revalidate: 300 },
+    });
+
+    if (!res.ok) return [];
+    return (await res.json()) as BlogPost[];
+  } catch {
+    return [];
+  }
+}
+
+export async function generateStaticParams() {
+  const posts = await fetchAllPosts();
+
+  return posts
+    .filter((post) => post.id && post.title)
+    .map((post) => {
+      const locale = (post.language || "en").toLowerCase();
+      const safeLocale = SUPPORTED_LOCALES.includes(
+        locale as (typeof SUPPORTED_LOCALES)[number]
+      )
+        ? locale
+        : "en";
+
+      return {
+        locale: safeLocale,
+        id: post.id,
+        slug: buildSlug(post.title),
+      };
+    });
 }
 
 function extractText(html: string): string {
@@ -54,12 +104,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id, locale = "en" } = await params;
   const post = await fetchPostById(id);
+  const slug = buildSlug(post?.title || "post");
   const title = post?.title ?? "Blog post";
   const description =
     truncate(extractText(post?.content || ""), 160) ||
     "Insights from Happy Family about surrogacy, egg donation and family building.";
   const ogImage = post?.imagePath ? getImageUrl(post.imagePath) : undefined;
-  const canonicalUrl = `${BASE_URL}/${locale}/blog/${id}`;
+  const canonicalUrl = `${BASE_URL}/${locale}/blog/${id}/${slug}`;
 
   return {
     title,
@@ -75,13 +126,13 @@ export async function generateMetadata({
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        en: `${BASE_URL}/en/blog/${id}`,
-        he: `${BASE_URL}/he/blog/${id}`,
-        es: `${BASE_URL}/es/blog/${id}`,
-        ru: `${BASE_URL}/ru/blog/${id}`,
-        zh: `${BASE_URL}/zh/blog/${id}`,
-        ka: `${BASE_URL}/ka/blog/${id}`,
-        "x-default": `${BASE_URL}/en/blog/${id}`,
+        en: `${BASE_URL}/en/blog/${id}/${slug}`,
+        he: `${BASE_URL}/he/blog/${id}/${slug}`,
+        es: `${BASE_URL}/es/blog/${id}/${slug}`,
+        ru: `${BASE_URL}/ru/blog/${id}/${slug}`,
+        zh: `${BASE_URL}/zh/blog/${id}/${slug}`,
+        ka: `${BASE_URL}/ka/blog/${id}/${slug}`,
+        "x-default": `${BASE_URL}/en/blog/${id}/${slug}`,
       },
     },
     openGraph: {

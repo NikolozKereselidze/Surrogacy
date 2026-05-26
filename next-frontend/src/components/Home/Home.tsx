@@ -68,7 +68,7 @@ const Home = () => {
                 t("beginYourMiracle.intendedParentsList", {
                   returnObjects: true,
                 }) as string[],
-              [t]
+              [t],
             )}
           />
           <MiracleCard
@@ -80,7 +80,7 @@ const Home = () => {
                 t("beginYourMiracle.surrogatesList", {
                   returnObjects: true,
                 }) as string[],
-              [t]
+              [t],
             )}
           />
           <MiracleCard
@@ -92,7 +92,7 @@ const Home = () => {
                 t("beginYourMiracle.eggDonorsList", {
                   returnObjects: true,
                 }) as string[],
-              [t]
+              [t],
             )}
           />
         </div>

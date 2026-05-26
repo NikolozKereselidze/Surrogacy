@@ -3,6 +3,7 @@
 import { useTranslation } from "react-i18next";
 import { useState, useEffect, useRef } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import ReactCountryFlag from "react-country-flag";
 import styles from "@/styles/Navigation/LanguageSwitcher.module.css";
 
@@ -15,7 +16,7 @@ const LANGUAGES = [
   { code: "he", name: "עברית", countryCode: "IL", dir: "rtl" },
 ];
 
-const LanguageSwitcher = ({ isMobile }: { isMobile?: boolean }) => {
+const LanguageSwitcherContent = ({ isMobile }: { isMobile?: boolean }) => {
   const { i18n } = useTranslation();
   const router = useRouter();
   const pathname = usePathname();
@@ -125,6 +126,14 @@ const LanguageSwitcher = ({ isMobile }: { isMobile?: boolean }) => {
         </div>
       )}
     </div>
+  );
+};
+
+const LanguageSwitcher = ({ isMobile }: { isMobile?: boolean }) => {
+  return (
+    <Suspense fallback={null}>
+      <LanguageSwitcherContent isMobile={isMobile} />
+    </Suspense>
   );
 };
 

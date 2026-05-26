@@ -2,6 +2,14 @@ import { notFound } from "next/navigation";
 import I18nProvider from "@/components/I18nProvider";
 import type { Metadata } from "next";
 
+const supportedLocales = ["en", "he", "zh", "ru", "es", "ka"] as const;
+
+export function generateStaticParams() {
+  return supportedLocales.map((locale) => ({ locale }));
+}
+
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {
@@ -26,8 +34,7 @@ export default async function LocaleLayout({
   const { locale } = await params;
 
   // Validate locale - if invalid, show 404
-  const supportedLocales = ["en", "he", "zh", "ru", "es", "ka"];
-  if (!supportedLocales.includes(locale)) {
+  if (!supportedLocales.includes(locale as (typeof supportedLocales)[number])) {
     notFound();
   }
 
