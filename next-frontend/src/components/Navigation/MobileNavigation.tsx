@@ -4,6 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const MobileNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,13 +31,16 @@ const MobileNavigation = () => {
   return (
     <>
       <div className={styles.mobileNavButtons}>
-        {/* <LanguageSwitcher isMobile={true} /> */}
-        <GiHamburgerMenu
+        <LanguageSwitcher isMobile={true} />
+        <button
+          type="button"
           onClick={toggleMenu}
-          className={styles.hamburgerMenu}
-          size={24}
+          className={styles.hamburgerButton}
           aria-label="Open menu"
-        />
+          aria-expanded={isOpen}
+        >
+          <GiHamburgerMenu className={styles.hamburgerMenu} size={18} />
+        </button>
       </div>
       <div
         className={`${styles.overlay} ${isOpen ? styles.open : ""}`}

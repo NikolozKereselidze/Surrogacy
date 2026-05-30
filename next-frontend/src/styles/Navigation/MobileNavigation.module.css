@@ -1,78 +1,78 @@
-/* Sidebar overlay (behind sidebar) */
 .mobileNavButtons {
-  cursor: pointer;
   display: flex;
   align-items: center;
-  gap: var(--gap-4xl);
+  gap: 0.55rem;
 }
 
 .overlay {
-  display: grid;
-  grid-template-columns: 0fr;
   position: fixed;
-  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0 */
+  inset: 0;
   pointer-events: none;
-  transition: grid-template-columns 0.3s, background 0.5s ease;
-  z-index: 5; /* make sure it's behind sidebar */
+  transition: background 0.3s ease;
+  z-index: 5;
 }
 
 .overlay.open {
-  grid-template-columns: 1fr;
   pointer-events: auto;
-  background: rgba(0, 0, 0, 0.5); /* darken */
-  cursor: zoom-out; /* indicate closing when clicking overlay */
+  background: rgba(18, 29, 58, 0.35);
+  cursor: zoom-out;
 }
 
 .sidebar {
   position: fixed;
   top: 0;
   right: 0;
-  min-width: max(18rem, 25vw);
+  width: min(88vw, 23rem);
   background: #fff;
-  padding: 0;
   transform: translateX(100%);
-  transition: all 0.3s;
-  z-index: 10; /* above overlay */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18), 0 0 1px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease;
+  z-index: 10;
+  border-left: 1px solid #e2e8f5;
+  box-shadow: -14px 0 36px rgba(26, 42, 86, 0.2);
   min-height: 100vh;
   overflow-y: auto;
-  display: grid;
-  grid-template-rows: 0fr 0fr 0fr;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar.open {
   transform: translateX(0);
-  grid-auto-rows: auto 1fr auto;
 }
 
-/* Sidebar header with close button */
 .sidebarHeader {
   position: sticky;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--padding-sm) var(--padding-base);
-  border-bottom: 1px solid #eee;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #e8ecf6;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
   z-index: 1;
 }
 
 .sidebarTitle {
   font-weight: 700;
-  color: var(--color-primary);
-  font-size: var(--font-base);
+  color: #314879;
+  font-size: 0.98rem;
 }
 
 .closeButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: var(--font-3xl);
-  height: var(--font-3xl);
+  width: 2rem;
+  height: 2rem;
   border: none;
-  background: #fff;
+  border-radius: 0.55rem;
+  background: #f4f7ff;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.12s ease;
+}
+
+.closeButton:hover {
+  background: #e9efff;
 }
 
 .closeButton:active {
@@ -80,15 +80,25 @@
 }
 
 .closeIcon {
-  color: var(--dark-blue);
+  color: #2a3f73;
+}
+
+.hamburgerButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid #d6def3;
+  border-radius: 0.65rem;
+  background: #f5f8ff;
+  cursor: pointer;
+}
+
+.hamburgerButton:hover {
+  background: #ebf1ff;
 }
 
 .hamburgerMenu {
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-}
-
-.hamburgerMenu:active {
-  transform: scale(0.98);
+  color: #2a3f73;
 }

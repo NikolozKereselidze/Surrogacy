@@ -70,12 +70,14 @@ const NavigationList = ({
                 </button>
               )}
               {item.submenu &&
-                (isMobile && openSubmenu === item.key ? (
-                  <IoIosArrowDown size={18} className={styles.arrowIcon} />
-                ) : (
-                  isMobile && (
+                (isMobile ? (
+                  openSubmenu === item.key ? (
+                    <IoIosArrowDown size={18} className={styles.arrowIcon} />
+                  ) : (
                     <IoIosArrowForward size={18} className={styles.arrowIcon} />
                   )
+                ) : (
+                  <IoIosArrowDown size={16} className={styles.arrowIcon} />
                 ))}
             </div>
 
@@ -109,12 +111,6 @@ const NavigationList = ({
             )}
           </li>
         ))}
-        {isMobile && (
-          <div className={styles.languageSwitcherContainer}>
-            <p className={styles.languageSwitcherText}>Language:</p>
-            <LanguageSwitcher isMobile={true} />
-          </div>
-        )}
       </ul>
 
       <div className={styles.contactUsContainer}>

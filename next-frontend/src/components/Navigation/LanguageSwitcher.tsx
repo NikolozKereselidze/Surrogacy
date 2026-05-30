@@ -83,17 +83,20 @@ const LanguageSwitcherContent = ({ isMobile }: { isMobile?: boolean }) => {
         aria-expanded={isOpen}
         aria-label={`Select language, current: ${currentLanguage.name}`}
       >
-        <span className={styles.flag}>
-          <ReactCountryFlag
-            countryCode={currentLanguage.countryCode}
-            svg
-            style={{
-              width: "1.2em",
-              height: "1.2em",
-            }}
-            title={currentLanguage.name}
-          />
-        </span>
+        {!isMobile && (
+          <span className={styles.flag}>
+            <ReactCountryFlag
+              countryCode={currentLanguage.countryCode}
+              svg
+              style={{
+                width: "1.2em",
+                height: "1.2em",
+              }}
+              title={currentLanguage.name}
+            />
+          </span>
+        )}
+        <span className={styles.langCode}>{currentLanguage.code.toUpperCase()}</span>
       </button>
 
       {isOpen && (

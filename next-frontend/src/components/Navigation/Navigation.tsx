@@ -28,11 +28,10 @@ export default function Navigation() {
       className={styles.navigation}
       dir={i18n.language === "he" ? "rtl" : "ltr"}
     >
-      <div>
-        <Link href={`/${locale}`} className={styles.logo}>
-          Happy Family
-        </Link>
-      </div>
+      <Link href={`/${locale}`} className={styles.logo} aria-label="Happy Family">
+        <span className={styles.logoHappy}>Happy</span>
+        <span className={styles.logoFamily}>Family</span>
+      </Link>
       {isMobile ? <MobileNavigation /> : <DesktopNavigation />}
     </nav>
   );
