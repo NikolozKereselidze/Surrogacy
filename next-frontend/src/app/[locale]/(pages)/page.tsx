@@ -1,9 +1,15 @@
 import Home from "@/components/Home/Home";
+import HomeHero from "@/components/Home/HomeHero";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 
 const HomePage = () => {
-  return <Home />;
+  return (
+    <>
+      <HomeHero />
+      <Home />
+    </>
+  );
 };
 
 export default HomePage;

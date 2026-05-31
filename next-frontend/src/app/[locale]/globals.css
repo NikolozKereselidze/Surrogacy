@@ -145,7 +145,8 @@ h6 {
   --glass-border: rgba(255, 255, 255, 0.6);
   --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
   --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.08); /* Enhanced soft shadow */
-  --shadow-layered: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.08); /* Layered depth */
+  --shadow-layered:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.08); /* Layered depth */
   --shadow-hover: 0 20px 50px -12px rgba(137, 16, 246, 0.25); /* Primary color shadow glow */
 }
 
@@ -179,7 +180,11 @@ body {
   gap: var(--gap-11xl);
   position: relative;
   /* Subtle gradient overlay for depth */
-  background-image: radial-gradient(circle at top center, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  background-image: radial-gradient(
+    circle at top center,
+    rgba(255, 255, 255, 0.4) 0%,
+    transparent 70%
+  );
 }
 
 /* Section Background Variations - Manual utility classes for precise control */
