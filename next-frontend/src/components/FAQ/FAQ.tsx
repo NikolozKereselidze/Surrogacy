@@ -112,9 +112,7 @@ const FAQ = ({ items, categories }: FAQProps) => {
                     onClick={() => handleToggle(index)}
                   >
                     <span className={styles.q}>{item.question}</span>
-                    <span className={styles.chevron} aria-hidden>
-                      {isOpen ? "-" : "+"}
-                    </span>
+                    <span className={styles.chevron} aria-hidden />
                   </button>
                   <div
                     id={`faq-panel-${index}`}
@@ -124,7 +122,9 @@ const FAQ = ({ items, categories }: FAQProps) => {
                       isOpen ? styles.panelOpen : ""
                     }`}
                   >
-                    <p className={styles.a}>{item.answer}</p>
+                    <div className={styles.panelInner}>
+                      <p className={styles.a}>{item.answer}</p>
+                    </div>
                   </div>
                 </li>
               );
