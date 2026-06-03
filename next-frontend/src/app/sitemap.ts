@@ -49,7 +49,7 @@ function buildSlug(title: string): string {
 function buildAlternates(path: string) {
   return {
     languages: Object.fromEntries(
-      locales.map((locale) => [locale, `${BASE_URL}/${locale}${path}`])
+      locales.map((locale) => [locale, `${BASE_URL}/${locale}${path}`]),
     ),
   };
 }

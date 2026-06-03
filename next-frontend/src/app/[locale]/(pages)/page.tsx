@@ -17,7 +17,7 @@ export default HomePage;
 export async function generateMetadata({
   params,
 }: {
-  params: { locale?: string };
+  params: Promise<{ locale?: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
 
@@ -91,5 +91,6 @@ export async function generateMetadata({
     description: content.description,
     keywords: [...content.keywords],
     path: "/",
+    locale: locale || "en",
   });
 }

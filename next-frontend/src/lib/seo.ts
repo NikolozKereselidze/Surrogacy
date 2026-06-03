@@ -19,8 +19,9 @@ export function buildPageMetadata({
   locale = "en",
   image = `${BASE_URL}/img/og-image.jpg`,
 }: PageSeoInput): Metadata {
-  // Ensure path ends correctly for canonical URL
-  const fullCanonicalUrl = `${BASE_URL}/${locale}${path}`;
+  // Normalize path: "/" becomes "" so locale URLs don't get a trailing slash
+  const normalizedPath = path === "/" ? "" : path;
+  const fullCanonicalUrl = `${BASE_URL}/${locale}${normalizedPath}`;
 
   return {
     title,
@@ -40,13 +41,13 @@ export function buildPageMetadata({
     alternates: {
       canonical: fullCanonicalUrl,
       languages: {
-        en: `${BASE_URL}/en${path}`,
-        he: `${BASE_URL}/he${path}`,
-        es: `${BASE_URL}/es${path}`,
-        ru: `${BASE_URL}/ru${path}`,
-        zh: `${BASE_URL}/zh${path}`,
-        ka: `${BASE_URL}/ka${path}`,
-        "x-default": `${BASE_URL}/en${path}`,
+        en: `${BASE_URL}/en${normalizedPath}`,
+        he: `${BASE_URL}/he${normalizedPath}`,
+        es: `${BASE_URL}/es${normalizedPath}`,
+        ru: `${BASE_URL}/ru${normalizedPath}`,
+        zh: `${BASE_URL}/zh${normalizedPath}`,
+        ka: `${BASE_URL}/ka${normalizedPath}`,
+        "x-default": `${BASE_URL}/en${normalizedPath}`,
       },
     },
     openGraph: {
