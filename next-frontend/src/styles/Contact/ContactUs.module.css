@@ -1,3 +1,7 @@
+.contactUsSection {
+  scroll-margin-top: 5rem;
+}
+
 .contactUsGrid {
   display: flex;
   width: 100%;

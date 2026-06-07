@@ -712,5 +712,182 @@
   },
   "programs": {
     "commonQuestions": "Preguntas Comunes"
+  },
+  "surrogacyInGeorgia": {
+    "hero": {
+      "tag": "100% LEGAL Y ASEQUIBLE PARA EXTRANJEROS",
+      "title": "Gestación Subrogada en Georgia: Su Camino Seguro hacia la Paternidad",
+      "description": "Embárquese en un viaje de gestación subrogada legalmente protegido y de clase mundial en la República de Georgia. Desde 1997, Georgia ofrece uno de los marcos legales más favorables para padres internacionales, otorgando derechos parentales automáticos desde el nacimiento sin órdenes judiciales ni adopción. Nuestros programas integrales combinan clínicas de FIV de vanguardia, sustitutas completamente evaluadas y apoyo legal completo.",
+      "primaryCta": "Comience Su Viaje",
+      "secondaryCta": "Descargar Guía Legal",
+      "highlightsTitle": "Por Qué Georgia es la Opción #1",
+      "highlights": [
+        {
+          "title": "Parentalidad Legal Inmediata",
+          "description": "Los nombres de los padres aparecen directamente en el certificado de nacimiento."
+        },
+        {
+          "title": "70% de Ahorro vs. Estados Unidos",
+          "description": "Paquetes transparentes todo incluido desde $40,000 a $60,000."
+        },
+        {
+          "title": "Cero Derechos Parentales de la Sustituta",
+          "description": "La madre sustituta no tiene derecho legal a ser reconocida como madre."
+        },
+        {
+          "title": "Clínicas de FIV de Clase Mundial",
+          "description": "Equipamiento médico de última generación y altas tasas de éxito clínico."
+        },
+        {
+          "title": "Proceso de Salida Rápido y Seguro",
+          "description": "Registro administrativo del certificado de nacimiento en solo 5 a 10 días."
+        }
+      ]
+    },
+    "benefits": {
+      "eyebrow": "BENEFICIOS INIGUALABLES",
+      "title": "Por Qué los Padres Eligen Georgia",
+      "subtitle": "Descubra por qué miles de parejas del Reino Unido, Europa, Australia y EE.UU. eligen Georgia como destino de confianza para la gestación subrogada.",
+      "cards": [
+        {
+          "icon": "⚖",
+          "title": "100% Legalmente Seguro",
+          "description": "La ley georgiana ha protegido explícitamente a los padres desde 1997. Según el Artículo 143 de la Ley de Atención Médica, ustedes son reconocidos como los únicos padres legales en el certificado de nacimiento desde el nacimiento. La sustituta no tiene derechos legales ni parentales sobre el niño."
+        },
+        {
+          "icon": "⭐",
+          "title": "Excelencia Asequible",
+          "description": "Ahorre hasta un 70% en comparación con programas en Estados Unidos. Nuestros paquetes transparentes todo incluido cubren clínicas de FIV de primer nivel, compensación de la sustituta, atención prenatal integral y parto en hospitales modernos sin tarifas ocultas."
+        },
+        {
+          "icon": "✈",
+          "title": "Proceso de Salida Simplificado",
+          "description": "No se requieren órdenes judiciales previas, aprobaciones de comités especiales ni procedimientos de adopción postnatal. Una vez emitido el certificado de nacimiento (generalmente en 5-10 días), pueden solicitar inmediatamente el pasaporte del bebé y regresar a casa."
+        }
+      ]
+    },
+    "legal": {
+      "eyebrow": "PROTECCIÓN LEGAL",
+      "title": "Marco Legal: Derechos 100% Protegidos",
+      "subtitle": "Un marco legal claro, regulado y favorable garantiza total tranquilidad a los padres internacionales.",
+      "overview": "El marco legal que rige las tecnologías de reproducción asistida (TRA) en Georgia es excepcionalmente claro y favorable. Según el Artículo 143 de la Ley de Atención Médica de Georgia (1997), la gestación subrogada y la donación de óvulos/esperma son totalmente legales y respaldadas por el Estado.",
+      "protectionsTitle": "Protecciones Legales Clave según la Ley Georgiana:",
+      "protections": [
+        {
+          "title": "Parentalidad Legal Automática",
+          "description": "Los padres son reconocidos como los únicos padres legales del niño desde el momento de la concepción. No se requieren órdenes judiciales ni adopción postnatal."
+        },
+        {
+          "title": "Sin Derechos para la Madre Sustituta",
+          "description": "Según el Artículo 143, la madre sustituta (y cualquier donante) no tiene derechos parentales sobre el niño y no puede quedarse con el niño después del nacimiento."
+        },
+        {
+          "title": "Registro Directo del Certificado de Nacimiento",
+          "description": "Sus nombres aparecen directamente en el certificado de nacimiento como madre y padre. No se menciona la gestación subrogada ni la donación en el documento oficial."
+        }
+      ],
+      "eligibleTitle": "¿Quién es Elegible?",
+      "requirements": [
+        {
+          "title": "Solo Parejas Heterosexuales",
+          "description": "Según la legislación vigente, la gestación subrogada está disponible exclusivamente para parejas heterosexuales. Personas solteras y parejas del mismo sexo no son elegibles."
+        },
+        {
+          "title": "Casados o Conviviendo",
+          "description": "Las parejas deben estar legalmente casadas o convivir durante al menos un año. Se debe presentar certificado de matrimonio o acuerdo de convivencia."
+        },
+        {
+          "title": "Necesidad Médica",
+          "description": "Los padres deben proporcionar documentación médica de infertilidad, fallos repetidos de FIV u otras razones que hagan imposible o peligroso llevar un embarazo."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "EL VIAJE",
+      "title": "El Proceso de Gestación Subrogada",
+      "subtitle": "Una guía paso a paso de su viaje de gestación subrogada en Georgia.",
+      "steps": [
+        {
+          "title": "Consulta Inicial y Emparejamiento",
+          "description": "Su viaje comienza con una consulta detallada para analizar sus necesidades, revisar el historial médico y explicar los programas. Luego le emparejamos con una sustituta y/o donante de óvulos completamente evaluados."
+        },
+        {
+          "title": "Configuración Legal y Administrativa",
+          "description": "Redacción y firma de contratos legales claros que protegen sus derechos parentales. Los contratos se preparan conforme a la ley georgiana y se notarizan. También ayudamos con la traducción y preparación de documentos."
+        },
+        {
+          "title": "FIV y Transferencia de Embrión",
+          "description": "El procedimiento de FIV se realiza en una clínica de vanguardia en Tiflis. Los embriones se crean con gametos de los padres o donantes y se transfieren a la sustituta."
+        },
+        {
+          "title": "Atención y Monitoreo del Embarazo",
+          "description": "Una vez confirmado el embarazo, la sustituta recibe atención prenatal integral y apoyo emocional. Ustedes reciben actualizaciones médicas regulares, informes de ecografías y videollamadas."
+        },
+        {
+          "title": "Nacimiento y Proceso de Salida",
+          "description": "El bebé nace en un hospital de maternidad moderno en Tiflis. Tras el nacimiento, el Registro Civil emite el certificado oficial en 5-10 días con solo los nombres de los padres. Ayudamos con la documentación para el pasaporte en su embajada."
+        }
+      ]
+    },
+    "pricing": {
+      "eyebrow": "PRECIOS Y TRANSPARENCIA",
+      "title": "Costos Transparentes y Asequibles",
+      "subtitle": "Ahorre hasta un 70% en comparación con EE.UU. con total transparencia financiera.",
+      "overview": "La gestación subrogada en Georgia es excepcionalmente rentable, con programas todo incluido entre $40,000 y $60,000 USD, una fracción del costo en EE.UU. o Canadá donde puede superar $150,000.",
+      "inclusionsTitle": "¿Qué Incluyen Nuestros Paquetes Todo Incluido?",
+      "inclusions": [
+        {
+          "title": "FIV y Procedimientos Médicos",
+          "description": "Todos los honorarios clínicos, creación de embriones, ICSI, pruebas PGT-A (si se seleccionan) y transferencias."
+        },
+        {
+          "title": "Compensación y Cuidado de la Sustituta",
+          "description": "Asignación mensual generosa, ropa de maternidad, apoyo de vivienda y compensación postparto."
+        },
+        {
+          "title": "Apoyo Legal y Administrativo",
+          "description": "Redacción de contratos, honorarios notariales, traducción, registro de nacimiento y apoyo consular."
+        },
+        {
+          "title": "Atención Prenatal y Parto",
+          "description": "Todos los controles prenatales, medicamentos, ecografías y parto en un hospital privado de maternidad."
+        }
+      ],
+      "programTitle": "Programa de Gestación Subrogada Garantizado",
+      "price": "Desde $45,000 USD",
+      "priceNote": "Intentos de FIV ilimitados hasta el nacimiento",
+      "features": [
+        "Intentos de FIV ilimitados (programa garantizado)",
+        "Evaluación y emparejamiento completo de la sustituta",
+        "Contrato legal y registro de nacimiento",
+        "Parto en hospital privado moderno",
+        "Atención prenatal integral y medicamentos",
+        "Gestor de caso personal 24/7"
+      ],
+      "cta": "Solicitar Detalles del Programa"
+    },
+    "faq": {
+      "eyebrow": "PREGUNTAS Y RESPUESTAS",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Encuentre respuestas detalladas a las preguntas más comunes sobre la gestación subrogada en Georgia.",
+      "items": [
+        {
+          "question": "¿Es legal la gestación subrogada en Georgia para parejas extranjeras?",
+          "answer": "Sí, la gestación subrogada y la donación de óvulos/esperma han sido 100% legales desde 1997. La sustituta no tiene derechos parentales y los padres se registran directamente en el certificado de nacimiento."
+        },
+        {
+          "question": "¿Quién puede acceder a la gestación subrogada en Georgia?",
+          "answer": "Según las leyes vigentes, está disponible exclusivamente para parejas heterosexuales casadas o que conviven al menos un año, con documentación médica de infertilidad o imposibilidad de llevar un embarazo de forma segura."
+        },
+        {
+          "question": "¿Cuál es el estado del proyecto de ley de 2023?",
+          "answer": "En junio de 2023 se propuso restringir la gestación subrogada comercial a ciudadanos georgianos, pero el proyecto no fue aprobado. Para padres extranjeros, el programa sigue siendo completamente legal y operativo."
+        },
+        {
+          "question": "¿Cómo funciona el proceso de filiación y salida?",
+          "answer": "La filiación legal se adquiere automáticamente al nacimiento. En 5-10 días se emite el certificado de nacimiento y pueden solicitar el pasaporte del bebé en la embajada de su país en Tiflis."
+        }
+      ]
+    }
   }
 }

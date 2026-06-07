@@ -2,12 +2,11 @@
 
 import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+import FAQAccordion, { type FAQAccordionItem } from "@/components/FAQ/FAQAccordion";
 import styles from "@/styles/FAQ/FAQ.module.css";
 
-export type FAQItem = {
-  question: string;
-  answer: string;
-  category?: string; // category id, e.g., 'general', 'logistics'
+export type FAQItem = FAQAccordionItem & {
+  category?: string;
 };
 
 interface FAQProps {
@@ -17,7 +16,6 @@ interface FAQProps {
 
 const FAQ = ({ items, categories }: FAQProps) => {
   const { t } = useTranslation();
-  const [activeIndex, setActiveIndex] = useState<number | null>(0);
   const [activeCategory, setActiveCategory] = useState<string | "all">("all");
 
   const defaultItems: FAQItem[] = useMemo(
@@ -57,10 +55,6 @@ const FAQ = ({ items, categories }: FAQProps) => {
     });
   }, [resolvedItems, activeCategory]);
 
-  const handleToggle = (index: number) => {
-    setActiveIndex((prev) => (prev === index ? null : index));
-  };
-
   const allLabel = t("faq.all") || "All";
   const noResults = t("faq.noResults") || "No results. Try a different search.";
 
@@ -98,41 +92,10 @@ const FAQ = ({ items, categories }: FAQProps) => {
             </div>
           )}
 
-          <ul className={styles.accordion}>
-            {filtered.map((item, index) => {
-              const isOpen = activeIndex === index;
-              return (
-                <li key={`${item.question}-${index}`} className={styles.item}>
-                  <button
-                    type="button"
-                    aria-expanded={isOpen}
-                    aria-controls={`faq-panel-${index}`}
-                    id={`faq-trigger-${index}`}
-                    className={`${styles.trigger} ${isOpen ? styles.open : ""}`}
-                    onClick={() => handleToggle(index)}
-                  >
-                    <span className={styles.q}>{item.question}</span>
-                    <span className={styles.chevron} aria-hidden />
-                  </button>
-                  <div
-                    id={`faq-panel-${index}`}
-                    role="region"
-                    aria-labelledby={`faq-trigger-${index}`}
-                    className={`${styles.panel} ${
-                      isOpen ? styles.panelOpen : ""
-                    }`}
-                  >
-                    <div className={styles.panelInner}>
-                      <p className={styles.a}>{item.answer}</p>
-                    </div>
-                  </div>
-                </li>
-              );
-            })}
-            {filtered.length === 0 && (
-              <li className={styles.empty}>{noResults}</li>
-            )}
-          </ul>
+          <FAQAccordion
+            items={filtered}
+            emptyMessage={filtered.length === 0 ? noResults : undefined}
+          />
         </div>
       </div>
     </section>

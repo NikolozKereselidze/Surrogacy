@@ -251,6 +251,20 @@ body {
   margin: 0 auto;
 }
 
+.eyebrow {
+  font-size: var(--font-sm);
+  color: var(--color-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.description {
+  font-size: var(--font-base);
+  color: var(--gray);
+  line-height: 1.6;
+}
+
 .miracleIcon {
   font-size: var(--font-7xl);
   color: var(--color-primary, #8910f6);

@@ -4,7 +4,7 @@ interface ProcessStepProps {
   stepNumber: number;
   stepTitle: string;
   stepContent: string;
-  stepIcon: React.ReactNode;
+  stepIcon?: React.ReactNode;
 }
 
 const ProcessStep = ({
@@ -19,7 +19,7 @@ const ProcessStep = ({
       <div className={styles.stepContent}>
         <h3>{stepTitle}</h3>
         <p>{stepContent}</p>
-        <div className={styles.stepIcon}>{stepIcon}</div>
+        {stepIcon && <div className={styles.stepIcon}>{stepIcon}</div>}
       </div>
     </div>
   );

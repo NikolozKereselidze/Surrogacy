@@ -23,6 +23,7 @@ const staticRoutes = [
   { path: "/our-team", priority: 0.8 },
   { path: "/why-choose-us", priority: 0.8 },
   { path: "/surrogacy-process", priority: 0.9 },
+  { path: "/surrogacy-in-georgia", priority: 0.95 },
   { path: "/who-can-become-a-surrogate", priority: 0.8 },
   { path: "/surrogate-screening", priority: 0.8 },
   { path: "/who-can-become-a-parent", priority: 0.8 },

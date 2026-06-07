@@ -1,14 +1,17 @@
+import type { ReactNode } from "react";
 import type { IconType } from "react-icons";
 import styles from "@/styles/RequirementsCard.module.css";
 
 interface RequirementsCardProps {
-  icon: IconType;
+  icon?: IconType;
+  iconContent?: ReactNode;
   title: string;
   description: string;
 }
 
 const RequirementsCard = ({
   icon: Icon,
+  iconContent,
   title,
   description,
 }: RequirementsCardProps) => {
@@ -16,7 +19,7 @@ const RequirementsCard = ({
     <div className={styles.requirementCard}>
       <div className={styles.requirementIconWrapper}>
         <div className={styles.requirementIcon}>
-          <Icon />
+          {iconContent ?? (Icon ? <Icon /> : null)}
         </div>
       </div>
       <h3>{title}</h3>
