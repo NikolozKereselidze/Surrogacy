@@ -1,8 +1,26 @@
 .blogGrid {
-  position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--gap-8xl);
   width: 100%;
+}
+
+.emptyState {
+  grid-column: 1 / -1;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .blogGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 1278px) {
+  .blogGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .blogCard {

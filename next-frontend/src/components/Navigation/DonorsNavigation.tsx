@@ -9,7 +9,7 @@ const DonorsNavigation = () => {
   const router = useRouter();
 
   const handleBack = () => {
-    // Try going back — but if it leaves the site, go home instead
+    // Try going back but if it leaves the site, go home instead
     const prev = document.referrer;
 
     if (prev && prev.includes(window.location.origin)) {
