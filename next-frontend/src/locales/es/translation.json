@@ -131,39 +131,258 @@
     "emailLabel": "Correo electrónico"
   },
   "whyChooseUs": {
-    "reasonsTitle": "Lo que nos distingue",
-    "reasonsDesc": "Descubre por qué las familias nos eligen para su viaje.",
-    "reason1Title": "Historial comprobado",
-    "reason1Desc": "Más de 1000 embarazos exitosos y familias creciendo.",
-    "reason2Title": "Equipo experto",
-    "reason2Desc": "Especialistas certificados con décadas de experiencia.",
-    "reason3Title": "Cuidado integral",
-    "reason3Desc": "Desde la consulta inicial hasta el apoyo post-parto.",
-    "reason4Title": "Enfoque personalizado",
-    "reason4Desc": "Cada viaje es único, cada plan está personalizado.",
-    "reason5Title": "Red global",
-    "reason5Desc": "Acceso a las mejores instalaciones médicas del mundo.",
-    "reason6Title": "Apoyo 24/7",
-    "reason6Desc": "Cuidado y asistencia las 24 horas cuando lo necesites.",
-    "comparisonTitle": "Creadores de Milagros vs Otros",
-    "comparisonDesc": "Ve cómo nos comparamos con otras agencias.",
-    "othersTitle": "Otras agencias",
-    "othersPoint1": "Supervisión médica limitada",
-    "othersPoint2": "Planes de tratamiento genéricos",
-    "othersPoint3": "Apoyo mínimo después del nacimiento",
-    "othersPoint4": "Tarifas y costos ocultos",
-    "ourTitle": "Creadores de Milagros",
-    "ourPoint1": "Equipo médico completo y supervisión",
-    "ourPoint2": "Planes de tratamiento personalizados",
-    "ourPoint3": "Apoyo integral post-parto",
-    "ourPoint4": "Precios transparentes, sin tarifas ocultas",
-    "testimonialsTitle": "Lo que dicen nuestras familias",
-    "testimonial1Text": "Creadores de Milagros hizo realidad nuestro sueño de ser padres. Su experiencia y compasión fueron inigualables.",
-    "testimonial1Author": "Sarah y Michael Johnson",
-    "testimonial1Role": "Padres de gemelos",
-    "testimonial2Text": "El equipo de Creadores de Milagros nos apoyó en cada paso del camino. No podríamos haber pedido mejor cuidado.",
-    "testimonial2Author": "Emily y David Chen",
-    "testimonial2Role": "Padres de trillizos"
+    "hero": {
+      "tag": "AGENCIA DE GESTACIÓN SUBROGADA DE CONFIANZA EN GEORGIA",
+      "title": "Por Qué Elegir Happy Family para la Gestación Subrogada en Georgia",
+      "description": "Elegir una agencia de gestación subrogada es una de las decisiones más importantes que tomará en su camino hacia la paternidad. En Happy Family, combinamos más de 15 años de experiencia, clínicas de FIV acreditadas en Tiflis, evaluación rigurosa, precios transparentes y apoyo las 24 horas para guiar a padres intencionales internacionales en cada paso de su viaje, desde la primera consulta hasta llevar a su bebé a casa.",
+      "primaryCta": "Reservar una Consulta Gratuita",
+      "secondaryCta": "Explorar la Gestación Subrogada en Georgia",
+      "highlightsTitle": "De un Vistazo",
+      "highlights": [
+        {
+          "title": "Más de 3,200 Nacimientos Exitosos",
+          "description": "Más de 15 años guiando a familias internacionales en la gestación subrogada en Georgia."
+        },
+        {
+          "title": "Protección Legal Desde 1997",
+          "description": "Los padres intencionales figuran en el certificado de nacimiento desde el nacimiento, sin necesidad de adopción."
+        },
+        {
+          "title": "Precios Transparentes",
+          "description": "Programas todo incluido desde $40,000 con presupuestos detallados y sin tarifas ocultas."
+        },
+        {
+          "title": "Apoyo Multilingüe 24/7",
+          "description": "Coordinador dedicado y asistencia las 24 horas en su idioma."
+        }
+      ]
+    },
+    "reasons": {
+      "eyebrow": "LO QUE NOS DISTINGUE",
+      "title": "Seis Razones por las que las Familias Eligen Happy Family",
+      "subtitle": "Vamos más allá de emparejarle con una sustituta: construimos un camino completo, legalmente seguro y con apoyo personalizado hacia la paternidad.",
+      "cards": [
+        {
+          "icon": "award",
+          "title": "Historial Comprobado",
+          "description": "Con más de 3,200 nacimientos exitosos y más de 15 años sirviendo a familias internacionales, Happy Family se ha ganado la reputación de ser una de las agencias de gestación subrogada más confiables de Georgia. Nuestra larga trayectoria significa procesos perfeccionados, coordinadores experimentados y una profunda comprensión de lo que los padres intencionales necesitan en cada etapa."
+        },
+        {
+          "icon": "users",
+          "title": "Equipo Experto",
+          "description": "Su viaje está guiado por especialistas en fertilidad certificados, coordinadores de FIV con experiencia, asesores legales licenciados y gestores de atención al paciente dedicados. Nuestro equipo multidisciplinario trabaja en conjunto para que las decisiones médicas, legales y logísticas nunca se tomen de forma aislada, brindándole la confianza de que cada detalle es gestionado por un profesional cualificado."
+        },
+        {
+          "icon": "shield",
+          "title": "Atención Integral",
+          "description": "Desde su primera consulta gratuita hasta la transferencia de embrión, el monitoreo del embarazo, el nacimiento y la documentación postnatal, gestionamos todo el proceso bajo un mismo techo. Recibe actualizaciones médicas regulares, citas clínicas coordinadas, preparación de contratos legales y apoyo consular para que nunca tenga que buscar respuestas entre múltiples proveedores."
+        },
+        {
+          "icon": "heart",
+          "title": "Enfoque Personalizado",
+          "description": "El historial médico, el cronograma, el presupuesto y los requisitos legales de cada familia son diferentes. Ofrecemos programas adaptados que incluyen gestación subrogada con gametos propios, gestación subrogada con donante de óvulos, congelación de óvulos y servicios VIP Concierge. Su coordinador elabora un plan personalizado según sus objetivos, en lugar de forzarle a un paquete único para todos."
+        },
+        {
+          "icon": "globe",
+          "title": "Red Global",
+          "description": "Atendemos a padres intencionales de Estados Unidos, Reino Unido, Israel, China, Rusia, España y de toda Europa y Asia. Nuestro equipo ofrece apoyo de traducción, coordinación de viajes, orientación sobre alojamiento y servicios de enlace consular, eliminando las barreras lingüísticas y logísticas para que pueda centrarse en su familia en crecimiento."
+        },
+        {
+          "icon": "clock",
+          "title": "Apoyo 24/7",
+          "description": "Los viajes de gestación subrogada no siguen el horario de oficina. Ya sea que tenga una pregunta médica urgente, necesite un documento traducido de un día para otro o desee una actualización del embarazo a través de zonas horarias, su coordinador dedicado y nuestro equipo de apoyo están disponibles las 24 horas. Nunca quedará esperando cuando algo importe."
+        }
+      ]
+    },
+    "guide": {
+      "eyebrow": "GUÍA PARA ELEGIR AGENCIA",
+      "title": "Cómo Elegir una Agencia de Gestación Subrogada",
+      "subtitle": "No todas las agencias ofrecen el mismo nivel de supervisión médica, protección legal o apoyo continuo. Utilice esta lista de verificación para evaluar cualquier agencia y vea cómo Happy Family cumple cada estándar.",
+      "questionsLabel": "Preguntas que debe hacer:",
+      "criteria": [
+        {
+          "title": "Supervisión Médica y Alianzas con Clínicas",
+          "description": "Una agencia de gestación subrogada de buena reputación trabaja directamente con clínicas de fertilidad acreditadas, no con intermediarios independientes sin participación clínica. Verifique que la agencia coordine los procedimientos de FIV, las transferencias de embrión y la atención prenatal a través de centros médicos autorizados con tasas de éxito publicadas.",
+          "questions": [
+            "¿Con qué clínicas de FIV colabora la agencia?",
+            "¿Quién supervisa la atención prenatal de la sustituta?",
+            "¿Puede hablar directamente con el equipo médico?"
+          ]
+        },
+        {
+          "title": "Marco Legal y Protección de la Filiación",
+          "description": "Sus derechos parentales deben estar asegurados antes de que comience el tratamiento. En Georgia, los padres intencionales son reconocidos en el certificado de nacimiento desde el nacimiento según el Artículo 143 de la Ley de Atención Médica. Confirme que la agencia proporcione contratos notarizados, asesoría legal y apoyo en la documentación postnatal para su país de origen.",
+          "questions": [
+            "¿Se establecen los derechos parentales antes de la transferencia de embrión?",
+            "¿La agencia proporciona asesoría legal familiarizada con la ley georgiana?",
+            "¿Cuál es el proceso del certificado de nacimiento y la salida con pasaporte?"
+          ]
+        },
+        {
+          "title": "Precios Transparentes",
+          "description": "La gestación subrogada es un compromiso financiero significativo. Las mejores agencias ofrecen presupuestos detallados y todo incluido sin tarifas ocultas. Pregunte qué está cubierto: compensación de la sustituta, procedimientos médicos, honorarios legales, seguro y viajes, y si existen paquetes de tarifa fija.",
+          "questions": [
+            "¿Existe un desglose de costos por escrito y detallado?",
+            "¿Qué costos no están incluidos en el precio cotizado?",
+            "¿Hay opciones de programas de tarifa fija?"
+          ]
+        },
+        {
+          "title": "Estándares Rigurosos de Evaluación",
+          "description": "Una evaluación exhaustiva de sustitutas y padres intencionales protege a todos los involucrados. Las evaluaciones médicas, las valoraciones psicológicas y las verificaciones de antecedentes deben ser estándar, no complementos opcionales. Pregunte sobre los criterios de descalificación y cuánto tiempo suele tardar la evaluación.",
+          "questions": [
+            "¿Qué pruebas médicas y psicológicas realizan las sustitutas?",
+            "¿Cómo se evalúa la elegibilidad de los padres intencionales?",
+            "¿Cuánto tarda el proceso de emparejamiento después de la evaluación?"
+          ]
+        },
+        {
+          "title": "Apoyo Emocional y Asesoramiento",
+          "description": "La gestación subrogada es emocionalmente exigente tanto para los padres intencionales como para las sustitutas. Busque agencias que ofrezcan sesiones de asesoramiento, conexiones con la comunidad y un coordinador dedicado que conozca su caso personalmente, no un centro de llamadas que le derive a una persona diferente cada vez.",
+          "questions": [
+            "¿El asesoramiento psicológico está incluido en el programa?",
+            "¿Tendré un coordinador dedicado durante todo el proceso?",
+            "¿Qué apoyo está disponible durante el embarazo?"
+          ]
+        },
+        {
+          "title": "Historial y Credenciales",
+          "description": "Verifique la trayectoria de la agencia, sus métricas de éxito y sus afiliaciones profesionales. Pregunte cuánto tiempo llevan operando, cuántas familias han atendido y si puede hablar con clientes anteriores. Las agencias éticas dan la bienvenida a la transparencia sobre sus credenciales y resultados.",
+          "questions": [
+            "¿Cuántos años lleva operando la agencia?",
+            "¿Puede proporcionar referencias de padres intencionales anteriores?",
+            "¿Qué certificaciones profesionales posee el equipo?"
+          ]
+        }
+      ]
+    },
+    "georgia": {
+      "eyebrow": "VENTAJA DE GEORGIA",
+      "title": "Por Qué Elegir una Agencia de Gestación Subrogada en Georgia",
+      "subtitle": "Georgia ha sido un destino internacional líder en gestación subrogada desde 1997, ofreciendo claridad legal, programas asequibles y atención de fertilidad de clase mundial en Tiflis.",
+      "overview": "Para padres intencionales que comparan opciones en Estados Unidos, Reino Unido u otros países, Georgia ofrece una combinación excepcionalmente favorable: legislación clara que protege a los padres intencionales, costos de programa significativamente menores, clínicas de FIV acreditadas y un proceso de certificado de nacimiento simplificado que suele tardar solo de 5 a 10 días. Happy Family se ha especializado en gestación subrogada en Georgia para familias internacionales desde 2009, lo que nos brinda una profunda experiencia tanto en la ley georgiana como en los requisitos de salida de decenas de países de origen.",
+      "points": [
+        {
+          "title": "Protección Legal Desde 1997",
+          "description": "La ley georgiana reconoce explícitamente a los padres intencionales como los únicos padres legales desde el nacimiento. La sustituta no tiene derechos parentales y sus nombres aparecen directamente en el certificado de nacimiento."
+        },
+        {
+          "title": "Hasta un 70% de Ahorro en Costos",
+          "description": "Los programas de gestación subrogada todo incluido en Georgia comienzan desde aproximadamente $40,000, una fracción de los costos típicos en Estados Unidos, con precios transparentes y detallados sin tarifas ocultas."
+        },
+        {
+          "title": "Proceso de Salida Rápido",
+          "description": "No se requieren órdenes judiciales ni procedimientos de adopción postnatal. Tras el nacimiento, el Registro Civil emite el certificado de nacimiento de su bebé en pocos días, y le asistimos con la documentación consular para su regreso a casa."
+        },
+        {
+          "title": "Clínicas Acreditadas en Tiflis",
+          "description": "Los procedimientos de FIV, las transferencias de embrión y los partos se realizan en instalaciones modernas y acreditadas en Tiflis, con especialistas en medicina reproductiva experimentados y altos estándares clínicos."
+        }
+      ]
+    },
+    "comparison": {
+      "title": "Happy Family frente a Otras Agencias",
+      "subtitle": "Vea cómo una agencia de gestación subrogada integral en Georgia se compara con las alternativas habituales.",
+      "othersTitle": "Otras Agencias",
+      "othersPoints": [
+        "Supervisión médica limitada o externalizada",
+        "Planes de tratamiento genéricos e iguales para todos",
+        "Apoyo mínimo después del nacimiento",
+        "Tarifas ocultas y costos inesperados",
+        "Largos tiempos de espera para sustitutas sin transparencia",
+        "Sin coordinador dedicado; personal de apoyo rotativo",
+        "Experiencia limitada en documentación de salida internacional"
+      ],
+      "ourTitle": "Happy Family",
+      "ourPoints": [
+        "Equipo médico integral interno y coordinación con clínicas",
+        "Programas personalizados adaptados a su perfil médico",
+        "Apoyo integral postnatal y consular",
+        "Precios transparentes y detallados con opciones de tarifa fija",
+        "Base de datos de sustitutas evaluadas activamente con emparejamiento más rápido",
+        "Un coordinador dedicado desde la consulta hasta la salida",
+        "Más de 15 años guiando a familias internacionales de regreso a casa con seguridad"
+      ]
+    },
+    "testimonials": {
+      "title": "Lo Que Dicen Nuestras Familias",
+      "subtitle": "Historias de padres intencionales que eligieron Happy Family para su viaje de gestación subrogada.",
+      "items": [
+        {
+          "text": "Happy Family hizo realidad nuestro sueño de ser padres. Su experiencia y compasión fueron inigualables: desde la primera consulta en Tiflis hasta llevar a nuestros gemelos a casa, cada paso fue gestionado con cuidado y profesionalismo.",
+          "author": "Sarah y Michael Johnson",
+          "role": "Padres de gemelos, Reino Unido"
+        },
+        {
+          "text": "El equipo de Happy Family nos apoyó en cada paso del camino. No podríamos haber pedido mejor atención: precios transparentes, actualizaciones regulares del embarazo y apoyo legal que hizo que el proceso de salida fuera fluido y sin estrés.",
+          "author": "Emily y David Chen",
+          "role": "Padres de trillizos, Estados Unidos"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "PREGUNTAS FRECUENTES",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Respuestas a las preguntas que los padres intencionales hacen con más frecuencia al elegir una agencia de gestación subrogada.",
+      "items": [
+        {
+          "question": "¿Cómo elijo una agencia de gestación subrogada?",
+          "answer": "Evalúe las agencias según seis criterios clave: supervisión médica y alianzas con clínicas, protección legal de la filiación, precios transparentes, estándares rigurosos de evaluación, apoyo emocional y asesoramiento, y un historial verificable. Solicite un desglose de costos por escrito, pida hablar con familias anteriores y confirme que los contratos legales se preparen antes de que comience cualquier procedimiento médico."
+        },
+        {
+          "question": "¿Qué debo preguntar a una agencia de gestación subrogada antes de firmar?",
+          "answer": "Pregunte qué clínicas realizan la FIV y los partos, cómo se aseguran legalmente los derechos parentales, qué cubre el costo total todo incluido, cómo se evalúa médica y psicológicamente a las sustitutas, quién será su coordinador dedicado y qué apoyo postnatal está incluido para la documentación consular y el viaje de regreso a casa."
+        },
+        {
+          "question": "¿Cómo verifico las credenciales de una agencia de gestación subrogada?",
+          "answer": "Compruebe cuánto tiempo lleva operando la agencia, solicite referencias de familias que hayan completado el proceso, verifique las alianzas con clínicas acreditadas, confirme que el asesor legal esté licenciado y tenga experiencia en la ley georgiana de gestación subrogada, y revise si las métricas de éxito y los detalles del programa se publican de forma transparente en su sitio web."
+        },
+        {
+          "question": "¿Por qué elegir una agencia en Georgia en lugar de EE.UU. o Reino Unido?",
+          "answer": "Georgia ofrece gestación subrogada gestacional legalmente protegida desde 1997, con los padres intencionales nombrados en el certificado de nacimiento al nacer. Los programas cuestan hasta un 70% menos que las alternativas en EE.UU., las clínicas de FIV en Tiflis cumplen estándares internacionales y el proceso de salida no requiere órdenes judiciales ni procedimientos de adopción, lo que lo hace especialmente atractivo para padres intencionales internacionales."
+        },
+        {
+          "question": "¿Qué hace diferente a Happy Family de otras agencias?",
+          "answer": "Happy Family combina más de 15 años de experiencia internacional, coordinación médica y legal interna, un coordinador dedicado para cada familia, paquetes de tarifa fija transparentes, evaluación rigurosa de sustitutas, apoyo multilingüe 24/7 y experiencia especializada en documentación de salida consular para padres que regresan a EE.UU., Reino Unido, Israel, China y toda Europa."
+        },
+        {
+          "question": "¿Es legal la gestación subrogada en Georgia para extranjeros?",
+          "answer": "Sí. La gestación subrogada gestacional es legal en Georgia desde 1997 y está disponible para padres intencionales internacionales que cumplan los requisitos de elegibilidad, incluidas parejas heterosexuales casadas o en convivencia con necesidad médica documentada. Happy Family coordina todos los contratos legales y el registro del certificado de nacimiento conforme a la ley georgiana."
+        },
+        {
+          "question": "¿Qué apoyo reciben los padres intencionales durante el viaje?",
+          "answer": "A cada padre intencional se le asigna un coordinador dedicado que gestiona las citas clínicas, los contratos legales, el emparejamiento con la sustituta, las actualizaciones del embarazo y la documentación postnatal. También ofrecemos asesoramiento emocional, orientación en planificación financiera, servicios de traducción, coordinación de viajes y apoyo urgente 24/7 durante todo el proceso."
+        },
+        {
+          "question": "¿Cuánto tiempo tarda el proceso de gestación subrogada con Happy Family?",
+          "answer": "La mayoría de los viajes tardan de 12 a 18 meses desde la consulta inicial hasta el nacimiento, según el emparejamiento con la sustituta, la evaluación médica, la preparación legal y los resultados de la FIV. Proporcionamos un cronograma realista durante su consulta gratuita según su programa específico y su perfil médico."
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para Comenzar Su Viaje?",
+      "description": "Reserve una consulta gratuita y sin compromiso con nuestro equipo. Revisaremos sus objetivos, explicaremos las opciones de su programa y le ayudaremos a comprender cada paso de la gestación subrogada en Georgia.",
+      "primaryCta": "Contáctenos Hoy",
+      "relatedTitle": "Explorar Páginas Relacionadas",
+      "relatedLinks": [
+        {
+          "label": "Gestación Subrogada en Georgia",
+          "path": "/surrogacy-in-georgia"
+        },
+        {
+          "label": "Nuestro Equipo",
+          "path": "/our-team"
+        },
+        {
+          "label": "Evaluación de Padres",
+          "path": "/parent-screening"
+        },
+        {
+          "label": "Apoyo y Asesoramiento",
+          "path": "/support-and-counselling"
+        }
+      ]
+    }
   },
   "blog": {
     "title": "Últimas del Blog",
