@@ -29,6 +29,7 @@ const staticRoutes = [
   { path: "/who-can-become-a-parent", priority: 0.8 },
   { path: "/parent-screening", priority: 0.8 },
   { path: "/support-and-counselling", priority: 0.8 },
+  { path: "/why-become-a-donor", priority: 0.8 },
   { path: "/who-can-become-a-donor", priority: 0.8 },
   { path: "/surrogacy-with-own-gametes", priority: 0.9 },
   { path: "/surrogacy-with-egg-donor", priority: 0.9 },

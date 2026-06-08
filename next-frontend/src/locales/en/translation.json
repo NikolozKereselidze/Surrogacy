@@ -521,6 +521,100 @@
       }
     }
   },
+  "whyBecomeDonor": {
+    "hero": {
+      "tag": "EGG DONATION",
+      "title": "Why Become an Egg Donor?",
+      "description": "Egg donation is a generous, empowering way to help intended parents build a family. We focus on safety, transparency, and respectful care so you feel confident and supported from the first conversation to the final follow-up.",
+      "primaryCta": "Contact Us",
+      "secondaryCta": "See Eligibility",
+      "cardTitle": "What to Expect",
+      "cardPoints": [
+        "Confidential, supportive guidance throughout the process",
+        "Thorough medical and genetic screening for safety",
+        "Clear scheduling and communication at every step"
+      ]
+    },
+    "benefits": {
+      "eyebrow": "THE IMPACT",
+      "title": "A Meaningful Gift, With Real Support",
+      "subtitle": "Become a donor with confidence. Our program prioritizes your health, comfort, and time.",
+      "cards": [
+        {
+          "icon": "heart",
+          "title": "Change a Family’s Future",
+          "description": "Your donation can help someone experience parenthood when they could not otherwise."
+        },
+        {
+          "icon": "safety",
+          "title": "Safety Comes First",
+          "description": "We follow careful clinical protocols, clear consent, and health monitoring throughout."
+        },
+        {
+          "icon": "support",
+          "title": "Personal Coordinator",
+          "description": "You will have a dedicated point of contact who answers questions and helps with scheduling."
+        },
+        {
+          "icon": "screening",
+          "title": "Transparent Screening",
+          "description": "Medical, psychological, and genetic screening helps protect everyone involved."
+        },
+        {
+          "icon": "time",
+          "title": "Clear Timeline",
+          "description": "You will know what happens next, how long each step takes, and what you need to do."
+        },
+        {
+          "icon": "genetics",
+          "title": "Responsible Donation",
+          "description": "We take family history and genetic health seriously to support the best possible outcomes."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "THE JOURNEY",
+      "title": "How Egg Donation Works",
+      "subtitle": "A straightforward process with respectful, step-by-step support.",
+      "steps": [
+        {
+          "title": "Apply & Talk With Our Team",
+          "description": "Share your background and goals, and get answers to your questions before you decide."
+        },
+        {
+          "title": "Medical & Genetic Screening",
+          "description": "We review your health, run tests, and make sure you are a safe candidate for donation."
+        },
+        {
+          "title": "Treatment & Monitoring",
+          "description": "You will be monitored closely by clinicians during stimulation, with clear instructions."
+        },
+        {
+          "title": "Egg Retrieval & Follow-up",
+          "description": "The procedure is quick and performed by experienced specialists, with follow-up care after."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Common Questions",
+      "subtitle": "If you have more questions, contact us and we will help.",
+      "items": [
+        {
+          "question": "Is egg donation safe?",
+          "answer": "Egg donation is generally safe when done under medical supervision. Our team monitors your health throughout and explains risks and expectations before you begin."
+        },
+        {
+          "question": "How long does the process take?",
+          "answer": "Timelines vary, but most donors complete screening and a donation cycle over several weeks. We will provide a clear schedule based on your availability."
+        },
+        {
+          "question": "Can I stay anonymous?",
+          "answer": "We follow strict privacy practices. The level of identity disclosure depends on legal and program requirements, which we will explain clearly during your consultation."
+        }
+      ]
+    }
+  },
   "supportAndCounselling": {
     "subtitle": "Caring counselling, community connection, and practical guidance for intended parents",
     "cards": {

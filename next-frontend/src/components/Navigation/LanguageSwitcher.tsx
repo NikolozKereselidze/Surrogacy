@@ -68,7 +68,7 @@ const LanguageSwitcherContent = ({ isMobile }: { isMobile?: boolean }) => {
     }
 
     const newPath = "/" + segments.join("/") + (params ? `?${params}` : "");
-    router.push(newPath);
+    router.push(newPath, { scroll: false });
     setIsOpen(false);
   };
 
@@ -96,7 +96,9 @@ const LanguageSwitcherContent = ({ isMobile }: { isMobile?: boolean }) => {
             />
           </span>
         )}
-        <span className={styles.langCode}>{currentLanguage.code.toUpperCase()}</span>
+        <span className={styles.langCode}>
+          {currentLanguage.code.toUpperCase()}
+        </span>
       </button>
 
       {isOpen && (
@@ -124,7 +126,7 @@ const LanguageSwitcherContent = ({ isMobile }: { isMobile?: boolean }) => {
                 </span>
                 <span className={styles.langName}>{lang.name}</span>
               </button>
-            )
+            ),
           )}
         </div>
       )}

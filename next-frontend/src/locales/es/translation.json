@@ -500,6 +500,100 @@
       }
     }
   },
+  "whyBecomeDonor": {
+    "hero": {
+      "tag": "DONACIÓN DE ÓVULOS",
+      "title": "¿Por qué convertirse en donante de óvulos?",
+      "description": "La donación de óvulos es una forma generosa y empoderadora de ayudar a los futuros padres a formar una familia. Nos enfocamos en la seguridad, la transparencia y el cuidado respetuoso para que se sienta segura y apoyada desde la primera conversación hasta el seguimiento final.",
+      "primaryCta": "Contáctenos",
+      "secondaryCta": "Ver elegibilidad",
+      "cardTitle": "Qué esperar",
+      "cardPoints": [
+        "Orientación confidencial y de apoyo durante todo el proceso",
+        "Evaluación médica y genética exhaustiva para su seguridad",
+        "Programación y comunicación claras en cada paso"
+      ]
+    },
+    "benefits": {
+      "eyebrow": "EL IMPACTO",
+      "title": "Un regalo significativo, con apoyo real",
+      "subtitle": "Conviértase en donante con confianza. Nuestro programa prioriza su salud, comodidad y tiempo.",
+      "cards": [
+        {
+          "icon": "heart",
+          "title": "Cambie el futuro de una familia",
+          "description": "Su donación puede ayudar a alguien a experimentar la paternidad cuando de otro modo no podría hacerlo."
+        },
+        {
+          "icon": "safety",
+          "title": "La seguridad es lo primero",
+          "description": "Seguimos protocolos clínicos cuidadosos, consentimiento claro y monitoreo de salud constante."
+        },
+        {
+          "icon": "support",
+          "title": "Coordinador personal",
+          "description": "Tendrá un punto de contacto dedicado que responderá sus preguntas y le ayudará con la programación."
+        },
+        {
+          "icon": "screening",
+          "title": "Evaluación transparente",
+          "description": "La evaluación médica, psicológica y genética ayuda a proteger a todos los involucrados."
+        },
+        {
+          "icon": "time",
+          "title": "Cronograma claro",
+          "description": "Sabrá qué sucede a continuación, cuánto tiempo toma cada paso y qué debe hacer."
+        },
+        {
+          "icon": "genetics",
+          "title": "Donación responsable",
+          "description": "Nos tomamos muy en serio los antecedentes familiares y la salud genética para respaldar los mejores resultados posibles."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "EL VIAJE",
+      "title": "Cómo funciona la donación de óvulos",
+      "subtitle": "Un proceso sencillo con un apoyo respetuoso y paso a paso.",
+      "steps": [
+        {
+          "title": "Postule y hable con nuestro equipo",
+          "description": "Comparta sus antecedentes y objetivos, y obtenga respuestas a sus preguntas antes de decidir."
+        },
+        {
+          "title": "Evaluación médica y genética",
+          "description": "Revisamos su salud, realizamos pruebas y nos aseguramos de que sea una candidata segura para la donación."
+        },
+        {
+          "title": "Tratamiento y monitoreo",
+          "description": "Los médicos la supervisarán de cerca durante la estimulación, con instrucciones claras."
+        },
+        {
+          "title": "Extracción de óvulos y seguimiento",
+          "description": "El procedimiento es rápido y lo realizan especialistas experimentados, con atención de seguimiento posterior."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "PREGUNTAS FRECUENTES",
+      "title": "Preguntas comunes",
+      "subtitle": "Si tiene más preguntas, contáctenos y le ayudaremos.",
+      "items": [
+        {
+          "question": "¿Es segura la donación de óvulos?",
+          "answer": "La donación de óvulos es generalmente segura cuando se realiza bajo supervisión médica. Nuestro equipo monitorea su salud en todo momento y le explica los riesgos y las expectativas antes de comenzar."
+        },
+        {
+          "question": "¿Cuánto tiempo toma el proceso?",
+          "answer": "Los plazos varían, pero la mayoría de las donantes completan la evaluación y el ciclo de donación en varias semanas. Le proporcionaremos un cronograma claro basado en su disponibilidad."
+        },
+        {
+          "question": "¿Puedo mantener el anonimato?",
+          "answer": "Seguimos estrictas prácticas de privacidad. El nivel de divulgación de la identidad depende de los requisitos legales y del programa, los cuales le explicaremos claramente durante su consulta."
+        }
+      ]
+    }
+  },
   "supportAndCounselling": {
     "subtitle": "Acompañamiento cercano, comunidad y orientación práctica para padres intencionales",
     "cards": {
