@@ -79,7 +79,10 @@
       "Screening Process",
       "Medical Evaluation",
       "Genetic Testing"
-    ]
+    ],
+    "intendedParentsCta": "For Intended Parents",
+    "surrogatesCta": "Become a Surrogate",
+    "eggDonorsCta": "Become an Egg Donor"
   },
   "ourTeam": {
     "title": "Meet Our Team",

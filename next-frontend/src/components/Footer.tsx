@@ -57,6 +57,9 @@ const Footer = () => {
                   {t("submenu.aboutUs.whyChooseUs")}
                 </Link>
               </li>
+              <li>
+                <Link href={`/${locale}/faq`}>{t("navigation.faq")}</Link>
+              </li>
             </ul>
           </div>
 
@@ -76,6 +79,11 @@ const Footer = () => {
               <li>
                 <Link href={`/${locale}/surrogate-screening`}>
                   {t("submenu.surrogates.screeningProcess")}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/surrogacy-in-georgia`}>
+                  {t("submenu.surrogates.surrogacyInGeorgia")}
                 </Link>
               </li>
             </ul>
@@ -134,6 +142,11 @@ const Footer = () => {
               <li>
                 <Link href={`/${locale}/egg-freezing-preservation`}>
                   {t("submenu.programs.eggFreezing")}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/vip-concierge-services`}>
+                  {t("submenu.programs.vipServices")}
                 </Link>
               </li>
             </ul>

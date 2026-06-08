@@ -64,7 +64,11 @@
 .postHeaderWrapper {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, var(--color-primary) 0%, #0056b3 100%) !important;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    #0056b3 100%
+  ) !important;
   padding: var(--padding-5xl) 0;
   position: relative;
   overflow: hidden;

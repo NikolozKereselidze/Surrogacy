@@ -71,7 +71,7 @@ export async function generateStaticParams() {
     .map((post) => {
       const locale = (post.language || "en").toLowerCase();
       const safeLocale = SUPPORTED_LOCALES.includes(
-        locale as (typeof SUPPORTED_LOCALES)[number]
+        locale as (typeof SUPPORTED_LOCALES)[number],
       )
         ? locale
         : "en";
@@ -145,16 +145,16 @@ export async function generateMetadata({
         locale === "en"
           ? "en_US"
           : locale === "he"
-          ? "he_IL"
-          : locale === "zh"
-          ? "zh_CN"
-          : locale === "ru"
-          ? "ru_RU"
-          : locale === "es"
-          ? "es_ES"
-          : locale === "ka"
-          ? "ka_GE"
-          : "en_US",
+            ? "he_IL"
+            : locale === "zh"
+              ? "zh_CN"
+              : locale === "ru"
+                ? "ru_RU"
+                : locale === "es"
+                  ? "es_ES"
+                  : locale === "ka"
+                    ? "ka_GE"
+                    : "en_US",
       images: ogImage
         ? [{ url: ogImage, width: 1200, height: 630, alt: title }]
         : undefined,

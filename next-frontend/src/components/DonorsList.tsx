@@ -132,8 +132,6 @@ export default function DonorsList({
     setFilteredDonors(filtered);
   }, [applyFiltersAndSort, donors]);
 
-  if (loading) return <LoadingSpinner size="large" />;
-
   return (
     <div className={styles.donorsPageContainer}>
       <div className={styles.pageHeader}>
@@ -358,6 +356,9 @@ export default function DonorsList({
       </div>
 
       {/* ✅ Donors grid (fixed) */}
+      {loading ? (
+        <LoadingSpinner size="large" />
+      ) : (
       <div className={styles.donorsGrid}>
         {filteredDonors.length === 0 ? (
           <div className={styles.noDonorsMessage}>
@@ -421,6 +422,7 @@ export default function DonorsList({
           ))
         )}
       </div>
+      )}
     </div>
   );
 }

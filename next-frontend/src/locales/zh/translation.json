@@ -61,25 +61,16 @@
     "subtitle": "选择适合您的道路。",
     "intendedParentsTitle": "准父母代孕服务",
     "intendedParentsDesc": "探索我们为梦想成为父母的人提供的项目和支持。",
-    "intendedParentsList": [
-      "法律指导",
-      "医疗支持",
-      "财务援助"
-    ],
+    "intendedParentsList": ["法律指导", "医疗支持", "财务援助"],
     "surrogatesTitle": "成为代孕妈妈",
     "surrogatesDesc": "作为奇迹创造者的代孕妈妈，为家庭赋能并改变生活。",
-    "surrogatesList": [
-      "全面护理",
-      "医疗监测",
-      "支持服务"
-    ],
+    "surrogatesList": ["全面护理", "医疗监测", "支持服务"],
     "eggDonorsTitle": "成为卵子捐赠者",
     "eggDonorsDesc": "给予生命的礼物，帮助创造新的开始。",
-    "eggDonorsList": [
-      "筛选流程",
-      "医疗评估",
-      "基因检测"
-    ]
+    "eggDonorsList": ["筛选流程", "医疗评估", "基因检测"],
+    "intendedParentsCta": "准父母入口",
+    "surrogatesCta": "成为代孕妈妈",
+    "eggDonorsCta": "成为卵子捐赠者"
   },
   "ourTeam": {
     "title": "认识我们的团队",
@@ -792,12 +783,7 @@
     "program4": {
       "title": "VIP礼宾服务",
       "description": "在整个生育旅程中提供个性化护理的优质支持。",
-      "features": [
-        "24/7专属支持",
-        "豪华住宿",
-        "个人协调员",
-        "优先安排"
-      ],
+      "features": ["24/7专属支持", "豪华住宿", "个人协调员", "优先安排"],
       "buttonText": "发现VIP服务"
     }
   },

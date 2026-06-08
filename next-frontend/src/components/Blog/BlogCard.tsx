@@ -43,7 +43,7 @@ const BlogCard = () => {
     const fetchBlogPosts = async () => {
       try {
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog`
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog`,
         );
         const data: BlogPost[] = await res.json();
 
@@ -68,7 +68,7 @@ const BlogCard = () => {
 
   const SWIPER_MODULES = useMemo(
     () => [Pagination, Navigation, Scrollbar, A11y],
-    []
+    [],
   );
   const postsWithFormattedDate = useMemo(
     () =>
@@ -76,7 +76,7 @@ const BlogCard = () => {
         ...p,
         dateLabel: p.date ? new Date(p.date).toLocaleDateString() : "",
       })),
-    [blogPosts]
+    [blogPosts],
   );
 
   // Skeleton loader component

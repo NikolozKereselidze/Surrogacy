@@ -12,9 +12,11 @@ import ProgramsOverviewSection from "@/components/ProgramsOverviewSection";
 import { getFeaturedTeamMembers } from "@/data/teamMembers";
 import { useMemo } from "react";
 import TextContent from "@/components/TextContent";
+import { useLocale } from "@/hooks/useLocale";
 
 const Home = () => {
   const { t, i18n } = useTranslation();
+  const locale = useLocale();
 
   // Set RTL for Hebrew
   const isRTL = i18n.language === "he";
@@ -42,6 +44,8 @@ const Home = () => {
                 }) as string[],
               [t],
             )}
+            href={`/${locale}/who-can-become-a-parent`}
+            buttonText={t("beginYourMiracle.intendedParentsCta")}
           />
           <MiracleCard
             icon={<FaUserPlus className="miracleIcon" />}
@@ -54,6 +58,8 @@ const Home = () => {
                 }) as string[],
               [t],
             )}
+            href={`/${locale}/who-can-become-a-surrogate`}
+            buttonText={t("beginYourMiracle.surrogatesCta")}
           />
           <MiracleCard
             icon={<FaGift className="miracleIcon" />}
@@ -66,6 +72,8 @@ const Home = () => {
                 }) as string[],
               [t],
             )}
+            href={`/${locale}/why-become-a-donor`}
+            buttonText={t("beginYourMiracle.eggDonorsCta")}
           />
         </div>
       </section>

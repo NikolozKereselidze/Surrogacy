@@ -211,8 +211,28 @@
 
 .beginYourMiracleCardButton {
   margin-top: auto;
-  display: flex;
-  justify-content: center;
+  padding-top: var(--padding-sm);
+}
+
+.beginYourMiracleCardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--font-base);
+  font-weight: 600;
+  color: var(--color-primary, #8910f6);
+  text-decoration: none;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.beginYourMiracleCardLink:hover {
+  color: var(--primary-hover);
+  gap: 0.55rem;
+}
+
+.beginYourMiracleCardArrow {
+  font-size: var(--font-lg);
+  line-height: 1;
 }
 
 /* Our Team Section */

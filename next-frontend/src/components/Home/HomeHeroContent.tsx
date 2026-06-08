@@ -11,23 +11,30 @@ const HomeHeroContent = () => {
   return (
     <div className={styles.heroContent} dir={isRTL ? "rtl" : "ltr"}>
       <div className={styles.heroHeader}>
-        <h2 className={styles.heroTitle}>
+        <h1 className={styles.heroTitle}>
           <span className={styles.highlight}>
             {t("homepage.heroTitle.together")}
           </span>
           , {t("homepage.heroTitle.weMake")}{" "}
           {t("homepage.heroTitle.miracles")}
-        </h2>
-        <h3 className={styles.heroSubtitle}>
+        </h1>
+        <h2 className={styles.heroSubtitle}>
           {t("homepage.heroSubtitle.compassionate")} <br />
           <span className={styles.highlight}>
             {t("homepage.heroSubtitle.tailored")}
           </span>{" "}
           {t("homepage.heroSubtitle.journey")}
-        </h3>
+        </h2>
       </div>
       <p className={styles.heroDescription}>{t("homepage.heroDescription")}</p>
-      <Button className={styles.heroButton}>
+      <Button
+        className={styles.heroButton}
+        onClick={() => {
+          document
+            .getElementById("contact")
+            ?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }}
+      >
         {t("homepage.startJourneyButton")}
       </Button>
     </div>
