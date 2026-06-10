@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import WhyChooseUs from "@/components/About/WhyChooseUs";
 import { buildPageMetadata } from "@/lib/seo";
-import enTranslation from "@/locales/en/translation.json";
 
 const localizedMeta = {
   en: {
@@ -71,23 +69,6 @@ const localizedMeta = {
   },
 } as const;
 
-type FaqItem = { question: string; answer: string };
-
-function buildFaqSchema(items: FaqItem[]) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: items.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
-}
-
 export async function generateMetadata({
   params,
 }: {
@@ -107,17 +88,5 @@ export async function generateMetadata({
 }
 
 export default function WhyChooseUsPage() {
-  const faqItems = enTranslation.whyChooseUs.faq.items as FaqItem[];
-  const faqSchema = buildFaqSchema(faqItems);
-
-  return (
-    <>
-      <Script
-        id="why-choose-us-faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <WhyChooseUs />
-    </>
-  );
+  return <WhyChooseUs />;
 }

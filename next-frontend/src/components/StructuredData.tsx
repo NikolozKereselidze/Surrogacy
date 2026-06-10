@@ -7,7 +7,7 @@ export default function StructuredData() {
     name: "Happy Family",
     alternateName: "Surrogation Center",
     description:
-      "Leading surrogacy and egg donation agency providing compassionate, personalized fertility services to help families worldwide achieve their dreams of parenthood. Over 15 years of experience with 3,200+ successful births.",
+      "Gestational surrogacy and egg donation agency in Georgia (country). IVF and fertility services in Tbilisi for international intended parents. Legally protected programs since 1997 with 3,200+ successful births.",
     url: "https://www.ivftourgeorgia.com",
     logo: "https://www.ivftourgeorgia.com/img/logo.png",
     image: "https://www.ivftourgeorgia.com/img/og-image.jpg",

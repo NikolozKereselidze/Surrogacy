@@ -10,33 +10,30 @@ const HomeHeroContent = () => {
 
   return (
     <div className={styles.heroContent} dir={isRTL ? "rtl" : "ltr"}>
-      <div className={styles.heroHeader}>
-        <h1 className={styles.heroTitle}>
-          <span className={styles.highlight}>
-            {t("homepage.heroTitle.together")}
-          </span>
-          , {t("homepage.heroTitle.weMake")}{" "}
-          {t("homepage.heroTitle.miracles")}
-        </h1>
-        <h2 className={styles.heroSubtitle}>
-          {t("homepage.heroSubtitle.compassionate")} <br />
-          <span className={styles.highlight}>
-            {t("homepage.heroSubtitle.tailored")}
-          </span>{" "}
-          {t("homepage.heroSubtitle.journey")}
-        </h2>
+      <div className={styles.heroContentPanel}>
+        <div className={styles.heroHeader}>
+          <h1 className={styles.heroTitle}>
+            <span className={styles.heroTitleMain}>
+              {t("homepage.heroTitle.main")}
+            </span>
+            <span className={styles.heroTitleHighlight}>
+              {t("homepage.heroTitle.highlight")}
+            </span>
+          </h1>
+          <p className={styles.heroSubtitle}>{t("homepage.heroSubtitle")}</p>
+        </div>
+        <p className={styles.heroDescription}>{t("homepage.heroDescription")}</p>
+        <Button
+          className={styles.heroButton}
+          onClick={() => {
+            document
+              .getElementById("contact")
+              ?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }}
+        >
+          {t("homepage.startJourneyButton")}
+        </Button>
       </div>
-      <p className={styles.heroDescription}>{t("homepage.heroDescription")}</p>
-      <Button
-        className={styles.heroButton}
-        onClick={() => {
-          document
-            .getElementById("contact")
-            ?.scrollIntoView({ behavior: "smooth", block: "start" });
-        }}
-      >
-        {t("homepage.startJourneyButton")}
-      </Button>
     </div>
   );
 };

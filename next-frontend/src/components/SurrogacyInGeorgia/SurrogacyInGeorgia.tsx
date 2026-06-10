@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import Button from "@/components/Button";
-import FAQAccordion from "@/components/FAQ/FAQAccordion";
+import FaqSection from "@/components/FaqSection/FaqSection";
 import ProcessStep from "@/components/ProcessStep";
 import RequirementsCard from "@/components/RequirementsCard";
 import styles from "@/styles/SurrogacyInGeorgia/SurrogacyInGeorgia.module.css";
@@ -15,7 +15,6 @@ type Requirement = { title: string; description: string };
 type Step = { title: string; description: string };
 type Inclusion = { title: string; description: string };
 type Feature = string;
-type FaqItem = { question: string; answer: string };
 
 const SectionHeader = ({
   eyebrow,
@@ -88,12 +87,6 @@ const SurrogacyInGeorgia = () => {
       t("surrogacyInGeorgia.pricing.features", {
         returnObjects: true,
       }) as Feature[],
-    [t],
-  );
-
-  const faqItems = useMemo(
-    () =>
-      t("surrogacyInGeorgia.faq.items", { returnObjects: true }) as FaqItem[],
     [t],
   );
 
@@ -283,16 +276,11 @@ const SurrogacyInGeorgia = () => {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="sig-faq-title">
-        <SectionHeader
-          eyebrow={t("surrogacyInGeorgia.faq.eyebrow")}
-          title={t("surrogacyInGeorgia.faq.title")}
-          subtitle={t("surrogacyInGeorgia.faq.subtitle")}
-        />
-        <div className={styles.faqAccordion}>
-          <FAQAccordion items={faqItems} idPrefix="sig-faq" />
-        </div>
-      </section>
+      <FaqSection
+        id="sig-faq-title"
+        idPrefix="sig-faq"
+        translationKey="surrogacyInGeorgia.faq"
+      />
     </div>
   );
 };

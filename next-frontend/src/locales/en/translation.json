@@ -43,22 +43,72 @@
     }
   },
   "homepage": {
+    "heroImageAlt": "Gestational surrogacy and IVF fertility clinic in Tbilisi, Georgia country",
     "heroTitle": {
-      "together": "Together",
-      "weMake": "We Make",
-      "miracles": "Miracles"
+      "main": "Surrogacy in Georgia Country",
+      "highlight": "Gestational Surrogacy & IVF in Tbilisi"
     },
-    "heroSubtitle": {
-      "compassionate": "Compassionate surrogacy and egg donation services",
-      "tailored": "tailored to your",
-      "journey": "journey."
+    "heroSubtitle": "Together we make miracles  international surrogacy and egg donation tailored to your journey.",
+    "heroDescription": "Happy Family is a trusted Georgia surrogacy agency offering gestational surrogacy, egg donation, and IVF in Tbilisi for international intended parents. Legally protected programs, transparent pricing, and 24/7 support.",
+    "startJourneyButton": "Start Your Journey Today",
+    "cta": {
+      "title": "Ready to Start Your Journey?",
+      "description": "Book a free, no-obligation consultation with our team. We will review your goals, explain surrogacy and IVF program options in Georgia, and guide you through every step in Tbilisi.",
+      "primaryCta": "Contact Us Today",
+      "relatedTitle": "Explore Related Pages",
+      "relatedLinks": [
+        { "label": "Surrogacy in Georgia", "path": "/surrogacy-in-georgia" },
+        {
+          "label": "Egg Donation Programs",
+          "path": "/surrogacy-with-egg-donor"
+        },
+        { "label": "Why Choose Us", "path": "/why-choose-us" },
+        { "label": "Our Team", "path": "/our-team" }
+      ]
     },
-    "heroDescription": "Expert surrogacy and egg donation services with personalized support, legal guidance, and 24/7 care to help you build your dream family.",
-    "startJourneyButton": "Start Your Journey Today"
+    "supportSection": {
+      "eyebrow": "Full-Service Agency",
+      "highlightBadge": "24/7 Case Management",
+      "title": "End-to-End Surrogacy Support in Georgia",
+      "description": "As a dedicated Georgia surrogacy agency, we guide international intended parents through every stage  from IVF and egg donation in Tbilisi to legal contracts, embryo transfer, and birth certificate registration under Georgia surrogacy laws.",
+      "subtitle": "Legal Protection & IVF Coordination in Tbilisi",
+      "content": "Georgia has recognized gestational surrogacy for international parents since 1997. Our team coordinates with fertility clinics in Tbilisi, manages surrogacy contracts, and ensures intended parents are named on the birth certificate  with transparent pricing and round-the-clock support throughout your program.",
+      "imageAlt": "Caring hands gently holding a newborn baby's feet, representing compassionate surrogacy support in Georgia"
+    },
+    "experienceSection": {
+      "eyebrow": "Trusted Since 1997",
+      "highlightBadge": "10+ Years in Georgia",
+      "title": "A Proven Georgia Surrogacy & IVF Agency",
+      "description": "Happy Family has helped families from 30+ countries navigate gestational surrogacy in Georgia country. Our Tbilisi-based team combines medical, legal, and coordination expertise so your journey is predictable, supported, and built on real program experience.",
+      "value1Title": "Coordinated IVF & Surrogacy Programs",
+      "value1Content": "We partner with leading fertility clinics in Tbilisi for IVF, embryo transfer, and egg donation  managing timelines, communication, and medical coordination so international parents stay informed at every step.",
+      "value2Title": "International Parents, Local Expertise",
+      "value2Content": "From first consultation to passport assistance after birth, our case managers understand cross-border surrogacy logistics, Georgia surrogacy cost structures, and the legal steps that protect your family.",
+      "imageAlt": "Young child kissing a pregnant surrogate mother's belly, representing families built through gestational surrogacy in Georgia"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Common Questions About Surrogacy in Georgia",
+      "subtitle": "Answers for international intended parents considering gestational surrogacy in Georgia country.",
+      "items": [
+        {
+          "question": "How much does surrogacy cost in Georgia?",
+          "answer": "Gestational surrogacy in Georgia typically starts from around $40,000 with transparent, all-inclusive packages. Costs depend on whether you need egg donation, IVF cycles, and program extras. Contact us for a personalized quote."
+        },
+        {
+          "question": "Is surrogacy legal in Georgia for international parents?",
+          "answer": "Yes. Georgia (country) has legally recognized gestational surrogacy for international intended parents since 1997. Intended parents are named on the birth certificate, with comprehensive legal contracts throughout the process."
+        },
+        {
+          "question": "What is the surrogacy process in Georgia?",
+          "answer": "The process includes consultation, IVF or embryo creation, surrogate matching and screening, embryo transfer, pregnancy monitoring in Tbilisi, birth, and birth certificate registration. Our team manages every step for international families."
+        }
+      ]
+    }
   },
   "beginYourMiracle": {
-    "title": "Begin Your Miracle",
-    "subtitle": "Choose the path that's right for you.",
+    "title": "Begin Your Miracle in Georgia",
+    "subtitle": "Gestational surrogacy, egg donation, and IVF programs for every path to parenthood.",
     "intendedParentsTitle": "Surrogacy for Intended Parents",
     "intendedParentsDesc": "Discover our programs and support for those dreaming of parenthood.",
     "intendedParentsList": [
@@ -1010,8 +1060,8 @@
     }
   },
   "programsOverview": {
-    "title": "Our Programs",
-    "subtitle": "Comprehensive fertility solutions tailored to your unique journey to parenthood.",
+    "title": "Our Surrogacy & IVF Programs in Georgia",
+    "subtitle": "Gestational surrogacy, egg donation, and IVF programs in Tbilisi  comprehensive fertility solutions for international parents.",
     "learnMore": "Learn More",
     "contactUs": "Contact Us Today",
     "ctaTitle": "Not Sure Which Program Is Right For You?",

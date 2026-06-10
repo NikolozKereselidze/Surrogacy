@@ -255,11 +255,6 @@
   line-height: 1.5;
 }
 
-.faqAccordion {
-  width: 100%;
-  max-width: 56rem;
-}
-
 @media screen and (max-width: 1024px) {
   .heroInner {
     grid-template-columns: 1fr;

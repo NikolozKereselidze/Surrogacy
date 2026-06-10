@@ -11,7 +11,7 @@ import {
   FaClock,
 } from "react-icons/fa";
 import Button from "@/components/Button";
-import FAQAccordion from "@/components/FAQ/FAQAccordion";
+import FaqSection from "@/components/FaqSection/FaqSection";
 import ProcessStep from "@/components/ProcessStep";
 import RequirementsCard from "@/components/RequirementsCard";
 import styles from "@/styles/Donors/WhyBecomeDonor.module.css";
@@ -19,8 +19,6 @@ import { useParams } from "next/navigation";
 
 type Benefit = { icon: string; title: string; description: string };
 type Step = { title: string; description: string };
-type FaqItem = { question: string; answer: string };
-
 const WhyBecomeDonor = () => {
   const { t } = useTranslation();
   const { locale } = useParams();
@@ -38,14 +36,6 @@ const WhyBecomeDonor = () => {
       t("whyBecomeDonor.process.steps", {
         returnObjects: true,
       }) as Step[],
-    [t],
-  );
-
-  const faqItems = useMemo(
-    () =>
-      t("whyBecomeDonor.faq.items", {
-        returnObjects: true,
-      }) as FaqItem[],
     [t],
   );
 
@@ -147,19 +137,11 @@ const WhyBecomeDonor = () => {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="wbd-faq-title">
-        <div className="content">
-          <span className="eyebrow">{t("whyBecomeDonor.faq.eyebrow")}</span>
-          <h2 id="wbd-faq-title" className="title">
-            {t("whyBecomeDonor.faq.title")}
-          </h2>
-          <p className="subtitle">{t("whyBecomeDonor.faq.subtitle")}</p>
-        </div>
-
-        <div className={styles.faq}>
-          <FAQAccordion items={faqItems} idPrefix="wbd-faq" />
-        </div>
-      </section>
+      <FaqSection
+        id="wbd-faq-title"
+        idPrefix="wbd-faq"
+        translationKey="whyBecomeDonor.faq"
+      />
     </div>
   );
 };

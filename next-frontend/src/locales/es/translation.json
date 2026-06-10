@@ -43,22 +43,69 @@
     }
   },
   "homepage": {
+    "heroImageAlt": "Gestación subrogada y clínica de FIV en Tiflis, Georgia país",
     "heroTitle": {
-      "together": "Juntos",
-      "weMake": "Creamos",
-      "miracles": "Milagros"
+      "main": "Subrogación en Georgia País",
+      "highlight": "Gestación Subrogada y FIV en Tiflis"
     },
-    "heroSubtitle": {
-      "compassionate": "Servicios compasivos de gestación subrogada y donación de óvulos",
-      "tailored": "adaptados a tu",
-      "journey": "viaje."
+    "heroSubtitle": "Juntos creamos milagros  subrogación internacional y donación de óvulos adaptados a tu viaje.",
+    "heroDescription": "Happy Family es una agencia de confianza en Georgia (país). Gestación subrogada, donación de óvulos y FIV en Tiflis para padres internacionales. Protección legal y apoyo 24/7.",
+    "startJourneyButton": "Comienza tu viaje hoy",
+    "cta": {
+      "title": "¿Listo para comenzar tu viaje?",
+      "description": "Reserva una consulta gratuita con nuestro equipo. Revisaremos tus objetivos, explicaremos las opciones de subrogación y FIV en Georgia y te guiaremos en cada paso en Tiflis.",
+      "primaryCta": "Contáctanos hoy",
+      "relatedTitle": "Explorar páginas relacionadas",
+      "relatedLinks": [
+        { "label": "Subrogación en Georgia", "path": "/surrogacy-in-georgia" },
+        { "label": "Donación de óvulos", "path": "/surrogacy-with-egg-donor" },
+        { "label": "Por qué elegirnos", "path": "/why-choose-us" },
+        { "label": "Nuestro equipo", "path": "/our-team" }
+      ]
     },
-    "heroDescription": "Servicios expertos de gestación subrogada y donación de óvulos con apoyo personalizado, orientación legal y cuidado 24/7 para construir la familia de tus sueños.",
-    "startJourneyButton": "Comienza tu viaje hoy"
+    "supportSection": {
+      "eyebrow": "Agencia Integral",
+      "highlightBadge": "Gestión 24/7",
+      "title": "Apoyo Integral en Subrogación en Georgia País",
+      "description": "Como agencia de subrogación en Georgia, guiamos a padres internacionales en cada etapa  desde FIV y donación de óvulos en Tiflis hasta contratos legales, transferencia de embrión y registro del certificado de nacimiento.",
+      "subtitle": "Protección Legal y Coordinación FIV en Tiflis",
+      "content": "La gestación subrogada en Georgia está reconocida para padres internacionales desde 1997. Coordinamos clínicas de fertilidad en Tiflis, gestionamos contratos de subrogación y ofrecemos precios transparentes con apoyo 24/7 durante todo el programa.",
+      "imageAlt": "Manos protectoras sosteniendo con ternura los pies de un recién nacido — apoyo compasivo en subrogación en Georgia"
+    },
+    "experienceSection": {
+      "eyebrow": "Confianza desde 1997",
+      "highlightBadge": "10+ Años en Georgia",
+      "title": "Agencia Probada de Subrogación y FIV en Georgia",
+      "description": "Happy Family ha acompañado a familias de más de 30 países en programas de gestación subrogada en Georgia país. Nuestro equipo en Tiflis combina experiencia médica, legal y de coordinación.",
+      "value1Title": "Programas Coordinados de FIV y Subrogación",
+      "value1Content": "Colaboramos con clínicas líderes en Tiflis para FIV, transferencia de embrión y donación de óvulos  gestionando plazos, comunicación y coordinación médica en cada paso.",
+      "value2Title": "Padres Internacionales, Experiencia Local",
+      "value2Content": "Desde la primera consulta hasta la asistencia con documentos tras el nacimiento, nuestros gestores conocen el costo de subrogación en Georgia, la logística internacional y los pasos legales que protegen a su familia.",
+      "imageAlt": "Niña besando el vientre de una madre sustituta embarazada — subrogación gestacional en Georgia"
+    },
+    "faq": {
+      "eyebrow": "Preguntas",
+      "title": "Preguntas Frecuentes sobre Subrogación en Georgia",
+      "subtitle": "Respuestas para padres internacionales que consideran la gestación subrogada en Georgia país.",
+      "items": [
+        {
+          "question": "¿Cuánto cuesta la subrogación en Georgia?",
+          "answer": "La gestación subrogada en Georgia suele comenzar desde $40,000 con paquetes transparentes. El costo depende de la donación de óvulos y los ciclos de FIV."
+        },
+        {
+          "question": "¿Es legal la subrogación en Georgia?",
+          "answer": "Sí. Georgia (país) reconoce legalmente la gestación subrogada para padres internacionales desde 1997. Los padres aparecen en el certificado de nacimiento."
+        },
+        {
+          "question": "¿Cuál es el proceso de subrogación en Georgia?",
+          "answer": "El proceso incluye consulta, FIV o creación de embriones, selección de subrogada, transferencia, seguimiento del embarazo en Tiflis, nacimiento y registro del certificado."
+        }
+      ]
+    }
   },
   "beginYourMiracle": {
-    "title": "Comienza tu milagro",
-    "subtitle": "Elige el camino que sea adecuado para ti.",
+    "title": "Comienza tu milagro en Georgia",
+    "subtitle": "Gestación subrogada, donación de óvulos y programas de FIV.",
     "intendedParentsTitle": "Gestación subrogada para padres intencionales",
     "intendedParentsDesc": "Descubre nuestros programas y apoyo para aquellos que sueñan con la paternidad.",
     "intendedParentsList": [

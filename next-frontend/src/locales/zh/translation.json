@@ -43,22 +43,69 @@
     }
   },
   "homepage": {
+    "heroImageAlt": "格鲁吉亚第比利斯妊娠代孕与试管婴儿诊所",
     "heroTitle": {
-      "together": "一起",
-      "weMake": "我们创造",
-      "miracles": "奇迹"
+      "main": "格鲁吉亚代孕",
+      "highlight": "第比利斯妊娠代孕与试管婴儿（IVF）"
     },
-    "heroSubtitle": {
-      "compassionate": "贴心的代孕和卵子捐赠服务",
-      "tailored": "量身定制",
-      "journey": "您的旅程。"
+    "heroSubtitle": "我们一起创造奇迹为国际准父母量身定制的代孕与供卵服务。",
+    "heroDescription": "Happy Family 是格鲁吉亚（国家）值得信赖的代孕机构。在第比利斯提供妊娠代孕、供卵和试管婴儿服务，自1997年起受法律保护，全天候支持。",
+    "startJourneyButton": "今天开始您的旅程",
+    "cta": {
+      "title": "准备好开启您的旅程了吗？",
+      "description": "预约免费咨询。我们将了解您的目标，介绍格鲁吉亚代孕与试管婴儿方案，并在第比利斯全程指导每一个步骤。",
+      "primaryCta": "立即联系我们",
+      "relatedTitle": "相关页面",
+      "relatedLinks": [
+        { "label": "格鲁吉亚代孕", "path": "/surrogacy-in-georgia" },
+        { "label": "格鲁吉亚供卵", "path": "/surrogacy-with-egg-donor" },
+        { "label": "为什么选择我们", "path": "/why-choose-us" },
+        { "label": "我们的团队", "path": "/our-team" }
+      ]
     },
-    "heroDescription": "专业代孕和卵子捐赠服务，提供个性化支持、法律指导和24/7护理，帮助您建立梦想家庭。",
-    "startJourneyButton": "今天开始您的旅程"
+    "supportSection": {
+      "eyebrow": "全流程机构",
+      "highlightBadge": "24/7 全程管理",
+      "title": "格鲁吉亚代孕全程支持服务",
+      "description": "作为专业的格鲁吉亚代孕机构，我们为国际准父母提供全流程服务从第比利斯的试管婴儿与供卵，到法律合同、胚胎移植及出生证登记。",
+      "subtitle": "法律保护与第比利斯试管婴儿协调",
+      "content": "格鲁吉亚自1997年起承认国际准父母的妊娠代孕。我们的团队协调第比利斯生育诊所、管理代孕合同，并以透明价格和全天候支持陪伴整个项目。",
+      "imageAlt": "温柔双手轻托新生儿的小脚，象征格鲁吉亚代孕全程关怀与支持"
+    },
+    "experienceSection": {
+      "eyebrow": "自1997年值得信赖",
+      "highlightBadge": "在格鲁吉亚10年以上",
+      "title": "经验丰富的格鲁吉亚代孕与试管婴儿机构",
+      "description": "Happy Family已帮助来自30多个国家的家庭完成格鲁吉亚妊娠代孕项目。我们位于第比利斯的团队兼具医疗、法律和协调方面的丰富经验。",
+      "value1Title": "试管婴儿与代孕协调项目",
+      "value1Content": "我们与第比利斯领先的生育诊所合作，管理试管婴儿、胚胎移植和供卵的时间安排、沟通与医疗协调，让国际准父母随时掌握进展。",
+      "value2Title": "国际准父母，本地专业经验",
+      "value2Content": "从首次咨询到出生后的证件协助，我们的个案经理熟悉格鲁吉亚代孕费用、跨境物流以及保护您家庭的法律流程。",
+      "imageAlt": "孩童亲吻孕代母亲隆起的腹部，象征格鲁吉亚妊娠代孕成就的家庭"
+    },
+    "faq": {
+      "eyebrow": "常见问题",
+      "title": "格鲁吉亚代孕常见问题",
+      "subtitle": "为考虑在格鲁吉亚进行妊娠代孕的国际准父母解答。",
+      "items": [
+        {
+          "question": "格鲁吉亚代孕多少钱？",
+          "answer": "格鲁吉亚妊娠代孕通常从约4万美元起，套餐透明。费用取决于是否需要供卵和试管婴儿周期。"
+        },
+        {
+          "question": "格鲁吉亚代孕合法吗？",
+          "answer": "是的。格鲁吉亚自1997年起为国际准父母提供合法的妊娠代孕，父母姓名登记在出生证上。"
+        },
+        {
+          "question": "格鲁吉亚代孕流程是什么？",
+          "answer": "流程包括咨询、试管婴儿或胚胎创建、代孕妈妈匹配、胚胎移植、在第比利斯监测妊娠、分娩和出生证登记。"
+        }
+      ]
+    }
   },
   "beginYourMiracle": {
-    "title": "开始您的奇迹之旅",
-    "subtitle": "选择适合您的道路。",
+    "title": "在格鲁吉亚开始您的奇迹之旅",
+    "subtitle": "妊娠代孕、供卵和试管婴儿项目。",
     "intendedParentsTitle": "准父母代孕服务",
     "intendedParentsDesc": "探索我们为梦想成为父母的人提供的项目和支持。",
     "intendedParentsList": ["法律指导", "医疗支持", "财务援助"],

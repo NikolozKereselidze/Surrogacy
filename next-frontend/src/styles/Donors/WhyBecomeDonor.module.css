@@ -104,12 +104,6 @@
   padding: 0 var(--padding-base);
 }
 
-.faq {
-  max-width: 75rem;
-  margin: 0 auto;
-  padding: 0 var(--padding-base);
-}
-
 @media (max-width: 900px) {
   .heroInner {
     grid-template-columns: 1fr;

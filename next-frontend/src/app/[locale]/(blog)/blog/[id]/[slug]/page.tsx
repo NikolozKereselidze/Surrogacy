@@ -164,8 +164,8 @@ export async function generateMetadata({
       title,
       description,
       images: ogImage ? [ogImage] : undefined,
-      creator: "@miraclemakers",
-      site: "@miraclemakers",
+      creator: "@happyfamily",
+      site: "@happyfamily",
     },
   };
 }

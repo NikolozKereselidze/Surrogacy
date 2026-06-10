@@ -67,16 +67,16 @@ export function buildPageMetadata({
         locale === "en"
           ? "en_US"
           : locale === "he"
-          ? "he_IL"
-          : locale === "zh"
-          ? "zh_CN"
-          : locale === "ru"
-          ? "ru_RU"
-          : locale === "es"
-          ? "es_ES"
-          : locale === "ka"
-          ? "ka_GE"
-          : "en_US",
+            ? "he_IL"
+            : locale === "zh"
+              ? "zh_CN"
+              : locale === "ru"
+                ? "ru_RU"
+                : locale === "es"
+                  ? "es_ES"
+                  : locale === "ka"
+                    ? "ka_GE"
+                    : "en_US",
       type: "website",
     },
     twitter: {
@@ -84,8 +84,8 @@ export function buildPageMetadata({
       title,
       description,
       images: [image],
-      creator: "@miraclemakers",
-      site: "@miraclemakers",
+      creator: "@happyfamily",
+      site: "@happyfamily",
     },
   };
 }
@@ -96,7 +96,7 @@ export function buildPageMetadata({
  */
 export async function generatePageMetadata(
   params: Promise<{ locale?: string }>,
-  seoInput: Omit<PageSeoInput, "locale">
+  seoInput: Omit<PageSeoInput, "locale">,
 ): Promise<Metadata> {
   const { locale } = await params;
   return buildPageMetadata({

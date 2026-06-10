@@ -1,13 +1,12 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import FAQAccordion, { type FAQAccordionItem } from "@/components/FAQ/FAQAccordion";
-import styles from "@/styles/FAQ/FAQ.module.css";
+import FaqSection, {
+  type FaqSectionItem,
+} from "@/components/FaqSection/FaqSection";
 
-export type FAQItem = FAQAccordionItem & {
-  category?: string;
-};
+export type FAQItem = FaqSectionItem;
 
 interface FAQProps {
   items?: FAQItem[];
@@ -16,7 +15,6 @@ interface FAQProps {
 
 const FAQ = ({ items, categories }: FAQProps) => {
   const { t } = useTranslation();
-  const [activeCategory, setActiveCategory] = useState<string | "all">("all");
 
   const defaultItems: FAQItem[] = useMemo(
     () => [
@@ -38,67 +36,23 @@ const FAQ = ({ items, categories }: FAQProps) => {
       { question: t("faq.q12"), answer: t("faq.a12"), category: "support" },
       { question: t("faq.q13"), answer: t("faq.a13"), category: "support" },
     ],
-    [t]
+    [t],
   );
 
-  const resolvedItems = items && items.length ? items : defaultItems;
-
-  const availableCategories = useMemo(() => {
-    const set = new Set<string>();
-    resolvedItems.forEach((i) => i.category && set.add(i.category));
-    return categories && categories.length ? categories : Array.from(set);
-  }, [resolvedItems, categories]);
-
-  const filtered = useMemo(() => {
-    return resolvedItems.filter((item) => {
-      return activeCategory === "all" || item.category === activeCategory;
-    });
-  }, [resolvedItems, activeCategory]);
-
-  const allLabel = t("faq.all") || "All";
-  const noResults = t("faq.noResults") || "No results. Try a different search.";
+  const resolvedItems = items?.length ? items : defaultItems;
 
   return (
-    <section className="section">
-      <div className="content">
-        <h1 className="title">{t("faq.title")}</h1>
-        <p className="subtitle">{t("faq.subtitle")}</p>
-      </div>
-      <div className="content">
-        <div className={styles.faqContainer}>
-          {availableCategories.length > 0 && (
-            <div className={styles.categories}>
-              <button
-                type="button"
-                className={`${styles.categoryBtn} ${
-                  activeCategory === "all" ? styles.active : ""
-                }`}
-                onClick={() => setActiveCategory("all")}
-              >
-                {allLabel}
-              </button>
-              {availableCategories.map((cat) => (
-                <button
-                  key={cat}
-                  type="button"
-                  className={`${styles.categoryBtn} ${
-                    activeCategory === cat ? styles.active : ""
-                  }`}
-                  onClick={() => setActiveCategory(cat)}
-                >
-                  {t(`faq.categories.${cat}`) || cat}
-                </button>
-              ))}
-            </div>
-          )}
-
-          <FAQAccordion
-            items={filtered}
-            emptyMessage={filtered.length === 0 ? noResults : undefined}
-          />
-        </div>
-      </div>
-    </section>
+    <FaqSection
+      id="faq-page-title"
+      idPrefix="faq"
+      headingLevel="h1"
+      title={t("faq.title")}
+      subtitle={t("faq.subtitle")}
+      items={resolvedItems}
+      showCategories
+      categories={categories}
+      wide
+    />
   );
 };
 

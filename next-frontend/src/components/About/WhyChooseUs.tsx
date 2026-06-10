@@ -17,14 +17,13 @@ import {
   FaClinicMedical,
 } from "react-icons/fa";
 import Button from "@/components/Button";
-import FAQAccordion from "@/components/FAQ/FAQAccordion";
+import FaqSection from "@/components/FaqSection/FaqSection";
+import PageCtaSection from "@/components/PageCtaSection/PageCtaSection";
 import styles from "@/styles/About/WhyChooseUs.module.css";
 
 type ReasonCard = { icon: string; title: string; description: string };
 type Criterion = { title: string; description: string; questions: string[] };
 type GeorgiaPoint = { title: string; description: string };
-type FaqItem = { question: string; answer: string };
-type RelatedLink = { label: string; path: string };
 type Highlight = { title: string; description: string };
 
 const ICON_MAP: Record<string, ReactNode> = {
@@ -111,19 +110,6 @@ const WhyChooseUs = () => {
       t("whyChooseUs.comparison.ourPoints", {
         returnObjects: true,
       }) as string[],
-    [t],
-  );
-
-  const faqItems = useMemo(
-    () => t("whyChooseUs.faq.items", { returnObjects: true }) as FaqItem[],
-    [t],
-  );
-
-  const relatedLinks = useMemo(
-    () =>
-      t("whyChooseUs.cta.relatedLinks", {
-        returnObjects: true,
-      }) as RelatedLink[],
     [t],
   );
 
@@ -282,40 +268,18 @@ const WhyChooseUs = () => {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="wcu-faq-title">
-        <SectionHeader
-          eyebrow={t("whyChooseUs.faq.eyebrow")}
-          title={t("whyChooseUs.faq.title")}
-          subtitle={t("whyChooseUs.faq.subtitle")}
-        />
-        <div className={styles.faqAccordion}>
-          <FAQAccordion items={faqItems} idPrefix="wcu-faq" />
-        </div>
-      </section>
+      <FaqSection
+        id="wcu-faq-title"
+        idPrefix="wcu-faq"
+        translationKey="whyChooseUs.faq"
+      />
 
-      <section className={styles.ctaSection} aria-labelledby="wcu-cta-title">
-        <div className={styles.ctaInner}>
-          <h2 id="wcu-cta-title" className={styles.ctaTitle}>
-            {t("whyChooseUs.cta.title")}
-          </h2>
-          <p className={styles.ctaDesc}>{t("whyChooseUs.cta.description")}</p>
-          <Button onClick={scrollToContact}>
-            {t("whyChooseUs.cta.primaryCta")}
-          </Button>
-          <div className={styles.relatedLinks}>
-            <p className={styles.relatedTitle}>
-              {t("whyChooseUs.cta.relatedTitle")}
-            </p>
-            <ul className={styles.relatedList}>
-              {relatedLinks.map((link) => (
-                <li key={link.path}>
-                  <Link href={`${localePrefix}${link.path}`}>{link.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
+      <PageCtaSection
+        id="wcu-cta-title"
+        translationKey="whyChooseUs.cta"
+        localePrefix={localePrefix}
+        onPrimaryClick={scrollToContact}
+      />
     </div>
   );
 };

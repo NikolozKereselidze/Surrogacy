@@ -2,6 +2,64 @@ import Home from "@/components/Home/Home";
 import HomeHero from "@/components/Home/HomeHero";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
+import { getMetaKeywords } from "@/lib/seo-keywords";
+
+const localizedMeta = {
+  en: {
+    title: "Surrogacy in Georgia Country | IVF & Egg Donation in Tbilisi",
+    description:
+      "Gestational surrogacy and egg donation in Georgia (country) for international parents. Trusted surrogacy agency in Tbilisi with IVF, legal protection since 1997, and 24/7 support.",
+    keywords: getMetaKeywords("en"),
+  },
+  ka: {
+    title: "სუროგაცია საქართველოში | IVF, ინ ვიტრო და კვერცხუჯრედის დონაცია",
+    description:
+      "სუროგაცია, IVF და კვერცხუჯრედის დონაცია საქართველოში თბილისში. სუროგაციის ცენტრი საერთაშორისო მშობლებისთვის  იურიდული დაცვა 1997 წლიდან.",
+    keywords: getMetaKeywords("ka"),
+  },
+  es: {
+    title: "Subrogación en Georgia País | FIV y Donación de Óvulos en Tiflis",
+    description:
+      "Gestación subrogada y donación de óvulos en Georgia (país) para padres internacionales. Agencia en Tiflis con FIV, protección legal desde 1997 y apoyo 24/7.",
+    keywords: getMetaKeywords("es"),
+  },
+  ru: {
+    title: "Суррогатное материнство в Грузии | ЭКО и Донорство в Тбилиси",
+    description:
+      "Суррогатное материнство и донорство яйцеклеток в Грузии для иностранных родителей. Агентство в Тбилиси, ЭКО, правовая защита с 1997 года и поддержка 24/7.",
+    keywords: getMetaKeywords("ru"),
+  },
+  he: {
+    title: "פונדקאות בגאורגיה | IVF ותרומת ביצית בטביליסי",
+    description:
+      "פונדקאות גסטציונלית ותרומת ביצית בגאורגיה (המדינה) להורים בינלאומיים. סוכנות בטביליסי, IVF, הגנה משפטית מאז 1997 ותמיכה 24/7.",
+    keywords: getMetaKeywords("he"),
+  },
+  zh: {
+    title: "格鲁吉亚代孕 | 第比利斯试管婴儿与供卵服务",
+    description:
+      "格鲁吉亚（国家）妊娠代孕与供卵服务，面向国际准父母。第比利斯代孕机构，试管婴儿（IVF），自1997年起法律保护，全天候支持。",
+    keywords: getMetaKeywords("zh"),
+  },
+} as const;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale?: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const content =
+    localizedMeta[locale as keyof typeof localizedMeta] || localizedMeta.en;
+
+  return buildPageMetadata({
+    title: content.title,
+    description: content.description,
+    keywords: [...content.keywords],
+    path: "/",
+    locale: locale || "en",
+  });
+}
 
 const HomePage = () => {
   return (
@@ -13,84 +71,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale?: string }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
-
-  const localized = {
-    en: {
-      title: "Surrogacy in Georgia",
-      description:
-        "Compassionate surrogacy and egg donation services in Georgia. Expert guidance for intended parents, surrogates, and donors. Start your family journey in Tbilisi.",
-      keywords: [
-        "surrogacy in Georgia",
-        "egg donation Georgia",
-        "Tbilisi surrogacy",
-        "Georgia fertility clinic",
-        "gestational surrogacy Georgia",
-      ],
-    },
-    ka: {
-      title: "სუროგაცია საქართველოში - Happy Family",
-      description:
-        "ზრუნვით სუროგაციისა და კვერცხუჯრედის დონაციის სერვისები საქართველოში. ექსპერტული მხარდაჭერა მშობლობის გზაზე თბილისში.",
-      keywords: [
-        "სუროგაცია საქართველოში",
-        "დონაცია საქართველო",
-        "თბილისი სუროგაცია",
-        "ფერტილობის კლინიკა საქართველო",
-      ],
-    },
-    es: {
-      title: "Subrogación en Georgia - Happy Family",
-      description:
-        "Servicios de subrogación y donación de óvulos en Georgia. Acompañamiento experto en Tbilisi para tu camino hacia la paternidad.",
-      keywords: [
-        "subrogación en Georgia",
-        "donación de óvulos Georgia",
-        "subrogación Tiflis",
-      ],
-    },
-    ru: {
-      title: "Суррогатное материнство в Грузии - Happy Family",
-      description:
-        "Сервисы суррогатного материнства и донорства яйцеклеток в Грузии. Экспертное сопровождение в Тбилиси.",
-      keywords: [
-        "суррогатное материнство в Грузии",
-        "донорство яйцеклеток Грузия",
-        "суррогатная программа Тбилиси",
-      ],
-    },
-    he: {
-      title: "פונדקאות בגאורגיה - Happy Family",
-      description:
-        "שירותי פונדקאות ותרומת ביצית בגאורגיה. ליווי מקצועי בדרך להורות בטביליסי.",
-      keywords: [
-        "פונדקאות בגאורגיה",
-        "תרומת ביצית גאורגיה",
-        "פונדקאות טביליסי",
-      ],
-    },
-    zh: {
-      title: "格鲁吉亚代孕 - Happy Family",
-      description:
-        "在格鲁吉亚提供贴心的代孕与供卵服务。第比利斯专业团队，助您开启成家之旅。",
-      keywords: ["格鲁吉亚代孕", "格鲁吉亚供卵", "第比利斯 代孕"],
-    },
-  } as const;
-
-  const fallback = localized.en;
-  const content = localized[locale as keyof typeof localized] || fallback;
-
-  return buildPageMetadata({
-    title: content.title,
-    description: content.description,
-    keywords: [...content.keywords],
-    path: "/",
-    locale: locale || "en",
-  });
-}

@@ -5,10 +5,12 @@ import { useTranslation } from "react-i18next";
 import { FaBaby, FaUserPlus, FaGift } from "react-icons/fa";
 
 import MiracleCard from "@/components/MiracleCard";
+import PageCtaSection from "@/components/PageCtaSection/PageCtaSection";
 import TeamCard from "@/components/TeamCard";
 import StatisticsSection from "@/components/StatisticsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ProgramsOverviewSection from "@/components/ProgramsOverviewSection";
+import FaqSection from "@/components/FaqSection/FaqSection";
 import { getFeaturedTeamMembers } from "@/data/teamMembers";
 import { useMemo } from "react";
 import TextContent from "@/components/TextContent";
@@ -18,11 +20,15 @@ const Home = () => {
   const { t, i18n } = useTranslation();
   const locale = useLocale();
 
-  // Set RTL for Hebrew
   const isRTL = i18n.language === "he";
 
-  // Get featured team members for homepage
   const teamMembers = useMemo(() => getFeaturedTeamMembers(), []);
+
+  const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const localePrefix = `/${locale}`;
 
   return (
     <div className={styles.home} dir={isRTL ? "rtl" : "ltr"}>
@@ -44,7 +50,7 @@ const Home = () => {
                 }) as string[],
               [t],
             )}
-            href={`/${locale}/who-can-become-a-parent`}
+            href={`/${locale}/surrogacy-in-georgia`}
             buttonText={t("beginYourMiracle.intendedParentsCta")}
           />
           <MiracleCard
@@ -80,44 +86,44 @@ const Home = () => {
 
       <TextContent
         reverse={true}
-        title="Around the Clock Support"
-        description="From the moment your application is accepted, you'll have access to our dedicated team offering round-the-clock support. Whether you have questions at midnight or need guidance on weekends, we're here to ensure your journey is smooth, comfortable, and well-supported every step of the way."
-        highlightBadge="24/7 Case Management"
-        eyebrow="Support"
-        stats={[
-          {
-            label: "test test tests",
-            value: "100%",
-          },
-        ]}
+        title={t("homepage.supportSection.title")}
+        description={t("homepage.supportSection.description")}
+        highlightBadge={t("homepage.supportSection.highlightBadge")}
+        eyebrow={t("homepage.supportSection.eyebrow")}
         contents={[
           {
-            subtitle: "Legal & Medical Excellence",
-            content:
-              "Our comprehensive approach includes expert legal guidance to ensure all contracts and agreements are transparent and secure. We work with top-rated fertility clinics and medical professionals in Georgia, ensuring you receive the highest standard of medical care throughout your journey.",
+            subtitle: t("homepage.supportSection.subtitle"),
+            content: t("homepage.supportSection.content"),
           },
         ]}
-        image={"/img/testing.jpg"}
+        image={{
+          src: "/img/home/textContent/child.webp",
+          alt: t("homepage.supportSection.imageAlt"),
+        }}
       />
 
       <ProgramsOverviewSection />
 
       <TextContent
         reverse={false}
-        highlightBadge="First-Hand Experience"
-        title="Experienced & Compassionate Team"
-        eyebrow="Experience"
+        highlightBadge={t("homepage.experienceSection.highlightBadge")}
+        title={t("homepage.experienceSection.title")}
+        description={t("homepage.experienceSection.description")}
+        eyebrow={t("homepage.experienceSection.eyebrow")}
         contents={[
           {
-            subtitle: t("ourTeam.value1Title"),
-            content: t("ourTeam.value1Desc"),
+            subtitle: t("homepage.experienceSection.value1Title"),
+            content: t("homepage.experienceSection.value1Content"),
           },
           {
-            subtitle: t("ourTeam.value2Title"),
-            content: t("ourTeam.value2Desc"),
+            subtitle: t("homepage.experienceSection.value2Title"),
+            content: t("homepage.experienceSection.value2Content"),
           },
         ]}
-        image={"/img/testing.jpg"}
+        image={{
+          src: "/img/home/textContent/surrogate-mother.webp",
+          alt: t("homepage.experienceSection.imageAlt"),
+        }}
       />
 
       <section className={`${styles.ourTeamSection} section`}>
@@ -133,6 +139,19 @@ const Home = () => {
       </section>
 
       <TestimonialsSection />
+
+      <FaqSection
+        id="homepage-faq-title"
+        idPrefix="homepage-faq"
+        translationKey="homepage.faq"
+      />
+
+      <PageCtaSection
+        id="homepage-cta-title"
+        translationKey="homepage.cta"
+        localePrefix={localePrefix}
+        onPrimaryClick={scrollToContact}
+      />
 
       <section className="section">
         <StatisticsSection />

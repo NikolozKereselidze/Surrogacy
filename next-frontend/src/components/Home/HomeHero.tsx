@@ -1,10 +1,15 @@
+"use client";
+
 import styles from "@/styles/Home.module.css";
 import HomeHeroContent from "./HomeHeroContent";
+import { useTranslation } from "react-i18next";
 
 const HERO_IMAGE_DESKTOP = "/img/home/hero/hero-1920.webp";
 const HERO_IMAGE_MOBILE = "/img/home/hero/hero-1280.webp";
 
 const HomeHero = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <link
@@ -26,7 +31,7 @@ const HomeHero = () => {
           <source media="(max-width: 1278px)" srcSet={HERO_IMAGE_MOBILE} />
           <img
             src={HERO_IMAGE_DESKTOP}
-            alt=""
+            alt={t("homepage.heroImageAlt")}
             className={styles.heroImage}
             fetchPriority="high"
             decoding="async"
