@@ -1,29 +1,28 @@
 import nodemailer from "nodemailer";
 const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: Number(process.env.SMTP_PORT || 587),
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
+    host: process.env.SMTP_HOST,
+    port: Number(process.env.SMTP_PORT || 587),
+    auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+    },
 });
 export async function sendContactEmail(params) {
-  try {
-    const { firstName, lastName, email, phone, gender, subject, message } =
-      params;
-    const text = [
-      `New contact form submission`,
-      `Name: ${firstName} ${lastName}`,
-      `Email: ${email}`,
-      phone ? `Phone: ${phone}` : "",
-      gender ? `Gender: ${gender}` : "",
-      subject ? `Subject: ${subject}` : "",
-      "",
-      message,
-    ]
-      .filter(Boolean)
-      .join("\n");
-    const html = `
+    try {
+        const { firstName, lastName, email, phone, gender, subject, message } = params;
+        const text = [
+            `New contact form submission`,
+            `Name: ${firstName} ${lastName}`,
+            `Email: ${email}`,
+            phone ? `Phone: ${phone}` : "",
+            gender ? `Gender: ${gender}` : "",
+            subject ? `Subject: ${subject}` : "",
+            "",
+            message,
+        ]
+            .filter(Boolean)
+            .join("\n");
+        const html = `
     <!DOCTYPE html>
     <html>
     <head>
@@ -50,36 +49,30 @@ export async function sendContactEmail(params) {
               <td style="padding: 8px 0; font-weight: bold; color: #555;">Email:</td>
               <td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #667eea; text-decoration: none;">${email}</a></td>
             </tr>
-            ${
-              phone
-                ? `
+            ${phone
+            ? `
             <tr>
               <td style="padding: 8px 0; font-weight: bold; color: #555;">Phone:</td>
               <td style="padding: 8px 0;"><a href="tel:${phone}" style="color: #667eea; text-decoration: none;">${phone}</a></td>
             </tr>
             `
-                : ""
-            }
-            ${
-              gender
-                ? `
+            : ""}
+            ${gender
+            ? `
             <tr>
               <td style="padding: 8px 0; font-weight: bold; color: #555;">Gender:</td>
               <td style="padding: 8px 0;">${gender}</td>
             </tr>
             `
-                : ""
-            }
-            ${
-              subject
-                ? `
+            : ""}
+            ${subject
+            ? `
             <tr>
               <td style="padding: 8px 0; font-weight: bold; color: #555;">Subject:</td>
               <td style="padding: 8px 0; background: #f0f8ff; border-radius: 4px; padding: 8px; color: #667eea; font-weight: bold;">${subject}</td>
             </tr>
             `
-                : ""
-            }
+            : ""}
           </table>
           
           <h3 style="color: #667eea; margin: 25px 0 15px 0;">Message</h3>
@@ -96,26 +89,23 @@ export async function sendContactEmail(params) {
     </body>
     </html>
   `;
-    await transporter.sendMail({
-      from: process.env.MAIL_FROM,
-      to: process.env.MAIL_TO,
-      replyTo: email,
-      subject: `New Contact from ${firstName} ${lastName} - ${
-        subject || "General Inquiry"
-      }`,
-      text,
-      html,
-    });
-  } catch (error) {
-    console.error(error);
-  }
+        await transporter.sendMail({
+            from: process.env.MAIL_FROM,
+            to: process.env.MAIL_TO,
+            replyTo: email,
+            subject: `New Contact from ${firstName} ${lastName} - ${subject || "General Inquiry"}`,
+            text,
+            html,
+        });
+    }
+    catch (error) {
+        console.error(error);
+    }
 }
 export async function sendAutoReply(params) {
-  const { toEmail, toName } = params;
-  const text = `Hi${
-    toName ? " " + toName : ""
-  },\n\nThanks for contacting Happy Family. We'll get back to you shortly.\n\nWarm regards,\nHappy Family`;
-  const html = `
+    const { toEmail, toName } = params;
+    const text = `Hi${toName ? " " + toName : ""},\n\nThanks for contacting Happy Family. We'll get back to you shortly.\n\nWarm regards,\nHappy Family`;
+    const html = `
     <!DOCTYPE html>
     <html>
     <head>
@@ -131,9 +121,7 @@ export async function sendAutoReply(params) {
       
       <div style="background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; border: 1px solid #e0e0e0;">
         <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-          <h2 style="color: #667eea; margin-top: 0;">Hi${
-            toName ? " " + toName : ""
-          },</h2>
+          <h2 style="color: #667eea; margin-top: 0;">Hi${toName ? " " + toName : ""},</h2>
           
           <p style="font-size: 16px; margin-bottom: 20px;">
             Thank you for reaching out to Happy Family. We have received your message and will get back to you within 24 hours.
@@ -167,11 +155,11 @@ export async function sendAutoReply(params) {
     </body>
     </html>
   `;
-  await transporter.sendMail({
-    from: process.env.MAIL_FROM,
-    to: toEmail,
-    subject: "Thank you for contacting Happy Family",
-    text,
-    html,
-  });
+    await transporter.sendMail({
+        from: process.env.MAIL_FROM,
+        to: toEmail,
+        subject: "Thank you for contacting Happy Family",
+        text,
+        html,
+    });
 }

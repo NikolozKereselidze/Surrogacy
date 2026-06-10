@@ -10,6 +10,7 @@ import spermDonorRoutes from "./routes/spermDonorRoutes.js";
 import cors from "cors";
 import fileRoutes from "./routes/fileRoutes.js";
 import contactRoutes from "./routes/contactRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 const app = express();
 
 const port = Number(process.env.PORT);
@@ -25,7 +26,7 @@ app.use(
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization", "Cookie"],
-  })
+  }),
 );
 
 // Note: Session stores removed - now using JWT-based authentication
@@ -41,6 +42,7 @@ app.use("/api/sperm-donors", spermDonorRoutes);
 app.use("/api/file", fileRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/blog", blogRoutes);
+app.use("/api/auth", authRoutes);
 
 app.listen(port, "0.0.0.0", () => {
   console.log(`Server is running on port ${port}`);

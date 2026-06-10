@@ -1,11 +1,12 @@
 import express from "express";
 import blogController from "../controllers/blogController.js";
+import { requireAdmin } from "../middleware/authMiddleware.js";
 const router = express.Router();
 router.get("/", blogController.getBlogPosts);
-router.post("/", blogController.createBlogPost);
+router.post("/", requireAdmin, blogController.createBlogPost);
 router.get("/count", blogController.getBlogPostsCount);
 router.get("/:id", blogController.getBlogPostById);
-router.put("/:id", blogController.updateBlogPost);
-router.delete("/:id", blogController.deleteBlogPost);
-router.post("/image", blogController.generateBlogImageUploadUrl);
+router.put("/:id", requireAdmin, blogController.updateBlogPost);
+router.delete("/:id", requireAdmin, blogController.deleteBlogPost);
+router.post("/image", requireAdmin, blogController.generateBlogImageUploadUrl);
 export default router;

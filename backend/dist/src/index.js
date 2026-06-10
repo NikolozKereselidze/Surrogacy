@@ -1,5 +1,5 @@
 // Load environment variables FIRST before any other imports
-import 'dotenv/config';
+import "dotenv/config";
 import express from "express";
 import cookieParser from "cookie-parser";
 import blogRoutes from "./routes/blogRoutes.js";
@@ -9,6 +9,7 @@ import spermDonorRoutes from "./routes/spermDonorRoutes.js";
 import cors from "cors";
 import fileRoutes from "./routes/fileRoutes.js";
 import contactRoutes from "./routes/contactRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 const app = express();
 const port = Number(process.env.PORT);
 app.set("trust proxy", 1);
@@ -31,6 +32,7 @@ app.use("/api/sperm-donors", spermDonorRoutes);
 app.use("/api/file", fileRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/blog", blogRoutes);
+app.use("/api/auth", authRoutes);
 app.listen(port, "0.0.0.0", () => {
     console.log(`Server is running on port ${port}`);
 });

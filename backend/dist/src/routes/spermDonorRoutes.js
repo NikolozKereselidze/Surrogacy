@@ -1,10 +1,11 @@
 import express from "express";
 import spermDonorController from "../controllers/spermDonorController.js";
+import { requireAdmin, requireAuthenticated } from "../middleware/authMiddleware.js";
 const router = express.Router();
-router.get("/", spermDonorController.getSpermDonors);
-router.get("/count", spermDonorController.getSpermDonorsCount);
-router.post("/", spermDonorController.createSpermDonor);
-router.get("/:id", spermDonorController.getSpermDonorById);
-router.put("/:id", spermDonorController.updateSpermDonor);
-router.delete("/:id", spermDonorController.deleteSpermDonor);
+router.get("/", requireAuthenticated, spermDonorController.getSpermDonors);
+router.get("/count", requireAuthenticated, spermDonorController.getSpermDonorsCount);
+router.post("/", requireAdmin, spermDonorController.createSpermDonor);
+router.get("/:id", requireAuthenticated, spermDonorController.getSpermDonorById);
+router.put("/:id", requireAdmin, spermDonorController.updateSpermDonor);
+router.delete("/:id", requireAdmin, spermDonorController.deleteSpermDonor);
 export default router;

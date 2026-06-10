@@ -1,13 +1,14 @@
 import express, { Request, Response } from "express";
 import surrogateController from "../controllers/surrogateController.js";
+import { requireAdmin, requireAuthenticated } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-router.get("/", surrogateController.getSurrogates);
-router.get("/count", surrogateController.getSurrogatesCount);
-router.post("/", surrogateController.createSurrogate);
-router.get("/:id", surrogateController.getSurrogateById);
-router.put("/:id", surrogateController.updateSurrogate);
-router.delete("/:id", surrogateController.deleteSurrogate);
+router.get("/", requireAuthenticated, surrogateController.getSurrogates);
+router.get("/count", requireAuthenticated, surrogateController.getSurrogatesCount);
+router.post("/", requireAdmin, surrogateController.createSurrogate);
+router.get("/:id", requireAuthenticated, surrogateController.getSurrogateById);
+router.put("/:id", requireAdmin, surrogateController.updateSurrogate);
+router.delete("/:id", requireAdmin, surrogateController.deleteSurrogate);
 
 export default router;

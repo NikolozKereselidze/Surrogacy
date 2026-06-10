@@ -1,9 +1,10 @@
 import express, { Request, Response } from "express";
 import fileController from "../controllers/fileController.js";
+import { requireAdmin } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-router.post("/", fileController.getPresignedPutUrl);
-router.delete("/", fileController.deleteFile);
+router.post("/", requireAdmin, fileController.getPresignedPutUrl);
+router.delete("/", requireAdmin, fileController.deleteFile);
 
 export default router;
