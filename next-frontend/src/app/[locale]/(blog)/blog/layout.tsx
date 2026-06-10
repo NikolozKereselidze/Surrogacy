@@ -1,4 +1,6 @@
 import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation/Navigation";
+import ScrollToTop from "@/components/ScrollToTop";
 
 interface BlogLayoutProps {
   children: React.ReactNode;
@@ -7,6 +9,8 @@ interface BlogLayoutProps {
 const BlogLayout = ({ children }: BlogLayoutProps) => {
   return (
     <>
+      <ScrollToTop />
+      <Navigation />
       <main>{children}</main>
       <Footer />
     </>

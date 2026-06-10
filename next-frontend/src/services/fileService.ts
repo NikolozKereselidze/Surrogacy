@@ -8,6 +8,7 @@ export const uploadFileToS3 = async (
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/file?fileType=${file.type}&fileName=${file.name}&donorType=${donorType}`,
       {
         method: "POST",
+        credentials: "include",
       }
     );
     const { signedUrl, key } = await response.json();
@@ -39,6 +40,7 @@ export const deleteFileFromS3 = async (filePath: string) => {
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/file/?key=${filePath}`,
       {
         method: "DELETE",
+        credentials: "include",
       }
     );
 

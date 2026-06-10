@@ -5,7 +5,7 @@ import { getMetaKeywords } from "@/lib/seo-keywords";
 
 const localizedMeta = {
   en: {
-    title: "Surrogate Screening | Gestational Surrogacy in Georgia",
+    title: "Surrogate Screening | Georgia Surrogacy",
     description:
       "Rigorous surrogate screening for gestational surrogacy in Georgia country. Medical, psychological, and background evaluations at accredited Tbilisi clinics  protecting international intended parents and surrogates throughout every Georgia surrogacy program.",
     keywords: [

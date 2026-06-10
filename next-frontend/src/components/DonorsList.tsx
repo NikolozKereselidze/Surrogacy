@@ -79,7 +79,9 @@ export default function DonorsList({
     const fetchDonors = async () => {
       setLoading(true);
       try {
-        const res = await fetch(apiEndpoint);
+        const res = await fetch(apiEndpoint, {
+          credentials: "include",
+        });
         const data = await res.json();
         setDonors(data);
         setFilteredDonors(data);

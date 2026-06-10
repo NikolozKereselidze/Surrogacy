@@ -4,8 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 
 const localizedMeta = {
   en: {
-    title:
-      "Surrogacy in Georgia | Gestational Surrogacy for International Parents",
+    title: "Surrogacy in Georgia | Gestational Surrogacy",
     description:
       "Gestational surrogacy in Georgia for international intended parents. Legally protected since 1997, transparent packages from $40,000, world-class IVF in Tbilisi, and fast birth certificate registration.",
     keywords: [

@@ -42,11 +42,11 @@ const AdminNav = ({ children }: { children: React.ReactNode }) => {
   const handleLogout = async () => {
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/admin-auth/logout`,
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/auth/admin/logout`,
         {
           method: "POST",
           credentials: "include",
-        }
+        },
       );
 
       if (response.ok) {

@@ -434,7 +434,8 @@
   "blog": {
     "title": "Últimas del Blog",
     "subtitle": "Perspectivas, guías e historias de nuestra comunidad de gestación subrogada",
-    "readMore": "Leer Más"
+    "readMore": "Leer Más",
+    "readTime": "mins read"
   },
   "faq": {
     "title": "Preguntas Frecuentes",
@@ -513,44 +514,116 @@
     "copyright": "Todos los derechos reservados."
   },
   "surrogacyProcess": {
-    "title": "Proceso de Gestación Subrogada",
-    "subtitle": "Una guía completa para tu viaje de gestación subrogada",
-    "heroText": "Tu viaje hacia la paternidad comienza aquí. Te guiamos a través de cada paso con cuidado, experiencia y apoyo inquebrantable.",
-    "processTitle": "El Proceso de 4 Pasos",
-    "step1Title": "Consulta Inicial",
-    "step1Description": "Comienza tu viaje con una consulta integral para entender tus opciones y crear un plan personalizado.",
-    "step1Item1": "Consulta inicial gratuita",
-    "step1Item2": "Revisión del historial médico",
-    "step1Item3": "Plan de tratamiento personalizado",
-    "step2Title": "Evaluación Legal y Médica",
-    "step2Description": "Completa una evaluación legal y médica exhaustiva para asegurar el mejor resultado posible para todas las partes.",
-    "step2Item1": "Preparación del contrato legal",
-    "step2Item2": "Evaluaciones médicas",
-    "step2Item3": "Evaluación psicológica",
-    "step3Title": "Emparejamiento y Coordinación",
-    "step3Description": "Te emparejamos cuidadosamente con la gestante subrogada perfecta y coordinamos todos los procedimientos médicos.",
-    "step3Item1": "Emparejamiento de gestante subrogada",
-    "step3Item2": "Coordinación médica",
-    "step3Item3": "Apoyo continuo",
-    "step4Title": "Embarazo y Nacimiento",
-    "step4Description": "Apoyo durante todo el embarazo y nacimiento, asegurando una transición suave hacia la paternidad.",
-    "step4Item1": "Monitoreo del embarazo",
-    "step4Item2": "Coordinación del nacimiento",
-    "step4Item3": "Apoyo post-parto",
-    "timelineTitle": "Resumen de Cronograma",
-    "timeline1Title": "Mes 1-2: Consulta y Planificación",
-    "timeline1Text": "Consulta inicial, preparación legal y planificación personalizada para tu viaje de gestación subrogada.",
-    "timeline2Title": "Mes 2-3: Evaluación y Emparejamiento",
-    "timeline2Text": "Completa la evaluación médica y legal, luego empareja cuidadosamente con tu gestante subrogada ideal.",
-    "timeline3Title": "Mes 3-12: Viaje del Embarazo",
-    "timeline3Text": "Transferencia de embrión, monitoreo del embarazo y preparación para la llegada de tu bebé.",
-    "supportTitle": "Apoyo 24/7 Durante Todo Tu Viaje",
-    "support1Title": "Apoyo Telefónico",
-    "support1Text": "Acceso directo a nuestro equipo por teléfono para asistencia inmediata y orientación.",
-    "support2Title": "Apoyo por Email",
-    "support2Text": "Apoyo integral por email para preguntas detalladas y documentación.",
-    "support3Title": "Coordinador Personal",
-    "support3Text": "Tu coordinador dedicado proporciona apoyo personalizado durante todo el proceso."
+    "hero": {
+      "tag": "PROCESO DE SUBROGACIÓN",
+      "title": "El Proceso de Subrogación en Georgia País",
+      "description": "Desde su primera consulta en Tiflis hasta el registro del certificado de nacimiento, Happy Family guía a padres internacionales en cada etapa de la gestación subrogada en Georgia. Nuestro programa cubre coordinación de FIV, emparejamiento con subrogada, contratos legales, monitoreo del embarazo y apoyo postnatal.",
+      "primaryCta": "Consulta Gratuita",
+      "secondaryCta": "Subrogación en Georgia",
+      "cardTitle": "Resumen del Viaje",
+      "cardPoints": [
+        "Consulta y selección de programa",
+        "Contratos legales y evaluación",
+        "FIV, emparejamiento y transferencia",
+        "Embarazo, nacimiento y registro"
+      ]
+    },
+    "process": {
+      "eyebrow": "PASO A PASO",
+      "title": "Cómo Funciona la Gestación Subrogada en Georgia",
+      "subtitle": "Una hoja de ruta clara para familias internacionales que buscan subrogación en Tiflis, desde el inicio hasta llevar a su bebé a casa.",
+      "steps": [
+        {
+          "title": "Consulta Inicial y Selección de Programa",
+          "description": "Reúnete con tu coordinador en Tiflis o por videollamada para discutir tus objetivos de fertilidad, el costo de subrogación en Georgia y las opciones del programa. Revisamos tu historial médico, explicamos las leyes de gestación subrogada en Georgia país y recomendamos el camino adecuado: gametos propios, donación de óvulos o envío de embriones."
+        },
+        {
+          "title": "Contratos Legales y Evaluación",
+          "description": "Abogados georgianos licenciados redactan contratos notarizados que protegen tus derechos parentales. Los padres completan la evaluación mientras la subrogada pasa evaluación médica, psicológica y de antecedentes en clínicas acreditadas de Tiflis."
+        },
+        {
+          "title": "FIV, Emparejamiento y Transferencia de Embrión",
+          "description": "Nuestro equipo coordina la FIV en clínicas asociadas de Tiflis, incluyendo donación de óvulos si es necesario, y te empareja cuidadosamente con una subrogada gestacional evaluada. Los embriones se crean, analizan y transfieren. Tu gestor de caso maneja la programación y comunicación."
+        },
+        {
+          "title": "Embarazo, Nacimiento y Registro",
+          "description": "La subrogada recibe atención prenatal completa en hospitales modernos de Tiflis. Al nacer, los padres aparecen directamente en el certificado de nacimiento sin adopción. Ayudamos con el registro civil, pasaporte y viaje de regreso."
+        }
+      ]
+    },
+    "timeline": {
+      "eyebrow": "CRONOGRAMA TÍPICO",
+      "title": "Cronograma de Subrogación en Georgia",
+      "subtitle": "La mayoría de los padres internacionales completan la gestación subrogada en Georgia país en 12 a 18 meses. Los plazos dependen de los ciclos de FIV, disponibilidad de subrogada y logística de embriones.",
+      "phases": [
+        {
+          "title": "Meses 1–3: Consulta, Contratos y Evaluación",
+          "description": "Consulta inicial, selección de programa, firma de contratos y evaluación de padres y subrogada. La FIV comienza en clínicas de Tiflis una vez aprobados médica y legalmente."
+        },
+        {
+          "title": "Meses 3–6: Ciclos de FIV y Transferencia",
+          "description": "Recuperación de óvulos, fertilización y transferencia de embrión a la subrogada seleccionada. El embarazo se confirma con análisis de sangre y ecografía."
+        },
+        {
+          "title": "Meses 6–15: Embarazo y Nacimiento",
+          "description": "Monitoreo prenatal regular, planificación del parto y nacimiento en un hospital de Tiflis. El registro del certificado de nacimiento suele completarse en 5 a 10 días."
+        }
+      ]
+    },
+    "support": {
+      "eyebrow": "TU EQUIPO",
+      "title": "Apoyo 24/7 Durante Todo el Viaje en Georgia",
+      "subtitle": "Cada familia internacional recibe un gestor de caso personal que coordina clínicas, abogados, subrogadas y logística.",
+      "cards": [
+        {
+          "title": "Gestor de Caso Personal",
+          "text": "Tu coordinador gestiona plazos, citas clínicas y comunicación entre padres, subrogadas y equipos médicos."
+        },
+        {
+          "title": "Coordinación Médica y Legal",
+          "text": "Colaboramos con clínicas de FIV, hospitales y abogados licenciados conforme a las leyes de subrogación en Georgia."
+        },
+        {
+          "title": "Apoyo Postnatal y de Viaje",
+          "text": "Tras el nacimiento, te guiamos en el registro del certificado, documentación consular y trámites de pasaporte."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "PREGUNTAS FRECUENTES",
+      "title": "Preguntas sobre el Proceso de Subrogación",
+      "subtitle": "Respuestas para padres internacionales sobre gestación subrogada en Georgia país.",
+      "items": [
+        {
+          "question": "¿Cuál es el proceso de subrogación en Georgia?",
+          "answer": "El proceso incluye consulta, firma de contratos, evaluación de padres y subrogada, FIV y transferencia de embrión en Tiflis, monitoreo del embarazo, nacimiento y registro del certificado. Happy Family gestiona cada paso."
+        },
+        {
+          "question": "¿Qué es la gestación subrogada en Georgia?",
+          "answer": "En la gestación subrogada, la subrogada porta un embrión creado con gametos de los padres o donantes, sin vínculo genético con el niño. Según la ley georgiana desde 1997, los padres son los únicos padres legales desde el nacimiento."
+        },
+        {
+          "question": "¿Cuánto dura el proceso de subrogación?",
+          "answer": "La mayoría de los programas toman de 12 a 18 meses desde la consulta hasta el nacimiento y registro. Los plazos varían según el éxito de la FIV, el emparejamiento y la necesidad de donación de óvulos."
+        },
+        {
+          "question": "¿Cuánto cuesta la subrogación en Georgia?",
+          "answer": "La gestación subrogada en Georgia suele comenzar desde unos $40,000 con paquetes transparentes que incluyen FIV, compensación a la subrogada, servicios legales y médicos. Contáctanos para un presupuesto personalizado."
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para Comenzar tu Viaje de Subrogación en Georgia?",
+      "description": "Reserva una consulta gratuita sobre gestación subrogada en Georgia país. Nuestro equipo en Tiflis explicará el proceso, plazos y costos.",
+      "primaryCta": "Contáctanos",
+      "relatedTitle": "Páginas Relacionadas",
+      "relatedLinks": [
+        { "label": "Subrogación en Georgia", "path": "/surrogacy-in-georgia" },
+        { "label": "Evaluación de Padres", "path": "/parent-screening" },
+        { "label": "Evaluación de Subrogadas", "path": "/surrogate-screening" },
+        { "label": "Subrogación con Donante de Óvulos", "path": "/surrogacy-with-egg-donor" }
+      ]
+    }
   },
   "whoCanBecome": {
     "surrogate": {

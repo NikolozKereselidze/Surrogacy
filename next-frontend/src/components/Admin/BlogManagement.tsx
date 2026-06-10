@@ -96,6 +96,7 @@ const BlogManagement = () => {
             {
               method: "POST",
               headers: { "Content-Type": "application/json" },
+              credentials: "include",
               body: JSON.stringify({ fileType: selectedFile.type }),
             }
           );
@@ -140,6 +141,7 @@ const BlogManagement = () => {
       const response = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify(body),
       });
 
@@ -169,6 +171,7 @@ const BlogManagement = () => {
           `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog/${id}`,
           {
             method: "DELETE",
+            credentials: "include",
           }
         );
 

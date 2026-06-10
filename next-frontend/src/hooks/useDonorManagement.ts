@@ -18,7 +18,12 @@ export const useDonorManagement = (apiEndpoint: string) => {
 
   const fetchDonors = useCallback(async () => {
     try {
-      const dataResponse = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}${apiEndpoint}`);
+      const dataResponse = await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}${apiEndpoint}`,
+        {
+          credentials: "include",
+        },
+      );
       const data = await dataResponse.json();
       setDonors(data);
 
@@ -70,6 +75,7 @@ export const useDonorManagement = (apiEndpoint: string) => {
         `${process.env.NEXT_PUBLIC_API_BASE_URL}${apiEndpoint}/${id}`,
         {
           method: "DELETE",
+          credentials: "include",
         }
       );
 

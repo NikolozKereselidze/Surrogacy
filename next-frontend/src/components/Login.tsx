@@ -17,22 +17,26 @@ const LoginContent = ({ isAdmin }: { isAdmin: boolean }) => {
     setError("");
 
     try {
-      const res = await fetch(`/api/${isAdmin ? "admin-auth" : "auth"}/login`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({ username, password }),
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/auth/${isAdmin ? "admin" : "donor"}/login`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ username, password }),
+        },
+      );
+
+      const data = await res.json();
 
       if (!res.ok) {
-        const data = await res.json();
         setError(data.message || "Login failed. Please try again.");
         return;
       }
 
       push(isAdmin ? "/admin/dashboard" : "/find-egg-donor");
-    } catch (err) {
-      setError(`${error}`);
+    } catch {
+      setError("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }

@@ -5,7 +5,7 @@ import { getMetaKeywords } from "@/lib/seo-keywords";
 
 const localizedMeta = {
   en: {
-    title: "Intended Parent Screening | Surrogacy in Georgia Country",
+    title: "Intended Parent Screening | Georgia Surrogacy",
     description:
       "Thorough intended parent screening for international families pursuing gestational surrogacy in Georgia country. Medical review, psychological assessment, and legal eligibility under Georgia surrogacy laws  coordinated in Tbilisi from first consultation to program start.",
     keywords: [

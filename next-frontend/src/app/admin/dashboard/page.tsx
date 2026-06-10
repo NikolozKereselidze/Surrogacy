@@ -17,9 +17,15 @@ const AdminDashboard = () => {
         const [blogResponse, eggResponse, spermResponse, surrogateResponse] =
           await Promise.all([
             fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog/count`),
-            fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/egg-donors/count`),
-            fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/sperm-donors/count`),
-            fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/surrogate-donors/count`),
+            fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/egg-donors/count`, {
+              credentials: "include",
+            }),
+            fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/sperm-donors/count`, {
+              credentials: "include",
+            }),
+            fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/surrogate-donors/count`, {
+              credentials: "include",
+            }),
           ]);
 
         const [blogData, eggData, spermData, surrogateData] = await Promise.all(

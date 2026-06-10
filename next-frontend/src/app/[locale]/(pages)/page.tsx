@@ -6,7 +6,7 @@ import { getMetaKeywords } from "@/lib/seo-keywords";
 
 const localizedMeta = {
   en: {
-    title: "Surrogacy in Georgia Country | IVF & Egg Donation in Tbilisi",
+    title: "Surrogacy in Georgia | IVF & Egg Donation",
     description:
       "Gestational surrogacy and egg donation in Georgia (country) for international parents. Trusted surrogacy agency in Tbilisi with IVF, legal protection since 1997, and 24/7 support.",
     keywords: getMetaKeywords("en"),

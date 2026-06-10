@@ -103,9 +103,7 @@ const BlogCard = () => {
       </div>
       <div className={styles.blogGrid}>
         {loading ? (
-          Array.from({ length: MAX_POSTS }, (_, i) => (
-            <BlogSkeleton key={i} />
-          ))
+          Array.from({ length: MAX_POSTS }, (_, i) => <BlogSkeleton key={i} />)
         ) : blogPosts.length > 0 ? (
           postsWithFormattedDate.map((post) => (
             <article key={post.id} className={styles.blogCard}>
@@ -156,9 +154,7 @@ const BlogCard = () => {
             </article>
           ))
         ) : (
-          <div
-            className={styles.emptyState}
-          >
+          <div className={styles.emptyState}>
             {t("blog.noPosts", { defaultValue: "No blog posts available." })}
           </div>
         )}

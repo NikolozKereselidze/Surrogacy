@@ -4,7 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 
 const localizedMeta = {
   en: {
-    title: "Why Choose Us | Trusted Surrogacy Agency in Georgia",
+    title: "Why Choose Us | Surrogacy Agency Georgia",
     description:
       "Learn how to choose a surrogacy agency and why international families trust Happy Family. Transparent pricing, accredited Tbilisi clinics, legal protection since 1997, and 24/7 support.",
     keywords: [

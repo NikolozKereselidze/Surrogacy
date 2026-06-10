@@ -49,6 +49,7 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include",
         body: JSON.stringify(data),
       });
 

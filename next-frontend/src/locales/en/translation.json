@@ -478,7 +478,8 @@
   "blog": {
     "title": "Latest from Our Blog",
     "subtitle": "Insights, guides, and stories from our surrogacy community",
-    "readMore": "Read More"
+    "readMore": "Read More",
+    "readTime": "minutes read"
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -526,43 +527,116 @@
     "searchPlaceholder": "Search questions..."
   },
   "surrogacyProcess": {
-    "title": "Surrogacy Process",
-    "subtitle": "A comprehensive guide to your surrogacy journey",
-
-    "step1Title": "Initial Consultation",
-    "step1Description": "Begin your journey with a comprehensive consultation to understand your options and create a personalized plan.",
-    "step1Item1": "Free initial consultation",
-    "step1Item2": "Medical history review",
-    "step1Item3": "Personalized treatment plan",
-    "step2Title": "Legal & Medical Screening",
-    "step2Description": "Complete thorough legal and medical screening to ensure the best possible outcome for all parties.",
-    "step2Item1": "Legal contract preparation",
-    "step2Item2": "Medical evaluations",
-    "step2Item3": "Psychological screening",
-    "step3Title": "Matching & Coordination",
-    "step3Description": "We carefully match you with the perfect surrogate and coordinate all medical procedures.",
-    "step3Item1": "Surrogate matching",
-    "step3Item2": "Medical coordination",
-    "step3Item3": "Ongoing support",
-    "step4Title": "Pregnancy & Birth",
-    "step4Description": "Support throughout pregnancy and birth, ensuring a smooth transition to parenthood.",
-    "step4Item1": "Pregnancy monitoring",
-    "step4Item2": "Birth coordination",
-    "step4Item3": "Post-birth support",
-    "timelineTitle": "Timeline Overview",
-    "timeline1Title": "Month 1-2: Consultation & Planning",
-    "timeline1Text": "Initial consultation, legal preparation, and personalized planning for your surrogacy journey.",
-    "timeline2Title": "Month 2-3: Screening & Matching",
-    "timeline2Text": "Complete medical and legal screening, then carefully match with your ideal surrogate.",
-    "timeline3Title": "Month 3-12: Pregnancy Journey",
-    "timeline3Text": "Embryo transfer, pregnancy monitoring, and preparation for the arrival of your baby.",
-    "supportTitle": "24/7 Support Throughout Your Journey",
-    "support1Title": "Phone Support",
-    "support1Text": "Direct access to our team via phone for immediate assistance and guidance.",
-    "support2Title": "Email Support",
-    "support2Text": "Comprehensive email support for detailed questions and documentation.",
-    "support3Title": "Personal Coordinator",
-    "support3Text": "Your dedicated coordinator provides personalized support throughout the entire process."
+    "hero": {
+      "tag": "SURROGACY PROCESS",
+      "title": "The Surrogacy Process in Georgia Country",
+      "description": "From your first consultation in Tbilisi to birth certificate registration, Happy Family guides international intended parents through every stage of gestational surrogacy in Georgia. Our step-by-step program covers IVF coordination, surrogate matching, legal contracts under Georgia surrogacy laws, pregnancy monitoring, and post-birth support for families worldwide.",
+      "primaryCta": "Book a Free Consultation",
+      "secondaryCta": "Surrogacy in Georgia",
+      "cardTitle": "Journey Overview",
+      "cardPoints": [
+        "Consultation and program selection",
+        "Legal contracts and screening",
+        "IVF, matching, and embryo transfer",
+        "Pregnancy, birth, and registration"
+      ]
+    },
+    "process": {
+      "eyebrow": "STEP BY STEP",
+      "title": "How Gestational Surrogacy Works in Georgia",
+      "subtitle": "A clear roadmap for international families pursuing surrogacy in Tbilisi, from onboarding to bringing your baby home.",
+      "steps": [
+        {
+          "title": "Initial Consultation & Program Selection",
+          "description": "Meet your coordinator in Tbilisi or via video call to discuss your fertility goals, surrogacy cost in Georgia, and program options. We review your medical history, explain gestational surrogacy laws in Georgia country, and recommend the right pathway with own gametes, egg donation, or embryo shipping before you commit to a Georgia surrogacy program."
+        },
+        {
+          "title": "Legal Contracts & Screening",
+          "description": "Licensed Georgian counsel drafts notarized surrogacy contracts that secure your parental rights under Article 143 of Georgia's Health Care Law. Intended parents complete parent screening while your matched surrogate undergoes medical, psychological, and background evaluation at accredited clinics in Tbilisi. This dual screening protects everyone before IVF begins."
+        },
+        {
+          "title": "IVF, Matching & Embryo Transfer",
+          "description": "Our team coordinates IVF at partner fertility clinics in Tbilisi, including egg donation if needed, and carefully matches you with a screened gestational surrogate. Embryos are created through IVF, quality-tested, and transferred to the surrogate. Your case manager handles scheduling, communication, and medical updates throughout the gestational surrogacy process in Georgia."
+        },
+        {
+          "title": "Pregnancy, Birth & Registration",
+          "description": "The surrogate receives comprehensive prenatal care at modern maternity hospitals in Tbilisi while your coordinator keeps you informed at every milestone. At birth, intended parents are named directly on the birth certificate with no adoption required. We assist with Civil Registry documentation, passport application, and travel home so your Georgia surrogacy journey ends with your family united."
+        }
+      ]
+    },
+    "timeline": {
+      "eyebrow": "TYPICAL TIMELINE",
+      "title": "Surrogacy Timeline in Georgia",
+      "subtitle": "Most international intended parents complete gestational surrogacy in Georgia country within 12 to 18 months. Exact timelines depend on IVF cycles, surrogate availability, and embryo shipping logistics.",
+      "phases": [
+        {
+          "title": "Months 1–3: Consultation, Contracts & Screening",
+          "description": "Initial consultation, program selection, legal contract signing, and completion of parent and surrogate screening. IVF or embryo preparation begins at clinics in Tbilisi once all parties are medically and legally cleared for surrogacy in Georgia."
+        },
+        {
+          "title": "Months 3–6: IVF Cycles & Embryo Transfer",
+          "description": "Egg retrieval, fertilization, and embryo transfer to your matched surrogate. If using donor eggs or shipped embryos, this phase may include additional coordination. Pregnancy is confirmed through blood tests and early ultrasound at our partner clinics."
+        },
+        {
+          "title": "Months 6–15: Pregnancy & Birth",
+          "description": "Regular prenatal monitoring, birth planning, and delivery at a Tbilisi maternity hospital. Birth certificate registration with intended parents' names typically completes within 5 to 10 days, followed by passport and travel arrangements for international families."
+        }
+      ]
+    },
+    "support": {
+      "eyebrow": "YOUR DEDICATED TEAM",
+      "title": "24/7 Support Throughout Your Georgia Surrogacy Journey",
+      "subtitle": "Every international family receives a personal case manager who coordinates clinics, legal counsel, surrogates, and logistics so you always have a single point of contact during gestational surrogacy in Georgia country.",
+      "cards": [
+        {
+          "title": "Personal Case Manager",
+          "text": "Your dedicated coordinator manages timelines, clinic appointments, and communication between intended parents, surrogates, and medical teams throughout every stage of surrogacy in Tbilisi."
+        },
+        {
+          "title": "Medical & Legal Coordination",
+          "text": "We liaise with IVF clinics, maternity hospitals, and licensed Georgian attorneys to ensure contracts, screening, and treatment protocols meet Georgia surrogacy laws and international best practices."
+        },
+        {
+          "title": "Post-Birth & Travel Support",
+          "text": "After delivery, we guide you through birth certificate registration, embassy documentation, and passport procedures so you can return home safely with your newborn."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Surrogacy Process Questions",
+      "subtitle": "Answers for international intended parents about gestational surrogacy in Georgia country.",
+      "items": [
+        {
+          "question": "What is the surrogacy process in Georgia?",
+          "answer": "The surrogacy process in Georgia includes consultation and program selection, legal contract signing, parent and surrogate screening, IVF and embryo transfer at clinics in Tbilisi, pregnancy monitoring, birth, and birth certificate registration. Happy Family manages every step for international intended parents pursuing gestational surrogacy in Georgia country."
+        },
+        {
+          "question": "What is gestational surrogacy in Georgia?",
+          "answer": "Gestational surrogacy in Georgia means the surrogate carries an embryo created from the intended parents' or donors' gametes with no genetic link to the child. Under Georgian law since 1997, intended parents are recognized as the sole legal parents from birth, with their names on the birth certificate."
+        },
+        {
+          "question": "How long does the surrogacy process take in Georgia?",
+          "answer": "Most gestational surrogacy programs in Georgia take 12 to 18 months from initial consultation to birth and registration. Timelines vary based on IVF success, surrogate matching, and whether egg donation or embryo shipping is required."
+        },
+        {
+          "question": "How much does surrogacy cost in Georgia?",
+          "answer": "Gestational surrogacy in Georgia typically starts from around $40,000 with transparent all-inclusive packages covering IVF, surrogate compensation, legal services, and medical care. Costs depend on program type. Contact us for a personalized surrogacy cost quote tailored to your journey."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Start Your Surrogacy Journey in Georgia?",
+      "description": "Book a free consultation to discuss gestational surrogacy in Georgia country. Our Tbilisi team will explain the process, timeline, and costs for international intended parents.",
+      "primaryCta": "Contact Us Today",
+      "relatedTitle": "Explore Related Pages",
+      "relatedLinks": [
+        { "label": "Surrogacy in Georgia", "path": "/surrogacy-in-georgia" },
+        { "label": "Parent Screening", "path": "/parent-screening" },
+        { "label": "Surrogate Screening", "path": "/surrogate-screening" },
+        { "label": "Surrogacy with Egg Donor", "path": "/surrogacy-with-egg-donor" }
+      ]
+    }
   },
   "screening": {
     "title": "Screening Process",

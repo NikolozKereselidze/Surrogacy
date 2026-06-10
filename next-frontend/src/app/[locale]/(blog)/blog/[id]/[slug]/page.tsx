@@ -1,8 +1,6 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 import styles from "@/styles/Blog/Blog.module.css";
-import { FaClock } from "react-icons/fa";
-import DonorsNavigation from "@/components/Navigation/DonorsNavigation";
+import BlogPostHeader from "@/components/Blog/BlogPostHeader";
 import { BASE_URL } from "@/lib/seo";
 
 const CLOUDFRONT_DOMAIN = process.env.NEXT_PUBLIC_CLOUDFRONT_DOMAIN;
@@ -184,43 +182,14 @@ export default async function BlogPostPage({
 
   return (
     <>
-      <DonorsNavigation />
-      <div className={styles.postHeaderWrapper}>
-        <div className={`${styles.postHeader} section`}>
-          <div className="">
-            <h2 className={styles.postTitle}>{post.title}</h2>
-            <div className={styles.meta}>
-              <div className={styles.metaItem}>
-                <span className={styles.category}>{post.category}</span>
-                <span className={styles.readTime}>
-                  {post.readTime} mins read
-                </span>
-              </div>
-              <div className={styles.date}>
-                <FaClock />
-                <span>
-                  {new Date(post.date).toLocaleDateString("en-US", {
-                    month: "long",
-                    day: "numeric",
-                    year: "numeric",
-                  })}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <article className={`${styles.blogPostPage} section`}>
+      <BlogPostHeader
+        title={post.title}
+        readTime={post.readTime}
+        date={post.date}
+        imageUrl={getImageUrl(post.imagePath)}
+      />
+      <article className={styles.blogPostPage}>
         <div className={styles.postContainer}>
-          {post.imagePath && (
-            <Image
-              src={getImageUrl(post.imagePath) || ""}
-              alt={post.title}
-              className={styles.postImage}
-              width={1000}
-              height={1000}
-            />
-          )}
           <div
             className={styles.postContent}
             dangerouslySetInnerHTML={{ __html: post.content }}

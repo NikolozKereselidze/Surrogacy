@@ -5,7 +5,7 @@ import { getMetaKeywords } from "@/lib/seo-keywords";
 
 const localizedMeta = {
   en: {
-    title: "Support & Counselling | Surrogacy in Georgia for Intended Parents",
+    title: "Support & Counselling | Georgia Surrogacy",
     description:
       "Comprehensive emotional support, counselling, and case management for international intended parents pursuing gestational surrogacy in Georgia country. Dedicated coordinators, legal guidance, financial planning, and 24/7 assistance in Tbilisi.",
     keywords: [

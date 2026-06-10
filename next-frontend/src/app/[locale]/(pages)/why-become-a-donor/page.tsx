@@ -4,7 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 
 const localizedMeta = {
   en: {
-    title: "Why Become an Egg Donor in Georgia | Help Families, Get Support",
+    title: "Why Become an Egg Donor in Georgia",
     description:
       "Learn why to become an egg donor in Georgia: meaningful impact, safe medical care, thorough screening, and supportive guidance from start to finish.",
     keywords: [
