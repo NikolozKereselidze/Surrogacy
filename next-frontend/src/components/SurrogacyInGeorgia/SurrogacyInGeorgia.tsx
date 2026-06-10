@@ -4,11 +4,11 @@ import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import Button from "@/components/Button";
 import FaqSection from "@/components/FaqSection/FaqSection";
+import PageHero from "@/components/PageHero/PageHero";
 import ProcessStep from "@/components/ProcessStep";
 import RequirementsCard from "@/components/RequirementsCard";
 import styles from "@/styles/SurrogacyInGeorgia/SurrogacyInGeorgia.module.css";
 
-type Highlight = { title: string; description: string };
 type Benefit = { icon: string; title: string; description: string };
 type Protection = { title: string; description: string };
 type Requirement = { title: string; description: string };
@@ -35,14 +35,6 @@ const SectionHeader = ({
 const SurrogacyInGeorgia = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "he";
-
-  const highlights = useMemo(
-    () =>
-      t("surrogacyInGeorgia.hero.highlights", {
-        returnObjects: true,
-      }) as Highlight[],
-    [t],
-  );
 
   const benefits = useMemo(
     () =>
@@ -96,51 +88,13 @@ const SurrogacyInGeorgia = () => {
 
   return (
     <div className={styles.page} dir={isRTL ? "rtl" : "ltr"}>
-      <section className={styles.hero} aria-labelledby="sig-hero-title">
-        <div className={styles.heroInner}>
-          <div className={styles.heroContent}>
-            <span className={styles.heroTag}>
-              {t("surrogacyInGeorgia.hero.tag")}
-            </span>
-            <h1 id="sig-hero-title" className="title">
-              {t("surrogacyInGeorgia.hero.title")}
-            </h1>
-            <p className="description">
-              {t("surrogacyInGeorgia.hero.description")}
-            </p>
-            <div className={styles.heroActions}>
-              <Button onClick={() => scrollTo("contact")}>
-                {t("surrogacyInGeorgia.hero.primaryCta")}
-              </Button>
-              <button type="button" className={styles.secondaryBtn}>
-                {t("surrogacyInGeorgia.hero.secondaryCta")}
-              </button>
-            </div>
-          </div>
-
-          <aside
-            className={styles.highlightCard}
-            aria-labelledby="sig-highlights-title"
-          >
-            <h2 id="sig-highlights-title" className={styles.highlightCardTitle}>
-              {t("surrogacyInGeorgia.hero.highlightsTitle")}
-            </h2>
-            <ul className={styles.highlightList}>
-              {highlights.map((item) => (
-                <li key={item.title} className={styles.highlightItem}>
-                  <p className={styles.highlightItemTitle}>
-                    <span className={styles.checkIcon} aria-hidden>
-                      ✓
-                    </span>
-                    {item.title}
-                  </p>
-                  <p className={styles.highlightItemDesc}>{item.description}</p>
-                </li>
-              ))}
-            </ul>
-          </aside>
-        </div>
-      </section>
+      <PageHero
+        id="sig-hero-title"
+        sidebarId="sig-highlights-title"
+        translationKey="surrogacyInGeorgia.hero"
+        sidebarVariant="detailed"
+        primaryOnClick={() => scrollTo("contact")}
+      />
 
       <section className="section" aria-labelledby="sig-benefits-title">
         <SectionHeader

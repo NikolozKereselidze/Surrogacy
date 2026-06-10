@@ -876,32 +876,116 @@
     }
   },
   "supportAndCounselling": {
-    "subtitle": "Caring counselling, community connection, and practical guidance for intended parents",
-    "cards": {
-      "emotional": {
-        "title": "Emotional Support",
-        "description": "Compassionate guidance and counselling throughout your journey."
-      },
-      "community": {
-        "title": "Community",
-        "description": "Peer support and connection with other intended parents."
-      },
-      "legal": {
-        "title": "Legal Guidance",
-        "description": "Clarity on legal steps and coordination with counsel."
-      },
-      "counselling": {
-        "title": "Counselling Sessions",
-        "description": "One-on-one or couple sessions with qualified counsellors."
-      },
-      "financial": {
-        "title": "Financial Guidance",
-        "description": "Transparent budgeting, planning, and payment coordination."
-      },
-      "support24": {
-        "title": "24/7 Support",
-        "description": "Round-the-clock assistance for urgent questions and needs."
-      }
+    "hero": {
+      "tag": "INTENDED PARENT SUPPORT",
+      "title": "Support & Counselling for Surrogacy in Georgia",
+      "description": "A surrogacy journey is as emotional as it is medical. Happy Family provides comprehensive support and counselling for international intended parents pursuing gestational surrogacy in Georgia country  from your first consultation in Tbilisi through birth and your return home. Your dedicated case manager coordinates medical updates, legal steps under Georgia surrogacy laws, and financial planning with transparent surrogacy cost guidance and 24/7 assistance.",
+      "primaryCta": "Book a Free Consultation",
+      "secondaryCta": "Surrogacy in Georgia",
+      "cardTitle": "Support at Every Stage",
+      "cardPoints": [
+        "Dedicated coordinator from consultation to birth",
+        "Licensed counsellors for individuals and couples",
+        "Multilingual support for international families"
+      ]
+    },
+    "services": {
+      "eyebrow": "WHAT WE OFFER",
+      "title": "Comprehensive Support for Intended Parents",
+      "subtitle": "Beyond matching and medical care  we guide international families through every practical, legal, and emotional step of surrogacy in Georgia.",
+      "cards": [
+        {
+          "icon": "heart",
+          "title": "Emotional Support",
+          "description": "Compassionate counselling throughout your gestational surrogacy journey in Georgia. Our team understands the stress of fertility treatment, long-distance coordination, and waiting for milestones  and we are here for you at every turning point."
+        },
+        {
+          "icon": "community",
+          "title": "Community Connection",
+          "description": "Connect with other international intended parents who understand the surrogacy process in Georgia country. Peer support, shared experiences, and a sense of community help you feel less alone during a journey that spans continents."
+        },
+        {
+          "icon": "legal",
+          "title": "Legal Guidance",
+          "description": "Clear explanation of Georgia surrogacy laws, contract preparation, and birth certificate registration. We coordinate with licensed legal counsel so intended parents understand parental rights, timelines, and post-birth documentation before treatment begins."
+        },
+        {
+          "icon": "counselling",
+          "title": "Counselling Sessions",
+          "description": "One-on-one or couple sessions with qualified counsellors experienced in fertility and third-party reproduction. Sessions are available before, during, and after your Georgia surrogacy program to help you process decisions and manage stress."
+        },
+        {
+          "icon": "financial",
+          "title": "Financial Guidance",
+          "description": "Transparent surrogacy cost breakdowns, payment scheduling, and budgeting support for your program in Tbilisi. We explain what is included in all-inclusive packages, help you plan for contingencies, and answer questions about surrogacy cost in Georgia."
+        },
+        {
+          "icon": "clock",
+          "title": "24/7 Case Management",
+          "description": "Round-the-clock assistance for urgent medical questions, pregnancy updates, document requests, and travel coordination. Your dedicated coordinator is reachable across time zones so international parents never wait when something matters."
+        }
+      ]
+    },
+    "journey": {
+      "eyebrow": "YOUR SUPPORT TIMELINE",
+      "title": "How We Support You Through Surrogacy in Georgia",
+      "subtitle": "Case management, counselling, and practical guidance from first inquiry to bringing your baby home.",
+      "steps": [
+        {
+          "title": "Pre-Program Consultation",
+          "description": "Your coordinator explains surrogacy program options in Tbilisi, Georgia surrogacy cost structures, and legal eligibility. Optional counselling sessions help you and your partner prepare emotionally before committing to a gestational surrogacy program."
+        },
+        {
+          "title": "IVF, Matching & Legal Preparation",
+          "description": "We manage clinic scheduling, surrogate matching updates, and contract signing under Georgia surrogacy laws. Your coordinator keeps you informed at every milestone and connects you with counsellors if you need support during the wait."
+        },
+        {
+          "title": "Pregnancy Monitoring & Updates",
+          "description": "Regular pregnancy reports, ultrasound summaries, and direct communication with your case manager. We coordinate translation, answer medical questions, and provide emotional support as your surrogate's pregnancy progresses in Tbilisi."
+        },
+        {
+          "title": "Birth, Documentation & Homecoming",
+          "description": "Support through delivery, birth certificate registration, embassy documentation, and travel home. We guide international intended parents through the exit process with legal coordination and continued counselling as you transition to parenthood."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Support & Counselling Questions",
+      "subtitle": "Answers for international intended parents about the care and guidance included in a Georgia surrogacy program.",
+      "items": [
+        {
+          "question": "What support do intended parents receive during surrogacy in Georgia?",
+          "answer": "Every intended parent is assigned a dedicated coordinator who manages clinic appointments, legal contracts, surrogate matching, pregnancy updates, and post-birth documentation. We also provide emotional counselling, financial planning guidance, translation services, travel coordination, and 24/7 urgent support throughout the entire gestational surrogacy process in Georgia."
+        },
+        {
+          "question": "Is counselling required for surrogacy in Georgia country?",
+          "answer": "Psychological counselling is strongly recommended and often required as part of the screening process for both intended parents and surrogates. Happy Family offers licensed counselling sessions for individuals and couples to help you prepare for the emotional aspects of international surrogacy in Georgia."
+        },
+        {
+          "question": "How does case management work for international parents?",
+          "answer": "Your case manager is your single point of contact from first consultation through birth. They coordinate with IVF clinics in Tbilisi, legal counsel, and the surrogate's care team  providing updates in your language, managing timelines, and handling urgent requests across time zones."
+        },
+        {
+          "question": "What financial guidance is included in a Georgia surrogacy program?",
+          "answer": "We provide itemized surrogacy cost breakdowns, explain all-inclusive package inclusions, and help you plan payment schedules. Your coordinator answers questions about surrogacy cost in Georgia, contingency budgets, and what expenses to expect at each stage of the program."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready for Personalised Support?",
+      "description": "Book a free consultation to meet your coordinator, discuss counselling options, and learn how we support international families through every step of surrogacy in Georgia country.",
+      "primaryCta": "Contact Us Today",
+      "relatedTitle": "Explore Related Pages",
+      "relatedLinks": [
+        { "label": "Surrogacy in Georgia", "path": "/surrogacy-in-georgia" },
+        { "label": "Parent Screening", "path": "/parent-screening" },
+        { "label": "Why Choose Us", "path": "/why-choose-us" },
+        {
+          "label": "Who Can Become a Parent",
+          "path": "/who-can-become-a-parent"
+        }
+      ]
     }
   },
   "surrogacyWithOwnGametes": {

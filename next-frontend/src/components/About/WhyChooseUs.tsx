@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, type ReactNode } from "react";
-import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import {
@@ -18,14 +17,13 @@ import {
 } from "react-icons/fa";
 import Button from "@/components/Button";
 import FaqSection from "@/components/FaqSection/FaqSection";
+import PageHero from "@/components/PageHero/PageHero";
 import PageCtaSection from "@/components/PageCtaSection/PageCtaSection";
 import styles from "@/styles/About/WhyChooseUs.module.css";
 
 type ReasonCard = { icon: string; title: string; description: string };
 type Criterion = { title: string; description: string; questions: string[] };
 type GeorgiaPoint = { title: string; description: string };
-type Highlight = { title: string; description: string };
-
 const ICON_MAP: Record<string, ReactNode> = {
   award: <FaAward />,
   users: <FaUsers />,
@@ -69,14 +67,6 @@ const WhyChooseUs = () => {
   const isRTL = i18n.language === "he";
   const localePrefix = `/${locale ?? "en"}`;
 
-  const heroHighlights = useMemo(
-    () =>
-      t("whyChooseUs.hero.highlights", {
-        returnObjects: true,
-      }) as Highlight[],
-    [t],
-  );
-
   const reasonCards = useMemo(
     () =>
       t("whyChooseUs.reasons.cards", { returnObjects: true }) as ReasonCard[],
@@ -119,50 +109,14 @@ const WhyChooseUs = () => {
 
   return (
     <div className={styles.page} dir={isRTL ? "rtl" : "ltr"}>
-      <section className={styles.hero} aria-labelledby="wcu-hero-title">
-        <div className={styles.heroInner}>
-          <div className={styles.heroContent}>
-            <span className={styles.heroTag}>{t("whyChooseUs.hero.tag")}</span>
-            <h1 id="wcu-hero-title" className="title">
-              {t("whyChooseUs.hero.title")}
-            </h1>
-            <p className="description">{t("whyChooseUs.hero.description")}</p>
-            <div className={styles.heroActions}>
-              <Button onClick={scrollToContact}>
-                {t("whyChooseUs.hero.primaryCta")}
-              </Button>
-              <Link
-                href={`${localePrefix}/surrogacy-in-georgia`}
-                className={styles.secondaryBtn}
-              >
-                {t("whyChooseUs.hero.secondaryCta")}
-              </Link>
-            </div>
-          </div>
-
-          <aside
-            className={styles.highlightCard}
-            aria-labelledby="wcu-highlights-title"
-          >
-            <h2 id="wcu-highlights-title" className={styles.highlightCardTitle}>
-              {t("whyChooseUs.hero.highlightsTitle")}
-            </h2>
-            <ul className={styles.highlightList}>
-              {heroHighlights.map((item) => (
-                <li key={item.title} className={styles.highlightItem}>
-                  <p className={styles.highlightItemTitle}>
-                    <span className={styles.checkIcon} aria-hidden>
-                      ✓
-                    </span>
-                    {item.title}
-                  </p>
-                  <p className={styles.highlightItemDesc}>{item.description}</p>
-                </li>
-              ))}
-            </ul>
-          </aside>
-        </div>
-      </section>
+      <PageHero
+        id="wcu-hero-title"
+        sidebarId="wcu-highlights-title"
+        translationKey="whyChooseUs.hero"
+        sidebarVariant="detailed"
+        primaryOnClick={scrollToContact}
+        secondaryHref={`${localePrefix}/surrogacy-in-georgia`}
+      />
 
       <section className="section" aria-labelledby="wcu-reasons-title">
         <SectionHeader

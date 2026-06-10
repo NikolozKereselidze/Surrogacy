@@ -70,7 +70,7 @@
       "description": "Como agencia de subrogación en Georgia, guiamos a padres internacionales en cada etapa  desde FIV y donación de óvulos en Tiflis hasta contratos legales, transferencia de embrión y registro del certificado de nacimiento.",
       "subtitle": "Protección Legal y Coordinación FIV en Tiflis",
       "content": "La gestación subrogada en Georgia está reconocida para padres internacionales desde 1997. Coordinamos clínicas de fertilidad en Tiflis, gestionamos contratos de subrogación y ofrecemos precios transparentes con apoyo 24/7 durante todo el programa.",
-      "imageAlt": "Manos protectoras sosteniendo con ternura los pies de un recién nacido — apoyo compasivo en subrogación en Georgia"
+      "imageAlt": "Manos protectoras sosteniendo con ternura los pies de un recién nacido  apoyo compasivo en subrogación en Georgia"
     },
     "experienceSection": {
       "eyebrow": "Confianza desde 1997",
@@ -81,7 +81,7 @@
       "value1Content": "Colaboramos con clínicas líderes en Tiflis para FIV, transferencia de embrión y donación de óvulos  gestionando plazos, comunicación y coordinación médica en cada paso.",
       "value2Title": "Padres Internacionales, Experiencia Local",
       "value2Content": "Desde la primera consulta hasta la asistencia con documentos tras el nacimiento, nuestros gestores conocen el costo de subrogación en Georgia, la logística internacional y los pasos legales que protegen a su familia.",
-      "imageAlt": "Niña besando el vientre de una madre sustituta embarazada — subrogación gestacional en Georgia"
+      "imageAlt": "Niña besando el vientre de una madre sustituta embarazada  subrogación gestacional en Georgia"
     },
     "faq": {
       "eyebrow": "Preguntas",
@@ -864,32 +864,113 @@
     }
   },
   "supportAndCounselling": {
-    "subtitle": "Acompañamiento cercano, comunidad y orientación práctica para padres intencionales",
-    "cards": {
-      "emotional": {
-        "title": "Apoyo Emocional",
-        "description": "Orientación compasiva y consejería durante todo tu viaje."
-      },
-      "community": {
-        "title": "Comunidad",
-        "description": "Apoyo entre pares y conexión con otros padres intencionales."
-      },
-      "legal": {
-        "title": "Orientación Legal",
-        "description": "Claridad en los pasos legales y coordinación con asesoría jurídica."
-      },
-      "counselling": {
-        "title": "Sesiones de Consejería",
-        "description": "Sesiones individuales o en pareja con consejeros calificados."
-      },
-      "financial": {
-        "title": "Orientación Financiera",
-        "description": "Presupuestación transparente, planificación y coordinación de pagos."
-      },
-      "support24": {
-        "title": "Soporte 24/7",
-        "description": "Asistencia permanente para dudas y necesidades urgentes."
-      }
+    "hero": {
+      "tag": "APOYO A PADRES INTENCIONALES",
+      "title": "Apoyo y Asesoramiento para la Subrogación en Georgia",
+      "description": "Un viaje de subrogación es tan emocional como médico. Happy Family ofrece apoyo integral y asesoramiento a padres internacionales que buscan gestación subrogada en Georgia país  desde la primera consulta en Tiflis hasta el nacimiento y el regreso a casa. Su gestor de caso coordina actualizaciones médicas, pasos legales y planificación financiera con costos transparentes y asistencia 24/7.",
+      "primaryCta": "Consulta Gratuita",
+      "secondaryCta": "Subrogación en Georgia",
+      "cardTitle": "Apoyo en Cada Etapa",
+      "cardPoints": [
+        "Coordinador dedicado desde la consulta hasta el nacimiento",
+        "Consejeros licenciados para individuos y parejas",
+        "Soporte multilingüe para familias internacionales"
+      ]
+    },
+    "services": {
+      "eyebrow": "LO QUE OFRECEMOS",
+      "title": "Apoyo Integral para Padres Intencionales",
+      "subtitle": "Más allá del emparejamiento y la atención médica  guiamos a familias internacionales en cada paso práctico, legal y emocional de la subrogación en Georgia.",
+      "cards": [
+        {
+          "icon": "heart",
+          "title": "Apoyo Emocional",
+          "description": "Consejería compasiva durante todo su viaje de gestación subrogada en Georgia. Entendemos el estrés del tratamiento de fertilidad, la coordinación a distancia y la espera de hitos importantes."
+        },
+        {
+          "icon": "community",
+          "title": "Conexión Comunitaria",
+          "description": "Conéctese con otros padres internacionales que comprenden el proceso de subrogación en Georgia país. El apoyo entre pares ayuda a sentirse menos solo durante un viaje que cruza continentes."
+        },
+        {
+          "icon": "legal",
+          "title": "Orientación Legal",
+          "description": "Explicación clara de las leyes de subrogación en Georgia, preparación de contratos y registro del certificado de nacimiento. Coordinamos con asesores legales licenciados antes del tratamiento."
+        },
+        {
+          "icon": "counselling",
+          "title": "Sesiones de Consejería",
+          "description": "Sesiones individuales o en pareja con consejeros calificados con experiencia en fertilidad y reproducción asistida. Disponibles antes, durante y después del programa en Georgia."
+        },
+        {
+          "icon": "financial",
+          "title": "Orientación Financiera",
+          "description": "Desglose transparente del costo de subrogación en Georgia, calendario de pagos y apoyo presupuestario para su programa en Tiflis. Explicamos qué incluyen los paquetes todo incluido."
+        },
+        {
+          "icon": "clock",
+          "title": "Gestión de Caso 24/7",
+          "description": "Asistencia permanente para preguntas médicas urgentes, actualizaciones del embarazo, documentos y coordinación de viajes. Su coordinador está disponible en todas las zonas horarias."
+        }
+      ]
+    },
+    "journey": {
+      "eyebrow": "CRONOLOGÍA DE APOYO",
+      "title": "Cómo Le Apoyamos en la Subrogación en Georgia",
+      "subtitle": "Gestión de caso, consejería y orientación práctica desde la primera consulta hasta llevar a su bebé a casa.",
+      "steps": [
+        {
+          "title": "Consulta Pre-Programa",
+          "description": "Su coordinador explica opciones de programa en Tiflis, estructura de costos y elegibilidad legal. Sesiones de consejería opcionales para preparación emocional."
+        },
+        {
+          "title": "FIV, Emparejamiento y Preparación Legal",
+          "description": "Coordinamos citas clínicas, actualizaciones de emparejamiento y firma de contratos bajo las leyes de subrogación en Georgia. Su coordinador le informa en cada hito."
+        },
+        {
+          "title": "Monitoreo del Embarazo",
+          "description": "Informes regulares del embarazo, resúmenes de ecografías y comunicación directa con su gestor de caso. Coordinamos traducción y apoyo emocional en Tiflis."
+        },
+        {
+          "title": "Nacimiento, Documentación y Regreso",
+          "description": "Apoyo durante el parto, registro del certificado de nacimiento, documentación de embajada y viaje a casa. Coordinación legal y consejería en la transición a la paternidad."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "PREGUNTAS FRECUENTES",
+      "title": "Preguntas sobre Apoyo y Asesoramiento",
+      "subtitle": "Respuestas para padres internacionales sobre la atención incluida en un programa de subrogación en Georgia.",
+      "items": [
+        {
+          "question": "¿Qué apoyo reciben los padres intencionales durante la subrogación en Georgia?",
+          "answer": "Cada padre recibe un coordinador dedicado que gestiona citas clínicas, contratos legales, emparejamiento, actualizaciones del embarazo y documentación postnatal. También ofrecemos consejería emocional, orientación financiera, traducción y soporte urgente 24/7."
+        },
+        {
+          "question": "¿Es obligatoria la consejería para la subrogación en Georgia país?",
+          "answer": "La consejería psicológica es muy recomendable y a menudo requerida como parte del proceso de evaluación. Happy Family ofrece sesiones licenciadas para prepararse emocionalmente para la subrogación internacional."
+        },
+        {
+          "question": "¿Cómo funciona la gestión de caso para padres internacionales?",
+          "answer": "Su gestor de caso es su único punto de contacto desde la primera consulta hasta el nacimiento. Coordina con clínicas de FIV en Tiflis, asesores legales y el equipo de la gestante, con actualizaciones en su idioma."
+        },
+        {
+          "question": "¿Qué orientación financiera incluye el programa?",
+          "answer": "Proporcionamos desglose detallado del costo de subrogación en Georgia, explicamos inclusiones del paquete y ayudamos a planificar pagos. Su coordinador responde preguntas sobre gastos en cada etapa."
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para Apoyo Personalizado?",
+      "description": "Reserve una consulta gratuita, conozca a su coordinador y descubra cómo apoyamos a familias internacionales en cada paso de la subrogación en Georgia país.",
+      "primaryCta": "Contáctenos",
+      "relatedTitle": "Páginas Relacionadas",
+      "relatedLinks": [
+        { "label": "Subrogación en Georgia", "path": "/surrogacy-in-georgia" },
+        { "label": "Evaluación de Padres", "path": "/parent-screening" },
+        { "label": "Por Qué Elegirnos", "path": "/why-choose-us" },
+        { "label": "Quién Puede Ser Padre", "path": "/who-can-become-a-parent" }
+      ]
     }
   },
   "ourMission": {
