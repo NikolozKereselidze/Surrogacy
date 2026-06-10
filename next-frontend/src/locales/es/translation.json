@@ -769,6 +769,151 @@
       }
     }
   },
+  "parentScreening": {
+    "hero": {
+      "tag": "EVALUACIÓN DE PADRES",
+      "title": "Evaluación de Padres Intencionales para Subrogación en Georgia",
+      "description": "Antes de iniciar un programa de gestación subrogada en Georgia país, los padres intencionales internacionales completan un proceso de evaluación exhaustivo en Tiflis. Happy Family revisa su historial médico, preparación psicológica y elegibilidad legal según las leyes de subrogación en Georgia  garantizando un camino seguro y ético desde la consulta hasta el registro del certificado de nacimiento.",
+      "primaryCta": "Consulta Gratuita",
+      "secondaryCta": "Subrogación en Georgia",
+      "cardTitle": "Resumen de la Evaluación",
+      "cardPoints": [
+        "Consulta inicial y revisión de elegibilidad",
+        "Evaluación médica y psicológica",
+        "Preparación legal según las leyes de subrogación en Georgia"
+      ]
+    },
+    "process": {
+      "eyebrow": "PROCESO DE EVALUACIÓN",
+      "title": "Cómo Funciona la Evaluación de Padres Intencionales",
+      "subtitle": "Una evaluación paso a paso para familias internacionales que buscan subrogación en Georgia país.",
+      "steps": [
+        {
+          "title": "Consulta Inicial",
+          "description": "Reúnete con tu coordinador en Tiflis o por videollamada para discutir objetivos, plazos, costo de subrogación en Georgia y ajuste del programa. Confirmamos la elegibilidad básica para gestación subrogada en Georgia país."
+        },
+        {
+          "title": "Revisión Médica y Psicológica",
+          "description": "Nuestro equipo revisa tu historial de fertilidad, registros médicos y una breve evaluación psicológica para confirmar que estás preparado para la subrogación internacional en Georgia."
+        },
+        {
+          "title": "Preparación Legal y del Hogar",
+          "description": "Un abogado licenciado explica las leyes de subrogación en Georgia, los términos del contrato y los derechos parentales antes de iniciar el tratamiento. Proporcionamos una lista práctica para viajes, documentación y registro postnatal."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "PREGUNTAS FRECUENTES",
+      "title": "Preguntas sobre Evaluación de Padres",
+      "subtitle": "Respuestas para familias internacionales sobre elegibilidad y evaluación para subrogación en Georgia país.",
+      "items": [
+        {
+          "question": "¿Qué es la evaluación de padres intencionales para subrogación en Georgia?",
+          "answer": "Es el proceso de evaluación que completan las familias internacionales antes de unirse a un programa de gestación subrogada en Georgia. Incluye consulta, revisión médica, evaluación psicológica y verificación legal según las leyes de subrogación en Georgia país."
+        },
+        {
+          "question": "¿Qué documentos se requieren para la evaluación de padres?",
+          "answer": "Generalmente necesitarás pasaportes, documentos de matrimonio o pareja, registros médicos de fertilidad e identificación de ambos padres intencionales. Tu coordinador proporciona una lista personalizada según tu nacionalidad."
+        },
+        {
+          "question": "¿Es obligatoria la evaluación psicológica para subrogación en Georgia?",
+          "answer": "Sí. La evaluación psicológica es altamente recomendada y a menudo obligatoria para padres intencionales que buscan gestación subrogada en Georgia país."
+        },
+        {
+          "question": "¿Cuánto tiempo dura la evaluación de padres intencionales?",
+          "answer": "La mayoría de los padres internacionales completan la evaluación en dos a cuatro semanas, dependiendo de la rapidez con que se reúnan los documentos y registros médicos."
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para Comenzar tu Evaluación?",
+      "description": "Reserva una consulta gratuita para discutir elegibilidad, documentación requerida y próximos pasos para gestación subrogada en Georgia país.",
+      "primaryCta": "Contáctanos Hoy",
+      "relatedTitle": "Páginas Relacionadas",
+      "relatedLinks": [
+        { "label": "Subrogación en Georgia", "path": "/surrogacy-in-georgia" },
+        {
+          "label": "Apoyo y Asesoramiento",
+          "path": "/support-and-counselling"
+        },
+        {
+          "label": "¿Quién Puede Ser Padre?",
+          "path": "/who-can-become-a-parent"
+        }
+      ]
+    }
+  },
+  "surrogateScreening": {
+    "hero": {
+      "tag": "EVALUACIÓN DE SUBROGADAS",
+      "title": "Evaluación de Subrogadas para Gestación Subrogada en Georgia",
+      "description": "Cada subrogada en nuestro programa de subrogación en Georgia completa una rigurosa evaluación médica, psicológica y de antecedentes en clínicas acreditadas de Tiflis. Protegemos a padres internacionales y subrogadas con criterios de elegibilidad transparentes en cada etapa de la gestación subrogada en Georgia país.",
+      "primaryCta": "¿Quién Puede Ser Gestante?",
+      "secondaryCta": "Subrogación en Georgia",
+      "cardTitle": "Qué Evaluamos",
+      "cardPoints": [
+        "Evaluación médica y reproductiva",
+        "Preparación psicológica y consentimiento informado",
+        "Verificación de antecedentes y estabilidad del hogar"
+      ]
+    },
+    "process": {
+      "eyebrow": "PROCESO DE EVALUACIÓN",
+      "title": "Cómo Funciona la Evaluación de Subrogadas en Georgia",
+      "subtitle": "Una evaluación paso a paso diseñada para proteger a subrogadas, padres intencionales y cada niño nacido a través de nuestro programa en Tiflis.",
+      "steps": [
+        {
+          "title": "Evaluación Médica",
+          "description": "Controles de salud completos, análisis de laboratorio y evaluación reproductiva en clínicas FIV acreditadas de Tiflis. Confirmamos que cada candidata cumple los requisitos para gestación subrogada en Georgia país."
+        },
+        {
+          "title": "Entrevista Psicológica",
+          "description": "Un consejero licenciado realiza una evaluación de salud mental y sesión de asesoramiento para confirmar el consentimiento informado y la preparación emocional."
+        },
+        {
+          "title": "Verificación de Antecedentes Sociales",
+          "description": "Revisamos el historial de antecedentes y verificamos la estabilidad del hogar, incluyendo sistemas de apoyo familiar, para proteger a los padres internacionales."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "PREGUNTAS FRECUENTES",
+      "title": "Preguntas sobre Evaluación de Subrogadas",
+      "subtitle": "Preguntas comunes sobre elegibilidad y evaluación para subrogación en Georgia país.",
+      "items": [
+        {
+          "question": "¿Cuáles son los requisitos para ser subrogada en Georgia?",
+          "answer": "Las candidatas deben ser generalmente mujeres sanas de 21 a 40 años con al menos un embarazo previo saludable, no fumadoras y emocionalmente estables con un sistema de apoyo confiable."
+        },
+        {
+          "question": "¿Qué pruebas médicas realizan las subrogadas?",
+          "answer": "La evaluación incluye análisis de sangre, paneles de enfermedades infecciosas, evaluación de salud reproductiva y ecografía en clínicas FIV acreditadas de Tiflis."
+        },
+        {
+          "question": "¿Por qué es obligatoria la evaluación psicológica para subrogadas?",
+          "answer": "Confirma que cada subrogada comprende plenamente el proceso de gestación subrogada en Georgia, proporciona consentimiento informado y tiene la resiliencia emocional necesaria."
+        },
+        {
+          "question": "¿Cuánto tiempo dura la evaluación de subrogadas?",
+          "answer": "La mayoría de las candidatas completan la evaluación en tres a seis semanas, dependiendo de la programación de pruebas en nuestras clínicas de Tiflis."
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Interesada en Ser Subrogada?",
+      "description": "Conoce los requisitos, compensación y apoyo para gestación subrogada en Georgia país  o contáctanos para iniciar tu solicitud.",
+      "primaryCta": "Contáctanos Hoy",
+      "relatedTitle": "Páginas Relacionadas",
+      "relatedLinks": [
+        {
+          "label": "¿Quién Puede Ser Gestante?",
+          "path": "/who-can-become-a-surrogate"
+        },
+        { "label": "Subrogación en Georgia", "path": "/surrogacy-in-georgia" },
+        { "label": "Evaluación de Padres", "path": "/parent-screening" }
+      ]
+    }
+  },
   "whyBecomeDonor": {
     "hero": {
       "tag": "DONACIÓN DE ÓVULOS",
