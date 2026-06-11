@@ -53,9 +53,7 @@ const BlogManagement = () => {
 
   const fetchBlogPosts = async () => {
     try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog`
-      );
+      const response = await fetch(`/api/blog`);
       const data: BlogPost[] = await response.json();
 
       // Generate CloudFront URLs for all images
@@ -91,15 +89,11 @@ const BlogManagement = () => {
       if (selectedFile) {
         try {
           // Request signed URL
-          const res = await fetch(
-            `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog/image`,
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              credentials: "include",
-              body: JSON.stringify({ fileType: selectedFile.type }),
-            }
-          );
+          const res = await fetch(`/api/blog/image`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ fileType: selectedFile.type }),
+          });
 
           if (!res.ok) {
             throw new Error("Failed to get upload URL");
@@ -127,21 +121,15 @@ const BlogManagement = () => {
       }
 
       // Submit blog post with updated imagePath
-      const url = editingPost
-        ? `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog/${editingPost.id}`
-        : `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog`;
+      const url = editingPost ? `/api/blog/${editingPost.id}` : `/api/blog`;
 
       const method = editingPost ? "PUT" : "POST";
 
-      const body = {
-        ...formData,
-        imagePath,
-      };
+      const body = { ...formData, imagePath };
 
       const response = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
-        credentials: "include",
         body: JSON.stringify(body),
       });
 
@@ -167,13 +155,9 @@ const BlogManagement = () => {
   const handleDelete = async (id: string) => {
     if (window.confirm("Are you sure you want to delete this blog post?")) {
       try {
-        const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog/${id}`,
-          {
-            method: "DELETE",
-            credentials: "include",
-          }
-        );
+        const response = await fetch(`/api/blog/${id}`, {
+          method: "DELETE",
+        });
 
         if (response.ok) {
           fetchBlogPosts();

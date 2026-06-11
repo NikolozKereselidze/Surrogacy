@@ -18,11 +18,10 @@ const LoginContent = ({ isAdmin }: { isAdmin: boolean }) => {
 
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/auth/${isAdmin ? "admin" : "donor"}/login`,
+        `/api/auth/${isAdmin ? "admin" : "donor"}/login`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          credentials: "include",
           body: JSON.stringify({ username, password }),
         },
       );

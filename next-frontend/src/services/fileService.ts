@@ -5,11 +5,8 @@ export const uploadFileToS3 = async (
 ) => {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/file?fileType=${file.type}&fileName=${file.name}&donorType=${donorType}`,
-      {
-        method: "POST",
-        credentials: "include",
-      }
+      `/api/file?fileType=${file.type}&fileName=${file.name}&donorType=${donorType}`,
+      { method: "POST" },
     );
     const { signedUrl, key } = await response.json();
 
@@ -36,13 +33,9 @@ export const uploadFileToS3 = async (
 export const deleteFileFromS3 = async (filePath: string) => {
   if (!filePath) return;
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/file/?key=${filePath}`,
-      {
-        method: "DELETE",
-        credentials: "include",
-      }
-    );
+    const response = await fetch(`/api/file/?key=${filePath}`, {
+      method: "DELETE",
+    });
 
     if (!response.ok) {
       console.error("Failed to delete file from S3");

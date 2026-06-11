@@ -5,7 +5,7 @@ export default async function FindSpermDonorPage() {
     <DonorsList
       donorType="sperm-donors"
       title="Find Sperm Donors"
-      apiEndpoint={`${process.env.API_BASE_URL}/api/sperm-donors`}
+      apiEndpoint="/api/sperm-donors"
     />
   );
 }

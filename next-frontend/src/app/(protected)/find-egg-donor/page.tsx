@@ -5,7 +5,7 @@ export default async function FindEggDonorPage() {
     <DonorsList
       donorType="egg-donors"
       title="Find Egg Donors"
-      apiEndpoint={`${process.env.API_BASE_URL}/api/egg-donors`}
+      apiEndpoint="/api/egg-donors"
     />
   );
 }

@@ -49,9 +49,7 @@ const Donor = ({ donorType }: DonorCardProps) => {
   useEffect(() => {
     const fetchDonor = async () => {
       setLoading(true);
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/${donorType}/${id}`
-      );
+      const response = await fetch(`/api/${donorType}/${id}`);
       const data = await response.json();
       const donorData = data.databaseUser;
       setDonor(donorData);

@@ -39,17 +39,14 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
   const handleSubmit = async (data: Record<string, unknown>) => {
     try {
       const url = editingDonor
-        ? `${process.env.NEXT_PUBLIC_API_BASE_URL}${config.apiEndpoint}/${editingDonor.id}`
-        : `${process.env.NEXT_PUBLIC_API_BASE_URL}${config.apiEndpoint}`;
+        ? `/api${config.apiEndpoint}/${editingDonor.id}`
+        : `/api${config.apiEndpoint}`;
 
       const method = editingDonor ? "PUT" : "POST";
 
       const response = await fetch(url, {
         method,
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
 

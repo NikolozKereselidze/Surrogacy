@@ -66,8 +66,12 @@ export async function middleware(request: NextRequest) {
     pathname.startsWith("/login/");
 
   const [isAdminAuthorized, isDonorAuthorized] = await Promise.all([
-    checkToken(request, "admin/check-token"),
-    checkToken(request, "donor/check-token"),
+    isAdminPath || (isLoginPath && pathname === adminLoginPath)
+      ? checkToken(request, "admin/check-token")
+      : Promise.resolve(false),
+    isDonorPath || (isLoginPath && pathname === donorLoginPath)
+      ? checkToken(request, "donor/check-token")
+      : Promise.resolve(false),
   ]);
 
   if (isAdminPath && !isAdminAuthorized) {

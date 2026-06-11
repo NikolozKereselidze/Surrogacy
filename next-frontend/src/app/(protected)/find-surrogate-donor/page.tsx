@@ -5,7 +5,7 @@ function FindSurrogateDonorPage() {
     <DonorsList
       donorType="surrogate-donors"
       title="Find Surrogates"
-      apiEndpoint={`${process.env.API_BASE_URL}/api/surrogate-donors`}
+      apiEndpoint="/api/surrogate-donors"
     />
   );
 }
