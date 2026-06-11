@@ -1,5 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const supportedLocales = ["en", "he", "zh", "ru", "es", "ka"];
+
+const rtlLocales = ["he"];
+
+function extractLocale(pathname: string): string {
+  const firstSegment = pathname.split("/")[1] ?? "";
+  return supportedLocales.includes(firstSegment) ? firstSegment : "en";
+}
+
+function getDir(locale: string): "rtl" | "ltr" {
+  return rtlLocales.includes(locale) ? "rtl" : "ltr";
+}
+
 const donorProtectedPrefixes = [
   "/find-egg-donor",
   "/find-sperm-donor",
@@ -76,11 +89,16 @@ export async function middleware(request: NextRequest) {
     }
   }
 
-  return NextResponse.next();
+  const locale = extractLocale(pathname);
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-locale", locale);
+  requestHeaders.set("x-dir", getDir(locale));
+  return NextResponse.next({ request: { headers: requestHeaders } });
 }
 
 export const config = {
   matcher: [
+    "/(en|he|zh|ru|es|ka)(.*)",
     "/admin/:path*",
     "/find-egg-donor/:path*",
     "/find-sperm-donor/:path*",

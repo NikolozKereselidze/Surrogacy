@@ -1,19 +1,17 @@
-import Script from "next/script";
-
 export default function StructuredData() {
-  const structuredData = {
+  const medicalBusiness = {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     name: "Happy Family",
     alternateName: "Surrogation Center",
     description:
-      "Gestational surrogacy and egg donation agency in Georgia (country). IVF and fertility services in Tbilisi for international intended parents. Legally protected programs since 1997 with 3,200+ successful births.",
+      "Gestational surrogacy and egg donation agency in Georgia (country). IVF and fertility services in Tbilisi for international intended parents. Legally protected programs since 2011.",
     url: "https://www.ivftourgeorgia.com",
     logo: "https://www.ivftourgeorgia.com/img/logo.png",
     image: "https://www.ivftourgeorgia.com/img/og-image.jpg",
     telephone: "+995-596-235-050",
     email: "info@surrogationcenter.com",
-    foundingDate: "2009",
+    foundingDate: "2011",
     numberOfEmployees: "10-20",
     address: {
       "@type": "PostalAddress",
@@ -29,34 +27,13 @@ export default function StructuredData() {
       longitude: "44.8271",
     },
     serviceArea: [
-      {
-        "@type": "Country",
-        name: "Georgia",
-      },
-      {
-        "@type": "Country",
-        name: "United States",
-      },
-      {
-        "@type": "Country",
-        name: "China",
-      },
-      {
-        "@type": "Country",
-        name: "Spain",
-      },
-      {
-        "@type": "Country",
-        name: "Israel",
-      },
-      {
-        "@type": "Country",
-        name: "Russia",
-      },
-      {
-        "@type": "Country",
-        name: "Thailand",
-      },
+      { "@type": "Country", name: "Georgia" },
+      { "@type": "Country", name: "United States" },
+      { "@type": "Country", name: "China" },
+      { "@type": "Country", name: "Spain" },
+      { "@type": "Country", name: "Israel" },
+      { "@type": "Country", name: "Russia" },
+      { "@type": "Country", name: "Thailand" },
     ],
     medicalSpecialty: [
       "Reproductive Medicine",
@@ -77,10 +54,7 @@ export default function StructuredData() {
             name: "Surrogacy with Own Gametes",
             description:
               "Complete surrogacy program using intended parents' own eggs and sperm with comprehensive medical and legal support",
-            provider: {
-              "@type": "MedicalBusiness",
-              name: "Happy Family",
-            },
+            provider: { "@type": "MedicalBusiness", name: "Happy Family" },
           },
           category: "Surrogacy Services",
           availability: "InStock",
@@ -92,10 +66,7 @@ export default function StructuredData() {
             name: "Surrogacy with Egg Donor",
             description:
               "Surrogacy program using carefully screened egg donors with detailed profiles and genetic testing",
-            provider: {
-              "@type": "MedicalBusiness",
-              name: "Happy Family",
-            },
+            provider: { "@type": "MedicalBusiness", name: "Happy Family" },
           },
           category: "Surrogacy Services",
           availability: "InStock",
@@ -107,10 +78,7 @@ export default function StructuredData() {
             name: "Egg Freezing & Preservation",
             description:
               "Advanced egg freezing services for future fertility preservation using latest vitrification technology",
-            provider: {
-              "@type": "MedicalBusiness",
-              name: "Happy Family",
-            },
+            provider: { "@type": "MedicalBusiness", name: "Happy Family" },
           },
           category: "Fertility Preservation",
           availability: "InStock",
@@ -122,10 +90,7 @@ export default function StructuredData() {
             name: "VIP Concierge Services",
             description:
               "Premium housing, translation, and transportation services for international clients with 24/7 support",
-            provider: {
-              "@type": "MedicalBusiness",
-              name: "Happy Family",
-            },
+            provider: { "@type": "MedicalBusiness", name: "Happy Family" },
           },
           category: "Support Services",
           availability: "InStock",
@@ -137,10 +102,7 @@ export default function StructuredData() {
             name: "Surrogate Screening & Matching",
             description:
               "Comprehensive medical, psychological, and background screening with personalized matching for surrogates",
-            provider: {
-              "@type": "MedicalBusiness",
-              name: "Happy Family",
-            },
+            provider: { "@type": "MedicalBusiness", name: "Happy Family" },
           },
           category: "Surrogate Services",
           availability: "InStock",
@@ -152,10 +114,7 @@ export default function StructuredData() {
             name: "Egg Donor Database & Matching",
             description:
               "Extensive database of qualified egg donors with detailed profiles, medical history, and genetic testing",
-            provider: {
-              "@type": "MedicalBusiness",
-              name: "Happy Family",
-            },
+            provider: { "@type": "MedicalBusiness", name: "Happy Family" },
           },
           category: "Egg Donation Services",
           availability: "InStock",
@@ -167,10 +126,7 @@ export default function StructuredData() {
             name: "Intended Parent Screening",
             description:
               "Comprehensive screening process for intended parents including medical, psychological, and legal evaluations",
-            provider: {
-              "@type": "MedicalBusiness",
-              name: "Happy Family",
-            },
+            provider: { "@type": "MedicalBusiness", name: "Happy Family" },
           },
           category: "Parent Services",
           availability: "InStock",
@@ -182,41 +138,13 @@ export default function StructuredData() {
             name: "Legal & Documentation Support",
             description:
               "Complete legal support for surrogacy agreements, parental rights, and international documentation",
-            provider: {
-              "@type": "MedicalBusiness",
-              name: "Happy Family",
-            },
+            provider: { "@type": "MedicalBusiness", name: "Happy Family" },
           },
           category: "Legal Services",
           availability: "InStock",
         },
       ],
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "150",
-      bestRating: "5",
-      worstRating: "1",
-    },
-    hasCredential: [
-      {
-        "@type": "EducationalOccupationalCredential",
-        name: "Licensed Medical Practice",
-        recognizedBy: {
-          "@type": "Organization",
-          name: "Ministry of Health, Georgia",
-        },
-      },
-      {
-        "@type": "EducationalOccupationalCredential",
-        name: "International Surrogacy Certification",
-        recognizedBy: {
-          "@type": "Organization",
-          name: "American Society for Reproductive Medicine",
-        },
-      },
-    ],
     employee: [
       {
         "@type": "Person",
@@ -225,10 +153,7 @@ export default function StructuredData() {
         description:
           "Over 15 years of experience in healthcare and professional service consulting, helped facilitate 3,200+ successful births",
         email: "natia@surrogationcenter.com",
-        worksFor: {
-          "@type": "MedicalBusiness",
-          name: "Happy Family",
-        },
+        worksFor: { "@type": "MedicalBusiness", name: "Happy Family" },
       },
     ],
     sameAs: [
@@ -250,55 +175,39 @@ export default function StructuredData() {
       "Medical Coordination",
     ],
     areaServed: [
-      {
-        "@type": "Country",
-        name: "Georgia",
-      },
-      {
-        "@type": "Country",
-        name: "United States",
-      },
-      {
-        "@type": "Country",
-        name: "China",
-      },
-      {
-        "@type": "Country",
-        name: "Spain",
-      },
-      {
-        "@type": "Country",
-        name: "Israel",
-      },
-      {
-        "@type": "Country",
-        name: "Russia",
-      },
-      {
-        "@type": "Country",
-        name: "Thailand",
-      },
-      {
-        "@type": "Country",
-        name: "Germany",
-      },
-      {
-        "@type": "Country",
-        name: "France",
-      },
+      { "@type": "Country", name: "Georgia" },
+      { "@type": "Country", name: "United States" },
+      { "@type": "Country", name: "China" },
+      { "@type": "Country", name: "Spain" },
+      { "@type": "Country", name: "Israel" },
+      { "@type": "Country", name: "Russia" },
+      { "@type": "Country", name: "Thailand" },
+      { "@type": "Country", name: "Germany" },
+      { "@type": "Country", name: "France" },
     ],
     priceRange: "$$$",
-    currenciesAccepted: ["GEL", "USD", "EUR", "CNY", "EUR", "ILS"],
+    currenciesAccepted: ["GEL", "USD", "EUR", "CNY", "ILS"],
     paymentAccepted: ["Cash", "Credit Card", "Bank Transfer", "Insurance"],
-    openingHours: "Mo-Fr 09:00-19:00,",
+    openingHours: "Mo-Fr 09:00-19:00",
+  };
+
+  const webSite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Happy Family",
+    url: "https://www.ivftourgeorgia.com",
   };
 
   return (
-    <Script
-      id="structured-data"
-      type="application/ld+json"
-      strategy="afterInteractive"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalBusiness) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite) }}
+      />
+    </>
   );
 }
