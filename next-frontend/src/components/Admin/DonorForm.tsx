@@ -37,6 +37,11 @@ const DonorForm = ({
     weight: "",
     age: "",
     available: true,
+    hairColor: "",
+    eyeColor: "",
+    relationshipStatus: "",
+    livingSituation: "",
+    children: "",
     documentPath: "",
     mainImagePath: "",
     secondaryImages: [],
@@ -50,6 +55,11 @@ const DonorForm = ({
         weight: editingDonor.databaseUser.weight.toString(),
         age: editingDonor.databaseUser.age.toString(),
         available: editingDonor.databaseUser.available,
+        hairColor: editingDonor.databaseUser.hairColor || "",
+        eyeColor: editingDonor.databaseUser.eyeColor || "",
+        relationshipStatus: editingDonor.databaseUser.relationshipStatus || "",
+        livingSituation: editingDonor.databaseUser.livingSituation || "",
+        children: editingDonor.databaseUser.children || "",
         documentPath: editingDonor.databaseUser.documentPath || "",
         mainImagePath: editingDonor.databaseUser.mainImagePath || "",
         secondaryImages: editingDonor.databaseUser.donorImages.map(
@@ -62,6 +72,11 @@ const DonorForm = ({
         weight: "",
         age: "",
         available: true,
+        hairColor: "",
+        eyeColor: "",
+        relationshipStatus: "",
+        livingSituation: "",
+        children: "",
         documentPath: "",
         mainImagePath: "",
         secondaryImages: [],
@@ -292,6 +307,78 @@ const DonorForm = ({
                 <option value="true">Yes</option>
                 <option value="false">No</option>
               </select>
+            </div>
+          </div>
+
+          <div className={styles.formRow}>
+            <div className={styles.formGroup}>
+              <label htmlFor="hairColor">Hair Color</label>
+              <input
+                id="hairColor"
+                type="text"
+                value={formData.hairColor}
+                onChange={(e) =>
+                  setFormData({ ...formData, hairColor: e.target.value })
+                }
+                placeholder="e.g., Blonde"
+              />
+            </div>
+            <div className={styles.formGroup}>
+              <label htmlFor="eyeColor">Eye Color</label>
+              <input
+                id="eyeColor"
+                type="text"
+                value={formData.eyeColor}
+                onChange={(e) =>
+                  setFormData({ ...formData, eyeColor: e.target.value })
+                }
+                placeholder="e.g., Brown"
+              />
+            </div>
+          </div>
+
+          <div className={styles.formRow}>
+            <div className={styles.formGroup}>
+              <label htmlFor="relationshipStatus">Relationship Status</label>
+              <input
+                id="relationshipStatus"
+                type="text"
+                value={formData.relationshipStatus}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    relationshipStatus: e.target.value,
+                  })
+                }
+                placeholder="e.g., Single"
+              />
+            </div>
+            <div className={styles.formGroup}>
+              <label htmlFor="livingSituation">Living Situation</label>
+              <input
+                id="livingSituation"
+                type="text"
+                value={formData.livingSituation}
+                onChange={(e) =>
+                  setFormData({ ...formData, livingSituation: e.target.value })
+                }
+                placeholder="e.g., Alone"
+              />
+            </div>
+          </div>
+
+          <div className={styles.formRow}>
+            <div className={styles.formGroup}>
+              <label htmlFor="children">Children</label>
+              <input
+                id="children"
+                type="text"
+                value={formData.children}
+                onChange={(e) =>
+                  setFormData({ ...formData, children: e.target.value })
+                }
+                placeholder="e.g., None"
+              />
             </div>
           </div>
 

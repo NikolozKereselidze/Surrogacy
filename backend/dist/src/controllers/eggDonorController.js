@@ -1,5 +1,7 @@
 import { PrismaClient } from "../../prisma/generated/client.js";
 import { PrismaPg } from "@prisma/adapter-pg";
+import { createDonorProfileSchema, updateDonorProfileSchema, validationErrorResponse, } from "../schemas/donorProfileSchema.js";
+import { createDonorWithProfile, deleteDonorWithProfile, } from "../services/donorProfileService.js";
 const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL });
 const prisma = new PrismaClient({ adapter });
 const getEggDonors = async (req, res) => {
@@ -51,51 +53,26 @@ const getEggDonorsCount = async (req, res) => {
     }
 };
 const createEggDonor = async (req, res) => {
-    const { height, weight, age, available, documentPath, mainImagePath, secondaryImages, } = req.body;
+    const validationResult = createDonorProfileSchema.safeParse(req.body);
+    if (!validationResult.success) {
+        return res.status(400).json(validationErrorResponse(validationResult.error));
+    }
     try {
-        // First create the database user
-        const databaseUser = await prisma.databaseUser.create({
-            data: {
-                height,
-                weight,
-                age,
-                available: available || true,
-                documentPath,
-                mainImagePath,
-            },
-        });
-        // Create secondary images if provided
-        if (secondaryImages && secondaryImages.length > 0) {
-            await prisma.donorImage.createMany({
-                data: secondaryImages.map((imagePath) => ({
-                    databaseUserId: databaseUser.id,
-                    imagePath,
-                    isMain: false,
-                })),
-            });
-        }
-        // Then create the egg donor linked to the user
-        const eggDonor = await prisma.eggDonor.create({
-            data: {
-                databaseUserId: databaseUser.id,
-            },
-            include: {
-                databaseUser: {
-                    include: {
-                        donorImages: true,
-                    },
-                },
-            },
-        });
+        const eggDonor = await createDonorWithProfile(prisma, "eggDonor", validationResult.data);
         res.json(eggDonor);
     }
     catch (error) {
+        console.error("Failed to create egg donor:", error);
         res.status(500).json({ error: "Failed to create egg donor" });
     }
 };
 const updateEggDonor = async (req, res) => {
     const { id } = req.params;
-    const { height, weight, age, available, documentPath, mainImagePath, secondaryImages, } = req.body;
+    const validationResult = updateDonorProfileSchema.safeParse(req.body);
+    if (!validationResult.success) {
+        return res.status(400).json(validationErrorResponse(validationResult.error));
+    }
+    const { secondaryImages, ...profileData } = validationResult.data;
     try {
         // Get the egg donor to find the associated user
         const eggDonor = await prisma.eggDonor.findUnique({
@@ -114,14 +91,7 @@ const updateEggDonor = async (req, res) => {
         // Update the database user
         await prisma.databaseUser.update({
             where: { id: eggDonor.databaseUserId },
-            data: {
-                height,
-                weight,
-                age,
-                available,
-                documentPath,
-                mainImagePath,
-            },
+            data: profileData,
         });
         // Handle secondary images
         if (secondaryImages && secondaryImages.length > 0) {
@@ -155,32 +125,21 @@ const updateEggDonor = async (req, res) => {
         res.json(updatedEggDonor);
     }
     catch (error) {
-        res.status(404).json({ error: "Egg donor not found" });
+        res.status(500).json({ error: "Failed to update egg donor" });
     }
 };
 const deleteEggDonor = async (req, res) => {
     const { id } = req.params;
     try {
-        // Get the egg donor to find the associated user
-        const eggDonor = await prisma.eggDonor.findUnique({
-            where: { id },
-            include: { databaseUser: true },
-        });
-        if (!eggDonor) {
+        const deleted = await deleteDonorWithProfile(prisma, "eggDonor", id);
+        if (!deleted) {
             return res.status(404).json({ error: "Egg donor not found" });
         }
-        // Delete the egg donor first
-        await prisma.eggDonor.delete({
-            where: { id },
-        });
-        // Then delete the associated user
-        await prisma.databaseUser.delete({
-            where: { id: eggDonor.databaseUserId },
-        });
         res.json({ message: "Egg donor deleted successfully" });
     }
     catch (error) {
-        res.status(404).json({ error: "Egg donor not found" });
+        console.error("Failed to delete egg donor:", error);
+        res.status(500).json({ error: "Failed to delete egg donor" });
     }
 };
 export default {

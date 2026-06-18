@@ -13,6 +13,11 @@ export interface DatabaseUser {
   weight: number;
   age: number;
   available: boolean;
+  hairColor?: string;
+  eyeColor?: string;
+  relationshipStatus?: string;
+  livingSituation?: string;
+  children?: string;
   documentPath?: string;
   mainImagePath?: string;
   donorImages: DonorImage[];
@@ -44,6 +49,11 @@ export interface DonorFormData {
   weight: string;
   age: string;
   available: boolean;
+  hairColor: string;
+  eyeColor: string;
+  relationshipStatus: string;
+  livingSituation: string;
+  children: string;
   documentPath: string;
   mainImagePath: string;
   secondaryImages: string[];

@@ -4,7 +4,6 @@ import { useState } from "react";
 import { FaPlus, FaUser, FaUserPlus } from "react-icons/fa";
 import { MdFamilyRestroom } from "react-icons/md";
 import { useDonorManagement } from "@/hooks/useDonorManagement";
-import { deleteFileFromS3 } from "@/services/fileService";
 import { donorConfigs } from "@/config/donorConfigs";
 import { Donor } from "@/types/donor";
 import DonorForm from "./DonorForm";
@@ -39,8 +38,8 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
   const handleSubmit = async (data: Record<string, unknown>) => {
     try {
       const url = editingDonor
-        ? `/api${config.apiEndpoint}/${editingDonor.id}`
-        : `/api${config.apiEndpoint}`;
+        ? `${config.apiEndpoint}/${editingDonor.id}`
+        : config.apiEndpoint;
 
       const method = editingDonor ? "PUT" : "POST";
 
@@ -66,25 +65,6 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
       )
     ) {
       try {
-        // Find the donor to get their file paths
-        const donor = donors.find((d) => d.id === id);
-
-        if (donor) {
-          // Delete associated files from S3
-          if (donor.databaseUser.mainImagePath) {
-            await deleteFileFromS3(donor.databaseUser.mainImagePath);
-          }
-          if (donor.databaseUser.documentPath) {
-            await deleteFileFromS3(donor.databaseUser.documentPath);
-          }
-          // Delete secondary images
-          if (donor.databaseUser.donorImages) {
-          for (const image of donor.databaseUser.donorImages) {
-            await deleteFileFromS3(image.imagePath);
-          }
-        }
-        }
-
         await deleteDonor(id);
       } catch (error) {
         console.error(`Error deleting ${config.title}:`, error);

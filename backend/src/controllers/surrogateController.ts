@@ -1,6 +1,15 @@
 import { Request, Response } from "express";
 import { PrismaClient } from "../../prisma/generated/client.js";
 import { PrismaPg } from "@prisma/adapter-pg";
+import {
+  createDonorProfileSchema,
+  updateDonorProfileSchema,
+  validationErrorResponse,
+} from "../schemas/donorProfileSchema.js";
+import {
+  createDonorWithProfile,
+  deleteDonorWithProfile,
+} from "../services/donorProfileService.js";
 
 const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL })
 const prisma = new PrismaClient({ adapter })
@@ -53,72 +62,33 @@ const getSurrogatesCount = async (req: Request, res: Response) => {
   }
 };
 
-const createSurrogate = async (req: Request, res: Response) => {
-  const {
-    height,
-    weight,
-    age,
-    available,
-    documentPath,
-    mainImagePath,
-    secondaryImages,
-  } = req.body;
+const createSurrogate = async (req: Request, res: Response): Promise<any> => {
+  const validationResult = createDonorProfileSchema.safeParse(req.body);
+  if (!validationResult.success) {
+    return res.status(400).json(validationErrorResponse(validationResult.error));
+  }
 
   try {
-    // First create the database user
-    const databaseUser = await prisma.databaseUser.create({
-      data: {
-        height,
-        weight,
-        age,
-        available: available || true,
-        documentPath,
-        mainImagePath,
-      },
-    });
-
-    // Create secondary images if provided
-    if (secondaryImages && secondaryImages.length > 0) {
-      await prisma.donorImage.createMany({
-        data: secondaryImages.map((imagePath: string) => ({
-          databaseUserId: databaseUser.id,
-          imagePath,
-          isMain: false,
-        })),
-      });
-    }
-
-    // Then create the surrogate linked to the user
-    const surrogate = await prisma.surrogate.create({
-      data: {
-        databaseUserId: databaseUser.id,
-      },
-      include: {
-        databaseUser: {
-          include: {
-            donorImages: true,
-          },
-        },
-      },
-    });
-
+    const surrogate = await createDonorWithProfile(
+      prisma,
+      "surrogate",
+      validationResult.data,
+    );
     res.json(surrogate);
   } catch (error) {
+    console.error("Failed to create surrogate:", error);
     res.status(500).json({ error: "Failed to create surrogate" });
   }
 };
 
 const updateSurrogate = async (req: Request, res: Response): Promise<any> => {
   const { id } = req.params;
-  const {
-    height,
-    weight,
-    age,
-    available,
-    documentPath,
-    mainImagePath,
-    secondaryImages,
-  } = req.body;
+  const validationResult = updateDonorProfileSchema.safeParse(req.body);
+  if (!validationResult.success) {
+    return res.status(400).json(validationErrorResponse(validationResult.error));
+  }
+
+  const { secondaryImages, ...profileData } = validationResult.data;
 
   try {
     // Get the surrogate to find the associated user
@@ -140,14 +110,7 @@ const updateSurrogate = async (req: Request, res: Response): Promise<any> => {
     // Update the database user
     await prisma.databaseUser.update({
       where: { id: surrogate.databaseUserId },
-      data: {
-        height,
-        weight,
-        age,
-        available,
-        documentPath,
-        mainImagePath,
-      },
+      data: profileData,
     });
 
     // Handle secondary images
@@ -185,7 +148,7 @@ const updateSurrogate = async (req: Request, res: Response): Promise<any> => {
 
     res.json(updatedSurrogate);
   } catch (error) {
-    res.status(404).json({ error: "Surrogate not found" });
+    res.status(500).json({ error: "Failed to update surrogate" });
   }
 };
 
@@ -193,29 +156,16 @@ const deleteSurrogate = async (req: Request, res: Response): Promise<any> => {
   const { id } = req.params;
 
   try {
-    // Get the surrogate to find the associated user
-    const surrogate = await prisma.surrogate.findUnique({
-      where: { id },
-      include: { databaseUser: true },
-    });
+    const deleted = await deleteDonorWithProfile(prisma, "surrogate", id);
 
-    if (!surrogate) {
+    if (!deleted) {
       return res.status(404).json({ error: "Surrogate not found" });
     }
 
-    // Delete the surrogate first
-    await prisma.surrogate.delete({
-      where: { id },
-    });
-
-    // Then delete the associated user
-    await prisma.databaseUser.delete({
-      where: { id: surrogate.databaseUserId },
-    });
-
     res.json({ message: "Surrogate deleted successfully" });
   } catch (error) {
-    res.status(404).json({ error: "Surrogate not found" });
+    console.error("Failed to delete surrogate:", error);
+    res.status(500).json({ error: "Failed to delete surrogate" });
   }
 };
 

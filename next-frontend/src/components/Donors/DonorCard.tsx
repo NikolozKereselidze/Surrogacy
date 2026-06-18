@@ -27,10 +27,8 @@ interface Donor {
   age: number;
   hairColor?: string;
   eyeColor?: string;
-  sociability?: string;
   relationshipStatus?: string;
   livingSituation?: string;
-  character?: string;
   children?: string;
 }
 
@@ -77,7 +75,7 @@ const Donor = ({ donorType }: DonorCardProps) => {
 
   const prevImage = () => {
     setCurrentImageIndex(
-      (prev) => (prev - 1 + allImages.length) % allImages.length
+      (prev) => (prev - 1 + allImages.length) % allImages.length,
     );
   };
 
@@ -166,20 +164,12 @@ const Donor = ({ donorType }: DonorCardProps) => {
                   <p>{donor.weight || "55"} kg</p>
                 </div>
                 <div className={styles.attribute}>
-                  <span>Sociability: </span>
-                  <p>{donor.sociability || "High"}</p>
-                </div>
-                <div className={styles.attribute}>
                   <span>Status: </span>
                   <p>{donor.relationshipStatus || "Single"}</p>
                 </div>
                 <div className={styles.attribute}>
                   <span>Living: </span>
                   <p>{donor.livingSituation || "Alone"}</p>
-                </div>
-                <div className={styles.attribute}>
-                  <span>Character: </span>
-                  <p>{donor.character || "Kind"}</p>
                 </div>
                 <div className={styles.attribute}>
                   <span>Children: </span>

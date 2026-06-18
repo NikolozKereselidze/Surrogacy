@@ -1,6 +1,15 @@
 import { Request, Response } from "express";
 import { PrismaClient } from "../../prisma/generated/client.js";
 import { PrismaPg } from "@prisma/adapter-pg";
+import {
+  createDonorProfileSchema,
+  updateDonorProfileSchema,
+  validationErrorResponse,
+} from "../schemas/donorProfileSchema.js";
+import {
+  createDonorWithProfile,
+  deleteDonorWithProfile,
+} from "../services/donorProfileService.js";
 
 const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL })
 const prisma = new PrismaClient({ adapter })
@@ -53,72 +62,33 @@ const getSpermDonorsCount = async (req: Request, res: Response) => {
   }
 };
 
-const createSpermDonor = async (req: Request, res: Response) => {
-  const {
-    height,
-    weight,
-    age,
-    available,
-    documentPath,
-    mainImagePath,
-    secondaryImages,
-  } = req.body;
+const createSpermDonor = async (req: Request, res: Response): Promise<any> => {
+  const validationResult = createDonorProfileSchema.safeParse(req.body);
+  if (!validationResult.success) {
+    return res.status(400).json(validationErrorResponse(validationResult.error));
+  }
 
   try {
-    // First create the database user
-    const databaseUser = await prisma.databaseUser.create({
-      data: {
-        height,
-        weight,
-        age,
-        available: available || true,
-        documentPath,
-        mainImagePath,
-      },
-    });
-
-    // Create secondary images if provided
-    if (secondaryImages && secondaryImages.length > 0) {
-      await prisma.donorImage.createMany({
-        data: secondaryImages.map((imagePath: string) => ({
-          databaseUserId: databaseUser.id,
-          imagePath,
-          isMain: false,
-        })),
-      });
-    }
-
-    // Then create the sperm donor linked to the user
-    const spermDonor = await prisma.spermDonor.create({
-      data: {
-        databaseUserId: databaseUser.id,
-      },
-      include: {
-        databaseUser: {
-          include: {
-            donorImages: true,
-          },
-        },
-      },
-    });
-
+    const spermDonor = await createDonorWithProfile(
+      prisma,
+      "spermDonor",
+      validationResult.data,
+    );
     res.json(spermDonor);
   } catch (error) {
+    console.error("Failed to create sperm donor:", error);
     res.status(500).json({ error: "Failed to create sperm donor" });
   }
 };
 
 const updateSpermDonor = async (req: Request, res: Response): Promise<any> => {
   const { id } = req.params;
-  const {
-    height,
-    weight,
-    age,
-    available,
-    documentPath,
-    mainImagePath,
-    secondaryImages,
-  } = req.body;
+  const validationResult = updateDonorProfileSchema.safeParse(req.body);
+  if (!validationResult.success) {
+    return res.status(400).json(validationErrorResponse(validationResult.error));
+  }
+
+  const { secondaryImages, ...profileData } = validationResult.data;
 
   try {
     // Get the sperm donor to find the associated user
@@ -140,14 +110,7 @@ const updateSpermDonor = async (req: Request, res: Response): Promise<any> => {
     // Update the database user
     await prisma.databaseUser.update({
       where: { id: spermDonor.databaseUserId },
-      data: {
-        height,
-        weight,
-        age,
-        available,
-        documentPath,
-        mainImagePath,
-      },
+      data: profileData,
     });
 
     // Handle secondary images
@@ -185,7 +148,7 @@ const updateSpermDonor = async (req: Request, res: Response): Promise<any> => {
 
     res.json(updatedSpermDonor);
   } catch (error) {
-    res.status(404).json({ error: "Sperm donor not found" });
+    res.status(500).json({ error: "Failed to update sperm donor" });
   }
 };
 
@@ -193,29 +156,16 @@ const deleteSpermDonor = async (req: Request, res: Response): Promise<any> => {
   const { id } = req.params;
 
   try {
-    // Get the sperm donor to find the associated user
-    const spermDonor = await prisma.spermDonor.findUnique({
-      where: { id },
-      include: { databaseUser: true },
-    });
+    const deleted = await deleteDonorWithProfile(prisma, "spermDonor", id);
 
-    if (!spermDonor) {
+    if (!deleted) {
       return res.status(404).json({ error: "Sperm donor not found" });
     }
 
-    // Delete the sperm donor first
-    await prisma.spermDonor.delete({
-      where: { id },
-    });
-
-    // Then delete the associated user
-    await prisma.databaseUser.delete({
-      where: { id: spermDonor.databaseUserId },
-    });
-
     res.json({ message: "Sperm donor deleted successfully" });
   } catch (error) {
-    res.status(404).json({ error: "Sperm donor not found" });
+    console.error("Failed to delete sperm donor:", error);
+    res.status(500).json({ error: "Failed to delete sperm donor" });
   }
 };
 

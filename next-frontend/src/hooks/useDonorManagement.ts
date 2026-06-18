@@ -18,7 +18,7 @@ export const useDonorManagement = (apiEndpoint: string) => {
 
   const fetchDonors = useCallback(async () => {
     try {
-      const dataResponse = await fetch(`/api${apiEndpoint}`);
+      const dataResponse = await fetch(apiEndpoint);
       const data = await dataResponse.json();
       setDonors(data);
 
@@ -66,7 +66,7 @@ export const useDonorManagement = (apiEndpoint: string) => {
 
   const deleteDonor = async (id: string) => {
     try {
-      const response = await fetch(`/api${apiEndpoint}/${id}`, {
+      const response = await fetch(`${apiEndpoint}/${id}`, {
         method: "DELETE",
       });
 

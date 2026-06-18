@@ -44,6 +44,11 @@ export type DatabaseUserMinAggregateOutputType = {
   weight: number | null
   age: number | null
   available: boolean | null
+  hairColor: string | null
+  eyeColor: string | null
+  relationshipStatus: string | null
+  livingSituation: string | null
+  children: string | null
   documentPath: string | null
   mainImagePath: string | null
   createdAt: Date | null
@@ -56,6 +61,11 @@ export type DatabaseUserMaxAggregateOutputType = {
   weight: number | null
   age: number | null
   available: boolean | null
+  hairColor: string | null
+  eyeColor: string | null
+  relationshipStatus: string | null
+  livingSituation: string | null
+  children: string | null
   documentPath: string | null
   mainImagePath: string | null
   createdAt: Date | null
@@ -68,6 +78,11 @@ export type DatabaseUserCountAggregateOutputType = {
   weight: number
   age: number
   available: number
+  hairColor: number
+  eyeColor: number
+  relationshipStatus: number
+  livingSituation: number
+  children: number
   documentPath: number
   mainImagePath: number
   createdAt: number
@@ -94,6 +109,11 @@ export type DatabaseUserMinAggregateInputType = {
   weight?: true
   age?: true
   available?: true
+  hairColor?: true
+  eyeColor?: true
+  relationshipStatus?: true
+  livingSituation?: true
+  children?: true
   documentPath?: true
   mainImagePath?: true
   createdAt?: true
@@ -106,6 +126,11 @@ export type DatabaseUserMaxAggregateInputType = {
   weight?: true
   age?: true
   available?: true
+  hairColor?: true
+  eyeColor?: true
+  relationshipStatus?: true
+  livingSituation?: true
+  children?: true
   documentPath?: true
   mainImagePath?: true
   createdAt?: true
@@ -118,6 +143,11 @@ export type DatabaseUserCountAggregateInputType = {
   weight?: true
   age?: true
   available?: true
+  hairColor?: true
+  eyeColor?: true
+  relationshipStatus?: true
+  livingSituation?: true
+  children?: true
   documentPath?: true
   mainImagePath?: true
   createdAt?: true
@@ -217,6 +247,11 @@ export type DatabaseUserGroupByOutputType = {
   weight: number
   age: number
   available: boolean
+  hairColor: string
+  eyeColor: string
+  relationshipStatus: string
+  livingSituation: string
+  children: string | null
   documentPath: string | null
   mainImagePath: string | null
   createdAt: Date
@@ -252,6 +287,11 @@ export type DatabaseUserWhereInput = {
   weight?: Prisma.IntFilter<"DatabaseUser"> | number
   age?: Prisma.IntFilter<"DatabaseUser"> | number
   available?: Prisma.BoolFilter<"DatabaseUser"> | boolean
+  hairColor?: Prisma.StringFilter<"DatabaseUser"> | string
+  eyeColor?: Prisma.StringFilter<"DatabaseUser"> | string
+  relationshipStatus?: Prisma.StringFilter<"DatabaseUser"> | string
+  livingSituation?: Prisma.StringFilter<"DatabaseUser"> | string
+  children?: Prisma.StringNullableFilter<"DatabaseUser"> | string | null
   documentPath?: Prisma.StringNullableFilter<"DatabaseUser"> | string | null
   mainImagePath?: Prisma.StringNullableFilter<"DatabaseUser"> | string | null
   createdAt?: Prisma.DateTimeFilter<"DatabaseUser"> | Date | string
@@ -268,6 +308,11 @@ export type DatabaseUserOrderByWithRelationInput = {
   weight?: Prisma.SortOrder
   age?: Prisma.SortOrder
   available?: Prisma.SortOrder
+  hairColor?: Prisma.SortOrder
+  eyeColor?: Prisma.SortOrder
+  relationshipStatus?: Prisma.SortOrder
+  livingSituation?: Prisma.SortOrder
+  children?: Prisma.SortOrderInput | Prisma.SortOrder
   documentPath?: Prisma.SortOrderInput | Prisma.SortOrder
   mainImagePath?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
@@ -287,6 +332,11 @@ export type DatabaseUserWhereUniqueInput = Prisma.AtLeast<{
   weight?: Prisma.IntFilter<"DatabaseUser"> | number
   age?: Prisma.IntFilter<"DatabaseUser"> | number
   available?: Prisma.BoolFilter<"DatabaseUser"> | boolean
+  hairColor?: Prisma.StringFilter<"DatabaseUser"> | string
+  eyeColor?: Prisma.StringFilter<"DatabaseUser"> | string
+  relationshipStatus?: Prisma.StringFilter<"DatabaseUser"> | string
+  livingSituation?: Prisma.StringFilter<"DatabaseUser"> | string
+  children?: Prisma.StringNullableFilter<"DatabaseUser"> | string | null
   documentPath?: Prisma.StringNullableFilter<"DatabaseUser"> | string | null
   mainImagePath?: Prisma.StringNullableFilter<"DatabaseUser"> | string | null
   createdAt?: Prisma.DateTimeFilter<"DatabaseUser"> | Date | string
@@ -303,6 +353,11 @@ export type DatabaseUserOrderByWithAggregationInput = {
   weight?: Prisma.SortOrder
   age?: Prisma.SortOrder
   available?: Prisma.SortOrder
+  hairColor?: Prisma.SortOrder
+  eyeColor?: Prisma.SortOrder
+  relationshipStatus?: Prisma.SortOrder
+  livingSituation?: Prisma.SortOrder
+  children?: Prisma.SortOrderInput | Prisma.SortOrder
   documentPath?: Prisma.SortOrderInput | Prisma.SortOrder
   mainImagePath?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
@@ -323,6 +378,11 @@ export type DatabaseUserScalarWhereWithAggregatesInput = {
   weight?: Prisma.IntWithAggregatesFilter<"DatabaseUser"> | number
   age?: Prisma.IntWithAggregatesFilter<"DatabaseUser"> | number
   available?: Prisma.BoolWithAggregatesFilter<"DatabaseUser"> | boolean
+  hairColor?: Prisma.StringWithAggregatesFilter<"DatabaseUser"> | string
+  eyeColor?: Prisma.StringWithAggregatesFilter<"DatabaseUser"> | string
+  relationshipStatus?: Prisma.StringWithAggregatesFilter<"DatabaseUser"> | string
+  livingSituation?: Prisma.StringWithAggregatesFilter<"DatabaseUser"> | string
+  children?: Prisma.StringNullableWithAggregatesFilter<"DatabaseUser"> | string | null
   documentPath?: Prisma.StringNullableWithAggregatesFilter<"DatabaseUser"> | string | null
   mainImagePath?: Prisma.StringNullableWithAggregatesFilter<"DatabaseUser"> | string | null
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"DatabaseUser"> | Date | string
@@ -335,6 +395,11 @@ export type DatabaseUserCreateInput = {
   weight: number
   age: number
   available?: boolean
+  hairColor: string
+  eyeColor: string
+  relationshipStatus: string
+  livingSituation: string
+  children?: string | null
   documentPath?: string | null
   mainImagePath?: string | null
   createdAt?: Date | string
@@ -351,6 +416,11 @@ export type DatabaseUserUncheckedCreateInput = {
   weight: number
   age: number
   available?: boolean
+  hairColor: string
+  eyeColor: string
+  relationshipStatus: string
+  livingSituation: string
+  children?: string | null
   documentPath?: string | null
   mainImagePath?: string | null
   createdAt?: Date | string
@@ -367,6 +437,11 @@ export type DatabaseUserUpdateInput = {
   weight?: Prisma.IntFieldUpdateOperationsInput | number
   age?: Prisma.IntFieldUpdateOperationsInput | number
   available?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  hairColor?: Prisma.StringFieldUpdateOperationsInput | string
+  eyeColor?: Prisma.StringFieldUpdateOperationsInput | string
+  relationshipStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  livingSituation?: Prisma.StringFieldUpdateOperationsInput | string
+  children?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   documentPath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   mainImagePath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -383,6 +458,11 @@ export type DatabaseUserUncheckedUpdateInput = {
   weight?: Prisma.IntFieldUpdateOperationsInput | number
   age?: Prisma.IntFieldUpdateOperationsInput | number
   available?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  hairColor?: Prisma.StringFieldUpdateOperationsInput | string
+  eyeColor?: Prisma.StringFieldUpdateOperationsInput | string
+  relationshipStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  livingSituation?: Prisma.StringFieldUpdateOperationsInput | string
+  children?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   documentPath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   mainImagePath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -399,6 +479,11 @@ export type DatabaseUserCreateManyInput = {
   weight: number
   age: number
   available?: boolean
+  hairColor: string
+  eyeColor: string
+  relationshipStatus: string
+  livingSituation: string
+  children?: string | null
   documentPath?: string | null
   mainImagePath?: string | null
   createdAt?: Date | string
@@ -411,6 +496,11 @@ export type DatabaseUserUpdateManyMutationInput = {
   weight?: Prisma.IntFieldUpdateOperationsInput | number
   age?: Prisma.IntFieldUpdateOperationsInput | number
   available?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  hairColor?: Prisma.StringFieldUpdateOperationsInput | string
+  eyeColor?: Prisma.StringFieldUpdateOperationsInput | string
+  relationshipStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  livingSituation?: Prisma.StringFieldUpdateOperationsInput | string
+  children?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   documentPath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   mainImagePath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -423,6 +513,11 @@ export type DatabaseUserUncheckedUpdateManyInput = {
   weight?: Prisma.IntFieldUpdateOperationsInput | number
   age?: Prisma.IntFieldUpdateOperationsInput | number
   available?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  hairColor?: Prisma.StringFieldUpdateOperationsInput | string
+  eyeColor?: Prisma.StringFieldUpdateOperationsInput | string
+  relationshipStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  livingSituation?: Prisma.StringFieldUpdateOperationsInput | string
+  children?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   documentPath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   mainImagePath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -435,6 +530,11 @@ export type DatabaseUserCountOrderByAggregateInput = {
   weight?: Prisma.SortOrder
   age?: Prisma.SortOrder
   available?: Prisma.SortOrder
+  hairColor?: Prisma.SortOrder
+  eyeColor?: Prisma.SortOrder
+  relationshipStatus?: Prisma.SortOrder
+  livingSituation?: Prisma.SortOrder
+  children?: Prisma.SortOrder
   documentPath?: Prisma.SortOrder
   mainImagePath?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
@@ -453,6 +553,11 @@ export type DatabaseUserMaxOrderByAggregateInput = {
   weight?: Prisma.SortOrder
   age?: Prisma.SortOrder
   available?: Prisma.SortOrder
+  hairColor?: Prisma.SortOrder
+  eyeColor?: Prisma.SortOrder
+  relationshipStatus?: Prisma.SortOrder
+  livingSituation?: Prisma.SortOrder
+  children?: Prisma.SortOrder
   documentPath?: Prisma.SortOrder
   mainImagePath?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
@@ -465,6 +570,11 @@ export type DatabaseUserMinOrderByAggregateInput = {
   weight?: Prisma.SortOrder
   age?: Prisma.SortOrder
   available?: Prisma.SortOrder
+  hairColor?: Prisma.SortOrder
+  eyeColor?: Prisma.SortOrder
+  relationshipStatus?: Prisma.SortOrder
+  livingSituation?: Prisma.SortOrder
+  children?: Prisma.SortOrder
   documentPath?: Prisma.SortOrder
   mainImagePath?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
@@ -568,6 +678,11 @@ export type DatabaseUserCreateWithoutDonorImagesInput = {
   weight: number
   age: number
   available?: boolean
+  hairColor: string
+  eyeColor: string
+  relationshipStatus: string
+  livingSituation: string
+  children?: string | null
   documentPath?: string | null
   mainImagePath?: string | null
   createdAt?: Date | string
@@ -583,6 +698,11 @@ export type DatabaseUserUncheckedCreateWithoutDonorImagesInput = {
   weight: number
   age: number
   available?: boolean
+  hairColor: string
+  eyeColor: string
+  relationshipStatus: string
+  livingSituation: string
+  children?: string | null
   documentPath?: string | null
   mainImagePath?: string | null
   createdAt?: Date | string
@@ -614,6 +734,11 @@ export type DatabaseUserUpdateWithoutDonorImagesInput = {
   weight?: Prisma.IntFieldUpdateOperationsInput | number
   age?: Prisma.IntFieldUpdateOperationsInput | number
   available?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  hairColor?: Prisma.StringFieldUpdateOperationsInput | string
+  eyeColor?: Prisma.StringFieldUpdateOperationsInput | string
+  relationshipStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  livingSituation?: Prisma.StringFieldUpdateOperationsInput | string
+  children?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   documentPath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   mainImagePath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -629,6 +754,11 @@ export type DatabaseUserUncheckedUpdateWithoutDonorImagesInput = {
   weight?: Prisma.IntFieldUpdateOperationsInput | number
   age?: Prisma.IntFieldUpdateOperationsInput | number
   available?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  hairColor?: Prisma.StringFieldUpdateOperationsInput | string
+  eyeColor?: Prisma.StringFieldUpdateOperationsInput | string
+  relationshipStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  livingSituation?: Prisma.StringFieldUpdateOperationsInput | string
+  children?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   documentPath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   mainImagePath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -644,6 +774,11 @@ export type DatabaseUserCreateWithoutEggDonorsInput = {
   weight: number
   age: number
   available?: boolean
+  hairColor: string
+  eyeColor: string
+  relationshipStatus: string
+  livingSituation: string
+  children?: string | null
   documentPath?: string | null
   mainImagePath?: string | null
   createdAt?: Date | string
@@ -659,6 +794,11 @@ export type DatabaseUserUncheckedCreateWithoutEggDonorsInput = {
   weight: number
   age: number
   available?: boolean
+  hairColor: string
+  eyeColor: string
+  relationshipStatus: string
+  livingSituation: string
+  children?: string | null
   documentPath?: string | null
   mainImagePath?: string | null
   createdAt?: Date | string
@@ -690,6 +830,11 @@ export type DatabaseUserUpdateWithoutEggDonorsInput = {
   weight?: Prisma.IntFieldUpdateOperationsInput | number
   age?: Prisma.IntFieldUpdateOperationsInput | number
   available?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  hairColor?: Prisma.StringFieldUpdateOperationsInput | string
+  eyeColor?: Prisma.StringFieldUpdateOperationsInput | string
+  relationshipStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  livingSituation?: Prisma.StringFieldUpdateOperationsInput | string
+  children?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   documentPath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   mainImagePath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -705,6 +850,11 @@ export type DatabaseUserUncheckedUpdateWithoutEggDonorsInput = {
   weight?: Prisma.IntFieldUpdateOperationsInput | number
   age?: Prisma.IntFieldUpdateOperationsInput | number
   available?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  hairColor?: Prisma.StringFieldUpdateOperationsInput | string
+  eyeColor?: Prisma.StringFieldUpdateOperationsInput | string
+  relationshipStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  livingSituation?: Prisma.StringFieldUpdateOperationsInput | string
+  children?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   documentPath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   mainImagePath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -720,6 +870,11 @@ export type DatabaseUserCreateWithoutSurrogatesInput = {
   weight: number
   age: number
   available?: boolean
+  hairColor: string
+  eyeColor: string
+  relationshipStatus: string
+  livingSituation: string
+  children?: string | null
   documentPath?: string | null
   mainImagePath?: string | null
   createdAt?: Date | string
@@ -735,6 +890,11 @@ export type DatabaseUserUncheckedCreateWithoutSurrogatesInput = {
   weight: number
   age: number
   available?: boolean
+  hairColor: string
+  eyeColor: string
+  relationshipStatus: string
+  livingSituation: string
+  children?: string | null
   documentPath?: string | null
   mainImagePath?: string | null
   createdAt?: Date | string
@@ -766,6 +926,11 @@ export type DatabaseUserUpdateWithoutSurrogatesInput = {
   weight?: Prisma.IntFieldUpdateOperationsInput | number
   age?: Prisma.IntFieldUpdateOperationsInput | number
   available?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  hairColor?: Prisma.StringFieldUpdateOperationsInput | string
+  eyeColor?: Prisma.StringFieldUpdateOperationsInput | string
+  relationshipStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  livingSituation?: Prisma.StringFieldUpdateOperationsInput | string
+  children?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   documentPath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   mainImagePath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -781,6 +946,11 @@ export type DatabaseUserUncheckedUpdateWithoutSurrogatesInput = {
   weight?: Prisma.IntFieldUpdateOperationsInput | number
   age?: Prisma.IntFieldUpdateOperationsInput | number
   available?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  hairColor?: Prisma.StringFieldUpdateOperationsInput | string
+  eyeColor?: Prisma.StringFieldUpdateOperationsInput | string
+  relationshipStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  livingSituation?: Prisma.StringFieldUpdateOperationsInput | string
+  children?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   documentPath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   mainImagePath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -796,6 +966,11 @@ export type DatabaseUserCreateWithoutSpermDonorsInput = {
   weight: number
   age: number
   available?: boolean
+  hairColor: string
+  eyeColor: string
+  relationshipStatus: string
+  livingSituation: string
+  children?: string | null
   documentPath?: string | null
   mainImagePath?: string | null
   createdAt?: Date | string
@@ -811,6 +986,11 @@ export type DatabaseUserUncheckedCreateWithoutSpermDonorsInput = {
   weight: number
   age: number
   available?: boolean
+  hairColor: string
+  eyeColor: string
+  relationshipStatus: string
+  livingSituation: string
+  children?: string | null
   documentPath?: string | null
   mainImagePath?: string | null
   createdAt?: Date | string
@@ -842,6 +1022,11 @@ export type DatabaseUserUpdateWithoutSpermDonorsInput = {
   weight?: Prisma.IntFieldUpdateOperationsInput | number
   age?: Prisma.IntFieldUpdateOperationsInput | number
   available?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  hairColor?: Prisma.StringFieldUpdateOperationsInput | string
+  eyeColor?: Prisma.StringFieldUpdateOperationsInput | string
+  relationshipStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  livingSituation?: Prisma.StringFieldUpdateOperationsInput | string
+  children?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   documentPath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   mainImagePath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -857,6 +1042,11 @@ export type DatabaseUserUncheckedUpdateWithoutSpermDonorsInput = {
   weight?: Prisma.IntFieldUpdateOperationsInput | number
   age?: Prisma.IntFieldUpdateOperationsInput | number
   available?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  hairColor?: Prisma.StringFieldUpdateOperationsInput | string
+  eyeColor?: Prisma.StringFieldUpdateOperationsInput | string
+  relationshipStatus?: Prisma.StringFieldUpdateOperationsInput | string
+  livingSituation?: Prisma.StringFieldUpdateOperationsInput | string
+  children?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   documentPath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   mainImagePath?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -930,6 +1120,11 @@ export type DatabaseUserSelect<ExtArgs extends runtime.Types.Extensions.Internal
   weight?: boolean
   age?: boolean
   available?: boolean
+  hairColor?: boolean
+  eyeColor?: boolean
+  relationshipStatus?: boolean
+  livingSituation?: boolean
+  children?: boolean
   documentPath?: boolean
   mainImagePath?: boolean
   createdAt?: boolean
@@ -947,6 +1142,11 @@ export type DatabaseUserSelectCreateManyAndReturn<ExtArgs extends runtime.Types.
   weight?: boolean
   age?: boolean
   available?: boolean
+  hairColor?: boolean
+  eyeColor?: boolean
+  relationshipStatus?: boolean
+  livingSituation?: boolean
+  children?: boolean
   documentPath?: boolean
   mainImagePath?: boolean
   createdAt?: boolean
@@ -959,6 +1159,11 @@ export type DatabaseUserSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.
   weight?: boolean
   age?: boolean
   available?: boolean
+  hairColor?: boolean
+  eyeColor?: boolean
+  relationshipStatus?: boolean
+  livingSituation?: boolean
+  children?: boolean
   documentPath?: boolean
   mainImagePath?: boolean
   createdAt?: boolean
@@ -971,13 +1176,18 @@ export type DatabaseUserSelectScalar = {
   weight?: boolean
   age?: boolean
   available?: boolean
+  hairColor?: boolean
+  eyeColor?: boolean
+  relationshipStatus?: boolean
+  livingSituation?: boolean
+  children?: boolean
   documentPath?: boolean
   mainImagePath?: boolean
   createdAt?: boolean
   updatedAt?: boolean
 }
 
-export type DatabaseUserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "height" | "weight" | "age" | "available" | "documentPath" | "mainImagePath" | "createdAt" | "updatedAt", ExtArgs["result"]["databaseUser"]>
+export type DatabaseUserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "height" | "weight" | "age" | "available" | "hairColor" | "eyeColor" | "relationshipStatus" | "livingSituation" | "children" | "documentPath" | "mainImagePath" | "createdAt" | "updatedAt", ExtArgs["result"]["databaseUser"]>
 export type DatabaseUserInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   donorImages?: boolean | Prisma.DatabaseUser$donorImagesArgs<ExtArgs>
   eggDonors?: boolean | Prisma.DatabaseUser$eggDonorsArgs<ExtArgs>
@@ -1002,6 +1212,11 @@ export type $DatabaseUserPayload<ExtArgs extends runtime.Types.Extensions.Intern
     weight: number
     age: number
     available: boolean
+    hairColor: string
+    eyeColor: string
+    relationshipStatus: string
+    livingSituation: string
+    children: string | null
     documentPath: string | null
     mainImagePath: string | null
     createdAt: Date
@@ -1438,6 +1653,11 @@ export interface DatabaseUserFieldRefs {
   readonly weight: Prisma.FieldRef<"DatabaseUser", 'Int'>
   readonly age: Prisma.FieldRef<"DatabaseUser", 'Int'>
   readonly available: Prisma.FieldRef<"DatabaseUser", 'Boolean'>
+  readonly hairColor: Prisma.FieldRef<"DatabaseUser", 'String'>
+  readonly eyeColor: Prisma.FieldRef<"DatabaseUser", 'String'>
+  readonly relationshipStatus: Prisma.FieldRef<"DatabaseUser", 'String'>
+  readonly livingSituation: Prisma.FieldRef<"DatabaseUser", 'String'>
+  readonly children: Prisma.FieldRef<"DatabaseUser", 'String'>
   readonly documentPath: Prisma.FieldRef<"DatabaseUser", 'String'>
   readonly mainImagePath: Prisma.FieldRef<"DatabaseUser", 'String'>
   readonly createdAt: Prisma.FieldRef<"DatabaseUser", 'DateTime'>
