@@ -22,8 +22,9 @@
   padding: var(--padding-xs) var(--padding-sm);
   border-radius: 9999px;
   border: 1px solid #e5e7eb;
-  background: #ffffff;
+  background: var(--card-bg);
   color: var(--dark-blue);
+  font-size: var(--font-sm);
   cursor: pointer;
   transition:
     background 0.25s ease,
@@ -40,4 +41,10 @@
   background: rgba(124, 58, 237, 0.08);
   border-color: var(--color-primary);
   color: var(--color-primary);
+}
+
+@media screen and (max-width: 768px) {
+  .categories {
+    justify-content: center;
+  }
 }

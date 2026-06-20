@@ -1,28 +1,18 @@
 import styles from "@/styles/Surrogates/WhoCanBecomeSurrogate.module.css";
-
 interface ProcessStepProps {
-  stepNumber: number;
-  stepTitle: string;
-  stepContent: string;
-  stepIcon?: React.ReactNode;
+    stepNumber: number;
+    stepTitle: string;
+    stepContent: string;
+    stepIcon?: React.ReactNode;
 }
-
-const ProcessStep = ({
-  stepNumber,
-  stepTitle,
-  stepContent,
-  stepIcon,
-}: ProcessStepProps) => {
-  return (
-    <div className={styles.processStep}>
+const ProcessStep = ({ stepNumber, stepTitle, stepContent, stepIcon, }: ProcessStepProps) => {
+    return (<div className={styles.processStep}>
       <div className={styles.stepNumber}>{stepNumber}</div>
       <div className={styles.stepContent}>
         <h3>{stepTitle}</h3>
         <p>{stepContent}</p>
         {stepIcon && <div className={styles.stepIcon}>{stepIcon}</div>}
       </div>
-    </div>
-  );
+    </div>);
 };
-
 export default ProcessStep;

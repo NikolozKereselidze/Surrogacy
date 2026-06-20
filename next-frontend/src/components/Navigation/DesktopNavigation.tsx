@@ -1,7 +1,5 @@
 import NavigationList from "./NavigationList";
-
 const DesktopNavigation = () => {
-  return <NavigationList />;
+    return <NavigationList />;
 };
-
 export default DesktopNavigation;

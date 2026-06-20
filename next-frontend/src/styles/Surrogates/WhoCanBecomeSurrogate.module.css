@@ -2,7 +2,6 @@
   min-height: 100vh;
 }
 
-/* Hero Section */
 .heroSection {
   background: linear-gradient(135deg, var(--color-primary) 0%, #3b82f6 100%) !important;
   color: white;
@@ -98,16 +97,12 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* Requirements Section */
-
 .requirementsGrid {
   display: flex;
   flex-wrap: wrap;
   gap: var(--gap-8xl);
   margin: 0 auto;
 }
-
-/* Process Section */
 
 .processStep {
   display: flex;
@@ -139,7 +134,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap-md);
-  background: white;
+  background: var(--card-bg);
   padding: var(--padding-xl);
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -179,7 +174,6 @@
   font-size: var(--font-xl);
 }
 
-/* Support Section */
 .supportGrid {
   display: flex;
   flex-wrap: wrap;

@@ -78,7 +78,6 @@
   border-radius: 0.65rem;
 }
 
-/* RTL support for Hebrew */
 [dir="rtl"] .currentLangButton {
   flex-direction: row-reverse;
 }

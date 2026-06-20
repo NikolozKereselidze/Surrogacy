@@ -1,29 +1,14 @@
-import {
-  FaMapMarkerAlt,
-  FaPhone,
-  FaEnvelope,
-  FaWhatsapp,
-  FaFacebook,
-  FaLinkedin,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaWhatsapp, FaFacebook, FaLinkedin, FaInstagram, } from "react-icons/fa";
 import styles from "@/styles/Contact/ContactUs.module.css";
 import { useTranslation } from "react-i18next";
-
 const ContactInfo = () => {
-  const { t } = useTranslation();
-  return (
-    <div className={styles.contactInfo}>
+    const { t } = useTranslation();
+    return (<div className={styles.contactInfo}>
       <div className={styles.contactInfoItem}>
         <FaMapMarkerAlt />
         <div className={styles.contactInfoItemText}>
           <h3>{t("contactUs.addressLabel")}</h3>
-          <a
-            aria-label="Address"
-            href="https://maps.app.goo.gl/KypCLxrf5taojooJA"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a aria-label="Address" href="https://maps.app.goo.gl/KypCLxrf5taojooJA" target="_blank" rel="noopener noreferrer">
             6 Marijani St, Tbilisi 0186
           </a>
         </div>
@@ -48,48 +33,22 @@ const ContactInfo = () => {
       </div>
 
       <div className={styles.contactUsSocials}>
-        <a
-          className={styles.whatsappIcon}
-          href="https://wa.me/19298775515?text=Hi%2C%20I%27d%20like%20to%20know%20more"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Whatsapp"
-        >
+        <a className={styles.whatsappIcon} href="https://wa.me/19298775515?text=Hi%2C%20I%27d%20like%20to%20know%20more" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
           <FaWhatsapp />
         </a>
 
-        <a
-          className={styles.facebookIcon}
-          href="https://www.facebook.com/share/15bgwdnhbw/?mibextid=wwXIfr"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
-        >
+        <a className={styles.facebookIcon} href="https://www.facebook.com/share/15bgwdnhbw/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
           <FaFacebook />
         </a>
 
-        <a
-          className={styles.linkedinIcon}
-          href="https://www.linkedin.com/in/happy-family-georgia?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Linkedin"
-        >
+        <a className={styles.linkedinIcon} href="https://www.linkedin.com/in/happy-family-georgia?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="Linkedin">
           <FaLinkedin />
         </a>
 
-        <a
-          className={styles.instagramIcon}
-          href="https://www.instagram.com/surrogacy_center_happy_family/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-        >
+        <a className={styles.instagramIcon} href="https://www.instagram.com/surrogacy_center_happy_family/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <FaInstagram />
         </a>
       </div>
-    </div>
-  );
+    </div>);
 };
-
 export default ContactInfo;

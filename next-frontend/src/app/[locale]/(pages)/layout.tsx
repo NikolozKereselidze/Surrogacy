@@ -1,9 +1,6 @@
 import MainLayout from "@/components/MainLayout";
-
-export default function PagesLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
+export default function PagesLayout({ children, }: Readonly<{
+    children: React.ReactNode;
 }>) {
-  return <MainLayout>{children}</MainLayout>;
+    return <MainLayout>{children}</MainLayout>;
 }

@@ -1,10 +1,9 @@
-/* Main page container */
+
 .teamMemberPage {
   min-height: 100vh;
   padding: var(--padding-xl) 0;
 }
 
-/* Back button container */
 .backButtonContainer {
   max-width: 1200px;
   margin: 0 auto;
@@ -35,7 +34,6 @@
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
-/* Main section */
 .teamMemberSection {
   background: none !important;
   max-width: 1200px;
@@ -45,7 +43,8 @@
 
 .teamMemberWrapper {
   width: 100%;
-  background: #fff;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 1rem;
   padding: var(--padding-3xl);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -53,7 +52,6 @@
   overflow: hidden;
 }
 
-/* Team member info */
 .teamMemberInfo {
   display: flex;
   flex-direction: column;
@@ -88,7 +86,6 @@
   position: relative;
 }
 
-/* Image container */
 .imageContainer {
   max-width: 6.2rem;
   max-height: 6.2rem;
@@ -109,8 +106,6 @@
   display: block;
 }
 
-/* Description */
-
 .memberDescription p {
   font-size: var(--font-base);
   line-height: 1.7;
@@ -118,7 +113,6 @@
   font-weight: 500;
 }
 
-/* Contact section */
 .teamMemberContact {
   display: flex;
   flex-direction: column;
@@ -143,8 +137,8 @@
   align-items: center;
   gap: var(--gap-lg);
   padding: var(--padding-base) var(--padding-lg);
-  background: white;
-  border: 2px solid #e2e8f0;
+  background: var(--card-bg);
+  border: 2px solid var(--card-border);
   border-radius: 0.75rem;
   text-decoration: none;
   color: var(--light-gray);
@@ -170,7 +164,6 @@
   transform: scale(1.1);
 }
 
-/* Not found page */
 .notFound {
   min-height: 100vh;
   display: flex;
@@ -182,7 +175,7 @@
 
 .notFoundContent {
   text-align: center;
-  background: white;
+  background: var(--card-bg);
   padding: var(--padding-3xl);
   border-radius: 1rem;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);

@@ -222,7 +222,6 @@
   font-size: var(--font-lg);
 }
 
-/* Blog Management Styles */
 .pageHeader {
   display: flex;
   justify-content: space-between;

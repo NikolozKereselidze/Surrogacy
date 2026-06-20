@@ -1,213 +1,200 @@
+const ORGANIZATION_ID = "https://www.ivftourgeorgia.com/#organization";
+
+const organizationAddress = {
+    "@type": "PostalAddress",
+    streetAddress: "6 Marijani St",
+    addressLocality: "Tbilisi",
+    addressRegion: "Tbilisi",
+    postalCode: "0186",
+    addressCountry: "GE",
+};
+
+const organizationRef = { "@id": ORGANIZATION_ID };
+
 export default function StructuredData() {
-  const medicalBusiness = {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    name: "Happy Family",
-    alternateName: "Surrogation Center",
-    description:
-      "Gestational surrogacy and egg donation agency in Georgia (country). IVF and fertility services in Tbilisi for international intended parents. Legally protected programs since 2011.",
-    url: "https://www.ivftourgeorgia.com",
-    logo: "https://www.ivftourgeorgia.com/img/logo.png",
-    image: "https://www.ivftourgeorgia.com/img/og-image.jpg",
-    telephone: "+995-596-235-050",
-    email: "info@surrogationcenter.com",
-    foundingDate: "2011",
-    numberOfEmployees: "10-20",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "6 Marijani St",
-      addressLocality: "Tbilisi",
-      addressRegion: "Tbilisi",
-      postalCode: "0186",
-      addressCountry: "Georgia",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: "41.7151",
-      longitude: "44.8271",
-    },
-    serviceArea: [
-      { "@type": "Country", name: "Georgia" },
-      { "@type": "Country", name: "United States" },
-      { "@type": "Country", name: "China" },
-      { "@type": "Country", name: "Spain" },
-      { "@type": "Country", name: "Israel" },
-      { "@type": "Country", name: "Russia" },
-      { "@type": "Country", name: "Thailand" },
-    ],
-    medicalSpecialty: [
-      "Reproductive Medicine",
-      "Fertility Services",
-      "Surrogacy",
-      "Egg Donation",
-      "IVF Coordination",
-    ],
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Comprehensive Fertility Services",
-      description: "Full-service surrogacy and egg donation programs",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Surrogacy with Own Gametes",
-            description:
-              "Complete surrogacy program using intended parents' own eggs and sperm with comprehensive medical and legal support",
-            provider: { "@type": "MedicalBusiness", name: "Happy Family" },
-          },
-          category: "Surrogacy Services",
-          availability: "InStock",
+    const medicalBusiness = {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "@id": ORGANIZATION_ID,
+        name: "Happy Family",
+        alternateName: "Surrogation Center",
+        description: "Gestational surrogacy and egg donation agency in Georgia (country). IVF and fertility services in Tbilisi for international intended parents. Legally protected programs since 2011.",
+        url: "https://www.ivftourgeorgia.com",
+        logo: "https://www.ivftourgeorgia.com/img/logo.png",
+        image: "https://www.ivftourgeorgia.com/img/og-image.jpg",
+        telephone: "+995-596-235-050",
+        email: "info@surrogationcenter.com",
+        foundingDate: "2011",
+        numberOfEmployees: "10-20",
+        address: organizationAddress,
+        geo: {
+            "@type": "GeoCoordinates",
+            latitude: "41.7151",
+            longitude: "44.8271",
         },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Surrogacy with Egg Donor",
-            description:
-              "Surrogacy program using carefully screened egg donors with detailed profiles and genetic testing",
-            provider: { "@type": "MedicalBusiness", name: "Happy Family" },
-          },
-          category: "Surrogacy Services",
-          availability: "InStock",
+        serviceArea: [
+            { "@type": "Country", name: "Georgia" },
+            { "@type": "Country", name: "United States" },
+            { "@type": "Country", name: "China" },
+            { "@type": "Country", name: "Spain" },
+            { "@type": "Country", name: "Israel" },
+            { "@type": "Country", name: "Russia" },
+            { "@type": "Country", name: "Thailand" },
+        ],
+        medicalSpecialty: [
+            "Reproductive Medicine",
+            "Fertility Services",
+            "Surrogacy",
+            "Egg Donation",
+            "IVF Coordination",
+        ],
+        hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Comprehensive Fertility Services",
+            description: "Full-service surrogacy and egg donation programs",
+            itemListElement: [
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: "Surrogacy with Own Gametes",
+                        description: "Complete surrogacy program using intended parents' own eggs and sperm with comprehensive medical and legal support",
+                        provider: organizationRef,
+                    },
+                    category: "Surrogacy Services",
+                    availability: "InStock",
+                },
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: "Surrogacy with Egg Donor",
+                        description: "Surrogacy program using carefully screened egg donors with detailed profiles and genetic testing",
+                        provider: organizationRef,
+                    },
+                    category: "Surrogacy Services",
+                    availability: "InStock",
+                },
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: "Egg Freezing & Preservation",
+                        description: "Advanced egg freezing services for future fertility preservation using latest vitrification technology",
+                        provider: organizationRef,
+                    },
+                    category: "Fertility Preservation",
+                    availability: "InStock",
+                },
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: "VIP Concierge Services",
+                        description: "Premium housing, translation, and transportation services for international clients with 24/7 support",
+                        provider: organizationRef,
+                    },
+                    category: "Support Services",
+                    availability: "InStock",
+                },
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: "Surrogate Screening & Matching",
+                        description: "Comprehensive medical, psychological, and background screening with personalized matching for surrogates",
+                        provider: organizationRef,
+                    },
+                    category: "Surrogate Services",
+                    availability: "InStock",
+                },
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: "Egg Donor Database & Matching",
+                        description: "Extensive database of qualified egg donors with detailed profiles, medical history, and genetic testing",
+                        provider: organizationRef,
+                    },
+                    category: "Egg Donation Services",
+                    availability: "InStock",
+                },
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: "Intended Parent Screening",
+                        description: "Comprehensive screening process for intended parents including medical, psychological, and legal evaluations",
+                        provider: organizationRef,
+                    },
+                    category: "Parent Services",
+                    availability: "InStock",
+                },
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: "Legal & Documentation Support",
+                        description: "Complete legal support for surrogacy agreements, parental rights, and international documentation",
+                        provider: organizationRef,
+                    },
+                    category: "Legal Services",
+                    availability: "InStock",
+                },
+            ],
         },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Egg Freezing & Preservation",
-            description:
-              "Advanced egg freezing services for future fertility preservation using latest vitrification technology",
-            provider: { "@type": "MedicalBusiness", name: "Happy Family" },
-          },
-          category: "Fertility Preservation",
-          availability: "InStock",
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "VIP Concierge Services",
-            description:
-              "Premium housing, translation, and transportation services for international clients with 24/7 support",
-            provider: { "@type": "MedicalBusiness", name: "Happy Family" },
-          },
-          category: "Support Services",
-          availability: "InStock",
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Surrogate Screening & Matching",
-            description:
-              "Comprehensive medical, psychological, and background screening with personalized matching for surrogates",
-            provider: { "@type": "MedicalBusiness", name: "Happy Family" },
-          },
-          category: "Surrogate Services",
-          availability: "InStock",
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Egg Donor Database & Matching",
-            description:
-              "Extensive database of qualified egg donors with detailed profiles, medical history, and genetic testing",
-            provider: { "@type": "MedicalBusiness", name: "Happy Family" },
-          },
-          category: "Egg Donation Services",
-          availability: "InStock",
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Intended Parent Screening",
-            description:
-              "Comprehensive screening process for intended parents including medical, psychological, and legal evaluations",
-            provider: { "@type": "MedicalBusiness", name: "Happy Family" },
-          },
-          category: "Parent Services",
-          availability: "InStock",
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Legal & Documentation Support",
-            description:
-              "Complete legal support for surrogacy agreements, parental rights, and international documentation",
-            provider: { "@type": "MedicalBusiness", name: "Happy Family" },
-          },
-          category: "Legal Services",
-          availability: "InStock",
-        },
-      ],
-    },
-    employee: [
-      {
-        "@type": "Person",
-        name: "Natia Devdariani",
-        jobTitle: "Founder & CEO",
-        description:
-          "Over 15 years of experience in healthcare and professional service consulting, helped facilitate 3,200+ successful births",
-        email: "natia@surrogationcenter.com",
-        worksFor: { "@type": "MedicalBusiness", name: "Happy Family" },
-      },
-    ],
-    sameAs: [
-      "https://www.facebook.com/profile.php?id=61556348591661",
-      "https://www.instagram.com/surrogacy_center_happy_family/",
-      "https://www.linkedin.com/company/surrogacy/",
-    ],
-    knowsAbout: [
-      "Surrogacy",
-      "Egg Donation",
-      "IVF",
-      "Fertility Preservation",
-      "Reproductive Medicine",
-      "Family Building",
-      "International Surrogacy",
-      "Fertility Counseling",
-      "Genetic Testing",
-      "Legal Surrogacy",
-      "Medical Coordination",
-    ],
-    areaServed: [
-      { "@type": "Country", name: "Georgia" },
-      { "@type": "Country", name: "United States" },
-      { "@type": "Country", name: "China" },
-      { "@type": "Country", name: "Spain" },
-      { "@type": "Country", name: "Israel" },
-      { "@type": "Country", name: "Russia" },
-      { "@type": "Country", name: "Thailand" },
-      { "@type": "Country", name: "Germany" },
-      { "@type": "Country", name: "France" },
-    ],
-    priceRange: "$$$",
-    currenciesAccepted: ["GEL", "USD", "EUR", "CNY", "ILS"],
-    paymentAccepted: ["Cash", "Credit Card", "Bank Transfer", "Insurance"],
-    openingHours: "Mo-Fr 09:00-19:00",
-  };
-
-  const webSite = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Happy Family",
-    url: "https://www.ivftourgeorgia.com",
-  };
-
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalBusiness) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite) }}
-      />
-    </>
-  );
+        employee: [
+            {
+                "@type": "Person",
+                name: "Natia Devdariani",
+                jobTitle: "Founder & CEO",
+                description: "Over 15 years of experience in healthcare and professional service consulting, helped facilitate 3,200+ successful births",
+                email: "natia@surrogationcenter.com",
+                worksFor: organizationRef,
+            },
+        ],
+        sameAs: [
+            "https://www.facebook.com/profile.php?id=61556348591661",
+            "https://www.instagram.com/surrogacy_center_happy_family/",
+            "https://www.linkedin.com/company/surrogacy/",
+        ],
+        knowsAbout: [
+            "Surrogacy",
+            "Egg Donation",
+            "IVF",
+            "Fertility Preservation",
+            "Reproductive Medicine",
+            "Family Building",
+            "International Surrogacy",
+            "Fertility Counseling",
+            "Genetic Testing",
+            "Legal Surrogacy",
+            "Medical Coordination",
+        ],
+        areaServed: [
+            { "@type": "Country", name: "Georgia" },
+            { "@type": "Country", name: "United States" },
+            { "@type": "Country", name: "China" },
+            { "@type": "Country", name: "Spain" },
+            { "@type": "Country", name: "Israel" },
+            { "@type": "Country", name: "Russia" },
+            { "@type": "Country", name: "Thailand" },
+            { "@type": "Country", name: "Germany" },
+            { "@type": "Country", name: "France" },
+        ],
+        priceRange: "$$$",
+        currenciesAccepted: ["GEL", "USD", "EUR", "CNY", "ILS"],
+        paymentAccepted: ["Cash", "Credit Card", "Bank Transfer", "Insurance"],
+        openingHours: "Mo-Fr 09:00-19:00",
+    };
+    const webSite = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "Happy Family",
+        url: "https://www.ivftourgeorgia.com",
+    };
+    return (<>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalBusiness) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite) }}/>
+    </>);
 }

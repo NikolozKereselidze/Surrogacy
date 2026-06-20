@@ -1,11 +1,7 @@
 "use client";
-
 import AdminNav from "./AdminNav";
-
-export default function AdminLayout({
-  children,
-}: {
-  children: React.ReactNode;
+export default function AdminLayout({ children, }: {
+    children: React.ReactNode;
 }) {
-  return <AdminNav>{children}</AdminNav>;
+    return <AdminNav>{children}</AdminNav>;
 }

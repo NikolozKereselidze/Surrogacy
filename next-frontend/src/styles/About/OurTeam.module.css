@@ -20,7 +20,7 @@
 }
 
 .teamCard {
-  background: white;
+  background: var(--card-bg);
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   overflow: hidden;
@@ -107,7 +107,7 @@
 }
 
 .valueCard {
-  background: white;
+  background: var(--card-bg);
   padding: var(--padding-xl);
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -138,7 +138,6 @@
   line-height: 1.6;
 }
 
-/* Tablet and larger screens */
 @media (min-width: 768px) {
   .teamGrid {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -149,7 +148,6 @@
   }
 }
 
-/* Desktop and larger screens */
 @media (min-width: 1024px) {
   .teamGrid {
     grid-template-columns: repeat(3, 1fr);
@@ -160,14 +158,12 @@
   }
 }
 
-/* Large desktop screens */
 @media (min-width: 1440px) {
   .container {
     max-width: 1400px;
   }
 }
 
-/* Show More Button Styles */
 .showMoreContainer {
   display: flex;
   justify-content: center;

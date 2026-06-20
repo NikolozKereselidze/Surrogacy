@@ -1,5 +1,4 @@
 .section {
-  background: var(--section-bg-alt);
   padding: var(--padding-3xl) var(--padding-base);
 }
 

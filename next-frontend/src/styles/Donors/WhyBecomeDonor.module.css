@@ -6,6 +6,9 @@
 
 .hero {
   background: var(--section-bg-alt);
+  --card-bg: #ffffff;
+  --card-bg-muted: #f8fafc;
+  --card-border: #e2e8f0;
 }
 
 .heroInner {
@@ -74,8 +77,8 @@
 }
 
 .heroCard {
-  background: #fff;
-  border: 1px solid #e2e8f0;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-xl);
   padding: var(--padding-2xl);
   box-shadow: var(--shadow-sm);

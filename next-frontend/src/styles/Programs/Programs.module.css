@@ -88,7 +88,7 @@ h3.title {
 }
 
 .faqItem {
-  background: white;
+  background: var(--card-bg);
   padding: var(--padding-xl);
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -111,3 +111,5 @@ h3.title {
   color: var(--gray);
   line-height: 1.6;
 }
+
+

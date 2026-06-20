@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap-2xl);
-  background: white;
+  background: var(--card-bg);
   padding: var(--padding-xl);
   border-radius: 1rem;
   box-shadow: var(--shadow-layered);
@@ -46,6 +46,7 @@
 }
 
 .requirementCard p {
+  font-size: var(--font-base);
   color: var(--gray);
   line-height: 1.6;
 }

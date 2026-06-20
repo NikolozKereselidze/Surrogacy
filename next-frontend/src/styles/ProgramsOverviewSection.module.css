@@ -10,13 +10,15 @@
   flex-direction: column;
   gap: var(--gap-2xl);
   position: relative;
-  background: linear-gradient(135deg, #fff 0%, #fafbff 100%);
+  background: linear-gradient(135deg, var(--card-bg) 0%, var(--card-bg-muted) 100%);
   border-radius: 20px;
   padding: var(--padding-xl) var(--padding-lg);
   box-shadow: var(--shadow-layered);
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--card-border);
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   will-change: transform;
   backface-visibility: hidden;
 }
@@ -114,9 +116,9 @@
   max-width: 12rem;
 }
 
-/* CTA section */
 .ctaSection {
-  background: #fff;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 1.2rem;
   padding: var(--padding-2xl) var(--padding-xl);
   text-align: center;

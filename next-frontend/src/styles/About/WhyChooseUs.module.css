@@ -4,7 +4,6 @@
   width: 100%;
 }
 
-/* Reasons grid */
 .reasonsGrid {
   width: 100%;
   max-width: 75rem;
@@ -15,7 +14,7 @@
 }
 
 .reasonCard {
-  background: white;
+  background: var(--card-bg);
   padding: var(--padding-xl);
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -53,7 +52,6 @@
   line-height: 1.7;
 }
 
-/* Guide section */
 .guideGrid {
   width: 100%;
   max-width: 75rem;
@@ -64,7 +62,7 @@
 }
 
 .guideCard {
-  background: #fff;
+  background: var(--card-bg);
   padding: var(--padding-xl);
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -138,7 +136,6 @@
   font-size: var(--font-xs);
 }
 
-/* Georgia section */
 .georgiaOverview {
   max-width: 48rem;
   margin: 0 auto var(--gap-6xl);
@@ -158,7 +155,7 @@
 }
 
 .georgiaCard {
-  background: #fff;
+  background: var(--card-bg);
   padding: var(--padding-xl);
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -211,7 +208,6 @@
   margin-top: var(--gap-6xl);
 }
 
-/* Comparison */
 .comparisonGrid {
   width: 100%;
   max-width: 75rem;
@@ -225,7 +221,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap-2xl);
-  background: white;
+  background: var(--card-bg);
   padding: var(--padding-xl);
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);

@@ -3,69 +3,49 @@ import { Nunito_Sans } from "next/font/google";
 import StructuredData from "@/components/StructuredData";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { headers } from "next/headers";
-
 import "./[locale]/globals.css";
-
 const nunitoSans = Nunito_Sans({
-  variable: "--font-nunito-sans",
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
-  display: "swap",
+    variable: "--font-nunito-sans",
+    subsets: ["latin"],
+    weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+    display: "swap",
 });
-
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.ivftourgeorgia.com"),
-  title: {
-    default: "Happy Family - Surrogacy & Egg Donation Services",
-    template: "%s | Happy Family",
-  },
-  description:
-    "Compassionate surrogacy and egg donation services tailored to your journey. Expert guidance for intended parents, surrogates, and egg donors worldwide.",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+    metadataBase: new URL("https://www.ivftourgeorgia.com"),
+    title: {
+        default: "Happy Family - Surrogacy & Egg Donation Services",
+        template: "%s | Happy Family",
     },
-  },
-  verification: {
-    google: "TowaFgD30cj57_17EGxFj4spSTkz6MFK93fAxuZ_xAQ",
-  },
+    description: "Compassionate surrogacy and egg donation services tailored to your journey. Expert guidance for intended parents, surrogates, and egg donors worldwide.",
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
+    verification: {
+        google: "TowaFgD30cj57_17EGxFj4spSTkz6MFK93fAxuZ_xAQ",
+    },
 };
-
-export default async function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
+export default async function RootLayout({ children, }: Readonly<{
+    children: React.ReactNode;
 }>) {
-  const headersList = await headers();
-  const locale = headersList.get("x-locale") ?? "en";
-  const dir = headersList.get("x-dir") ?? "ltr";
-
-  return (
-    <html
-      data-scroll-behavior="smooth"
-      className={`${nunitoSans.variable}`}
-      lang={locale}
-      dir={dir}
-    >
+    const headersList = await headers();
+    const locale = headersList.get("x-locale") ?? "en";
+    const dir = headersList.get("x-dir") ?? "ltr";
+    return (<html data-scroll-behavior="smooth" className={`${nunitoSans.variable}`} lang={locale} dir={dir}>
       <head>
         <StructuredData />
       </head>
       <body className={nunitoSans.variable}>
-        {children}
-        <GoogleAnalytics
-          gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ""}
-        />
-        <script
-          src={`//code.tidio.co/${process.env.TIDIO_CODE}.js`}
-          async
-        ></script>
+          {children}
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ""}/>
+          <script src={`//code.tidio.co/${process.env.TIDIO_CODE}.js`} async></script>
       </body>
-    </html>
-  );
+    </html>);
 }

@@ -1,5 +1,8 @@
 .hero {
   background: var(--section-bg-alt);
+  --card-bg: #ffffff;
+  --card-bg-muted: #f8fafc;
+  --card-border: #e2e8f0;
   padding: var(--padding-3xl) var(--padding-base);
 }
 
@@ -23,14 +26,14 @@
 
 .heroContent :global(.title) {
   text-align: start;
-  font-size: var(--font-7xl);
+  font-size: var(--font-5xl);
   line-height: 1.15;
   letter-spacing: -0.02em;
 }
 
 .heroContent :global(.description) {
   text-align: start;
-  font-size: var(--font-lg);
+  font-size: var(--font-md);
   line-height: 1.6;
   max-width: 42rem;
 }
@@ -40,7 +43,7 @@
   padding: var(--padding-xs) var(--padding-sm);
   border: 1px solid #e2e8f0;
   border-radius: 1.25rem;
-  background: #fff;
+  background: var(--card-bg);
   font-size: var(--font-sm);
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -69,7 +72,7 @@
   font-size: var(--font-sm);
   font-weight: 600;
   text-decoration: none;
-  background: #fff;
+  background: var(--card-bg);
   color: var(--gray);
   border: 1px solid #e2e8f0;
   cursor: pointer;
@@ -87,7 +90,7 @@
 }
 
 .sidebarCard {
-  background: #fff;
+  background: var(--card-bg);
   border: 1px solid #e2e8f0;
   border-radius: 1rem;
   padding: var(--padding-xl);
@@ -155,6 +158,10 @@
   padding-inline-start: calc(var(--gap-md) + 0.85em);
 }
 
+.simpleList > li {
+  font-size: var(--font-base);
+}
+
 @media screen and (max-width: 1024px) {
   .heroInner {
     grid-template-columns: 1fr;
@@ -162,7 +169,7 @@
   }
 
   .heroContent :global(.title) {
-    font-size: var(--font-5xl);
+    font-size: var(--font-4xl);
   }
 }
 
@@ -171,8 +178,13 @@
     padding: var(--padding-2xl) var(--padding-base);
   }
 
+  .heroContent {
+    align-items: center;
+  }
+
   .heroContent :global(.title) {
-    font-size: var(--font-3xl);
+    font-size: var(--font-2xl);
+    text-align: center;
   }
 
   .heroContent :global(.description) {
@@ -201,6 +213,6 @@
 
 @media screen and (max-width: 480px) {
   .heroContent :global(.title) {
-    font-size: var(--font-2xl);
+    font-size: var(--font-xl);
   }
 }

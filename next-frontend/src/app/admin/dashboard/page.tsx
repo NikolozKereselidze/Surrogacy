@@ -1,50 +1,40 @@
 "use client";
-
 import styles from "@/styles/Admin/AdminDashboard.module.css";
 import { FaBlog, FaUser, FaUserPlus } from "react-icons/fa";
 import { MdFamilyRestroom } from "react-icons/md";
 import { useEffect, useState } from "react";
-
 const AdminDashboard = () => {
-  const [blogPostsCount, setBlogPostsCount] = useState(0);
-  const [eggDonorsCount, setEggDonorsCount] = useState(0);
-  const [spermDonorsCount, setSpermDonorsCount] = useState(0);
-  const [surrogatesCount, setSurrogatesCount] = useState(0);
-
-  useEffect(() => {
-    const fetchCounts = async () => {
-      try {
-        const [blogResponse, eggResponse, spermResponse, surrogateResponse] =
-          await Promise.all([
-            fetch(`/api/blog/count`),
-            fetch(`/api/egg-donors/count`),
-            fetch(`/api/sperm-donors/count`),
-            fetch(`/api/surrogate-donors/count`),
-          ]);
-
-        const [blogData, eggData, spermData, surrogateData] = await Promise.all(
-          [
-            blogResponse.json(),
-            eggResponse.json(),
-            spermResponse.json(),
-            surrogateResponse.json(),
-          ]
-        );
-
-        setBlogPostsCount(blogData.count);
-        setEggDonorsCount(eggData.count);
-        setSpermDonorsCount(spermData.count);
-        setSurrogatesCount(surrogateData.count);
-      } catch (error) {
-        console.error("Error fetching counts:", error);
-      }
-    };
-
-    fetchCounts();
-  }, []);
-
-  return (
-    <div className={styles.dashboardContent}>
+    const [blogPostsCount, setBlogPostsCount] = useState(0);
+    const [eggDonorsCount, setEggDonorsCount] = useState(0);
+    const [spermDonorsCount, setSpermDonorsCount] = useState(0);
+    const [surrogatesCount, setSurrogatesCount] = useState(0);
+    useEffect(() => {
+        const fetchCounts = async () => {
+            try {
+                const [blogResponse, eggResponse, spermResponse, surrogateResponse] = await Promise.all([
+                    fetch(`/api/blog/count`),
+                    fetch(`/api/egg-donors/count`),
+                    fetch(`/api/sperm-donors/count`),
+                    fetch(`/api/surrogate-donors/count`),
+                ]);
+                const [blogData, eggData, spermData, surrogateData] = await Promise.all([
+                    blogResponse.json(),
+                    eggResponse.json(),
+                    spermResponse.json(),
+                    surrogateResponse.json(),
+                ]);
+                setBlogPostsCount(blogData.count);
+                setEggDonorsCount(eggData.count);
+                setSpermDonorsCount(spermData.count);
+                setSurrogatesCount(surrogateData.count);
+            }
+            catch (error) {
+                console.error("Error fetching counts:", error);
+            }
+        };
+        fetchCounts();
+    }, []);
+    return (<div className={styles.dashboardContent}>
       <h1 className={styles.dashboardWelcome}>
         Welcome, <span>Admin</span>
       </h1>
@@ -86,8 +76,6 @@ const AdminDashboard = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
 };
-
 export default AdminDashboard;

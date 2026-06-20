@@ -5,21 +5,16 @@ import styles from "@/styles/About/OurTeam.module.css";
 import { getAllTeamMembers } from "@/data/teamMembers";
 import TeamCard from "@/components/TeamCard";
 import Button from "@/components/Button";
-
 const OurTeam = () => {
-  const { t } = useTranslation();
-  const [visibleCount, setVisibleCount] = useState(3);
-
-  const teamMembers = getAllTeamMembers();
-  const visibleMembers = teamMembers.slice(0, visibleCount);
-  const hasMoreMembers = visibleCount < teamMembers.length;
-
-  const handleShowMore = () => {
-    setVisibleCount((prev) => Math.min(prev + 3, teamMembers.length));
-  };
-
-  return (
-    <>
+    const { t } = useTranslation();
+    const [visibleCount, setVisibleCount] = useState(3);
+    const teamMembers = getAllTeamMembers();
+    const visibleMembers = teamMembers.slice(0, visibleCount);
+    const hasMoreMembers = visibleCount < teamMembers.length;
+    const handleShowMore = () => {
+        setVisibleCount((prev) => Math.min(prev + 3, teamMembers.length));
+    };
+    return (<>
       <div className={styles.ourTeamContainer}>
         <section className={styles.teamSection}>
           <div className="section">
@@ -30,20 +25,13 @@ const OurTeam = () => {
 
             <div className={styles.teamContainer}>
               <div className={styles.teamGrid}>
-                {visibleMembers.map((member, index) => (
-                  <TeamCard key={index} member={member} />
-                ))}
+                {visibleMembers.map((member, index) => (<TeamCard key={index} member={member}/>))}
               </div>
-              {hasMoreMembers && (
-                <div className={styles.showMoreContainer}>
-                  <Button
-                    className={styles.showMoreButton}
-                    onClick={handleShowMore}
-                  >
+              {hasMoreMembers && (<div className={styles.showMoreContainer}>
+                  <Button className={styles.showMoreButton} onClick={handleShowMore}>
                     {t("ourTeam.showMore") || "Show More"}
                   </Button>
-                </div>
-              )}
+                </div>)}
             </div>
           </div>
         </section>
@@ -80,8 +68,6 @@ const OurTeam = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default OurTeam;

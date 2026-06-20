@@ -1,19 +1,14 @@
 import styles from "@/styles/Surrogates/SurrogacyProcess.module.css";
-
 interface SupportCardProps {
-  title: string;
-  text: string;
-  icon: React.ReactNode;
+    title: string;
+    text: string;
+    icon: React.ReactNode;
 }
-
 const SupportCard = ({ title, text, icon }: SupportCardProps) => {
-  return (
-    <div className={styles.supportCard}>
+    return (<div className={styles.supportCard}>
       <div className={styles.supportIcon}>{icon}</div>
       <h3 className={styles.supportCardTitle}>{title}</h3>
       <p className={styles.supportCardText}>{text}</p>
-    </div>
-  );
+    </div>);
 };
-
 export default SupportCard;

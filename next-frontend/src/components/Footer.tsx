@@ -1,24 +1,15 @@
 "use client";
-
 import styles from "../styles/Footer.module.css";
 import { useTranslation } from "react-i18next";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaWhatsapp,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaWhatsapp, FaLinkedin, } from "react-icons/fa";
 import Link from "next/link";
 import { useLocale } from "@/hooks/useLocale";
-
 const Footer = () => {
-  const { t } = useTranslation();
-  const locale = useLocale();
-
-  return (
-    <footer className={styles.footer}>
+    const { t } = useTranslation();
+    const locale = useLocale();
+    return (<footer className={styles.footer}>
       <div className={styles.footerContent}>
-        {/* Top Section: Brand & Newsletter */}
+        
         <div className={styles.topSection}>
           <div className={styles.brandColumn}>
             <div className={styles.logo}>
@@ -32,7 +23,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Middle Section: Navigation Links */}
+        
         <div className={styles.linksGrid}>
           <div className={styles.linksColumn}>
             <h4>{t("navigation.aboutUs")}</h4>
@@ -153,7 +144,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Section: Copyright & Socials */}
+        
         <div className={styles.bottomSection}>
           <div className={styles.copyright}>
             &copy; {new Date().getFullYear()} Happy Family.{" "}
@@ -166,47 +157,21 @@ const Footer = () => {
           </div>
 
           <div className={styles.socials}>
-            <a
-              className={styles.socialIcon}
-              aria-label="Facebook"
-              href="https://www.facebook.com/share/15bgwdnhbw/?mibextid=wwXIfr"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a className={styles.socialIcon} aria-label="Facebook" href="https://www.facebook.com/share/15bgwdnhbw/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
               <FaFacebook />
             </a>
-            <a
-              className={styles.socialIcon}
-              aria-label="Instagram"
-              href="https://www.instagram.com/surrogacy_center_happy_family/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a className={styles.socialIcon} aria-label="Instagram" href="https://www.instagram.com/surrogacy_center_happy_family/" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
-            <a
-              className={styles.socialIcon}
-              aria-label="WhatsApp"
-              href="https://wa.me/19298775515?text=Hi%2C%20I%27d%20like%20to%20know%20more"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a className={styles.socialIcon} aria-label="WhatsApp" href="https://wa.me/19298775515?text=Hi%2C%20I%27d%20like%20to%20know%20more" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp />
             </a>
-            <a
-              className={styles.socialIcon}
-              aria-label="LinkedIn"
-              href="https://www.linkedin.com/in/happy-family-georgia?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a className={styles.socialIcon} aria-label="LinkedIn" href="https://www.linkedin.com/in/happy-family-georgia?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
             </a>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
 };
-
 export default Footer;

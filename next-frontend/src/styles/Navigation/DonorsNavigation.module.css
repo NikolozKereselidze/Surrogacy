@@ -86,7 +86,6 @@
   background-clip: text;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .donorsNavigationContainer {
     padding: var(--padding-sm) var(--padding-base);

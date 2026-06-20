@@ -9,6 +9,7 @@ import {
 import {
   createDonorWithProfile,
   deleteDonorWithProfile,
+  syncSecondaryImages,
 } from "../services/donorProfileService.js";
 
 const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL })
@@ -113,25 +114,13 @@ const updateEggDonor = async (req: Request, res: Response): Promise<any> => {
       data: profileData,
     });
 
-    // Handle secondary images
-    if (secondaryImages && secondaryImages.length > 0) {
-      // Delete existing secondary images
-      await prisma.donorImage.deleteMany({
-        where: {
-          databaseUserId: eggDonor.databaseUserId,
-          isMain: false,
-        },
-      });
-
-      // Create new secondary images if provided
-
-      await prisma.donorImage.createMany({
-        data: secondaryImages.map((imagePath: string) => ({
-          databaseUserId: eggDonor.databaseUserId,
-          imagePath,
-          isMain: false,
-        })),
-      });
+    // Sync secondary images when the client sends the final desired list
+    if (secondaryImages !== undefined) {
+      await syncSecondaryImages(
+        prisma,
+        eggDonor.databaseUserId,
+        secondaryImages,
+      );
     }
 
     // Return the updated egg donor with user data

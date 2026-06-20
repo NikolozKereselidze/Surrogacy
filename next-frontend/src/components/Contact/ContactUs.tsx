@@ -2,12 +2,9 @@ import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
 import styles from "@/styles/Contact/ContactUs.module.css";
 import { useTranslation } from "react-i18next";
-
 const ContactUs = () => {
-  const { t } = useTranslation();
-
-  return (
-    <section id="contact" className={`${styles.contactUsSection} section`}>
+    const { t } = useTranslation();
+    return (<section id="contact" className={`${styles.contactUsSection} section`}>
       <div className="content">
         <h2 className="title">{t("contactUs.title")}</h2>
         <p className="subtitle">{t("contactUs.subtitle")}</p>
@@ -17,8 +14,6 @@ const ContactUs = () => {
         <ContactInfo />
         <ContactForm />
       </div>
-    </section>
-  );
+    </section>);
 };
-
 export default ContactUs;

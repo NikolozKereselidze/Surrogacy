@@ -1,36 +1,26 @@
 "use client";
-
 import styles from "@/styles/Navigation/DonorsNavigation.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { IoArrowBack } from "react-icons/io5";
-
 const DonorsNavigation = () => {
-  const router = useRouter();
-
-  const handleBack = () => {
-    // Try going back but if it leaves the site, go home instead
-    const prev = document.referrer;
-
-    if (prev && prev.includes(window.location.origin)) {
-      router.back(); // safe internal back
-    } else {
-      router.push("/"); // fallback
-    }
-  };
-
-  return (
-    <nav className={styles.donorsNavigation}>
+    const router = useRouter();
+    const handleBack = () => {
+        const prev = document.referrer;
+        if (prev && prev.includes(window.location.origin)) {
+            router.back();
+        }
+        else {
+            router.push("/");
+        }
+    };
+    return (<nav className={styles.donorsNavigation}>
       <div className={styles.donorsNavigationContainer}>
         <div className={styles.donorsNavigationLogo}>
           <Link href="/">Happy Family</Link>
         </div>
         <div className={styles.donorsNavigationLinks}>
-          <button
-            className={styles.backButton}
-            onClick={handleBack}
-            aria-label="Go back"
-          >
+          <button className={styles.backButton} onClick={handleBack} aria-label="Go back">
             <IoArrowBack />
             Back
           </button>
@@ -39,8 +29,6 @@ const DonorsNavigation = () => {
           </div>
         </div>
       </div>
-    </nav>
-  );
+    </nav>);
 };
-
 export default DonorsNavigation;

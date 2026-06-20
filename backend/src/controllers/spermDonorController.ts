@@ -9,6 +9,7 @@ import {
 import {
   createDonorWithProfile,
   deleteDonorWithProfile,
+  syncSecondaryImages,
 } from "../services/donorProfileService.js";
 
 const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL })
@@ -113,25 +114,12 @@ const updateSpermDonor = async (req: Request, res: Response): Promise<any> => {
       data: profileData,
     });
 
-    // Handle secondary images
-    if (secondaryImages && secondaryImages.length > 0) {
-      // Delete existing secondary images
-      await prisma.donorImage.deleteMany({
-        where: {
-          databaseUserId: spermDonor.databaseUserId,
-          isMain: false,
-        },
-      });
-
-      // Create new secondary images if provided
-
-      await prisma.donorImage.createMany({
-        data: secondaryImages.map((imagePath: string) => ({
-          databaseUserId: spermDonor.databaseUserId,
-          imagePath,
-          isMain: false,
-        })),
-      });
+    if (secondaryImages !== undefined) {
+      await syncSecondaryImages(
+        prisma,
+        spermDonor.databaseUserId,
+        secondaryImages,
+      );
     }
 
     // Return the updated sperm donor with user data

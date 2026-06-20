@@ -7,7 +7,7 @@
 
 .partnerCard {
   flex: 1;
-  background: white;
+  background: var(--card-bg);
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: var(--padding-sm) var(--padding-xl);

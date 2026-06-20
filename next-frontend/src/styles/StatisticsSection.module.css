@@ -25,13 +25,16 @@
     rgba(248, 249, 250, 0.95) 100%
   );
   border-radius: var(--gap-7xl);
-  box-shadow: 0 4px 20px rgba(137, 16, 246, 0.1), 0 8px 32px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 4px 20px rgba(137, 16, 246, 0.1),
+    0 8px 32px rgba(0, 0, 0, 0.08);
   border: var(--gap-xs) solid rgba(137, 16, 246, 0.1);
   transition: all 0.3s ease;
 }
 
 .statItem:hover {
-  box-shadow: 0 8px 24px rgba(137, 16, 246, 0.15),
+  box-shadow:
+    0 8px 24px rgba(137, 16, 246, 0.15),
     0 12px 40px rgba(0, 0, 0, 0.12);
   border-color: var(--color-primary);
 }
@@ -69,10 +72,10 @@
   }
 
   .statNumber {
-    font-size: var(--font-xl);
+    font-size: var(--font-2xl);
   }
 
   .statLabel {
-    font-size: var(--font-sm);
+    font-size: var(--font-base);
   }
 }

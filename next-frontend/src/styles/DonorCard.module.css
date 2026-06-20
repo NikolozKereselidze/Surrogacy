@@ -153,11 +153,11 @@
 }
 
 .available::before {
-  background-color: #10b981; /* Green for available */
+  background-color: #10b981;
 }
 
 .notAvailable::before {
-  background-color: #ef4444; /* Red for not available */
+  background-color: #ef4444;
 }
 
 @keyframes pulse {
@@ -181,7 +181,7 @@
   align-items: center;
   gap: var(--gap-xl);
   padding: var(--padding-sm);
-  background: #fff;
+  background: var(--card-bg);
   border-radius: 0.8rem;
   font-size: var(--font-sm);
   color: #333;

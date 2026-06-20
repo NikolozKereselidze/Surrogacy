@@ -126,3 +126,26 @@ export async function deleteDonorWithProfile(prisma, donorModel, id) {
     await deleteS3Keys(s3Keys);
     return donor;
 }
+export async function syncSecondaryImages(prisma, databaseUserId, secondaryImages) {
+    const existing = await prisma.donorImage.findMany({
+        where: { databaseUserId, isMain: false },
+        select: { imagePath: true },
+    });
+    const existingPaths = existing.map((image) => image.imagePath);
+    const removedPaths = existingPaths.filter((path) => !secondaryImages.includes(path));
+    await prisma.$transaction(async (tx) => {
+        await tx.donorImage.deleteMany({
+            where: { databaseUserId, isMain: false },
+        });
+        if (secondaryImages.length > 0) {
+            await tx.donorImage.createMany({
+                data: secondaryImages.map((imagePath) => ({
+                    databaseUserId,
+                    imagePath,
+                    isMain: false,
+                })),
+            });
+        }
+    });
+    await deleteS3Keys(removedPaths);
+}

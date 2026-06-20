@@ -13,7 +13,6 @@
   animation: spin 1s linear infinite;
 }
 
-/* Size variants */
 .small {
   width: 20px;
   height: 20px;
@@ -29,7 +28,6 @@
   height: 60px;
 }
 
-/* Animation */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -39,7 +37,6 @@
   }
 }
 
-/* Loading container */
 .loadingContainer {
   display: flex;
   flex-direction: column;

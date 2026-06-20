@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import WhyChooseUs from "@/components/About/WhyChooseUs";
 import { buildPageMetadata } from "@/lib/seo";
-
 const localizedMeta = {
   en: {
     title: "Why Choose Us | Surrogacy Agency Georgia",
     description:
-      "Learn how to choose a surrogacy agency and why international families trust Happy Family. Transparent pricing, accredited Tbilisi clinics, legal protection since 1997, and 24/7 support.",
+      "Learn how to choose a surrogacy agency and why international families trust Happy Family. Transparent pricing, accredited Tbilisi clinics, legal protection since 2011, and 24/7 support.",
     keywords: [
       "how to choose a surrogacy agency",
       "reputable surrogacy agency",
@@ -61,23 +60,19 @@ const localizedMeta = {
     title: "为什么选择我们 | 格鲁吉亚值得信赖的代孕机构",
     description:
       "了解如何选择代孕机构，以及为什么国际家庭信赖 Happy Family。透明定价、认证诊所和全天候支持。",
-    keywords: [
-      "如何选择代孕机构",
-      "格鲁吉亚代孕",
-      "最佳代孕机构",
-    ],
+    keywords: ["如何选择代孕机构", "格鲁吉亚代孕", "最佳代孕机构"],
   },
 } as const;
-
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale?: string }>;
+  params: Promise<{
+    locale?: string;
+  }>;
 }): Promise<Metadata> {
   const { locale } = await params;
   const content =
     localizedMeta[locale as keyof typeof localizedMeta] || localizedMeta.en;
-
   return buildPageMetadata({
     title: content.title,
     description: content.description,
@@ -86,7 +81,6 @@ export async function generateMetadata({
     locale: locale || "en",
   });
 }
-
 export default function WhyChooseUsPage() {
   return <WhyChooseUs />;
 }

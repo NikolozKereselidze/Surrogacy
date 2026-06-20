@@ -1,55 +1,40 @@
 "use client";
-
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  FaHeart,
-  FaShieldAlt,
-  FaUserCheck,
-  FaHandshake,
-  FaDna,
-  FaClock,
-} from "react-icons/fa";
+import { FaHeart, FaShieldAlt, FaUserCheck, FaHandshake, FaDna, FaClock, } from "react-icons/fa";
 import Button from "@/components/Button";
 import FaqSection from "@/components/FaqSection/FaqSection";
 import ProcessStep from "@/components/ProcessStep";
 import RequirementsCard from "@/components/RequirementsCard";
 import styles from "@/styles/Donors/WhyBecomeDonor.module.css";
 import { useParams } from "next/navigation";
-
-type Benefit = { icon: string; title: string; description: string };
-type Step = { title: string; description: string };
+type Benefit = {
+    icon: string;
+    title: string;
+    description: string;
+};
+type Step = {
+    title: string;
+    description: string;
+};
 const WhyBecomeDonor = () => {
-  const { t } = useTranslation();
-  const { locale } = useParams();
-
-  const benefits = useMemo(
-    () =>
-      t("whyBecomeDonor.benefits.cards", {
+    const { t } = useTranslation();
+    const { locale } = useParams();
+    const benefits = useMemo(() => t("whyBecomeDonor.benefits.cards", {
         returnObjects: true,
-      }) as Benefit[],
-    [t],
-  );
-
-  const steps = useMemo(
-    () =>
-      t("whyBecomeDonor.process.steps", {
+    }) as Benefit[], [t]);
+    const steps = useMemo(() => t("whyBecomeDonor.process.steps", {
         returnObjects: true,
-      }) as Step[],
-    [t],
-  );
-
-  const iconMap = {
-    heart: <FaHeart />,
-    safety: <FaShieldAlt />,
-    screening: <FaUserCheck />,
-    support: <FaHandshake />,
-    genetics: <FaDna />,
-    time: <FaClock />,
-  } as const;
-
-  return (
-    <div className={styles.page}>
+    }) as Step[], [t]);
+    const iconMap = {
+        heart: <FaHeart />,
+        safety: <FaShieldAlt />,
+        screening: <FaUserCheck />,
+        support: <FaHandshake />,
+        genetics: <FaDna />,
+        time: <FaClock />,
+    } as const;
+    return (<div className={styles.page}>
       <section className={`${styles.hero} section`} aria-labelledby="wbd-title">
         <div className={styles.heroInner}>
           <div className={styles.heroContent}>
@@ -67,10 +52,7 @@ const WhyBecomeDonor = () => {
               <Button href="#contact">
                 {t("whyBecomeDonor.hero.primaryCta")}
               </Button>
-              <Button
-                href={`/${locale}/who-can-become-a-donor`}
-                className={styles.secondaryBtn}
-              >
+              <Button href={`/${locale}/who-can-become-a-donor`} className={styles.secondaryBtn}>
                 {t("whyBecomeDonor.hero.secondaryCta")}
               </Button>
             </div>
@@ -101,18 +83,9 @@ const WhyBecomeDonor = () => {
         </div>
 
         <div className={styles.benefitsGrid}>
-          {benefits.map((card) => (
-            <RequirementsCard
-              key={card.title}
-              iconContent={
-                <span aria-hidden>
+          {benefits.map((card) => (<RequirementsCard key={card.title} iconContent={<span aria-hidden>
                   {iconMap[card.icon as keyof typeof iconMap] ?? <FaHeart />}
-                </span>
-              }
-              title={card.title}
-              description={card.description}
-            />
-          ))}
+                </span>} title={card.title} description={card.description}/>))}
         </div>
       </section>
 
@@ -126,24 +99,11 @@ const WhyBecomeDonor = () => {
         </div>
 
         <div className="processTimeline">
-          {steps.map((step, index) => (
-            <ProcessStep
-              key={step.title}
-              stepNumber={index + 1}
-              stepTitle={step.title}
-              stepContent={step.description}
-            />
-          ))}
+          {steps.map((step, index) => (<ProcessStep key={step.title} stepNumber={index + 1} stepTitle={step.title} stepContent={step.description}/>))}
         </div>
       </section>
 
-      <FaqSection
-        id="wbd-faq-title"
-        idPrefix="wbd-faq"
-        translationKey="whyBecomeDonor.faq"
-      />
-    </div>
-  );
+      <FaqSection id="wbd-faq-title" idPrefix="wbd-faq" translationKey="whyBecomeDonor.faq"/>
+    </div>);
 };
-
 export default WhyBecomeDonor;

@@ -4,7 +4,6 @@
   width: 100%;
 }
 
-/* Layout grids */
 .benefitsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 17.5rem), 1fr));
@@ -53,8 +52,8 @@
 
 .infoCard,
 .pricingCard {
-  background: #fff;
-  border: 1px solid #e2e8f0;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 1rem;
   padding: var(--padding-xl);
   display: flex;

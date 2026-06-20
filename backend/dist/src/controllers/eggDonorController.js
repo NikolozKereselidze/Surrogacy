@@ -1,7 +1,7 @@
 import { PrismaClient } from "../../prisma/generated/client.js";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { createDonorProfileSchema, updateDonorProfileSchema, validationErrorResponse, } from "../schemas/donorProfileSchema.js";
-import { createDonorWithProfile, deleteDonorWithProfile, } from "../services/donorProfileService.js";
+import { createDonorWithProfile, deleteDonorWithProfile, syncSecondaryImages, } from "../services/donorProfileService.js";
 const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL });
 const prisma = new PrismaClient({ adapter });
 const getEggDonors = async (req, res) => {
@@ -93,23 +93,9 @@ const updateEggDonor = async (req, res) => {
             where: { id: eggDonor.databaseUserId },
             data: profileData,
         });
-        // Handle secondary images
-        if (secondaryImages && secondaryImages.length > 0) {
-            // Delete existing secondary images
-            await prisma.donorImage.deleteMany({
-                where: {
-                    databaseUserId: eggDonor.databaseUserId,
-                    isMain: false,
-                },
-            });
-            // Create new secondary images if provided
-            await prisma.donorImage.createMany({
-                data: secondaryImages.map((imagePath) => ({
-                    databaseUserId: eggDonor.databaseUserId,
-                    imagePath,
-                    isMain: false,
-                })),
-            });
+        // Sync secondary images when the client sends the final desired list
+        if (secondaryImages !== undefined) {
+            await syncSecondaryImages(prisma, eggDonor.databaseUserId, secondaryImages);
         }
         // Return the updated egg donor with user data
         const updatedEggDonor = await prisma.eggDonor.findUnique({

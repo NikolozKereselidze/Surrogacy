@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { FaPlus, FaUser, FaUserPlus } from "react-icons/fa";
 import { MdFamilyRestroom } from "react-icons/md";
@@ -9,121 +8,83 @@ import { Donor } from "@/types/donor";
 import DonorForm from "./DonorForm";
 import DonorTable from "./DonorTable";
 import styles from "@/styles/Admin/AdminDashboard.module.css";
-
 interface DonorManagementProps {
-  donorType: string;
+    donorType: string;
 }
-
 const DonorManagement = ({ donorType }: DonorManagementProps) => {
-  const [showAddForm, setShowAddForm] = useState(false);
-  const [editingDonor, setEditingDonor] = useState<Donor | null>(null);
-
-  const config = donorConfigs[donorType || ""];
-  const { donors, loading, donorUrls, fetchDonors, deleteDonor } =
-    useDonorManagement(config?.apiEndpoint || "");
-
-  const getIconComponent = (iconName: string) => {
-    switch (iconName) {
-      case "FaUser":
-        return <FaUser />;
-      case "FaUserPlus":
-        return <FaUserPlus />;
-      case "MdFamilyRestroom":
-        return <MdFamilyRestroom />;
-      default:
-        return <FaUser />;
+    const [showAddForm, setShowAddForm] = useState(false);
+    const [editingDonor, setEditingDonor] = useState<Donor | null>(null);
+    const config = donorConfigs[donorType || ""];
+    const { donors, loading, donorUrls, fetchDonors, deleteDonor } = useDonorManagement(config?.apiEndpoint || "");
+    const getIconComponent = (iconName: string) => {
+        switch (iconName) {
+            case "FaUser":
+                return <FaUser />;
+            case "FaUserPlus":
+                return <FaUserPlus />;
+            case "MdFamilyRestroom":
+                return <MdFamilyRestroom />;
+            default:
+                return <FaUser />;
+        }
+    };
+    const handleSubmit = async (data: Record<string, unknown>) => {
+        try {
+            const url = editingDonor
+                ? `${config.apiEndpoint}/${editingDonor.id}`
+                : config.apiEndpoint;
+            const method = editingDonor ? "PUT" : "POST";
+            const response = await fetch(url, {
+                method,
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
+            if (response.ok) {
+                fetchDonors();
+                resetForm();
+            }
+        }
+        catch (error) {
+            console.error(`Error saving ${config.title}:`, error);
+        }
+    };
+    const handleDelete = async (id: string) => {
+        if (window.confirm(`Are you sure you want to delete this ${config.title.toLowerCase()}?`)) {
+            try {
+                await deleteDonor(id);
+            }
+            catch (error) {
+                console.error(`Error deleting ${config.title}:`, error);
+            }
+        }
+    };
+    const handleEdit = (donor: Donor) => {
+        setEditingDonor(donor);
+        setShowAddForm(true);
+    };
+    const resetForm = () => {
+        setEditingDonor(null);
+        setShowAddForm(false);
+    };
+    if (!config) {
+        return <div className={styles.loading}>Invalid donor type</div>;
     }
-  };
-
-  const handleSubmit = async (data: Record<string, unknown>) => {
-    try {
-      const url = editingDonor
-        ? `${config.apiEndpoint}/${editingDonor.id}`
-        : config.apiEndpoint;
-
-      const method = editingDonor ? "PUT" : "POST";
-
-      const response = await fetch(url, {
-        method,
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        fetchDonors();
-        resetForm();
-      }
-    } catch (error) {
-      console.error(`Error saving ${config.title}:`, error);
+    if (loading) {
+        return <div className={styles.loading}>Loading...</div>;
     }
-  };
-
-  const handleDelete = async (id: string) => {
-    if (
-      window.confirm(
-        `Are you sure you want to delete this ${config.title.toLowerCase()}?`
-      )
-    ) {
-      try {
-        await deleteDonor(id);
-      } catch (error) {
-        console.error(`Error deleting ${config.title}:`, error);
-      }
-    }
-  };
-
-  const handleEdit = (donor: Donor) => {
-    setEditingDonor(donor);
-    setShowAddForm(true);
-  };
-
-  const resetForm = () => {
-    setEditingDonor(null);
-    setShowAddForm(false);
-  };
-
-  if (!config) {
-    return <div className={styles.loading}>Invalid donor type</div>;
-  }
-
-  if (loading) {
-    return <div className={styles.loading}>Loading...</div>;
-  }
-
-  return (
-    <div className={styles.dashboardContent}>
+    return (<div className={styles.dashboardContent}>
       <div className={styles.pageHeader}>
         <h1 style={{ color: config.color }}>
           {getIconComponent(config.iconComponent)} {config.title} Management
         </h1>
-        <button
-          className={styles.addButton}
-          onClick={() => setShowAddForm(true)}
-          style={{ background: config.color }}
-        >
+        <button className={styles.addButton} onClick={() => setShowAddForm(true)} style={{ background: config.color }}>
           <FaPlus /> Add New {config.title.slice(0, -1)}
         </button>
       </div>
 
-      {showAddForm && (
-        <DonorForm
-          donorType={donorType}
-          config={config}
-          editingDonor={editingDonor}
-          donorUrls={donorUrls}
-          onSubmit={handleSubmit}
-          onCancel={resetForm}
-        />
-      )}
+      {showAddForm && (<DonorForm donorType={donorType} config={config} editingDonor={editingDonor} donorUrls={donorUrls} onSubmit={handleSubmit} onCancel={resetForm}/>)}
 
-      <DonorTable
-        donors={donors}
-        donorUrls={donorUrls}
-        onEdit={handleEdit}
-        onDelete={handleDelete}
-      />
-    </div>
-  );
+      <DonorTable donors={donors} donorUrls={donorUrls} onEdit={handleEdit} onDelete={handleDelete}/>
+    </div>);
 };
-
 export default DonorManagement;

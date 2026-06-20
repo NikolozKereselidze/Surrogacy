@@ -1,9 +1,8 @@
 .home {
   display: flex;
   flex-direction: column;
+  background: var(--section-bg-primary);
 }
-
-/* Hero Section */
 
 .heroSection {
   position: relative;
@@ -119,8 +118,6 @@
 .applyButton:hover {
   transform: scale(1.05);
 }
-
-/* Begin Your Miracle Section */
 
 .beginYourMiracleContent {
   display: flex;
@@ -262,8 +259,6 @@
   line-height: 1;
 }
 
-/* Our Team Section */
-
 .ourTeamGrid {
   display: flex;
   flex-wrap: wrap;
@@ -278,8 +273,8 @@
 .ourTeamCard {
   display: flex;
   flex: 1 1 23rem;
-  background: #fff;
-  border: 2px solid transparent;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 1.2rem;
   box-shadow: var(--shadow-layered);
   padding: var(--padding-xl) var(--padding-lg) var(--padding-lg)
@@ -361,7 +356,7 @@
   }
 
   .heroButton {
-    font-size: var(--font-xs);
+    font-size: var(--font-sm);
     padding: var(--padding-sm) var(--padding-md);
     min-width: 12rem;
   }
@@ -438,15 +433,10 @@
   }
 
   .heroTitle {
-    font-size: var(--font-xl);
+    font-size: var(--font-4xl);
   }
 
   .heroTitleHighlight {
-    font-size: 0.78em;
-  }
-
-  .heroDescription {
-    font-size: var(--font-sm);
-    line-height: 1.6;
+    font-size: 0.82em;
   }
 }
