@@ -80,7 +80,16 @@ const generateBlogImageUploadUrl = async (
 };
 
 const getBlogPosts = async (req: Request, res: Response) => {
-  const blogPosts = await prisma.blogPost.findMany();
+  const { language, limit } = req.query;
+
+  const parsedLimit = limit ? parseInt(limit as string, 10) : undefined;
+
+  const blogPosts = await prisma.blogPost.findMany({
+    where: language ? { language: language as string } : undefined,
+    take: parsedLimit && !isNaN(parsedLimit) ? parsedLimit : undefined,
+    orderBy: { createdAt: "desc" },
+  });
+
   res.json(blogPosts);
 };
 

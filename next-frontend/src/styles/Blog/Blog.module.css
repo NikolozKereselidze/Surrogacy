@@ -1,3 +1,57 @@
+.listingHero {
+  background: linear-gradient(135deg, #370c55 0%, #5b1a8a 100%);
+  padding: var(--padding-5xl) var(--padding-xl);
+  text-align: center;
+}
+
+.listingHeroTitle {
+  color: #fff;
+  font-size: var(--font-6xl);
+  font-weight: 700;
+  line-height: 1.2;
+  text-wrap: balance;
+  margin-bottom: var(--gap-lg);
+}
+
+.listingHeroSubtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: var(--font-lg);
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+.listingPage {
+  padding: var(--padding-5xl) var(--padding-xl);
+  background-color: #fff;
+}
+
+.listingContainer {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.listingEmpty {
+  text-align: center;
+  padding: var(--padding-5xl) 0;
+  color: var(--dark-blue);
+  font-size: var(--font-lg);
+}
+
+@media (max-width: 768px) {
+  .listingHero {
+    padding: var(--padding-3xl) var(--padding-base);
+  }
+
+  .listingHeroTitle {
+    font-size: var(--font-4xl);
+  }
+
+  .listingPage {
+    padding: var(--padding-3xl) var(--padding-base);
+  }
+}
+
 .postHero {
   position: relative;
   min-height: 26rem;

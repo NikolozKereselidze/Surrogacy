@@ -11,6 +11,29 @@
   width: 100%;
 }
 
+.viewAllContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--gap-8xl);
+}
+
+.viewAllLink {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 0.6rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.viewAllLink:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
 @media screen and (min-width: 768px) {
   .blogGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

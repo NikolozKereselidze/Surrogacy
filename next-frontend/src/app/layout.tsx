@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import StructuredData from "@/components/StructuredData";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { headers } from "next/headers";
 import "./[locale]/globals.css";
 const nunitoSans = Nunito_Sans({
     variable: "--font-nunito-sans",
@@ -32,13 +31,10 @@ export const metadata: Metadata = {
         google: "TowaFgD30cj57_17EGxFj4spSTkz6MFK93fAxuZ_xAQ",
     },
 };
-export default async function RootLayout({ children, }: Readonly<{
+export default function RootLayout({ children, }: Readonly<{
     children: React.ReactNode;
 }>) {
-    const headersList = await headers();
-    const locale = headersList.get("x-locale") ?? "en";
-    const dir = headersList.get("x-dir") ?? "ltr";
-    return (<html data-scroll-behavior="smooth" className={`${nunitoSans.variable}`} lang={locale} dir={dir}>
+    return (<html data-scroll-behavior="smooth" className={`${nunitoSans.variable}`} lang="en" dir="ltr" suppressHydrationWarning>
       <head>
         <StructuredData />
       </head>

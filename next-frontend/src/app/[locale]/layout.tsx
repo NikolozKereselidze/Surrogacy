@@ -2,6 +2,9 @@ import { notFound } from "next/navigation";
 import I18nProvider from "@/components/I18nProvider";
 import type { Metadata } from "next";
 const supportedLocales = ["en", "he", "zh", "ru", "es", "ka"] as const;
+function getDir(locale: string): "rtl" | "ltr" {
+    return locale === "he" ? "rtl" : "ltr";
+}
 export function generateStaticParams() {
     return supportedLocales.map((locale) => ({ locale }));
 }
@@ -28,5 +31,13 @@ export default async function LocaleLayout({ children, params, }: Readonly<{
     if (!supportedLocales.includes(locale as (typeof supportedLocales)[number])) {
         notFound();
     }
-    return <I18nProvider locale={locale}>{children}</I18nProvider>;
+    const dir = getDir(locale);
+    return (<div lang={locale} dir={dir}>
+      <script
+        dangerouslySetInnerHTML={{
+            __html: `document.documentElement.lang=${JSON.stringify(locale)};document.documentElement.dir=${JSON.stringify(dir)};`,
+        }}
+      />
+      <I18nProvider locale={locale}>{children}</I18nProvider>
+    </div>);
 }

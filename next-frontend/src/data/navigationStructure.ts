@@ -78,6 +78,10 @@ export const navigationStructure = [
         ],
     },
     {
+        key: "blog",
+        href: "/blog",
+    },
+    {
         key: "faq",
         href: "/faq",
     },
