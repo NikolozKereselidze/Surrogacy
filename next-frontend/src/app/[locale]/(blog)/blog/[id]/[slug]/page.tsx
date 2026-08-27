@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { redirect } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import styles from "@/styles/Blog/Blog.module.css";
 import BlogPostHeader from "@/components/Blog/BlogPostHeader";
 import { BASE_URL } from "@/lib/seo";
@@ -159,11 +159,12 @@ export default async function BlogPostPage({
   const { id, locale, slug } = await params;
   const post = await fetchPostById(id);
   if (!post) {
-    return <div className={styles.state}>Not found</div>;
+    notFound();
   }
   const postLocale = post.language || "en";
-  if (postLocale !== locale) {
-    redirect(`/${postLocale}/blog/${id}/${slug}`);
+  const canonicalSlug = buildSlug(post.title);
+  if (postLocale !== locale || slug !== canonicalSlug) {
+    permanentRedirect(`/${postLocale}/blog/${id}/${canonicalSlug}`);
   }
   return (
     <>

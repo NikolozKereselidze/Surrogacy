@@ -17,11 +17,11 @@ export default function StructuredData() {
         "@type": "MedicalBusiness",
         "@id": ORGANIZATION_ID,
         name: "Happy Family",
-        alternateName: "Surrogation Center",
+        alternateName: ["IVF Tour Georgia", "Surrogation Center"],
         description: "Gestational surrogacy and egg donation agency in Georgia (country). IVF and fertility services in Tbilisi for international intended parents. Legally protected programs since 2011.",
         url: "https://www.ivftourgeorgia.com",
         logo: "https://www.ivftourgeorgia.com/img/logo.png",
-        image: "https://www.ivftourgeorgia.com/img/og-image.jpg",
+        image: "https://www.ivftourgeorgia.com/img/home/hero/hero-1920.webp",
         telephone: "+995-596-235-050",
         email: "info@surrogationcenter.com",
         foundingDate: "2011",
@@ -191,6 +191,7 @@ export default function StructuredData() {
         "@context": "https://schema.org",
         "@type": "WebSite",
         name: "Happy Family",
+        alternateName: "IVF Tour Georgia",
         url: "https://www.ivftourgeorgia.com",
     };
     return (<>

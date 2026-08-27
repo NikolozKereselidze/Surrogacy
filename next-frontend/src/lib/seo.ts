@@ -8,7 +8,7 @@ export interface PageSeoInput {
     locale?: string;
     image?: string;
 }
-export function buildPageMetadata({ title, description, keywords = [], path, locale = "en", image = `${BASE_URL}/img/og-image.jpg`, }: PageSeoInput): Metadata {
+export function buildPageMetadata({ title, description, keywords = [], path, locale = "en", image = `${BASE_URL}/img/home/hero/hero-1920.webp`, }: PageSeoInput): Metadata {
     const normalizedPath = path === "/" ? "" : path;
     const fullCanonicalUrl = `${BASE_URL}/${locale}${normalizedPath}`;
     return {
@@ -46,8 +46,8 @@ export function buildPageMetadata({ title, description, keywords = [], path, loc
             images: [
                 {
                     url: image,
-                    width: 1200,
-                    height: 630,
+                    width: 1920,
+                    height: 1280,
                     alt: title,
                 },
             ],

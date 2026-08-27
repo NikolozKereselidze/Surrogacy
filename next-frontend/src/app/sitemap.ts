@@ -1,6 +1,8 @@
 import { MetadataRoute } from "next";
 import { BASE_URL } from "@/lib/seo";
-import { fetchTeamMembers } from "@/lib/teamMembers";
+import type { TeamMember } from "@/types/teamMember";
+
+export const dynamic = "force-dynamic";
 interface BlogPost {
   id: string;
   language: string;
@@ -32,6 +34,7 @@ const staticRoutes = [
   { path: "/egg-freezing-preservation", priority: 0.8 },
   { path: "/vip-concierge-services", priority: 0.8 },
   { path: "/faq", priority: 0.7 },
+  { path: "/blog", priority: 0.7 },
 ];
 const locales = ["en", "he", "zh", "ru", "es", "ka"];
 function buildSlug(title: string): string {
@@ -43,27 +46,24 @@ function buildSlug(title: string): string {
 }
 function buildAlternates(path: string) {
   return {
-    languages: Object.fromEntries(
-      locales.map((locale) => [locale, `${BASE_URL}/${locale}${path}`]),
-    ),
+    languages: {
+      ...Object.fromEntries(
+        locales.map((locale) => [locale, `${BASE_URL}/${locale}${path}`]),
+      ),
+      "x-default": `${BASE_URL}/en${path}`,
+    },
   };
 }
-async function getBlogPosts() {
-  try {
-    const apiUrl = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/blog`;
-    const response = await fetch(apiUrl, {
-      next: { revalidate: 900 },
-    });
-    if (!response.ok) {
-      console.error("Failed to fetch blog posts for sitemap:", response.status);
-      return [];
-    }
-    const posts = await response.json();
-    return posts;
-  } catch (error) {
-    console.error("Error fetching blog posts for sitemap:", error);
-    return [];
+async function fetchSitemapData<T>(path: string): Promise<T> {
+  const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL;
+  if (!apiBase) {
+    throw new Error("NEXT_PUBLIC_API_BASE_URL is required to generate the sitemap");
   }
+  const response = await fetch(`${apiBase}${path}`, { cache: "no-store" });
+  if (!response.ok) {
+    throw new Error(`Sitemap API request failed for ${path}: ${response.status}`);
+  }
+  return response.json() as Promise<T>;
 }
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const sitemapEntries: MetadataRoute.Sitemap = [];
@@ -83,39 +83,43 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       }
       sitemapEntries.push({
         url: `${BASE_URL}/${locale}${route.path}`,
-        lastModified: new Date(),
         changeFrequency,
         priority: route.priority,
         alternates: buildAlternates(route.path),
       });
     });
   });
-  const teamMembers = await fetchTeamMembers("en");
+  const [teamMembers, blogPosts] = await Promise.all([
+    fetchSitemapData<TeamMember[]>("/api/team-members?locale=en"),
+    fetchSitemapData<BlogPost[]>("/api/blog"),
+  ]);
   teamMembers.forEach((member) => {
     locales.forEach((locale) => {
       sitemapEntries.push({
         url: `${BASE_URL}/${locale}/team/${member.slug}`,
-        lastModified: member.updatedAt ? new Date(member.updatedAt) : new Date(),
+        lastModified: member.updatedAt ? new Date(member.updatedAt) : undefined,
         changeFrequency: "yearly" as const,
         priority: 0.6,
         alternates: buildAlternates(`/team/${member.slug}`),
       });
     });
   });
-  const blogPosts = await getBlogPosts();
   blogPosts.forEach((post: BlogPost) => {
-    locales.forEach((locale) => {
-      if (post.language === locale || !post.language) {
-        const slug = buildSlug(post.title || "post");
-        const blogPath = `/blog/${post.id}/${slug}`;
-        sitemapEntries.push({
-          url: `${BASE_URL}/${locale}${blogPath}`,
-          lastModified: post.updatedAt ? new Date(post.updatedAt) : new Date(),
-          changeFrequency: "monthly" as const,
-          priority: 0.7,
-          alternates: buildAlternates(blogPath),
-        });
-      }
+    const locale = locales.includes(post.language) ? post.language : "en";
+    const slug = buildSlug(post.title || "post");
+    const blogPath = `/blog/${post.id}/${slug}`;
+    const canonicalUrl = `${BASE_URL}/${locale}${blogPath}`;
+    sitemapEntries.push({
+      url: canonicalUrl,
+      lastModified: post.updatedAt ? new Date(post.updatedAt) : undefined,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+      alternates: {
+        languages: {
+          [locale]: canonicalUrl,
+          "x-default": canonicalUrl,
+        },
+      },
     });
   });
   return sitemapEntries;

@@ -25,7 +25,7 @@ const OurTeam = () => {
 
             <div className={styles.teamContainer}>
               <div className={styles.teamGrid}>
-                {visibleMembers.map((member, index) => (<TeamCard key={index} member={member}/>))}
+                {visibleMembers.map((member) => (<TeamCard key={member.id} member={member}/>))}
               </div>
               {hasMoreMembers && (<div className={styles.showMoreContainer}>
                   <Button className={styles.showMoreButton} onClick={handleShowMore}>

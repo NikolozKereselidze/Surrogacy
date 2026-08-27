@@ -12,7 +12,7 @@ import FaqSection from "@/components/FaqSection/FaqSection";
 import { useMemo } from "react";
 import TextContent from "@/components/TextContent";
 import { useLocale } from "@/hooks/useLocale";
-import { FadeInOnScroll, StaggerItem, StaggerOnScroll, } from "@/components/animations/ScrollAnimations";
+import { FadeInOnScroll } from "@/components/animations/ScrollAnimations";
 import { useTeamMembers } from "@/hooks/useTeamMembers";
 const Home = () => {
     const { t, i18n } = useTranslation();
@@ -74,11 +74,11 @@ const Home = () => {
           <h2 className="title">{t("ourTeam.title")}</h2>
           <p className="subtitle">{t("ourTeam.subtitle")}</p>
         </FadeInOnScroll>
-        <StaggerOnScroll className={styles.ourTeamGrid}>
-          {teamMembers.map((member, index) => (<StaggerItem key={`${member.name}-${index}`} style={{ flex: "1 1 23rem" }}>
+        <div className={styles.ourTeamGrid}>
+          {teamMembers.map((member) => (<div key={member.id} style={{ flex: "1 1 23rem" }}>
               <TeamCard member={member}/>
-            </StaggerItem>))}
-        </StaggerOnScroll>
+            </div>))}
+        </div>
       </section>
 
       <TestimonialsSection />
