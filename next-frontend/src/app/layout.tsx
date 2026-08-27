@@ -16,6 +16,25 @@ export const metadata: Metadata = {
         template: "%s | Happy Family",
     },
     description: "Compassionate surrogacy and egg donation services tailored to your journey. Expert guidance for intended parents, surrogates, and egg donors worldwide.",
+    icons: {
+        icon: [{ url: "/img/logo.png", type: "image/png" }],
+        shortcut: "/img/logo.png",
+        apple: "/img/logo.png",
+    },
+    openGraph: {
+        siteName: "Happy Family",
+        type: "website",
+        images: [{
+            url: "/img/logo.png",
+            width: 1024,
+            height: 1024,
+            alt: "Happy Family logo",
+        }],
+    },
+    twitter: {
+        card: "summary",
+        images: ["/img/logo.png"],
+    },
     robots: {
         index: true,
         follow: true,
