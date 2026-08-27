@@ -81,5 +81,37 @@ model BlogPost {
   updatedAt DateTime @updatedAt
 }
 
+model TeamMember {
+  id           String                  @id @default(uuid())
+  slug         String                  @unique
+  honorific    String
+  name         String
+  email        String?
+  linkedin     String?
+  imagePath    String
+  displayOrder Int                     @default(0)
+  featured     Boolean                 @default(false)
+  published    Boolean                 @default(true)
+  translations TeamMemberTranslation[]
+  createdAt    DateTime                @default(now())
+  updatedAt    DateTime                @updatedAt
+
+  @@index([published, displayOrder])
+}
+
+model TeamMemberTranslation {
+  id               String     @id @default(uuid())
+  teamMemberId     String
+  teamMember       TeamMember @relation(fields: [teamMemberId], references: [id], onDelete: Cascade)
+  locale           String
+  role             String
+  shortDescription String
+  longDescription  String
+  createdAt        DateTime   @default(now())
+  updatedAt        DateTime   @updatedAt
+
+  @@unique([teamMemberId, locale])
+  @@index([locale])
+}
 
 

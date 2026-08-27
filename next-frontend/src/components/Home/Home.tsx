@@ -9,16 +9,16 @@ import StatisticsSection from "@/components/StatisticsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ProgramsOverviewSection from "@/components/ProgramsOverviewSection";
 import FaqSection from "@/components/FaqSection/FaqSection";
-import { getFeaturedTeamMembers } from "@/data/teamMembers";
 import { useMemo } from "react";
 import TextContent from "@/components/TextContent";
 import { useLocale } from "@/hooks/useLocale";
 import { FadeInOnScroll, StaggerItem, StaggerOnScroll, } from "@/components/animations/ScrollAnimations";
+import { useTeamMembers } from "@/hooks/useTeamMembers";
 const Home = () => {
     const { t, i18n } = useTranslation();
     const locale = useLocale();
     const isRTL = i18n.language === "he";
-    const teamMembers = useMemo(() => getFeaturedTeamMembers(), []);
+    const { members: teamMembers } = useTeamMembers(true);
     const scrollToContact = () => {
         document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
     };

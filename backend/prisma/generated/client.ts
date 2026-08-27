@@ -69,3 +69,13 @@ export type SpermDonor = Prisma.SpermDonorModel
  * 
  */
 export type BlogPost = Prisma.BlogPostModel
+/**
+ * Model TeamMember
+ * 
+ */
+export type TeamMember = Prisma.TeamMemberModel
+/**
+ * Model TeamMemberTranslation
+ * 
+ */
+export type TeamMemberTranslation = Prisma.TeamMemberTranslationModel

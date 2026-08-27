@@ -2,13 +2,13 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import styles from "@/styles/About/OurTeam.module.css";
-import { getAllTeamMembers } from "@/data/teamMembers";
 import TeamCard from "@/components/TeamCard";
 import Button from "@/components/Button";
+import { useTeamMembers } from "@/hooks/useTeamMembers";
 const OurTeam = () => {
     const { t } = useTranslation();
     const [visibleCount, setVisibleCount] = useState(3);
-    const teamMembers = getAllTeamMembers();
+    const { members: teamMembers } = useTeamMembers();
     const visibleMembers = teamMembers.slice(0, visibleCount);
     const hasMoreMembers = visibleCount < teamMembers.length;
     const handleShowMore = () => {

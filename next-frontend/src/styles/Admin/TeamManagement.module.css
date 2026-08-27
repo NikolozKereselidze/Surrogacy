@@ -1,0 +1,67 @@
+.formContainer {
+  max-width: 900px;
+}
+
+.error {
+  padding: 0.9rem 1rem;
+  color: #9f1239;
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
+.formContainer .error {
+  margin-bottom: 1.5rem;
+}
+
+.checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.checkboxes label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.preview {
+  margin-top: 0.75rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.localeTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.75rem;
+}
+
+.localeTabs button {
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  background: white;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+}
+
+.localeTabs .activeLocale {
+  color: white;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.translationPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fb;
+  border-radius: 10px;
+}

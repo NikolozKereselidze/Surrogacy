@@ -34,7 +34,9 @@ export async function generatePresignedPutUrl(
   // Organize files by donor type if provided
   let key: string;
   if (donorType) {
-    key = `donors/${donorType}/${timestamp}/${uuidv4()}.${fileExtension}`;
+    key = donorType === "team-members"
+      ? `team/${timestamp}/${uuidv4()}.${fileExtension}`
+      : `donors/${donorType}/${timestamp}/${uuidv4()}.${fileExtension}`;
   } else {
     key = `uploads/${timestamp}/${uuidv4()}.${fileExtension}`;
   }

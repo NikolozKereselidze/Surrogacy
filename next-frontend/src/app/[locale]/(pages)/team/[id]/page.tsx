@@ -1,22 +1,24 @@
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import TeamMemberDetails from "@/components/Team/TeamMemberDetails";
-import { getAllTeamMembers, getTeamMember } from "@/data/teamMembers";
 import { generatePageMetadata } from "@/lib/seo";
+import { fetchTeamMember, fetchTeamMembers } from "@/lib/teamMembers";
 interface TeamMemberPageProps {
     params: Promise<{
         id: string;
         locale?: string;
     }>;
 }
-export function generateStaticParams() {
-    return getAllTeamMembers().map((member) => ({
-        id: member.id,
+export async function generateStaticParams() {
+    const members = await fetchTeamMembers("en");
+    return members.map((member) => ({
+        id: member.slug,
     }));
 }
-export const dynamicParams = false;
+export const dynamicParams = true;
 export async function generateMetadata({ params, }: TeamMemberPageProps): Promise<Metadata> {
     const { id, locale } = await params;
-    const teamMember = getTeamMember(id);
+    const teamMember = await fetchTeamMember(id, locale);
     if (!teamMember) {
         return {
             title: "Team Member Not Found",
@@ -29,7 +31,7 @@ export async function generateMetadata({ params, }: TeamMemberPageProps): Promis
     }
     return generatePageMetadata(Promise.resolve({ locale }), {
         title: `${teamMember.name} - ${teamMember.role}`,
-        description: `Meet ${teamMember.name}, ${teamMember.role} at Happy Family. ${teamMember.description} Contact our expert team for personalized surrogacy and egg donation services.`,
+        description: `Meet ${teamMember.name}, ${teamMember.role} at Happy Family. ${teamMember.shortDescription} Contact our expert team for personalized surrogacy and egg donation services.`,
         keywords: [
             `${teamMember.name} surrogacy`,
             `${teamMember.role} fertility`,
@@ -40,10 +42,12 @@ export async function generateMetadata({ params, }: TeamMemberPageProps): Promis
             "fertility team member",
             "Happy Family team",
         ],
-        path: `/team/${teamMember.id}`,
+        path: `/team/${teamMember.slug}`,
     });
 }
 export default async function TeamMemberPage({ params }: TeamMemberPageProps) {
-    const { id } = await params;
-    return <TeamMemberDetails id={id}/>;
+    const { id, locale } = await params;
+    const member = await fetchTeamMember(id, locale);
+    if (!member) notFound();
+    return <TeamMemberDetails member={member}/>;
 }

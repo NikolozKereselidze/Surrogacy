@@ -56,7 +56,9 @@ export const ModelName = {
   EggDonor: 'EggDonor',
   Surrogate: 'Surrogate',
   SpermDonor: 'SpermDonor',
-  BlogPost: 'BlogPost'
+  BlogPost: 'BlogPost',
+  TeamMember: 'TeamMember',
+  TeamMemberTranslation: 'TeamMemberTranslation'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -151,6 +153,38 @@ export const BlogPostScalarFieldEnum = {
 } as const
 
 export type BlogPostScalarFieldEnum = (typeof BlogPostScalarFieldEnum)[keyof typeof BlogPostScalarFieldEnum]
+
+
+export const TeamMemberScalarFieldEnum = {
+  id: 'id',
+  slug: 'slug',
+  honorific: 'honorific',
+  name: 'name',
+  email: 'email',
+  linkedin: 'linkedin',
+  imagePath: 'imagePath',
+  displayOrder: 'displayOrder',
+  featured: 'featured',
+  published: 'published',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type TeamMemberScalarFieldEnum = (typeof TeamMemberScalarFieldEnum)[keyof typeof TeamMemberScalarFieldEnum]
+
+
+export const TeamMemberTranslationScalarFieldEnum = {
+  id: 'id',
+  teamMemberId: 'teamMemberId',
+  locale: 'locale',
+  role: 'role',
+  shortDescription: 'shortDescription',
+  longDescription: 'longDescription',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type TeamMemberTranslationScalarFieldEnum = (typeof TeamMemberTranslationScalarFieldEnum)[keyof typeof TeamMemberTranslationScalarFieldEnum]
 
 
 export const SortOrder = {

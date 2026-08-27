@@ -72,7 +72,9 @@ export const ModelName = {
     EggDonor: 'EggDonor',
     Surrogate: 'Surrogate',
     SpermDonor: 'SpermDonor',
-    BlogPost: 'BlogPost'
+    BlogPost: 'BlogPost',
+    TeamMember: 'TeamMember',
+    TeamMemberTranslation: 'TeamMemberTranslation'
 };
 /**
  * Enums
@@ -134,6 +136,30 @@ export const BlogPostScalarFieldEnum = {
     readTime: 'readTime',
     content: 'content',
     imagePath: 'imagePath',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+};
+export const TeamMemberScalarFieldEnum = {
+    id: 'id',
+    slug: 'slug',
+    honorific: 'honorific',
+    name: 'name',
+    email: 'email',
+    linkedin: 'linkedin',
+    imagePath: 'imagePath',
+    displayOrder: 'displayOrder',
+    featured: 'featured',
+    published: 'published',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+};
+export const TeamMemberTranslationScalarFieldEnum = {
+    id: 'id',
+    teamMemberId: 'teamMemberId',
+    locale: 'locale',
+    role: 'role',
+    shortDescription: 'shortDescription',
+    longDescription: 'longDescription',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
 };

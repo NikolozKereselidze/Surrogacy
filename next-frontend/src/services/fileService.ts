@@ -23,7 +23,8 @@ export const deleteFileFromS3 = async (filePath: string) => {
     if (!filePath)
         return;
     try {
-        const response = await fetch(`/api/file/?key=${filePath}`, {
+        const query = new URLSearchParams({ key: filePath });
+        const response = await fetch(`/api/file?${query}`, {
             method: "DELETE",
         });
         if (!response.ok) {

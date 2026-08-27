@@ -1,7 +1,7 @@
 "use client";
 import { useRouter, usePathname } from "next/navigation";
 import styles from "@/styles/Admin/AdminDashboard.module.css";
-import { FaBlog, FaUserPlus, FaUser, FaSignOutAlt } from "react-icons/fa";
+import { FaBlog, FaUserPlus, FaUser, FaUsers, FaSignOutAlt } from "react-icons/fa";
 import { IoMdHome } from "react-icons/io";
 import { MdFamilyRestroom } from "react-icons/md";
 import { Suspense } from "react";
@@ -13,6 +13,7 @@ const sections = [
         icon: <IoMdHome />,
     },
     { key: "blog", label: "Blog Posts", path: "/admin/blog", icon: <FaBlog /> },
+    { key: "team", label: "Team Members", path: "/admin/team", icon: <FaUsers /> },
     {
         key: "egg",
         label: "Egg Donors",

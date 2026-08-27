@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 import { BASE_URL } from "@/lib/seo";
-import { teamMembers } from "@/data/teamMembers";
+import { fetchTeamMembers } from "@/lib/teamMembers";
 interface BlogPost {
   id: string;
   language: string;
@@ -90,14 +90,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       });
     });
   });
+  const teamMembers = await fetchTeamMembers("en");
   teamMembers.forEach((member) => {
     locales.forEach((locale) => {
       sitemapEntries.push({
-        url: `${BASE_URL}/${locale}/team/${member.id}`,
-        lastModified: new Date(),
+        url: `${BASE_URL}/${locale}/team/${member.slug}`,
+        lastModified: member.updatedAt ? new Date(member.updatedAt) : new Date(),
         changeFrequency: "yearly" as const,
         priority: 0.6,
-        alternates: buildAlternates(`/team/${member.id}`),
+        alternates: buildAlternates(`/team/${member.slug}`),
       });
     });
   });

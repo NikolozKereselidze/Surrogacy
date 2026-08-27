@@ -389,7 +389,9 @@ export const ModelName = {
   EggDonor: 'EggDonor',
   Surrogate: 'Surrogate',
   SpermDonor: 'SpermDonor',
-  BlogPost: 'BlogPost'
+  BlogPost: 'BlogPost',
+  TeamMember: 'TeamMember',
+  TeamMemberTranslation: 'TeamMemberTranslation'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -405,7 +407,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "databaseUser" | "donorImage" | "eggDonor" | "surrogate" | "spermDonor" | "blogPost"
+    modelProps: "databaseUser" | "donorImage" | "eggDonor" | "surrogate" | "spermDonor" | "blogPost" | "teamMember" | "teamMemberTranslation"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -853,6 +855,154 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
+    TeamMember: {
+      payload: Prisma.$TeamMemberPayload<ExtArgs>
+      fields: Prisma.TeamMemberFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.TeamMemberFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.TeamMemberFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberPayload>
+        }
+        findFirst: {
+          args: Prisma.TeamMemberFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.TeamMemberFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberPayload>
+        }
+        findMany: {
+          args: Prisma.TeamMemberFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberPayload>[]
+        }
+        create: {
+          args: Prisma.TeamMemberCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberPayload>
+        }
+        createMany: {
+          args: Prisma.TeamMemberCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.TeamMemberCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberPayload>[]
+        }
+        delete: {
+          args: Prisma.TeamMemberDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberPayload>
+        }
+        update: {
+          args: Prisma.TeamMemberUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberPayload>
+        }
+        deleteMany: {
+          args: Prisma.TeamMemberDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.TeamMemberUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.TeamMemberUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberPayload>[]
+        }
+        upsert: {
+          args: Prisma.TeamMemberUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberPayload>
+        }
+        aggregate: {
+          args: Prisma.TeamMemberAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateTeamMember>
+        }
+        groupBy: {
+          args: Prisma.TeamMemberGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.TeamMemberGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.TeamMemberCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.TeamMemberCountAggregateOutputType> | number
+        }
+      }
+    }
+    TeamMemberTranslation: {
+      payload: Prisma.$TeamMemberTranslationPayload<ExtArgs>
+      fields: Prisma.TeamMemberTranslationFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.TeamMemberTranslationFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberTranslationPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.TeamMemberTranslationFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberTranslationPayload>
+        }
+        findFirst: {
+          args: Prisma.TeamMemberTranslationFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberTranslationPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.TeamMemberTranslationFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberTranslationPayload>
+        }
+        findMany: {
+          args: Prisma.TeamMemberTranslationFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberTranslationPayload>[]
+        }
+        create: {
+          args: Prisma.TeamMemberTranslationCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberTranslationPayload>
+        }
+        createMany: {
+          args: Prisma.TeamMemberTranslationCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.TeamMemberTranslationCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberTranslationPayload>[]
+        }
+        delete: {
+          args: Prisma.TeamMemberTranslationDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberTranslationPayload>
+        }
+        update: {
+          args: Prisma.TeamMemberTranslationUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberTranslationPayload>
+        }
+        deleteMany: {
+          args: Prisma.TeamMemberTranslationDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.TeamMemberTranslationUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.TeamMemberTranslationUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberTranslationPayload>[]
+        }
+        upsert: {
+          args: Prisma.TeamMemberTranslationUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$TeamMemberTranslationPayload>
+        }
+        aggregate: {
+          args: Prisma.TeamMemberTranslationAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateTeamMemberTranslation>
+        }
+        groupBy: {
+          args: Prisma.TeamMemberTranslationGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.TeamMemberTranslationGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.TeamMemberTranslationCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.TeamMemberTranslationCountAggregateOutputType> | number
+        }
+      }
+    }
   }
 } & {
   other: {
@@ -968,6 +1118,38 @@ export const BlogPostScalarFieldEnum = {
 } as const
 
 export type BlogPostScalarFieldEnum = (typeof BlogPostScalarFieldEnum)[keyof typeof BlogPostScalarFieldEnum]
+
+
+export const TeamMemberScalarFieldEnum = {
+  id: 'id',
+  slug: 'slug',
+  honorific: 'honorific',
+  name: 'name',
+  email: 'email',
+  linkedin: 'linkedin',
+  imagePath: 'imagePath',
+  displayOrder: 'displayOrder',
+  featured: 'featured',
+  published: 'published',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type TeamMemberScalarFieldEnum = (typeof TeamMemberScalarFieldEnum)[keyof typeof TeamMemberScalarFieldEnum]
+
+
+export const TeamMemberTranslationScalarFieldEnum = {
+  id: 'id',
+  teamMemberId: 'teamMemberId',
+  locale: 'locale',
+  role: 'role',
+  shortDescription: 'shortDescription',
+  longDescription: 'longDescription',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type TeamMemberTranslationScalarFieldEnum = (typeof TeamMemberTranslationScalarFieldEnum)[keyof typeof TeamMemberTranslationScalarFieldEnum]
 
 
 export const SortOrder = {
@@ -1147,6 +1329,8 @@ export type GlobalOmitConfig = {
   surrogate?: Prisma.SurrogateOmit
   spermDonor?: Prisma.SpermDonorOmit
   blogPost?: Prisma.BlogPostOmit
+  teamMember?: Prisma.TeamMemberOmit
+  teamMemberTranslation?: Prisma.TeamMemberTranslationOmit
 }
 
 /* Types for Logging */
