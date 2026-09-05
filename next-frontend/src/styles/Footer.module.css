@@ -1,5 +1,5 @@
 .footer {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #312e81 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #123a8f 100%);
   color: #e2e8f0;
   font-family: var(--font-primary, sans-serif);
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3), 0 -8px 40px rgba(0, 0, 0, 0.2);
@@ -7,9 +7,9 @@
     linear-gradient(
       90deg,
       transparent 0%,
-      rgba(139, 92, 246, 0.5) 25%,
+      rgb(0 68 255 / 0.5) 25%,
       rgba(59, 130, 246, 0.5) 50%,
-      rgba(139, 92, 246, 0.5) 75%,
+      rgb(0 68 255 / 0.5) 75%,
       transparent 100%
     );
   position: relative;
@@ -69,7 +69,7 @@
 
 .linksColumn:hover {
   background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(139, 92, 246, 0.3);
+  border-color: rgb(0 68 255 / 0.3);
   transform: translateY(-2px);
 }
 
@@ -151,12 +151,12 @@
 }
 
 .socialIcon:hover {
-  background: rgba(139, 92, 246, 0.2);
-  border-color: rgba(139, 92, 246, 0.5);
+  background: rgb(0 68 255 / 0.2);
+  border-color: rgb(0 68 255 / 0.5);
   color: #fff;
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3),
-    0 0 30px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 8px 20px rgb(0 68 255 / 0.3),
+    0 0 30px rgb(0 68 255 / 0.2);
 }
 
 @media (max-width: 1024px) {

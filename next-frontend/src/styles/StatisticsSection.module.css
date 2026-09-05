@@ -26,15 +26,15 @@
   );
   border-radius: var(--gap-7xl);
   box-shadow:
-    0 4px 20px rgba(137, 16, 246, 0.1),
+    0 4px 20px rgb(0 68 255 / 0.1),
     0 8px 32px rgba(0, 0, 0, 0.08);
-  border: var(--gap-xs) solid rgba(137, 16, 246, 0.1);
+  border: var(--gap-xs) solid rgb(0 68 255 / 0.1);
   transition: all 0.3s ease;
 }
 
 .statItem:hover {
   box-shadow:
-    0 8px 24px rgba(137, 16, 246, 0.15),
+    0 8px 24px rgb(0 68 255 / 0.15),
     0 12px 40px rgba(0, 0, 0, 0.12);
   border-color: var(--color-primary);
 }

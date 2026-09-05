@@ -97,7 +97,7 @@
   height: 60%;
   background: var(--color-primary);
   border-radius: 6px;
-  box-shadow: 0 0 8px #6c3cff33;
+  box-shadow: 0 0 8px rgb(0 68 255 / 0.2);
 }
 
 .mainContent {
@@ -135,7 +135,7 @@
 .statCard {
   background: #fff;
   border-radius: 14px;
-  box-shadow: 0 2px 12px rgba(108, 60, 255, 0.07);
+  box-shadow: 0 2px 12px rgb(0 68 255 / 0.07);
   padding: var(--padding-2xl) var(--padding-2xl);
   min-width: 170px;
   flex: 1 1 180px;
@@ -161,9 +161,9 @@
 }
 
 .statCard:hover {
-  box-shadow: 0 6px 24px rgba(108, 60, 255, 0.13);
+  box-shadow: 0 6px 24px rgb(0 68 255 / 0.13);
   transform: translateY(-2px) scale(1.03);
-  border-color: #6c3cff33;
+  border-color: rgb(0 68 255 / 0.2);
 }
 
 .quickActions {
@@ -173,7 +173,7 @@
 }
 
 .quickActionBtn {
-  background: linear-gradient(135deg, #6c3cff, #7f5fff);
+  background: linear-gradient(135deg, var(--color-primary), var(--primary-hover));
   color: white;
   border: none;
   padding: var(--padding-sm) var(--padding-2xl);
@@ -182,21 +182,21 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.18s;
-  box-shadow: 0 2px 8px rgba(108, 60, 255, 0.08);
+  box-shadow: 0 2px 8px rgb(0 68 255 / 0.08);
   outline: none;
 }
 
 .quickActionBtn:hover,
 .quickActionBtn:focus {
-  background: linear-gradient(135deg, #7f5fff, #6c3cff);
+  background: linear-gradient(135deg, var(--primary-hover), var(--color-primary));
   transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 6px 20px rgba(108, 60, 255, 0.13);
+  box-shadow: 0 6px 20px rgb(0 68 255 / 0.13);
 }
 
 .recentActivity {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(108, 60, 255, 0.07);
+  box-shadow: 0 2px 12px rgb(0 68 255 / 0.07);
   padding: var(--padding-lg) var(--padding-xl);
   margin-top: 2rem;
   border: 1.5px solid #f3f0ff;
@@ -237,7 +237,7 @@
 }
 
 .addButton {
-  background: linear-gradient(135deg, #6c3cff, #7f5fff);
+  background: linear-gradient(135deg, var(--color-primary), var(--primary-hover));
   color: white;
   border: none;
   padding: var(--padding-sm) var(--padding-lg);
@@ -249,13 +249,13 @@
   display: flex;
   align-items: center;
   gap: var(--gap-base);
-  box-shadow: 0 2px 8px rgba(108, 60, 255, 0.08);
+  box-shadow: 0 2px 8px rgb(0 68 255 / 0.08);
 }
 
 .addButton:hover {
-  background: linear-gradient(135deg, #7f5fff, #6c3cff);
+  background: linear-gradient(135deg, var(--primary-hover), var(--color-primary));
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(108, 60, 255, 0.13);
+  box-shadow: 0 6px 20px rgb(0 68 255 / 0.13);
 }
 
 .formOverlay {
@@ -359,7 +359,7 @@
 }
 
 .saveButton {
-  background: linear-gradient(135deg, #6c3cff, #7f5fff);
+  background: linear-gradient(135deg, var(--color-primary), var(--primary-hover));
   color: white;
   border: none;
   padding: var(--padding-sm) var(--padding-lg);
@@ -371,7 +371,7 @@
 }
 
 .saveButton:hover:not(:disabled) {
-  background: linear-gradient(135deg, #7f5fff, #6c3cff);
+  background: linear-gradient(135deg, var(--primary-hover), var(--color-primary));
   transform: translateY(-2px);
 }
 
@@ -401,7 +401,7 @@
 .blogTable {
   background: white;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(108, 60, 255, 0.07);
+  box-shadow: 0 2px 12px rgb(0 68 255 / 0.07);
   overflow: hidden;
 }
 

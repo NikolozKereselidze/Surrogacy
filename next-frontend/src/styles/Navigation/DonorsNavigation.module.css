@@ -33,14 +33,14 @@
   font-size: var(--font-sm);
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(137, 16, 246, 0.2);
+  box-shadow: 0 2px 8px rgb(0 68 255 / 0.2);
 }
 
 .backButton:hover,
 .donorsNavigationLink > a:hover {
   background: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(137, 16, 246, 0.3);
+  box-shadow: 0 4px 12px rgb(0 68 255 / 0.3);
 }
 
 .backButton:active,

@@ -4,7 +4,7 @@ export const donorConfigs: Record<string, DonorConfig> = {
         title: "Egg Donors",
         apiEndpoint: "/api/egg-donors",
         iconComponent: "FaUser",
-        color: "#6c3cff",
+        color: "#0044ff",
     },
     "surrogates": {
         title: "Surrogates",

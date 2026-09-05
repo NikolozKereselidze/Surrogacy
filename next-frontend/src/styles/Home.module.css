@@ -107,7 +107,7 @@
   text-align: center;
   width: fit-content;
   min-width: 14rem;
-  box-shadow: 0 4px 20px rgba(137, 16, 246, 0.35);
+  box-shadow: 0 4px 20px rgb(0 68 255 / 0.35);
 }
 
 .applyButton {
@@ -162,7 +162,7 @@
 .beginYourMiracleCard:hover,
 .beginYourMiracleCard:focus {
   box-shadow: var(--shadow-hover);
-  border-color: rgba(137, 16, 246, 0.3);
+  border-color: rgb(0 68 255 / 0.3);
 }
 
 .beginYourMiracleCardContent {
@@ -242,7 +242,7 @@
   gap: 0.35rem;
   font-size: var(--font-base);
   font-weight: 600;
-  color: var(--color-primary, #8910f6);
+  color: var(--color-primary, #0044ff);
   text-decoration: none;
   transition:
     gap 0.2s ease,

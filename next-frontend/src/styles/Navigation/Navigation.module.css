@@ -28,7 +28,7 @@
 }
 
 .logoFamily {
-  color: #6e6fd8;
+  color: var(--color-primary);
 }
 
 .desktopOnly {

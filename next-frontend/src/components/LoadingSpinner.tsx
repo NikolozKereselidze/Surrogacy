@@ -4,7 +4,7 @@ interface LoadingSpinnerProps {
     color?: string;
     message?: string;
 }
-const LoadingSpinner = ({ size = "medium", color = "var(--color-primary, #8910f6)", message, }: LoadingSpinnerProps) => {
+const LoadingSpinner = ({ size = "medium", color = "var(--color-primary, #0044ff)", message, }: LoadingSpinnerProps) => {
     return (<div className={styles.loadingContainer}>
       <div className={`${styles.spinner} ${styles[size]}`} style={{ color }}>
         <div className={styles.spinnerInner}></div>

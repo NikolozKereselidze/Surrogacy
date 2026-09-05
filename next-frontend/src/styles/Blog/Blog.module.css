@@ -1,5 +1,5 @@
 .listingHero {
-  background: linear-gradient(135deg, #370c55 0%, #5b1a8a 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--primary-hover) 100%);
   padding: var(--padding-5xl) var(--padding-xl);
   text-align: center;
 }
@@ -70,7 +70,7 @@
 .postHeroOverlay {
   position: absolute;
   inset: 0;
-  background: rgba(55, 12, 85, 0.72);
+  background: rgb(0 36 128 / 0.72);
   z-index: 1;
 }
 

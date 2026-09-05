@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   min-height: 90vh;
-  background: linear-gradient(to right, #0e1938 0%, #1c2e66 50%, #402e8c 100%);
+  background: linear-gradient(to right, #0e1938 0%, #1c2e66 50%, #123a8f 100%);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -61,7 +61,7 @@
 }
 
 .headlineGradient {
-  background: linear-gradient(to right, #8f99ff, #cc8cff);
+  background: linear-gradient(to right, var(--primary-hover), #8bb8ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -1,7 +1,7 @@
 .spinner {
   display: inline-block;
   position: relative;
-  color: var(--color-primary, #8910f6);
+  color: var(--color-primary, #0044ff);
 }
 
 .spinnerInner {
@@ -47,7 +47,7 @@
 }
 
 .loadingText {
-  color: var(--color-primary, #8910f6);
+  color: var(--color-primary, #0044ff);
   font-size: 16px;
   font-weight: 500;
 }
