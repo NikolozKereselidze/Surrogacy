@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { PrismaClient } from "../../prisma/generated/client.js";
 import {
   PutObjectCommand,
   DeleteObjectCommand,
@@ -7,13 +6,9 @@ import {
 } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { v4 as uuidv4 } from "uuid";
-import { PrismaPg } from "@prisma/adapter-pg";
-
-const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL });
-const prisma = new PrismaClient({ adapter });
+import { prisma } from "../lib/prisma.js";
 
 if (!process.env.S3_ACCESS_KEY || !process.env.S3_SECRET_ACCESS_KEY) {
-  console.log(process.env);
   throw new Error("S3 credentials are not configured");
 }
 

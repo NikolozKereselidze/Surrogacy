@@ -1,9 +1,6 @@
-import { PrismaClient } from "../../prisma/generated/client.js";
-import { PrismaPg } from "@prisma/adapter-pg";
+import { prisma } from "../lib/prisma.js";
 import { createDonorProfileSchema, updateDonorProfileSchema, validationErrorResponse, } from "../schemas/donorProfileSchema.js";
 import { createDonorWithProfile, deleteDonorWithProfile, syncSecondaryImages, } from "../services/donorProfileService.js";
-const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL });
-const prisma = new PrismaClient({ adapter });
 const getEggDonors = async (req, res) => {
     try {
         const eggDonors = await prisma.eggDonor.findMany({

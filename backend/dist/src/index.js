@@ -11,8 +11,9 @@ import fileRoutes from "./routes/fileRoutes.js";
 import contactRoutes from "./routes/contactRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import teamMemberRoutes from "./routes/teamMemberRoutes.js";
+import { prisma } from "./lib/prisma.js";
 const app = express();
-const port = Number(process.env.PORT);
+const port = Number(process.env.PORT ?? 4000);
 app.set("trust proxy", 1);
 app.use(express.json());
 app.use(cookieParser());
@@ -26,6 +27,22 @@ app.use(cors({
 app.get("/", (req, res) => {
     res.send("Hello World");
 });
+// Liveness must not touch the database. Render can check this endpoint without
+// unnecessarily waking a suspended Neon compute.
+app.get("/healthz", (_req, res) => {
+    res.status(200).json({ status: "ok" });
+});
+// Use this endpoint for diagnostics, not frequent platform health checks.
+app.get("/readyz", async (_req, res) => {
+    try {
+        await prisma.$queryRaw `SELECT 1`;
+        res.status(200).json({ status: "ready" });
+    }
+    catch (error) {
+        console.error("Database readiness check failed", error);
+        res.status(503).json({ status: "unavailable" });
+    }
+});
 // Routes - JWT authentication is handled within each route
 app.use("/api/egg-donors", eggDonorRoutes);
 app.use("/api/surrogate-donors", surrogateRoutes);
@@ -35,6 +52,15 @@ app.use("/api/contact", contactRoutes);
 app.use("/api/blog", blogRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/team-members", teamMemberRoutes);
-app.listen(port, "0.0.0.0", () => {
+const server = app.listen(port, "0.0.0.0", () => {
     console.log(`Server is running on port ${port}`);
 });
+const shutdown = (signal) => {
+    console.log(`${signal} received; shutting down`);
+    server.close(async () => {
+        await prisma.$disconnect();
+        process.exit(0);
+    });
+};
+process.once("SIGTERM", () => shutdown("SIGTERM"));
+process.once("SIGINT", () => shutdown("SIGINT"));

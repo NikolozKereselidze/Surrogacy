@@ -1,4 +1,4 @@
-import { PrismaClient } from "../../prisma/generated/client.js";
+import type { PrismaClient } from "../../prisma/generated/client.js";
 import { CreateDonorProfileInput } from "../schemas/donorProfileSchema.js";
 import { deleteFileFromS3 } from "./s3Service.js";
 

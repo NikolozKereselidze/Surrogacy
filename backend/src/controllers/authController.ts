@@ -1,17 +1,35 @@
 import { Request, Response } from "express";
 import jwt from "jsonwebtoken";
 
+function getAuthConfig(role: "ADMIN" | "DONOR") {
+  const username = process.env[`${role}_ACCESS_USERNAME`];
+  const password = process.env[`${role}_ACCESS_PASSWORD`];
+  const secret = process.env[`${role}_JWT_SECRET`];
+
+  if (!username || !password || !secret) {
+    return null;
+  }
+
+  return { username, password, secret };
+}
+
 const donorLogin = async (req: Request, res: Response): Promise<any> => {
   const { username, password } = req.body;
+  const config = getAuthConfig("DONOR");
+
+  if (!config) {
+    console.error("Donor authentication is not configured");
+    return res.status(503).json({ message: "Authentication is unavailable" });
+  }
 
   if (
-    username !== process.env.DONOR_ACCESS_USERNAME ||
-    password !== process.env.DONOR_ACCESS_PASSWORD
+    username !== config.username ||
+    password !== config.password
   ) {
     return res.status(401).json({ message: "Invalid username or password" });
   }
 
-  const token = jwt.sign({ username }, process.env.DONOR_JWT_SECRET || "", {
+  const token = jwt.sign({ username }, config.secret, {
     expiresIn: "2h",
   });
   res.cookie("donorToken", token, {
@@ -26,15 +44,21 @@ const donorLogin = async (req: Request, res: Response): Promise<any> => {
 
 const adminLogin = async (req: Request, res: Response): Promise<any> => {
   const { username, password } = req.body;
+  const config = getAuthConfig("ADMIN");
+
+  if (!config) {
+    console.error("Admin authentication is not configured");
+    return res.status(503).json({ message: "Authentication is unavailable" });
+  }
 
   if (
-    username !== process.env.ADMIN_ACCESS_USERNAME ||
-    password !== process.env.ADMIN_ACCESS_PASSWORD
+    username !== config.username ||
+    password !== config.password
   ) {
     return res.status(401).json({ message: "Invalid username or password" });
   }
 
-  const token = jwt.sign({ username }, process.env.ADMIN_JWT_SECRET || "", {
+  const token = jwt.sign({ username }, config.secret, {
     expiresIn: "2h",
   });
   res.cookie("adminToken", token, {
@@ -59,25 +83,33 @@ const donorLogout = async (req: Request, res: Response): Promise<any> => {
 
 const adminCheckToken = async (req: Request, res: Response): Promise<any> => {
   const token = req.cookies.adminToken;
-  if (!token) {
+  const secret = process.env.ADMIN_JWT_SECRET;
+  if (!token || !secret) {
     return res.status(401).json({ message: "Unauthorized" });
   }
-  const decoded = jwt.verify(token, process.env.ADMIN_JWT_SECRET || "");
-  if (!decoded) {
+
+  try {
+    jwt.verify(token, secret);
+  } catch {
     return res.status(401).json({ message: "Unauthorized" });
   }
+
   return res.status(200).json({ message: "Token is valid" });
 };
 
 const donorCheckToken = async (req: Request, res: Response): Promise<any> => {
   const token = req.cookies.donorToken;
-  if (!token) {
+  const secret = process.env.DONOR_JWT_SECRET;
+  if (!token || !secret) {
     return res.status(401).json({ message: "Unauthorized" });
   }
-  const decoded = jwt.verify(token, process.env.DONOR_JWT_SECRET || "");
-  if (!decoded) {
+
+  try {
+    jwt.verify(token, secret);
+  } catch {
     return res.status(401).json({ message: "Unauthorized" });
   }
+
   return res.status(200).json({ message: "Token is valid" });
 };
 

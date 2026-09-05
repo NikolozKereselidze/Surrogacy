@@ -7,6 +7,13 @@ if (!connectionString) {
   throw new Error("DATABASE_URL is not configured");
 }
 
-const adapter = new PrismaPg({ connectionString });
+const adapter = new PrismaPg({
+  connectionString,
+  // Keep the application-side pool deliberately small. Neon handles the
+  // larger shared pool at its pooled endpoint.
+  max: 5,
+  idleTimeoutMillis: 30_000,
+  connectionTimeoutMillis: 10_000,
+});
 
 export const prisma = new PrismaClient({ adapter });
