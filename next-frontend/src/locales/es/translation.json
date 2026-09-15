@@ -67,7 +67,7 @@
       "eyebrow": "Agencia Integral",
       "highlightBadge": "Gestión 24/7",
       "title": "Apoyo Integral en Subrogación en Georgia País",
-      "description": "Como agencia de subrogación en Georgia, guiamos a padres internacionales en cada etapa  desde FIV y donación de óvulos en Tiflis hasta contratos legales, transferencia de embrión y registro del certificado de nacimiento.",
+      "description": "Como agencia de subrogación en Georgia, acompañamos a padres internacionales mediante coordinación de FIV, donación de óvulos, selección de subrogada y derivaciones a profesionales legales independientes.",
       "subtitle": "Protección Legal y Coordinación FIV en Tiflis",
       "content": "La gestación subrogada en Georgia está reconocida para padres internacionales desde 2011. Coordinamos clínicas de fertilidad en Tiflis, gestionamos contratos de subrogación y ofrecemos precios transparentes con apoyo 24/7 durante todo el programa.",
       "imageAlt": "Manos protectoras sosteniendo con ternura los pies de un recién nacido  apoyo compasivo en subrogación en Georgia"
@@ -80,7 +80,7 @@
       "value1Title": "Programas Coordinados de FIV y Subrogación",
       "value1Content": "Colaboramos con clínicas líderes en Tiflis para FIV, transferencia de embrión y donación de óvulos  gestionando plazos, comunicación y coordinación médica en cada paso.",
       "value2Title": "Padres Internacionales, Experiencia Local",
-      "value2Content": "Desde la primera consulta hasta la asistencia con documentos tras el nacimiento, nuestros gestores conocen el costo de subrogación en Georgia, la logística internacional y los pasos legales que protegen a su familia.",
+      "value2Content": "Desde la primera consulta hasta el apoyo familiar postnatal, nuestros coordinadores conocen la logística internacional y cuándo derivar a las familias a profesionales independientes autorizados.",
       "imageAlt": "Niña besando el vientre de una madre sustituta embarazada  subrogación gestacional en Georgia"
     },
     "faq": {
@@ -258,11 +258,11 @@
         },
         {
           "title": "Marco Legal y Protección de la Filiación",
-          "description": "Sus derechos parentales deben estar asegurados antes de que comience el tratamiento. En Georgia, los padres intencionales son reconocidos en el certificado de nacimiento desde el nacimiento según el Artículo 143 de la Ley de Atención Médica. Confirme que la agencia proporcione contratos notarizados, asesoría legal y apoyo en la documentación postnatal para su país de origen.",
+          "description": "Los derechos y requisitos deben revisarse antes del tratamiento. Confirme que la agencia trabaje con profesionales legales independientes y explique qué asuntos corresponden exclusivamente a las autoridades o embajadas.",
           "questions": [
             "¿Se establecen los derechos parentales antes de la transferencia de embrión?",
             "¿La agencia proporciona asesoría legal familiarizada con la ley georgiana?",
-            "¿Cuál es el proceso del certificado de nacimiento y la salida con pasaporte?"
+            "¿Qué asuntos postnatales requieren orientación legal o consular independiente?"
           ]
         },
         {
@@ -307,7 +307,7 @@
       "eyebrow": "VENTAJA DE GEORGIA",
       "title": "Por Qué Elegir una Agencia de Gestación Subrogada en Georgia",
       "subtitle": "Georgia ha sido un destino internacional líder en gestación subrogada desde 2011, ofreciendo claridad legal, programas asequibles y atención de fertilidad de clase mundial en Tiflis.",
-      "overview": "Para padres intencionales que comparan opciones en Estados Unidos, Reino Unido u otros países, Georgia ofrece una combinación excepcionalmente favorable: legislación clara que protege a los padres intencionales, costos de programa significativamente menores, clínicas de FIV acreditadas y un proceso de certificado de nacimiento simplificado que suele tardar solo de 5 a 10 días. Happy Family se ha especializado en gestación subrogada en Georgia para familias internacionales desde 2009, lo que nos brinda una profunda experiencia tanto en la ley georgiana como en los requisitos de salida de decenas de países de origen.",
+      "overview": "Para familias que comparan opciones internacionales, Georgia combina clínicas de FIV con apoyo coordinado. Happy Family se centra en la coordinación médica y familiar, mientras profesionales independientes autorizados asesoran sobre requisitos legales y postnatales.",
       "points": [
         {
           "title": "Protección Legal Desde 2011",
@@ -319,7 +319,7 @@
         },
         {
           "title": "Proceso de Salida Rápido",
-          "description": "No se requieren órdenes judiciales ni procedimientos de adopción postnatal. Tras el nacimiento, el Registro Civil emite el certificado de nacimiento de su bebé en pocos días, y le asistimos con la documentación consular para su regreso a casa."
+          "description": "Después del nacimiento ofrecemos apoyo familiar práctico y derivaciones a profesionales independientes. Las autoridades y embajadas determinan y emiten los documentos oficiales."
         },
         {
           "title": "Clínicas Acreditadas en Tiflis",
@@ -394,7 +394,7 @@
         },
         {
           "question": "¿Es legal la gestación subrogada en Georgia para extranjeros?",
-          "answer": "Sí. La gestación subrogada gestacional es legal en Georgia desde 2011 y está disponible para padres intencionales internacionales que cumplan los requisitos de elegibilidad, incluidas parejas heterosexuales casadas o en convivencia con necesidad médica documentada. Happy Family coordina todos los contratos legales y el registro del certificado de nacimiento conforme a la ley georgiana."
+          "answer": "La elegibilidad depende de la ley vigente y de cada familia. Happy Family coordina servicios de fertilidad y deriva a profesionales legales independientes para confirmar los requisitos actuales."
         },
         {
           "question": "¿Qué apoyo reciben los padres intencionales durante el viaje?",
@@ -478,7 +478,7 @@
     "q12": "¿Qué apoyo brindan durante el embarazo?",
     "a12": "Un coordinador dedicado, asistencia 24/7, gestión de citas y actualizaciones médicas regulares.",
     "q13": "¿Ofrecen apoyo postparto?",
-    "a13": "Sí. Ayudamos con documentación legal, documentos de viaje, logística del recién nacido y referencias pediátricas.",
+    "a13": "Sí. Ayudamos con logística del recién nacido, coordinación de viajes, referencias pediátricas y derivaciones independientes. Los documentos oficiales se gestionan con las autoridades correspondientes.",
     "all": "Todos",
     "noResults": "Sin resultados. Prueba con otra búsqueda.",
     "searchPlaceholder": "Buscar preguntas..."
@@ -512,13 +512,14 @@
   "footer": {
     "privacyPolicy": "Política de privacidad",
     "termsOfService": "Términos de servicio",
+    "cookieSettings": "Configurar cookies",
     "copyright": "Todos los derechos reservados."
   },
   "surrogacyProcess": {
     "hero": {
       "tag": "PROCESO DE SUBROGACIÓN",
       "title": "El Proceso de Subrogación en Georgia País",
-      "description": "Desde su primera consulta en Tiflis hasta el registro del certificado de nacimiento, Happy Family guía a padres internacionales en cada etapa de la gestación subrogada en Georgia. Nuestro programa cubre coordinación de FIV, emparejamiento con subrogada, contratos legales, monitoreo del embarazo y apoyo postnatal.",
+      "description": "Desde la primera consulta en Tiflis hasta el apoyo familiar postnatal, Happy Family coordina la FIV, la selección de subrogada, el seguimiento del embarazo y las derivaciones a profesionales independientes autorizados.",
       "primaryCta": "Consulta Gratuita",
       "secondaryCta": "Subrogación en Georgia",
       "cardTitle": "Resumen del Viaje",
@@ -547,8 +548,8 @@
           "description": "Nuestro equipo coordina la FIV en clínicas asociadas de Tiflis, incluyendo donación de óvulos si es necesario, y te empareja cuidadosamente con una subrogada gestacional evaluada. Los embriones se crean, analizan y transfieren. Tu gestor de caso maneja la programación y comunicación."
         },
         {
-          "title": "Embarazo, Nacimiento y Registro",
-          "description": "La subrogada recibe atención prenatal completa en hospitales modernos de Tiflis. Al nacer, los padres aparecen directamente en el certificado de nacimiento sin adopción. Ayudamos con el registro civil, pasaporte y viaje de regreso."
+          "title": "Embarazo, nacimiento y apoyo familiar",
+          "description": "La subrogada recibe atención prenatal en Tiflis. Después del parto ofrecemos apoyo práctico y derivaciones a profesionales independientes. Los documentos oficiales son tramitados y emitidos únicamente por las autoridades y embajadas correspondientes."
         }
       ]
     },
@@ -567,7 +568,7 @@
         },
         {
           "title": "Meses 6–15: Embarazo y Nacimiento",
-          "description": "Monitoreo prenatal regular, planificación del parto y nacimiento en un hospital de Tiflis. El registro del certificado de nacimiento suele completarse en 5 a 10 días."
+          "description": "Seguimiento prenatal, planificación del parto, nacimiento en un hospital de Tiflis y apoyo familiar postnatal. Las autoridades correspondientes determinan los plazos de los documentos oficiales."
         }
       ]
     },
@@ -586,7 +587,7 @@
         },
         {
           "title": "Apoyo Postnatal y de Viaje",
-          "text": "Tras el nacimiento, te guiamos en el registro del certificado, documentación consular y trámites de pasaporte."
+          "text": "Tras el nacimiento ofrecemos apoyo práctico y derivaciones a profesionales independientes. Las familias gestionan los documentos oficiales directamente con las autoridades y embajadas correspondientes."
         }
       ]
     },
@@ -850,7 +851,7 @@
     "hero": {
       "tag": "EVALUACIÓN DE PADRES",
       "title": "Evaluación de Padres Intencionales para Subrogación en Georgia",
-      "description": "Antes de iniciar un programa de gestación subrogada en Georgia país, los padres intencionales internacionales completan un proceso de evaluación exhaustivo en Tiflis. Happy Family revisa su historial médico, preparación psicológica y elegibilidad legal según las leyes de subrogación en Georgia  garantizando un camino seguro y ético desde la consulta hasta el registro del certificado de nacimiento.",
+      "description": "Antes de iniciar un programa en Georgia, los padres completan una evaluación en Tiflis. Happy Family revisa el historial médico y la preparación psicológica; profesionales independientes autorizados asesoran sobre la elegibilidad legal.",
       "primaryCta": "Consulta Gratuita",
       "secondaryCta": "Subrogación en Georgia",
       "cardTitle": "Resumen de la Evaluación",
@@ -1117,7 +1118,7 @@
         {
           "icon": "legal",
           "title": "Orientación Legal",
-          "description": "Explicación clara de las leyes de subrogación en Georgia, preparación de contratos y registro del certificado de nacimiento. Coordinamos con asesores legales licenciados antes del tratamiento."
+          "description": "Derivaciones a profesionales legales independientes para comprender la elegibilidad, los contratos y los asuntos postnatales que corresponden a las autoridades."
         },
         {
           "icon": "counselling",
@@ -1155,7 +1156,7 @@
         },
         {
           "title": "Nacimiento, Documentación y Regreso",
-          "description": "Apoyo durante el parto, registro del certificado de nacimiento, documentación de embajada y viaje a casa. Coordinación legal y consejería en la transición a la paternidad."
+          "description": "Apoyo práctico durante el parto y la transición a la paternidad, con derivaciones independientes para preguntas legales. Los documentos oficiales se gestionan directamente con las autoridades."
         }
       ]
     },
@@ -1381,9 +1382,9 @@
   },
   "surrogacyInGeorgia": {
     "hero": {
-      "tag": "100% LEGAL Y ASEQUIBLE PARA EXTRANJEROS",
+      "tag": "APOYO INTERNACIONAL DE SUBROGACIÓN",
       "title": "Gestación Subrogada en Georgia: Su Camino Seguro hacia la Paternidad",
-      "description": "Embárquese en un viaje de gestación subrogada legalmente protegido y de clase mundial en la República de Georgia. Desde 2011, Georgia ofrece uno de los marcos legales más favorables para padres internacionales, otorgando derechos parentales automáticos desde el nacimiento sin órdenes judiciales ni adopción. Nuestros programas integrales combinan clínicas de FIV de vanguardia, sustitutas completamente evaluadas y apoyo legal completo.",
+      "description": "Explore un programa de subrogación coordinado en Georgia con clínicas de FIV, subrogadas evaluadas, apoyo familiar dedicado y derivaciones a profesionales legales independientes. La elegibilidad depende de la ley vigente y de cada caso.",
       "primaryCta": "Comience Su Viaje",
       "secondaryCta": "Descargar Guía Legal",
       "highlightsTitle": "Por Qué Georgia es la Opción #1",
@@ -1405,8 +1406,8 @@
           "description": "Equipamiento médico de última generación y altas tasas de éxito clínico."
         },
         {
-          "title": "Proceso de Salida Rápido y Seguro",
-          "description": "Registro administrativo del certificado de nacimiento en solo 5 a 10 días."
+          "title": "Apoyo familiar postnatal",
+          "description": "Coordinación práctica después del parto y orientación independiente para cuestiones legales."
         }
       ]
     },
@@ -1417,8 +1418,8 @@
       "cards": [
         {
           "icon": "⚖",
-          "title": "100% Legalmente Seguro",
-          "description": "La ley georgiana ha protegido explícitamente a los padres desde 2011. Según el Artículo 143 de la Ley de Atención Médica, ustedes son reconocidos como los únicos padres legales en el certificado de nacimiento desde el nacimiento. La sustituta no tiene derechos legales ni parentales sobre el niño."
+          "title": "Revisión legal independiente",
+          "description": "La elegibilidad y los resultados legales dependen de la ley vigente y de cada caso. Consulte a un profesional independiente autorizado antes del tratamiento."
         },
         {
           "icon": "⭐",
@@ -1427,16 +1428,17 @@
         },
         {
           "icon": "✈",
-          "title": "Proceso de Salida Simplificado",
-          "description": "No se requieren órdenes judiciales previas, aprobaciones de comités especiales ni procedimientos de adopción postnatal. Una vez emitido el certificado de nacimiento (generalmente en 5-10 días), pueden solicitar inmediatamente el pasaporte del bebé y regresar a casa."
+          "title": "Orientación legal independiente",
+          "description": "Los requisitos varían según la nacionalidad y las circunstancias. Profesionales independientes y las autoridades correspondientes pueden explicar los requisitos postnatales vigentes."
         }
       ]
     },
     "legal": {
       "eyebrow": "PROTECCIÓN LEGAL",
-      "title": "Marco Legal: Derechos 100% Protegidos",
+      "title": "Comprender el marco legal",
       "subtitle": "Un marco legal claro, regulado y favorable garantiza total tranquilidad a los padres internacionales.",
-      "overview": "El marco legal que rige las tecnologías de reproducción asistida (TRA) en Georgia es excepcionalmente claro y favorable. Según el Artículo 143 de la Ley de Atención Médica de Georgia (2011), la gestación subrogada y la donación de óvulos/esperma son totalmente legales y respaldadas por el Estado.",
+      "overview": "Georgia cuenta con un marco legal relacionado con la reproducción asistida. Happy Family ofrece información general y derivaciones, no asesoramiento legal. Un profesional independiente autorizado debe confirmar la elegibilidad y los requisitos actuales antes del tratamiento.",
+      "disclaimer": "Happy Family es una empresa privada de coordinación de subrogación, no una agencia gubernamental. No emitimos ni garantizamos certificados de nacimiento, pasaportes, visados u otros documentos oficiales. Solo las autoridades y embajadas correspondientes emiten documentos oficiales. Esta información es general y no constituye asesoramiento legal.",
       "protectionsTitle": "Protecciones Legales Clave según la Ley Georgiana:",
       "protections": [
         {
@@ -1448,8 +1450,8 @@
           "description": "Según el Artículo 143, la madre sustituta (y cualquier donante) no tiene derechos parentales sobre el niño y no puede quedarse con el niño después del nacimiento."
         },
         {
-          "title": "Registro Directo del Certificado de Nacimiento",
-          "description": "Sus nombres aparecen directamente en el certificado de nacimiento como madre y padre. No se menciona la gestación subrogada ni la donación en el documento oficial."
+          "title": "Información legal postnatal",
+          "description": "Profesionales independientes autorizados pueden explicar los requisitos vigentes de filiación y registros oficiales. Solo las autoridades deciden el contenido y la emisión de esos registros."
         }
       ],
       "eligibleTitle": "¿Quién es Elegible?",
@@ -1479,7 +1481,7 @@
         },
         {
           "title": "Configuración Legal y Administrativa",
-          "description": "Redacción y firma de contratos legales claros que protegen sus derechos parentales. Los contratos se preparan conforme a la ley georgiana y se notarizan. También ayudamos con la traducción y preparación de documentos."
+          "description": "Profesionales legales independientes pueden preparar y explicar los contratos. Happy Family coordina citas y ofrece asistencia lingüística, pero no proporciona asesoramiento legal ni servicios de documentos gubernamentales."
         },
         {
           "title": "FIV y Transferencia de Embrión",
@@ -1490,8 +1492,8 @@
           "description": "Una vez confirmado el embarazo, la sustituta recibe atención prenatal integral y apoyo emocional. Ustedes reciben actualizaciones médicas regulares, informes de ecografías y videollamadas."
         },
         {
-          "title": "Nacimiento y Proceso de Salida",
-          "description": "El bebé nace en un hospital de maternidad moderno en Tiflis. Tras el nacimiento, el Registro Civil emite el certificado oficial en 5-10 días con solo los nombres de los padres. Ayudamos con la documentación para el pasaporte en su embajada."
+          "title": "Nacimiento y apoyo postnatal",
+          "description": "El bebé nace en un hospital de Tiflis. Después del parto ofrecemos apoyo familiar práctico y derivaciones independientes. Los documentos oficiales se gestionan directamente con las autoridades y embajadas correspondientes."
         }
       ]
     },
@@ -1512,7 +1514,7 @@
         },
         {
           "title": "Apoyo Legal y Administrativo",
-          "description": "Redacción de contratos, honorarios notariales, traducción, registro de nacimiento y apoyo consular."
+          "description": "Coordinación con profesionales legales independientes, asistencia lingüística y apoyo familiar postnatal. No se incluyen servicios de documentos gubernamentales."
         },
         {
           "title": "Atención Prenatal y Parto",
@@ -1539,7 +1541,7 @@
       "items": [
         {
           "question": "¿Es legal la gestación subrogada en Georgia para parejas extranjeras?",
-          "answer": "Sí, la gestación subrogada y la donación de óvulos/esperma han sido 100% legales desde 2011. La sustituta no tiene derechos parentales y los padres se registran directamente en el certificado de nacimiento."
+          "answer": "Georgia cuenta con un marco legal relacionado con la reproducción asistida, pero la elegibilidad y los resultados dependen de la ley vigente y de cada caso. Consulte a un profesional independiente autorizado."
         },
         {
           "question": "¿Quién puede acceder a la gestación subrogada en Georgia?",
@@ -1550,8 +1552,8 @@
           "answer": "En junio de 2023 se propuso restringir la gestación subrogada comercial a ciudadanos georgianos, pero el proyecto no fue aprobado. Para padres extranjeros, el programa sigue siendo completamente legal y operativo."
         },
         {
-          "question": "¿Cómo funciona el proceso de filiación y salida?",
-          "answer": "La filiación legal se adquiere automáticamente al nacimiento. En 5-10 días se emite el certificado de nacimiento y pueden solicitar el pasaporte del bebé en la embajada de su país en Tiflis."
+          "question": "¿Cómo se gestionan los requisitos legales postnatales?",
+          "answer": "Los requisitos y plazos dependen de la ley vigente, la nacionalidad de los padres y las autoridades correspondientes. Happy Family ofrece apoyo práctico y derivaciones a profesionales independientes autorizados."
         }
       ]
     }

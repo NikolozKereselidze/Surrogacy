@@ -70,9 +70,9 @@
       "eyebrow": "Full-Service Agency",
       "highlightBadge": "24/7 Case Management",
       "title": "End-to-End Surrogacy Support in Georgia",
-      "description": "As a dedicated Georgia surrogacy agency, we guide international intended parents through every stage  from IVF and egg donation in Tbilisi to legal contracts, embryo transfer, and birth certificate registration under Georgia surrogacy laws.",
+      "description": "As a dedicated Georgia surrogacy agency, we guide international intended parents through IVF and egg donation in Tbilisi, surrogate matching, clinical coordination, and referrals to independent legal professionals.",
       "subtitle": "Legal Protection & IVF Coordination in Tbilisi",
-      "content": "Georgia has recognized gestational surrogacy for international parents since 2011. Our team coordinates with fertility clinics in Tbilisi, manages surrogacy contracts, and ensures intended parents are named on the birth certificate  with transparent pricing and round-the-clock support throughout your program.",
+      "content": "Our team coordinates with fertility clinics in Tbilisi and supports families throughout their program. Independent licensed professionals explain legal requirements, while official records remain the responsibility of the relevant government authorities.",
       "imageAlt": "Caring hands gently holding a newborn baby's feet, representing compassionate surrogacy support in Georgia"
     },
     "experienceSection": {
@@ -83,7 +83,7 @@
       "value1Title": "Coordinated IVF & Surrogacy Programs",
       "value1Content": "We partner with leading fertility clinics in Tbilisi for IVF, embryo transfer, and egg donation  managing timelines, communication, and medical coordination so international parents stay informed at every step.",
       "value2Title": "International Parents, Local Expertise",
-      "value2Content": "From first consultation to passport assistance after birth, our case managers understand cross-border surrogacy logistics, Georgia surrogacy cost structures, and the legal steps that protect your family.",
+      "value2Content": "From first consultation through post-birth support, our case managers understand cross-border surrogacy logistics, Georgia surrogacy cost structures, and when to refer families to independent licensed professionals.",
       "imageAlt": "Young child kissing a pregnant surrogate mother's belly, representing families built through gestational surrogacy in Georgia"
     },
     "faq": {
@@ -101,7 +101,7 @@
         },
         {
           "question": "What is the surrogacy process in Georgia?",
-          "answer": "The process includes consultation, IVF or embryo creation, surrogate matching and screening, embryo transfer, pregnancy monitoring in Tbilisi, birth, and birth certificate registration. Our team manages every step for international families."
+          "answer": "The process includes consultation, IVF or embryo creation, surrogate matching and screening, embryo transfer, pregnancy monitoring in Tbilisi, birth, and post-birth family support. Independent professionals explain any legal or official-document requirements."
         }
       ]
     }
@@ -182,6 +182,7 @@
   "footer": {
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
+    "cookieSettings": "Cookie settings",
     "copyright": "All rights reserved."
   },
   "ourMission": {
@@ -278,7 +279,7 @@
         {
           "icon": "shield",
           "title": "Comprehensive Care",
-          "description": "From your first free consultation through embryo transfer, pregnancy monitoring, birth, and post-birth documentation, we manage the entire process under one roof. You receive regular medical updates, coordinated clinic appointments, legal contract preparation, and embassy support so you never have to chase answers across multiple providers."
+          "description": "From your first consultation through embryo transfer, pregnancy monitoring, birth, and post-birth family support, we coordinate the program in one place. You receive medical updates, coordinated clinic appointments, and referrals to independent licensed professionals when needed."
         },
         {
           "icon": "heart",
@@ -314,11 +315,11 @@
         },
         {
           "title": "Legal Framework & Parentage Protection",
-          "description": "Your parental rights must be secured before treatment begins. In Georgia, intended parents are recognized on the birth certificate from birth under Article 143 of the Law on Health Care. Confirm the agency provides notarized contracts, legal counsel, and post-birth documentation support for your home country.",
+          "description": "Your parental rights should be reviewed before treatment begins. Confirm that the agency works with independent licensed legal counsel and clearly explains which matters must be handled directly with government authorities or your home-country embassy.",
           "questions": [
             "Are parental rights established before embryo transfer?",
             "Does the agency provide legal counsel familiar with Georgian law?",
-            "What is the birth certificate and passport exit process?"
+            "Which post-birth matters require independent legal or embassy guidance?"
           ]
         },
         {
@@ -363,7 +364,7 @@
       "eyebrow": "GEORGIA ADVANTAGE",
       "title": "Why Choose a Surrogacy Agency in Georgia",
       "subtitle": "Georgia has been a leading international surrogacy destination since 2011 offering legal clarity, affordable programs, and world-class fertility care in Tbilisi.",
-      "overview": "For intended parents comparing options in the United States, United Kingdom, or other countries, Georgia offers a uniquely favorable combination: clear legislation protecting intended parents, significantly lower program costs, accredited IVF clinics, and a streamlined birth certificate process that typically takes just 5–10 days. Happy Family has specialized in Georgia surrogacy for international families since 2009, giving us deep expertise in both Georgian law and the exit requirements of dozens of home countries.",
+      "overview": "For intended parents comparing international options, Georgia combines experienced IVF clinics with coordinated fertility and surrogacy support. Happy Family focuses on medical coordination and family support, while independent licensed professionals advise on legal and post-birth requirements.",
       "points": [
         {
           "title": "Legal Protection Since 2011",
@@ -374,8 +375,8 @@
           "description": "All-inclusive surrogacy programs in Georgia start from approximately $40,000 a fraction of typical US surrogacy costs with transparent, itemized pricing and no hidden fees."
         },
         {
-          "title": "Fast Exit Process",
-          "description": "No court orders or post-birth adoption proceedings are required. After birth, the Civil Registry issues your baby's birth certificate within days, and we assist with embassy documentation for your return home."
+          "title": "Post-Birth Family Support",
+          "description": "After birth, we continue providing practical family support and referrals to independent licensed professionals. Government authorities and embassies alone determine and issue official documents."
         },
         {
           "title": "Accredited Tbilisi Clinics",
@@ -394,17 +395,17 @@
         "Hidden fees and unexpected costs",
         "Long surrogate wait times with no transparency",
         "No dedicated coordinator rotating support staff",
-        "Limited experience with international exit documentation"
+        "Limited access to independent legal guidance"
       ],
       "ourTitle": "Happy Family",
       "ourPoints": [
         "Full in-house medical team and clinic coordination",
         "Personalized programs tailored to your medical profile",
-        "Comprehensive post-birth and embassy support",
+        "Practical post-birth family support",
         "Transparent, itemized pricing with fixed-fee options",
         "Actively screened surrogate database with faster matching",
-        "One dedicated coordinator from consultation to exit",
-        "15+ years guiding international families home safely"
+        "One dedicated coordinator throughout the program",
+        "15+ years supporting international families"
       ]
     },
     "testimonials": {
@@ -434,7 +435,7 @@
         },
         {
           "question": "What should I ask a surrogacy agency before signing?",
-          "answer": "Ask which clinics perform IVF and deliveries, how parental rights are legally secured, what the total all-inclusive cost covers, how surrogates are medically and psychologically screened, who your dedicated coordinator will be, and what post-birth support is included for embassy documentation and travel home."
+          "answer": "Ask which clinics perform IVF and deliveries, how independent legal advice is provided, what the total cost covers, how surrogates are medically and psychologically screened, who your dedicated coordinator will be, and what practical post-birth support is included."
         },
         {
           "question": "How do I verify a surrogacy agency's credentials?",
@@ -446,15 +447,15 @@
         },
         {
           "question": "What makes Happy Family different from other agencies?",
-          "answer": "Happy Family combines 15+ years of international experience, in-house medical and legal coordination, a dedicated coordinator for every family, transparent fixed-fee packages, rigorous surrogate screening, 24/7 multilingual support, and specialized expertise in embassy exit documentation for parents returning to the US, UK, Israel, China, and across Europe."
+          "answer": "Happy Family combines international experience, medical coordination, referrals to independent licensed legal professionals, a dedicated coordinator for every family, transparent program details, rigorous surrogate screening, and multilingual support."
         },
         {
           "question": "Is surrogacy legal in Georgia for foreigners?",
-          "answer": "Yes. Gestational surrogacy has been legal in Georgia since 2011 and is available to international intended parents who meet eligibility requirements, including heterosexual married or cohabiting couples with documented medical need. Happy Family coordinates all legal contracts and birth certificate registration in compliance with Georgian law."
+          "answer": "Eligibility for gestational surrogacy in Georgia depends on current law and each family's circumstances. Happy Family coordinates fertility services and refers families to independent licensed legal professionals for current eligibility and legal requirements."
         },
         {
           "question": "What support do intended parents receive during the journey?",
-          "answer": "Every intended parent is assigned a dedicated coordinator who manages clinic appointments, legal contracts, surrogate matching, pregnancy updates, and post-birth documentation. We also provide emotional counselling, financial planning guidance, translation services, travel coordination, and 24/7 urgent support throughout the entire process."
+          "answer": "Every intended parent is assigned a dedicated coordinator who manages clinic appointments, surrogate matching, pregnancy updates, and practical post-birth support. We also provide emotional counselling, translation assistance, travel coordination, and referrals to independent licensed professionals."
         },
         {
           "question": "How long does the surrogacy process take with Happy Family?",
@@ -522,7 +523,7 @@
     "q12": "What support do you provide during pregnancy?",
     "a12": "A dedicated coordinator, 24/7 assistance, appointment management, and regular medical updates throughout.",
     "q13": "Do you offer post-birth support?",
-    "a13": "Yes. We help with legal paperwork, travel documents, newborn logistics, and pediatric referrals.",
+    "a13": "Yes. We help with newborn logistics, travel coordination, pediatric referrals, and referrals to independent licensed professionals. Official documents are handled directly with the relevant authorities.",
     "all": "All",
     "noResults": "No results. Try a different search.",
     "searchPlaceholder": "Search questions..."
@@ -531,7 +532,7 @@
     "hero": {
       "tag": "SURROGACY PROCESS",
       "title": "The Surrogacy Process in Georgia Country",
-      "description": "From your first consultation in Tbilisi to birth certificate registration, Happy Family guides international intended parents through every stage of gestational surrogacy in Georgia. Our step-by-step program covers IVF coordination, surrogate matching, legal contracts under Georgia surrogacy laws, pregnancy monitoring, and post-birth support for families worldwide.",
+      "description": "From your first consultation in Tbilisi through post-birth family support, Happy Family guides international intended parents through gestational surrogacy in Georgia. Our program covers IVF coordination, surrogate matching, pregnancy monitoring, and referrals to independent licensed professionals.",
       "primaryCta": "Book a Free Consultation",
       "secondaryCta": "Surrogacy in Georgia",
       "cardTitle": "Journey Overview",
@@ -539,7 +540,7 @@
         "Consultation and program selection",
         "Legal contracts and screening",
         "IVF, matching, and embryo transfer",
-        "Pregnancy, birth, and registration"
+        "Pregnancy, birth, and family support"
       ]
     },
     "process": {
@@ -560,8 +561,8 @@
           "description": "Our team coordinates IVF at partner fertility clinics in Tbilisi, including egg donation if needed, and carefully matches you with a screened gestational surrogate. Embryos are created through IVF, quality-tested, and transferred to the surrogate. Your case manager handles scheduling, communication, and medical updates throughout the gestational surrogacy process in Georgia."
         },
         {
-          "title": "Pregnancy, Birth & Registration",
-          "description": "The surrogate receives comprehensive prenatal care at modern maternity hospitals in Tbilisi while your coordinator keeps you informed at every milestone. At birth, intended parents are named directly on the birth certificate with no adoption required. We assist with Civil Registry documentation, passport application, and travel home so your Georgia surrogacy journey ends with your family united."
+          "title": "Pregnancy, Birth & Family Support",
+          "description": "The surrogate receives prenatal care in Tbilisi while your coordinator keeps you informed. After delivery, we provide practical family support and referrals to independent licensed professionals. Official records and travel documents are handled and issued solely by the relevant authorities and embassies."
         }
       ]
     },
@@ -580,7 +581,7 @@
         },
         {
           "title": "Months 6–15: Pregnancy & Birth",
-          "description": "Regular prenatal monitoring, birth planning, and delivery at a Tbilisi maternity hospital. Birth certificate registration with intended parents' names typically completes within 5 to 10 days, followed by passport and travel arrangements for international families."
+          "description": "Regular prenatal monitoring, birth planning, delivery at a Tbilisi maternity hospital, and practical post-birth family support. Timelines for official records and travel documents are determined by the relevant authorities."
         }
       ]
     },
@@ -599,7 +600,7 @@
         },
         {
           "title": "Post-Birth & Travel Support",
-          "text": "After delivery, we guide you through birth certificate registration, embassy documentation, and passport procedures so you can return home safely with your newborn."
+          "text": "After delivery, we provide practical support and referrals to independent licensed professionals. Families handle official-document matters directly with the relevant authorities and embassies."
         }
       ]
     },
@@ -610,7 +611,7 @@
       "items": [
         {
           "question": "What is the surrogacy process in Georgia?",
-          "answer": "The surrogacy process in Georgia includes consultation and program selection, legal contract signing, parent and surrogate screening, IVF and embryo transfer at clinics in Tbilisi, pregnancy monitoring, birth, and birth certificate registration. Happy Family manages every step for international intended parents pursuing gestational surrogacy in Georgia country."
+          "answer": "The surrogacy process in Georgia includes consultation and program selection, independent legal review, parent and surrogate screening, IVF and embryo transfer, pregnancy monitoring, birth, and post-birth family support. Happy Family coordinates the medical and support portions of the program."
         },
         {
           "question": "What is gestational surrogacy in Georgia?",
@@ -678,7 +679,7 @@
     "hero": {
       "tag": "INTENDED PARENT SCREENING",
       "title": "Intended Parent Screening for Surrogacy in Georgia",
-      "description": "Before starting a gestational surrogacy program in Georgia country, international intended parents complete a thorough screening process in Tbilisi. Happy Family reviews your medical history, psychological readiness, and legal eligibility under Georgia surrogacy laws  ensuring a safe, ethical journey from consultation to birth certificate registration.",
+      "description": "Before starting a gestational surrogacy program in Georgia, international intended parents complete a thorough screening process in Tbilisi. Happy Family reviews medical history and psychological readiness, while independent licensed professionals advise on legal eligibility.",
       "primaryCta": "Book a Free Consultation",
       "secondaryCta": "Surrogacy in Georgia",
       "cardTitle": "Screening Overview",
@@ -703,7 +704,7 @@
         },
         {
           "title": "Legal & Home Preparation",
-          "description": "Licensed counsel explains Georgia surrogacy laws, contract terms, and parental rights before treatment begins. We provide a practical checklist for travel, documentation, and post-birth registration so international intended parents understand every legal step of surrogacy in Georgia."
+          "description": "Independent licensed counsel explains current law, contract terms, and parental rights before treatment begins. We provide a practical checklist for medical and travel planning while official-document questions remain with the relevant authorities."
         }
       ]
     },
@@ -1130,7 +1131,7 @@
         {
           "icon": "legal",
           "title": "Legal Guidance",
-          "description": "Clear explanation of Georgia surrogacy laws, contract preparation, and birth certificate registration. We coordinate with licensed legal counsel so intended parents understand parental rights, timelines, and post-birth documentation before treatment begins."
+          "description": "Referrals to independent licensed legal counsel so intended parents can understand current eligibility, contracts, parental rights, and which post-birth matters must be handled with the relevant authorities."
         },
         {
           "icon": "counselling",
@@ -1168,7 +1169,7 @@
         },
         {
           "title": "Birth, Documentation & Homecoming",
-          "description": "Support through delivery, birth certificate registration, embassy documentation, and travel home. We guide international intended parents through the exit process with legal coordination and continued counselling as you transition to parenthood."
+          "description": "Practical support through delivery and the transition to parenthood, including referrals to independent licensed professionals for legal questions. Official-document matters are handled directly with the relevant authorities and embassies."
         }
       ]
     },
@@ -1420,32 +1421,32 @@
   },
   "surrogacyInGeorgia": {
     "hero": {
-      "tag": "100% LEGAL & AFFORDABLE FOR FOREIGNERS",
-      "title": "Gestational Surrogacy in Georgia: Your Secure Path to Parenthood",
-      "description": "Embark on a legally protected, world-class surrogacy journey in the Republic of Georgia. Since 2011, Georgia has offered one of the world's most supportive legal frameworks for international intended parents, granting automatic parental rights from birth with no court orders or adoption required. Our comprehensive, compassionate programs combine state-of-the-art IVF clinics, fully screened surrogates, and complete legal support to help you create your happy family safely and affordably.",
+      "tag": "INTERNATIONAL SURROGACY SUPPORT",
+      "title": "Gestational Surrogacy Support in Georgia",
+      "description": "Explore a coordinated surrogacy journey in Georgia with IVF clinic coordination, carefully screened surrogates, dedicated family support, and referrals to independent licensed legal professionals. Eligibility depends on current law and individual circumstances.",
       "primaryCta": "Start Your Journey",
-      "secondaryCta": "Download Legal Guide",
-      "highlightsTitle": "Why Georgia is the #1 Choice",
+      "secondaryCta": "Explore the Process",
+      "highlightsTitle": "Why Families Consider Georgia",
       "highlights": [
         {
-          "title": "Immediate Legal Parentage",
-          "description": "Intended parents' names go directly on the birth certificate at birth."
+          "title": "Independent Legal Guidance",
+          "description": "Licensed independent professionals can explain current eligibility and parentage requirements for your circumstances."
         },
         {
           "title": "70% Savings vs. United States",
           "description": "All-inclusive, transparent packages starting from $40,000 to $60,000."
         },
         {
-          "title": "Zero Surrogate Parental Rights",
-          "description": "The surrogate mother has no legal right to be recognized as a parent."
+          "title": "Clear Agreements",
+          "description": "Independent licensed counsel can prepare and explain agreements before treatment begins."
         },
         {
           "title": "World-Class IVF Clinics",
           "description": "State-of-the-art medical equipment and high clinical success rates."
         },
         {
-          "title": "Fast and Secure Exit Process",
-          "description": "Administrative birth certificate registration in just 5 to 10 days."
+          "title": "Post-Birth Family Support",
+          "description": "Practical coordination after delivery, with independent guidance available for legal questions."
         }
       ]
     },
@@ -1456,8 +1457,8 @@
       "cards": [
         {
           "icon": "⚖",
-          "title": "100% Legally Secure",
-          "description": "Georgian law has explicitly protected intended parents since 2011. Under Article 143 of the Law on Health Care, you are recognized as the sole legal parents on the birth certificate from birth. The surrogate mother has zero legal or parental rights to the child, ensuring a worry-free process."
+          "title": "Independent Legal Review",
+          "description": "Eligibility and legal outcomes depend on current law and individual circumstances. Families are referred to independent licensed professionals for advice before treatment begins."
         },
         {
           "icon": "⭐",
@@ -1466,29 +1467,30 @@
         },
         {
           "icon": "✈",
-          "title": "Streamlined Exit Process",
-          "description": "No pre-parentage court orders, special committee approvals, or post-birth adoption proceedings are required. Once the birth certificate is issued by the Civil Registry (usually within 5-10 days of birth), you can immediately apply for your baby's passport and travel home safely."
+          "title": "Independent Legal Guidance",
+          "description": "Requirements vary by nationality and circumstances. Independent licensed professionals and the relevant authorities can explain current post-birth and travel-document requirements."
         }
       ]
     },
     "legal": {
-      "eyebrow": "LEGAL PROTECTION",
-      "title": "The Legal Framework: 100% Protected Rights",
-      "subtitle": "A clear, regulated, and supportive legal framework ensures complete peace of mind for international intended parents.",
-      "overview": "The legal framework governing assisted reproductive technologies (ART) in Georgia is exceptionally clear and favorable for international intended parents. Under Article 143 of the Law of Georgia on Health Care (enacted in 2011), gestational surrogacy and egg/sperm donation are fully legal, regulated, and supported by the state.",
-      "protectionsTitle": "Key Legal Protections under Georgian Law:",
+      "eyebrow": "LEGAL INFORMATION",
+      "title": "Understanding the Legal Framework",
+      "subtitle": "Independent legal advice is essential because eligibility and requirements can change and vary by family.",
+      "overview": "Georgia has a legal framework relevant to assisted reproductive technologies. Happy Family provides general information and referrals, not legal advice. An independent licensed professional should confirm current eligibility, agreements, parentage, and post-birth requirements before treatment begins.",
+      "disclaimer": "Happy Family is a private surrogacy coordination company, not a government agency. We do not issue or guarantee birth certificates, passports, visas, or other government documents. Official documents are issued solely by the relevant government authorities and embassies. Information on this website is general and does not constitute legal advice.",
+      "protectionsTitle": "Matters to review with independent counsel:",
       "protections": [
         {
-          "title": "Automatic Legal Parentage",
-          "description": "Intended parents are recognized as the sole, automatic legal parents of the child from the moment of conception. No court orders, special committee approvals, or post-birth adoption proceedings are required."
+          "title": "Eligibility and Parentage",
+          "description": "Ask independent counsel to confirm current eligibility and how parentage rules apply to your family before treatment begins."
         },
         {
-          "title": "No Rights for Surrogate Mother",
-          "description": "Under Article 143, the surrogate mother (and any egg/sperm donor) has explicitly zero parental rights to the child. The surrogate mother cannot be recognized as a parent and has no legal right to keep the child after birth."
+          "title": "Agreements and Rights",
+          "description": "Independent counsel should explain the rights and responsibilities of intended parents, surrogates, and donors in a written agreement."
         },
         {
-          "title": "Direct Birth Certificate Registration",
-          "description": "Your names are placed directly on the child's birth certificate as the mother and father. There is absolutely no mention of surrogacy, egg donation, or the surrogate mother on the official document."
+          "title": "Post-Birth Legal Information",
+          "description": "Independent licensed professionals can explain current parentage and official-record requirements. Government authorities alone decide the content and issuance of official records."
         }
       ],
       "eligibleTitle": "Who is Eligible?",
@@ -1517,8 +1519,8 @@
           "description": "Your journey begins with a detailed consultation to discuss your needs, review medical history, and explain the programs. We then match you with a fully-screened surrogate mother and/or egg donor from our extensive database. All surrogates undergo rigorous medical, psychological, and background checks."
         },
         {
-          "title": "Legal & Administrative Setup",
-          "description": "Drafting and signing of clear legal contracts that secure your parental rights and outline the responsibilities of all parties. These contracts are prepared in accordance with Georgian law and are notarized. We also assist with translating and preparing all required documents."
+          "title": "Independent Legal Review",
+          "description": "Independent licensed counsel can prepare and explain agreements that outline the responsibilities of all parties. Happy Family coordinates appointments and provides practical support but does not provide legal advice."
         },
         {
           "title": "IVF & Embryo Transfer",
@@ -1529,8 +1531,8 @@
           "description": "Once pregnancy is confirmed, the surrogate mother receives comprehensive prenatal care, regular medical checkups, and emotional support. We provide you with constant medical updates, ultrasound reports, and video calls, ensuring you are fully involved in every milestone of the pregnancy."
         },
         {
-          "title": "Birth & Streamlined Exit Process",
-          "description": "The baby is delivered in a modern maternity hospital in Tbilisi. Following birth, the Civil Registry issues the official birth certificate within 5-10 days, naming only the intended parents. We then assist you with preparing the documentation for your home country's embassy to secure your baby's passport and travel home safely."
+          "title": "Birth and Post-Birth Support",
+          "description": "The baby is delivered at a maternity hospital in Tbilisi. After delivery, we provide practical family support and referrals to independent licensed professionals. Official records and travel documents are handled directly with the relevant authorities and embassies."
         }
       ]
     },
@@ -1550,8 +1552,8 @@
           "description": "Generous monthly allowance, maternity clothing, housing support, and post-birth compensation."
         },
         {
-          "title": "Legal & Administrative Support",
-          "description": "Contract drafting, notary fees, translation, birth registration, and comprehensive embassy exit support."
+          "title": "Legal Referrals & Practical Support",
+          "description": "Coordination with independent licensed counsel, translation assistance, and practical post-birth family support. Government-document services are not included."
         },
         {
           "title": "Prenatal Care & Maternity Delivery",
@@ -1564,7 +1566,7 @@
       "features": [
         "Unlimited IVF attempts (Guaranteed program)",
         "Complete surrogate screening & matching",
-        "Full legal contract and birth registration support",
+        "Referrals for independent legal review",
         "Modern private maternity hospital delivery",
         "Comprehensive prenatal care & medications",
         "24/7 personal case manager support"
@@ -1578,7 +1580,7 @@
       "items": [
         {
           "question": "Is surrogacy legal in Georgia for foreign couples?",
-          "answer": "Yes, gestational surrogacy and egg/sperm donation have been 100% legal, regulated, and supported by Georgian law since 2011. Under national statutes, the surrogate mother has explicitly zero parental rights, and intended parents are registered directly on the birth certificate as the sole legal parents of the child."
+          "answer": "Georgia has an established legal framework relevant to gestational surrogacy and donation, but eligibility and legal outcomes depend on current law and individual circumstances. Obtain advice from an independent licensed professional before beginning treatment."
         },
         {
           "question": "Who is eligible to pursue surrogacy in Georgia?",
@@ -1589,8 +1591,8 @@
           "answer": "In June 2023, the Georgian government proposed a draft bill to restrict commercial surrogacy to Georgian citizens. However, this bill has not been passed, and its discussion has been repeatedly postponed (most recently in mid-2025/2026). Surrogacy for foreign intended parents remains fully legal, operational, and safe under the existing legal framework."
         },
         {
-          "question": "How does the parentage and exit process work?",
-          "answer": "The intended parents acquire legal parentage automatically at birth. Within 5-10 days of birth, the Civil Registry issues the child's birth certificate naming only the intended parents. You can then immediately apply for your baby's passport at your home country's embassy in Tbilisi to travel home safely."
+          "question": "How are post-birth legal requirements handled?",
+          "answer": "Requirements and timelines depend on current Georgian law, the intended parents' nationality, and the relevant authorities. Happy Family provides practical support and referrals, while independent licensed professionals and embassies advise families on official requirements."
         }
       ]
     }

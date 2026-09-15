@@ -77,6 +77,9 @@ const SurrogacyInGeorgia = () => {
             <p className="description">
               {t("surrogacyInGeorgia.legal.overview")}
             </p>
+            <p className="description">
+              <strong>{t("surrogacyInGeorgia.legal.disclaimer")}</strong>
+            </p>
             <h3 className={styles.blockTitle}>
               {t("surrogacyInGeorgia.legal.protectionsTitle")}
             </h3>

@@ -5,7 +5,7 @@ import { getMetaKeywords } from "@/lib/seo-keywords";
 const localizedMeta = {
     en: {
         title: "Surrogacy Process in Georgia | Gestational Surrogacy Steps",
-        description: "Step-by-step gestational surrogacy process in Georgia country for international intended parents. From Tbilisi consultation and IVF to surrogate matching, birth, and birth certificate registration under Georgia surrogacy laws.",
+        description: "Step-by-step gestational surrogacy process in Georgia for international intended parents, from Tbilisi consultation and IVF to surrogate matching, pregnancy coordination, birth, and post-birth family support.",
         keywords: [
             ...getMetaKeywords("en"),
             "surrogacy process in georgia",
@@ -17,7 +17,7 @@ const localizedMeta = {
     },
     ka: {
         title: "სუროგაციის პროცესი საქართველოში | გესტაციური სუროგაცია",
-        description: "გესტაციური სუროგაციის ნაბიჯ-ნაბიჯ პროცესი საქართველოში საერთაშორისო მშობლებისთვის. კონსულტაციიდან ივფ-მდე თბილისში, სუროგატის შერჩევიდან დაბადებამდე და დაბადების მოწმობის რეგისტრაციამდე.",
+        description: "გესტაციური სუროგაციის ეტაპები საქართველოში: კონსულტაცია, IVF, სუროგატის შერჩევა, ორსულობის კოორდინაცია, მშობიარობა და ოჯახური მხარდაჭერა.",
         keywords: [
             ...getMetaKeywords("ka"),
             "როგორ ხდება სუროგაცია",
@@ -28,7 +28,7 @@ const localizedMeta = {
     },
     es: {
         title: "Proceso de Subrogación en Georgia | Gestación Subrogada",
-        description: "Proceso paso a paso de gestación subrogada en Georgia país para padres internacionales. Desde consulta e FIV en Tiflis hasta emparejamiento con subrogada, nacimiento y registro del certificado de nacimiento bajo las leyes de subrogación en Georgia.",
+        description: "Proceso de gestación subrogada en Georgia: consulta, FIV, selección de subrogada, coordinación del embarazo, nacimiento y apoyo familiar postnatal.",
         keywords: [
             ...getMetaKeywords("es"),
             "proceso subrogación georgia",
@@ -38,7 +38,7 @@ const localizedMeta = {
     },
     ru: {
         title: "Процесс Суррогатного Материнства в Грузии | Этапы Программы",
-        description: "Пошаговый процесс суррогатного материнства в Грузии для международных родителей. От консультации и ЭКО в Тбилиси до подбора суррогатной матери, родов и регистрации свидетельства о рождении по законам Грузии.",
+        description: "Этапы суррогатного материнства в Грузии: консультация, ЭКО, подбор суррогатной матери, сопровождение беременности, роды и поддержка семьи.",
         keywords: [
             ...getMetaKeywords("ru"),
             "процесс суррогатного материнства в грузии",
@@ -48,7 +48,7 @@ const localizedMeta = {
     },
     he: {
         title: "תהליך פונדקאות בגאורגיה | פונדקאות גסטציונלית",
-        description: "תהליך פונדקאות גסטציונלית שלב אחר שלב בגאורגיה להורים בינלאומיים. מייעוץ ו-IVF בטביליסי, דרך התאמת פונדקאית, לידה ורישום תעודת לידה לפי חוקי הפונדקאות בגאורגיה.",
+        description: "שלבי פונדקאות בגאורגיה: ייעוץ, IVF, התאמת פונדקאית, תיאום הריון, לידה ותמיכה משפחתית לאחר הלידה.",
         keywords: [
             ...getMetaKeywords("he"),
             "תהליך פונדקאות בגאורגיה",
@@ -58,7 +58,7 @@ const localizedMeta = {
     },
     zh: {
         title: "格鲁吉亚代孕流程 | 妊娠代孕步骤指南",
-        description: "为国际意向父母详解格鲁吉亚妊娠代孕流程。从第比利斯咨询和试管婴儿，到代孕妈妈匹配、分娩及出生证明登记，全程符合格鲁吉亚代孕法律框架。",
+        description: "格鲁吉亚妊娠代孕流程：咨询、试管婴儿、代孕妈妈匹配、孕期协调、分娩及产后家庭支持。",
         keywords: [
             ...getMetaKeywords("zh"),
             "格鲁吉亚代孕流程",

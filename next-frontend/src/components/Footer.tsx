@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { FaFacebook, FaInstagram, FaWhatsapp, FaLinkedin, } from "react-icons/fa";
 import Link from "next/link";
 import { useLocale } from "@/hooks/useLocale";
+import { openCookieSettings } from "@/components/CookieConsent";
 const Footer = () => {
     const { t } = useTranslation();
     const locale = useLocale();
@@ -152,8 +153,9 @@ const Footer = () => {
           </div>
 
           <div className={styles.legalLinks}>
-            <Link href="#">{t("footer.privacyPolicy")}</Link>
-            <Link href="#">{t("footer.termsOfService")}</Link>
+            <Link href={`/${locale}/privacy-policy`}>{t("footer.privacyPolicy")}</Link>
+            <Link href={`/${locale}/terms-of-service`}>{t("footer.termsOfService")}</Link>
+            <button type="button" onClick={openCookieSettings}>{t("footer.cookieSettings")}</button>
           </div>
 
           <div className={styles.socials}>

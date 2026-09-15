@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
+import CookieConsent from "@/components/CookieConsent";
 import StructuredData from "@/components/StructuredData";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import "./[locale]/globals.css";
 const nunitoSans = Nunito_Sans({
     variable: "--font-nunito-sans",
@@ -55,12 +55,20 @@ export default function RootLayout({ children, }: Readonly<{
 }>) {
     return (<html data-scroll-behavior="smooth" className={`${nunitoSans.variable}`} lang="en" dir="ltr" suppressHydrationWarning>
       <head>
+        <script
+          id="consent-defaults"
+          dangerouslySetInnerHTML={{
+            __html: "window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};window.gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',security_storage:'granted'});window.gtag('set','ads_data_redaction',true);",
+          }}
+        />
         <StructuredData />
       </head>
       <body className={nunitoSans.variable}>
           {children}
-          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ""}/>
-          <script src={`//code.tidio.co/${process.env.TIDIO_CODE}.js`} async></script>
+          <CookieConsent
+            analyticsId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ""}
+            tidioCode={(process.env.TIDIO_CODE || "").replace(/[^a-zA-Z0-9_-]/g, "")}
+          />
       </body>
     </html>);
 }

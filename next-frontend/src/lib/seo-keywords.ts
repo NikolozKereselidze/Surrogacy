@@ -40,7 +40,6 @@ export const SEO_KEYWORDS = {
     ],
     longtail: [
       "is surrogacy legal in georgia country",
-      "georgia surrogacy birth certificate",
       "georgia surrogacy program",
       "gay surrogacy georgia",
       "affordable surrogacy georgia",
