@@ -177,6 +177,7 @@
     "success": "Thank you for your message! We'll get back to you soon.",
     "addressLabel": "Address",
     "phoneLabel": "Phone",
+    "languageSupportLabel": "Call a team member who speaks your language:",
     "emailLabel": "Email"
   },
   "footer": {

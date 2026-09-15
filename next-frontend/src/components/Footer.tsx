@@ -165,7 +165,7 @@ const Footer = () => {
             <a className={styles.socialIcon} aria-label="Instagram" href="https://www.instagram.com/surrogacy_center_happy_family/" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
-            <a className={styles.socialIcon} aria-label="WhatsApp" href="https://wa.me/19298775515?text=Hi%2C%20I%27d%20like%20to%20know%20more" target="_blank" rel="noopener noreferrer">
+            <a className={styles.socialIcon} aria-label="WhatsApp" href="https://wa.me/19928775515?text=Hi%2C%20I%27d%20like%20to%20know%20more" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp />
             </a>
             <a className={styles.socialIcon} aria-label="LinkedIn" href="https://www.linkedin.com/in/happy-family-georgia?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">

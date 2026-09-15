@@ -13,13 +13,41 @@ const ContactInfo = () => {
           </a>
         </div>
       </div>
-      <div className={styles.contactInfoItem}>
+      <div className={`${styles.contactInfoItem} ${styles.phoneInfoItem}`}>
         <FaPhone />
         <div className={styles.contactInfoItemText}>
           <h3>{t("contactUs.phoneLabel")}</h3>
-          <a aria-label="Phone Number" href="tel:+995596235050">
-            +995 596 235 050
-          </a>
+          <p className={styles.phoneSupportLabel}>{t("contactUs.languageSupportLabel")}</p>
+          <div className={styles.phoneList}>
+            <a aria-label="Call Tamta, English-speaking contact" href="tel:+995596278080">
+              <span className={styles.phoneContact}>
+                <strong>Tamta</strong>
+                <span className={styles.languageBadge}>English</span>
+              </span>
+              <span className={styles.phoneNumber}>+995 596 278 080</span>
+            </a>
+            <a aria-label="Call Sopho, Spanish-speaking contact" href="tel:+995598578080">
+              <span className={styles.phoneContact}>
+                <strong>Sopho</strong>
+                <span className={styles.languageBadge}>Spanish</span>
+              </span>
+              <span className={styles.phoneNumber}>+995 598 578 080</span>
+            </a>
+            <a aria-label="Call Rezi, Russian-speaking contact" href="tel:+995555501313">
+              <span className={styles.phoneContact}>
+                <strong>Rezi</strong>
+                <span className={styles.languageBadge}>Russian</span>
+              </span>
+              <span className={styles.phoneNumber}>+995 555 501 313</span>
+            </a>
+            <a aria-label="Call Natia, Georgian-speaking contact" href="tel:+995596235050">
+              <span className={styles.phoneContact}>
+                <strong>Natia</strong>
+                <span className={styles.languageBadge}>Georgian</span>
+              </span>
+              <span className={styles.phoneNumber}>+995 596 235 050</span>
+            </a>
+          </div>
         </div>
       </div>
       <div className={styles.contactInfoItem}>
@@ -33,7 +61,7 @@ const ContactInfo = () => {
       </div>
 
       <div className={styles.contactUsSocials}>
-        <a className={styles.whatsappIcon} href="https://wa.me/19298775515?text=Hi%2C%20I%27d%20like%20to%20know%20more" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
+        <a className={styles.whatsappIcon} href="https://wa.me/19928775515?text=Hi%2C%20I%27d%20like%20to%20know%20more" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
           <FaWhatsapp />
         </a>
 

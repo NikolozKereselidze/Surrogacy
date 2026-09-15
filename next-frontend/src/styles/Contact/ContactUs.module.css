@@ -204,6 +204,11 @@
   color: var(--dark-blue, #2a376d);
 }
 
+.contactInfoItemText {
+  min-width: 0;
+  width: 100%;
+}
+
 .contactInfoItemText a {
   font-size: var(--font-base);
   color: var(--dark-blue);
@@ -213,4 +218,81 @@
 .contactInfoItemText a:hover {
   text-decoration: underline;
   color: var(--color-primary);
+}
+
+.phoneSupportLabel {
+  margin: 0.2rem 0 var(--gap-base);
+  color: var(--text-color, #4b5563);
+  font-size: var(--font-sm);
+  line-height: 1.4;
+}
+
+.phoneInfoItem {
+  align-items: flex-start;
+}
+
+.phoneInfoItem > svg {
+  margin-top: 0.15rem;
+}
+
+.phoneList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.phoneList a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-base);
+  padding: 0.65rem 0.75rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.65rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.phoneList a:hover {
+  text-decoration: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 8px rgba(66, 0, 255, 0.1);
+}
+
+.phoneContact {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.phoneContact strong {
+  color: var(--dark-blue, #2a376d);
+  font-size: var(--font-sm);
+  font-weight: 600;
+}
+
+.languageBadge {
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(66, 0, 255, 0.08);
+  color: var(--color-primary);
+  font-size: var(--font-xs);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.phoneNumber {
+  color: var(--dark-blue, #2a376d);
+  font-size: var(--font-sm);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+@media (max-width: 420px) {
+  .phoneList a {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
 }

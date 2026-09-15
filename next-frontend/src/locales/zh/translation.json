@@ -163,6 +163,7 @@
     "success": "感谢您的留言！我们会尽快回复您。",
     "addressLabel": "地址",
     "phoneLabel": "电话",
+    "languageSupportLabel": "致电会说您语言的团队成员：",
     "emailLabel": "电子邮件"
   },
   "whyChooseUs": {

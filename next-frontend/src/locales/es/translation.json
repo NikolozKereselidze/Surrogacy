@@ -175,6 +175,7 @@
     "success": "¡Gracias por tu mensaje! Te responderemos pronto.",
     "addressLabel": "Dirección",
     "phoneLabel": "Teléfono",
+    "languageSupportLabel": "Llame a un miembro del equipo que hable su idioma:",
     "emailLabel": "Correo electrónico"
   },
   "whyChooseUs": {
