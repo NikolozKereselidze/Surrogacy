@@ -1232,7 +1232,10 @@
       "step1": "Después de la fertilización, se seleccionan los embriones más saludables para transferir al útero de la gestante. El tiempo y la preparación de la gestante se gestionan cuidadosamente para maximizar el éxito de la implantación.",
       "step2": "La gestante se monitorea de cerca antes, durante y después de la transferencia. Se proporciona apoyo hormonal y orientación sobre el estilo de vida para crear el mejor ambiente para que el embrión prospere.",
       "step3": "Cada paso se personaliza según el perfil médico de los padres intencionales, asegurando que el enfoque se adapte a sus necesidades específicas y factores de fertilidad."
-    }
+    },
+    "question1": { "q": "¿Cuál es el coste de la gestación subrogada con gametos propios?", "a": "El coste depende de los procedimientos médicos, la compensación de la gestante, los honorarios legales y la ubicación del programa. Durante la consulta inicial proporcionamos un desglose transparente y detallado." },
+    "question2": { "q": "¿Cuánto cuesta la gestación subrogada para parejas?", "a": "El precio varía según el programa elegido, las necesidades médicas y la ubicación. Nuestros costes son transparentes e incluyen los servicios necesarios; contáctenos para obtener una estimación personalizada." },
+    "question3": { "q": "¿Cuánto cuesta la gestación subrogada con FIV?", "a": "El coste total incluye la FIV, la transferencia embrionaria, la compensación de la gestante, los servicios legales y el seguimiento médico. Ofrecemos precios desglosados y opciones de pago." }
   },
   "eggFreezing": {
     "title": "Congelación de Óvulos / Preservación",
@@ -1248,7 +1251,10 @@
       "step1": "Preservar la fertilidad para mujeres que quieren retrasar la maternidad debido a carrera, educación o razones personales. Esto es especialmente valioso para mujeres de finales de los 20 a principios de los 30.",
       "step2": "Mantener la calidad de los óvulos congelándolos cuando están en su pico de fertilidad. Esto puede ser particularmente beneficioso para mujeres que enfrentan tratamientos médicos que pueden afectar la fertilidad.",
       "step3": "Proporcionar tranquilidad y opciones reproductivas para el futuro. Los óvulos congelados pueden almacenarse por muchos años y usarse cuando sea el momento adecuado para comenzar una familia."
-    }
+    },
+    "question1": { "q": "¿Cuál es el coste de congelar y conservar óvulos?", "a": "El coste incluye la medicación para la estimulación ovárica, la extracción, la vitrificación y el almacenamiento anual. El precio final depende del número de ciclos y del tiempo de almacenamiento." },
+    "question2": { "q": "¿Cuánto cuesta congelar óvulos para una futura FIV?", "a": "El precio incluye el ciclo de estimulación, la extracción, la congelación y el almacenamiento. El total depende de sus necesidades y del número de óvulos obtenidos." },
+    "question3": { "q": "¿Qué gastos conlleva la conservación de óvulos?", "a": "Los gastos incluyen procedimientos médicos, medicamentos, laboratorio y almacenamiento continuo. El coste inicial cubre la congelación y después se aplica una tarifa anual de conservación." }
   },
   "surrogacyWithEggDonor": {
     "title": "Gestación Subrogada con Donante de Óvulos",
@@ -1264,7 +1270,10 @@
       "step1": "Acceso a un grupo diverso de donantes de óvulos cuidadosamente seleccionadas con perfiles detallados incluyendo historial médico, educación y características personales.",
       "step2": "Apoyo integral durante todo el proceso, desde la selección de donante hasta el nacimiento, asegurando un viaje suave y exitoso hacia la paternidad.",
       "step3": "Altas tasas de éxito con nuestro equipo médico experimentado y protocolos probados, dándote la mejor oportunidad de lograr un embarazo exitoso y un bebé saludable."
-    }
+    },
+    "question1": { "q": "¿Cuál es el precio de la gestación subrogada con donante de óvulos?", "a": "El precio incluye la compensación de la donante, la FIV, la compensación de la gestante, los servicios legales y el apoyo médico integral, desde la selección de la donante hasta el nacimiento." },
+    "question2": { "q": "¿Cuánto cuesta la gestación subrogada usando una donante de óvulos?", "a": "Los costes suelen incluir las tarifas de la donante, los procedimientos médicos, la compensación de la gestante y los gastos legales. El total varía según sus necesidades y el programa elegido." },
+    "question3": { "q": "¿Cuál es el coste total de la gestación subrogada con óvulos donados?", "a": "El total incluye la donante, la FIV y transferencia embrionaria, la gestante, la documentación legal y el apoyo continuo. Contáctenos para recibir una estimación personalizada." }
   },
   "vipConciergeServices": {
     "title": "Servicios VIP Concierge",
@@ -1280,7 +1289,10 @@
       "step1": "Experiencia fluida con toda la logística manejada por nuestro equipo experimentado, permitiéndote enfocarte en tu viaje hacia la paternidad sin preocuparte por detalles prácticos.",
       "step2": "Apoyo cultural y de idioma para ayudarte a navegar el ambiente local cómodamente, con asistencia disponible 24/7 para cualquier pregunta o preocupación.",
       "step3": "Tranquilidad sabiendo que cada aspecto de tu estadía está manejado profesionalmente, desde el alojamiento hasta el transporte, asegurando una experiencia sin estrés durante este tiempo importante."
-    }
+    },
+    "question1": { "q": "¿Qué incluyen los servicios de conserjería VIP para la gestación subrogada?", "a": "Incluyen alojamiento prémium, traducción profesional en citas médicas y legales, transporte, coordinación personal y asistencia disponible las 24 horas." },
+    "question2": { "q": "¿Cuánto cuesta el servicio de conserjería VIP?", "a": "El coste depende de la duración de la estancia, el alojamiento y el nivel de asistencia. Se factura por separado del programa y puede adaptarse a sus necesidades." },
+    "question3": { "q": "¿Los servicios VIP afectan al coste total de la gestación subrogada?", "a": "Son opcionales y se cobran por separado de los servicios médicos y legales principales. Los paquetes flexibles permiten añadir únicamente la comodidad que necesite." }
   },
   "statistics": {
     "title": "Confianza Mundial",
