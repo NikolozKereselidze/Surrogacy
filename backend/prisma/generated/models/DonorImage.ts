@@ -165,7 +165,7 @@ export type DonorImageGroupByOutputType = {
   _max: DonorImageMaxAggregateOutputType | null
 }
 
-type GetDonorImageGroupByPayload<T extends DonorImageGroupByArgs> = Prisma.PrismaPromise<
+export type GetDonorImageGroupByPayload<T extends DonorImageGroupByArgs> = Prisma.PrismaPromise<
   Array<
     Prisma.PickEnumerable<DonorImageGroupByOutputType, T['by']> &
       {
@@ -1157,6 +1157,11 @@ export type DonorImageFindManyArgs<ExtArgs extends runtime.Types.Extensions.Inte
    * Skip the first `n` DonorImages.
    */
   skip?: number
+  /**
+   * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+   * 
+   * Filter by unique combinations of DonorImages.
+   */
   distinct?: Prisma.DonorImageScalarFieldEnum | Prisma.DonorImageScalarFieldEnum[]
 }
 

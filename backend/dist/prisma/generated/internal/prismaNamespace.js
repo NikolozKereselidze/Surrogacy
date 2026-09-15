@@ -36,12 +36,12 @@ export const Sql = runtime.Sql;
 export const Decimal = runtime.Decimal;
 export const getExtensionContext = runtime.Extensions.getExtensionContext;
 /**
- * Prisma Client JS version: 7.0.0
- * Query Engine version: 0c19ccc313cf9911a90d99d2ac2eb0280c76c513
+ * Prisma Client JS version: 7.10.0
+ * Query Engine version: 0edf323efd1d98336f3f0a68684b56f689b900d3
  */
 export const prismaVersion = {
-    client: "7.0.0",
-    engine: "0c19ccc313cf9911a90d99d2ac2eb0280c76c513"
+    client: "7.10.0",
+    engine: "0edf323efd1d98336f3f0a68684b56f689b900d3"
 };
 export const NullTypes = {
     DbNull: runtime.NullTypes.DbNull,

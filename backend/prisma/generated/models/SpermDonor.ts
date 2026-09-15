@@ -151,7 +151,7 @@ export type SpermDonorGroupByOutputType = {
   _max: SpermDonorMaxAggregateOutputType | null
 }
 
-type GetSpermDonorGroupByPayload<T extends SpermDonorGroupByArgs> = Prisma.PrismaPromise<
+export type GetSpermDonorGroupByPayload<T extends SpermDonorGroupByArgs> = Prisma.PrismaPromise<
   Array<
     Prisma.PickEnumerable<SpermDonorGroupByOutputType, T['by']> &
       {
@@ -1087,6 +1087,11 @@ export type SpermDonorFindManyArgs<ExtArgs extends runtime.Types.Extensions.Inte
    * Skip the first `n` SpermDonors.
    */
   skip?: number
+  /**
+   * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+   * 
+   * Filter by unique combinations of SpermDonors.
+   */
   distinct?: Prisma.SpermDonorScalarFieldEnum | Prisma.SpermDonorScalarFieldEnum[]
 }
 

@@ -151,7 +151,7 @@ export type EggDonorGroupByOutputType = {
   _max: EggDonorMaxAggregateOutputType | null
 }
 
-type GetEggDonorGroupByPayload<T extends EggDonorGroupByArgs> = Prisma.PrismaPromise<
+export type GetEggDonorGroupByPayload<T extends EggDonorGroupByArgs> = Prisma.PrismaPromise<
   Array<
     Prisma.PickEnumerable<EggDonorGroupByOutputType, T['by']> &
       {
@@ -1087,6 +1087,11 @@ export type EggDonorFindManyArgs<ExtArgs extends runtime.Types.Extensions.Intern
    * Skip the first `n` EggDonors.
    */
   skip?: number
+  /**
+   * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+   * 
+   * Filter by unique combinations of EggDonors.
+   */
   distinct?: Prisma.EggDonorScalarFieldEnum | Prisma.EggDonorScalarFieldEnum[]
 }
 

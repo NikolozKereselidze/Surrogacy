@@ -179,7 +179,7 @@ export type TeamMemberTranslationGroupByOutputType = {
   _max: TeamMemberTranslationMaxAggregateOutputType | null
 }
 
-type GetTeamMemberTranslationGroupByPayload<T extends TeamMemberTranslationGroupByArgs> = Prisma.PrismaPromise<
+export type GetTeamMemberTranslationGroupByPayload<T extends TeamMemberTranslationGroupByArgs> = Prisma.PrismaPromise<
   Array<
     Prisma.PickEnumerable<TeamMemberTranslationGroupByOutputType, T['by']> &
       {
@@ -1233,6 +1233,11 @@ export type TeamMemberTranslationFindManyArgs<ExtArgs extends runtime.Types.Exte
    * Skip the first `n` TeamMemberTranslations.
    */
   skip?: number
+  /**
+   * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+   * 
+   * Filter by unique combinations of TeamMemberTranslations.
+   */
   distinct?: Prisma.TeamMemberTranslationScalarFieldEnum | Prisma.TeamMemberTranslationScalarFieldEnum[]
 }
 

@@ -151,7 +151,7 @@ export type SurrogateGroupByOutputType = {
   _max: SurrogateMaxAggregateOutputType | null
 }
 
-type GetSurrogateGroupByPayload<T extends SurrogateGroupByArgs> = Prisma.PrismaPromise<
+export type GetSurrogateGroupByPayload<T extends SurrogateGroupByArgs> = Prisma.PrismaPromise<
   Array<
     Prisma.PickEnumerable<SurrogateGroupByOutputType, T['by']> &
       {
@@ -1087,6 +1087,11 @@ export type SurrogateFindManyArgs<ExtArgs extends runtime.Types.Extensions.Inter
    * Skip the first `n` Surrogates.
    */
   skip?: number
+  /**
+   * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+   * 
+   * Filter by unique combinations of Surrogates.
+   */
   distinct?: Prisma.SurrogateScalarFieldEnum | Prisma.SurrogateScalarFieldEnum[]
 }
 
