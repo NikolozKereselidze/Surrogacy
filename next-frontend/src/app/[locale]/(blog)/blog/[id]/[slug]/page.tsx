@@ -5,7 +5,6 @@ import BlogPostHeader from "@/components/Blog/BlogPostHeader";
 import { BASE_URL } from "@/lib/seo";
 const CLOUDFRONT_DOMAIN = process.env.NEXT_PUBLIC_CLOUDFRONT_DOMAIN;
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
-const SUPPORTED_LOCALES = ["en", "he", "zh", "ru", "es", "ka"] as const;
 function getImageUrl(imagePath?: string) {
   if (!imagePath) return undefined;
   return `${CLOUDFRONT_DOMAIN}/${imagePath}`;
@@ -38,36 +37,6 @@ function buildSlug(title: string): string {
     .trim()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
-}
-async function fetchAllPosts(): Promise<BlogPost[]> {
-  if (!API_BASE_URL) return [];
-  try {
-    const res = await fetch(`${API_BASE_URL}/api/blog`, {
-      next: { revalidate: 300 },
-    });
-    if (!res.ok) return [];
-    return (await res.json()) as BlogPost[];
-  } catch {
-    return [];
-  }
-}
-export async function generateStaticParams() {
-  const posts = await fetchAllPosts();
-  return posts
-    .filter((post) => post.id && post.title)
-    .map((post) => {
-      const locale = (post.language || "en").toLowerCase();
-      const safeLocale = SUPPORTED_LOCALES.includes(
-        locale as (typeof SUPPORTED_LOCALES)[number],
-      )
-        ? locale
-        : "en";
-      return {
-        locale: safeLocale,
-        id: post.id,
-        slug: buildSlug(post.title),
-      };
-    });
 }
 function extractText(html: string): string {
   if (!html) return "";

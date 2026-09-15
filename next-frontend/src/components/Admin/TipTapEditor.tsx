@@ -1,6 +1,7 @@
 "use client";
 import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
+import Link from "@tiptap/extension-link";
 import { useEffect } from "react";
 import styles from "@/styles/Admin/TipTapEditor.module.css";
 interface TipTapEditorProps {
@@ -10,7 +11,17 @@ interface TipTapEditorProps {
 }
 const TipTapEditor = ({ content, onChange }: TipTapEditorProps) => {
     const editor = useEditor({
-        extensions: [StarterKit],
+        extensions: [
+            StarterKit,
+            Link.configure({
+                autolink: true,
+                linkOnPaste: true,
+                openOnClick: false,
+                HTMLAttributes: {
+                    rel: "noopener noreferrer",
+                },
+            }),
+        ],
         immediatelyRender: true,
         content,
         onUpdate: ({ editor }) => {
@@ -30,6 +41,26 @@ const TipTapEditor = ({ content, onChange }: TipTapEditorProps) => {
     if (!editor) {
         return <div className={styles.loading}>Loading editor...</div>;
     }
+    const editLink = () => {
+        const currentUrl = editor.getAttributes("link").href || "";
+        const url = window.prompt(
+            "Enter a URL (use /en/... for an internal page):",
+            currentUrl,
+        );
+
+        if (url === null) return;
+        if (url.trim() === "") {
+            editor.chain().focus().extendMarkRange("link").unsetLink().run();
+            return;
+        }
+
+        editor
+            .chain()
+            .focus()
+            .extendMarkRange("link")
+            .setLink({ href: url.trim() })
+            .run();
+    };
     return (<div className={styles.editorContainer}>
       <div className={styles.toolbar}>
         <button type="button" onClick={() => editor.chain().focus().toggleBold().run()} className={editor.isActive("bold")
@@ -46,6 +77,14 @@ const TipTapEditor = ({ content, onChange }: TipTapEditorProps) => {
             ? styles.toolbarButtonActive
             : styles.toolbarButton} title="Strikethrough">
           <s>S</s>
+        </button>
+        <button type="button" onClick={editLink} className={editor.isActive("link")
+            ? styles.toolbarButtonActive
+            : styles.toolbarButton} title="Add or edit link">
+          Link
+        </button>
+        <button type="button" onClick={() => editor.chain().focus().unsetLink().run()} className={styles.toolbarButton} title="Remove link" disabled={!editor.isActive("link")}>
+          Unlink
         </button>
         <div className={styles.separator}/>
         <button type="button" onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()} className={editor.isActive("heading", { level: 1 })
