@@ -20,7 +20,7 @@ export default function StructuredData() {
         alternateName: ["IVF Tour Georgia", "Surrogation Center"],
         description: "Gestational surrogacy and egg donation agency in Georgia (country). IVF and fertility services in Tbilisi for international intended parents. Legally protected programs since 2011.",
         url: "https://www.ivftourgeorgia.com",
-        logo: "https://www.ivftourgeorgia.com/img/logo.png",
+        logo: "https://www.ivftourgeorgia.com/img/logo.webp",
         image: "https://www.ivftourgeorgia.com/img/home/hero/hero-1920.webp",
         telephone: "+995-596-235-050",
         email: "info@surrogationcenter.com",

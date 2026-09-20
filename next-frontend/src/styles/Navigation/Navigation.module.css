@@ -5,30 +5,28 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 0.95rem 1.4rem;
-  box-shadow: 0 12px 36px rgba(30, 53, 111, 0.12);
+  gap: 1rem;
+  background-color: #fff;
+  padding: 0.55rem clamp(1.25rem, 2.25vw, 2.75rem);
+  border-bottom: 1px solid #e8edf5;
+  box-shadow: 0 4px 14px rgba(30, 53, 111, 0.07);
 }
 
 .logo {
-  text-decoration: none;
-  color: var(--dark-blue);
-  font-size: clamp(1.35rem, 1.8vw, 1.75rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.02em;
+  flex: 0 0 auto;
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
+  overflow: hidden;
   cursor: pointer;
 }
 
-.logoHappy {
-  color: #2e50a6;
-}
-
-.logoFamily {
-  color: var(--color-primary);
+.logoImage {
+  width: 5rem;
+  height: 5rem;
+  max-width: none;
+  margin-left: -0.75rem;
+  object-fit: contain;
 }
 
 .desktopOnly {
@@ -44,7 +42,7 @@
   align-items: center;
 }
 
-@media (max-width: 1247px) {
+@media (max-width: 1320px) {
   .desktopOnly {
     display: none;
   }
@@ -61,10 +59,18 @@
     border-radius: 0.85rem;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
-    padding: 0.85rem 1rem;
+    gap: 0.75rem;
+    padding: 0.55rem 1rem;
   }
 
   .logo {
-    font-size: 1.35rem;
+    width: 3.15rem;
+    height: 3.15rem;
+  }
+
+  .logoImage {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-left: -0.68rem;
   }
 }

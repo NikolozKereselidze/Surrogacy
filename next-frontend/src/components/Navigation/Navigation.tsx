@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import styles from "@/styles/Navigation/Navigation.module.css";
@@ -9,10 +10,15 @@ export default function Navigation() {
     const { i18n } = useTranslation();
     const locale = useLocale();
     return (<nav className={styles.navigation} dir={i18n.language === "he" ? "rtl" : "ltr"}>
-      <Link href={`/${locale}`} className={styles.logo} aria-label="Happy Family">
-        <span className={styles.logoHappy}>Happy</span>
-
-        <span className={styles.logoFamily}>Family</span>
+      <Link href={`/${locale}`} className={styles.logo} aria-label="Happy Family home">
+        <Image
+          src="/img/logo.webp"
+          alt="Happy Family"
+          width={80}
+          height={80}
+          priority
+          className={styles.logoImage}
+        />
       </Link>
 
       <div className={styles.desktopOnly}>
