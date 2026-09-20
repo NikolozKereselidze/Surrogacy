@@ -4,6 +4,10 @@ import Link from "next/link";
 import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import {
+  COOKIE_CONSENT_MAX_AGE_MS,
+  COOKIE_CONSENT_STORAGE_KEY,
+} from "@/lib/analytics";
 import styles from "@/styles/CookieConsent.module.css";
 
 type Locale = "en" | "ka" | "es" | "ru" | "he" | "zh";
@@ -15,13 +19,7 @@ type Copy = {
   support: string; supportDescription: string; always: string; save: string; back: string; privacy: string;
 };
 
-declare global {
-  interface Window { dataLayer: unknown[]; gtag: (...args: unknown[]) => void }
-}
-
-const STORAGE_KEY = "happy-family-cookie-consent";
 const CONSENT_EVENT = "happy-family:open-cookie-settings";
-const CONSENT_MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000;
 
 const copy: Record<Locale, Copy> = {
   en: {
@@ -96,7 +94,7 @@ function isPreferences(value: unknown): value is Preferences {
   const updatedAt = typeof item.updatedAt === "string" ? Date.parse(item.updatedAt) : Number.NaN;
   return item.version === 1 && typeof item.analytics === "boolean" && typeof item.marketing === "boolean"
     && typeof item.support === "boolean" && Number.isFinite(updatedAt)
-    && Date.now() - updatedAt < CONSENT_MAX_AGE_MS;
+    && Date.now() - updatedAt < COOKIE_CONSENT_MAX_AGE_MS;
 }
 
 function updateGoogleConsent(preferences: Preferences) {
@@ -121,18 +119,18 @@ export default function CookieConsent({ analyticsId, tidioCode }: { analyticsId:
 
   useEffect(() => {
     try {
-      const stored = window.localStorage.getItem(STORAGE_KEY);
+      const stored = window.localStorage.getItem(COOKIE_CONSENT_STORAGE_KEY);
       const parsed: unknown = stored ? JSON.parse(stored) : null;
       if (isPreferences(parsed)) {
         updateGoogleConsent(parsed);
         setPreferences(parsed);
         setDraft(parsed);
       } else if (stored) {
-        window.localStorage.removeItem(STORAGE_KEY);
+        window.localStorage.removeItem(COOKIE_CONSENT_STORAGE_KEY);
         document.cookie = "hf_cookie_consent=; Max-Age=0; Path=/; SameSite=Lax; Secure";
       }
     } catch {
-      window.localStorage.removeItem(STORAGE_KEY);
+      window.localStorage.removeItem(COOKIE_CONSENT_STORAGE_KEY);
       document.cookie = "hf_cookie_consent=; Max-Age=0; Path=/; SameSite=Lax; Secure";
     }
     setReady(true);
@@ -151,7 +149,7 @@ export default function CookieConsent({ analyticsId, tidioCode }: { analyticsId:
     const saved: Preferences = { ...next, version: 1, updatedAt: new Date().toISOString() };
     const mustReload = Boolean(preferences && ((preferences.analytics && !saved.analytics) || (preferences.support && !saved.support)));
     updateGoogleConsent(saved);
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
+    window.localStorage.setItem(COOKIE_CONSENT_STORAGE_KEY, JSON.stringify(saved));
     document.cookie = `hf_cookie_consent=${encodeURIComponent(JSON.stringify(saved))}; Max-Age=31536000; Path=/; SameSite=Lax; Secure`;
     setPreferences(saved);
     setDraft(saved);

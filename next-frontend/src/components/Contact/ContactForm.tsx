@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "@/styles/Contact/ContactUs.module.css";
 import Button from "@/components/Button";
+import { trackAnalyticsEvent } from "@/lib/analytics";
 import { useTranslation } from "react-i18next";
 const ContactForm = () => {
     const [firstName, setFirstName] = useState("");
@@ -46,6 +47,11 @@ const ContactForm = () => {
             });
             const data = await res.json();
             if (res.ok) {
+                trackAnalyticsEvent("generate_lead", {
+                    form_name: "contact_form",
+                    lead_type: subject || "general-inquiry",
+                    page_path: window.location.pathname,
+                });
                 setStatus("success");
                 setFirstName("");
                 setLastName("");

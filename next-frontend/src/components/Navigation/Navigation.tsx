@@ -12,7 +12,7 @@ export default function Navigation() {
     return (<nav className={styles.navigation} dir={i18n.language === "he" ? "rtl" : "ltr"}>
       <Link href={`/${locale}`} className={styles.logo} aria-label="Happy Family home">
         <Image
-          src="/img/logo.webp"
+          src="/img/navbar-logo.webp"
           alt="Happy Family"
           width={300}
           height={100}
