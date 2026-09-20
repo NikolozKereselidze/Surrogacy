@@ -14,8 +14,8 @@ export default function Navigation() {
         <Image
           src="/img/logo.webp"
           alt="Happy Family"
-          width={80}
-          height={80}
+          width={300}
+          height={100}
           priority
           className={styles.logoImage}
         />

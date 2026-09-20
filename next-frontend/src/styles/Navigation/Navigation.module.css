@@ -14,19 +14,19 @@
 
 .logo {
   flex: 0 0 auto;
-  display: block;
-  width: 3.5rem;
+  display: flex;
+  align-items: center;
+  width: clamp(10rem, 13vw, 12rem);
   height: 3.5rem;
-  overflow: hidden;
   cursor: pointer;
 }
 
 .logoImage {
-  width: 5rem;
-  height: 5rem;
-  max-width: none;
-  margin-left: -0.75rem;
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  object-position: left center;
 }
 
 .desktopOnly {
@@ -64,13 +64,7 @@
   }
 
   .logo {
-    width: 3.15rem;
+    width: 9.5rem;
     height: 3.15rem;
-  }
-
-  .logoImage {
-    width: 4.5rem;
-    height: 4.5rem;
-    margin-left: -0.68rem;
   }
 }
