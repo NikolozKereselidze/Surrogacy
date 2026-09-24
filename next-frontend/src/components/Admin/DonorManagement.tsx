@@ -29,24 +29,24 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
         }
     };
     const handleSubmit = async (data: Record<string, unknown>) => {
-        try {
-            const url = editingDonor
-                ? `${config.apiEndpoint}/${editingDonor.id}`
-                : config.apiEndpoint;
-            const method = editingDonor ? "PUT" : "POST";
-            const response = await fetch(url, {
-                method,
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data),
-            });
-            if (response.ok) {
-                fetchDonors();
-                resetForm();
-            }
+        const url = editingDonor
+            ? `${config.apiEndpoint}/${editingDonor.id}`
+            : config.apiEndpoint;
+        const method = editingDonor ? "PUT" : "POST";
+        const response = await fetch(url, {
+            method,
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+        });
+        if (!response.ok) {
+            const errorData = await response.json().catch(() => null);
+            const message = errorData && typeof errorData.error === "string"
+                ? errorData.error
+                : `Failed to save ${config.title.toLowerCase()}`;
+            throw new Error(message);
         }
-        catch (error) {
-            console.error(`Error saving ${config.title}:`, error);
-        }
+        await fetchDonors();
+        resetForm();
     };
     const handleDelete = async (id: string) => {
         if (window.confirm(`Are you sure you want to delete this ${config.title.toLowerCase()}?`)) {

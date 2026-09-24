@@ -180,7 +180,9 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
                 }
             }
             catch (onSubmitError) {
-                setError("Failed to save donor. Please try again.");
+                setError(onSubmitError instanceof Error
+                    ? onSubmitError.message
+                    : "Failed to save donor. Please try again.");
                 console.error("Error saving donor:", onSubmitError);
             }
         }
@@ -231,11 +233,11 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
           <div className={styles.formRow}>
             <div className={styles.formGroup}>
               <label htmlFor="hairColor">Hair Color</label>
-              <input id="hairColor" type="text" value={formData.hairColor} onChange={(e) => setFormData({ ...formData, hairColor: e.target.value })} placeholder="e.g., Blonde"/>
+              <input id="hairColor" type="text" value={formData.hairColor} onChange={(e) => setFormData({ ...formData, hairColor: e.target.value })} placeholder="e.g., Blonde" required/>
             </div>
             <div className={styles.formGroup}>
               <label htmlFor="eyeColor">Eye Color</label>
-              <input id="eyeColor" type="text" value={formData.eyeColor} onChange={(e) => setFormData({ ...formData, eyeColor: e.target.value })} placeholder="e.g., Brown"/>
+              <input id="eyeColor" type="text" value={formData.eyeColor} onChange={(e) => setFormData({ ...formData, eyeColor: e.target.value })} placeholder="e.g., Brown" required/>
             </div>
           </div>
 
@@ -245,11 +247,11 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
               <input id="relationshipStatus" type="text" value={formData.relationshipStatus} onChange={(e) => setFormData({
             ...formData,
             relationshipStatus: e.target.value,
-        })} placeholder="e.g., Single"/>
+        })} placeholder="e.g., Single" required/>
             </div>
             <div className={styles.formGroup}>
               <label htmlFor="livingSituation">Living Situation</label>
-              <input id="livingSituation" type="text" value={formData.livingSituation} onChange={(e) => setFormData({ ...formData, livingSituation: e.target.value })} placeholder="e.g., Alone"/>
+              <input id="livingSituation" type="text" value={formData.livingSituation} onChange={(e) => setFormData({ ...formData, livingSituation: e.target.value })} placeholder="e.g., Alone" required/>
             </div>
           </div>
 
