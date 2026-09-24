@@ -23,6 +23,7 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
     const [documentFile, setDocumentFile] = useState<File | null>(null);
     const [mainImageFile, setMainImageFile] = useState<File | null>(null);
     const [secondaryImageFiles, setSecondaryImageFiles] = useState<File[]>([]);
+    const [storageProfileId, setStorageProfileId] = useState("");
     const [formData, setFormData] = useState<DonorFormData>({
         height: "",
         weight: "",
@@ -38,6 +39,7 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
         secondaryImages: [],
     });
     useEffect(() => {
+        setStorageProfileId(editingDonor?.id || crypto.randomUUID());
         if (editingDonor) {
             setFormData({
                 height: editingDonor.databaseUser.height.toString(),
@@ -84,16 +86,13 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
         setMainImageFile(file);
     };
     const handleSecondaryImagesChange = (files: File[]) => {
-        setSecondaryImageFiles((prev) => [...prev, ...files]);
+        setSecondaryImageFiles(files);
     };
     const removeKeptSecondaryImage = (imagePath: string) => {
         setFormData((prev) => ({
             ...prev,
             secondaryImages: prev.secondaryImages.filter((path) => path !== imagePath),
         }));
-    };
-    const removePendingSecondaryFile = (index: number) => {
-        setSecondaryImageFiles((prev) => prev.filter((_, i) => i !== index));
     };
     const resetFileStates = () => {
         setDocumentFile(null);
@@ -106,7 +105,15 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
             return;
         setSubmitting(true);
         setError("");
+        const uploadedKeys: string[] = [];
+        const cleanupNewUploads = async () => {
+            await Promise.all(uploadedKeys.map((key) => deleteFileFromS3(key)));
+        };
         try {
+            const profileId = editingDonor?.id || storageProfileId;
+            if (!profileId) {
+                throw new Error("Profile storage ID is unavailable. Please reopen the form.");
+            }
             let imageKey = "";
             let documentKey = "";
             const secondaryImageKeys = [...formData.secondaryImages];
@@ -116,9 +123,11 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
                     if (editingDonor && editingDonor.databaseUser.mainImagePath) {
                         filesToDelete.push(editingDonor.databaseUser.mainImagePath);
                     }
-                    imageKey = await uploadFileToS3(mainImageFile, "image", donorType);
+                    imageKey = await uploadFileToS3(mainImageFile, "image", donorType, profileId, "main-image");
+                    uploadedKeys.push(imageKey);
                 }
                 catch {
+                    await cleanupNewUploads();
                     setError("Failed to upload main image. Please try again.");
                     setSubmitting(false);
                     return;
@@ -129,9 +138,11 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
                     if (editingDonor && editingDonor.databaseUser.documentPath) {
                         filesToDelete.push(editingDonor.databaseUser.documentPath);
                     }
-                    documentKey = await uploadFileToS3(documentFile, "document", donorType);
+                    documentKey = await uploadFileToS3(documentFile, "document", donorType, profileId, "document");
+                    uploadedKeys.push(documentKey);
                 }
                 catch {
+                    await cleanupNewUploads();
                     setError("Failed to upload document. Please try again.");
                     setSubmitting(false);
                     return;
@@ -140,11 +151,13 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
             if (secondaryImageFiles.length > 0) {
                 try {
                     for (const file of secondaryImageFiles) {
-                        const key = await uploadFileToS3(file, "image", donorType);
+                        const key = await uploadFileToS3(file, "image", donorType, profileId, "secondary-image");
                         secondaryImageKeys.push(key);
+                        uploadedKeys.push(key);
                     }
                 }
                 catch {
+                    await cleanupNewUploads();
                     setError("Failed to upload secondary images. Please try again.");
                     setSubmitting(false);
                     return;
@@ -166,6 +179,7 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
                 mainImagePath: imageKey,
                 documentPath: documentKey,
                 secondaryImages: secondaryImageKeys,
+                ...(!editingDonor && { profileId }),
             };
             try {
                 await onSubmit(submitData);
@@ -180,6 +194,7 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
                 }
             }
             catch (onSubmitError) {
+                await cleanupNewUploads();
                 setError(onSubmitError instanceof Error
                     ? onSubmitError.message
                     : "Failed to save donor. Please try again.");
@@ -187,6 +202,7 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
             }
         }
         catch (error) {
+            await cleanupNewUploads();
             console.error("Error saving donor:", error);
             setError("An unexpected error occurred. Please try again.");
         }
@@ -195,227 +211,51 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
         }
     };
     return (<div className={styles.formOverlay}>
-      <div className={styles.formContainer}>
-        <h2>
-          {editingDonor
-            ? `Edit ${config.title.slice(0, -1)}`
-            : `Add New ${config.title.slice(0, -1)}`}
-        </h2>
+      <div className={`${styles.formContainer} ${styles.donorFormContainer}`} role="dialog" aria-modal="true" aria-labelledby="donor-form-title">
+        <div className={styles.modalHeader}>
+          <div><span>{editingDonor ? "Update profile" : "New profile"}</span><h2 id="donor-form-title">{editingDonor ? `Edit ${config.title.slice(0, -1)}` : `Add ${config.title.slice(0, -1)}`}</h2></div>
+          <button type="button" onClick={onCancel} aria-label="Close form">×</button>
+        </div>
+
         <form onSubmit={handleSubmit} className={styles.blogForm}>
-          <div className={styles.formRow}>
-            <div className={styles.formGroup}>
-              <label htmlFor="age">Age</label>
-              <input id="age" type="number" value={formData.age} onChange={(e) => setFormData({ ...formData, age: e.target.value })} placeholder="e.g., 28" min="18" max="50" required/>
+          <section className={styles.donorFormSection}>
+            <div className={styles.formSectionHeading}><h3>Profile details</h3><p>Basic characteristics and current availability.</p></div>
+            <div className={styles.donorFormGrid}>
+              <div className={styles.formGroup}><label htmlFor="age">Age</label><input id="age" type="number" value={formData.age} onChange={(e) => setFormData({ ...formData, age: e.target.value })} placeholder="e.g., 28" min="18" max="50" required/></div>
+              <div className={styles.formGroup}><label htmlFor="height">Height (cm)</label><input id="height" type="number" value={formData.height} onChange={(e) => setFormData({ ...formData, height: e.target.value })} placeholder="e.g., 165" min="140" max="200" required/></div>
+              <div className={styles.formGroup}><label htmlFor="weight">Weight (kg)</label><input id="weight" type="number" value={formData.weight} onChange={(e) => setFormData({ ...formData, weight: e.target.value })} placeholder="e.g., 60" min="30" max="220" required/></div>
+              <div className={styles.formGroup}><label htmlFor="available">Availability</label><select id="available" value={formData.available.toString()} onChange={(e) => setFormData({ ...formData, available: e.target.value === "true" })} required><option value="true">Available</option><option value="false">Unavailable</option></select></div>
+              <div className={styles.formGroup}><label htmlFor="hairColor">Hair color</label><input id="hairColor" type="text" value={formData.hairColor} onChange={(e) => setFormData({ ...formData, hairColor: e.target.value })} placeholder="e.g., Blonde" required/></div>
+              <div className={styles.formGroup}><label htmlFor="eyeColor">Eye color</label><input id="eyeColor" type="text" value={formData.eyeColor} onChange={(e) => setFormData({ ...formData, eyeColor: e.target.value })} placeholder="e.g., Brown" required/></div>
+              <div className={styles.formGroup}><label htmlFor="relationshipStatus">Relationship status</label><input id="relationshipStatus" type="text" value={formData.relationshipStatus} onChange={(e) => setFormData({ ...formData, relationshipStatus: e.target.value })} placeholder="e.g., Single" required/></div>
+              <div className={styles.formGroup}><label htmlFor="livingSituation">Living situation</label><input id="livingSituation" type="text" value={formData.livingSituation} onChange={(e) => setFormData({ ...formData, livingSituation: e.target.value })} placeholder="e.g., Alone" required/></div>
+              <div className={`${styles.formGroup} ${styles.fullWidthField}`}><label htmlFor="children">Children</label><input id="children" type="text" value={formData.children} onChange={(e) => setFormData({ ...formData, children: e.target.value })} placeholder="e.g., None"/></div>
             </div>
-            <div className={styles.formGroup}>
-              <label htmlFor="height">Height (cm)</label>
-              <input id="height" type="number" value={formData.height} onChange={(e) => setFormData({ ...formData, height: e.target.value })} placeholder="e.g., 165" min="140" max="200" required/>
-            </div>
-          </div>
+          </section>
 
-          <div className={styles.formRow}>
-            <div className={styles.formGroup}>
-              <label htmlFor="weight">Weight (kg)</label>
-              <input id="weight" type="number" value={formData.weight} onChange={(e) => setFormData({ ...formData, weight: e.target.value })} placeholder="e.g., 60" min="30" max="220" required/>
+          <section className={styles.donorFormSection}>
+            <div className={styles.formSectionHeading}><h3>Documents and images</h3><p>Leave a file unchanged to keep the current version.</p></div>
+            <div className={styles.assetGrid}>
+              <div className={styles.assetPanel}>
+                <div className={styles.formGroup}><label htmlFor="document">Profile document</label><input id="document" type="file" onChange={handleDocumentChange} accept=".pdf,.doc,.docx"/></div>
+                {editingDonor && donorUrls[editingDonor.id]?.documentUrl && <a className={styles.currentDocument} href={donorUrls[editingDonor.id].documentUrl} target="_blank" rel="noopener noreferrer"><span>Current document</span><strong>Open file ↗</strong></a>}
+              </div>
+              <div className={styles.assetPanel}>
+                <ImageCompressor onCompressed={handleMainImageChange} label="Main profile image" maxWidth={1200} maxHeight={800} quality={0.9}/>
+                {editingDonor && donorUrls[editingDonor.id]?.mainImageUrl && <div className={styles.currentImage}><span>Current main image</span><Image src={donorUrls[editingDonor.id].mainImageUrl || ""} alt="Current profile" width={160} height={110}/></div>}
+              </div>
+              <div className={`${styles.assetPanel} ${styles.fullWidthField}`}>
+                <ImageCompressor multiple onMultipleCompressed={handleSecondaryImagesChange} label="Secondary images" maxWidth={1200} maxHeight={800} quality={0.9}/>
+                {editingDonor && <p className={styles.assetHelp}>Remove existing images below or select new images to add.</p>}
+                {formData.secondaryImages.length > 0 && <div className={styles.currentGallery}><strong>Current secondary images</strong><div>{formData.secondaryImages.map((imagePath) => <div key={imagePath}><Image src={`${CLOUDFRONT_DOMAIN}/${imagePath}`} alt="Secondary profile" width={120} height={90}/><button type="button" onClick={() => removeKeptSecondaryImage(imagePath)} aria-label="Remove secondary image">×</button></div>)}</div></div>}
+              </div>
             </div>
-            <div className={styles.formGroup}>
-              <label htmlFor="available">Available</label>
-              <select id="available" value={formData.available.toString()} onChange={(e) => setFormData({
-            ...formData,
-            available: e.target.value === "true",
-        })} required>
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-              </select>
-            </div>
-          </div>
+          </section>
 
-          <div className={styles.formRow}>
-            <div className={styles.formGroup}>
-              <label htmlFor="hairColor">Hair Color</label>
-              <input id="hairColor" type="text" value={formData.hairColor} onChange={(e) => setFormData({ ...formData, hairColor: e.target.value })} placeholder="e.g., Blonde" required/>
-            </div>
-            <div className={styles.formGroup}>
-              <label htmlFor="eyeColor">Eye Color</label>
-              <input id="eyeColor" type="text" value={formData.eyeColor} onChange={(e) => setFormData({ ...formData, eyeColor: e.target.value })} placeholder="e.g., Brown" required/>
-            </div>
-          </div>
-
-          <div className={styles.formRow}>
-            <div className={styles.formGroup}>
-              <label htmlFor="relationshipStatus">Relationship Status</label>
-              <input id="relationshipStatus" type="text" value={formData.relationshipStatus} onChange={(e) => setFormData({
-            ...formData,
-            relationshipStatus: e.target.value,
-        })} placeholder="e.g., Single" required/>
-            </div>
-            <div className={styles.formGroup}>
-              <label htmlFor="livingSituation">Living Situation</label>
-              <input id="livingSituation" type="text" value={formData.livingSituation} onChange={(e) => setFormData({ ...formData, livingSituation: e.target.value })} placeholder="e.g., Alone" required/>
-            </div>
-          </div>
-
-          <div className={styles.formRow}>
-            <div className={styles.formGroup}>
-              <label htmlFor="children">Children</label>
-              <input id="children" type="text" value={formData.children} onChange={(e) => setFormData({ ...formData, children: e.target.value })} placeholder="e.g., None"/>
-            </div>
-          </div>
-
-          <div className={styles.formRow}>
-            <div className={styles.formGroup}>
-              <label htmlFor="document">Document</label>
-              {editingDonor && (<p style={{
-                fontSize: "0.8rem",
-                color: "#666",
-                marginBottom: "5px",
-            }}>
-                  Leave empty to keep current document
-                </p>)}
-              <input id="document" type="file" onChange={handleDocumentChange} accept=".pdf,.doc,.docx"/>
-              
-              {editingDonor && donorUrls[editingDonor.id]?.documentUrl && (<div style={{ marginTop: "10px" }}>
-                  <strong>Current Document:</strong>
-                  <br />
-                  <a href={donorUrls[editingDonor.id].documentUrl} target="_blank" rel="noopener noreferrer" style={{
-                color: "var(--color-primary)",
-                textDecoration: "underline",
-                fontSize: "0.9rem",
-            }}>
-                    View Current Document
-                  </a>
-                </div>)}
-            </div>
-            <div className={styles.formGroup}>
-              <ImageCompressor onCompressed={handleMainImageChange} label="Choose Main Profile Image" maxWidth={1200} maxHeight={800} quality={0.9}/>
-              {editingDonor && (<p style={{
-                fontSize: "0.8rem",
-                color: "#666",
-                marginTop: "5px",
-            }}>
-                  Leave empty to keep current image
-                </p>)}
-              
-              {editingDonor && donorUrls[editingDonor.id]?.mainImageUrl && (<div style={{ marginTop: "10px" }}>
-                  <strong>Current Main Image:</strong>
-                  <br />
-                  <Image src={donorUrls[editingDonor.id].mainImageUrl || ""} alt="Current" width={200} height={150} style={{
-                objectFit: "cover",
-                borderRadius: "4px",
-                marginTop: "5px",
-            }}/>
-                </div>)}
-            </div>
-          </div>
-
-          <div className={styles.formRow}>
-            <div className={styles.formGroup}>
-              <ImageCompressor multiple onMultipleCompressed={handleSecondaryImagesChange} label="Choose Secondary Images" maxWidth={1200} maxHeight={800} quality={0.9}/>
-              {editingDonor && (<p style={{
-                fontSize: "0.8rem",
-                color: "#666",
-                marginTop: "5px",
-            }}>
-                  Remove images with ×, or add new ones below. Save with none
-                  kept to clear all secondary images.
-                </p>)}
-              {(formData.secondaryImages.length > 0 ||
-            secondaryImageFiles.length > 0) && (<div style={{ marginTop: "10px" }}>
-                  {formData.secondaryImages.length > 0 && (<>
-                      <strong>Secondary images to keep:</strong>
-                      <div style={{
-                    display: "flex",
-                    gap: "10px",
-                    flexWrap: "wrap",
-                    marginTop: "5px",
-                }}>
-                        {formData.secondaryImages.map((imagePath) => (<div key={imagePath} style={{ position: "relative" }}>
-                            <Image src={`${CLOUDFRONT_DOMAIN}/${imagePath}`} alt="Secondary" width={100} height={75} style={{
-                        maxWidth: "100px",
-                        maxHeight: "75px",
-                        objectFit: "cover",
-                        borderRadius: "4px",
-                    }}/>
-                            <button type="button" onClick={() => removeKeptSecondaryImage(imagePath)} aria-label="Remove secondary image" style={{
-                        position: "absolute",
-                        top: "2px",
-                        right: "2px",
-                        width: "22px",
-                        height: "22px",
-                        border: "none",
-                        borderRadius: "50%",
-                        background: "rgba(0, 0, 0, 0.65)",
-                        color: "#fff",
-                        cursor: "pointer",
-                        lineHeight: 1,
-                    }}>
-                              ×
-                            </button>
-                          </div>))}
-                      </div>
-                    </>)}
-                  {secondaryImageFiles.length > 0 && (<>
-                      <strong style={{
-                    display: "block",
-                    marginTop: formData.secondaryImages.length > 0
-                        ? "10px"
-                        : undefined,
-                }}>
-                        New images to upload:
-                      </strong>
-                      <div style={{
-                    display: "flex",
-                    gap: "10px",
-                    flexWrap: "wrap",
-                    marginTop: "5px",
-                }}>
-                        {secondaryImageFiles.map((file, index) => (<div key={`${file.name}-${index}`} style={{ position: "relative" }}>
-                            <Image src={URL.createObjectURL(file)} alt={file.name} width={100} height={75} style={{
-                        maxWidth: "100px",
-                        maxHeight: "75px",
-                        objectFit: "cover",
-                        borderRadius: "4px",
-                    }}/>
-                            <button type="button" onClick={() => removePendingSecondaryFile(index)} aria-label="Remove new secondary image" style={{
-                        position: "absolute",
-                        top: "2px",
-                        right: "2px",
-                        width: "22px",
-                        height: "22px",
-                        border: "none",
-                        borderRadius: "50%",
-                        background: "rgba(0, 0, 0, 0.65)",
-                        color: "#fff",
-                        cursor: "pointer",
-                        lineHeight: 1,
-                    }}>
-                              ×
-                            </button>
-                          </div>))}
-                      </div>
-                    </>)}
-                </div>)}
-            </div>
-          </div>
-
-          {error && (<div className={styles.errorMessage} style={{
-                color: "#ed4337",
-                marginBottom: "1rem",
-                padding: "0.75rem",
-                background: "#fdf2f2",
-                border: "1px solid #fecaca",
-                borderRadius: "6px",
-            }}>
-              {error}
-            </div>)}
-
+          {error && <div className={styles.errorMessage} role="alert">{error}</div>}
           <div className={styles.formActions}>
-            <button type="submit" className={styles.saveButton} style={{ background: config.color }} disabled={submitting}>
-              {submitting ? "Saving..." : editingDonor ? "Update" : "Create"}
-            </button>
-            <button type="button" onClick={onCancel} className={styles.cancelButton}>
-              Cancel
-            </button>
+            <button type="button" onClick={onCancel} className={styles.cancelButton}>Cancel</button>
+            <button type="submit" className={styles.saveButton} disabled={submitting}>{submitting ? "Saving…" : editingDonor ? "Update profile" : "Create profile"}</button>
           </div>
         </form>
       </div>

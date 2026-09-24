@@ -1,6 +1,19 @@
-export const uploadFileToS3 = async (file: File, type: "image" | "document", donorType: string) => {
+export type DonorAssetCategory = "main-image" | "secondary-image" | "document";
+
+export const uploadFileToS3 = async (file: File, type: "image" | "document", donorType: string, profileId: string, assetCategory: DonorAssetCategory) => {
     try {
-        const response = await fetch(`/api/file?fileType=${file.type}&fileName=${file.name}&donorType=${donorType}`, { method: "POST" });
+        const query = new URLSearchParams({
+            fileType: file.type,
+            fileName: file.name,
+            donorType,
+            profileId,
+            assetCategory,
+        });
+        const response = await fetch(`/api/file?${query}`, { method: "POST" });
+        if (!response.ok) {
+            const errorData = await response.json().catch(() => null);
+            throw new Error(errorData?.error || "Failed to prepare file upload");
+        }
         const { signedUrl, key } = await response.json();
         const uploadResponse = await fetch(signedUrl, {
             method: "PUT",

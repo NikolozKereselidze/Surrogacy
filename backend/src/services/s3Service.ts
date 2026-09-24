@@ -26,17 +26,34 @@ const s3 = new S3Client({
 export async function generatePresignedPutUrl(
   fileType: string,
   fileName: string,
-  donorType?: string
+  donorType?: string,
+  profileId?: string,
+  assetCategory?: string,
 ) {
-  const fileExtension = fileName.split(".").pop();
+  const requestedExtension = fileName.split(".").pop()?.toLowerCase() || "";
+  const fileExtension = /^[a-z0-9]{1,10}$/.test(requestedExtension)
+    ? requestedExtension
+    : "bin";
   const timestamp = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
+  const donorTypes = new Set(["egg-donors", "sperm-donors", "surrogates"]);
+  const assetFolders: Record<string, string> = {
+    "main-image": "main",
+    "secondary-image": "secondary",
+    document: "documents",
+  };
 
-  // Organize files by donor type if provided
   let key: string;
-  if (donorType) {
-    key = donorType === "team-members"
-      ? `team/${timestamp}/${uuidv4()}.${fileExtension}`
-      : `donors/${donorType}/${timestamp}/${uuidv4()}.${fileExtension}`;
+  if (donorType && donorTypes.has(donorType)) {
+    if (!profileId || !/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(profileId)) {
+      throw new Error("A valid profile ID is required for donor uploads");
+    }
+    const folder = assetCategory ? assetFolders[assetCategory] : undefined;
+    if (!folder) {
+      throw new Error("A valid asset category is required for donor uploads");
+    }
+    key = `donors/${donorType}/${profileId}/${folder}/${uuidv4()}.${fileExtension}`;
+  } else if (donorType === "team-members") {
+    key = `team/${timestamp}/${uuidv4()}.${fileExtension}`;
   } else {
     key = `uploads/${timestamp}/${uuidv4()}.${fileExtension}`;
   }

@@ -32,6 +32,7 @@ const donorProfileFields = {
 
 export const createDonorProfileSchema = z.object({
   ...donorProfileFields,
+  profileId: z.string().uuid("Profile ID must be a valid UUID").optional(),
   available: donorProfileFields.available.default(true),
   secondaryImages: donorProfileFields.secondaryImages.default([]),
 });

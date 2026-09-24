@@ -50,21 +50,22 @@ async function createDonorRecord(
   tx: TransactionClient,
   donorModel: DonorModel,
   databaseUserId: string,
+  donorId?: string,
 ) {
   switch (donorModel) {
     case "eggDonor":
       return tx.eggDonor.create({
-        data: { databaseUserId },
+        data: { id: donorId, databaseUserId },
         include: donorInclude,
       });
     case "spermDonor":
       return tx.spermDonor.create({
-        data: { databaseUserId },
+        data: { id: donorId, databaseUserId },
         include: donorInclude,
       });
     case "surrogate":
       return tx.surrogate.create({
-        data: { databaseUserId },
+        data: { id: donorId, databaseUserId },
         include: donorInclude,
       });
   }
@@ -109,6 +110,7 @@ export async function createDonorWithProfile(
     documentPath,
     mainImagePath,
     secondaryImages,
+    profileId,
   } = data;
 
   return prisma.$transaction(async (tx) => {
@@ -138,7 +140,7 @@ export async function createDonorWithProfile(
       });
     }
 
-    return createDonorRecord(tx, donorModel, databaseUser.id);
+    return createDonorRecord(tx, donorModel, databaseUser.id, profileId);
   });
 }
 

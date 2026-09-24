@@ -9,10 +9,12 @@ const getPresignedPutUrl = async (
   res: Response
 ): Promise<any> => {
   try {
-    const { fileType, fileName, donorType } = req.query as {
+    const { fileType, fileName, donorType, profileId, assetCategory } = req.query as {
       fileType: string;
       fileName: string;
       donorType?: string;
+      profileId?: string;
+      assetCategory?: string;
     };
 
     if (!fileType || !fileName) {
@@ -22,7 +24,9 @@ const getPresignedPutUrl = async (
     const { signedUrl, key } = await generatePresignedPutUrl(
       fileType,
       fileName,
-      donorType
+      donorType,
+      profileId,
+      assetCategory,
     );
 
     res.json({ signedUrl, key });
