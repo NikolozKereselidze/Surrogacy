@@ -1,6 +1,7 @@
 import type { PrismaClient } from "../../prisma/generated/client.js";
 import { CreateDonorProfileInput, UpdateDonorProfileInput } from "../schemas/donorProfileSchema.js";
 import { deleteFileFromS3 } from "./s3Service.js";
+import { logEvent } from "../lib/logger.js";
 
 export type DonorModel = "eggDonor" | "spermDonor" | "surrogate";
 
@@ -36,12 +37,12 @@ function collectS3Keys(databaseUser: {
   return keys;
 }
 
-async function deleteS3Keys(keys: string[]): Promise<void> {
+async function deleteS3Keys(keys: string[], donorModel: DonorModel, profileId: string): Promise<void> {
   for (const key of keys) {
     try {
       await deleteFileFromS3(key);
-    } catch (error) {
-      console.error(`Failed to delete S3 object ${key}:`, error);
+    } catch {
+      logEvent("error", "storage.cleanup_failed", { resource: donorModel, profileId, reason: "delete_failed" });
     }
   }
 }
@@ -185,7 +186,7 @@ export async function deleteDonorWithProfile(
     deleteDonorRecord(tx, donorModel, id, donor.databaseUserId),
   );
 
-  await deleteS3Keys(s3Keys);
+  await deleteS3Keys(s3Keys, donorModel, id);
 
   return donor;
 }
@@ -242,6 +243,6 @@ export async function updateDonorWithProfile(
 
   if (!result) return null;
   // A storage cleanup failure must never turn a committed save into a failed save.
-  await deleteS3Keys(result.removedKeys);
+  await deleteS3Keys(result.removedKeys, donorModel, id);
   return result.donor;
 }

@@ -13,12 +13,14 @@ import contactRoutes from "./routes/contactRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import teamMemberRoutes from "./routes/teamMemberRoutes.js";
 import { prisma } from "./lib/prisma.js";
+import { requestLogging } from "./middleware/requestLogging.js";
 const app = express();
 
 const port = Number(process.env.PORT ?? 4000);
 
 app.set("trust proxy", 1);
 
+app.use(requestLogging);
 app.use(express.json());
 app.use(cookieParser());
 

@@ -71,9 +71,9 @@ const createSurrogate = async (req: Request, res: Response): Promise<any> => {
       "surrogate",
       validationResult.data,
     );
+    res.locals.profileId = surrogate.id;
     res.json(surrogate);
   } catch (error) {
-    console.error("Failed to create surrogate:", error);
     res.status(500).json({ error: "Failed to create surrogate" });
   }
 };
@@ -108,7 +108,6 @@ const deleteSurrogate = async (req: Request, res: Response): Promise<any> => {
 
     res.json({ message: "Surrogate deleted successfully" });
   } catch (error) {
-    console.error("Failed to delete surrogate:", error);
     res.status(500).json({ error: "Failed to delete surrogate" });
   }
 };

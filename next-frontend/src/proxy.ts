@@ -21,8 +21,12 @@ async function checkToken(request: NextRequest, endpoint: "admin/check-token" | 
             method: "POST",
             headers: { cookie },
         });
+        if (response.status >= 500) {
+            console.error(JSON.stringify({ timestamp: new Date().toISOString(), level: "error", event: "auth.check_failed", role: endpoint.startsWith("admin") ? "admin" : "donor", status: response.status }));
+        }
         return response.ok;
     } catch {
+        console.error(JSON.stringify({ timestamp: new Date().toISOString(), level: "error", event: "auth.check_failed", role: endpoint.startsWith("admin") ? "admin" : "donor", reason: "network_error" }));
         return false;
     }
 }

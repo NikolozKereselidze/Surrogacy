@@ -71,9 +71,9 @@ const createEggDonor = async (req: Request, res: Response): Promise<any> => {
       "eggDonor",
       validationResult.data,
     );
+    res.locals.profileId = eggDonor.id;
     res.json(eggDonor);
   } catch (error) {
-    console.error("Failed to create egg donor:", error);
     res.status(500).json({ error: "Failed to create egg donor" });
   }
 };
@@ -108,7 +108,6 @@ const deleteEggDonor = async (req: Request, res: Response): Promise<any> => {
 
     res.json({ message: "Egg donor deleted successfully" });
   } catch (error) {
-    console.error("Failed to delete egg donor:", error);
     res.status(500).json({ error: "Failed to delete egg donor" });
   }
 };

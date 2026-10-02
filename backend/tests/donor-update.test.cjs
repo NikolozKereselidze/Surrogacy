@@ -12,6 +12,7 @@ function loadService(deleteFile) {
   const module = { exports: {} };
   new Function('require', 'module', 'exports', 'console', code)(
     (name) => {
+      if (name === '../lib/logger.js') return { logEvent() {} };
       assert.equal(name, './s3Service.js');
       return { deleteFileFromS3: deleteFile };
     }, module, module.exports, { error() {} },

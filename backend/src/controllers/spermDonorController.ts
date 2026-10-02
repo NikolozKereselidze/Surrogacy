@@ -71,9 +71,9 @@ const createSpermDonor = async (req: Request, res: Response): Promise<any> => {
       "spermDonor",
       validationResult.data,
     );
+    res.locals.profileId = spermDonor.id;
     res.json(spermDonor);
   } catch (error) {
-    console.error("Failed to create sperm donor:", error);
     res.status(500).json({ error: "Failed to create sperm donor" });
   }
 };
@@ -108,7 +108,6 @@ const deleteSpermDonor = async (req: Request, res: Response): Promise<any> => {
 
     res.json({ message: "Sperm donor deleted successfully" });
   } catch (error) {
-    console.error("Failed to delete sperm donor:", error);
     res.status(500).json({ error: "Failed to delete sperm donor" });
   }
 };

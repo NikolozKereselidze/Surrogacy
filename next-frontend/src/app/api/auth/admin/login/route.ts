@@ -6,11 +6,16 @@ export async function POST(req: NextRequest) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
     });
+    const requestId = backendRes.headers.get("x-request-id");
+    const headers: Record<string, string> = {};
+    if (requestId && /^[a-f0-9-]{36}$/i.test(requestId)) {
+        headers["X-Request-ID"] = requestId;
+    }
     const data = await backendRes.json();
     if (!backendRes.ok) {
-        return NextResponse.json(data, { status: backendRes.status });
+        return NextResponse.json(data, { status: backendRes.status, headers });
     }
-    const response = NextResponse.json({ ok: true });
+    const response = NextResponse.json({ ok: true }, { headers });
     response.cookies.set("adminToken", data.token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
