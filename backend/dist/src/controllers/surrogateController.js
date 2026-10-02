@@ -1,6 +1,6 @@
 import { prisma } from "../lib/prisma.js";
 import { createDonorProfileSchema, updateDonorProfileSchema, validationErrorResponse, } from "../schemas/donorProfileSchema.js";
-import { createDonorWithProfile, deleteDonorWithProfile, syncSecondaryImages, } from "../services/donorProfileService.js";
+import { createDonorWithProfile, deleteDonorWithProfile, updateDonorWithProfile, } from "../services/donorProfileService.js";
 const getSurrogates = async (req, res) => {
     try {
         const surrogates = await prisma.surrogate.findMany({
@@ -69,42 +69,12 @@ const updateSurrogate = async (req, res) => {
     if (!validationResult.success) {
         return res.status(400).json(validationErrorResponse(validationResult.error));
     }
-    const { secondaryImages, ...profileData } = validationResult.data;
     try {
-        // Get the surrogate to find the associated user
-        const surrogate = await prisma.surrogate.findUnique({
-            where: { id },
-            include: {
-                databaseUser: {
-                    include: {
-                        donorImages: true,
-                    },
-                },
-            },
-        });
-        if (!surrogate) {
+        const donor = await updateDonorWithProfile(prisma, "surrogate", id, validationResult.data);
+        if (!donor) {
             return res.status(404).json({ error: "Surrogate not found" });
         }
-        // Update the database user
-        await prisma.databaseUser.update({
-            where: { id: surrogate.databaseUserId },
-            data: profileData,
-        });
-        if (secondaryImages !== undefined) {
-            await syncSecondaryImages(prisma, surrogate.databaseUserId, secondaryImages);
-        }
-        // Return the updated surrogate with user data
-        const updatedSurrogate = await prisma.surrogate.findUnique({
-            where: { id },
-            include: {
-                databaseUser: {
-                    include: {
-                        donorImages: true,
-                    },
-                },
-            },
-        });
-        res.json(updatedSurrogate);
+        res.json(donor);
     }
     catch (error) {
         res.status(500).json({ error: "Failed to update surrogate" });

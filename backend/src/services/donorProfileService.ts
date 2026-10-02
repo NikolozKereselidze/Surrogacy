@@ -1,5 +1,5 @@
 import type { PrismaClient } from "../../prisma/generated/client.js";
-import { CreateDonorProfileInput } from "../schemas/donorProfileSchema.js";
+import { CreateDonorProfileInput, UpdateDonorProfileInput } from "../schemas/donorProfileSchema.js";
 import { deleteFileFromS3 } from "./s3Service.js";
 
 export type DonorModel = "eggDonor" | "spermDonor" | "surrogate";
@@ -190,36 +190,58 @@ export async function deleteDonorWithProfile(
   return donor;
 }
 
-export async function syncSecondaryImages(
+async function findDonorRecord(tx: TransactionClient, donorModel: DonorModel, id: string) {
+  switch (donorModel) {
+    case "eggDonor":
+      return tx.eggDonor.findUnique({ where: { id }, include: donorInclude });
+    case "spermDonor":
+      return tx.spermDonor.findUnique({ where: { id }, include: donorInclude });
+    case "surrogate":
+      return tx.surrogate.findUnique({ where: { id }, include: donorInclude });
+  }
+}
+
+export async function updateDonorWithProfile(
   prisma: PrismaClient,
-  databaseUserId: string,
-  secondaryImages: string[],
-): Promise<void> {
-  const existing = await prisma.donorImage.findMany({
-    where: { databaseUserId, isMain: false },
-    select: { imagePath: true },
-  });
+  donorModel: DonorModel,
+  id: string,
+  data: UpdateDonorProfileInput,
+) {
+  const { secondaryImages, ...profileData } = data;
+  const result = await prisma.$transaction(async (tx) => {
+    const existing = await findDonorRecord(tx, donorModel, id);
+    if (!existing) return null;
 
-  const existingPaths = existing.map((image) => image.imagePath);
-  const removedPaths = existingPaths.filter(
-    (path) => !secondaryImages.includes(path),
-  );
-
-  await prisma.$transaction(async (tx) => {
-    await tx.donorImage.deleteMany({
-      where: { databaseUserId, isMain: false },
+    await tx.databaseUser.update({
+      where: { id: existing.databaseUserId },
+      data: profileData,
     });
 
-    if (secondaryImages.length > 0) {
-      await tx.donorImage.createMany({
-        data: secondaryImages.map((imagePath) => ({
-          databaseUserId,
-          imagePath,
-          isMain: false,
-        })),
+    if (secondaryImages !== undefined) {
+      await tx.donorImage.deleteMany({
+        where: { databaseUserId: existing.databaseUserId, isMain: false },
       });
+      if (secondaryImages.length > 0) {
+        await tx.donorImage.createMany({
+          data: secondaryImages.map((imagePath) => ({
+            databaseUserId: existing.databaseUserId,
+            imagePath,
+            isMain: false,
+          })),
+        });
+      }
     }
+
+    const donor = await findDonorRecord(tx, donorModel, id);
+    if (!donor) throw new Error("Donor disappeared during update");
+    const keptKeys = new Set(collectS3Keys(donor.databaseUser));
+    const removedKeys = [...new Set(collectS3Keys(existing.databaseUser))]
+      .filter((key) => !keptKeys.has(key));
+    return { donor, removedKeys };
   });
 
-  await deleteS3Keys(removedPaths);
+  if (!result) return null;
+  // A storage cleanup failure must never turn a committed save into a failed save.
+  await deleteS3Keys(result.removedKeys);
+  return result.donor;
 }

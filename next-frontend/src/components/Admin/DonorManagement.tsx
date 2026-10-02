@@ -15,7 +15,7 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
     const [showAddForm, setShowAddForm] = useState(false);
     const [editingDonor, setEditingDonor] = useState<Donor | null>(null);
     const config = donorConfigs[donorType || ""];
-    const { donors, loading, donorUrls, fetchDonors, deleteDonor } = useDonorManagement(config?.apiEndpoint || "");
+    const { donors, loading, donorUrls, error, hasLoaded, handleUnauthorizedResponse, fetchDonors, deleteDonor } = useDonorManagement(config?.apiEndpoint || "");
     const getIconComponent = (iconName: string) => {
         switch (iconName) {
             case "FaUser":
@@ -38,6 +38,9 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
         });
+        if (handleUnauthorizedResponse(response)) {
+            throw new Error("Your session has expired. Please sign in again.");
+        }
         if (!response.ok) {
             const errorData = await response.json().catch(() => null);
             const message = errorData && typeof errorData.error === "string"
@@ -69,7 +72,7 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
     if (!config) {
         return <div className={styles.loading}>Invalid donor type</div>;
     }
-    if (loading) {
+    if (loading && !hasLoaded) {
         return <div className={styles.loading}>Loading...</div>;
     }
     return (<div className={styles.dashboardContent}>
@@ -84,7 +87,8 @@ const DonorManagement = ({ donorType }: DonorManagementProps) => {
 
       {showAddForm && (<DonorForm donorType={donorType} config={config} editingDonor={editingDonor} donorUrls={donorUrls} onSubmit={handleSubmit} onCancel={resetForm}/>)}
 
-      <DonorTable donors={donors} donorUrls={donorUrls} onEdit={handleEdit} onDelete={handleDelete}/>
+      {error && <div className={styles.pageError} role="alert"><p>{error}</p><button type="button" className={styles.cancelButton} disabled={loading} onClick={() => void fetchDonors()}>Retry loading profiles</button></div>}
+      {hasLoaded && <DonorTable donors={donors} donorUrls={donorUrls} onEdit={handleEdit} onDelete={handleDelete}/>}
     </div>);
 };
 export default DonorManagement;

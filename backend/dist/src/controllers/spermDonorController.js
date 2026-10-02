@@ -1,6 +1,6 @@
 import { prisma } from "../lib/prisma.js";
 import { createDonorProfileSchema, updateDonorProfileSchema, validationErrorResponse, } from "../schemas/donorProfileSchema.js";
-import { createDonorWithProfile, deleteDonorWithProfile, syncSecondaryImages, } from "../services/donorProfileService.js";
+import { createDonorWithProfile, deleteDonorWithProfile, updateDonorWithProfile, } from "../services/donorProfileService.js";
 const getSpermDonors = async (req, res) => {
     try {
         const spermDonors = await prisma.spermDonor.findMany({
@@ -69,42 +69,12 @@ const updateSpermDonor = async (req, res) => {
     if (!validationResult.success) {
         return res.status(400).json(validationErrorResponse(validationResult.error));
     }
-    const { secondaryImages, ...profileData } = validationResult.data;
     try {
-        // Get the sperm donor to find the associated user
-        const spermDonor = await prisma.spermDonor.findUnique({
-            where: { id },
-            include: {
-                databaseUser: {
-                    include: {
-                        donorImages: true,
-                    },
-                },
-            },
-        });
-        if (!spermDonor) {
+        const donor = await updateDonorWithProfile(prisma, "spermDonor", id, validationResult.data);
+        if (!donor) {
             return res.status(404).json({ error: "Sperm donor not found" });
         }
-        // Update the database user
-        await prisma.databaseUser.update({
-            where: { id: spermDonor.databaseUserId },
-            data: profileData,
-        });
-        if (secondaryImages !== undefined) {
-            await syncSecondaryImages(prisma, spermDonor.databaseUserId, secondaryImages);
-        }
-        // Return the updated sperm donor with user data
-        const updatedSpermDonor = await prisma.spermDonor.findUnique({
-            where: { id },
-            include: {
-                databaseUser: {
-                    include: {
-                        donorImages: true,
-                    },
-                },
-            },
-        });
-        res.json(updatedSpermDonor);
+        res.json(donor);
     }
     catch (error) {
         res.status(500).json({ error: "Failed to update sperm donor" });

@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "@/styles/Admin/AdminDashboard.module.css";
 import { FaPlus, FaEdit, FaTrash } from "react-icons/fa";
 import ImageCompressor from "@/components/ImageCompressor";
@@ -40,6 +40,8 @@ const BlogManagement = () => {
         imagePath: "",
     });
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
+    const formSessionRef = useRef(0);
+    const [formSession, setFormSession] = useState(0);
     useEffect(() => {
         fetchBlogPosts();
     }, []);
@@ -61,7 +63,13 @@ const BlogManagement = () => {
         }
     };
     const handleImageChange = (file: File) => {
-        setSelectedFile(file);
+        // Compression can finish after this form has been closed or replaced.
+        if (formSession === formSessionRef.current) setSelectedFile(file);
+    };
+    const resetImageSelection = () => {
+        setSelectedFile(null);
+        formSessionRef.current += 1;
+        setFormSession(formSessionRef.current);
     };
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -109,8 +117,6 @@ const BlogManagement = () => {
             if (response.ok) {
                 fetchBlogPosts();
                 resetForm();
-                setSelectedFile(null);
-                setError("");
             }
             else {
                 const errorData = await response.json().catch(() => ({}));
@@ -141,6 +147,9 @@ const BlogManagement = () => {
         }
     };
     const handleEdit = async (post: BlogPost) => {
+        if (submitting) return;
+        resetImageSelection();
+        setError("");
         setEditingPost(post);
         setFormData({
             language: post.language,
@@ -161,6 +170,7 @@ const BlogManagement = () => {
         setShowAddForm(true);
     };
     const resetForm = () => {
+        resetImageSelection();
         setFormData({
             language: "en",
             title: "",
@@ -175,13 +185,18 @@ const BlogManagement = () => {
         setShowAddForm(false);
         setError("");
     };
+    const handleAdd = () => {
+        if (submitting) return;
+        resetForm();
+        setShowAddForm(true);
+    };
     if (loading) {
         return <div className={styles.loading}>Loading...</div>;
     }
     return (<div className={styles.dashboardContent}>
       <div className={styles.pageHeader}>
         <h1>Blog Management</h1>
-        <button className={styles.addButton} onClick={() => setShowAddForm(true)}>
+        <button className={styles.addButton} onClick={handleAdd} disabled={submitting}>
           <FaPlus /> Add New Post
         </button>
       </div>
@@ -229,7 +244,7 @@ const BlogManagement = () => {
 
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
-                  <ImageCompressor label="Choose Blog Image" maxWidth={1200} maxHeight={800} quality={0.75} onCompressed={handleImageChange}/>
+                  <ImageCompressor key={formSession} label="Choose Blog Image" maxWidth={1200} maxHeight={800} quality={0.75} onCompressed={handleImageChange}/>
                   
                   {editingPost && currentImageUrl && (<div style={{ marginTop: "10px" }}>
                       <strong>Current Image:</strong>
@@ -266,7 +281,7 @@ const BlogManagement = () => {
                     ? "Update Post"
                     : "Create Post"}
                 </button>
-                <button type="button" onClick={resetForm} className={styles.cancelButton}>
+                <button type="button" onClick={resetForm} className={styles.cancelButton} disabled={submitting}>
                   Cancel
                 </button>
               </div>
@@ -315,7 +330,7 @@ const BlogManagement = () => {
                 </td>
                 <td>
                   <div className={styles.actionButtons}>
-                    <button className={styles.actionBtn} onClick={() => handleEdit(post)} title="Edit">
+                    <button className={styles.actionBtn} onClick={() => handleEdit(post)} title="Edit" disabled={submitting}>
                       <FaEdit />
                     </button>
                     <button className={`${styles.actionBtn} ${styles.deleteBtn}`} onClick={() => handleDelete(post.id)} title="Delete">

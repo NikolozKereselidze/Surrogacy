@@ -1,3 +1,4 @@
+import { buildBlogPath, buildBlogSlug } from "@/lib/blogUrls";
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import styles from "@/styles/Blog/Blog.module.css";
@@ -31,13 +32,7 @@ async function fetchPostById(id: string): Promise<BlogPost | null> {
     return null;
   }
 }
-function buildSlug(title: string): string {
-  return title
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
+
 function extractText(html: string): string {
   if (!html) return "";
   return html
@@ -70,13 +65,12 @@ export async function generateMetadata({
   const { id, locale = "en" } = await params;
   const post = await fetchPostById(id);
   const postLocale = post?.language || locale;
-  const slug = buildSlug(post?.title || "post");
   const title = post?.title ?? "Blog post";
   const description =
     truncate(extractText(post?.content || ""), 160) ||
     "Insights from Happy Family about surrogacy, egg donation and family building.";
   const ogImage = post?.imagePath ? getImageUrl(post.imagePath) : undefined;
-  const canonicalUrl = `${BASE_URL}/${postLocale}/blog/${id}/${slug}`;
+  const canonicalUrl = `${BASE_URL}${buildBlogPath(postLocale, id, post?.title || "post")}`;
   return {
     title,
     description,
@@ -131,9 +125,9 @@ export default async function BlogPostPage({
     notFound();
   }
   const postLocale = post.language || "en";
-  const canonicalSlug = buildSlug(post.title);
+  const canonicalSlug = buildBlogSlug(post.title);
   if (postLocale !== locale || slug !== canonicalSlug) {
-    permanentRedirect(`/${postLocale}/blog/${id}/${canonicalSlug}`);
+    permanentRedirect(buildBlogPath(postLocale, id, post.title));
   }
   return (
     <>

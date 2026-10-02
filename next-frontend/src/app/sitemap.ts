@@ -1,3 +1,4 @@
+import { buildBlogPath } from "@/lib/blogUrls";
 import { MetadataRoute } from "next";
 import { BASE_URL } from "@/lib/seo";
 import type { TeamMember } from "@/types/teamMember";
@@ -37,13 +38,7 @@ const staticRoutes = [
   { path: "/blog", priority: 0.7 },
 ];
 const locales = ["en", "he", "zh", "ru", "es", "ka"];
-function buildSlug(title: string): string {
-  return title
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
+
 function buildAlternates(path: string) {
   return {
     languages: {
@@ -106,9 +101,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   });
   blogPosts.forEach((post: BlogPost) => {
     const locale = locales.includes(post.language) ? post.language : "en";
-    const slug = buildSlug(post.title || "post");
-    const blogPath = `/blog/${post.id}/${slug}`;
-    const canonicalUrl = `${BASE_URL}/${locale}${blogPath}`;
+    const canonicalUrl = `${BASE_URL}${buildBlogPath(locale, post.id, post.title)}`;
     sitemapEntries.push({
       url: canonicalUrl,
       lastModified: post.updatedAt ? new Date(post.updatedAt) : undefined,

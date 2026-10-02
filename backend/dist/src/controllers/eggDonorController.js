@@ -1,6 +1,6 @@
 import { prisma } from "../lib/prisma.js";
 import { createDonorProfileSchema, updateDonorProfileSchema, validationErrorResponse, } from "../schemas/donorProfileSchema.js";
-import { createDonorWithProfile, deleteDonorWithProfile, syncSecondaryImages, } from "../services/donorProfileService.js";
+import { createDonorWithProfile, deleteDonorWithProfile, updateDonorWithProfile, } from "../services/donorProfileService.js";
 const getEggDonors = async (req, res) => {
     try {
         const eggDonors = await prisma.eggDonor.findMany({
@@ -69,43 +69,12 @@ const updateEggDonor = async (req, res) => {
     if (!validationResult.success) {
         return res.status(400).json(validationErrorResponse(validationResult.error));
     }
-    const { secondaryImages, ...profileData } = validationResult.data;
     try {
-        // Get the egg donor to find the associated user
-        const eggDonor = await prisma.eggDonor.findUnique({
-            where: { id },
-            include: {
-                databaseUser: {
-                    include: {
-                        donorImages: true,
-                    },
-                },
-            },
-        });
-        if (!eggDonor) {
+        const donor = await updateDonorWithProfile(prisma, "eggDonor", id, validationResult.data);
+        if (!donor) {
             return res.status(404).json({ error: "Egg donor not found" });
         }
-        // Update the database user
-        await prisma.databaseUser.update({
-            where: { id: eggDonor.databaseUserId },
-            data: profileData,
-        });
-        // Sync secondary images when the client sends the final desired list
-        if (secondaryImages !== undefined) {
-            await syncSecondaryImages(prisma, eggDonor.databaseUserId, secondaryImages);
-        }
-        // Return the updated egg donor with user data
-        const updatedEggDonor = await prisma.eggDonor.findUnique({
-            where: { id },
-            include: {
-                databaseUser: {
-                    include: {
-                        donorImages: true,
-                    },
-                },
-            },
-        });
-        res.json(updatedEggDonor);
+        res.json(donor);
     }
     catch (error) {
         res.status(500).json({ error: "Failed to update egg donor" });

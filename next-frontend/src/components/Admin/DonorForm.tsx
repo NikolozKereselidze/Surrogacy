@@ -106,6 +106,7 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
         setSubmitting(true);
         setError("");
         const uploadedKeys: string[] = [];
+        let saveAttempted = false;
         const cleanupNewUploads = async () => {
             await Promise.all(uploadedKeys.map((key) => deleteFileFromS3(key)));
         };
@@ -117,12 +118,8 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
             let imageKey = "";
             let documentKey = "";
             const secondaryImageKeys = [...formData.secondaryImages];
-            const filesToDelete: string[] = [];
             if (mainImageFile) {
                 try {
-                    if (editingDonor && editingDonor.databaseUser.mainImagePath) {
-                        filesToDelete.push(editingDonor.databaseUser.mainImagePath);
-                    }
                     imageKey = await uploadFileToS3(mainImageFile, "image", donorType, profileId, "main-image");
                     uploadedKeys.push(imageKey);
                 }
@@ -135,9 +132,6 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
             }
             if (documentFile) {
                 try {
-                    if (editingDonor && editingDonor.databaseUser.documentPath) {
-                        filesToDelete.push(editingDonor.databaseUser.documentPath);
-                    }
                     documentKey = await uploadFileToS3(documentFile, "document", donorType, profileId, "document");
                     uploadedKeys.push(documentKey);
                 }
@@ -182,19 +176,13 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
                 ...(!editingDonor && { profileId }),
             };
             try {
+                saveAttempted = true;
                 await onSubmit(submitData);
                 resetFileStates();
-                for (const filePath of filesToDelete) {
-                    try {
-                        await deleteFileFromS3(filePath);
-                    }
-                    catch (error) {
-                        console.error(`Error deleting old file ${filePath}:`, error);
-                    }
-                }
             }
             catch (onSubmitError) {
-                await cleanupNewUploads();
+                // A lost response can follow a committed save. Preserve uploads
+                // once saving starts; the server cleans up replaced assets.
                 setError(onSubmitError instanceof Error
                     ? onSubmitError.message
                     : "Failed to save donor. Please try again.");
@@ -202,7 +190,7 @@ const DonorForm = ({ donorType, config, editingDonor, donorUrls, onSubmit, onCan
             }
         }
         catch (error) {
-            await cleanupNewUploads();
+            if (!saveAttempted) await cleanupNewUploads();
             console.error("Error saving donor:", error);
             setError("An unexpected error occurred. Please try again.");
         }

@@ -1,4 +1,5 @@
 "use client";
+import { buildBlogPath } from "@/lib/blogUrls";
 import Link from "next/link";
 import styles from "@/styles/Blog/BlogCard.module.css";
 import { useTranslation } from "react-i18next";
@@ -10,13 +11,7 @@ const MAX_POSTS = 3;
 function getImageUrl(imagePath: string) {
   return `${CLOUDFRONT_DOMAIN}/${imagePath}`;
 }
-function buildSlug(title: string): string {
-  return title
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
+
 interface BlogPost {
   id: string;
   language: string;
@@ -167,7 +162,7 @@ const BlogCard = () => {
                 <h3 className={styles.blogTitle}>{post.title}</h3>
 
                 <Link
-                  href={`/${locale}/blog/${post.id}/${buildSlug(post.title)}`}
+                  href={buildBlogPath(locale, post.id, post.title)}
                   className={styles.readMoreLink}
                 >
                   {t("blog.readMore")} →

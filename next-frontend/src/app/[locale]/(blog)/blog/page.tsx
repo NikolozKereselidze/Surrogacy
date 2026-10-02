@@ -1,3 +1,4 @@
+import { buildBlogPath } from "@/lib/blogUrls";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,13 +26,7 @@ function getImageUrl(imagePath?: string) {
   return `${CLOUDFRONT_DOMAIN}/${imagePath}`;
 }
 
-function buildSlug(title: string): string {
-  return title
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
+
 
 async function fetchPostsByLocale(locale: string): Promise<BlogPost[]> {
   if (!API_BASE_URL) return [];
@@ -156,7 +151,6 @@ export default async function BlogListingPage({
             <div className={cardStyles.blogGrid}>
               {posts.map((post) => {
                 const imageUrl = getImageUrl(post.imagePath);
-                const slug = buildSlug(post.title);
                 const dateLabel = post.date
                   ? new Date(post.date).toLocaleDateString()
                   : "";
@@ -197,7 +191,7 @@ export default async function BlogListingPage({
                       <h2 className={cardStyles.blogTitle}>{post.title}</h2>
 
                       <Link
-                        href={`/${locale}/blog/${post.id}/${slug}`}
+                        href={buildBlogPath(locale, post.id, post.title)}
                         className={cardStyles.readMoreLink}
                       >
                         {text.readMore} →

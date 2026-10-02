@@ -130,11 +130,6 @@ const updateBlogPost = async (req: Request, res: Response): Promise<any> => {
       return res.status(404).json({ error: "Blog post not found" });
     }
 
-    // If image is being changed, delete the old image from S3
-    if (currentBlogPost.imagePath && currentBlogPost.imagePath !== imagePath) {
-      await deleteImageFromS3(currentBlogPost.imagePath);
-    }
-
     const blogPost = await prisma.blogPost.update({
       where: { id },
       data: {
@@ -147,6 +142,12 @@ const updateBlogPost = async (req: Request, res: Response): Promise<any> => {
         imagePath,
       },
     });
+
+    // Only remove the old image after the new path is committed. Comparing the
+    // saved path also preserves the image when an update omits imagePath.
+    if (currentBlogPost.imagePath && currentBlogPost.imagePath !== blogPost.imagePath) {
+      await deleteImageFromS3(currentBlogPost.imagePath);
+    }
     res.json(blogPost);
   } catch (error) {
     console.error("Error updating blog post:", error);
@@ -168,16 +169,16 @@ const deleteBlogPost = async (req: Request, res: Response): Promise<any> => {
       return res.status(404).json({ error: "Blog post not found" });
     }
 
-    // Delete the image from S3 if it exists
-    await deleteImageFromS3(blogPost.imagePath);
-
-    // Delete the blog post from database
-    await prisma.blogPost.delete({
+    const deletedBlogPost = await prisma.blogPost.delete({
       where: { id },
+      select: { imagePath: true },
     });
 
+    // A failed database deletion must leave the existing image intact.
+    await deleteImageFromS3(deletedBlogPost.imagePath);
+
     res.json({
-      message: "Blog post and associated image deleted successfully",
+      message: "Blog post deleted successfully",
     });
   } catch (error) {
     console.error("Error deleting blog post:", error);
