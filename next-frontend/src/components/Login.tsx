@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense, useState } from "react";
-import { useRouter } from "next/navigation";
 import styles from "@/styles/Login.module.css";
 
 const EyeIcon = ({ hidden }: { hidden: boolean }) => (
@@ -28,7 +27,6 @@ const LoginContent = ({ isAdmin }: { isAdmin: boolean }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const { push } = useRouter();
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -51,7 +49,10 @@ const LoginContent = ({ isAdmin }: { isAdmin: boolean }) => {
         return;
       }
 
-      push(isAdmin ? "/admin/dashboard" : "/find-egg-donor");
+      // The login API sets the session cookie outside a Server Action, so the
+      // client router may still hold a redirect from before authentication.
+      // Load a fresh document to check the new cookie and replace the login page.
+      window.location.replace(isAdmin ? "/admin/dashboard" : "/find-egg-donor");
     } catch {
       setError("Something went wrong. Please try again.");
     } finally {
