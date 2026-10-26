@@ -5,7 +5,7 @@ import { getMetaKeywords } from "@/lib/seo-keywords";
 const localizedMeta = {
     en: {
         title: "Surrogate Screening | Georgia Surrogacy",
-        description: "Rigorous surrogate screening for gestational surrogacy in Georgia country. Medical, psychological, and background evaluations at accredited Tbilisi clinics  protecting international intended parents and surrogates throughout every Georgia surrogacy program.",
+        description: "Screening helps clinicians assess suitability and identify relevant risks. Your clinic explains the assessments appropriate to your circumstances; screening does not guarantee a successful outcome.",
         keywords: [
             ...getMetaKeywords("en"),
             "surrogate screening georgia",
@@ -17,7 +17,7 @@ const localizedMeta = {
     },
     ka: {
         title: "სუროგატის სკრინინგი | გესტაციური სუროგაცია საქართველოში",
-        description: "სრული სუროგატის სკრინინგი გესტაციური სუროგაციისთვის საქართველოში. სამედიცინო, ფსიქოლოგიური და ფონური შეფასება აკრედიტებულ კლინიკებში თბილისში  საერთაშორისო მშობლებისა და სუროგატების დაცვა.",
+        description: "სკრინინგი კლინიცისტებს ეხმარება შესაბამისობის შეფასებასა და რისკების გამოვლენაში. კლინიკა განმარტავს თქვენი გარემოებებისთვის შესაფერის შეფასებებს; სკრინინგი წარმატებულ შედეგს არ იძლევა გარანტირებულად.",
         keywords: [
             ...getMetaKeywords("ka"),
             "სუროგატის სკრინინგი",
@@ -27,7 +27,7 @@ const localizedMeta = {
     },
     es: {
         title: "Evaluación de Subrogadas | Gestación Subrogada en Georgia",
-        description: "Evaluación rigurosa de subrogadas para gestación subrogada en Georgia país. Exámenes médicos, psicológicos y de antecedentes en clínicas acreditadas de Tiflis  protegiendo a padres internacionales y subrogadas en cada programa.",
+        description: "La evaluación ayuda a los profesionales clínicos a valorar la idoneidad e identificar riesgos. Tu clínica explica las pruebas adecuadas a tu situación; la evaluación no garantiza un resultado favorable.",
         keywords: [
             ...getMetaKeywords("es"),
             "evaluación subrogada georgia",
@@ -37,7 +37,7 @@ const localizedMeta = {
     },
     ru: {
         title: "Скрининг суррогатных матерей | Суррогатное материнство в Грузии",
-        description: "Тщательный скрининг суррогатных матерей для суррогатного материнства в Грузии. Медицинская, психологическая и проверка биографии в аккредитованных клиниках Тбилиси  защита международных родителей и суррогатных матерей.",
+        description: "Обследование помогает врачам оценить возможность участия и выявить риски. Клиника объясняет, какие обследования подходят в вашей ситуации; обследование не гарантирует успешного результата.",
         keywords: [
             ...getMetaKeywords("ru"),
             "скрининг суррогатной матери",
@@ -47,7 +47,7 @@ const localizedMeta = {
     },
     he: {
         title: "סינון פונדקאית | פונדקאות גסטציונלית בגאורגיה",
-        description: "סינון מקיף לפונדקאיות בפונדקאות גסטציונלית בגאורגיה. הערכות רפואיות, פסיכולוגיות ורקע בקליניקות מוסמכות בטביליסי  להגנה על הורים בינלאומיים ופונדקאיות בכל שלב.",
+        description: "הבדיקות מסייעות לצוות הרפואי להעריך התאמה ולזהות סיכונים. המרפאה מסבירה אילו הערכות מתאימות לנסיבות שלכם; הבדיקות אינן מבטיחות תוצאה מוצלחת.",
         keywords: [
             ...getMetaKeywords("he"),
             "סינון פונדקאית גאורגיה",
@@ -57,7 +57,7 @@ const localizedMeta = {
     },
     zh: {
         title: "代孕妈妈筛查 | 格鲁吉亚妊娠代孕评估",
-        description: "为格鲁吉亚妊娠代孕项目提供严格的代孕妈妈筛查。在第比利斯认证诊所完成医疗、心理及背景评估全程保护国际意向父母与代孕妈妈的权益。",
+        description: "筛查帮助临床医生评估适合性并识别相关风险。诊所会解释适合您情况的评估；筛查不能保证治疗成功。",
         keywords: [
             ...getMetaKeywords("zh"),
             "格鲁吉亚代孕妈妈要求",

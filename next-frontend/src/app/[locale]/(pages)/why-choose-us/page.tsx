@@ -5,7 +5,7 @@ const localizedMeta = {
   en: {
     title: "Why Choose Us | Surrogacy Agency Georgia",
     description:
-      "Learn how to choose a surrogacy agency and why international families trust Happy Family. Transparent pricing, accredited Tbilisi clinics, legal protection since 2011, and 24/7 support.",
+      "Choosing a surrogacy agency is a personal decision. Explore how our team can help you understand your options, plan your visits, and stay in touch with the professionals involved in your care.",
     keywords: [
       "how to choose a surrogacy agency",
       "reputable surrogacy agency",
@@ -19,7 +19,7 @@ const localizedMeta = {
   ka: {
     title: "რატომ აგვირჩიოთ | სანდო სუროგაციის სააგენტო საქართველოში",
     description:
-      "გაიგეთ, როგორ აირჩიოთ სუროგაციის სააგენტო და რატომ ენდობიან Happy Family-ს საერთაშორისო ოჯახები. გამჭვირვალე ფასები, აკრედიტებული კლინიკები და 24/7 მხარდაჭერა.",
+      "სააგენტოს არჩევა პირადი გადაწყვეტილებაა. გაიგეთ, როგორ შეუძლია ჩვენს გუნდს დაგეხმაროთ ვარიანტების გააზრებაში, ვიზიტების დაგეგმვასა და თქვენს მოვლაში ჩართულ პროფესიონალებთან ურთიერთობაში.",
     keywords: [
       "სუროგაციის სააგენტო",
       "სუროგაცია საქართველოში",
@@ -29,7 +29,7 @@ const localizedMeta = {
   es: {
     title: "Por Qué Elegirnos | Agencia de Subrogación de Confianza en Georgia",
     description:
-      "Aprenda cómo elegir una agencia de subrogación y por qué las familias internacionales confían en Happy Family. Precios transparentes, clínicas acreditadas y apoyo 24/7.",
+      "Elegir una agencia es una decisión personal. Conoce cómo nuestro equipo puede ayudarte a entender las opciones, planificar tus visitas y comunicarte con los profesionales que participan en tu atención.",
     keywords: [
       "cómo elegir agencia de subrogación",
       "agencia de subrogación georgia",
@@ -39,7 +39,7 @@ const localizedMeta = {
   ru: {
     title: "Почему мы | Надёжное агентство суррогатного материнства в Грузии",
     description:
-      "Узнайте, как выбрать агентство суррогатного материнства и почему международные семьи доверяют Happy Family. Прозрачные цены, аккредитованные клиники и поддержка 24/7.",
+      "Выбор агентства — личное решение. Узнайте, как наша команда может помочь разобраться в вариантах, спланировать поездки и поддерживать связь со специалистами, участвующими в вашей программе.",
     keywords: [
       "как выбрать агентство суррогатного материнства",
       "суррогатное материнство грузия",
@@ -49,7 +49,7 @@ const localizedMeta = {
   he: {
     title: "למה לבחור בנו | סוכנות פונדקאות מהימנה בגאורגיה",
     description:
-      "למדו כיצד לבחור סוכנות פונדקאות ומדוע משפחות בינלאומיות סומכות על Happy Family. תמחור שקוף, מרפאות מוסמכות ותמיכה 24/7.",
+      "בחירת סוכנות היא החלטה אישית. גלו כיצד הצוות שלנו יכול לעזור להבין את האפשרויות, לתכנן ביקורים ולשמור על קשר עם אנשי המקצוע המעורבים בטיפול שלכם.",
     keywords: [
       "איך לבחור סוכנות פונדקאות",
       "פונדקאות בגאורגיה",
@@ -59,7 +59,7 @@ const localizedMeta = {
   zh: {
     title: "为什么选择我们 | 格鲁吉亚值得信赖的代孕机构",
     description:
-      "了解如何选择代孕机构，以及为什么国际家庭信赖 Happy Family。透明定价、认证诊所和全天候支持。",
+      "选择机构是个人决定。了解我们的团队如何协助您理解选项、规划行程，并与参与诊疗的专业人员保持沟通。",
     keywords: ["如何选择代孕机构", "格鲁吉亚代孕", "最佳代孕机构"],
   },
 } as const;

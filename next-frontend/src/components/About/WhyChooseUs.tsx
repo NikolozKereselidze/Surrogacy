@@ -59,12 +59,6 @@ const WhyChooseUs = () => {
     const georgiaPoints = useMemo(() => t("whyChooseUs.georgia.points", {
         returnObjects: true,
     }) as GeorgiaPoint[], [t]);
-    const othersPoints = useMemo(() => t("whyChooseUs.comparison.othersPoints", {
-        returnObjects: true,
-    }) as string[], [t]);
-    const ourPoints = useMemo(() => t("whyChooseUs.comparison.ourPoints", {
-        returnObjects: true,
-    }) as string[], [t]);
     const scrollToContact = () => {
         document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
     };
@@ -123,28 +117,6 @@ const WhyChooseUs = () => {
           <Button href={`${localePrefix}/surrogacy-in-georgia`}>
             {t("whyChooseUs.hero.secondaryCta")}
           </Button>
-        </div>
-      </section>
-
-      <section className="section" aria-labelledby="wcu-comparison-title">
-        <SectionHeader title={t("whyChooseUs.comparison.title")} subtitle={t("whyChooseUs.comparison.subtitle")}/>
-        <div className={styles.comparisonGrid}>
-          <div className={styles.comparisonCard}>
-            <h3 className={styles.comparisonTitle}>
-              {t("whyChooseUs.comparison.othersTitle")}
-            </h3>
-            <ul className={styles.comparisonList}>
-              {othersPoints.map((point) => (<li key={point}>{point}</li>))}
-            </ul>
-          </div>
-          <div className={`${styles.comparisonCard} ${styles.ourCard}`}>
-            <h3 className={styles.comparisonTitle}>
-              {t("whyChooseUs.comparison.ourTitle")}
-            </h3>
-            <ul className={styles.comparisonList}>
-              {ourPoints.map((point) => (<li key={point}>{point}</li>))}
-            </ul>
-          </div>
         </div>
       </section>
 

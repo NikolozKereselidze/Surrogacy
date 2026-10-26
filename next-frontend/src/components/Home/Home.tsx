@@ -6,7 +6,6 @@ import MiracleCard from "@/components/MiracleCard";
 import PageCtaSection from "@/components/PageCtaSection/PageCtaSection";
 import TeamCard from "@/components/TeamCard";
 import StatisticsSection from "@/components/StatisticsSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import ProgramsOverviewSection from "@/components/ProgramsOverviewSection";
 import FaqSection from "@/components/FaqSection/FaqSection";
 import { useMemo } from "react";
@@ -80,8 +79,6 @@ const Home = () => {
             </div>))}
         </div>
       </section>
-
-      <TestimonialsSection />
 
       <FaqSection id="homepage-faq-title" idPrefix="homepage-faq" translationKey="homepage.faq"/>
 

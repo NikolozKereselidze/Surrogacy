@@ -5,7 +5,7 @@ import { getMetaKeywords } from "@/lib/seo-keywords";
 const localizedMeta = {
     en: {
         title: "Egg Freezing in Georgia | Fertility Preservation Tbilisi",
-        description: "Egg freezing and fertility preservation in Georgia country. Oocyte cryopreservation, ideal candidates, success rates, and support from consultation through storage at partner clinics in Tbilisi.",
+        description: "Egg freezing offers an option for people considering future fertility treatment. A clinic can explain the process, its limitations, and the factors that may affect your individual chances.",
         keywords: [
             ...getMetaKeywords("en"),
             "egg freezing georgia",
@@ -17,7 +17,7 @@ const localizedMeta = {
     },
     ka: {
         title: "კვერცხუჯრედის გაყინვა საქართველოში | ფერტილობის შენახვა",
-        description: "კვერცხუჯრედის გაყინვა და ფერტილობის შენახვა საქართველოში. ოვოციტის კრიოკონსერვაცია, კანდიდატების შეფასება და მხარდაჭერა თბილისის პარტნიორ კლინიკებში.",
+        description: "კვერცხუჯრედების გაყინვა ერთ-ერთი ვარიანტია მათთვის, ვინც მომავალში ფერტილობის მკურნალობას განიხილავს. კლინიკა განმარტავს პროცესს, მის შეზღუდვებსა და ინდივიდუალურ შანსებზე მოქმედ ფაქტორებს.",
         keywords: [
             ...getMetaKeywords("ka"),
             "კვერცხუჯრედის გაყინვა",
@@ -28,7 +28,7 @@ const localizedMeta = {
     },
     es: {
         title: "Congelación de Óvulos en Georgia | Preservación de Fertilidad",
-        description: "Congelación de óvulos y preservación de fertilidad en Georgia país. Criopreservación de ovocitos, candidatas ideales y apoyo en clínicas asociadas en Tiflis.",
+        description: "La congelación de óvulos es una opción para quienes consideran un tratamiento de fertilidad en el futuro. Una clínica puede explicar el proceso, sus limitaciones y los factores que influyen en las posibilidades individuales.",
         keywords: [
             ...getMetaKeywords("es"),
             "congelación de óvulos georgia",
@@ -38,7 +38,7 @@ const localizedMeta = {
     },
     ru: {
         title: "Заморозка Яйцеклеток в Грузии | Сохранение Фертильности",
-        description: "Заморозка яйцеклеток и сохранение фертильности в Грузии. Криоконсервация ооцитов, оценка кандидатов и поддержка в партнёрских клиниках Тбилиси.",
+        description: "Замораживание яйцеклеток — один из вариантов для тех, кто рассматривает лечение бесплодия в будущем. Клиника может объяснить процесс, ограничения и факторы, влияющие на индивидуальные шансы.",
         keywords: [
             ...getMetaKeywords("ru"),
             "заморозка яйцеклеток грузия",
@@ -48,7 +48,7 @@ const localizedMeta = {
     },
     he: {
         title: "הקפאת ביציות בגאורגיה | שימור פוריות",
-        description: "הקפאת ביציות ושימור פוריות בגאורגיה. קריוקונסרבציה של ביציות, הערכת מועמדות וליווי בקליניקות שותפות בטביליסי.",
+        description: "הקפאת ביציות היא אפשרות למי ששוקלות טיפול פוריות בעתיד. המרפאה יכולה להסביר את התהליך, מגבלותיו והגורמים המשפיעים על הסיכויים האישיים.",
         keywords: [
             ...getMetaKeywords("he"),
             "הקפאת ביציות גאורגיה",
@@ -58,7 +58,7 @@ const localizedMeta = {
     },
     zh: {
         title: "格鲁吉亚冻卵 | 生育力保存",
-        description: "格鲁吉亚冻卵与生育力保存服务。卵子冷冻、适合人群评估、成功率说明，以及第比利斯合作诊所全程支持。",
+        description: "冻卵是考虑未来生育治疗的人士可了解的选项。诊所可以解释流程、局限性以及影响个人机会的因素。",
         keywords: [
             ...getMetaKeywords("zh"),
             "格鲁吉亚冻卵",

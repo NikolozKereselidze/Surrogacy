@@ -49,7 +49,7 @@
       "highlight": "Gestational Surrogacy & IVF in Tbilisi"
     },
     "heroSubtitle": "Together we make miracles  international surrogacy and egg donation tailored to your journey.",
-    "heroDescription": "Happy Family is a trusted Georgia surrogacy agency offering gestational surrogacy, egg donation, and IVF in Tbilisi for international intended parents. Legally protected programs, transparent pricing, and 24/7 support.",
+    "heroDescription": "Happy Family supports international intended parents exploring surrogacy, egg donation, and IVF in Tbilisi, Georgia, with program information and practical coordination.",
     "startJourneyButton": "Start Your Journey Today",
     "cta": {
       "title": "Ready to Start Your Journey?",
@@ -57,31 +57,40 @@
       "primaryCta": "Contact Us Today",
       "relatedTitle": "Explore Related Pages",
       "relatedLinks": [
-        { "label": "Surrogacy in Georgia", "path": "/surrogacy-in-georgia" },
+        {
+          "label": "Surrogacy in Georgia",
+          "path": "/surrogacy-in-georgia"
+        },
         {
           "label": "Egg Donation Programs",
           "path": "/surrogacy-with-egg-donor"
         },
-        { "label": "Why Choose Us", "path": "/why-choose-us" },
-        { "label": "Our Team", "path": "/our-team" }
+        {
+          "label": "Why Choose Us",
+          "path": "/why-choose-us"
+        },
+        {
+          "label": "Our Team",
+          "path": "/our-team"
+        }
       ]
     },
     "supportSection": {
       "eyebrow": "Full-Service Agency",
-      "highlightBadge": "24/7 Case Management",
+      "highlightBadge": "Ongoing support",
       "title": "End-to-End Surrogacy Support in Georgia",
       "description": "As a dedicated Georgia surrogacy agency, we guide international intended parents through IVF and egg donation in Tbilisi, surrogate matching, clinical coordination, and referrals to independent legal professionals.",
-      "subtitle": "Legal Protection & IVF Coordination in Tbilisi",
-      "content": "Our team coordinates with fertility clinics in Tbilisi and supports families throughout their program. Independent licensed professionals explain legal requirements, while official records remain the responsibility of the relevant government authorities.",
+      "subtitle": "Coordinated care",
+      "content": "Practical help with appointments and communication with your clinic.",
       "imageAlt": "Caring hands gently holding a newborn baby's feet, representing compassionate surrogacy support in Georgia"
     },
     "experienceSection": {
-      "eyebrow": "Trusted Since 2011",
-      "highlightBadge": "10+ Years in Georgia",
-      "title": "A Proven Georgia Surrogacy & IVF Agency",
-      "description": "Happy Family has helped families from 30+ countries navigate gestational surrogacy in Georgia country. Our Tbilisi-based team combines medical, legal, and coordination expertise so your journey is predictable, supported, and built on real program experience.",
+      "eyebrow": "International Family Support",
+      "highlightBadge": "Local Coordination in Tbilisi",
+      "title": "Your Coordination Team",
+      "description": "Happy Family supports international intended parents exploring surrogacy, egg donation, and IVF in Tbilisi, Georgia, with program information and practical coordination.",
       "value1Title": "Coordinated IVF & Surrogacy Programs",
-      "value1Content": "We partner with leading fertility clinics in Tbilisi for IVF, embryo transfer, and egg donation  managing timelines, communication, and medical coordination so international parents stay informed at every step.",
+      "value1Content": "Practical help with appointments and communication with your clinic.",
       "value2Title": "International Parents, Local Expertise",
       "value2Content": "From first consultation through post-birth support, our case managers understand cross-border surrogacy logistics, Georgia surrogacy cost structures, and when to refer families to independent licensed professionals.",
       "imageAlt": "Young child kissing a pregnant surrogate mother's belly, representing families built through gestational surrogacy in Georgia"
@@ -93,11 +102,11 @@
       "items": [
         {
           "question": "How much does surrogacy cost in Georgia?",
-          "answer": "Gestational surrogacy in Georgia typically starts from around $40,000 with transparent, all-inclusive packages. Costs depend on whether you need egg donation, IVF cycles, and program extras. Contact us for a personalized quote."
+          "answer": "Request a written, personalized quotation identifying included services, exclusions, payment stages, and possible additional costs."
         },
         {
           "question": "Is surrogacy legal in Georgia for international parents?",
-          "answer": "Yes. Georgia (country) has legally recognized gestational surrogacy for international intended parents since 2011. Intended parents are named on the birth certificate, with comprehensive legal contracts throughout the process."
+          "answer": "Eligibility and legal requirements depend on current law and individual circumstances. Independent licensed professionals can explain the requirements that apply to your family."
         },
         {
           "question": "What is the surrogacy process in Georgia?",
@@ -136,23 +145,17 @@
   },
   "ourTeam": {
     "title": "Meet Our Team",
-    "subtitle": "Well qualified team is ready to serve you",
+    "subtitle": "Our team helps you understand program options and coordinate communication. Medical advice and treatment decisions remain with your treating clinicians.",
     "introTitle": "The Experts Behind Your Miracle",
-    "introText": "Meet the professionals who make miracles happen.",
-    "natiaDesc": "Over 15 years of experience in healthcare and professional service consulting, helping families grow. Ms. Devdariani graduated from Tbilisi State Medical University and Tbilisi State University.",
-    "kelvinDesc": "Board-certified fertility specialist with expertise in advanced reproductive technologies and personalized treatment plans.",
-    "annaDesc": "Over 15 years of experience helping families grow. Specializes in IVF coordination and patient care management.",
-    "michaelDesc": "Leading medical director with extensive experience in reproductive medicine and clinical oversight.",
-    "sarahDesc": "Dedicated patient care coordinator ensuring smooth communication and support throughout your journey.",
-    "davidDesc": "Experienced legal advisor specializing in surrogacy law and family formation legal matters.",
+    "introText": "Our team helps you understand program options and coordinate communication. Medical advice and treatment decisions remain with your treating clinicians.",
     "valuesTitle": "Our Team Values",
     "valuesDesc": "Our core principles guide everything we do.",
     "value1Title": "Excellence",
-    "value1Desc": "We maintain the highest standards in medical care and patient support.",
+    "value1Desc": "A point of contact to discuss your questions and preferences.",
     "value2Title": "Collaboration",
     "value2Desc": "Our team works together seamlessly to provide comprehensive care.",
     "value3Title": "Innovation",
-    "value3Desc": "We stay at the forefront of reproductive medicine advances.",
+    "value3Desc": "Practical help with appointments and communication with your clinic.",
     "showMore": "Show More"
   },
   "contactUs": {
@@ -219,46 +222,45 @@
     "value2Desc": "We serve families from around the world with local expertise.",
     "value3Title": "Compassionate Care",
     "value3Desc": "Every family receives personalized attention and support.",
-    "value4Title": "Proven Excellence",
-    "value4Desc": "Years of successful outcomes and satisfied families.",
+    "value4Title": "Personal attention",
+    "value4Desc": "A point of contact to discuss your questions and preferences.",
     "value5Title": "Trust & Security",
     "value5Desc": "Your privacy and security are our top priorities throughout the journey.",
     "value6Title": "Partnership Approach",
     "value6Desc": "We work as partners with you, ensuring transparency and open communication.",
-    "stat1Number": "1000+",
-    "stat1Label": "Successful Pregnancies",
-    "stat2Number": "50+",
-    "stat2Label": "Countries Served",
-    "stat3Number": "10+",
-    "stat3Label": "Years of Experience",
-    "stat4Number": "99%",
-    "stat4Label": "Success Rate"
+    "stat1Number": "Personal attention",
+    "stat1Label": "A point of contact to discuss your questions and preferences.",
+    "stat2Number": "Clear options",
+    "stat2Label": "Program information to help you consider your next steps.",
+    "stat3Number": "Coordinated care",
+    "stat3Label": "Practical help with appointments and communication with your clinic.",
+    "stat4Number": "Ongoing support",
+    "stat4Label": "A team to help you navigate your program and ask questions."
   },
-
   "whyChooseUs": {
     "hero": {
       "tag": "TRUSTED SURROGACY AGENCY IN GEORGIA",
       "title": "Why Choose Happy Family for Surrogacy in Georgia",
-      "description": "Choosing a surrogacy agency is one of the most important decisions you will make on your path to parenthood. At Happy Family, we combine over 15 years of experience, accredited IVF clinics in Tbilisi, rigorous screening, transparent pricing, and round-the-clock support to guide international intended parents through every step of their journey from first consultation to bringing your baby home.",
+      "description": "Choosing a surrogacy agency is a personal decision. Explore how our team can help you understand your options, plan your visits, and stay in touch with the professionals involved in your care.",
       "primaryCta": "Book a Free Consultation",
       "secondaryCta": "Explore Surrogacy in Georgia",
       "highlightsTitle": "At a Glance",
       "highlights": [
         {
-          "title": "3,200+ Successful Births",
-          "description": "Over 15 years guiding international families through surrogacy in Georgia."
+          "title": "Personal attention",
+          "description": "A point of contact to discuss your questions and preferences."
         },
         {
-          "title": "Legal Protection Since 2011",
-          "description": "Intended parents named on the birth certificate from birth no adoption required."
+          "title": "Thoughtful Planning",
+          "description": "Eligibility and legal requirements depend on current law and individual circumstances. Independent licensed professionals can explain the requirements that apply to your family."
         },
         {
-          "title": "Transparent Pricing",
-          "description": "All-inclusive programs from $40,000 with itemized budgets and no hidden fees."
+          "title": "Plan Your Budget",
+          "description": "Request a written, personalized quotation identifying included services, exclusions, payment stages, and possible additional costs."
         },
         {
-          "title": "24/7 Multilingual Support",
-          "description": "Dedicated coordinator and round-the-clock assistance in your language."
+          "title": "Ongoing support",
+          "description": "A team to help you navigate your program and ask questions."
         }
       ]
     },
@@ -269,13 +271,13 @@
       "cards": [
         {
           "icon": "award",
-          "title": "Proven Track Record",
-          "description": "With more than 3,200 successful births and over 15 years serving international families, Happy Family has earned a reputation as one of the most trusted surrogacy agencies in Georgia. Our long history means refined processes, experienced coordinators, and a deep understanding of what intended parents need at every stage."
+          "title": "Personal attention",
+          "description": "A point of contact to discuss your questions and preferences."
         },
         {
           "icon": "users",
-          "title": "Expert Team",
-          "description": "Your journey is guided by board-certified fertility specialists, experienced IVF coordinators, licensed legal advisors, and dedicated patient care managers. Our multidisciplinary team works together so medical, legal, and logistical decisions are never made in isolation giving you confidence that every detail is handled by a qualified professional."
+          "title": "Your Coordination Team",
+          "description": "Our team helps you understand program options and coordinate communication. Medical advice and treatment decisions remain with your treating clinicians."
         },
         {
           "icon": "shield",
@@ -290,12 +292,12 @@
         {
           "icon": "globe",
           "title": "Global Network",
-          "description": "We serve intended parents from the United States, United Kingdom, Israel, China, Russia, Spain, and across Europe and Asia. Our team provides translation support, travel coordination, accommodation guidance, and embassy liaison services removing language and logistics barriers so you can focus on your growing family."
+          "description": "Request a written, personalized quotation identifying included services, exclusions, payment stages, and possible additional costs."
         },
         {
           "icon": "clock",
-          "title": "24/7 Support",
-          "description": "Surrogacy journeys do not follow office hours. Whether you have an urgent medical question, need a document translated overnight, or want a pregnancy update across time zones, your dedicated coordinator and our support team are available around the clock. You are never left waiting when something matters."
+          "title": "Ongoing support",
+          "description": "A team to help you navigate your program and ask questions."
         }
       ]
     },
@@ -307,7 +309,7 @@
       "criteria": [
         {
           "title": "Medical Oversight & Clinic Partnerships",
-          "description": "A reputable surrogacy agency works directly with accredited fertility clinics, not independent brokers with no clinical involvement. Verify that the agency coordinates IVF procedures, embryo transfers, and prenatal care through licensed medical facilities with published success rates.",
+          "description": "Discuss treatment options, clinician credentials, and the scope of care directly with the clinic before making a decision.",
           "questions": [
             "Which IVF clinics does the agency partner with?",
             "Who oversees the surrogate's prenatal care?",
@@ -364,64 +366,24 @@
     "georgia": {
       "eyebrow": "GEORGIA ADVANTAGE",
       "title": "Why Choose a Surrogacy Agency in Georgia",
-      "subtitle": "Georgia has been a leading international surrogacy destination since 2011 offering legal clarity, affordable programs, and world-class fertility care in Tbilisi.",
+      "subtitle": "Happy Family supports international intended parents exploring surrogacy, egg donation, and IVF in Tbilisi, Georgia, with program information and practical coordination.",
       "overview": "For intended parents comparing international options, Georgia combines experienced IVF clinics with coordinated fertility and surrogacy support. Happy Family focuses on medical coordination and family support, while independent licensed professionals advise on legal and post-birth requirements.",
       "points": [
         {
-          "title": "Legal Protection Since 2011",
-          "description": "Georgian law explicitly recognizes intended parents as the sole legal parents from birth. The surrogate has no parental rights, and your names appear directly on the birth certificate."
+          "title": "Thoughtful Planning",
+          "description": "Eligibility and legal requirements depend on current law and individual circumstances. Independent licensed professionals can explain the requirements that apply to your family."
         },
         {
-          "title": "Up to 70% Cost Savings",
-          "description": "All-inclusive surrogacy programs in Georgia start from approximately $40,000 a fraction of typical US surrogacy costs with transparent, itemized pricing and no hidden fees."
+          "title": "Plan Your Budget",
+          "description": "Request a written, personalized quotation identifying included services, exclusions, payment stages, and possible additional costs."
         },
         {
           "title": "Post-Birth Family Support",
           "description": "After birth, we continue providing practical family support and referrals to independent licensed professionals. Government authorities and embassies alone determine and issue official documents."
         },
         {
-          "title": "Accredited Tbilisi Clinics",
-          "description": "IVF procedures, embryo transfers, and deliveries take place at modern, accredited facilities in Tbilisi with experienced reproductive medicine specialists and high clinical standards."
-        }
-      ]
-    },
-    "comparison": {
-      "title": "Happy Family vs Other Agencies",
-      "subtitle": "See how a full-service Georgia surrogacy agency compares to typical alternatives.",
-      "othersTitle": "Other Agencies",
-      "othersPoints": [
-        "Limited or outsourced medical oversight",
-        "Generic, one-size-fits-all treatment plans",
-        "Minimal support after birth",
-        "Hidden fees and unexpected costs",
-        "Long surrogate wait times with no transparency",
-        "No dedicated coordinator rotating support staff",
-        "Limited access to independent legal guidance"
-      ],
-      "ourTitle": "Happy Family",
-      "ourPoints": [
-        "Full in-house medical team and clinic coordination",
-        "Personalized programs tailored to your medical profile",
-        "Practical post-birth family support",
-        "Transparent, itemized pricing with fixed-fee options",
-        "Actively screened surrogate database with faster matching",
-        "One dedicated coordinator throughout the program",
-        "15+ years supporting international families"
-      ]
-    },
-    "testimonials": {
-      "title": "What Our Families Say",
-      "subtitle": "Stories from intended parents who chose Happy Family for their surrogacy journey.",
-      "items": [
-        {
-          "text": "Happy Family made our dream of parenthood a reality. Their expertise and compassion were unmatched from the first consultation in Tbilisi to bringing our twins home, every step was handled with care and professionalism.",
-          "author": "Sarah & Michael Johnson",
-          "role": "Parents of twins, United Kingdom"
-        },
-        {
-          "text": "The team at Happy Family supported us every step of the way. We couldn't have asked for better care transparent pricing, regular pregnancy updates, and legal support that made the exit process smooth and stress-free.",
-          "author": "Emily & David Chen",
-          "role": "Parents of triplets, United States"
+          "title": "Clinic Coordination",
+          "description": "Discuss treatment options, clinician credentials, and the scope of care directly with the clinic before making a decision."
         }
       ]
     },
@@ -440,15 +402,15 @@
         },
         {
           "question": "How do I verify a surrogacy agency's credentials?",
-          "answer": "Check how long the agency has operated, request references from completed families, verify partnerships with accredited clinics, confirm legal counsel is licensed and experienced in Georgian surrogacy law, and review whether success metrics and program details are published transparently on their website."
+          "answer": "Take time to ask questions, compare options, and understand the responsibilities of the professionals involved."
         },
         {
           "question": "Why choose an agency in Georgia over the US or UK?",
-          "answer": "Georgia offers legally protected gestational surrogacy since 2011, with intended parents named on the birth certificate at birth. Programs cost up to 70% less than US alternatives, IVF clinics in Tbilisi meet international standards, and the exit process requires no court orders or adoption proceedings making it especially attractive for international intended parents."
+          "answer": "Happy Family supports international intended parents exploring surrogacy, egg donation, and IVF in Tbilisi, Georgia, with program information and practical coordination."
         },
         {
           "question": "What makes Happy Family different from other agencies?",
-          "answer": "Happy Family combines international experience, medical coordination, referrals to independent licensed legal professionals, a dedicated coordinator for every family, transparent program details, rigorous surrogate screening, and multilingual support."
+          "answer": "Our team helps you understand program options and coordinate communication. Medical advice and treatment decisions remain with your treating clinicians."
         },
         {
           "question": "Is surrogacy legal in Georgia for foreigners?",
@@ -456,11 +418,11 @@
         },
         {
           "question": "What support do intended parents receive during the journey?",
-          "answer": "Every intended parent is assigned a dedicated coordinator who manages clinic appointments, surrogate matching, pregnancy updates, and practical post-birth support. We also provide emotional counselling, translation assistance, travel coordination, and referrals to independent licensed professionals."
+          "answer": "A team to help you navigate your program and ask questions."
         },
         {
           "question": "How long does the surrogacy process take with Happy Family?",
-          "answer": "Most journeys take 12–18 months from initial consultation to birth, depending on surrogate matching, medical screening, legal preparation, and IVF outcomes. We provide a realistic timeline during your free consultation based on your specific program and medical profile."
+          "answer": "Timing varies with screening, matching, treatment, pregnancy, and individual circumstances. Ask for a program-specific estimate and discuss possible delays with your coordinator and clinic."
         }
       ]
     },
@@ -470,10 +432,22 @@
       "primaryCta": "Contact Us Today",
       "relatedTitle": "Explore Related Pages",
       "relatedLinks": [
-        { "label": "Surrogacy in Georgia", "path": "/surrogacy-in-georgia" },
-        { "label": "Our Team", "path": "/our-team" },
-        { "label": "Parent Screening", "path": "/parent-screening" },
-        { "label": "Support & Counselling", "path": "/support-and-counselling" }
+        {
+          "label": "Surrogacy in Georgia",
+          "path": "/surrogacy-in-georgia"
+        },
+        {
+          "label": "Our Team",
+          "path": "/our-team"
+        },
+        {
+          "label": "Parent Screening",
+          "path": "/parent-screening"
+        },
+        {
+          "label": "Support & Counselling",
+          "path": "/support-and-counselling"
+        }
       ]
     }
   },
@@ -500,7 +474,7 @@
       "support": "Support"
     },
     "q1": "What services do you provide?",
-    "a1": "We provide comprehensive surrogacy and egg donation programs with legal, medical, and 24/7 support.",
+    "a1": "Happy Family supports international intended parents exploring surrogacy, egg donation, and IVF in Tbilisi, Georgia, with program information and practical coordination.",
     "q2": "Do you work with international families?",
     "a2": "Yes. We support families worldwide with travel, accommodation, translation, and local coordination.",
     "q3": "How can I get started?",
@@ -514,15 +488,15 @@
     "q7": "What legal protections are in place?",
     "a7": "We coordinate with licensed attorneys to secure parentage and agreements that comply with local laws and your home country.",
     "q8": "What medical screening is required?",
-    "a8": "All parties complete medical, genetic (as needed), and psychological screenings to ensure safety and success.",
+    "a8": "Screening helps clinicians assess suitability and identify relevant risks. Your clinic explains the assessments appropriate to your circumstances; screening does not guarantee a successful outcome.",
     "q9": "Where are treatments performed?",
-    "a9": "At accredited partner clinics. The exact location depends on your program, legal requirements, and preferences.",
+    "a9": "Discuss treatment options, clinician credentials, and the scope of care directly with the clinic before making a decision.",
     "q10": "How long does the process take?",
-    "a10": "Most journeys take 6-12 months from consultation to birth, depending on matching, legal steps, and medical factors.",
+    "a10": "Timing varies with screening, matching, treatment, pregnancy, and individual circumstances. Ask for a program-specific estimate and discuss possible delays with your coordinator and clinic.",
     "q11": "Can I travel during the process?",
     "a11": "Yes. Some appointments require in-person visits. We handle travel, lodging, and on‑the‑ground support.",
     "q12": "What support do you provide during pregnancy?",
-    "a12": "A dedicated coordinator, 24/7 assistance, appointment management, and regular medical updates throughout.",
+    "a12": "A team to help you navigate your program and ask questions.",
     "q13": "Do you offer post-birth support?",
     "a13": "Yes. We help with newborn logistics, travel coordination, pediatric referrals, and referrals to independent licensed professionals. Official documents are handled directly with the relevant authorities.",
     "all": "All",
@@ -555,7 +529,7 @@
         },
         {
           "title": "Legal Contracts & Screening",
-          "description": "Licensed Georgian counsel drafts notarized surrogacy contracts that secure your parental rights under Article 143 of Georgia's Health Care Law. Intended parents complete parent screening while your matched surrogate undergoes medical, psychological, and background evaluation at accredited clinics in Tbilisi. This dual screening protects everyone before IVF begins."
+          "description": "Eligibility and legal requirements depend on current law and individual circumstances. Independent licensed professionals can explain the requirements that apply to your family."
         },
         {
           "title": "IVF, Matching & Embryo Transfer",
@@ -588,7 +562,7 @@
     },
     "support": {
       "eyebrow": "YOUR DEDICATED TEAM",
-      "title": "24/7 Support Throughout Your Georgia Surrogacy Journey",
+      "title": "Ongoing support",
       "subtitle": "Every international family receives a personal case manager who coordinates clinics, legal counsel, surrogates, and logistics so you always have a single point of contact during gestational surrogacy in Georgia country.",
       "cards": [
         {
@@ -597,7 +571,7 @@
         },
         {
           "title": "Medical & Legal Coordination",
-          "text": "We liaise with IVF clinics, maternity hospitals, and licensed Georgian attorneys to ensure contracts, screening, and treatment protocols meet Georgia surrogacy laws and international best practices."
+          "text": "Practical help with appointments and communication with your clinic."
         },
         {
           "title": "Post-Birth & Travel Support",
@@ -616,15 +590,15 @@
         },
         {
           "question": "What is gestational surrogacy in Georgia?",
-          "answer": "Gestational surrogacy in Georgia means the surrogate carries an embryo created from the intended parents' or donors' gametes with no genetic link to the child. Under Georgian law since 2011, intended parents are recognized as the sole legal parents from birth, with their names on the birth certificate."
+          "answer": "Eligibility and legal requirements depend on current law and individual circumstances. Independent licensed professionals can explain the requirements that apply to your family."
         },
         {
           "question": "How long does the surrogacy process take in Georgia?",
-          "answer": "Most gestational surrogacy programs in Georgia take 12 to 18 months from initial consultation to birth and registration. Timelines vary based on IVF success, surrogate matching, and whether egg donation or embryo shipping is required."
+          "answer": "Timing varies with screening, matching, treatment, pregnancy, and individual circumstances. Ask for a program-specific estimate and discuss possible delays with your coordinator and clinic."
         },
         {
           "question": "How much does surrogacy cost in Georgia?",
-          "answer": "Gestational surrogacy in Georgia typically starts from around $40,000 with transparent all-inclusive packages covering IVF, surrogate compensation, legal services, and medical care. Costs depend on program type. Contact us for a personalized surrogacy cost quote tailored to your journey."
+          "answer": "Request a written, personalized quotation identifying included services, exclusions, payment stages, and possible additional costs."
         }
       ]
     },
@@ -634,9 +608,18 @@
       "primaryCta": "Contact Us Today",
       "relatedTitle": "Explore Related Pages",
       "relatedLinks": [
-        { "label": "Surrogacy in Georgia", "path": "/surrogacy-in-georgia" },
-        { "label": "Parent Screening", "path": "/parent-screening" },
-        { "label": "Surrogate Screening", "path": "/surrogate-screening" },
+        {
+          "label": "Surrogacy in Georgia",
+          "path": "/surrogacy-in-georgia"
+        },
+        {
+          "label": "Parent Screening",
+          "path": "/parent-screening"
+        },
+        {
+          "label": "Surrogate Screening",
+          "path": "/surrogate-screening"
+        },
         {
           "label": "Surrogacy with Egg Donor",
           "path": "/surrogacy-with-egg-donor"
@@ -716,7 +699,7 @@
       "items": [
         {
           "question": "What is intended parent screening for surrogacy in Georgia?",
-          "answer": "Intended parent screening is the evaluation process international families complete before joining a gestational surrogacy program in Georgia. It includes a consultation, medical and fertility history review, psychological assessment, and legal eligibility check under Georgia surrogacy laws. Screening ensures the program is safe, ethical, and well-matched to your needs."
+          "answer": "Screening helps clinicians assess suitability and identify relevant risks. Your clinic explains the assessments appropriate to your circumstances; screening does not guarantee a successful outcome."
         },
         {
           "question": "What documents are required for parent screening?",
@@ -738,7 +721,10 @@
       "primaryCta": "Contact Us Today",
       "relatedTitle": "Explore Related Pages",
       "relatedLinks": [
-        { "label": "Surrogacy in Georgia", "path": "/surrogacy-in-georgia" },
+        {
+          "label": "Surrogacy in Georgia",
+          "path": "/surrogacy-in-georgia"
+        },
         {
           "label": "Support & Counselling",
           "path": "/support-and-counselling"
@@ -754,7 +740,7 @@
     "hero": {
       "tag": "SURROGATE SCREENING",
       "title": "Surrogate Screening for Gestational Surrogacy in Georgia",
-      "description": "Every surrogate in our Georgia surrogacy program completes rigorous medical, psychological, and background screening at accredited clinics in Tbilisi. We protect international intended parents and surrogates alike through transparent eligibility criteria and thorough evaluation at each stage of gestational surrogacy in Georgia country.",
+      "description": "Screening helps clinicians assess suitability and identify relevant risks. Your clinic explains the assessments appropriate to your circumstances; screening does not guarantee a successful outcome.",
       "primaryCta": "Who Can Become a Surrogate",
       "secondaryCta": "Surrogacy in Georgia",
       "cardTitle": "What We Evaluate",
@@ -771,7 +757,7 @@
       "steps": [
         {
           "title": "Medical Evaluation",
-          "description": "Comprehensive health checks, laboratory tests, and reproductive assessment at accredited IVF clinics in Tbilisi. We confirm each candidate meets surrogate requirements for gestational surrogacy in Georgia country  including prior healthy pregnancy history, BMI criteria, and overall reproductive fitness."
+          "description": "Screening helps clinicians assess suitability and identify relevant risks. Your clinic explains the assessments appropriate to your circumstances; screening does not guarantee a successful outcome."
         },
         {
           "title": "Psychological Interview",
@@ -779,7 +765,7 @@
         },
         {
           "title": "Social Background Check",
-          "description": "We review background history and verify home stability, including family support systems. This protects international intended parents and ensures surrogates in Tbilisi have the practical and emotional environment needed for a healthy gestational surrogacy pregnancy."
+          "description": "Screening helps clinicians assess suitability and identify relevant risks. Your clinic explains the assessments appropriate to your circumstances; screening does not guarantee a successful outcome."
         }
       ]
     },
@@ -794,7 +780,7 @@
         },
         {
           "question": "What medical tests do surrogates undergo?",
-          "answer": "Surrogate screening includes blood work, infectious disease panels, reproductive health assessment, ultrasound evaluation, and a review of prior pregnancy history. All tests are performed at accredited IVF clinics in Tbilisi as part of our Georgia surrogacy program standards."
+          "answer": "Screening helps clinicians assess suitability and identify relevant risks. Your clinic explains the assessments appropriate to your circumstances; screening does not guarantee a successful outcome."
         },
         {
           "question": "Why is psychological screening required for surrogates?",
@@ -816,8 +802,14 @@
           "label": "Who Can Become a Surrogate",
           "path": "/who-can-become-a-surrogate"
         },
-        { "label": "Surrogacy in Georgia", "path": "/surrogacy-in-georgia" },
-        { "label": "Parent Screening", "path": "/parent-screening" }
+        {
+          "label": "Surrogacy in Georgia",
+          "path": "/surrogacy-in-georgia"
+        },
+        {
+          "label": "Parent Screening",
+          "path": "/parent-screening"
+        }
       ]
     }
   },
@@ -827,10 +819,10 @@
       "heroSubtitle": "Join our community of compassionate women helping families achieve their dreams",
       "heroHighlight": "Healthy women aged 21-40 with at least one biological child, non-smokers, emotionally stable and ready to help others.",
       "requirementsTitle": "Requirements to Become a Surrogate",
-      "requirementsSubtitle": "We carefully screen all potential surrogates to ensure the best outcomes for everyone",
+      "requirementsSubtitle": "Screening helps clinicians assess suitability and identify relevant risks. Your clinic explains the assessments appropriate to your circumstances; screening does not guarantee a successful outcome.",
       "processTitle": "The Surrogate Journey",
       "processSubtitle": "Your path to becoming a surrogate mother",
-      "supportTitle": "24/7 Support Throughout Your Journey",
+      "supportTitle": "Ongoing support",
       "supportSubtitle": "We're here for you every step of the way",
       "support": {
         "phone": {
@@ -852,10 +844,10 @@
       "heroSubtitle": "Join our community of generous women helping families create new beginnings",
       "heroHighlight": "Healthy women aged 21-35 with excellent genetic health, non-smokers, and committed to helping others build families.",
       "requirementsTitle": "Requirements to Become an Egg Donor",
-      "requirementsSubtitle": "We carefully screen all potential donors to ensure the best outcomes for everyone",
+      "requirementsSubtitle": "Screening helps clinicians assess suitability and identify relevant risks. Your clinic explains the assessments appropriate to your circumstances; screening does not guarantee a successful outcome.",
       "processTitle": "The Donor Journey",
       "processSubtitle": "Your path to becoming an egg donor",
-      "supportTitle": "24/7 Support Throughout Your Journey",
+      "supportTitle": "Ongoing support",
       "supportSubtitle": "We're here for you every step of the way",
       "support": {
         "phone": {
@@ -877,10 +869,10 @@
       "heroSubtitle": "Join our community of hopeful families ready to begin their parenting journey",
       "heroHighlight": "Committed individuals and couples ready to provide a loving home and stable environment for their future child.",
       "requirementsTitle": "Requirements to Become a Parent",
-      "requirementsSubtitle": "We carefully evaluate all potential parents to ensure the best outcomes for everyone",
+      "requirementsSubtitle": "Screening helps clinicians assess suitability and identify relevant risks. Your clinic explains the assessments appropriate to your circumstances; screening does not guarantee a successful outcome.",
       "processTitle": "The Parent Journey",
       "processSubtitle": "Your path to becoming a parent through surrogacy",
-      "supportTitle": "24/7 Support Throughout Your Journey",
+      "supportTitle": "Ongoing support",
       "supportSubtitle": "We're here for you every step of the way",
       "support": {
         "phone": {
@@ -1068,7 +1060,7 @@
         },
         {
           "title": "Medical & Genetic Screening",
-          "description": "We review your health, run tests, and make sure you are a safe candidate for donation."
+          "description": "Screening helps clinicians assess suitability and identify relevant risks. Your clinic explains the assessments appropriate to your circumstances; screening does not guarantee a successful outcome."
         },
         {
           "title": "Treatment & Monitoring",
@@ -1087,7 +1079,7 @@
       "items": [
         {
           "question": "Is egg donation safe?",
-          "answer": "Egg donation is generally safe when done under medical supervision. Our team monitors your health throughout and explains risks and expectations before you begin."
+          "answer": "Screening helps clinicians assess suitability and identify relevant risks. Your clinic explains the assessments appropriate to your circumstances; screening does not guarantee a successful outcome."
         },
         {
           "question": "How long does the process take?",
@@ -1104,7 +1096,7 @@
     "hero": {
       "tag": "INTENDED PARENT SUPPORT",
       "title": "Support & Counselling for Surrogacy in Georgia",
-      "description": "A surrogacy journey is as emotional as it is medical. Happy Family provides comprehensive support and counselling for international intended parents pursuing gestational surrogacy in Georgia country  from your first consultation in Tbilisi through birth and your return home. Your dedicated case manager coordinates medical updates, legal steps under Georgia surrogacy laws, and financial planning with transparent surrogacy cost guidance and 24/7 assistance.",
+      "description": "A team to help you navigate your program and ask questions.",
       "primaryCta": "Book a Free Consultation",
       "secondaryCta": "Surrogacy in Georgia",
       "cardTitle": "Support at Every Stage",
@@ -1146,8 +1138,8 @@
         },
         {
           "icon": "clock",
-          "title": "24/7 Case Management",
-          "description": "Round-the-clock assistance for urgent medical questions, pregnancy updates, document requests, and travel coordination. Your dedicated coordinator is reachable across time zones so international parents never wait when something matters."
+          "title": "Ongoing support",
+          "description": "A team to help you navigate your program and ask questions."
         }
       ]
     },
@@ -1181,7 +1173,7 @@
       "items": [
         {
           "question": "What support do intended parents receive during surrogacy in Georgia?",
-          "answer": "Every intended parent is assigned a dedicated coordinator who manages clinic appointments, legal contracts, surrogate matching, pregnancy updates, and post-birth documentation. We also provide emotional counselling, financial planning guidance, translation services, travel coordination, and 24/7 urgent support throughout the entire gestational surrogacy process in Georgia."
+          "answer": "Our team helps you understand program options and coordinate communication. Medical advice and treatment decisions remain with your treating clinicians."
         },
         {
           "question": "Is counselling required for surrogacy in Georgia country?",
@@ -1203,9 +1195,18 @@
       "primaryCta": "Contact Us Today",
       "relatedTitle": "Explore Related Pages",
       "relatedLinks": [
-        { "label": "Surrogacy in Georgia", "path": "/surrogacy-in-georgia" },
-        { "label": "Parent Screening", "path": "/parent-screening" },
-        { "label": "Why Choose Us", "path": "/why-choose-us" },
+        {
+          "label": "Surrogacy in Georgia",
+          "path": "/surrogacy-in-georgia"
+        },
+        {
+          "label": "Parent Screening",
+          "path": "/parent-screening"
+        },
+        {
+          "label": "Why Choose Us",
+          "path": "/why-choose-us"
+        },
         {
           "label": "Who Can Become a Parent",
           "path": "/who-can-become-a-parent"
@@ -1219,12 +1220,12 @@
     "ivfProcess": {
       "title": "IVF Process",
       "step1": "The IVF process begins with ovarian stimulation, egg retrieval, fertilization, and embryo culture in the lab. Fertilization can be done using conventional IVF or ICSI depending on sperm quality.",
-      "step2": "The process is carefully monitored to optimize egg quality and embryo development. Lab specialists assess embryos over several days to select the ones with the highest chance of implantation.",
+      "step2": "Your treating clinic can discuss the factors that may affect treatment outcomes. We help coordinate communication and practical arrangements.",
       "step3": "Each step is customized based on the medical profile of the intended parents, ensuring the approach is tailored to their specific needs and fertility factors."
     },
     "embryoTransfer": {
       "title": "Embryo Transfer",
-      "step1": "After fertilization, the healthiest embryos are selected for transfer to the surrogate's uterus. Timing and preparation of the surrogate are carefully managed to maximize implantation success.",
+      "step1": "If suitable embryos are available, the clinic discusses transfer to a gestational surrogate. Pregnancy and birth are possible outcomes, not assured results.",
       "step2": "The surrogate is monitored closely before, during, and after the transfer. Hormonal support and lifestyle guidance are provided to create the best environment for the embryo to thrive.",
       "step3": "Each step is customized based on the medical profile of the intended parents, ensuring the approach is tailored to their specific needs and fertility factors."
     },
@@ -1243,18 +1244,18 @@
   },
   "eggFreezing": {
     "title": "Egg Freezing / Preservation",
-    "description": "Egg freezing, also known as oocyte cryopreservation, is a process that allows women to preserve their fertility by freezing their eggs for future use. This advanced reproductive technology offers women the opportunity to delay childbearing while maintaining the quality of their eggs.",
+    "description": "Egg freezing offers an option for people considering future fertility treatment. A clinic can explain the process, its limitations, and the factors that may affect your individual chances.",
     "process": {
       "title": "The Egg Freezing Process",
       "step1": "The process begins with ovarian stimulation using fertility medications to encourage the development of multiple eggs. This is carefully monitored through blood tests and ultrasounds to ensure optimal egg development.",
       "step2": "Once the eggs reach maturity, they are retrieved through a minor surgical procedure called egg retrieval. The procedure is performed under sedation and typically takes 15-20 minutes.",
-      "step3": "The retrieved eggs are immediately frozen using a process called vitrification, which preserves them at extremely low temperatures. This advanced freezing technique maintains egg quality and viability for future use."
+      "step3": "Vitrification is used to freeze eggs for possible future treatment. Not every egg survives thawing or results in an embryo, pregnancy, or birth."
     },
     "benefits": {
       "title": "Benefits of Egg Freezing",
-      "step1": "Preserve fertility for women who want to delay childbearing due to career, education, or personal reasons. This is especially valuable for women in their late 20s to early 30s.",
-      "step2": "Maintain egg quality by freezing eggs when they are at their peak fertility. This can be particularly beneficial for women facing medical treatments that may affect fertility.",
-      "step3": "Provide peace of mind and reproductive options for the future. Frozen eggs can be stored for many years and used when the time is right for starting a family."
+      "step1": "Discuss the potential benefits, risks, storage arrangements, and future treatment options with your clinic before deciding.",
+      "step2": "Discuss the potential benefits, risks, storage arrangements, and future treatment options with your clinic before deciding.",
+      "step3": "Program information to help you consider your next steps."
     },
     "question1": {
       "q": "What is the cost of egg freezing and preservation?",
@@ -1274,15 +1275,15 @@
     "description": "For intended parents who need donor eggs, our surrogacy with egg donor program provides a comprehensive solution. This program combines the expertise of carefully screened egg donors with our experienced surrogates to help you build your family.",
     "process": {
       "title": "The Process",
-      "step1": "We carefully match you with a qualified egg donor who meets your specific criteria. Our donors undergo thorough medical, psychological, and genetic screening to ensure the highest quality standards.",
+      "step1": "Screening helps clinicians assess suitability and identify relevant risks. Your clinic explains the assessments appropriate to your circumstances; screening does not guarantee a successful outcome.",
       "step2": "The selected egg donor undergoes ovarian stimulation and egg retrieval. The eggs are then fertilized with the intended father's sperm or donor sperm through IVF procedures.",
-      "step3": "The resulting embryos are transferred to a carefully matched surrogate who carries the pregnancy to term. Throughout the process, we provide comprehensive support and monitoring for all parties involved."
+      "step3": "If suitable embryos are available, the clinic discusses transfer to a gestational surrogate. Pregnancy and birth are possible outcomes, not assured results."
     },
     "benefits": {
       "title": "Benefits of This Program",
       "step1": "Access to a diverse pool of carefully screened egg donors with detailed profiles including medical history, education, and personal characteristics.",
-      "step2": "Comprehensive support throughout the entire process, from donor selection to birth, ensuring a smooth and successful journey to parenthood.",
-      "step3": "High success rates with our experienced medical team and proven protocols, giving you the best chance of achieving a successful pregnancy and healthy baby."
+      "step2": "Personal coordination from donor selection through the stages of your program, with space to ask questions along the way.",
+      "step3": "Your treating clinic can discuss the factors that may affect treatment outcomes. We help coordinate communication and practical arrangements."
     },
     "question1": {
       "q": "What is the surrogacy price with egg donor?",
@@ -1303,18 +1304,18 @@
     "services": {
       "title": "Our VIP Services",
       "step1": "Premium housing accommodations in comfortable, fully-furnished apartments or hotels near medical facilities. We arrange everything from booking to check-in, ensuring your stay is comfortable and convenient.",
-      "step2": "Professional translation services for all medical appointments, legal meetings, and important communications. Our certified translators ensure clear communication throughout your journey.",
+      "step2": "Practical help with appointments and communication with your clinic.",
       "step3": "Comprehensive transportation services including airport transfers, medical appointment transportation, and local travel assistance. We provide reliable, comfortable transportation for all your needs."
     },
     "benefits": {
       "title": "Why Choose VIP Services",
       "step1": "Seamless experience with all logistics handled by our experienced team, allowing you to focus on your journey to parenthood without worrying about practical details.",
-      "step2": "Cultural and language support to help you navigate the local environment comfortably, with assistance available 24/7 for any questions or concerns.",
+      "step2": "Practical help with appointments and communication with your clinic.",
       "step3": "Peace of mind knowing that every aspect of your stay is professionally managed, from accommodation to transportation, ensuring a stress-free experience during this important time."
     },
     "question1": {
       "q": "What is included in VIP concierge services for surrogacy?",
-      "a": "Our VIP concierge services include premium accommodations, professional translation for all medical and legal appointments, comprehensive transportation including airport transfers, personal coordination, and 24/7 support. These services complement our surrogacy programs and ensure a seamless experience throughout your journey, regardless of surrogacy costs."
+      "a": "A team to help you navigate your program and ask questions."
     },
     "question2": {
       "q": "How much does VIP concierge service cost for surrogacy?",
@@ -1326,47 +1327,16 @@
     }
   },
   "statistics": {
-    "title": "Trusted Worldwide",
-    "subtitle": "Proven results helping families achieve their dreams.",
-    "stat1Number": "1000+",
-    "stat1Label": "Successful Pregnancies",
-    "stat2Number": "50+",
-    "stat2Label": "Countries Served",
-    "stat3Number": "10+",
-    "stat3Label": "Years of Experience",
-    "stat4Number": "99%",
-    "stat4Label": "Success Rate"
-  },
-  "testimonials": {
-    "title": "What Families Say",
-    "subtitle": "Real experiences from families who achieved their dreams with us.",
-    "verified": "Verified",
-    "googleRating": "Based on 30+ Google Reviews",
-    "readMoreReviews": "Read More Reviews on Google",
-    "review1": {
-      "name": "Salome G.",
-      "text": "This is the best company in Georgia! With a highly qualified team. The founders and employees of the company are very attentive. Professionals of their case and most importantly create all kinds of comfort for patients."
-    },
-    "review2": {
-      "name": "Sara M.",
-      "text": "We're thrilled with the arrival of our little ones thanks to this great agency that helps and supports us every step of the way. We're a great family and can't wait to return to Tbilisi."
-    },
-    "review3": {
-      "name": "Miguel Angel G.",
-      "text": "A fantastic experience with Natia, Nini, and their entire team. Throughout such a complex process, they always showed us impeccable security and assurance. Our first stay there was a luxury, with every possible detail."
-    },
-    "review4": {
-      "name": "Eka A.",
-      "text": "This is a company that gives happiness to families, colors the lives of couples with the brightest colors! A team of the best specialists! Thank you for making people happy all over the world!"
-    },
-    "review5": {
-      "name": "Teo P.",
-      "text": "Professionals from head to toe! After searching and looking extensively, we decided to put ourselves in their hands, and we weren't wrong. We're already enjoying our angel, for which I will be grateful for life."
-    },
-    "review6": {
-      "name": "Keti B.",
-      "text": "The best one! Super and professional team! Highly recommended!"
-    }
+    "title": "Support Built Around You",
+    "subtitle": "Personal attention, clear information, and practical coordination for your journey.",
+    "stat1Number": "Personal attention",
+    "stat1Label": "A point of contact to discuss your questions and preferences.",
+    "stat2Number": "Clear options",
+    "stat2Label": "Program information to help you consider your next steps.",
+    "stat3Number": "Coordinated care",
+    "stat3Label": "Practical help with appointments and communication with your clinic.",
+    "stat4Number": "Ongoing support",
+    "stat4Label": "A team to help you navigate your program and ask questions."
   },
   "programsOverview": {
     "title": "Our Surrogacy & IVF Programs in Georgia",
@@ -1381,14 +1351,14 @@
       "features": [
         "Use your own genetic material",
         "Carefully matched surrogate",
-        "Full legal protection",
+        "Eligibility and legal requirements depend on current law and individual circumstances. Independent licensed professionals can explain the requirements that apply to your family.",
         "Medical monitoring throughout"
       ],
       "buttonText": "Explore Own Gametes Surrogacy"
     },
     "program2": {
       "title": "Surrogacy with Egg Donor",
-      "description": "Combine donor eggs with your sperm or partner's sperm for a successful pregnancy.",
+      "description": "Personal coordination from donor selection through the stages of your program, with space to ask questions along the way.",
       "features": [
         "Extensive donor database",
         "Comprehensive genetic testing",
@@ -1399,10 +1369,10 @@
     },
     "program3": {
       "title": "Egg Freezing & Preservation",
-      "description": "Preserve your fertility for the future with our advanced egg freezing technology.",
+      "description": "Egg freezing offers an option for people considering future fertility treatment. A clinic can explain the process, its limitations, and the factors that may affect your individual chances.",
       "features": [
-        "Latest vitrification technology",
-        "High success rates",
+        "Clinic Coordination",
+        "Clear options",
         "Long-term storage options",
         "Flexible timing"
       ],
@@ -1412,7 +1382,7 @@
       "title": "VIP Concierge Services",
       "description": "Premium support with personalized care throughout your entire fertility journey.",
       "features": [
-        "24/7 dedicated support",
+        "Ongoing support",
         "Luxury accommodations",
         "Personal coordinator",
         "Priority scheduling"
@@ -1434,16 +1404,16 @@
           "description": "Licensed independent professionals can explain current eligibility and parentage requirements for your circumstances."
         },
         {
-          "title": "70% Savings vs. United States",
-          "description": "All-inclusive, transparent packages starting from $40,000 to $60,000."
+          "title": "Plan Your Budget",
+          "description": "Request a written, personalized quotation identifying included services, exclusions, payment stages, and possible additional costs."
         },
         {
           "title": "Clear Agreements",
           "description": "Independent licensed counsel can prepare and explain agreements before treatment begins."
         },
         {
-          "title": "World-Class IVF Clinics",
-          "description": "State-of-the-art medical equipment and high clinical success rates."
+          "title": "Clinic Coordination",
+          "description": "Discuss treatment options, clinician credentials, and the scope of care directly with the clinic before making a decision."
         },
         {
           "title": "Post-Birth Family Support",
@@ -1452,9 +1422,9 @@
       ]
     },
     "benefits": {
-      "eyebrow": "UNRIVALED BENEFITS",
+      "eyebrow": "Thoughtful Planning",
       "title": "Why Intended Parents Choose Georgia Country",
-      "subtitle": "Discover why thousands of couples from the UK, Europe, Australia, and the US choose Georgia as their trusted surrogacy destination.",
+      "subtitle": "Choosing a surrogacy agency is a personal decision. Explore how our team can help you understand your options, plan your visits, and stay in touch with the professionals involved in your care.",
       "cards": [
         {
           "icon": "⚖",
@@ -1463,8 +1433,8 @@
         },
         {
           "icon": "⭐",
-          "title": "Affordable Excellence",
-          "description": "Save up to 70% compared to surrogacy programs in the United States. Our all-inclusive, transparent packages cover top-tier IVF clinics, surrogate compensation, comprehensive prenatal care, and delivery in modern maternity hospitals with absolutely zero hidden fees."
+          "title": "Plan Your Budget",
+          "description": "Request a written, personalized quotation identifying included services, exclusions, payment stages, and possible additional costs."
         },
         {
           "icon": "✈",
@@ -1497,16 +1467,16 @@
       "eligibleTitle": "Who is Eligible?",
       "requirements": [
         {
-          "title": "Heterosexual Couples Only",
-          "description": "Under current Georgian statutes, surrogacy and IVF programs are exclusively available to heterosexual couples. Single individuals and same-sex couples are not eligible."
+          "title": "Thoughtful Planning",
+          "description": "Eligibility and legal requirements depend on current law and individual circumstances. Independent licensed professionals can explain the requirements that apply to your family."
         },
         {
-          "title": "Married or Cohabiting",
-          "description": "Couples must be legally married or cohabiting for at least one year. A marriage certificate or cohabitation agreement must be provided."
+          "title": "Clinic Coordination",
+          "description": "Screening helps clinicians assess suitability and identify relevant risks. Your clinic explains the assessments appropriate to your circumstances; screening does not guarantee a successful outcome."
         },
         {
-          "title": "Medical Need for Surrogacy",
-          "description": "Intended parents must provide medical documentation of infertility, repeated IVF failures, anatomical uterine issues, or other medical reasons that make carrying a pregnancy impossible or dangerous."
+          "title": "Your Surrogacy Program",
+          "description": "Discuss eligibility, treatment options, the number and timing of attempts, and the terms of your written agreement before deciding."
         }
       ]
     },
@@ -1539,18 +1509,18 @@
     },
     "pricing": {
       "eyebrow": "PRICING & TRANSPARENCY",
-      "title": "Transparent & Affordable Costs",
-      "subtitle": "Save up to 70% compared to US surrogacy with complete financial transparency and guaranteed programs.",
-      "overview": "Gestational surrogacy in Georgia is exceptionally cost-effective, with all-inclusive programs typically ranging from $40,000 to $60,000 USD. This represents a fraction of the cost of similar programs in the United States or Canada, where expenses can easily exceed $150,000. Georgia's lower cost of living and highly competitive medical sector allow us to offer world-class medical care and generous surrogate compensation at an affordable price.",
-      "inclusionsTitle": "What is Included in Our All-Inclusive Packages?",
+      "title": "Plan Your Budget",
+      "subtitle": "Request a written, personalized quotation identifying included services, exclusions, payment stages, and possible additional costs.",
+      "overview": "Discuss eligibility, treatment options, the number and timing of attempts, and the terms of your written agreement before deciding.",
+      "inclusionsTitle": "Clear options",
       "inclusions": [
         {
           "title": "IVF & Medical Procedures",
-          "description": "All clinical fees, embryo creation, ICSI, PGT-A testing (if selected), and embryo transfers."
+          "description": "Discuss treatment options, clinician credentials, and the scope of care directly with the clinic before making a decision."
         },
         {
           "title": "Surrogate Compensation & Care",
-          "description": "Generous monthly allowance, maternity clothing, housing support, and post-birth compensation."
+          "description": "Discuss eligibility, treatment options, the number and timing of attempts, and the terms of your written agreement before deciding."
         },
         {
           "title": "Legal Referrals & Practical Support",
@@ -1558,19 +1528,19 @@
         },
         {
           "title": "Prenatal Care & Maternity Delivery",
-          "description": "All prenatal checkups, medications, ultrasounds, and delivery in a premium private maternity hospital."
+          "description": "Discuss treatment options, clinician credentials, and the scope of care directly with the clinic before making a decision."
         }
       ],
-      "programTitle": "Guaranteed Surrogacy Program",
-      "price": "Starting at $45,000 USD",
-      "priceNote": "Unlimited IVF attempts until birth",
+      "programTitle": "Your Surrogacy Program",
+      "price": "Plan Your Budget",
+      "priceNote": "Request a written, personalized quotation identifying included services, exclusions, payment stages, and possible additional costs.",
       "features": [
-        "Unlimited IVF attempts (Guaranteed program)",
+        "Clear options",
         "Complete surrogate screening & matching",
         "Referrals for independent legal review",
         "Modern private maternity hospital delivery",
         "Comprehensive prenatal care & medications",
-        "24/7 personal case manager support"
+        "Ongoing support"
       ],
       "cta": "Request Program Details"
     },
@@ -1585,11 +1555,11 @@
         },
         {
           "question": "Who is eligible to pursue surrogacy in Georgia?",
-          "answer": "Under current laws, surrogacy is available exclusively to heterosexual couples who are legally married or cohabiting for at least one year. Intended parents must also provide medical documentation of infertility or an inability to carry a pregnancy safely."
+          "answer": "Eligibility and legal requirements depend on current law and individual circumstances. Independent licensed professionals can explain the requirements that apply to your family."
         },
         {
           "question": "What is the status of the proposed 2023 draft law?",
-          "answer": "In June 2023, the Georgian government proposed a draft bill to restrict commercial surrogacy to Georgian citizens. However, this bill has not been passed, and its discussion has been repeatedly postponed (most recently in mid-2025/2026). Surrogacy for foreign intended parents remains fully legal, operational, and safe under the existing legal framework."
+          "answer": "Eligibility and legal requirements depend on current law and individual circumstances. Independent licensed professionals can explain the requirements that apply to your family."
         },
         {
           "question": "How are post-birth legal requirements handled?",

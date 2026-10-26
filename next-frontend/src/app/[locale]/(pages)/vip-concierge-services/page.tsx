@@ -5,7 +5,7 @@ import { getMetaKeywords } from "@/lib/seo-keywords";
 const localizedMeta = {
     en: {
         title: "VIP Concierge Services | International Surrogacy in Georgia",
-        description: "VIP concierge for international intended parents in Georgia country: premium housing, translation, transportation, and 24/7 white-glove support throughout your surrogacy journey in Tbilisi.",
+        description: "A team to help you navigate your program and ask questions.",
         keywords: [
             ...getMetaKeywords("en"),
             "VIP concierge surrogacy georgia",
@@ -16,7 +16,7 @@ const localizedMeta = {
     },
     ka: {
         title: "VIP კონსიერჟის სერვისები | საერთაშორისო სუროგაცია საქართველოში",
-        description: "VIP კონსიერჟი საერთაშორისო მშობლებისთვის საქართველოში: პრემიუმ საცხოვრებელი, თარგმანი, ტრანსპორტირება და 24/7 მხარდაჭერა თბილისში.",
+        description: "გუნდი, რომელიც გეხმარებათ პროგრამაში გარკვევასა და კითხვების დასმაში.",
         keywords: [
             ...getMetaKeywords("ka"),
             "VIP კონსიერჟი",
@@ -26,7 +26,7 @@ const localizedMeta = {
     },
     es: {
         title: "Servicios VIP de Conserjería | Subrogación Internacional en Georgia",
-        description: "Conserjería VIP para padres internacionales en Georgia país: alojamiento premium, traducción, transporte y apoyo 24/7 durante su viaje de subrogación en Tiflis.",
+        description: "Un equipo que te ayuda a orientarte durante el programa y a plantear preguntas.",
         keywords: [
             ...getMetaKeywords("es"),
             "conserjería VIP subrogación",
@@ -36,7 +36,7 @@ const localizedMeta = {
     },
     ru: {
         title: "VIP Консьерж-Сервис | Международное Суррогатное Материнство",
-        description: "VIP-консьерж для иностранных родителей в Грузии: премиальное жильё, перевод, транспорт и круглосуточная поддержка на протяжении суррогатной программы в Тбилиси.",
+        description: "Команда, которая помогает ориентироваться в программе и задавать вопросы.",
         keywords: [
             ...getMetaKeywords("ru"),
             "VIP консьерж суррогатность",
@@ -46,7 +46,7 @@ const localizedMeta = {
     },
     he: {
         title: "שירותי קונסיירז' VIP | פונדקאות בינלאומית בגאורגיה",
-        description: "קונסיירז' VIP להורים בינלאומיים בגאורגיה: לינה פרימיום, תרגום, הסעות ותמיכה 24/7 לאורך מסע הפונדקאות בטביליסי.",
+        description: "צוות שעוזר לכם להתמצא בתוכנית ולשאול שאלות.",
         keywords: [
             ...getMetaKeywords("he"),
             "קונסיירז' VIP פונדקאות",
@@ -56,7 +56,7 @@ const localizedMeta = {
     },
     zh: {
         title: "VIP礼宾服务 | 格鲁吉亚国际代孕全程协助",
-        description: "为格鲁吉亚国际意向父母提供VIP礼宾服务：优质住宿、翻译、交通及24/7全程协助，覆盖第比利斯代孕之旅的每个环节。",
+        description: "团队帮助您了解项目，并在各阶段提出问题。",
         keywords: [
             ...getMetaKeywords("zh"),
             "格鲁吉亚代孕礼宾",

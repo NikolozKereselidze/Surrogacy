@@ -12,42 +12,19 @@ const organizationAddress = {
 const organizationRef = { "@id": ORGANIZATION_ID };
 
 export default function StructuredData() {
-    const medicalBusiness = {
+    const organization = {
         "@context": "https://schema.org",
-        "@type": "MedicalBusiness",
+        "@type": "Organization",
         "@id": ORGANIZATION_ID,
         name: "Happy Family",
         alternateName: ["IVF Tour Georgia", "Surrogation Center"],
-        description: "Gestational surrogacy and egg donation agency in Georgia (country). IVF and fertility services in Tbilisi for international intended parents. Legally protected programs since 2011.",
+        description: "Surrogacy and egg donation coordination in Tbilisi, Georgia, with program information and practical support for international intended parents.",
         url: "https://www.ivftourgeorgia.com",
         logo: "https://www.ivftourgeorgia.com/img/logo.webp",
         image: "https://www.ivftourgeorgia.com/img/home/hero/hero-1920.webp",
         telephone: "+995-596-235-050",
         email: "info@surrogationcenter.com",
-        foundingDate: "2011",
-        numberOfEmployees: "10-20",
         address: organizationAddress,
-        geo: {
-            "@type": "GeoCoordinates",
-            latitude: "41.7151",
-            longitude: "44.8271",
-        },
-        serviceArea: [
-            { "@type": "Country", name: "Georgia" },
-            { "@type": "Country", name: "United States" },
-            { "@type": "Country", name: "China" },
-            { "@type": "Country", name: "Spain" },
-            { "@type": "Country", name: "Israel" },
-            { "@type": "Country", name: "Russia" },
-            { "@type": "Country", name: "Thailand" },
-        ],
-        medicalSpecialty: [
-            "Reproductive Medicine",
-            "Fertility Services",
-            "Surrogacy",
-            "Egg Donation",
-            "IVF Coordination",
-        ],
         hasOfferCatalog: {
             "@type": "OfferCatalog",
             name: "Comprehensive Fertility Services",
@@ -58,7 +35,7 @@ export default function StructuredData() {
                     itemOffered: {
                         "@type": "Service",
                         name: "Surrogacy with Own Gametes",
-                        description: "Complete surrogacy program using intended parents' own eggs and sperm with comprehensive medical and legal support",
+                        description: "Program information and clinic coordination for surrogacy using intended parents' own eggs and sperm",
                         provider: organizationRef,
                     },
                     category: "Surrogacy Services",
@@ -80,7 +57,7 @@ export default function StructuredData() {
                     itemOffered: {
                         "@type": "Service",
                         name: "Egg Freezing & Preservation",
-                        description: "Advanced egg freezing services for future fertility preservation using latest vitrification technology",
+                        description: "Information and clinic coordination for people considering egg freezing",
                         provider: organizationRef,
                     },
                     category: "Fertility Preservation",
@@ -91,7 +68,7 @@ export default function StructuredData() {
                     itemOffered: {
                         "@type": "Service",
                         name: "VIP Concierge Services",
-                        description: "Premium housing, translation, and transportation services for international clients with 24/7 support",
+                        description: "Accommodation, translation, transport, and personal coordination options for international clients",
                         provider: organizationRef,
                     },
                     category: "Support Services",
@@ -135,7 +112,7 @@ export default function StructuredData() {
                     itemOffered: {
                         "@type": "Service",
                         name: "Legal & Documentation Support",
-                        description: "Complete legal support for surrogacy agreements, parental rights, and international documentation",
+                        description: "Referrals to independent legal professionals and practical coordination for international families",
                         provider: organizationRef,
                     },
                     category: "Legal Services",
@@ -148,7 +125,7 @@ export default function StructuredData() {
                 "@type": "Person",
                 name: "Natia Devdariani",
                 jobTitle: "Founder & CEO",
-                description: "Over 15 years of experience in healthcare and professional service consulting, helped facilitate 3,200+ successful births",
+                description: "Founder and CEO of Happy Family, supporting international families through program planning and coordination",
                 email: "natia@surrogationcenter.com",
                 worksFor: organizationRef,
             },
@@ -171,21 +148,7 @@ export default function StructuredData() {
             "Legal Surrogacy",
             "Medical Coordination",
         ],
-        areaServed: [
-            { "@type": "Country", name: "Georgia" },
-            { "@type": "Country", name: "United States" },
-            { "@type": "Country", name: "China" },
-            { "@type": "Country", name: "Spain" },
-            { "@type": "Country", name: "Israel" },
-            { "@type": "Country", name: "Russia" },
-            { "@type": "Country", name: "Thailand" },
-            { "@type": "Country", name: "Germany" },
-            { "@type": "Country", name: "France" },
-        ],
-        priceRange: "$$$",
-        currenciesAccepted: ["GEL", "USD", "EUR", "CNY", "ILS"],
-        paymentAccepted: ["Cash", "Credit Card", "Bank Transfer", "Insurance"],
-        openingHours: "Mo-Fr 09:00-19:00",
+        areaServed: { "@type": "Country", name: "Georgia" },
     };
     const webSite = {
         "@context": "https://schema.org",
@@ -195,7 +158,7 @@ export default function StructuredData() {
         url: "https://www.ivftourgeorgia.com",
     };
     return (<>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalBusiness) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite) }}/>
     </>);
 }

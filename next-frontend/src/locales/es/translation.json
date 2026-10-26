@@ -49,7 +49,7 @@
       "highlight": "Gestación Subrogada y FIV en Tiflis"
     },
     "heroSubtitle": "Juntos creamos milagros  subrogación internacional y donación de óvulos adaptados a tu viaje.",
-    "heroDescription": "Happy Family es una agencia de confianza en Georgia (país). Gestación subrogada, donación de óvulos y FIV en Tiflis para padres internacionales. Protección legal y apoyo 24/7.",
+    "heroDescription": "Happy Family acompaña a futuros padres internacionales que exploran la gestación subrogada, la donación de óvulos y la FIV en Tiflis, Georgia, con información y coordinación práctica.",
     "startJourneyButton": "Comienza tu viaje hoy",
     "cta": {
       "title": "¿Listo para comenzar tu viaje?",
@@ -57,28 +57,40 @@
       "primaryCta": "Contáctanos hoy",
       "relatedTitle": "Explorar páginas relacionadas",
       "relatedLinks": [
-        { "label": "Subrogación en Georgia", "path": "/surrogacy-in-georgia" },
-        { "label": "Donación de óvulos", "path": "/surrogacy-with-egg-donor" },
-        { "label": "Por qué elegirnos", "path": "/why-choose-us" },
-        { "label": "Nuestro equipo", "path": "/our-team" }
+        {
+          "label": "Subrogación en Georgia",
+          "path": "/surrogacy-in-georgia"
+        },
+        {
+          "label": "Donación de óvulos",
+          "path": "/surrogacy-with-egg-donor"
+        },
+        {
+          "label": "Por qué elegirnos",
+          "path": "/why-choose-us"
+        },
+        {
+          "label": "Nuestro equipo",
+          "path": "/our-team"
+        }
       ]
     },
     "supportSection": {
       "eyebrow": "Agencia Integral",
-      "highlightBadge": "Gestión 24/7",
+      "highlightBadge": "Apoyo continuo",
       "title": "Apoyo Integral en Subrogación en Georgia País",
       "description": "Como agencia de subrogación en Georgia, acompañamos a padres internacionales mediante coordinación de FIV, donación de óvulos, selección de subrogada y derivaciones a profesionales legales independientes.",
-      "subtitle": "Protección Legal y Coordinación FIV en Tiflis",
-      "content": "La gestación subrogada en Georgia está reconocida para padres internacionales desde 2011. Coordinamos clínicas de fertilidad en Tiflis, gestionamos contratos de subrogación y ofrecemos precios transparentes con apoyo 24/7 durante todo el programa.",
+      "subtitle": "Atención coordinada",
+      "content": "Ayuda práctica con las citas y la comunicación con tu clínica.",
       "imageAlt": "Manos protectoras sosteniendo con ternura los pies de un recién nacido  apoyo compasivo en subrogación en Georgia"
     },
     "experienceSection": {
-      "eyebrow": "Confianza desde 2011",
-      "highlightBadge": "10+ Años en Georgia",
-      "title": "Agencia Probada de Subrogación y FIV en Georgia",
-      "description": "Happy Family ha acompañado a familias de más de 30 países en programas de gestación subrogada en Georgia país. Nuestro equipo en Tiflis combina experiencia médica, legal y de coordinación.",
+      "eyebrow": "Apoyo a familias internacionales",
+      "highlightBadge": "Coordinación local en Tiflis",
+      "title": "Tu equipo de coordinación",
+      "description": "Happy Family acompaña a futuros padres internacionales que exploran la gestación subrogada, la donación de óvulos y la FIV en Tiflis, Georgia, con información y coordinación práctica.",
       "value1Title": "Programas Coordinados de FIV y Subrogación",
-      "value1Content": "Colaboramos con clínicas líderes en Tiflis para FIV, transferencia de embrión y donación de óvulos  gestionando plazos, comunicación y coordinación médica en cada paso.",
+      "value1Content": "Ayuda práctica con las citas y la comunicación con tu clínica.",
       "value2Title": "Padres Internacionales, Experiencia Local",
       "value2Content": "Desde la primera consulta hasta el apoyo familiar postnatal, nuestros coordinadores conocen la logística internacional y cuándo derivar a las familias a profesionales independientes autorizados.",
       "imageAlt": "Niña besando el vientre de una madre sustituta embarazada  subrogación gestacional en Georgia"
@@ -90,11 +102,11 @@
       "items": [
         {
           "question": "¿Cuánto cuesta la subrogación en Georgia?",
-          "answer": "La gestación subrogada en Georgia suele comenzar desde $40,000 con paquetes transparentes. El costo depende de la donación de óvulos y los ciclos de FIV."
+          "answer": "Solicita un presupuesto personalizado por escrito que indique servicios incluidos, exclusiones, etapas de pago y posibles costes adicionales."
         },
         {
           "question": "¿Es legal la subrogación en Georgia?",
-          "answer": "Sí. Georgia (país) reconoce legalmente la gestación subrogada para padres internacionales desde 2011. Los padres aparecen en el certificado de nacimiento."
+          "answer": "La elegibilidad y los requisitos legales dependen de la legislación vigente y de las circunstancias individuales. Profesionales independientes habilitados pueden explicar los requisitos aplicables a tu familia."
         },
         {
           "question": "¿Cuál es el proceso de subrogación en Georgia?",
@@ -133,23 +145,17 @@
   },
   "ourTeam": {
     "title": "Conoce nuestro equipo",
-    "subtitle": "Un equipo bien calificado está listo para servirte",
+    "subtitle": "Nuestro equipo ayuda a entender las opciones y a coordinar la comunicación. El asesoramiento médico y las decisiones de tratamiento corresponden a los profesionales que te atienden.",
     "introTitle": "Los expertos detrás de tu milagro",
-    "introText": "Conoce a los profesionales que hacen milagros.",
-    "natiaDesc": "Más de 15 años de experiencia en atención médica y consultoría de servicios profesionales, ayudando a las familias a crecer. La Sra. Devdariani se graduó de la Universidad Estatal Médica de Tbilisi y la Universidad Estatal de Tbilisi.",
-    "kelvinDesc": "Especialista en fertilidad certificado con experiencia en tecnologías reproductivas avanzadas y planes de tratamiento personalizados.",
-    "annaDesc": "Más de 15 años de experiencia ayudando a las familias a crecer. Se especializa en coordinación de FIV y gestión del cuidado de pacientes.",
-    "michaelDesc": "Director médico principal con amplia experiencia en medicina reproductiva y supervisión clínica.",
-    "sarahDesc": "Coordinadora dedicada al cuidado de pacientes que asegura comunicación fluida y apoyo durante todo tu viaje.",
-    "davidDesc": "Asesor legal experimentado especializado en leyes de gestación subrogada y asuntos legales de formación familiar.",
+    "introText": "Nuestro equipo ayuda a entender las opciones y a coordinar la comunicación. El asesoramiento médico y las decisiones de tratamiento corresponden a los profesionales que te atienden.",
     "valuesTitle": "Los valores de nuestro equipo",
     "valuesDesc": "Nuestros principios fundamentales guían todo lo que hacemos.",
     "value1Title": "Excelencia",
-    "value1Desc": "Mantenemos los más altos estándares en atención médica y apoyo al paciente.",
+    "value1Desc": "Un contacto para hablar de tus preguntas y preferencias.",
     "value2Title": "Colaboración",
     "value2Desc": "Nuestro equipo trabaja en conjunto para brindar atención integral.",
     "value3Title": "Innovación",
-    "value3Desc": "Nos mantenemos a la vanguardia de los avances en medicina reproductiva.",
+    "value3Desc": "Ayuda práctica con las citas y la comunicación con tu clínica.",
     "showMore": "Mostrar más"
   },
   "contactUs": {
@@ -182,26 +188,26 @@
     "hero": {
       "tag": "AGENCIA DE GESTACIÓN SUBROGADA DE CONFIANZA EN GEORGIA",
       "title": "Por Qué Elegir Happy Family para la Gestación Subrogada en Georgia",
-      "description": "Elegir una agencia de gestación subrogada es una de las decisiones más importantes que tomará en su camino hacia la paternidad. En Happy Family, combinamos más de 15 años de experiencia, clínicas de FIV acreditadas en Tiflis, evaluación rigurosa, precios transparentes y apoyo las 24 horas para guiar a padres intencionales internacionales en cada paso de su viaje, desde la primera consulta hasta llevar a su bebé a casa.",
+      "description": "Elegir una agencia es una decisión personal. Conoce cómo nuestro equipo puede ayudarte a entender las opciones, planificar tus visitas y comunicarte con los profesionales que participan en tu atención.",
       "primaryCta": "Reservar una Consulta Gratuita",
       "secondaryCta": "Explorar la Gestación Subrogada en Georgia",
       "highlightsTitle": "De un Vistazo",
       "highlights": [
         {
-          "title": "Más de 3,200 Nacimientos Exitosos",
-          "description": "Más de 15 años guiando a familias internacionales en la gestación subrogada en Georgia."
+          "title": "Atención personal",
+          "description": "Un contacto para hablar de tus preguntas y preferencias."
         },
         {
-          "title": "Protección Legal Desde 2011",
-          "description": "Los padres intencionales figuran en el certificado de nacimiento desde el nacimiento, sin necesidad de adopción."
+          "title": "Planificación cuidadosa",
+          "description": "La elegibilidad y los requisitos legales dependen de la legislación vigente y de las circunstancias individuales. Profesionales independientes habilitados pueden explicar los requisitos aplicables a tu familia."
         },
         {
-          "title": "Precios Transparentes",
-          "description": "Programas todo incluido desde $40,000 con presupuestos detallados y sin tarifas ocultas."
+          "title": "Planifica tu presupuesto",
+          "description": "Solicita un presupuesto personalizado por escrito que indique servicios incluidos, exclusiones, etapas de pago y posibles costes adicionales."
         },
         {
-          "title": "Apoyo Multilingüe 24/7",
-          "description": "Coordinador dedicado y asistencia las 24 horas en su idioma."
+          "title": "Apoyo continuo",
+          "description": "Un equipo que te ayuda a orientarte durante el programa y a plantear preguntas."
         }
       ]
     },
@@ -212,13 +218,13 @@
       "cards": [
         {
           "icon": "award",
-          "title": "Historial Comprobado",
-          "description": "Con más de 3,200 nacimientos exitosos y más de 15 años sirviendo a familias internacionales, Happy Family se ha ganado la reputación de ser una de las agencias de gestación subrogada más confiables de Georgia. Nuestra larga trayectoria significa procesos perfeccionados, coordinadores experimentados y una profunda comprensión de lo que los padres intencionales necesitan en cada etapa."
+          "title": "Atención personal",
+          "description": "Un contacto para hablar de tus preguntas y preferencias."
         },
         {
           "icon": "users",
-          "title": "Equipo Experto",
-          "description": "Su viaje está guiado por especialistas en fertilidad certificados, coordinadores de FIV con experiencia, asesores legales licenciados y gestores de atención al paciente dedicados. Nuestro equipo multidisciplinario trabaja en conjunto para que las decisiones médicas, legales y logísticas nunca se tomen de forma aislada, brindándole la confianza de que cada detalle es gestionado por un profesional cualificado."
+          "title": "Tu equipo de coordinación",
+          "description": "Nuestro equipo ayuda a entender las opciones y a coordinar la comunicación. El asesoramiento médico y las decisiones de tratamiento corresponden a los profesionales que te atienden."
         },
         {
           "icon": "shield",
@@ -233,12 +239,12 @@
         {
           "icon": "globe",
           "title": "Red Global",
-          "description": "Atendemos a padres intencionales de Estados Unidos, Reino Unido, Israel, China, Rusia, España y de toda Europa y Asia. Nuestro equipo ofrece apoyo de traducción, coordinación de viajes, orientación sobre alojamiento y servicios de enlace consular, eliminando las barreras lingüísticas y logísticas para que pueda centrarse en su familia en crecimiento."
+          "description": "Solicita un presupuesto personalizado por escrito que indique servicios incluidos, exclusiones, etapas de pago y posibles costes adicionales."
         },
         {
           "icon": "clock",
-          "title": "Apoyo 24/7",
-          "description": "Los viajes de gestación subrogada no siguen el horario de oficina. Ya sea que tenga una pregunta médica urgente, necesite un documento traducido de un día para otro o desee una actualización del embarazo a través de zonas horarias, su coordinador dedicado y nuestro equipo de apoyo están disponibles las 24 horas. Nunca quedará esperando cuando algo importe."
+          "title": "Apoyo continuo",
+          "description": "Un equipo que te ayuda a orientarte durante el programa y a plantear preguntas."
         }
       ]
     },
@@ -250,7 +256,7 @@
       "criteria": [
         {
           "title": "Supervisión Médica y Alianzas con Clínicas",
-          "description": "Una agencia de gestación subrogada de buena reputación trabaja directamente con clínicas de fertilidad acreditadas, no con intermediarios independientes sin participación clínica. Verifique que la agencia coordine los procedimientos de FIV, las transferencias de embrión y la atención prenatal a través de centros médicos autorizados con tasas de éxito publicadas.",
+          "description": "Antes de decidir, consulta directamente con la clínica las opciones de tratamiento, las credenciales profesionales y el alcance de la atención.",
           "questions": [
             "¿Con qué clínicas de FIV colabora la agencia?",
             "¿Quién supervisa la atención prenatal de la sustituta?",
@@ -307,64 +313,24 @@
     "georgia": {
       "eyebrow": "VENTAJA DE GEORGIA",
       "title": "Por Qué Elegir una Agencia de Gestación Subrogada en Georgia",
-      "subtitle": "Georgia ha sido un destino internacional líder en gestación subrogada desde 2011, ofreciendo claridad legal, programas asequibles y atención de fertilidad de clase mundial en Tiflis.",
+      "subtitle": "Happy Family acompaña a futuros padres internacionales que exploran la gestación subrogada, la donación de óvulos y la FIV en Tiflis, Georgia, con información y coordinación práctica.",
       "overview": "Para familias que comparan opciones internacionales, Georgia combina clínicas de FIV con apoyo coordinado. Happy Family se centra en la coordinación médica y familiar, mientras profesionales independientes autorizados asesoran sobre requisitos legales y postnatales.",
       "points": [
         {
-          "title": "Protección Legal Desde 2011",
-          "description": "La ley georgiana reconoce explícitamente a los padres intencionales como los únicos padres legales desde el nacimiento. La sustituta no tiene derechos parentales y sus nombres aparecen directamente en el certificado de nacimiento."
+          "title": "Planificación cuidadosa",
+          "description": "La elegibilidad y los requisitos legales dependen de la legislación vigente y de las circunstancias individuales. Profesionales independientes habilitados pueden explicar los requisitos aplicables a tu familia."
         },
         {
-          "title": "Hasta un 70% de Ahorro en Costos",
-          "description": "Los programas de gestación subrogada todo incluido en Georgia comienzan desde aproximadamente $40,000, una fracción de los costos típicos en Estados Unidos, con precios transparentes y detallados sin tarifas ocultas."
+          "title": "Planifica tu presupuesto",
+          "description": "Solicita un presupuesto personalizado por escrito que indique servicios incluidos, exclusiones, etapas de pago y posibles costes adicionales."
         },
         {
           "title": "Proceso de Salida Rápido",
           "description": "Después del nacimiento ofrecemos apoyo familiar práctico y derivaciones a profesionales independientes. Las autoridades y embajadas determinan y emiten los documentos oficiales."
         },
         {
-          "title": "Clínicas Acreditadas en Tiflis",
-          "description": "Los procedimientos de FIV, las transferencias de embrión y los partos se realizan en instalaciones modernas y acreditadas en Tiflis, con especialistas en medicina reproductiva experimentados y altos estándares clínicos."
-        }
-      ]
-    },
-    "comparison": {
-      "title": "Happy Family frente a Otras Agencias",
-      "subtitle": "Vea cómo una agencia de gestación subrogada integral en Georgia se compara con las alternativas habituales.",
-      "othersTitle": "Otras Agencias",
-      "othersPoints": [
-        "Supervisión médica limitada o externalizada",
-        "Planes de tratamiento genéricos e iguales para todos",
-        "Apoyo mínimo después del nacimiento",
-        "Tarifas ocultas y costos inesperados",
-        "Largos tiempos de espera para sustitutas sin transparencia",
-        "Sin coordinador dedicado; personal de apoyo rotativo",
-        "Experiencia limitada en documentación de salida internacional"
-      ],
-      "ourTitle": "Happy Family",
-      "ourPoints": [
-        "Equipo médico integral interno y coordinación con clínicas",
-        "Programas personalizados adaptados a su perfil médico",
-        "Apoyo integral postnatal y consular",
-        "Precios transparentes y detallados con opciones de tarifa fija",
-        "Base de datos de sustitutas evaluadas activamente con emparejamiento más rápido",
-        "Un coordinador dedicado desde la consulta hasta la salida",
-        "Más de 15 años guiando a familias internacionales de regreso a casa con seguridad"
-      ]
-    },
-    "testimonials": {
-      "title": "Lo Que Dicen Nuestras Familias",
-      "subtitle": "Historias de padres intencionales que eligieron Happy Family para su viaje de gestación subrogada.",
-      "items": [
-        {
-          "text": "Happy Family hizo realidad nuestro sueño de ser padres. Su experiencia y compasión fueron inigualables: desde la primera consulta en Tiflis hasta llevar a nuestros gemelos a casa, cada paso fue gestionado con cuidado y profesionalismo.",
-          "author": "Sarah y Michael Johnson",
-          "role": "Padres de gemelos, Reino Unido"
-        },
-        {
-          "text": "El equipo de Happy Family nos apoyó en cada paso del camino. No podríamos haber pedido mejor atención: precios transparentes, actualizaciones regulares del embarazo y apoyo legal que hizo que el proceso de salida fuera fluido y sin estrés.",
-          "author": "Emily y David Chen",
-          "role": "Padres de trillizos, Estados Unidos"
+          "title": "Coordinación con la clínica",
+          "description": "Antes de decidir, consulta directamente con la clínica las opciones de tratamiento, las credenciales profesionales y el alcance de la atención."
         }
       ]
     },
@@ -383,15 +349,15 @@
         },
         {
           "question": "¿Cómo verifico las credenciales de una agencia de gestación subrogada?",
-          "answer": "Compruebe cuánto tiempo lleva operando la agencia, solicite referencias de familias que hayan completado el proceso, verifique las alianzas con clínicas acreditadas, confirme que el asesor legal esté licenciado y tenga experiencia en la ley georgiana de gestación subrogada, y revise si las métricas de éxito y los detalles del programa se publican de forma transparente en su sitio web."
+          "answer": "Dedica tiempo a preguntar, comparar opciones y entender las responsabilidades de los profesionales participantes."
         },
         {
           "question": "¿Por qué elegir una agencia en Georgia en lugar de EE.UU. o Reino Unido?",
-          "answer": "Georgia ofrece gestación subrogada gestacional legalmente protegida desde 2011, con los padres intencionales nombrados en el certificado de nacimiento al nacer. Los programas cuestan hasta un 70% menos que las alternativas en EE.UU., las clínicas de FIV en Tiflis cumplen estándares internacionales y el proceso de salida no requiere órdenes judiciales ni procedimientos de adopción, lo que lo hace especialmente atractivo para padres intencionales internacionales."
+          "answer": "Happy Family acompaña a futuros padres internacionales que exploran la gestación subrogada, la donación de óvulos y la FIV en Tiflis, Georgia, con información y coordinación práctica."
         },
         {
           "question": "¿Qué hace diferente a Happy Family de otras agencias?",
-          "answer": "Happy Family combina más de 15 años de experiencia internacional, coordinación médica y legal interna, un coordinador dedicado para cada familia, paquetes de tarifa fija transparentes, evaluación rigurosa de sustitutas, apoyo multilingüe 24/7 y experiencia especializada en documentación de salida consular para padres que regresan a EE.UU., Reino Unido, Israel, China y toda Europa."
+          "answer": "Nuestro equipo ayuda a entender las opciones y a coordinar la comunicación. El asesoramiento médico y las decisiones de tratamiento corresponden a los profesionales que te atienden."
         },
         {
           "question": "¿Es legal la gestación subrogada en Georgia para extranjeros?",
@@ -399,11 +365,11 @@
         },
         {
           "question": "¿Qué apoyo reciben los padres intencionales durante el viaje?",
-          "answer": "A cada padre intencional se le asigna un coordinador dedicado que gestiona las citas clínicas, los contratos legales, el emparejamiento con la sustituta, las actualizaciones del embarazo y la documentación postnatal. También ofrecemos asesoramiento emocional, orientación en planificación financiera, servicios de traducción, coordinación de viajes y apoyo urgente 24/7 durante todo el proceso."
+          "answer": "Un equipo que te ayuda a orientarte durante el programa y a plantear preguntas."
         },
         {
           "question": "¿Cuánto tiempo tarda el proceso de gestación subrogada con Happy Family?",
-          "answer": "La mayoría de los viajes tardan de 12 a 18 meses desde la consulta inicial hasta el nacimiento, según el emparejamiento con la sustituta, la evaluación médica, la preparación legal y los resultados de la FIV. Proporcionamos un cronograma realista durante su consulta gratuita según su programa específico y su perfil médico."
+          "answer": "Los plazos varían según las evaluaciones, la selección, el tratamiento, el embarazo y las circunstancias individuales. Pide una estimación para tu programa y habla de posibles demoras con tu coordinador y tu clínica."
         }
       ]
     },
@@ -455,7 +421,7 @@
       "support": "Apoyo"
     },
     "q1": "¿Qué servicios ofrecen?",
-    "a1": "Ofrecemos programas integrales de gestación subrogada y donación de óvulos con apoyo legal, médico y 24/7.",
+    "a1": "Happy Family acompaña a futuros padres internacionales que exploran la gestación subrogada, la donación de óvulos y la FIV en Tiflis, Georgia, con información y coordinación práctica.",
     "q2": "¿Trabajan con familias internacionales?",
     "a2": "Sí. Apoyamos a familias en todo el mundo con viajes, alojamiento, traducción y coordinación local.",
     "q3": "¿Cómo puedo empezar?",
@@ -469,15 +435,15 @@
     "q7": "¿Qué protecciones legales existen?",
     "a7": "Coordinamos con abogados licenciados para asegurar la filiación y acuerdos que cumplan con las leyes locales y de tu país de origen.",
     "q8": "¿Qué evaluación médica se requiere?",
-    "a8": "Todas las partes completan evaluaciones médicas, genéticas (según sea necesario) y psicológicas para garantizar seguridad y éxito.",
+    "a8": "La evaluación ayuda a los profesionales clínicos a valorar la idoneidad e identificar riesgos. Tu clínica explica las pruebas adecuadas a tu situación; la evaluación no garantiza un resultado favorable.",
     "q9": "¿Dónde se realizan los tratamientos?",
-    "a9": "En clínicas asociadas acreditadas. La ubicación exacta depende del programa, requisitos legales y tus preferencias.",
+    "a9": "Antes de decidir, consulta directamente con la clínica las opciones de tratamiento, las credenciales profesionales y el alcance de la atención.",
     "q10": "¿Cuánto tiempo tarda el proceso?",
-    "a10": "La mayoría de los procesos duran de 6 a 12 meses desde la consulta hasta el nacimiento, según el emparejamiento, pasos legales y factores médicos.",
+    "a10": "Los plazos varían según las evaluaciones, la selección, el tratamiento, el embarazo y las circunstancias individuales. Pide una estimación para tu programa y habla de posibles demoras con tu coordinador y tu clínica.",
     "q11": "¿Puedo viajar durante el proceso?",
     "a11": "Sí. Algunas citas requieren presencia. Nos encargamos de viajes, alojamiento y apoyo local.",
     "q12": "¿Qué apoyo brindan durante el embarazo?",
-    "a12": "Un coordinador dedicado, asistencia 24/7, gestión de citas y actualizaciones médicas regulares.",
+    "a12": "Un equipo que te ayuda a orientarte durante el programa y a plantear preguntas.",
     "q13": "¿Ofrecen apoyo postparto?",
     "a13": "Sí. Ayudamos con logística del recién nacido, coordinación de viajes, referencias pediátricas y derivaciones independientes. Los documentos oficiales se gestionan con las autoridades correspondientes.",
     "all": "Todos",
@@ -495,20 +461,20 @@
     "value2Desc": "Servimos a familias de todo el mundo con experiencia local.",
     "value3Title": "Cuidado Compasivo",
     "value3Desc": "Cada familia recibe atención personalizada y apoyo.",
-    "value4Title": "Excelencia Comprobada",
-    "value4Desc": "Años de resultados exitosos y familias satisfechas.",
+    "value4Title": "Atención personal",
+    "value4Desc": "Un contacto para hablar de tus preguntas y preferencias.",
     "value5Title": "Confianza y Seguridad",
     "value5Desc": "Tu privacidad y seguridad son nuestras principales prioridades durante todo el viaje.",
     "value6Title": "Enfoque de Asociación",
     "value6Desc": "Trabajamos como socios contigo, asegurando transparencia y comunicación abierta.",
-    "stat1Number": "1000+",
-    "stat1Label": "Embarazos Exitosos",
-    "stat2Number": "50+",
-    "stat2Label": "Países Servidos",
-    "stat3Number": "10+",
-    "stat3Label": "Años de Experiencia",
-    "stat4Number": "99%",
-    "stat4Label": "Tasa de Éxito"
+    "stat1Number": "Atención personal",
+    "stat1Label": "Un contacto para hablar de tus preguntas y preferencias.",
+    "stat2Number": "Opciones claras",
+    "stat2Label": "Información sobre los programas para valorar los próximos pasos.",
+    "stat3Number": "Atención coordinada",
+    "stat3Label": "Ayuda práctica con las citas y la comunicación con tu clínica.",
+    "stat4Number": "Apoyo continuo",
+    "stat4Label": "Un equipo que te ayuda a orientarte durante el programa y a plantear preguntas."
   },
   "footer": {
     "privacyPolicy": "Política de privacidad",
@@ -542,7 +508,7 @@
         },
         {
           "title": "Contratos Legales y Evaluación",
-          "description": "Abogados georgianos licenciados redactan contratos notarizados que protegen tus derechos parentales. Los padres completan la evaluación mientras la subrogada pasa evaluación médica, psicológica y de antecedentes en clínicas acreditadas de Tiflis."
+          "description": "La elegibilidad y los requisitos legales dependen de la legislación vigente y de las circunstancias individuales. Profesionales independientes habilitados pueden explicar los requisitos aplicables a tu familia."
         },
         {
           "title": "FIV, Emparejamiento y Transferencia de Embrión",
@@ -575,7 +541,7 @@
     },
     "support": {
       "eyebrow": "TU EQUIPO",
-      "title": "Apoyo 24/7 Durante Todo el Viaje en Georgia",
+      "title": "Apoyo continuo",
       "subtitle": "Cada familia internacional recibe un gestor de caso personal que coordina clínicas, abogados, subrogadas y logística.",
       "cards": [
         {
@@ -584,7 +550,7 @@
         },
         {
           "title": "Coordinación Médica y Legal",
-          "text": "Colaboramos con clínicas de FIV, hospitales y abogados licenciados conforme a las leyes de subrogación en Georgia."
+          "text": "Ayuda práctica con las citas y la comunicación con tu clínica."
         },
         {
           "title": "Apoyo Postnatal y de Viaje",
@@ -603,15 +569,15 @@
         },
         {
           "question": "¿Qué es la gestación subrogada en Georgia?",
-          "answer": "En la gestación subrogada, la subrogada porta un embrión creado con gametos de los padres o donantes, sin vínculo genético con el niño. Según la ley georgiana desde 2011, los padres son los únicos padres legales desde el nacimiento."
+          "answer": "La elegibilidad y los requisitos legales dependen de la legislación vigente y de las circunstancias individuales. Profesionales independientes habilitados pueden explicar los requisitos aplicables a tu familia."
         },
         {
           "question": "¿Cuánto dura el proceso de subrogación?",
-          "answer": "La mayoría de los programas toman de 12 a 18 meses desde la consulta hasta el nacimiento y registro. Los plazos varían según el éxito de la FIV, el emparejamiento y la necesidad de donación de óvulos."
+          "answer": "Los plazos varían según las evaluaciones, la selección, el tratamiento, el embarazo y las circunstancias individuales. Pide una estimación para tu programa y habla de posibles demoras con tu coordinador y tu clínica."
         },
         {
           "question": "¿Cuánto cuesta la subrogación en Georgia?",
-          "answer": "La gestación subrogada en Georgia suele comenzar desde unos $40,000 con paquetes transparentes que incluyen FIV, compensación a la subrogada, servicios legales y médicos. Contáctanos para un presupuesto personalizado."
+          "answer": "Solicita un presupuesto personalizado por escrito que indique servicios incluidos, exclusiones, etapas de pago y posibles costes adicionales."
         }
       ]
     },
@@ -621,9 +587,18 @@
       "primaryCta": "Contáctanos",
       "relatedTitle": "Páginas Relacionadas",
       "relatedLinks": [
-        { "label": "Subrogación en Georgia", "path": "/surrogacy-in-georgia" },
-        { "label": "Evaluación de Padres", "path": "/parent-screening" },
-        { "label": "Evaluación de Subrogadas", "path": "/surrogate-screening" },
+        {
+          "label": "Subrogación en Georgia",
+          "path": "/surrogacy-in-georgia"
+        },
+        {
+          "label": "Evaluación de Padres",
+          "path": "/parent-screening"
+        },
+        {
+          "label": "Evaluación de Subrogadas",
+          "path": "/surrogate-screening"
+        },
         {
           "label": "Subrogación con Donante de Óvulos",
           "path": "/surrogacy-with-egg-donor"
@@ -637,10 +612,10 @@
       "heroSubtitle": "Únete a nuestra comunidad de mujeres compasivas que ayudan a las familias a lograr sus sueños",
       "heroHighlight": "Mujeres saludables de 21-40 años con al menos un hijo biológico, no fumadoras, emocionalmente estables y listas para ayudar a otros.",
       "requirementsTitle": "Requisitos para ser gestante subrogada",
-      "requirementsSubtitle": "Evaluamos cuidadosamente a todas las gestantes subrogadas potenciales para asegurar los mejores resultados para todos",
+      "requirementsSubtitle": "La evaluación ayuda a los profesionales clínicos a valorar la idoneidad e identificar riesgos. Tu clínica explica las pruebas adecuadas a tu situación; la evaluación no garantiza un resultado favorable.",
       "processTitle": "El viaje de la gestante subrogada",
       "processSubtitle": "Tu camino para convertirte en gestante subrogada",
-      "supportTitle": "Apoyo 24/7 durante todo tu viaje",
+      "supportTitle": "Apoyo continuo",
       "supportSubtitle": "Estamos aquí para ti en cada paso",
       "support": {
         "phone": {
@@ -662,10 +637,10 @@
       "heroSubtitle": "Únete a nuestra comunidad de mujeres generosas que ayudan a las familias a crear nuevos comienzos",
       "heroHighlight": "Mujeres saludables de 21-35 años con excelente salud genética, no fumadoras y comprometidas a ayudar a otros a construir familias.",
       "requirementsTitle": "Requisitos para ser donante de óvulos",
-      "requirementsSubtitle": "Evaluamos cuidadosamente a todas las donantes potenciales para asegurar los mejores resultados para todos",
+      "requirementsSubtitle": "La evaluación ayuda a los profesionales clínicos a valorar la idoneidad e identificar riesgos. Tu clínica explica las pruebas adecuadas a tu situación; la evaluación no garantiza un resultado favorable.",
       "processTitle": "El viaje de la donante",
       "processSubtitle": "Tu camino para convertirte en donante de óvulos",
-      "supportTitle": "Apoyo 24/7 durante todo tu viaje",
+      "supportTitle": "Apoyo continuo",
       "supportSubtitle": "Estamos aquí para ti en cada paso",
       "support": {
         "phone": {
@@ -687,10 +662,10 @@
       "heroSubtitle": "Únete a nuestra comunidad de familias esperanzadas listas para comenzar su viaje de paternidad",
       "heroHighlight": "Individuos y parejas comprometidos listos para proporcionar un hogar amoroso y un ambiente estable para su futuro hijo.",
       "requirementsTitle": "Requisitos para ser padre",
-      "requirementsSubtitle": "Evaluamos cuidadosamente a todos los padres potenciales para asegurar los mejores resultados para todos",
+      "requirementsSubtitle": "La evaluación ayuda a los profesionales clínicos a valorar la idoneidad e identificar riesgos. Tu clínica explica las pruebas adecuadas a tu situación; la evaluación no garantiza un resultado favorable.",
       "processTitle": "El viaje del padre",
       "processSubtitle": "Tu camino para convertirte en padre a través de la gestación subrogada",
-      "supportTitle": "Apoyo 24/7 durante todo tu viaje",
+      "supportTitle": "Apoyo continuo",
       "supportSubtitle": "Estamos aquí para ti en cada paso",
       "support": {
         "phone": {
@@ -888,7 +863,7 @@
       "items": [
         {
           "question": "¿Qué es la evaluación de padres intencionales para subrogación en Georgia?",
-          "answer": "Es el proceso de evaluación que completan las familias internacionales antes de unirse a un programa de gestación subrogada en Georgia. Incluye consulta, revisión médica, evaluación psicológica y verificación legal según las leyes de subrogación en Georgia país."
+          "answer": "La evaluación ayuda a los profesionales clínicos a valorar la idoneidad e identificar riesgos. Tu clínica explica las pruebas adecuadas a tu situación; la evaluación no garantiza un resultado favorable."
         },
         {
           "question": "¿Qué documentos se requieren para la evaluación de padres?",
@@ -910,7 +885,10 @@
       "primaryCta": "Contáctanos Hoy",
       "relatedTitle": "Páginas Relacionadas",
       "relatedLinks": [
-        { "label": "Subrogación en Georgia", "path": "/surrogacy-in-georgia" },
+        {
+          "label": "Subrogación en Georgia",
+          "path": "/surrogacy-in-georgia"
+        },
         {
           "label": "Apoyo y Asesoramiento",
           "path": "/support-and-counselling"
@@ -926,7 +904,7 @@
     "hero": {
       "tag": "EVALUACIÓN DE SUBROGADAS",
       "title": "Evaluación de Subrogadas para Gestación Subrogada en Georgia",
-      "description": "Cada subrogada en nuestro programa de subrogación en Georgia completa una rigurosa evaluación médica, psicológica y de antecedentes en clínicas acreditadas de Tiflis. Protegemos a padres internacionales y subrogadas con criterios de elegibilidad transparentes en cada etapa de la gestación subrogada en Georgia país.",
+      "description": "La evaluación ayuda a los profesionales clínicos a valorar la idoneidad e identificar riesgos. Tu clínica explica las pruebas adecuadas a tu situación; la evaluación no garantiza un resultado favorable.",
       "primaryCta": "¿Quién Puede Ser Gestante?",
       "secondaryCta": "Subrogación en Georgia",
       "cardTitle": "Qué Evaluamos",
@@ -943,7 +921,7 @@
       "steps": [
         {
           "title": "Evaluación Médica",
-          "description": "Controles de salud completos, análisis de laboratorio y evaluación reproductiva en clínicas FIV acreditadas de Tiflis. Confirmamos que cada candidata cumple los requisitos para gestación subrogada en Georgia país."
+          "description": "La evaluación ayuda a los profesionales clínicos a valorar la idoneidad e identificar riesgos. Tu clínica explica las pruebas adecuadas a tu situación; la evaluación no garantiza un resultado favorable."
         },
         {
           "title": "Entrevista Psicológica",
@@ -951,7 +929,7 @@
         },
         {
           "title": "Verificación de Antecedentes Sociales",
-          "description": "Revisamos el historial de antecedentes y verificamos la estabilidad del hogar, incluyendo sistemas de apoyo familiar, para proteger a los padres internacionales."
+          "description": "La evaluación ayuda a los profesionales clínicos a valorar la idoneidad e identificar riesgos. Tu clínica explica las pruebas adecuadas a tu situación; la evaluación no garantiza un resultado favorable."
         }
       ]
     },
@@ -966,7 +944,7 @@
         },
         {
           "question": "¿Qué pruebas médicas realizan las subrogadas?",
-          "answer": "La evaluación incluye análisis de sangre, paneles de enfermedades infecciosas, evaluación de salud reproductiva y ecografía en clínicas FIV acreditadas de Tiflis."
+          "answer": "La evaluación ayuda a los profesionales clínicos a valorar la idoneidad e identificar riesgos. Tu clínica explica las pruebas adecuadas a tu situación; la evaluación no garantiza un resultado favorable."
         },
         {
           "question": "¿Por qué es obligatoria la evaluación psicológica para subrogadas?",
@@ -988,8 +966,14 @@
           "label": "¿Quién Puede Ser Gestante?",
           "path": "/who-can-become-a-surrogate"
         },
-        { "label": "Subrogación en Georgia", "path": "/surrogacy-in-georgia" },
-        { "label": "Evaluación de Padres", "path": "/parent-screening" }
+        {
+          "label": "Subrogación en Georgia",
+          "path": "/surrogacy-in-georgia"
+        },
+        {
+          "label": "Evaluación de Padres",
+          "path": "/parent-screening"
+        }
       ]
     }
   },
@@ -1055,7 +1039,7 @@
         },
         {
           "title": "Evaluación médica y genética",
-          "description": "Revisamos su salud, realizamos pruebas y nos aseguramos de que sea una candidata segura para la donación."
+          "description": "La evaluación ayuda a los profesionales clínicos a valorar la idoneidad e identificar riesgos. Tu clínica explica las pruebas adecuadas a tu situación; la evaluación no garantiza un resultado favorable."
         },
         {
           "title": "Tratamiento y monitoreo",
@@ -1074,7 +1058,7 @@
       "items": [
         {
           "question": "¿Es segura la donación de óvulos?",
-          "answer": "La donación de óvulos es generalmente segura cuando se realiza bajo supervisión médica. Nuestro equipo monitorea su salud en todo momento y le explica los riesgos y las expectativas antes de comenzar."
+          "answer": "La evaluación ayuda a los profesionales clínicos a valorar la idoneidad e identificar riesgos. Tu clínica explica las pruebas adecuadas a tu situación; la evaluación no garantiza un resultado favorable."
         },
         {
           "question": "¿Cuánto tiempo toma el proceso?",
@@ -1091,7 +1075,7 @@
     "hero": {
       "tag": "APOYO A PADRES INTENCIONALES",
       "title": "Apoyo y Asesoramiento para la Subrogación en Georgia",
-      "description": "Un viaje de subrogación es tan emocional como médico. Happy Family ofrece apoyo integral y asesoramiento a padres internacionales que buscan gestación subrogada en Georgia país  desde la primera consulta en Tiflis hasta el nacimiento y el regreso a casa. Su gestor de caso coordina actualizaciones médicas, pasos legales y planificación financiera con costos transparentes y asistencia 24/7.",
+      "description": "Un equipo que te ayuda a orientarte durante el programa y a plantear preguntas.",
       "primaryCta": "Consulta Gratuita",
       "secondaryCta": "Subrogación en Georgia",
       "cardTitle": "Apoyo en Cada Etapa",
@@ -1133,8 +1117,8 @@
         },
         {
           "icon": "clock",
-          "title": "Gestión de Caso 24/7",
-          "description": "Asistencia permanente para preguntas médicas urgentes, actualizaciones del embarazo, documentos y coordinación de viajes. Su coordinador está disponible en todas las zonas horarias."
+          "title": "Apoyo continuo",
+          "description": "Un equipo que te ayuda a orientarte durante el programa y a plantear preguntas."
         }
       ]
     },
@@ -1168,7 +1152,7 @@
       "items": [
         {
           "question": "¿Qué apoyo reciben los padres intencionales durante la subrogación en Georgia?",
-          "answer": "Cada padre recibe un coordinador dedicado que gestiona citas clínicas, contratos legales, emparejamiento, actualizaciones del embarazo y documentación postnatal. También ofrecemos consejería emocional, orientación financiera, traducción y soporte urgente 24/7."
+          "answer": "Nuestro equipo ayuda a entender las opciones y a coordinar la comunicación. El asesoramiento médico y las decisiones de tratamiento corresponden a los profesionales que te atienden."
         },
         {
           "question": "¿Es obligatoria la consejería para la subrogación en Georgia país?",
@@ -1190,10 +1174,22 @@
       "primaryCta": "Contáctenos",
       "relatedTitle": "Páginas Relacionadas",
       "relatedLinks": [
-        { "label": "Subrogación en Georgia", "path": "/surrogacy-in-georgia" },
-        { "label": "Evaluación de Padres", "path": "/parent-screening" },
-        { "label": "Por Qué Elegirnos", "path": "/why-choose-us" },
-        { "label": "Quién Puede Ser Padre", "path": "/who-can-become-a-parent" }
+        {
+          "label": "Subrogación en Georgia",
+          "path": "/surrogacy-in-georgia"
+        },
+        {
+          "label": "Evaluación de Padres",
+          "path": "/parent-screening"
+        },
+        {
+          "label": "Por Qué Elegirnos",
+          "path": "/why-choose-us"
+        },
+        {
+          "label": "Quién Puede Ser Padre",
+          "path": "/who-can-become-a-parent"
+        }
       ]
     }
   },
@@ -1225,56 +1221,83 @@
     "ivfProcess": {
       "title": "Proceso de FIV",
       "step1": "El proceso de FIV comienza con la estimulación ovárica, la recuperación de óvulos, la fertilización y el cultivo de embriones en el laboratorio. La fertilización puede realizarse mediante FIV convencional o ICSI dependiendo de la calidad del esperma.",
-      "step2": "El proceso se monitorea cuidadosamente para optimizar la calidad de los óvulos y el desarrollo de los embriones. Los especialistas del laboratorio evalúan los embriones durante varios días para seleccionar aquellos con mayor probabilidad de implantación.",
+      "step2": "Tu clínica puede explicar los factores que influyen en los resultados del tratamiento. Ayudamos a coordinar la comunicación y los aspectos prácticos.",
       "step3": "Cada paso se personaliza según el perfil médico de los padres intencionales, asegurando que el enfoque se adapte a sus necesidades específicas y factores de fertilidad."
     },
     "embryoTransfer": {
       "title": "Transferencia de Embriones",
-      "step1": "Después de la fertilización, se seleccionan los embriones más saludables para transferir al útero de la gestante. El tiempo y la preparación de la gestante se gestionan cuidadosamente para maximizar el éxito de la implantación.",
+      "step1": "Si hay embriones adecuados, la clínica explica la transferencia a una gestante. El embarazo y el nacimiento son resultados posibles, no asegurados.",
       "step2": "La gestante se monitorea de cerca antes, durante y después de la transferencia. Se proporciona apoyo hormonal y orientación sobre el estilo de vida para crear el mejor ambiente para que el embrión prospere.",
       "step3": "Cada paso se personaliza según el perfil médico de los padres intencionales, asegurando que el enfoque se adapte a sus necesidades específicas y factores de fertilidad."
     },
-    "question1": { "q": "¿Cuál es el coste de la gestación subrogada con gametos propios?", "a": "El coste depende de los procedimientos médicos, la compensación de la gestante, los honorarios legales y la ubicación del programa. Durante la consulta inicial proporcionamos un desglose transparente y detallado." },
-    "question2": { "q": "¿Cuánto cuesta la gestación subrogada para parejas?", "a": "El precio varía según el programa elegido, las necesidades médicas y la ubicación. Nuestros costes son transparentes e incluyen los servicios necesarios; contáctenos para obtener una estimación personalizada." },
-    "question3": { "q": "¿Cuánto cuesta la gestación subrogada con FIV?", "a": "El coste total incluye la FIV, la transferencia embrionaria, la compensación de la gestante, los servicios legales y el seguimiento médico. Ofrecemos precios desglosados y opciones de pago." }
+    "question1": {
+      "q": "¿Cuál es el coste de la gestación subrogada con gametos propios?",
+      "a": "El coste depende de los procedimientos médicos, la compensación de la gestante, los honorarios legales y la ubicación del programa. Durante la consulta inicial proporcionamos un desglose transparente y detallado."
+    },
+    "question2": {
+      "q": "¿Cuánto cuesta la gestación subrogada para parejas?",
+      "a": "El precio varía según el programa elegido, las necesidades médicas y la ubicación. Nuestros costes son transparentes e incluyen los servicios necesarios; contáctenos para obtener una estimación personalizada."
+    },
+    "question3": {
+      "q": "¿Cuánto cuesta la gestación subrogada con FIV?",
+      "a": "El coste total incluye la FIV, la transferencia embrionaria, la compensación de la gestante, los servicios legales y el seguimiento médico. Ofrecemos precios desglosados y opciones de pago."
+    }
   },
   "eggFreezing": {
     "title": "Congelación de Óvulos / Preservación",
-    "description": "La congelación de óvulos, también conocida como criopreservación de ovocitos, es un proceso que permite a las mujeres preservar su fertilidad congelando sus óvulos para uso futuro. Esta tecnología reproductiva avanzada ofrece a las mujeres la oportunidad de retrasar la maternidad manteniendo la calidad de sus óvulos.",
+    "description": "La congelación de óvulos es una opción para quienes consideran un tratamiento de fertilidad en el futuro. Una clínica puede explicar el proceso, sus limitaciones y los factores que influyen en las posibilidades individuales.",
     "process": {
       "title": "El Proceso de Congelación de Óvulos",
       "step1": "El proceso comienza con la estimulación ovárica usando medicamentos de fertilidad para fomentar el desarrollo de múltiples óvulos. Esto se monitorea cuidadosamente a través de análisis de sangre y ultrasonidos para asegurar un desarrollo óptimo de los óvulos.",
       "step2": "Una vez que los óvulos alcanzan la madurez, se recuperan a través de un procedimiento quirúrgico menor llamado recuperación de óvulos. El procedimiento se realiza bajo sedación y típicamente toma 15-20 minutos.",
-      "step3": "Los óvulos recuperados se congelan inmediatamente usando un proceso llamado vitrificación, que los preserva a temperaturas extremadamente bajas. Esta técnica avanzada de congelación mantiene la calidad y viabilidad de los óvulos para uso futuro."
+      "step3": "La vitrificación permite congelar óvulos para un posible tratamiento futuro. No todos los óvulos sobreviven a la descongelación ni dan lugar a un embrión, embarazo o nacimiento."
     },
     "benefits": {
       "title": "Beneficios de la Congelación de Óvulos",
-      "step1": "Preservar la fertilidad para mujeres que quieren retrasar la maternidad debido a carrera, educación o razones personales. Esto es especialmente valioso para mujeres de finales de los 20 a principios de los 30.",
-      "step2": "Mantener la calidad de los óvulos congelándolos cuando están en su pico de fertilidad. Esto puede ser particularmente beneficioso para mujeres que enfrentan tratamientos médicos que pueden afectar la fertilidad.",
-      "step3": "Proporcionar tranquilidad y opciones reproductivas para el futuro. Los óvulos congelados pueden almacenarse por muchos años y usarse cuando sea el momento adecuado para comenzar una familia."
+      "step1": "Antes de decidir, habla con tu clínica sobre los posibles beneficios, riesgos, condiciones de almacenamiento y opciones de tratamiento futuro.",
+      "step2": "Antes de decidir, habla con tu clínica sobre los posibles beneficios, riesgos, condiciones de almacenamiento y opciones de tratamiento futuro.",
+      "step3": "Información sobre los programas para valorar los próximos pasos."
     },
-    "question1": { "q": "¿Cuál es el coste de congelar y conservar óvulos?", "a": "El coste incluye la medicación para la estimulación ovárica, la extracción, la vitrificación y el almacenamiento anual. El precio final depende del número de ciclos y del tiempo de almacenamiento." },
-    "question2": { "q": "¿Cuánto cuesta congelar óvulos para una futura FIV?", "a": "El precio incluye el ciclo de estimulación, la extracción, la congelación y el almacenamiento. El total depende de sus necesidades y del número de óvulos obtenidos." },
-    "question3": { "q": "¿Qué gastos conlleva la conservación de óvulos?", "a": "Los gastos incluyen procedimientos médicos, medicamentos, laboratorio y almacenamiento continuo. El coste inicial cubre la congelación y después se aplica una tarifa anual de conservación." }
+    "question1": {
+      "q": "¿Cuál es el coste de congelar y conservar óvulos?",
+      "a": "El coste incluye la medicación para la estimulación ovárica, la extracción, la vitrificación y el almacenamiento anual. El precio final depende del número de ciclos y del tiempo de almacenamiento."
+    },
+    "question2": {
+      "q": "¿Cuánto cuesta congelar óvulos para una futura FIV?",
+      "a": "El precio incluye el ciclo de estimulación, la extracción, la congelación y el almacenamiento. El total depende de sus necesidades y del número de óvulos obtenidos."
+    },
+    "question3": {
+      "q": "¿Qué gastos conlleva la conservación de óvulos?",
+      "a": "Los gastos incluyen procedimientos médicos, medicamentos, laboratorio y almacenamiento continuo. El coste inicial cubre la congelación y después se aplica una tarifa anual de conservación."
+    }
   },
   "surrogacyWithEggDonor": {
     "title": "Gestación Subrogada con Donante de Óvulos",
     "description": "Para padres intencionales que necesitan óvulos de donante, nuestro programa de gestación subrogada con donante de óvulos proporciona una solución integral. Este programa combina la experiencia de donantes de óvulos cuidadosamente seleccionadas con nuestras gestantes experimentadas para ayudarte a construir tu familia.",
     "process": {
       "title": "El Proceso",
-      "step1": "Te emparejamos cuidadosamente con una donante de óvulos calificada que cumple con tus criterios específicos. Nuestras donantes se someten a evaluaciones médicas, psicológicas y genéticas exhaustivas para asegurar los más altos estándares de calidad.",
+      "step1": "La evaluación ayuda a los profesionales clínicos a valorar la idoneidad e identificar riesgos. Tu clínica explica las pruebas adecuadas a tu situación; la evaluación no garantiza un resultado favorable.",
       "step2": "La donante de óvulos seleccionada se somete a estimulación ovárica y recuperación de óvulos. Los óvulos se fertilizan entonces con el esperma del padre intencional o esperma de donante a través de procedimientos de FIV.",
-      "step3": "Los embriones resultantes se transfieren a una gestante cuidadosamente emparejada que lleva el embarazo a término. Durante todo el proceso, proporcionamos apoyo integral y monitoreo para todas las partes involucradas."
+      "step3": "Si hay embriones adecuados, la clínica explica la transferencia a una gestante. El embarazo y el nacimiento son resultados posibles, no asegurados."
     },
     "benefits": {
       "title": "Beneficios de Este Programa",
       "step1": "Acceso a un grupo diverso de donantes de óvulos cuidadosamente seleccionadas con perfiles detallados incluyendo historial médico, educación y características personales.",
-      "step2": "Apoyo integral durante todo el proceso, desde la selección de donante hasta el nacimiento, asegurando un viaje suave y exitoso hacia la paternidad.",
-      "step3": "Altas tasas de éxito con nuestro equipo médico experimentado y protocolos probados, dándote la mejor oportunidad de lograr un embarazo exitoso y un bebé saludable."
+      "step2": "Coordinación personal desde la selección de la donante y durante las etapas del programa, con espacio para hacer preguntas.",
+      "step3": "Tu clínica puede explicar los factores que influyen en los resultados del tratamiento. Ayudamos a coordinar la comunicación y los aspectos prácticos."
     },
-    "question1": { "q": "¿Cuál es el precio de la gestación subrogada con donante de óvulos?", "a": "El precio incluye la compensación de la donante, la FIV, la compensación de la gestante, los servicios legales y el apoyo médico integral, desde la selección de la donante hasta el nacimiento." },
-    "question2": { "q": "¿Cuánto cuesta la gestación subrogada usando una donante de óvulos?", "a": "Los costes suelen incluir las tarifas de la donante, los procedimientos médicos, la compensación de la gestante y los gastos legales. El total varía según sus necesidades y el programa elegido." },
-    "question3": { "q": "¿Cuál es el coste total de la gestación subrogada con óvulos donados?", "a": "El total incluye la donante, la FIV y transferencia embrionaria, la gestante, la documentación legal y el apoyo continuo. Contáctenos para recibir una estimación personalizada." }
+    "question1": {
+      "q": "¿Cuál es el precio de la gestación subrogada con donante de óvulos?",
+      "a": "El precio incluye la compensación de la donante, la FIV, la compensación de la gestante, los servicios legales y el apoyo médico integral, desde la selección de la donante hasta el nacimiento."
+    },
+    "question2": {
+      "q": "¿Cuánto cuesta la gestación subrogada usando una donante de óvulos?",
+      "a": "Los costes suelen incluir las tarifas de la donante, los procedimientos médicos, la compensación de la gestante y los gastos legales. El total varía según sus necesidades y el programa elegido."
+    },
+    "question3": {
+      "q": "¿Cuál es el coste total de la gestación subrogada con óvulos donados?",
+      "a": "El total incluye la donante, la FIV y transferencia embrionaria, la gestante, la documentación legal y el apoyo continuo. Contáctenos para recibir una estimación personalizada."
+    }
   },
   "vipConciergeServices": {
     "title": "Servicios VIP Concierge",
@@ -1282,61 +1305,39 @@
     "services": {
       "title": "Nuestros Servicios VIP",
       "step1": "Alojamientos premium en apartamentos cómodos y completamente amueblados o hoteles cerca de instalaciones médicas. Organizamos todo desde la reserva hasta el check-in, asegurando que tu estadía sea cómoda y conveniente.",
-      "step2": "Servicios profesionales de traducción para todas las citas médicas, reuniones legales y comunicaciones importantes. Nuestros traductores certificados aseguran comunicación clara durante todo tu viaje.",
+      "step2": "Ayuda práctica con las citas y la comunicación con tu clínica.",
       "step3": "Servicios integrales de transporte incluyendo traslados del aeropuerto, transporte a citas médicas y asistencia de viaje local. Proporcionamos transporte confiable y cómodo para todas tus necesidades."
     },
     "benefits": {
       "title": "Por Qué Elegir Servicios VIP",
       "step1": "Experiencia fluida con toda la logística manejada por nuestro equipo experimentado, permitiéndote enfocarte en tu viaje hacia la paternidad sin preocuparte por detalles prácticos.",
-      "step2": "Apoyo cultural y de idioma para ayudarte a navegar el ambiente local cómodamente, con asistencia disponible 24/7 para cualquier pregunta o preocupación.",
+      "step2": "Ayuda práctica con las citas y la comunicación con tu clínica.",
       "step3": "Tranquilidad sabiendo que cada aspecto de tu estadía está manejado profesionalmente, desde el alojamiento hasta el transporte, asegurando una experiencia sin estrés durante este tiempo importante."
     },
-    "question1": { "q": "¿Qué incluyen los servicios de conserjería VIP para la gestación subrogada?", "a": "Incluyen alojamiento prémium, traducción profesional en citas médicas y legales, transporte, coordinación personal y asistencia disponible las 24 horas." },
-    "question2": { "q": "¿Cuánto cuesta el servicio de conserjería VIP?", "a": "El coste depende de la duración de la estancia, el alojamiento y el nivel de asistencia. Se factura por separado del programa y puede adaptarse a sus necesidades." },
-    "question3": { "q": "¿Los servicios VIP afectan al coste total de la gestación subrogada?", "a": "Son opcionales y se cobran por separado de los servicios médicos y legales principales. Los paquetes flexibles permiten añadir únicamente la comodidad que necesite." }
+    "question1": {
+      "q": "¿Qué incluyen los servicios de conserjería VIP para la gestación subrogada?",
+      "a": "Un equipo que te ayuda a orientarte durante el programa y a plantear preguntas."
+    },
+    "question2": {
+      "q": "¿Cuánto cuesta el servicio de conserjería VIP?",
+      "a": "El coste depende de la duración de la estancia, el alojamiento y el nivel de asistencia. Se factura por separado del programa y puede adaptarse a sus necesidades."
+    },
+    "question3": {
+      "q": "¿Los servicios VIP afectan al coste total de la gestación subrogada?",
+      "a": "Son opcionales y se cobran por separado de los servicios médicos y legales principales. Los paquetes flexibles permiten añadir únicamente la comodidad que necesite."
+    }
   },
   "statistics": {
-    "title": "Confianza Mundial",
-    "subtitle": "Resultados comprobados ayudando a las familias a lograr sus sueños.",
-    "stat1Number": "1000+",
-    "stat1Label": "Embarazos Exitosos",
-    "stat2Number": "50+",
-    "stat2Label": "Países Atendidos",
-    "stat3Number": "10+",
-    "stat3Label": "Años de Experiencia",
-    "stat4Number": "99%",
-    "stat4Label": "Tasa de Éxito"
-  },
-  "testimonials": {
-    "title": "Lo Que Dicen Las Familias",
-    "subtitle": "Experiencias reales de familias que lograron sus sueños con nosotros.",
-    "verified": "Verificado",
-    "googleRating": "Basado en 30+ Reseñas de Google",
-    "readMoreReviews": "Leer Más Reseñas en Google",
-    "review1": {
-      "name": "Salome G.",
-      "text": "¡Esta es la mejor empresa en Georgia! Con un equipo altamente calificado. Los fundadores y empleados de la empresa son muy atentos. Profesionales de su caso y lo más importante, crean todo tipo de comodidad para los pacientes."
-    },
-    "review2": {
-      "name": "Sara M.",
-      "text": "¡Estamos emocionados con la llegada de nuestros pequeños gracias a esta gran agencia que nos ayuda y apoya en cada paso del camino. Somos una gran familia y no podemos esperar a regresar a Tbilisi."
-    },
-    "review3": {
-      "name": "Miguel Angel G.",
-      "text": "¡Una experiencia fantástica con Natia, Nini y todo su equipo. A lo largo de un proceso tan complejo, siempre nos mostraron una seguridad y garantía impecables. Nuestra primera estancia allí fue un lujo, con cada detalle posible."
-    },
-    "review4": {
-      "name": "Eka A.",
-      "text": "¡Esta es una empresa que da felicidad a las familias, colorea las vidas de las parejas con los colores más brillantes! ¡Un equipo de los mejores especialistas! ¡Gracias por hacer feliz a la gente en todo el mundo!"
-    },
-    "review5": {
-      "name": "Teo P.",
-      "text": "¡Profesionales de pies a cabeza! Después de buscar y mirar extensivamente, decidimos ponernos en sus manos, y no nos equivocamos. Ya estamos disfrutando de nuestro ángel, por lo cual estaré agradecido de por vida."
-    },
-    "review6": {
-      "name": "Keti B.",
-      "text": "¡La mejor! ¡Equipo súper y profesional! ¡Altamente recomendado!"
-    }
+    "title": "Apoyo pensado para ti",
+    "subtitle": "Atención personal, información clara y coordinación práctica durante tu camino.",
+    "stat1Number": "Atención personal",
+    "stat1Label": "Un contacto para hablar de tus preguntas y preferencias.",
+    "stat2Number": "Opciones claras",
+    "stat2Label": "Información sobre los programas para valorar los próximos pasos.",
+    "stat3Number": "Atención coordinada",
+    "stat3Label": "Ayuda práctica con las citas y la comunicación con tu clínica.",
+    "stat4Number": "Apoyo continuo",
+    "stat4Label": "Un equipo que te ayuda a orientarte durante el programa y a plantear preguntas."
   },
   "programsOverview": {
     "title": "Nuestros Programas",
@@ -1351,14 +1352,14 @@
       "features": [
         "Usa tu propio material genético",
         "Gestante cuidadosamente seleccionada",
-        "Protección legal completa",
+        "La elegibilidad y los requisitos legales dependen de la legislación vigente y de las circunstancias individuales. Profesionales independientes habilitados pueden explicar los requisitos aplicables a tu familia.",
         "Monitoreo médico durante todo el proceso"
       ],
       "buttonText": "Explorar Gestación con Propios Gametos"
     },
     "program2": {
       "title": "Gestación Subrogada con Donante de Óvulos",
-      "description": "Combina óvulos de donante con tu esperma o el esperma de tu pareja para un embarazo exitoso.",
+      "description": "Coordinación personal desde la selección de la donante y durante las etapas del programa, con espacio para hacer preguntas.",
       "features": [
         "Base de datos extensa de donantes",
         "Pruebas genéticas completas",
@@ -1369,10 +1370,10 @@
     },
     "program3": {
       "title": "Congelación y Preservación de Óvulos",
-      "description": "Preserva tu fertilidad para el futuro con nuestra tecnología avanzada de congelación de óvulos.",
+      "description": "La congelación de óvulos es una opción para quienes consideran un tratamiento de fertilidad en el futuro. Una clínica puede explicar el proceso, sus limitaciones y los factores que influyen en las posibilidades individuales.",
       "features": [
-        "Tecnología de vitrificación más reciente",
-        "Altas tasas de éxito",
+        "Coordinación con la clínica",
+        "Opciones claras",
         "Opciones de almacenamiento a largo plazo",
         "Tiempo flexible"
       ],
@@ -1382,7 +1383,7 @@
       "title": "Servicios VIP de Conserjería",
       "description": "Soporte premium con atención personalizada durante todo tu viaje de fertilidad.",
       "features": [
-        "Soporte dedicado 24/7",
+        "Apoyo continuo",
         "Alojamiento de lujo",
         "Coordinador personal",
         "Programación prioritaria"
@@ -1407,16 +1408,16 @@
           "description": "Los nombres de los padres aparecen directamente en el certificado de nacimiento."
         },
         {
-          "title": "70% de Ahorro vs. Estados Unidos",
-          "description": "Paquetes transparentes todo incluido desde $40,000 a $60,000."
+          "title": "Planifica tu presupuesto",
+          "description": "Solicita un presupuesto personalizado por escrito que indique servicios incluidos, exclusiones, etapas de pago y posibles costes adicionales."
         },
         {
           "title": "Cero Derechos Parentales de la Sustituta",
           "description": "La madre sustituta no tiene derecho legal a ser reconocida como madre."
         },
         {
-          "title": "Clínicas de FIV de Clase Mundial",
-          "description": "Equipamiento médico de última generación y altas tasas de éxito clínico."
+          "title": "Coordinación con la clínica",
+          "description": "Antes de decidir, consulta directamente con la clínica las opciones de tratamiento, las credenciales profesionales y el alcance de la atención."
         },
         {
           "title": "Apoyo familiar postnatal",
@@ -1425,9 +1426,9 @@
       ]
     },
     "benefits": {
-      "eyebrow": "BENEFICIOS INIGUALABLES",
+      "eyebrow": "Planificación cuidadosa",
       "title": "Por Qué los Padres Eligen Georgia",
-      "subtitle": "Descubra por qué miles de parejas del Reino Unido, Europa, Australia y EE.UU. eligen Georgia como destino de confianza para la gestación subrogada.",
+      "subtitle": "Elegir una agencia es una decisión personal. Conoce cómo nuestro equipo puede ayudarte a entender las opciones, planificar tus visitas y comunicarte con los profesionales que participan en tu atención.",
       "cards": [
         {
           "icon": "⚖",
@@ -1436,8 +1437,8 @@
         },
         {
           "icon": "⭐",
-          "title": "Excelencia Asequible",
-          "description": "Ahorre hasta un 70% en comparación con programas en Estados Unidos. Nuestros paquetes transparentes todo incluido cubren clínicas de FIV de primer nivel, compensación de la sustituta, atención prenatal integral y parto en hospitales modernos sin tarifas ocultas."
+          "title": "Planifica tu presupuesto",
+          "description": "Solicita un presupuesto personalizado por escrito que indique servicios incluidos, exclusiones, etapas de pago y posibles costes adicionales."
         },
         {
           "icon": "✈",
@@ -1470,16 +1471,16 @@
       "eligibleTitle": "¿Quién es Elegible?",
       "requirements": [
         {
-          "title": "Solo Parejas Heterosexuales",
-          "description": "Según la legislación vigente, la gestación subrogada está disponible exclusivamente para parejas heterosexuales. Personas solteras y parejas del mismo sexo no son elegibles."
+          "title": "Planificación cuidadosa",
+          "description": "La elegibilidad y los requisitos legales dependen de la legislación vigente y de las circunstancias individuales. Profesionales independientes habilitados pueden explicar los requisitos aplicables a tu familia."
         },
         {
-          "title": "Casados o Conviviendo",
-          "description": "Las parejas deben estar legalmente casadas o convivir durante al menos un año. Se debe presentar certificado de matrimonio o acuerdo de convivencia."
+          "title": "Coordinación con la clínica",
+          "description": "La evaluación ayuda a los profesionales clínicos a valorar la idoneidad e identificar riesgos. Tu clínica explica las pruebas adecuadas a tu situación; la evaluación no garantiza un resultado favorable."
         },
         {
-          "title": "Necesidad Médica",
-          "description": "Los padres deben proporcionar documentación médica de infertilidad, fallos repetidos de FIV u otras razones que hagan imposible o peligroso llevar un embarazo."
+          "title": "Tu programa de gestación subrogada",
+          "description": "Antes de decidir, revisa la elegibilidad, las opciones de tratamiento, el número y los plazos de los intentos y las condiciones del acuerdo escrito."
         }
       ]
     },
@@ -1512,18 +1513,18 @@
     },
     "pricing": {
       "eyebrow": "PRECIOS Y TRANSPARENCIA",
-      "title": "Costos Transparentes y Asequibles",
-      "subtitle": "Ahorre hasta un 70% en comparación con EE.UU. con total transparencia financiera.",
-      "overview": "La gestación subrogada en Georgia es excepcionalmente rentable, con programas todo incluido entre $40,000 y $60,000 USD, una fracción del costo en EE.UU. o Canadá donde puede superar $150,000.",
-      "inclusionsTitle": "¿Qué Incluyen Nuestros Paquetes Todo Incluido?",
+      "title": "Planifica tu presupuesto",
+      "subtitle": "Solicita un presupuesto personalizado por escrito que indique servicios incluidos, exclusiones, etapas de pago y posibles costes adicionales.",
+      "overview": "Antes de decidir, revisa la elegibilidad, las opciones de tratamiento, el número y los plazos de los intentos y las condiciones del acuerdo escrito.",
+      "inclusionsTitle": "Opciones claras",
       "inclusions": [
         {
           "title": "FIV y Procedimientos Médicos",
-          "description": "Todos los honorarios clínicos, creación de embriones, ICSI, pruebas PGT-A (si se seleccionan) y transferencias."
+          "description": "Antes de decidir, consulta directamente con la clínica las opciones de tratamiento, las credenciales profesionales y el alcance de la atención."
         },
         {
           "title": "Compensación y Cuidado de la Sustituta",
-          "description": "Asignación mensual generosa, ropa de maternidad, apoyo de vivienda y compensación postparto."
+          "description": "Antes de decidir, revisa la elegibilidad, las opciones de tratamiento, el número y los plazos de los intentos y las condiciones del acuerdo escrito."
         },
         {
           "title": "Apoyo Legal y Administrativo",
@@ -1531,19 +1532,19 @@
         },
         {
           "title": "Atención Prenatal y Parto",
-          "description": "Todos los controles prenatales, medicamentos, ecografías y parto en un hospital privado de maternidad."
+          "description": "Antes de decidir, consulta directamente con la clínica las opciones de tratamiento, las credenciales profesionales y el alcance de la atención."
         }
       ],
-      "programTitle": "Programa de Gestación Subrogada Garantizado",
-      "price": "Desde $45,000 USD",
-      "priceNote": "Intentos de FIV ilimitados hasta el nacimiento",
+      "programTitle": "Tu programa de gestación subrogada",
+      "price": "Planifica tu presupuesto",
+      "priceNote": "Solicita un presupuesto personalizado por escrito que indique servicios incluidos, exclusiones, etapas de pago y posibles costes adicionales.",
       "features": [
-        "Intentos de FIV ilimitados (programa garantizado)",
+        "Opciones claras",
         "Evaluación y emparejamiento completo de la sustituta",
         "Contrato legal y registro de nacimiento",
         "Parto en hospital privado moderno",
         "Atención prenatal integral y medicamentos",
-        "Gestor de caso personal 24/7"
+        "Apoyo continuo"
       ],
       "cta": "Solicitar Detalles del Programa"
     },
@@ -1558,11 +1559,11 @@
         },
         {
           "question": "¿Quién puede acceder a la gestación subrogada en Georgia?",
-          "answer": "Según las leyes vigentes, está disponible exclusivamente para parejas heterosexuales casadas o que conviven al menos un año, con documentación médica de infertilidad o imposibilidad de llevar un embarazo de forma segura."
+          "answer": "La elegibilidad y los requisitos legales dependen de la legislación vigente y de las circunstancias individuales. Profesionales independientes habilitados pueden explicar los requisitos aplicables a tu familia."
         },
         {
           "question": "¿Cuál es el estado del proyecto de ley de 2023?",
-          "answer": "En junio de 2023 se propuso restringir la gestación subrogada comercial a ciudadanos georgianos, pero el proyecto no fue aprobado. Para padres extranjeros, el programa sigue siendo completamente legal y operativo."
+          "answer": "La elegibilidad y los requisitos legales dependen de la legislación vigente y de las circunstancias individuales. Profesionales independientes habilitados pueden explicar los requisitos aplicables a tu familia."
         },
         {
           "question": "¿Cómo se gestionan los requisitos legales postnatales?",
