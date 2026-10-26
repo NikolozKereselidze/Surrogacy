@@ -20,7 +20,7 @@ export default function LegalDocument({
   sections,
 }: LegalDocumentProps) {
   return (
-    <article className={styles.page}>
+    <article className={styles.page} lang="en" dir="ltr">
       <header className={styles.header}>
         <p className={styles.eyebrow}>{eyebrow}</p>
         <h1>{title}</h1>

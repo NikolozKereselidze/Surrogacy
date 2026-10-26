@@ -167,7 +167,7 @@ export default function CookieConsent({ analyticsId, tidioCode }: { analyticsId:
     {preferences?.support && tidioCode && <Script src={`https://code.tidio.co/${encodeURIComponent(tidioCode)}.js`} strategy="afterInteractive" />}
 
     {!preferences && !showSettings && <section className={styles.banner} dir={locale === "he" ? "rtl" : "ltr"} aria-label={text.title}>
-      <div className={styles.copy}><h2>{text.title}</h2><p>{text.description} <Link href={`/${locale}/privacy-policy`}>{text.privacy}</Link></p></div>
+      <div className={styles.copy}><h2>{text.title}</h2><p>{text.description} <Link href="/en/privacy-policy" hrefLang="en">{text.privacy} <span lang="en">(English)</span></Link></p></div>
       <div className={styles.actions}>
         <button type="button" className={styles.primary} onClick={() => save({ ...emptyPreferences(), analytics: true, marketing: true, support: true })}>{text.accept}</button>
         <button type="button" className={styles.secondary} onClick={() => save(emptyPreferences())}>{text.reject}</button>

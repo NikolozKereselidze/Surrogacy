@@ -153,8 +153,8 @@ const Footer = () => {
           </div>
 
           <div className={styles.legalLinks}>
-            <Link href={`/${locale}/privacy-policy`}>{t("footer.privacyPolicy")}</Link>
-            <Link href={`/${locale}/terms-of-service`}>{t("footer.termsOfService")}</Link>
+            <Link href="/en/privacy-policy" hrefLang="en">{t("footer.privacyPolicy")} <span lang="en">(English)</span></Link>
+            <Link href="/en/terms-of-service" hrefLang="en">{t("footer.termsOfService")} <span lang="en">(English)</span></Link>
             <button type="button" onClick={openCookieSettings}>{t("footer.cookieSettings")}</button>
           </div>
 

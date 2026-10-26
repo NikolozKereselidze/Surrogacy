@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import LegalDocument, { type LegalSection } from "@/components/LegalDocument";
-import { buildPageMetadata } from "@/lib/seo";
+import { BASE_URL, buildPageMetadata } from "@/lib/seo";
 
 const sections: LegalSection[] = [
   {
@@ -55,14 +55,22 @@ const sections: LegalSection[] = [
   },
 ];
 
-export async function generateMetadata({ params }: { params: Promise<{ locale?: string }> }): Promise<Metadata> {
-  const { locale } = await params;
-  return buildPageMetadata({
+export async function generateMetadata(): Promise<Metadata> {
+  const canonical = `${BASE_URL}/en/terms-of-service`;
+  const metadata = buildPageMetadata({
     title: "Terms of Service",
     description: "Terms governing the use of the Happy Family website and its general informational content.",
     path: "/terms-of-service",
-    locale: locale || "en",
+    locale: "en",
   });
+  // These documents are currently available only in English.
+  return {
+    ...metadata,
+    alternates: {
+      canonical,
+      languages: { en: canonical, "x-default": canonical },
+    },
+  };
 }
 
 export default function TermsOfServicePage() {

@@ -16,6 +16,11 @@
   font-size: 0.85rem;
   font-weight: 700;
   color: #26355f;
+  list-style: none;
+}
+
+.currentLangButton::-webkit-details-marker {
+  display: none;
 }
 
 .currentLangButton:hover {
@@ -51,10 +56,17 @@
   font-weight: 600;
   color: #304674;
   text-align: left;
+  text-decoration: none;
 }
 
 .langOption:hover {
   background-color: #f1f5ff;
+}
+
+.langOption:focus-visible,
+.currentLangButton:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .flag {
@@ -87,7 +99,7 @@
   left: 0;
 }
 
-[dir="rtl"] .langOption {
+.langOption[dir="rtl"] {
   flex-direction: row-reverse;
   text-align: right;
 }

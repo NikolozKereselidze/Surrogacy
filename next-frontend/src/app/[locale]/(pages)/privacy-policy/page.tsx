@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import LegalDocument, { type LegalSection } from "@/components/LegalDocument";
-import { buildPageMetadata } from "@/lib/seo";
+import { BASE_URL, buildPageMetadata } from "@/lib/seo";
 
 const sections: LegalSection[] = [
   {
@@ -68,14 +68,22 @@ const sections: LegalSection[] = [
   },
 ];
 
-export async function generateMetadata({ params }: { params: Promise<{ locale?: string }> }): Promise<Metadata> {
-  const { locale } = await params;
-  return buildPageMetadata({
+export async function generateMetadata(): Promise<Metadata> {
+  const canonical = `${BASE_URL}/en/privacy-policy`;
+  const metadata = buildPageMetadata({
     title: "Privacy Policy",
     description: "How Happy Family collects, uses, protects, and manages information submitted through its website.",
     path: "/privacy-policy",
-    locale: locale || "en",
+    locale: "en",
   });
+  // These documents are currently available only in English.
+  return {
+    ...metadata,
+    alternates: {
+      canonical,
+      languages: { en: canonical, "x-default": canonical },
+    },
+  };
 }
 
 export default function PrivacyPolicyPage() {

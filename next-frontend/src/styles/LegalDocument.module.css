@@ -60,7 +60,8 @@
 .section ul {
   display: grid;
   gap: 0.5rem;
-  margin: 0.75rem 0 0 1.25rem;
+  margin: 0.75rem 0 0;
+  padding-inline-start: 1.25rem;
 }
 
 @media (max-width: 640px) {

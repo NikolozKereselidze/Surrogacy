@@ -84,6 +84,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       });
     });
   });
+  for (const path of ["/privacy-policy", "/terms-of-service"]) {
+    sitemapEntries.push({
+      url: `${BASE_URL}/en${path}`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    });
+  }
   const [teamMembers, blogPosts] = await Promise.all([
     fetchSitemapData<TeamMember[]>("/api/team-members?locale=en"),
     fetchSitemapData<BlogPost[]>("/api/blog"),
