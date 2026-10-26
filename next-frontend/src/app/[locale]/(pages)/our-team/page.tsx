@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import OurTeam from "@/components/About/OurTeam";
 import { buildPageMetadata } from "@/lib/seo";
 import { getMetaKeywords } from "@/lib/seo-keywords";
+import { fetchTeamMembers } from "@/lib/teamMembers";
+import TeamCard from "@/components/TeamCard";
 const localizedMeta = {
     en: {
         title: "Our Team | Surrogacy & IVF Experts in Tbilisi, Georgia",
@@ -80,6 +82,12 @@ export async function generateMetadata({ params, }: {
         locale: locale || "en",
     });
 }
-export default function OurTeamPage() {
-    return <OurTeam />;
+export default async function OurTeamPage({ params }: {
+    params: Promise<{ locale: string }>;
+}) {
+    const { locale } = await params;
+    const members = await fetchTeamMembers(locale);
+    return <OurTeam teamRoster={members.map((member) => (
+        <TeamCard key={member.id} member={member} locale={locale} />
+    ))} />;
 }

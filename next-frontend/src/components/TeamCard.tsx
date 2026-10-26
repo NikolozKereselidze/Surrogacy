@@ -1,14 +1,12 @@
 import styles from "@/styles/Home.module.css";
-import { memo } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useLocale } from "@/hooks/useLocale";
 import { getTeamImageUrl } from "@/lib/teamMembers";
 import type { TeamMember } from "@/types/teamMember";
-const TeamCard = ({ member }: {
+const TeamCard = ({ member, locale }: {
     member: TeamMember;
+    locale: string;
 }) => {
-    const locale = useLocale();
     return (<Link href={`/${locale}/team/${member.slug}`} className={styles.ourTeamCard}>
       <Image src={getTeamImageUrl(member.imagePath)} alt={member.name} className={styles.ourTeamImage} width={108} height={108}/>
       <div className={styles.ourTeamInfo}>
@@ -20,4 +18,4 @@ const TeamCard = ({ member }: {
       {member.shortDescription && (<div className={styles.ourTeamDescription}>{member.shortDescription}</div>)}
     </Link>);
 };
-export default memo(TeamCard);
+export default TeamCard;

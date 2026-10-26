@@ -1,19 +1,9 @@
 "use client";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import type { ReactNode } from "react";
 import styles from "@/styles/About/OurTeam.module.css";
-import TeamCard from "@/components/TeamCard";
-import Button from "@/components/Button";
-import { useTeamMembers } from "@/hooks/useTeamMembers";
-const OurTeam = () => {
+const OurTeam = ({ teamRoster }: { teamRoster: ReactNode }) => {
     const { t } = useTranslation();
-    const [visibleCount, setVisibleCount] = useState(3);
-    const { members: teamMembers } = useTeamMembers();
-    const visibleMembers = teamMembers.slice(0, visibleCount);
-    const hasMoreMembers = visibleCount < teamMembers.length;
-    const handleShowMore = () => {
-        setVisibleCount((prev) => Math.min(prev + 3, teamMembers.length));
-    };
     return (<>
       <div className={styles.ourTeamContainer}>
         <section className={styles.teamSection}>
@@ -25,13 +15,8 @@ const OurTeam = () => {
 
             <div className={styles.teamContainer}>
               <div className={styles.teamGrid}>
-                {visibleMembers.map((member) => (<TeamCard key={member.id} member={member}/>))}
+                {teamRoster}
               </div>
-              {hasMoreMembers && (<div className={styles.showMoreContainer}>
-                  <Button className={styles.showMoreButton} onClick={handleShowMore}>
-                    {t("ourTeam.showMore") || "Show More"}
-                  </Button>
-                </div>)}
             </div>
           </div>
         </section>

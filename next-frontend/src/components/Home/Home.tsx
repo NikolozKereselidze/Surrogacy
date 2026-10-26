@@ -4,20 +4,17 @@ import { useTranslation } from "react-i18next";
 import { FaBaby, FaUserPlus, FaGift } from "react-icons/fa";
 import MiracleCard from "@/components/MiracleCard";
 import PageCtaSection from "@/components/PageCtaSection/PageCtaSection";
-import TeamCard from "@/components/TeamCard";
 import StatisticsSection from "@/components/StatisticsSection";
 import ProgramsOverviewSection from "@/components/ProgramsOverviewSection";
 import FaqSection from "@/components/FaqSection/FaqSection";
-import { useMemo } from "react";
+import { useMemo, type ReactNode } from "react";
 import TextContent from "@/components/TextContent";
 import { useLocale } from "@/hooks/useLocale";
 import { FadeInOnScroll } from "@/components/animations/ScrollAnimations";
-import { useTeamMembers } from "@/hooks/useTeamMembers";
-const Home = () => {
+const Home = ({ teamRoster }: { teamRoster: ReactNode }) => {
     const { t, i18n } = useTranslation();
     const locale = useLocale();
     const isRTL = i18n.language === "he";
-    const { members: teamMembers } = useTeamMembers(true);
     const scrollToContact = () => {
         document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
     };
@@ -74,9 +71,7 @@ const Home = () => {
           <p className="subtitle">{t("ourTeam.subtitle")}</p>
         </FadeInOnScroll>
         <div className={styles.ourTeamGrid}>
-          {teamMembers.map((member) => (<div key={member.id} style={{ flex: "1 1 23rem" }}>
-              <TeamCard member={member}/>
-            </div>))}
+          {teamRoster}
         </div>
       </section>
 

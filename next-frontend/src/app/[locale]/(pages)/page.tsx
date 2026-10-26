@@ -3,6 +3,8 @@ import HomeHero from "@/components/Home/HomeHero";
 import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 import { getMetaKeywords } from "@/lib/seo-keywords";
+import { fetchTeamMembers } from "@/lib/teamMembers";
+import TeamCard from "@/components/TeamCard";
 const localizedMeta = {
     en: {
         title: "Surrogacy in Georgia | IVF & Egg Donation",
@@ -50,10 +52,18 @@ export async function generateMetadata({ params, }: {
         locale: locale || "en",
     });
 }
-const HomePage = () => {
+const HomePage = async ({ params }: {
+    params: Promise<{ locale: string }>;
+}) => {
+    const { locale } = await params;
+    const members = await fetchTeamMembers(locale, true);
     return (<>
       <HomeHero />
-      <Home />
+      <Home teamRoster={members.map((member) => (
+          <div key={member.id} style={{ flex: "1 1 23rem" }}>
+              <TeamCard member={member} locale={locale} />
+          </div>
+      ))} />
     </>);
 };
 export default HomePage;
