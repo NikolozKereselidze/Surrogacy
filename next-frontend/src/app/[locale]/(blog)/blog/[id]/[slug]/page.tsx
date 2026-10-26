@@ -21,16 +21,14 @@ interface BlogPost {
   imagePath?: string;
 }
 async function fetchPostById(id: string): Promise<BlogPost | null> {
-  if (!id || !API_BASE_URL) return null;
-  try {
-    const res = await fetch(`${API_BASE_URL}/api/blog/${id}`, {
-      next: { revalidate: 300 },
-    });
-    if (!res.ok) return null;
-    return (await res.json()) as BlogPost;
-  } catch {
-    return null;
-  }
+  if (!id) return null;
+  if (!API_BASE_URL) throw new Error("NEXT_PUBLIC_API_BASE_URL is required to fetch blog posts");
+  const res = await fetch(`${API_BASE_URL}/api/blog/${encodeURIComponent(id)}`, {
+    next: { revalidate: 300 },
+  });
+  if (res.status === 404) return null;
+  if (!res.ok) throw new Error(`Blog post API request failed: ${res.status}`);
+  return (await res.json()) as BlogPost;
 }
 
 function extractText(html: string): string {

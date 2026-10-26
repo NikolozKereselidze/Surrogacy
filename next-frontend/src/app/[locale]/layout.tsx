@@ -8,7 +8,9 @@ function getDir(locale: string): "rtl" | "ltr" {
 export function generateStaticParams() {
     return supportedLocales.map((locale) => ({ locale }));
 }
-export const dynamicParams = false;
+// Allow child routes (such as newly published team profiles) to render on demand.
+// Unsupported locales are still rejected by LocaleLayout below.
+export const dynamicParams = true;
 export async function generateMetadata({ params, }: {
     params: Promise<{
         locale: string;

@@ -29,17 +29,13 @@ function getImageUrl(imagePath?: string) {
 
 
 async function fetchPostsByLocale(locale: string): Promise<BlogPost[]> {
-  if (!API_BASE_URL) return [];
-  try {
-    const params = new URLSearchParams({ language: locale });
-    const res = await fetch(`${API_BASE_URL}/api/blog?${params}`, {
-      next: { revalidate: 300 },
-    });
-    if (!res.ok) return [];
-    return (await res.json()) as BlogPost[];
-  } catch {
-    return [];
-  }
+  if (!API_BASE_URL) throw new Error("NEXT_PUBLIC_API_BASE_URL is required to fetch blog posts");
+  const params = new URLSearchParams({ language: locale });
+  const res = await fetch(`${API_BASE_URL}/api/blog?${params}`, {
+    next: { revalidate: 300 },
+  });
+  if (!res.ok) throw new Error(`Blog posts API request failed: ${res.status}`);
+  return (await res.json()) as BlogPost[];
 }
 
 const localizedMeta = {

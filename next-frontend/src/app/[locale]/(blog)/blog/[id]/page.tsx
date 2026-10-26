@@ -7,17 +7,14 @@ export default async function BlogPostWithoutSlug({ params }: {
 }) {
   const { id } = await params;
   const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL;
-  if (!apiBase) notFound();
+  if (!apiBase) throw new Error("NEXT_PUBLIC_API_BASE_URL is required to fetch blog posts");
 
-  let post: { id: string; title: string; language?: string } | null = null;
-  try {
-    const response = await fetch(`${apiBase}/api/blog/${encodeURIComponent(id)}`, {
-      next: { revalidate: 300 },
-    });
-    if (response.ok) post = await response.json();
-  } catch {
-    notFound();
-  }
+  const response = await fetch(`${apiBase}/api/blog/${encodeURIComponent(id)}`, {
+    next: { revalidate: 300 },
+  });
+  if (response.status === 404) notFound();
+  if (!response.ok) throw new Error(`Blog post API request failed: ${response.status}`);
+  const post: { id: string; title: string; language?: string } | null = await response.json();
   if (!post) notFound();
   permanentRedirect(buildBlogPath(post.language || "en", id, post.title));
 }

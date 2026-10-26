@@ -14,30 +14,23 @@ export function getTeamImageUrl(imagePath: string) {
 }
 
 export async function fetchTeamMembers(locale = "en", featured = false): Promise<TeamMember[]> {
-  if (!API_BASE) return [];
+  if (!API_BASE) throw new Error("NEXT_PUBLIC_API_BASE_URL is required to fetch team members");
   const query = new URLSearchParams({ locale: normalizeTeamLocale(locale) });
   if (featured) query.set("featured", "true");
-  try {
-    const response = await fetch(`${API_BASE}/api/team-members?${query}`, {
-      next: { revalidate: 300 },
-    });
-    if (!response.ok) return [];
-    return response.json();
-  } catch {
-    return [];
-  }
+  const response = await fetch(`${API_BASE}/api/team-members?${query}`, {
+    next: { revalidate: 300 },
+  });
+  if (!response.ok) throw new Error(`Team members API request failed: ${response.status}`);
+  return response.json();
 }
 
 export async function fetchTeamMember(slug: string, locale = "en"): Promise<TeamMember | null> {
-  if (!API_BASE) return null;
-  try {
-    const response = await fetch(
-      `${API_BASE}/api/team-members/${encodeURIComponent(slug)}?locale=${normalizeTeamLocale(locale)}`,
-      { next: { revalidate: 300 } },
-    );
-    if (!response.ok) return null;
-    return response.json();
-  } catch {
-    return null;
-  }
+  if (!API_BASE) throw new Error("NEXT_PUBLIC_API_BASE_URL is required to fetch team members");
+  const response = await fetch(
+    `${API_BASE}/api/team-members/${encodeURIComponent(slug)}?locale=${normalizeTeamLocale(locale)}`,
+    { next: { revalidate: 300 } },
+  );
+  if (response.status === 404) return null;
+  if (!response.ok) throw new Error(`Team member API request failed: ${response.status}`);
+  return response.json();
 }
